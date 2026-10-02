@@ -1,0 +1,17 @@
+{
+  "name": "Bizzing English",
+  "short_name": "English",
+  "description": "Reading · Writing · Speaking — the language arts, through the classics. For kids 6–14. No ads, no tracking.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F3F0EA",
+  "theme_color": "#0E6F6A",
+  "categories": ["education", "kids", "books"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,11 @@
+/* Bizzing English fonts — self-hosted, so the app renders the same offline and asks no third party.
+   The family chrome: Hanken Grotesk (body, UI) · Fraunces (headings) · Sono (words as objects),
+   from Bizzing Bee's set. Reading passages: Literata (SIL Open Font Licence, via @fontsource) —
+   a book face at ≥ 18px (SPEC §8a.8). Single-weight files declare a weight range so a
+   requested weight maps to the real file. */
+@font-face{font-family:'Hanken Grotesk';font-style:normal;font-weight:100 900;font-display:swap;src:url('hanken-var.woff2') format('woff2')}
+@font-face{font-family:'Sono';font-style:normal;font-weight:400 800;font-display:swap;src:url('sono-600.woff2') format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 900;font-display:swap;src:url('fraunces-800.woff2') format('woff2')}
+@font-face{font-family:'Literata';font-style:normal;font-weight:400 500;font-display:swap;src:url('literata-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Literata';font-style:italic;font-weight:400 600;font-display:swap;src:url('literata-latin-400-italic.woff2') format('woff2')}
+@font-face{font-family:'Literata';font-style:normal;font-weight:600 900;font-display:swap;src:url('literata-latin-600-normal.woff2') format('woff2')}
