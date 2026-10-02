@@ -1,0 +1,9 @@
+{
+ "bizzing-shell.js": "fc8a746f7b3c0b3a0661a9b72ef4e508562703b575bf14698088e816cdb041c4",
+ "bizzing-shell.css": "7607966a34d5c2869c2fa872e7fcf73b1674f59be678f016327bc8d7be4a79a6",
+ "bizzing-wallet.js": "0e3789a6b8cab453a763c4ef1995ac5ea6dd92e90a188af462083f52b30e078a",
+ "bizzing-activity.js": "7346ca49544d138d6aa81778fcaeca37c51eb027b44bef04b42ebc332cea9d99",
+ "bizzing-avatars.js": "8d522580801c76b186092c5b762356c4e935d42a877a2ce60dde8aa506ab0ed6",
+ "bizzing-avatars.css": "cd3f4c325dced245f8aeba93980f5081e77e73b67b427bf4bbfb37b6ee973ad6",
+ "shell-check.mjs": "c50bf9aea5c2417628fdbf06962233794dfb32c862d16d056fc4f290b480b8aa"
+}

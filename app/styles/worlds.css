@@ -1,0 +1,33 @@
+/* worlds.css — the living backdrop (FAMILY-STANDARD §7): far plane (the painted plate, drifting very
+   slowly), near plane (a soft wash that keeps every card's text on a quiet ground), place particles,
+   and one idle loop. Paused when the page is hidden (html.hidden), frozen under reduced motion or
+   Calm mode. Cards are opaque, so text contrast never depends on the painting. */
+
+.scene { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.scn-far { position: absolute; inset: -3%; background-size: cover; background-position: center top; animation: drift 60s ease-in-out infinite alternate; }
+.scn-near { position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 45%, transparent) 0, color-mix(in srgb, var(--bg) 88%, transparent) 115px, color-mix(in srgb, var(--bg) 90%, transparent) 300px, color-mix(in srgb, var(--bg) 80%, transparent) 75%); }
+html[data-bz-dark] .scn-near { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 30%, transparent) 0, color-mix(in srgb, var(--bg) 86%, transparent) 115px, color-mix(in srgb, var(--bg) 88%, transparent) 300px, color-mix(in srgb, var(--bg) 76%, transparent) 75%); }
+@keyframes drift { from { transform: translate3d(-1%, 0, 0) scale(1.02); } to { transform: translate3d(1%, -1%, 0) scale(1.05); } }
+.scn-parts i { position: absolute; top: -20px; left: calc(var(--x) * 1%); animation: fallp var(--d) linear var(--dl) infinite; opacity: .75; }
+@keyframes fallp { to { transform: translate3d(40px, 110vh, 0) rotate(300deg); } }
+.p-petal i { width: 9px; height: 7px; border-radius: 60% 0 60% 0; background: #f4a3b6; }
+.p-rain i { width: 1.5px; height: 18px; background: linear-gradient(transparent, rgba(150, 180, 220, .7)); animation-duration: calc(var(--d) / 6); }
+.p-dust i, .p-mote i { width: 4px; height: 4px; border-radius: 50%; background: rgba(255, 226, 160, .8); animation-name: floatp; top: auto; bottom: -10px; }
+@keyframes floatp { to { transform: translate3d(30px, -110vh, 0); } }
+.p-leaf i { width: 10px; height: 6px; border-radius: 50% 0; background: #7a9a4a; }
+.p-mist i { width: 340px; height: 70px; border-radius: 50%; background: radial-gradient(rgba(255, 255, 255, .45), transparent 70%); top: calc(var(--x) * 1vh); animation-name: mistp; animation-duration: calc(var(--d) * 5); }
+@keyframes mistp { from { transform: translateX(-40vw); } to { transform: translateX(110vw); } }
+html[data-bz-dark] .p-petal i { background: #f6c27a; box-shadow: 0 0 6px #f6c27a; width: 4px; height: 4px; border-radius: 50%; }   /* fireflies by night */
+html[data-bz-dark] .p-mist i { background: radial-gradient(rgba(170, 190, 255, .25), transparent 70%); }
+.scn-idle b { position: absolute; top: 18%; left: -60px; width: 26px; height: 18px; animation: fly 26s linear infinite; }
+.i-butterfly b { background: radial-gradient(circle at 30% 50%, #f59e0b 40%, transparent 42%), radial-gradient(circle at 70% 50%, #f97316 40%, transparent 42%); }
+.i-moth b { width: 16px; height: 12px; background: radial-gradient(#f4e7c8 45%, transparent 50%); top: 30%; }
+.i-pennant b { width: 30px; height: 12px; clip-path: polygon(0 0, 100% 50%, 0 100%); background: #b91c1c; left: 70%; top: 8%; animation: flutter 1.4s ease-in-out infinite alternate; }
+.i-dove b, .i-swallow b { width: 22px; height: 10px; clip-path: polygon(0 50%, 40% 0, 50% 45%, 60% 0, 100% 50%, 50% 70%); background: #fff; }
+.i-swallow b { background: #2c3e50; }
+.i-quill b { width: 6px; height: 30px; border-radius: 50% 50% 0 0; background: linear-gradient(#fff, #d8cbb0); left: 85%; top: 22%; animation: flutter 3s ease-in-out infinite alternate; }
+@keyframes fly { 0% { transform: translate(0, 0); } 50% { transform: translate(55vw, 30px); } 100% { transform: translate(115vw, -20px); } }
+@keyframes flutter { from { transform: rotate(-8deg); } to { transform: rotate(8deg) translateY(4px); } }
+html.hidden .scene *, html.calm .scene * { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) { .scene * { animation: none !important; } .scn-parts, .scn-idle { display: none; } }
+html.calm .scn-parts, html.calm .scn-idle { display: none; }

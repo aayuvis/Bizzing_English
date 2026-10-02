@@ -1,0 +1,21 @@
+{
+  "bee": "aayuvis/Bizzing-Bee",
+  "commit": "28948f81c40387ca4bd12c865bd7b49a7855515c",
+  "read": {
+    "spellbound-app/words-full.js": "3c1dca97e480f6c795fe31a631ca140ea95af46444333b42cc7cfffd7663d9b0",
+    "spellbound-app/words-lore.js": "25c0543ba1911c850cbeb6803cb3e7fa89870cffe1da062b1804d01cb7ee4ee7"
+  },
+  "counts": {
+    "beeWords": 126594,
+    "lexicon": 8092,
+    "defPool": 6158,
+    "originPool": 2060,
+    "rimes": 29,
+    "passages": 33
+  },
+  "wrote": {
+    "app/public/data/bee-words.json": "1277327e2f65dbc001ce006fa2ff02d47799e2926a139edb3994663511c7da1d",
+    "app/src/data/hour-words.json": "d3393555700f54cccc111c256bc9406dce67f8be3e7230e15d4424735fb02d4e"
+  },
+  "at": "2026-10-02"
+}

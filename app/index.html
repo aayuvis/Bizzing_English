@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-GB" data-app="bizzing-english">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bizzing English</title>
+<meta name="description" content="Reading · Writing · Speaking — the language arts, through the classics. For kids 6–14: words, sentences, great books, writing and speaking. No ads, no tracking.">
+<meta name="theme-color" content="#0E6F6A">
+<!-- Fonts are self-hosted (public/fonts): no third-party request, and the app renders the same offline. -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preload" href="fonts/hanken-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="src/integration/bizzing-shell.css">
+<link rel="stylesheet" href="src/integration/bizzing-avatars.css">
+<link rel="stylesheet" href="styles/worlds.css">
+</head>
+<body>
+<!-- the living world: outside #app so a re-render never restarts it -->
+<div class="scene" aria-hidden="true"></div>
+<div id="app"><noscript>Bizzing English needs JavaScript switched on.</noscript></div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

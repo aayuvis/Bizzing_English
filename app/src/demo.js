@@ -1,0 +1,37 @@
+/* demo.js — ?demo: a labelled sample child with three weeks of believable progress, held IN MEMORY.
+   It saves nothing and writes no shared key (store.js setDemo; family.js no-ops). The progress is
+   made by DRIVING THE ENGINE — passing stops on past days, then spaced checks on later days —
+   never typed in, so the sample can only show states the real app can reach. */
+
+import { setDemo } from './store.js';
+import { newHousehold, newKid, addKid, bumpDay, addToBank } from './model.js';
+import { taught, spacedCheck } from './mastery.js';
+import { setDemoCoins } from './family.js';
+
+const DAY = 864e5;
+export function demoHousehold(now = Date.now()) {
+  const h = newHousehold(), k = addKid(h, newKid('Kavya', 2, 'bookworm'));
+  h.parent.plan = 'family';
+  const plan = [['w1-rhyme', 20], ['w1-build', 20], ['s1-noun', 19], ['w1-odd', 18], ['s1-verb', 17], ['rd-aesop-town-mouse', 16], ['w2-meaning', 15], ['s1-adj', 14],
+    ['w2-word', 12], ['s2-split', 11], ['rd-justso-elephant', 10], ['s2-subject', 9], ['w3-meaning', 7], ['la1-origin', 6], ['s3-pc', 5], ['wr1-copy', 4], ['w3-make', 2]];
+  for (const [id, ago] of plan) {
+    const t = now - ago * DAY;
+    k.stops[id] = { passed: true, best: 7, tries: 1, step: 0, at: t };
+    taught(k, id, t); bumpDay(k, 'stops', 1, t); bumpDay(k, 'right', 7, t); bumpDay(k, 'answers', 8, t);
+    if (id.startsWith('rd-')) bumpDay(k, 'pages', 1, t);
+  }
+  for (const [id, ago] of plan.filter(([, a]) => a >= 9)) spacedCheck(k, id, 9, 10, now - (ago - 2) * DAY);   // proved two days later
+  for (const [id, ago] of plan.filter(([, a]) => a >= 17)) spacedCheck(k, id, 8, 10, now - (ago - 10) * DAY); // and again a week on
+  spacedCheck(k, 's1-adj', 5, 10, now - 3 * DAY);                                                              // one honest slip
+  for (const w of ['heartily', 'scamper', 'refreshment', 'insatiable', 'curiosity', 'satiable', 'banks', 'scrumptious', 'grovelling', 'mastiffs']) addToBank(k, w, 'demo');
+  k.stops['s3-main'] = { passed: false, best: 0, tries: 0, step: 2, at: now - DAY };                         // an unfinished lesson: Continue returns to it
+  k.games = { builder: { best: 14, plays: 3 }, rush: { best: 11, plays: 2 } };
+  k.stage['sp1-aloud'] = [{ at: now - 8 * DAY, passage: 'aesop-town-mouse', secs: 118, wpm: 121, pauses: 14, range: 18, self: 2 }];
+  k.stops['sp1-aloud'] = { passed: true, tries: 1 };
+  k.medals = { 'first-stop': now - 20 * DAY, mastery: now - 18 * DAY, game: now - 12 * DAY, stage: now - 8 * DAY, wordsmith: now - 12 * DAY };
+  k.book = { work: 'jungle', passage: 'jungle-mowgli' };
+  k.last = { what: 'stop', title: 'Make the word', right: 7, n: 8, at: now - 2 * DAY };
+  k.owned = ['hare'];
+  setDemo(h); setDemoCoins(186);
+  return h;
+}

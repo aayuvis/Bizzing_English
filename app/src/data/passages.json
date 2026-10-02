@@ -1,0 +1,2343 @@
+[
+  {
+    "id": "aesop-town-mouse",
+    "work": "aesop",
+    "title": "The Town Mouse and the Country Mouse",
+    "band": 1,
+    "kind": "prose",
+    "abridged": false,
+    "text": "Now you must know that a Town Mouse once upon a time went on a visit to his cousin in the country. He was rough and ready, this cousin, but he loved his town friend and made him heartily welcome. Beans and bacon, cheese and bread, were all he had to offer, but he offered them freely. The Town Mouse rather turned up his long nose at this country fare, and said: \"I cannot understand, Cousin, how you can put up with such poor food as this, but of course you cannot expect anything better in the country; come you with me and I will show you how to live. When you have been in town a week you will wonder how you could ever have stood a country life.\" No sooner said than done: the two mice set off for the town and arrived at the Town Mouse's residence late at night. \"You will want some refreshment after our long journey,\" said the polite Town Mouse, and took his friend into the grand dining-room. There they found the remains of a fine feast, and soon the two mice were eating up jellies and cakes and all that was nice. Suddenly they heard growling and barking. \"What is that?\" said the Country Mouse. \"It is only the dogs of the house,\" answered the other. \"Only!\" said the Country Mouse. \"I do not like that music at my dinner.\" Just at that moment the door flew open, in came two huge mastiffs, and the two mice had to scamper down and run off. \"Good-bye, Cousin,\" said the Country Mouse, \"What! going so soon?\" said the other. \"Yes,\" he replied;\n\n\"Better beans and bacon in peace than cakes and ale in fear.\"",
+    "fk": 4.6,
+    "level": 4.6,
+    "words": 290,
+    "sentences": 20,
+    "syllables": 356,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where did the Town Mouse go to visit his cousin?",
+        "right": "To the country",
+        "wrong": [
+          "To the seaside",
+          "To a castle",
+          "To a ship"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What food did the Country Mouse have to offer?",
+        "right": "Beans and bacon, cheese and bread",
+        "wrong": [
+          "Jellies and cakes and ale",
+          "Apples, nuts and honey",
+          "Fish, rice and warm milk"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What frightened the two mice away from the feast?",
+        "right": "Two huge dogs burst in",
+        "wrong": [
+          "A cat crept up on them",
+          "The cook came with a broom",
+          "A storm blew in the window"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did the Country Mouse decide to go home?",
+        "right": "He would rather eat plain food without fear",
+        "wrong": [
+          "He did not like the taste of cake",
+          "He missed his mother and father",
+          "The journey to town was too long"
+        ]
+      }
+    ],
+    "evaluate": "Would you rather live like the Town Mouse or the Country Mouse? Why?",
+    "wordBank": [
+      "residence",
+      "refreshment",
+      "mastiffs",
+      "scamper",
+      "heartily"
+    ]
+  },
+  {
+    "id": "aesop-lion-mouse",
+    "work": "aesop",
+    "title": "The Lion and the Mouse",
+    "band": 1,
+    "kind": "prose",
+    "abridged": false,
+    "text": "Once when a Lion was asleep a little Mouse began running up and down upon him; this soon wakened the Lion, who placed his huge paw upon him, and opened his big jaws to swallow him. \"Pardon, O King,\" cried the little Mouse: \"forgive me this time, I shall never forget it: who knows but what I may be able to do you a turn some of these days?\" The Lion was so tickled at the idea of the Mouse being able to help him, that he lifted up his paw and let him go. Some time after the Lion was caught in a trap, and the hunters who desired to carry him alive to the King, tied him to a tree while they went in search of a waggon to carry him on. Just then the little Mouse happened to pass by, and seeing the sad plight in which the Lion was, went up to him and soon gnawed away the ropes that bound the King of the Beasts. \"Was I not right?\" said the little Mouse.\n\nLittle friends may prove great friends.",
+    "fk": 7.2,
+    "level": 7.2,
+    "words": 184,
+    "sentences": 8,
+    "syllables": 216,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What woke the Lion up?",
+        "right": "A little Mouse running over him",
+        "wrong": [
+          "A hunter blowing a horn",
+          "Rain falling on his nose",
+          "A bird singing in a tree"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Why did the hunters tie the Lion to a tree?",
+        "right": "They went to fetch a waggon for him",
+        "wrong": [
+          "They wanted to paint his picture",
+          "They were waiting for the Mouse",
+          "They were too tired to carry him"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How did the Mouse set the Lion free?",
+        "right": "It gnawed through the ropes",
+        "wrong": [
+          "It untied the knots with its paws",
+          "It called other lions to help",
+          "It frightened the hunters away"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did the Lion let the Mouse go at the start?",
+        "right": "The thought of a mouse helping him amused him",
+        "wrong": [
+          "He was not hungry that day",
+          "The Mouse was too quick to catch",
+          "He was afraid of the little Mouse"
+        ]
+      }
+    ],
+    "evaluate": "The Lion laughed at the idea that a mouse could help him. Has anyone ever helped you when you did not expect it?",
+    "wordBank": [
+      "plight",
+      "gnawed",
+      "waggon",
+      "tickled"
+    ]
+  },
+  {
+    "id": "justso-elephant",
+    "work": "justso",
+    "title": "The Elephant's Child asks a question",
+    "band": 1,
+    "kind": "prose",
+    "abridged": false,
+    "text": "IN the High and Far-Off Times the Elephant, O Best Beloved, had no trunk. He had only a blackish, bulgy nose, as big as a boot, that he could wriggle about from side to side; but he couldn't pick up things with it. But there was one Elephant--a new Elephant--an Elephant's Child--who was full of 'satiable curtiosity, and that means he asked ever so many questions. And he lived in Africa, and he filled all Africa with his 'satiable curtiosities. He asked his tall aunt, the Ostrich, why her tail-feathers grew just so, and his tall aunt the Ostrich spanked him with her hard, hard claw. He asked his tall uncle, the Giraffe, what made his skin spotty, and his tall uncle, the Giraffe, spanked him with his hard, hard hoof. And still he was full of 'satiable curtiosity! He asked his broad aunt, the Hippopotamus, why her eyes were red, and his broad aunt, the Hippopotamus, spanked him with her broad, broad hoof; and he asked his hairy uncle, the Baboon, why melons tasted just so, and his hairy uncle, the Baboon, spanked him with his hairy, hairy paw. And still he was full of 'satiable curtiosity! He asked questions about everything that he saw, or heard, or felt, or smelt, or touched, and all his uncles and his aunts spanked him. And still he was full of 'satiable curtiosity!\n\nOne fine morning in the middle of the Precession of the Equinoxes this 'satiable Elephant's Child asked a new fine question that he had never asked before. He asked, 'What does the Crocodile have for dinner?' Then everybody said, 'Hush!' in a loud and dretful tone, and they spanked him immediately and directly, without stopping, for a long time.\n\nBy and by, when that was finished, he came upon Kolokolo Bird sitting in the middle of a wait-a-bit thorn-bush, and he said, 'My father has spanked me, and my mother has spanked me; all my aunts and uncles have spanked me for my 'satiable curtiosity; and still I want to know what the Crocodile has for dinner!'\n\nThen Kolokolo Bird said, with a mournful cry, 'Go to the banks of the great grey-green, greasy Limpopo River, all set about with fever-trees, and find out.'",
+    "fk": 9.5,
+    "fkOverride": 5,
+    "level": 5,
+    "words": 375,
+    "sentences": 17,
+    "syllables": 523,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What did the Elephant have before he had a trunk?",
+        "right": "A bulgy nose as big as a boot",
+        "wrong": [
+          "A long spotted neck",
+          "A curly pink snout",
+          "Two noses side by side"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the Elephant's Child's relations do whenever he asked a question?",
+        "right": "They spanked him",
+        "wrong": [
+          "They gave him a bun",
+          "They sent him to bed",
+          "They laughed at him"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Which new question had he never asked before?",
+        "right": "What the Crocodile has for dinner",
+        "wrong": [
+          "Why the sky is so very blue",
+          "Where the Limpopo River ends",
+          "How the Giraffe got so tall"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'satiable curtiosity mean?",
+        "right": "He asked a great many questions",
+        "wrong": [
+          "He was always very hungry",
+          "He liked to play tricks",
+          "He was afraid of everything"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Who told him where to go to find out?",
+        "right": "Kolokolo Bird",
+        "wrong": [
+          "The Ostrich",
+          "The Baboon",
+          "The Hippopotamus"
+        ]
+      }
+    ],
+    "evaluate": "Is it good to be as curious as the Elephant's Child? Was it fair that he was spanked for asking questions?",
+    "wordBank": [
+      "wriggle",
+      "bulgy",
+      "mournful",
+      "equinoxes"
+    ]
+  },
+  {
+    "id": "stevenson-shadow",
+    "work": "garden-verses",
+    "title": "My Shadow",
+    "band": 1,
+    "kind": "verse",
+    "abridged": false,
+    "text": "I have a little shadow that goes in and out with me,\nAnd what can be the use of him is more than I can see.\nHe is very, very like me from the heels up to the head;\nAnd I see him jump before me, when I jump into my bed.\n\nThe funniest thing about him is the way he likes to grow--\nNot at all like proper children, which is always very slow;\nFor he sometimes shoots up taller like an india-rubber ball,\nAnd he sometimes goes so little that there's none of him at all.\n\nHe hasn't got a notion of how children ought to play,\nAnd can only make a fool of me in every sort of way.\nHe stays so close behind me, he's a coward you can see;\nI'd think shame to stick to nursie as that shadow sticks to me!\n\nOne morning, very early, before the sun was up,\nI rose and found the shining dew on every buttercup;\nBut my lazy little shadow, like an arrant sleepy-head,\nHad stayed at home behind me and was fast asleep in bed.",
+    "fk": 11.4,
+    "fkOverride": 3,
+    "level": 3,
+    "words": 187,
+    "sentences": 6,
+    "syllables": 235,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What does the shadow do when the child jumps into bed?",
+        "right": "It jumps in front of the child",
+        "wrong": [
+          "It hides under the pillow",
+          "It runs out of the door",
+          "It stays by the window"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What is funny about the way the shadow grows?",
+        "right": "It shoots up tall or shrinks to nothing",
+        "wrong": [
+          "It grows a little every birthday",
+          "It only grows after dinner",
+          "It never changes size at all"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does the child call the shadow a coward?",
+        "right": "It always stays close behind",
+        "wrong": [
+          "It runs away from dogs",
+          "It is afraid of the dark",
+          "It cries when it falls over"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why was the shadow missing that early morning?",
+        "right": "There was no sunshine yet to make it",
+        "wrong": [
+          "It had run off to play",
+          "The child lost it in the garden",
+          "It was hiding behind a tree"
+        ]
+      }
+    ],
+    "evaluate": "The child talks about the shadow as if it were a person. Which line do you like best, and why?",
+    "wordBank": [
+      "notion",
+      "arrant",
+      "india-rubber",
+      "buttercup"
+    ]
+  },
+  {
+    "id": "stevenson-swing",
+    "work": "garden-verses",
+    "title": "The Swing",
+    "band": 1,
+    "kind": "verse",
+    "abridged": false,
+    "text": "How do you like to go up in a swing,\n     Up in the air so blue?\nOh, I do think it the pleasantest thing\n     Ever a child can do!\n\nUp in the air and over the wall,\n     Till I can see so wide,\nRiver and trees and cattle and all\n     Over the countryside--\n\nTill I look down on the garden green,\n     Down on the roof so brown--\nUp in the air I go flying again,\n     Up in the air and down!",
+    "fk": 8.3,
+    "fkOverride": 2,
+    "level": 2,
+    "words": 81,
+    "sentences": 3,
+    "syllables": 92,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What colour is the air in the poem?",
+        "right": "Blue",
+        "wrong": [
+          "Grey",
+          "Gold",
+          "Pink"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Which of these can the child see from the swing?",
+        "right": "River, trees and cattle",
+        "wrong": [
+          "Ships, sand and seagulls",
+          "Shops, buses and towers",
+          "Mountains deep in snow"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How does the child feel about swinging?",
+        "right": "It is the best fun a child can have",
+        "wrong": [
+          "It is frightening and far too high",
+          "It is boring after a little while",
+          "It is only fun with a friend"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What colour is the roof the child looks down on?",
+        "right": "Brown",
+        "wrong": [
+          "Red",
+          "White",
+          "Green"
+        ]
+      }
+    ],
+    "evaluate": "Say the poem aloud. Can you hear the swing going up and down in its rhythm? Where?",
+    "wordBank": [
+      "pleasantest",
+      "countryside",
+      "cattle"
+    ]
+  },
+  {
+    "id": "blake-lamb",
+    "work": "blake",
+    "title": "The Lamb",
+    "band": 1,
+    "kind": "verse",
+    "abridged": false,
+    "text": "   Little lamb, who made thee?\n   Does thou know who made thee,\nGave thee life, and bid thee feed\nBy the stream and o'er the mead;\nGave thee clothing of delight,\nSoftest clothing, woolly, bright;\nGave thee such a tender voice,\nMaking all the vales rejoice?\n   Little lamb, who made thee?\n   Does thou know who made thee?\n\n   Little lamb, I'll tell thee;\n   Little lamb, I'll tell thee:\nHe is called by thy name,\nFor He calls Himself a Lamb.\nHe is meek, and He is mild,\nHe became a little child.\nI a child, and thou a lamb,\nWe are called by His name.\n   Little lamb, God bless thee!\n   Little lamb, God bless thee!",
+    "fk": 3.2,
+    "fkOverride": 2,
+    "level": 2,
+    "words": 113,
+    "sentences": 9,
+    "syllables": 133,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where does the lamb feed, in the poem?",
+        "right": "By the stream and over the meadow",
+        "wrong": [
+          "In a barn full of hay",
+          "On a rocky mountain top",
+          "In a garden by the house"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What is the lamb's 'clothing of delight'?",
+        "right": "Its soft, woolly fleece",
+        "wrong": [
+          "A coat the farmer made",
+          "A ribbon round its neck",
+          "A blanket of flowers"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Who does the speaker say made the lamb?",
+        "right": "God, who became a little child",
+        "wrong": [
+          "The farmer who looks after it",
+          "Its mother, the old ewe",
+          "The stream and the meadow"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Who is speaking in the poem?",
+        "right": "A child talking to a lamb",
+        "wrong": [
+          "A shepherd counting sheep",
+          "The lamb's own mother",
+          "A farmer at the market"
+        ]
+      }
+    ],
+    "evaluate": "The poem is made of questions and answers. Why do you think Blake wrote it that way?",
+    "wordBank": [
+      "mead",
+      "vales",
+      "meek",
+      "rejoice"
+    ]
+  },
+  {
+    "id": "lear-limericks",
+    "work": "lear",
+    "title": "Four Limericks",
+    "band": 1,
+    "kind": "verse",
+    "abridged": false,
+    "text": "There was an Old Man with a beard,\nWho said, \"It is just as I feared!--\nTwo Owls and a Hen,\nFour Larks and a Wren,\nHave all built their nests in my beard!\"\n\nThere was a Young Lady of Ryde,\nWhose shoe-strings were seldom untied;\nShe purchased some clogs,\nAnd some small spotty dogs,\nAnd frequently walked about Ryde.\n\nThere was an Old Man with a nose,\nWho said, \"If you choose to suppose,\nThat my nose is too long,\nYou are certainly wrong!\"\nThat remarkable Man with a nose.\n\nThere was an Old Man on a hill,\nWho seldom, if ever, stood still;\nHe ran up and down,\nIn his Grandmother's gown,\nWhich adorned that Old Man on a hill.",
+    "fk": 7.7,
+    "fkOverride": 3,
+    "level": 3,
+    "words": 122,
+    "sentences": 5,
+    "syllables": 142,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "How many owls built nests in the old man's beard?",
+        "right": "Two",
+        "wrong": [
+          "Four",
+          "One",
+          "Six"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the Young Lady of Ryde buy?",
+        "right": "Clogs and small spotty dogs",
+        "wrong": [
+          "A boat and a big red hat",
+          "Shoes with very long laces",
+          "A cake and a cage of birds"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the Old Man on a hill wear while running about?",
+        "right": "His grandmother's gown",
+        "wrong": [
+          "His grandfather's coat",
+          "A crown and a cloak",
+          "A pair of spotty socks"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What do all four poems have in common?",
+        "right": "Each is a funny five-line rhyme",
+        "wrong": [
+          "Each tells a true story",
+          "Each is about an animal",
+          "Each ends with a sad lesson"
+        ]
+      }
+    ],
+    "evaluate": "Which limerick made you smile most? Could you make up one about a silly (made-up) person?",
+    "wordBank": [
+      "purchased",
+      "seldom",
+      "adorned",
+      "remarkable"
+    ]
+  },
+  {
+    "id": "jungle-mowgli",
+    "work": "jungle",
+    "title": "A man's cub comes to the wolves' cave",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "The bushes rustled a little in the thicket, and Father Wolf dropped with his haunches under him, ready for his leap. Then, if you had been watching, you would have seen the most wonderful thing in the world--the wolf checked in mid-spring. He made his bound before he saw what it was he was jumping at, and then he tried to stop himself. The result was that he shot up straight into the air for four or five feet, landing almost where he left ground.\n\n\"Man!\" he snapped. \"A man's cub. Look!\"\n\nDirectly in front of him, holding on by a low branch, stood a naked brown baby who could just walk--as soft and as dimpled a little atom as ever came to a wolf's cave at night. He looked up into Father Wolf's face, and laughed.\n\n\"Is that a man's cub?\" said Mother Wolf. \"I have never seen one. Bring it here.\"\n\nA Wolf accustomed to moving his own cubs can, if necessary, mouth an egg without breaking it, and though Father Wolf's jaws closed right on the child's back not a tooth even scratched the skin as he laid it down among the cubs.\n\n\"How little! How naked, and--how bold!\" said Mother Wolf softly. The baby was pushing his way between the cubs to get close to the warm hide. \"Ahai! He is taking his meal with the others. And so this is a man's cub. Now, was there ever a wolf that could boast of a man's cub among her children?\"\n\n\"I have heard now and again of such a thing, but never in our Pack or in my time,\" said Father Wolf. \"He is altogether without hair, and I could kill him with a touch of my foot. But see, he looks up and is not afraid.\"",
+    "fk": 3.2,
+    "level": 3.2,
+    "words": 301,
+    "sentences": 26,
+    "syllables": 364,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What did Father Wolf do when he saw what he was jumping at?",
+        "right": "He stopped himself in mid-leap",
+        "wrong": [
+          "He ran back into the cave",
+          "He howled for the Pack",
+          "He jumped higher to attack"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the baby do when he looked up at Father Wolf?",
+        "right": "He laughed",
+        "wrong": [
+          "He cried",
+          "He slept",
+          "He ran"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How did Father Wolf carry the baby without hurting him?",
+        "right": "Gently in his mouth, as wolves carry cubs",
+        "wrong": [
+          "On his back, holding on to his fur",
+          "Wrapped in a bundle of leaves",
+          "In a basket from the village"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why was Mother Wolf so pleased with the baby?",
+        "right": "He was tiny, yet bold and unafraid",
+        "wrong": [
+          "He was big and strong already",
+          "He could talk like a wolf",
+          "He brought food to the cave"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is the baby doing when Mother Wolf says he is 'taking his meal with the others'?",
+        "right": "Pushing in among the cubs to feed",
+        "wrong": [
+          "Eating a bone by the fire",
+          "Drinking from a stream",
+          "Sharing berries with Father Wolf"
+        ]
+      }
+    ],
+    "evaluate": "Mother Wolf decides to keep the man's cub. Was she right? What might go wrong?",
+    "wordBank": [
+      "thicket",
+      "haunches",
+      "dimpled",
+      "accustomed",
+      "boast"
+    ]
+  },
+  {
+    "id": "jungle-rikki",
+    "work": "jungle",
+    "title": "Rikki-tikki-tavi arrives",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "This is the story of the great war that Rikki-tikki-tavi fought single-handed, through the bath-rooms of the big bungalow in Segowlee cantonment. Darzee, the Tailorbird, helped him, and Chuchundra, the musk-rat, who never comes out into the middle of the floor, but always creeps round by the wall, gave him advice, but Rikki-tikki did the real fighting.\n\nHe was a mongoose, rather like a little cat in his fur and his tail, but quite like a weasel in his head and his habits. His eyes and the end of his restless nose were pink. He could scratch himself anywhere he pleased with any leg, front or back, that he chose to use. He could fluff up his tail till it looked like a bottle brush, and his war cry as he scuttled through the long grass was: \"Rikk-tikk-tikki-tikki-tchk!\"\n\nOne day, a high summer flood washed him out of the burrow where he lived with his father and mother, and carried him, kicking and clucking, down a roadside ditch. He found a little wisp of grass floating there, and clung to it till he lost his senses. When he revived, he was lying in the hot sun on the middle of a garden path, very draggled indeed, and a small boy was saying, \"Here's a dead mongoose. Let's have a funeral.\"\n\n\"No,\" said his mother, \"let's take him in and dry him. Perhaps he isn't really dead.\"\n\nThey took him into the house, and a big man picked him up between his finger and thumb and said he was not dead but half choked. So they wrapped him in cotton wool, and warmed him over a little fire, and he opened his eyes and sneezed.\n\n\"Now,\" said the big man (he was an Englishman who had just moved into the bungalow), \"don't frighten him, and we'll see what he'll do.\"\n\nIt is the hardest thing in the world to frighten a mongoose, because he is eaten up from nose to tail with curiosity. The motto of all the mongoose family is \"Run and find out,\" and Rikki-tikki was a true mongoose. He looked at the cotton wool, decided that it was not good to eat, ran all round the table, sat up and put his fur in order, scratched himself, and jumped on the small boy's shoulder.\n\n\"Don't be frightened, Teddy,\" said his father. \"That's his way of making friends.\"\n\n\"Ouch! He's tickling under my chin,\" said Teddy.",
+    "fk": 6.7,
+    "level": 6.7,
+    "words": 407,
+    "sentences": 22,
+    "syllables": 521,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What kind of animal is Rikki-tikki?",
+        "right": "A mongoose",
+        "wrong": [
+          "A weasel",
+          "A musk-rat",
+          "A tailorbird"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How did Rikki-tikki come to the garden?",
+        "right": "A summer flood washed him there",
+        "wrong": [
+          "Teddy caught him in a trap",
+          "He followed a snake into it",
+          "A man bought him at market"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Teddy first think had happened to Rikki-tikki?",
+        "right": "That he was dead",
+        "wrong": [
+          "That he was lost",
+          "That he was hungry",
+          "That he was a pet"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does the motto 'Run and find out' tell us about mongooses?",
+        "right": "They are very curious",
+        "wrong": [
+          "They are very fast runners",
+          "They are easily frightened",
+          "They like to be left alone"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Rikki-tikki jump on Teddy's shoulder?",
+        "right": "It was his way of making friends",
+        "wrong": [
+          "He wanted to bite Teddy's ear",
+          "He was trying to escape",
+          "He was looking for food"
+        ]
+      }
+    ],
+    "evaluate": "Teddy's mother thinks Rikki is tame because the family was kind to him. Can kindness tame a wild creature? Should it?",
+    "wordBank": [
+      "cantonment",
+      "revived",
+      "draggled",
+      "scuttled",
+      "curiosity"
+    ],
+    "needsReview": true,
+    "reviewNote": "Set in a British cantonment in colonial India; \"the big man\" is \"an Englishman who had just moved into the bungalow\". The extract is gentle, but it takes the colonial household as normal. A grown-up note should name the setting."
+  },
+  {
+    "id": "alice-rabbit-hole",
+    "work": "alice",
+    "title": "Down the rabbit-hole",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'\n\nSo she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.\n\nThere was nothing so VERY remarkable in that; nor did Alice think it so VERY much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.\n\nIn another moment down went Alice after it, never once considering how in the world she was to get out again.\n\nThe rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well.",
+    "fk": 15.7,
+    "fkOverride": 7,
+    "level": 7,
+    "words": 313,
+    "sentences": 8,
+    "syllables": 426,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Why didn't Alice think much of her sister's book?",
+        "right": "It had no pictures or conversations",
+        "wrong": [
+          "It was written in French",
+          "It was far too long to read",
+          "It was all about rabbits"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the White Rabbit take out of its waistcoat-pocket?",
+        "right": "A watch",
+        "wrong": [
+          "A key",
+          "A carrot",
+          "A map"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Alice run after the Rabbit?",
+        "right": "She was very curious about it",
+        "wrong": [
+          "She wanted to catch it for dinner",
+          "Her sister told her to follow it",
+          "She thought it had taken her watch"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Where was the rabbit-hole?",
+        "right": "Under the hedge",
+        "wrong": [
+          "Beside the river",
+          "Behind the house",
+          "Under an oak tree"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'never once considering how in the world she was to get out again' tell us about Alice?",
+        "right": "She acted without thinking ahead",
+        "wrong": [
+          "She was a very careful girl",
+          "She knew the way out already",
+          "She was afraid of the dark"
+        ]
+      }
+    ],
+    "evaluate": "Would you have followed the White Rabbit down the hole? Why or why not?",
+    "wordBank": [
+      "remarkable",
+      "waistcoat",
+      "curiosity",
+      "considering"
+    ]
+  },
+  {
+    "id": "alice-cheshire",
+    "work": "alice",
+    "title": "The Cheshire Cat",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "The Cat only grinned when it saw Alice. It looked good-natured, she thought: still it had VERY long claws and a great many teeth, so she felt that it ought to be treated with respect.\n\n'Cheshire Puss,' she began, rather timidly, as she did not at all know whether it would like the name: however, it only grinned a little wider. 'Come, it's pleased so far,' thought Alice, and she went on. 'Would you tell me, please, which way I ought to go from here?'\n\n'That depends a good deal on where you want to get to,' said the Cat.\n\n'I don't much care where--' said Alice.\n\n'Then it doesn't matter which way you go,' said the Cat.\n\n'--so long as I get SOMEWHERE,' Alice added as an explanation.\n\n'Oh, you're sure to do that,' said the Cat, 'if you only walk long enough.'\n\nAlice felt that this could not be denied, so she tried another question. 'What sort of people live about here?'\n\n'In THAT direction,' the Cat said, waving its right paw round, 'lives a Hatter: and in THAT direction,' waving the other paw, 'lives a March Hare. Visit either you like: they're both mad.'\n\n'But I don't want to go among mad people,' Alice remarked.\n\n'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'\n\n'How do you know I'm mad?' said Alice.\n\n'You must be,' said the Cat, 'or you wouldn't have come here.'\n\nAlice didn't think that proved it at all; however, she went on 'And how do you know that you're mad?'\n\n'To begin with,' said the Cat, 'a dog's not mad. You grant that?'\n\n'I suppose so,' said Alice.\n\n'Well, then,' the Cat went on, 'you see, a dog growls when it's angry, and wags its tail when it's pleased. Now I growl when I'm pleased, and wag my tail when I'm angry. Therefore I'm mad.'\n\n'I call it purring, not growling,' said Alice.",
+    "fk": 3,
+    "level": 3,
+    "words": 327,
+    "sentences": 29,
+    "syllables": 392,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Why did Alice feel the Cat should be treated with respect?",
+        "right": "It had very long claws and many teeth",
+        "wrong": [
+          "It belonged to the Queen herself",
+          "It was much bigger than she was",
+          "It could vanish whenever it liked"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Who does the Cat say lives in the two directions?",
+        "right": "A Hatter and a March Hare",
+        "wrong": [
+          "A Queen and a King",
+          "A Duchess and her cook",
+          "A White Rabbit and a Mouse"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does the Cat say it doesn't matter which way Alice goes?",
+        "right": "She does not mind where she gets to",
+        "wrong": [
+          "Every path leads to the same place",
+          "The Cat wants her to stay put",
+          "All the other paths are blocked"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Alice call the sound a cat makes when it is pleased?",
+        "right": "Purring",
+        "wrong": [
+          "Growling",
+          "Hissing",
+          "Mewing"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is wrong with the Cat's argument that it is mad?",
+        "right": "A cat is not a dog, so the comparison fails",
+        "wrong": [
+          "Cats really do growl when pleased",
+          "Dogs never wag their tails at all",
+          "Alice agrees with every step of it"
+        ]
+      }
+    ],
+    "evaluate": "The Cat's answers are clever but not very helpful. Was it trying to help Alice? Which answer is the cleverest?",
+    "wordBank": [
+      "grinned",
+      "timidly",
+      "direction",
+      "remarked"
+    ]
+  },
+  {
+    "id": "wind-boats",
+    "work": "wind",
+    "title": "Messing about in boats",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "'Would you like to come over?' enquired the Rat presently.\n\n'Oh, its all very well to TALK,' said the Mole, rather pettishly, he being new to a river and riverside life and its ways.\n\nThe Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly stepped into a little boat which the Mole had not observed. It was painted blue outside and white within, and was just the size for two animals; and the Mole's whole heart went out to it at once, even though he did not yet fully understand its uses.\n\nThe Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole stepped gingerly down. 'Lean on that!' he said. 'Now then, step lively!' and the Mole to his surprise and rapture found himself actually seated in the stern of a real boat.\n\n'This has been a wonderful day!' said he, as the Rat shoved off and took to the sculls again. 'Do you know, I've never been in a boat before in all my life.'\n\n'What?' cried the Rat, open-mouthed: 'Never been in a--you never--well I--what have you been doing, then?'\n\n'Is it so nice as all that?' asked the Mole shyly, though he was quite prepared to believe it as he leant back in his seat and surveyed the cushions, the oars, the rowlocks, and all the fascinating fittings, and felt the boat sway lightly under him.\n\n'Nice? It's the ONLY thing,' said the Water Rat solemnly, as he leant forward for his stroke. 'Believe me, my young friend, there is NOTHING--absolute nothing--half so much worth doing as simply messing about in boats. Simply messing,' he went on dreamily: 'messing--about--in--boats; messing----'\n\n'Look ahead, Rat!' cried the Mole suddenly.\n\nIt was too late. The boat struck the bank full tilt. The dreamer, the joyous oarsman, lay on his back at the bottom of the boat, his heels in the air.",
+    "fk": 4.9,
+    "level": 4.9,
+    "words": 324,
+    "sentences": 26,
+    "syllables": 430,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What colours was the Rat's little boat?",
+        "right": "Blue outside and white inside",
+        "wrong": [
+          "Red outside and gold inside",
+          "Green and brown all over",
+          "White outside and blue inside"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What amazed the Rat about the Mole?",
+        "right": "He had never been in a boat before",
+        "wrong": [
+          "He could not swim at all",
+          "He had never seen a river",
+          "He was afraid of water rats"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What happened while the Rat was talking dreamily?",
+        "right": "The boat crashed into the bank",
+        "wrong": [
+          "The Mole fell into the water",
+          "An oar floated away",
+          "A storm began to blow"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How did the Mole feel when he first saw the boat?",
+        "right": "He loved it at once",
+        "wrong": [
+          "He was frightened of it",
+          "He thought it too small",
+          "He did not notice it"
+        ]
+      }
+    ],
+    "evaluate": "The Rat says nothing is 'half so much worth doing' as messing about in boats. What could you happily do all day?",
+    "wordBank": [
+      "pettishly",
+      "sculled",
+      "gingerly",
+      "rapture",
+      "rowlocks"
+    ]
+  },
+  {
+    "id": "secretgarden-door",
+    "work": "secretgarden",
+    "title": "The door in the wall",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "One of the nice little gusts of wind rushed down the walk, and it was a stronger one than the rest. It was strong enough to wave the branches of the trees, and it was more than strong enough to sway the trailing sprays of untrimmed ivy hanging from the wall. Mary had stepped close to the robin, and suddenly the gust of wind swung aside some loose ivy trails, and more suddenly still she jumped toward it and caught it in her hand. This she did because she had seen something under it--a round knob which had been covered by the leaves hanging over it. It was the knob of a door.\n\nShe put her hands under the leaves and began to pull and push them aside. Thick as the ivy hung, it nearly all was a loose and swinging curtain, though some had crept over wood and iron. Mary's heart began to thump and her hands to shake a little in her delight and excitement. The robin kept singing and twittering away and tilting his head on one side, as if he were as excited as she was. What was this under her hands which was square and made of iron and which her fingers found a hole in?\n\nIt was the lock of the door which had been closed ten years and she put her hand in her pocket, drew out the key and found it fitted the keyhole. She put the key in and turned it. It took two hands to do it, but it did turn.\n\nAnd then she took a long breath and looked behind her up the long walk to see if any one was coming. No one was coming. No one ever did come, it seemed, and she took another long breath, because she could not help it, and she held back the swinging curtain of ivy and pushed back the door which opened slowly--slowly.\n\nThen she slipped through it, and shut it behind her, and stood with her back against it, looking about her and breathing quite fast with excitement, and wonder, and delight.\n\nShe was standing inside the secret garden.",
+    "fk": 6.6,
+    "level": 6.6,
+    "words": 360,
+    "sentences": 18,
+    "syllables": 439,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What did the wind blow aside?",
+        "right": "Some loose trails of ivy",
+        "wrong": [
+          "A pile of dead leaves",
+          "The robin's little nest",
+          "A heap of melting snow"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Mary find under the ivy first?",
+        "right": "A round knob",
+        "wrong": [
+          "A rusty key",
+          "A stone bench",
+          "A small window"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How many hands did it take to turn the key?",
+        "right": "Two",
+        "wrong": [
+          "One",
+          "Three",
+          "Four"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Mary look behind her before opening the door?",
+        "right": "She did not want anyone to see",
+        "wrong": [
+          "She heard the robin calling",
+          "She thought the wind had stopped",
+          "She had dropped her key"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How did Mary feel once she was inside?",
+        "right": "Thrilled and amazed",
+        "wrong": [
+          "Lonely and sad",
+          "Bored and sleepy",
+          "Cross and grumpy"
+        ]
+      }
+    ],
+    "evaluate": "Mary keeps the garden a secret. Is it ever right to keep a secret like this one? Why?",
+    "wordBank": [
+      "gusts",
+      "untrimmed",
+      "trailing",
+      "excitement"
+    ]
+  },
+  {
+    "id": "blackbeauty-advice",
+    "work": "blackbeauty",
+    "title": "My mother's advice",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "The first place that I can well remember was a large pleasant meadow with a pond of clear water in it. Some shady trees leaned over it, and rushes and water-lilies grew at the deep end. Over the hedge on one side we looked into a plowed field, and on the other we looked over a gate at our master's house, which stood by the roadside; at the top of the meadow was a grove of fir trees, and at the bottom a running brook overhung by a steep bank.\n\nWhile I was young I lived upon my mother's milk, as I could not eat grass. In the daytime I ran by her side, and at night I lay down close by her. When it was hot we used to stand by the pond in the shade of the trees, and when it was cold we had a nice warm shed near the grove.\n\nAs soon as I was old enough to eat grass my mother used to go out to work in the daytime, and come back in the evening.\n\nThere were six young colts in the meadow besides me; they were older than I was; some were nearly as large as grown-up horses. I used to run with them, and had great fun; we used to gallop all together round and round the field as hard as we could go. Sometimes we had rather rough play, for they would frequently bite and kick as well as gallop.\n\nOne day, when there was a good deal of kicking, my mother whinnied to me to come to her, and then she said:\n\n\"I wish you to pay attention to what I am going to say to you. The colts who live here are very good colts, but they are cart-horse colts, and of course they have not learned manners. You have been well-bred and well-born; your father has a great name in these parts, and your grandfather won the cup two years at the Newmarket races; your grandmother had the sweetest temper of any horse I ever knew, and I think you have never seen me kick or bite. I hope you will grow up gentle and good, and never learn bad ways; do your work with a good will, lift your feet up well when you trot, and never bite or kick even in play.\"\n\nI have never forgotten my mother's advice; I knew she was a wise old horse, and our master thought a great deal of her. Her name was Duchess, but he often called her Pet.",
+    "fk": 8.8,
+    "level": 8.8,
+    "words": 430,
+    "sentences": 16,
+    "syllables": 508,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Who is telling this story?",
+        "right": "A young horse",
+        "wrong": [
+          "The master",
+          "A farmer's boy",
+          "An old donkey"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the colts sometimes do in their rough play?",
+        "right": "Bite and kick",
+        "wrong": [
+          "Sing and dance",
+          "Hide and seek",
+          "Swim and dive"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What had the young horse's grandfather won?",
+        "right": "The cup at Newmarket, two years",
+        "wrong": [
+          "A ribbon at the village show",
+          "A race against a steam train",
+          "A prize for the best manners"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What was the mother horse's name?",
+        "right": "Duchess",
+        "wrong": [
+          "Ginger",
+          "Merrylegs",
+          "Beauty"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did the mother call her foal over?",
+        "right": "She wanted him to learn good manners",
+        "wrong": [
+          "She wanted him to stop eating grass",
+          "It was time to go into the town",
+          "The master was calling for him"
+        ]
+      }
+    ],
+    "evaluate": "The mother says the other colts 'have not learned manners' because they are cart-horse colts. Is it fair to judge someone by their family? What do you think?",
+    "wordBank": [
+      "meadow",
+      "whinnied",
+      "colts",
+      "temper"
+    ],
+    "needsReview": true,
+    "reviewNote": "The mother's advice ranks the 'well-bred' above 'cart-horse colts', a period class attitude. The evaluative question invites the child to question it; a reviewer should approve that framing."
+  },
+  {
+    "id": "tomsawyer-fence",
+    "work": "tomsawyer",
+    "title": "Whitewashing the fence",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "\"Hello, old chap, you got to work, hey?\"\n\nTom wheeled suddenly and said:\n\n\"Why, it's you, Ben! I warn't noticing.\"\n\n\"Say--I'm going in a-swimming, I am. Don't you wish you could? But of course you'd druther WORK--wouldn't you? Course you would!\"\n\nTom contemplated the boy a bit, and said:\n\n\"What do you call work?\"\n\n\"Why, ain't THAT work?\"\n\nTom resumed his whitewashing, and answered carelessly:\n\n\"Well, maybe it is, and maybe it ain't. All I know, is, it suits Tom Sawyer.\"\n\n\"Oh come, now, you don't mean to let on that you LIKE it?\"\n\nThe brush continued to move.\n\n\"Like it? Well, I don't see why I oughtn't to like it. Does a boy get a chance to whitewash a fence every day?\"\n\nThat put the thing in a new light. Ben stopped nibbling his apple. Tom swept his brush daintily back and forth--stepped back to note the effect--added a touch here and there--criticised the effect again--Ben watching every move and getting more and more interested, more and more absorbed. Presently he said:\n\n\"Say, Tom, let ME whitewash a little.\"\n\nTom considered, was about to consent; but he altered his mind:\n\n\"No--no--I reckon it wouldn't hardly do, Ben. You see, Aunt Polly's awful particular about this fence--right here on the street, you know --but if it was the back fence I wouldn't mind and SHE wouldn't. Yes, she's awful particular about this fence; it's got to be done very careful; I reckon there ain't one boy in a thousand, maybe two thousand, that can do it the way it's got to be done.\"\n\n\"No--is that so? Oh come, now--lemme just try. Only just a little--I'd let YOU, if you was me, Tom.\"\n\n\"Ben, I'd like to, honest injun; but Aunt Polly--well, Jim wanted to do it, but she wouldn't let him; Sid wanted to do it, and she wouldn't let Sid. Now don't you see how I'm fixed? If you was to tackle this fence and anything was to happen to it--\"\n\n\"Oh, shucks, I'll be just as careful. Now lemme try. Say--I'll give you the core of my apple.\"\n\n\"Well, here--No, Ben, now don't. I'm afeard--\"\n\n\"I'll give you ALL of it!\"\n\nTom gave up the brush with reluctance in his face, but alacrity in his heart. And while the late steamer Big Missouri worked and sweated in the sun, the retired artist sat on a barrel in the shade close by, dangled his legs, munched his apple, and planned the slaughter of more innocents. There was no lack of material; boys happened along every little while; they came to jeer, but remained to whitewash.",
+    "fk": 4.4,
+    "level": 4.4,
+    "words": 436,
+    "sentences": 36,
+    "syllables": 563,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where was Ben going?",
+        "right": "Swimming",
+        "wrong": [
+          "Fishing",
+          "To school",
+          "Home"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Ben first offer Tom for a turn?",
+        "right": "The core of his apple",
+        "wrong": [
+          "A kite in good repair",
+          "A dead rat on a string",
+          "A shiny new marble"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Ben suddenly want to whitewash?",
+        "right": "Tom made it seem rare and special",
+        "wrong": [
+          "Aunt Polly asked him to help",
+          "He wanted to earn some money",
+          "He had nothing else to do"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Tom say Aunt Polly was 'awful particular' about the fence?",
+        "right": "To make the job seem hard to get",
+        "wrong": [
+          "Because she was very cross",
+          "To warn Ben about the paint",
+          "Because the fence was new"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Tom do while Ben worked?",
+        "right": "Sat in the shade eating the apple",
+        "wrong": [
+          "Went swimming in the river",
+          "Painted the back fence",
+          "Ran to tell Aunt Polly"
+        ]
+      }
+    ],
+    "evaluate": "Was Tom clever, or unfair to the other boys? Would you have handed over your apple?",
+    "wordBank": [
+      "contemplated",
+      "particular",
+      "reluctance",
+      "alacrity",
+      "jeer"
+    ],
+    "needsReview": true,
+    "reviewNote": "Tom says 'honest injun', a slur on Native Americans in common use in 1876. Kept as Twain wrote it (never bowdlerised); it needs a grown-up note and a named reviewer's sign-off."
+  },
+  {
+    "id": "velveteen-real",
+    "work": "velveteen",
+    "title": "What is REAL?",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "The Skin Horse had lived longer in the nursery than any of the others. He was so old that his brown coat was bald in patches and showed the seams underneath, and most of the hairs in his tail had been pulled out to string bead necklaces. He was wise, for he had seen a long succession of mechanical toys arrive to boast and swagger, and by-and-by break their mainsprings and pass away, and he knew that they were only toys, and would never turn into anything else. For nursery magic is very strange and wonderful, and only those playthings that are old and wise and experienced like the Skin Horse understand all about it.\n\n\"What is REAL?\" asked the Rabbit one day, when they were lying side by side near the nursery fender, before Nana came to tidy the room. \"Does it mean having things that buzz inside you and a stick-out handle?\"\n\n\"Real isn't how you are made,\" said the Skin Horse. \"It's a thing that happens to you. When a child loves you for a long, long time, not just to play with, but REALLY loves you, then you become Real.\"\n\n\"Does it hurt?\" asked the Rabbit.\n\n\"Sometimes,\" said the Skin Horse, for he was always truthful. \"When you are Real you don't mind being hurt.\"\n\n\"Does it happen all at once, like being wound up,\" he asked, \"or bit by bit?\"\n\n\"It doesn't happen all at once,\" said the Skin Horse. \"You become. It takes a long time. That's why it doesn't happen often to people who break easily, or have sharp edges, or who have to be carefully kept. Generally, by the time you are Real, most of your hair has been loved off, and your eyes drop out and you get loose in the joints and very shabby. But these things don't matter at all, because once you are Real you can't be ugly, except to people who don't understand.\"\n\n\"I suppose you are real?\" said the Rabbit. And then he wished he had not said it, for he thought the Skin Horse might be sensitive. But the Skin Horse only smiled.",
+    "fk": 4.6,
+    "level": 4.6,
+    "words": 358,
+    "sentences": 25,
+    "syllables": 444,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Why was the Skin Horse bald in patches?",
+        "right": "He was very old and well-worn",
+        "wrong": [
+          "A dog had chewed his coat",
+          "He was left out in the rain",
+          "He was made that way"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "According to the Skin Horse, how does a toy become Real?",
+        "right": "A child loves it for a long, long time",
+        "wrong": [
+          "It is wound up with a golden key",
+          "It is stuffed with the best sawdust",
+          "It is kept safe inside a box"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Does becoming Real happen all at once?",
+        "right": "No, it takes a long time",
+        "wrong": [
+          "Yes, in a single night",
+          "Yes, on the child's birthday",
+          "No, it never happens"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does it seldom happen to toys that 'break easily, or have sharp edges'?",
+        "right": "They are hard to love and hold for years",
+        "wrong": [
+          "They cost too much to buy",
+          "They are always kept in shops",
+          "They are too new and shiny"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did the Rabbit wish he had not asked his last question?",
+        "right": "It might upset the old Horse",
+        "wrong": [
+          "He was afraid of the answer",
+          "Nana came in to tidy the room",
+          "The Horse was fast asleep"
+        ]
+      }
+    ],
+    "evaluate": "The Skin Horse says once you are Real 'you can't be ugly, except to people who don't understand'. What do you think he means?",
+    "wordBank": [
+      "succession",
+      "mainsprings",
+      "experienced",
+      "shabby",
+      "sensitive"
+    ]
+  },
+  {
+    "id": "littlewomen-presents",
+    "work": "littlewomen",
+    "title": "No presents this Christmas",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "\"Christmas won't be Christmas without any presents,\" grumbled Jo, lying on the rug.\n\n\"It's so dreadful to be poor!\" sighed Meg, looking down at her old dress.\n\n\"I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all,\" added little Amy, with an injured sniff.\n\n\"We've got Father and Mother, and each other,\" said Beth contentedly from her corner.\n\nThe four young faces on which the firelight shone brightened at the cheerful words, but darkened again as Jo said sadly, \"We haven't got Father, and shall not have him for a long time.\" She didn't say \"perhaps never,\" but each silently added it, thinking of Father far away, where the fighting was.\n\nNobody spoke for a minute; then Meg said in an altered tone, \"You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone; and she thinks we ought not to spend money for pleasure, when our men are suffering so in the army. We can't do much, but we can make our little sacrifices, and ought to do it gladly. But I am afraid I don't,\" and Meg shook her head, as she thought regretfully of all the pretty things she wanted.\n\n\"But I don't think the little we should spend would do any good. We've each got a dollar, and the army wouldn't be much helped by our giving that. I agree not to expect anything from Mother or you, but I do want to buy _Undine and Sintran_ for myself. I've wanted it so long,\" said Jo, who was a bookworm.\n\n\"I planned to spend mine in new music,\" said Beth, with a little sigh, which no one heard but the hearth brush and kettle-holder.\n\n\"I shall get a nice box of Faber's drawing pencils; I really need them,\" said Amy decidedly.",
+    "fk": 7.3,
+    "level": 7.3,
+    "words": 318,
+    "sentences": 16,
+    "syllables": 408,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where was Father?",
+        "right": "Away at the war",
+        "wrong": [
+          "At work in the city",
+          "Visiting his sister",
+          "Asleep upstairs"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How much money did each girl have?",
+        "right": "A dollar",
+        "wrong": [
+          "A penny",
+          "Ten dollars",
+          "Nothing"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Jo want to buy?",
+        "right": "A book she had long wanted",
+        "wrong": [
+          "Some new sheets of music",
+          "A box of drawing pencils",
+          "A new dress for parties"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why had Mother suggested no presents this year?",
+        "right": "Times were hard and soldiers were suffering",
+        "wrong": [
+          "The girls had been very naughty",
+          "The shops were closed for winter",
+          "Father asked for it in a letter"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Which sister seems most content with what she has?",
+        "right": "Beth",
+        "wrong": [
+          "Meg",
+          "Jo",
+          "Amy"
+        ]
+      }
+    ],
+    "evaluate": "Each sister reacts differently to having no presents. Which sister are you most like, and why?",
+    "wordBank": [
+      "contentedly",
+      "sacrifices",
+      "regretfully",
+      "decidedly",
+      "bookworm"
+    ]
+  },
+  {
+    "id": "anne-matthew",
+    "work": "anne",
+    "title": "Matthew meets Anne",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "A child of about eleven, garbed in a very short, very tight, very ugly dress of yellowish-gray wincey. She wore a faded brown sailor hat and beneath the hat, extending down her back, were two braids of very thick, decidedly red hair. Her face was small, white and thin, also much freckled; her mouth was large and so were her eyes, which looked green in some lights and moods and gray in others.\n\nSo far, the ordinary observer; an extraordinary observer might have seen that the chin was very pointed and pronounced; that the big eyes were full of spirit and vivacity; that the mouth was sweet-lipped and expressive; that the forehead was broad and full; in short, our discerning extraordinary observer might have concluded that no commonplace soul inhabited the body of this stray woman-child of whom shy Matthew Cuthbert was so ludicrously afraid.\n\nMatthew, however, was spared the ordeal of speaking first, for as soon as she concluded that he was coming to her she stood up, grasping with one thin brown hand the handle of a shabby, old-fashioned carpet-bag; the other she held out to him.\n\n\"I suppose you are Mr. Matthew Cuthbert of Green Gables?\" she said in a peculiarly clear, sweet voice. \"I'm very glad to see you. I was beginning to be afraid you weren't coming for me and I was imagining all the things that might have happened to prevent you. I had made up my mind that if you didn't come for me to-night I'd go down the track to that big wild cherry-tree at the bend, and climb up into it to stay all night. I wouldn't be a bit afraid, and it would be lovely to sleep in a wild cherry-tree all white with bloom in the moonshine, don't you think? You could imagine you were dwelling in marble halls, couldn't you? And I was quite sure you would come for me in the morning, if you didn't to-night.\"\n\nMatthew had taken the scrawny little hand awkwardly in his; then and there he decided what to do. He could not tell this child with the glowing eyes that there had been a mistake; he would take her home and let Marilla do that. She couldn't be left at Bright River anyhow, no matter what mistake had been made, so all questions and explanations might as well be deferred until he was safely back at Green Gables.\n\n\"I'm sorry I was late,\" he said shyly. \"Come along. The horse is over in the yard. Give me your bag.\"",
+    "fk": 8.2,
+    "level": 8.2,
+    "words": 427,
+    "sentences": 21,
+    "syllables": 574,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What colour was the girl's hair?",
+        "right": "Red",
+        "wrong": [
+          "Brown",
+          "Black",
+          "Fair"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Where had she planned to sleep if no one came?",
+        "right": "Up in a wild cherry-tree",
+        "wrong": [
+          "On a bench at the station",
+          "In the station-master's house",
+          "Under the wooden platform"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why was Matthew afraid to speak to her?",
+        "right": "He was shy, and she was not a boy",
+        "wrong": [
+          "She looked cross and unfriendly",
+          "He had forgotten her name",
+          "She had a large dog with her"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Matthew decide to take her home?",
+        "right": "He could not bear to tell her of the mistake",
+        "wrong": [
+          "Marilla had told him to bring her",
+          "She would not let go of his hand",
+          "He had wanted a girl all along"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did 'an extraordinary observer' notice?",
+        "right": "Her eyes were full of spirit",
+        "wrong": [
+          "Her dress was brand new",
+          "She was about to cry",
+          "She was tall for eleven"
+        ]
+      }
+    ],
+    "evaluate": "Anne talks a great deal when she is nervous. Is talking a good way to handle being nervous? What do you do?",
+    "wordBank": [
+      "observer",
+      "vivacity",
+      "discerning",
+      "ludicrously",
+      "deferred"
+    ],
+    "needsReview": true,
+    "reviewNote": "Anne is an orphan, and the Cuthberts had asked for a boy. For a child who is adopted or fostered this may land closely; offer a grown-up note, reviewer to approve."
+  },
+  {
+    "id": "treasure-benbow",
+    "work": "treasure",
+    "title": "The old sea-dog at the Admiral Benbow",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "text": "SQUIRE TRELAWNEY, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still treasure not yet lifted, I take up my pen in the year of grace 17__ and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under our roof.\n\nI remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow--a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white. I remember him looking round the cover and whistling to himself as he did so, and then breaking out in that old sea-song that he sang so often afterwards:\n\n\"Fifteen men on the dead man's chest-- Yo-ho-ho, and a bottle of rum!\"\n\nin the high, old tottering voice that seemed to have been tuned and broken at the capstan bars. Then he rapped on the door with a bit of stick like a handspike that he carried, and when my father appeared, called roughly for a glass of rum. This, when it was brought to him, he drank slowly, like a connoisseur, lingering on the taste and still looking about him at the cliffs and up at our signboard.\n\n\"This is a handy cove,\" says he at length; \"and a pleasant sittyated grog-shop. Much company, mate?\"\n\nMy father told him no, very little company, the more was the pity.\n\n\"Well, then,\" said he, \"this is the berth for me. Here you, matey,\" he cried to the man who trundled the barrow; \"bring up alongside and help up my chest. I'll stay here a bit,\" he continued. \"I'm a plain man; rum and bacon and eggs is what I want, and that head up there for to watch ships off. What you mought call me? You mought call me captain. Oh, I see what you're at--there\"; and he threw down three or four gold pieces on the threshold. \"You can tell me when I've worked through that,\" says he, looking as fierce as a commander.",
+    "fk": 8.3,
+    "level": 8.3,
+    "words": 404,
+    "sentences": 18,
+    "syllables": 517,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Who is telling the story?",
+        "right": "The innkeeper's son",
+        "wrong": [
+          "Squire Trelawney",
+          "Dr. Livesey",
+          "The old seaman"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What was the name of the narrator's father's inn?",
+        "right": "The Admiral Benbow",
+        "wrong": [
+          "The Royal George",
+          "The Dead Man's Chest",
+          "The Spyglass"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What mark did the seaman have on his cheek?",
+        "right": "A sabre cut",
+        "wrong": [
+          "A ship tattoo",
+          "A burn mark",
+          "A black patch"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did the captain choose this inn?",
+        "right": "It was quiet and looked out to sea",
+        "wrong": [
+          "It was the cheapest on the coast",
+          "An old friend of his kept it",
+          "It was close to the busy town"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'keeping nothing back but the bearings of the island' mean?",
+        "right": "He will tell all except where it is",
+        "wrong": [
+          "He will keep the treasure himself",
+          "He has forgotten most of it",
+          "He will only tell happy parts"
+        ]
+      }
+    ],
+    "evaluate": "The narrator says there is 'still treasure not yet lifted'. How does that make you feel about reading on?",
+    "wordBank": [
+      "particulars",
+      "connoisseur",
+      "sabre",
+      "threshold",
+      "handspike"
+    ]
+  },
+  {
+    "id": "wordsworth-daffodils",
+    "work": "wordsworth",
+    "title": "I wandered lonely as a Cloud",
+    "band": 2,
+    "kind": "verse",
+    "abridged": false,
+    "text": "I wandered lonely as a Cloud\nThat floats on high o'er Vales and Hills,\nWhen all at once I saw a crowd\nA host of dancing Daffodills;\nAlong the Lake, beneath the trees,\nTen thousand dancing in the breeze.\n\nThe waves beside them danced, but they\nOutdid the sparkling waves in glee:--\nA Poet could not but be gay\nIn such a laughing company:\nI gaz'd--and gaz'd--but little thought\nWhat wealth the shew to me had brought:\n\nFor oft when on my couch I lie\nIn vacant or in pensive mood,\nThey flash upon that inward eye\nWhich is the bliss of solitude,\nAnd then my heart with pleasure fills,\nAnd dances with the Daffodils.",
+    "fk": 21.6,
+    "fkOverride": 6,
+    "level": 6,
+    "words": 115,
+    "sentences": 2,
+    "syllables": 144,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What does the poet compare himself to?",
+        "right": "A lonely cloud",
+        "wrong": [
+          "A dancing wave",
+          "A bird in a tree",
+          "A falling leaf"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How many daffodils does the poet say he saw?",
+        "right": "Ten thousand",
+        "wrong": [
+          "A hundred",
+          "A few dozen",
+          "A million"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the daffodils outdo in glee?",
+        "right": "The sparkling waves",
+        "wrong": [
+          "The singing birds",
+          "The rushing wind",
+          "The shining stars"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is the 'wealth' the poet did not notice at first?",
+        "right": "A memory that brings him joy later",
+        "wrong": [
+          "Money he found by the lake",
+          "Flowers he picked to sell",
+          "A gift from a friend"
+        ]
+      }
+    ],
+    "evaluate": "Is there a place or a sight you remember that still makes you happy? How is your memory like the poet's?",
+    "wordBank": [
+      "host",
+      "glee",
+      "pensive",
+      "solitude",
+      "vacant"
+    ]
+  },
+  {
+    "id": "dickinson-hope",
+    "work": "dickinson",
+    "title": "Hope",
+    "band": 2,
+    "kind": "verse",
+    "abridged": false,
+    "text": "Hope is the thing with feathers\nThat perches in the soul,\nAnd sings the tune without the words,\nAnd never stops at all,\n\nAnd sweetest in the gale is heard;\nAnd sore must be the storm\nThat could abash the little bird\nThat kept so many warm.\n\nI 've heard it in the chillest land,\nAnd on the strangest sea;\nYet, never, in extremity,\nIt asked a crumb of me.",
+    "fk": 12.2,
+    "fkOverride": 6,
+    "level": 6,
+    "words": 70,
+    "sentences": 2,
+    "syllables": 84,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where does the poem say hope perches?",
+        "right": "In the soul",
+        "wrong": [
+          "On a branch",
+          "In a cage",
+          "On the roof"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is hope compared to in the poem?",
+        "right": "A little bird",
+        "wrong": [
+          "A warm fire",
+          "A bright star",
+          "A small boat"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "When is its song sweetest?",
+        "right": "In the gale",
+        "wrong": [
+          "In the morning",
+          "At midnight",
+          "In the summer"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'never ... It asked a crumb of me' mean?",
+        "right": "Hope never wanted anything back",
+        "wrong": [
+          "The bird was always hungry",
+          "The poet fed it every day",
+          "Hope only comes if you pay"
+        ]
+      }
+    ],
+    "evaluate": "Why do you think the poet chose a bird to stand for hope? What would you choose?",
+    "wordBank": [
+      "perches",
+      "abash",
+      "extremity",
+      "gale"
+    ]
+  },
+  {
+    "id": "holmes-observe",
+    "work": "holmes",
+    "title": "You see, but you do not observe",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "\"Then, how do you know?\"\n\n\"I see it, I deduce it. How do I know that you have been getting yourself very wet lately, and that you have a most clumsy and careless servant girl?\"\n\n\"My dear Holmes,\" said I, \"this is too much. You would certainly have been burned, had you lived a few centuries ago. It is true that I had a country walk on Thursday and came home in a dreadful mess, but as I have changed my clothes I can't imagine how you deduce it. As to Mary Jane, she is incorrigible, and my wife has given her notice, but there, again, I fail to see how you work it out.\"\n\nHe chuckled to himself and rubbed his long, nervous hands together.\n\n\"It is simplicity itself,\" said he; \"my eyes tell me that on the inside of your left shoe, just where the firelight strikes it, the leather is scored by six almost parallel cuts. Obviously they have been caused by someone who has very carelessly scraped round the edges of the sole in order to remove crusted mud from it. Hence, you see, my double deduction that you had been out in vile weather, and that you had a particularly malignant boot-slitting specimen of the London slavey. As to your practice, if a gentleman walks into my rooms smelling of iodoform, with a black mark of nitrate of silver upon his right forefinger, and a bulge on the right side of his top-hat to show where he has secreted his stethoscope, I must be dull, indeed, if I do not pronounce him to be an active member of the medical profession.\"\n\nI could not help laughing at the ease with which he explained his process of deduction. \"When I hear you give your reasons,\" I remarked, \"the thing always appears to me to be so ridiculously simple that I could easily do it myself, though at each successive instance of your reasoning I am baffled until you explain your process. And yet I believe that my eyes are as good as yours.\"\n\n\"Quite so,\" he answered, lighting a cigarette, and throwing himself down into an armchair. \"You see, but you do not observe. The distinction is clear. For example, you have frequently seen the steps which lead up from the hall to this room.\"\n\n\"Frequently.\"\n\n\"How often?\"\n\n\"Well, some hundreds of times.\"\n\n\"Then how many are there?\"\n\n\"How many? I don't know.\"\n\n\"Quite so! You have not observed. And yet you have seen. That is just my point. Now, I know that there are seventeen steps, because I have both seen and observed.",
+    "fk": 6,
+    "level": 6,
+    "words": 438,
+    "sentences": 30,
+    "syllables": 590,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "How did Holmes know Watson had been out in bad weather?",
+        "right": "Scraped mud had left cuts on his shoe",
+        "wrong": [
+          "Watson's coat was still dripping",
+          "Watson kept sneezing all evening",
+          "Watson told him so in a letter"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Which clue showed Watson was working as a doctor again?",
+        "right": "A smell of iodoform and a stained finger",
+        "wrong": [
+          "A doctor's bag by the front door",
+          "A letter from a London hospital",
+          "A white coat over his armchair"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How many steps lead up to Holmes's room?",
+        "right": "Seventeen",
+        "wrong": [
+          "Twelve",
+          "Thirteen",
+          "Twenty-one"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does Holmes mean by 'You see, but you do not observe'?",
+        "right": "Watson looks without noticing details",
+        "wrong": [
+          "Watson needs new spectacles",
+          "Watson never looks at anything",
+          "Watson sees things that are not there"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Watson laugh when Holmes explained?",
+        "right": "The reasoning seemed so simple once told",
+        "wrong": [
+          "Holmes had made a silly mistake",
+          "The story of the servant was funny",
+          "Holmes was wearing a strange hat"
+        ]
+      }
+    ],
+    "evaluate": "Holmes counts the steps. Think of a place you go every day: what have you seen there but never observed?",
+    "wordBank": [
+      "deduce",
+      "incorrigible",
+      "malignant",
+      "distinction",
+      "stethoscope"
+    ],
+    "needsReview": true,
+    "reviewNote": "Holmes calls Watson's maid 'a particularly malignant boot-slitting specimen of the London slavey': Victorian contempt for servants, played as a joke. He also lights a cigarette. A reviewer should approve the grown-up note."
+  },
+  {
+    "id": "carol-scrooge",
+    "work": "carol",
+    "title": "Scrooge",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "Scrooge never painted out Old Marley's name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.\n\nOh! But he was a tight-fisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and spoke out shrewdly in his grating voice. A frosty rime was on his head, and on his eyebrows, and his wiry chin. He carried his own low temperature always about with him; he iced his office in the dog-days; and didn't thaw it one degree at Christmas.\n\nExternal heat and cold had little influence on Scrooge. No warmth could warm, no wintry weather chill him. No wind that blew was bitterer than he, no falling snow was more intent upon its purpose, no pelting rain less open to entreaty. Foul weather didn't know where to have him. The heaviest rain, and snow, and hail, and sleet, could boast of the advantage over him in only one respect. They often \"came down\" handsomely, and Scrooge never did.\n\nNobody ever stopped him in the street to say, with gladsome looks, \"My dear Scrooge, how are you? When will you come to see me?\" No beggars implored him to bestow a trifle, no children asked him what it was o'clock, no man or woman ever once in all his life inquired the way to such and such a place, of Scrooge. Even the blind men's dogs appeared to know him; and when they saw him coming on, would tug their owners into doorways and up courts; and then would wag their tails as though they said, \"No eye at all is better than an evil eye, dark master!\"\n\nBut what did Scrooge care! It was the very thing he liked. To edge his way along the crowded paths of life, warning all human sympathy to keep its distance, was what the knowing ones call \"nuts\" to Scrooge.",
+    "fk": 6,
+    "level": 6,
+    "words": 396,
+    "sentences": 25,
+    "syllables": 516,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What words stood above the warehouse door?",
+        "right": "Scrooge and Marley",
+        "wrong": [
+          "Scrooge and Son",
+          "Marley and Company",
+          "Scrooge's Counting-House"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What is Scrooge said to be as solitary as?",
+        "right": "An oyster",
+        "wrong": [
+          "A lighthouse",
+          "A crow",
+          "A mountain"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'didn't thaw it one degree at Christmas' mean?",
+        "right": "He was no kinder at Christmas",
+        "wrong": [
+          "He kept a fire lit all winter",
+          "He disliked hot weather",
+          "He never closed his office"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the blind men's dogs do when they saw Scrooge coming?",
+        "right": "Pulled their owners out of his way",
+        "wrong": [
+          "Barked and chased after him",
+          "Ran up to him to be stroked",
+          "Lay down and refused to move"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How did Scrooge feel about people keeping away from him?",
+        "right": "He liked it",
+        "wrong": [
+          "It made him lonely",
+          "It made him angry",
+          "He never noticed"
+        ]
+      }
+    ],
+    "evaluate": "Dickens piles up words: 'squeezing, wrenching, grasping, scraping, clutching'. Why use so many? Which one is strongest?",
+    "wordBank": [
+      "covetous",
+      "solitary",
+      "entreaty",
+      "implored",
+      "sympathy"
+    ]
+  },
+  {
+    "id": "blake-tiger",
+    "work": "blake",
+    "title": "The Tiger",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "Tiger, tiger, burning bright\nIn the forests of the night,\nWhat immortal hand or eye\nCould frame thy fearful symmetry?\n\nIn what distant deeps or skies\nBurnt the fire of thine eyes?\nOn what wings dare he aspire?\nWhat the hand dare seize the fire?\n\nAnd what shoulder and what art\nCould twist the sinews of thy heart?\nAnd, when thy heart began to beat,\nWhat dread hand and what dread feet?\n\nWhat the hammer? what the chain?\nIn what furnace was thy brain?\nWhat the anvil? what dread grasp\nDare its deadly terrors clasp?\n\nWhen the stars threw down their spears,\nAnd watered heaven with their tears,\nDid He smile His work to see?\nDid He who made the lamb make thee?\n\nTiger, tiger, burning bright\nIn the forests of the night,\nWhat immortal hand or eye\nDare frame thy fearful symmetry?",
+    "fk": 2.8,
+    "fkOverride": 7,
+    "level": 7,
+    "words": 143,
+    "sentences": 14,
+    "syllables": 175,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where does the poem say the tiger burns bright?",
+        "right": "In the forests of the night",
+        "wrong": [
+          "In the desert sun",
+          "On a snowy mountain",
+          "In a cage at the fair"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Which of these tools does the poem name?",
+        "right": "Hammer, chain and anvil",
+        "wrong": [
+          "Saw, nail and chisel",
+          "Spade, rake and hoe",
+          "Needle, thread and pin"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What question does the poem keep asking?",
+        "right": "Who could make such a creature",
+        "wrong": [
+          "Where the tiger goes at night",
+          "Why the tiger is so hungry",
+          "How fast the tiger can run"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What changes between the first verse and the last?",
+        "right": "'Could frame' becomes 'Dare frame'",
+        "wrong": [
+          "The tiger becomes a lamb",
+          "The night becomes the day",
+          "Nothing at all changes"
+        ]
+      }
+    ],
+    "evaluate": "Is the tiger in the poem beautiful, frightening, or both? Which words make you think so?",
+    "wordBank": [
+      "immortal",
+      "symmetry",
+      "sinews",
+      "anvil",
+      "aspire"
+    ]
+  },
+  {
+    "id": "gitanjali-35",
+    "work": "gitanjali",
+    "title": "Where the mind is without fear",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "Where the mind is without fear and the head is held high;\n\nWhere knowledge is free;\n\nWhere the world has not been broken up into fragments by narrow\ndomestic walls;\n\nWhere words come out from the depth of truth;\n\nWhere tireless striving stretches its arms towards perfection;\n\nWhere the clear stream of reason has not lost its way into the\ndreary desert sand of dead habit;\n\nWhere the mind is led forward by thee into ever-widening thought\nand action--\n\nInto that heaven of freedom, my Father, let my country awake.",
+    "fk": 35.5,
+    "fkOverride": 8,
+    "level": 8,
+    "words": 90,
+    "sentences": 1,
+    "syllables": 122,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Which of these does the poet hope for?",
+        "right": "That knowledge is free",
+        "wrong": [
+          "That every house has high walls",
+          "That old habits never change",
+          "That people speak only softly"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What are the 'narrow domestic walls' that break the world into fragments?",
+        "right": "Things that keep people apart",
+        "wrong": [
+          "The walls of an old castle",
+          "Fences around farmers' fields",
+          "The rooms inside a house"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What can lose its way in 'the dreary desert sand of dead habit'?",
+        "right": "The clear stream of reason",
+        "wrong": [
+          "The river of time",
+          "A caravan of travellers",
+          "The light of the stars"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does the poet want for his country?",
+        "right": "To wake up free, fearless and truthful",
+        "wrong": [
+          "To become the richest in the world",
+          "To win every war it fights",
+          "To stay just as it is now"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Who is the poet speaking to?",
+        "right": "God, whom he calls 'my Father'",
+        "wrong": [
+          "His own father at home",
+          "The king of his country",
+          "A teacher at his school"
+        ]
+      }
+    ],
+    "evaluate": "Which 'Where…' line would you most like to be true of your school or your country? Why?",
+    "wordBank": [
+      "fragments",
+      "domestic",
+      "striving",
+      "perfection",
+      "dreary"
+    ]
+  },
+  {
+    "id": "sonnet-18",
+    "work": "sonnets",
+    "title": "Sonnet 18: Shall I compare thee to a summer's day?",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "Shall I compare thee to a summer's day?\nThou art more lovely and more temperate:\nRough winds do shake the darling buds of May,\nAnd summer's lease hath all too short a date:\nSometime too hot the eye of heaven shines,\nAnd often is his gold complexion dimm'd,\nAnd every fair from fair sometime declines,\nBy chance, or nature's changing course untrimm'd:\nBut thy eternal summer shall not fade,\nNor lose possession of that fair thou ow'st,\nNor shall death brag thou wander'st in his shade,\nWhen in eternal lines to time thou grow'st,\n  So long as men can breathe, or eyes can see,\n  So long lives this, and this gives life to thee.",
+    "fk": 21.6,
+    "fkOverride": 9,
+    "level": 9,
+    "words": 114,
+    "sentences": 2,
+    "syllables": 145,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What do rough winds shake?",
+        "right": "The darling buds of May",
+        "wrong": [
+          "The tall trees of autumn",
+          "The roses of June",
+          "The doors of the house"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is 'the eye of heaven'?",
+        "right": "The sun",
+        "wrong": [
+          "The moon",
+          "A star",
+          "A cloud"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does the poet say the person is better than a summer's day?",
+        "right": "Summer fades, but they will not",
+        "wrong": [
+          "Summer is always too cold",
+          "The person likes winter best",
+          "Summer days are far too long"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'this' mean in 'So long lives this'?",
+        "right": "The poem itself",
+        "wrong": [
+          "The summer day",
+          "The poet's life",
+          "A painted portrait"
+        ]
+      }
+    ],
+    "evaluate": "The poet promises the poem will keep the person alive 'so long as men can breathe'. Four hundred years later, has he kept his promise?",
+    "wordBank": [
+      "temperate",
+      "lease",
+      "complexion",
+      "eternal"
+    ]
+  },
+  {
+    "id": "midsummer-puck",
+    "work": "midsummer",
+    "title": "Puck meets a fairy (Act 2, Scene 1)",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "[Enter a FAIRY at One door, and PUCK at another.]\n\nPUCK\nHow now, spirit! whither wander you?\n\nFAIRY\n    Over hill, over dale,\n      Thorough bush, thorough brier,\n    Over park, over pale,\n      Thorough flood, thorough fire,\n    I do wander everywhere,\n    Swifter than the moon's sphere;\n    And I serve the fairy queen,\n    To dew her orbs upon the green.\n    The cowslips tall her pensioners be:\n    In their gold coats spots you see;\n    Those be rubies, fairy favours,\n    In those freckles live their savours;\nI must go seek some dew-drops here,\nAnd hang a pearl in every cowslip's ear.\nFarewell, thou lob of spirits; I'll be gone:\nOur queen and all her elves come here anon.\n\nPUCK\nThe king doth keep his revels here to-night;\nTake heed the Queen come not within his sight.\nFor Oberon is passing fell and wrath,\nBecause that she, as her attendant, hath\nA lovely boy, stol'n from an Indian king;\nShe never had so sweet a changeling:\nAnd jealous Oberon would have the child\nKnight of his train, to trace the forests wild:\nBut she perforce withholds the loved boy,\nCrowns him with flowers, and makes him all her joy:\nAnd now they never meet in grove or green,\nBy fountain clear, or spangled starlight sheen,\nBut they do square; that all their elves for fear\nCreep into acorn cups, and hide them there.\n\nFAIRY\nEither I mistake your shape and making quite,\nOr else you are that shrewd and knavish sprite\nCall'd Robin Goodfellow: are not you he\nThat frights the maidens of the villagery;\nSkim milk, and sometimes labour in the quern,\nAnd bootless make the breathless housewife churn;\nAnd sometime make the drink to bear no barm;\nMislead night-wanderers, laughing at their harm?\nThose that Hobgoblin call you, and sweet Puck,\nYou do their work, and they shall have good luck:\nAre not you he?\n\nPUCK\n                Thou speak'st aright;\nI am that merry wanderer of the night.\nI jest to Oberon, and make him smile,\nWhen I a fat and bean-fed horse beguile,\nNeighing in likeness of a filly foal;\nAnd sometime lurk I in a gossip's bowl,\nIn very likeness of a roasted crab;\nAnd, when she drinks, against her lips I bob,\nAnd on her withered dewlap pour the ale.\nThe wisest aunt, telling the saddest tale,\nSometime for three-foot stool mistaketh me;\nThen slip I from her bum, down topples she,\nAnd 'tailor' cries, and falls into a cough;\nAnd then the whole quire hold their hips and loffe,\nAnd waxen in their mirth, and neeze, and swear\nA merrier hour was never wasted there.",
+    "fk": 13,
+    "fkOverride": 10,
+    "level": 10,
+    "words": 433,
+    "sentences": 13,
+    "syllables": 572,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Whom does the Fairy serve?",
+        "right": "The fairy queen",
+        "wrong": [
+          "Oberon, the king",
+          "Puck himself",
+          "The Duke of Athens"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Why are Oberon and the Queen quarrelling?",
+        "right": "They both want the same boy",
+        "wrong": [
+          "She has stolen his crown",
+          "He has broken her mirror",
+          "They both want the same forest"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What other names does the Fairy give Puck?",
+        "right": "Robin Goodfellow and Hobgoblin",
+        "wrong": [
+          "Peaseblossom and Cobweb",
+          "Oberon and Titania",
+          "Bottom and Quince"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What sort of spirit is Puck?",
+        "right": "A mischievous joker",
+        "wrong": [
+          "A wise, serious adviser",
+          "A shy and gentle helper",
+          "A fearsome warrior"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Puck pretend to be to trick the wise aunt?",
+        "right": "A three-foot stool",
+        "wrong": [
+          "A roasted crab",
+          "A filly foal",
+          "A cowslip"
+        ]
+      }
+    ],
+    "evaluate": "Puck's tricks make people laugh, but someone always ends up on the floor. Are his jokes funny, unkind, or both?",
+    "wordBank": [
+      "knavish",
+      "beguile",
+      "changeling",
+      "perforce",
+      "quern"
+    ],
+    "needsReview": true,
+    "reviewNote": "The fairy king and queen quarrel over 'a lovely boy, stol'n from an Indian king': a child treated as a possession and India as an exotic source. A grown-up note should name this; reviewer to approve. Also contains the mild comic word 'bum'."
+  },
+  {
+    "id": "midsummer-epilogue",
+    "work": "midsummer",
+    "title": "Puck's goodnight",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "If we shadows have offended,\nThink but this,--and all is mended,--\nThat you have but slumber'd here\nWhile these visions did appear.\nAnd this weak and idle theme,\nNo more yielding but a dream,\nGentles, do not reprehend;\nIf you pardon, we will mend.\nAnd, as I am an honest Puck,\nIf we have unearned luck\nNow to 'scape the serpent's tongue,\nWe will make amends ere long;\nElse the Puck a liar call:\nSo, good night unto you all.\nGive me your hands, if we be friends,\nAnd Robin shall restore amends.",
+    "fk": 8,
+    "fkOverride": 9,
+    "level": 9,
+    "words": 94,
+    "sentences": 4,
+    "syllables": 115,
+    "questions": [
+      {
+        "depth": "inferential",
+        "q": "Who is Puck speaking to?",
+        "right": "The audience watching the play",
+        "wrong": [
+          "Oberon and Titania",
+          "The lovers in the forest",
+          "The other fairies"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Puck say the audience can tell themselves?",
+        "right": "That it was all a dream they had",
+        "wrong": [
+          "That the play was very long",
+          "That they were in the forest",
+          "That Puck was really a king"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'Give me your hands' ask for?",
+        "right": "Applause",
+        "wrong": [
+          "A handshake",
+          "Help to climb down",
+          "Money for actors"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does ''scape the serpent's tongue' mean?",
+        "right": "Avoid being hissed at",
+        "wrong": [
+          "Run from a snake",
+          "Stop telling lies",
+          "Learn a new language"
+        ]
+      }
+    ],
+    "evaluate": "Why might a playwright end with an apology? Does it make you like the play more, or less?",
+    "wordBank": [
+      "reprehend",
+      "amends",
+      "slumber",
+      "visions"
+    ]
+  },
+  {
+    "id": "bacon-studies",
+    "work": "essays-bacon",
+    "title": "Of Studies",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "STUDIES serve for delight, for ornament, and for ability. Their chief use for delight, is in privateness and retiring; for ornament, is in discourse; and for ability, is in the judgment, and disposition of business. For expert men can execute, and perhaps judge of particulars, one by one; but the general counsels, and the plots and marshalling of affairs, come best, from those that are learned. To spend too much time in studies is sloth; to use them too much for ornament, is affectation; to make judgment wholly by their rules, is the humor of a scholar. They perfect nature, and are perfected by experience: for natural abilities are like natural plants, that need proyning, by study; and studies themselves, do give forth directions too much at large, except they be bounded in by experience. Crafty men contemn studies, simple men admire them, and wise men use them; for they teach not their own use; but that is a wisdom without them, and above them, won by observation. Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider. Some books are to be tasted, others to be swallowed, and some few to be chewed and digested; that is, some books are to be read only in parts; others to be read, but not curiously; and some few to be read wholly, and with diligence and attention. Some books also may be read by deputy, and extracts made of them by others; but that would be only in the less important arguments, and the meaner sort of books, else distilled books are like common distilled waters, flashy things. Reading maketh a full man; conference a ready man; and writing an exact man.",
+    "fk": 12.8,
+    "fkOverride": 13,
+    "level": 13,
+    "words": 295,
+    "sentences": 10,
+    "syllables": 421,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What three things does Bacon say studies are for?",
+        "right": "Delight, ornament and ability",
+        "wrong": [
+          "Money, fame and power",
+          "Health, sleep and food",
+          "Games, songs and stories"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Bacon call spending too much time in studies?",
+        "right": "Sloth",
+        "wrong": [
+          "Wisdom",
+          "Courage",
+          "Kindness"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'some few to be chewed and digested' mean?",
+        "right": "A few books deserve slow, careful reading",
+        "wrong": [
+          "Some books are good enough to eat",
+          "A few books should be thrown away",
+          "Some books are written for cooks"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Bacon say writing makes a person?",
+        "right": "Exact",
+        "wrong": [
+          "Ready",
+          "Full",
+          "Witty"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does Bacon say we should read for?",
+        "right": "To think carefully about what we read",
+        "wrong": [
+          "To prove other people wrong",
+          "To find things to talk about",
+          "To believe whatever we are told"
+        ]
+      }
+    ],
+    "evaluate": "Bacon says some books are to be tasted and others chewed and digested. Which book have you only tasted, and which have you chewed and digested?",
+    "wordBank": [
+      "ornament",
+      "affectation",
+      "contemn",
+      "diligence",
+      "conference"
+    ]
+  },
+  {
+    "id": "kipling-if",
+    "work": "kipling-rewards",
+    "title": "If—",
+    "band": 3,
+    "kind": "verse",
+    "abridged": false,
+    "text": "If you can keep your head when all about you\nAre losing theirs and blaming it on you;\nIf you can trust yourself when all men doubt you,\nBut make allowance for their doubting too;\nIf you can wait and not be tired by waiting,\nOr being lied about, don't deal in lies,\nOr being hated, don't give way to hating,\nAnd yet don't look too good, nor talk too wise;\n\nIf you can dream--and not make dreams your master;\nIf you can think--and not make thoughts your aim,\nIf you can meet with Triumph and Disaster\nAnd treat those two impostors just the same;\nIf you can bear to hear the truth you've spoken\nTwisted by knaves to make a trap for fools,\nOr watch the things you gave your life to, broken,\nAnd stoop and build 'em up with worn-out tools;\n\nIf you can make one heap of all your winnings\nAnd risk it on one turn of pitch-and-toss,\nAnd lose, and start again at your beginnings\nAnd never breathe a word about your loss;\nIf you can force your heart and nerve and sinew\nTo serve your turn long after they are gone,\nAnd so hold on when there is nothing in you\nExcept the Will which says to them: 'Hold on!'\n\nIf you can talk with crowds and keep your virtue,\nOr walk with Kings--nor lose the common touch,\nIf neither foes nor loving friends can hurt you,\nIf all men count with you, but none too much;\nIf you can fill the unforgiving minute\nWith sixty seconds' worth of distance run,\nYours is the Earth and everything that's in it,\nAnd--which is more--you'll be a Man, my son!",
+    "fk": 53.4,
+    "fkOverride": 7,
+    "level": 7,
+    "words": 283,
+    "sentences": 2,
+    "syllables": 332,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Which two things does the poem call 'impostors'?",
+        "right": "Triumph and Disaster",
+        "wrong": [
+          "Truth and Lies",
+          "Kings and Crowds",
+          "Foes and Friends"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'keep your head when all about you are losing theirs' mean?",
+        "right": "Stay calm when others panic",
+        "wrong": [
+          "Never take off your hat",
+          "Stand still in a crowd",
+          "Remember people's names"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What should you do if the things you gave your life to are broken?",
+        "right": "Build them up again with worn-out tools",
+        "wrong": [
+          "Walk away and never look back",
+          "Ask a king to mend them for you",
+          "Blame the knaves who broke them"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Who is the speaker talking to?",
+        "right": "His son",
+        "wrong": [
+          "A king",
+          "A crowd",
+          "A teacher"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does 'fill the unforgiving minute with sixty seconds' worth of distance run' mean?",
+        "right": "Make good use of every moment",
+        "wrong": [
+          "Run as fast as you possibly can",
+          "Never be late for anything",
+          "Count the seconds in a minute"
+        ]
+      }
+    ],
+    "evaluate": "The poem was written to a son. Is its advice just as true for a daughter? Which line would you keep for yourself?",
+    "wordBank": [
+      "impostors",
+      "knaves",
+      "sinew",
+      "virtue",
+      "unforgiving"
+    ],
+    "needsReview": true,
+    "reviewNote": "Addressed to a son ('you'll be a Man, my son'). The evaluative question invites every child in; a reviewer should approve that framing."
+  },
+  {
+    "id": "pride-opening",
+    "work": "pride",
+    "title": "A truth universally acknowledged",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.\n\nHowever little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.\n\n\"My dear Mr. Bennet,\" said his lady to him one day, \"have you heard that Netherfield Park is let at last?\"\n\nMr. Bennet replied that he had not.\n\n\"But it is,\" returned she; \"for Mrs. Long has just been here, and she told me all about it.\"\n\nMr. Bennet made no answer.\n\n\"Do you not want to know who has taken it?\" cried his wife impatiently.\n\n\"_You_ want to tell me, and I have no objection to hearing it.\"\n\nThis was invitation enough.\n\n\"Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.\"\n\n\"What is his name?\"\n\n\"Bingley.\"\n\n\"Is he married or single?\"\n\n\"Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!\"\n\n\"How so? How can it affect them?\"\n\n\"My dear Mr. Bennet,\" replied his wife, \"how can you be so tiresome! You must know that I am thinking of his marrying one of them.\"\n\n\"Is that his design in settling here?\"\n\n\"Design! Nonsense, how can you talk so! But it is very likely that he _may_ fall in love with one of them, and therefore you must visit him as soon as he comes.\"",
+    "fk": 3.5,
+    "level": 3.5,
+    "words": 341,
+    "sentences": 33,
+    "syllables": 434,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What news does Mrs. Bennet bring?",
+        "right": "Netherfield Park has been let at last",
+        "wrong": [
+          "Mr. Bennet's sister is coming",
+          "The Longs are moving away",
+          "Her eldest daughter is engaged"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Who has taken Netherfield?",
+        "right": "Mr. Bingley",
+        "wrong": [
+          "Mr. Morris",
+          "Mr. Long",
+          "Mr. Collins"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why is Mrs. Bennet so excited about the newcomer?",
+        "right": "She hopes he'll wed a daughter",
+        "wrong": [
+          "She wants to buy his house",
+          "He is her long-lost cousin",
+          "He has promised her a gift"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How does Mr. Bennet treat his wife's news?",
+        "right": "He teases her by seeming uninterested",
+        "wrong": [
+          "He is just as thrilled as she is",
+          "He refuses to let her speak",
+          "He calls the servants to listen"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Is the first sentence meant to be taken at face value?",
+        "right": "No, it is gently mocking",
+        "wrong": [
+          "Yes, it is a law of nature",
+          "Yes, every rich man said so",
+          "No, it is a printer's error"
+        ]
+      }
+    ],
+    "evaluate": "Austen says this 'truth' is 'universally acknowledged'. Is it really true? Why do you think she begins this way?",
+    "wordBank": [
+      "universally",
+      "acknowledged",
+      "neighbourhood",
+      "possession",
+      "tiresome"
+    ],
+    "needsReview": true,
+    "reviewNote": "Marriage as the family's money plan, and a single man as 'the rightful property' of the neighbours' daughters: period attitudes to women and marriage, which Austen is satirising. The grown-up note should explain the irony."
+  },
+  {
+    "id": "gettysburg-address",
+    "work": "gettysburg",
+    "title": "The Gettysburg Address",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "Four score and seven years ago, our fathers brought forth upon this continent a new nation: conceived in liberty, and dedicated to the proposition that all men are created equal.\n\nNow we are engaged in a great civil war. . .testing whether that nation, or any nation so conceived and so dedicated. . . can long endure. We are met on a great battlefield of that war.\n\nWe have come to dedicate a portion of that field as a final resting place for those who here gave their lives that this nation might live. It is altogether fitting and proper that we should do this.\n\nBut, in a larger sense, we cannot dedicate. . .we cannot consecrate. . . we cannot hallow this ground. The brave men, living and dead, who struggled here have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember, what we say here, but it can never forget what they did here.\n\nIt is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us. . .that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion. . . that we here highly resolve that these dead shall not have died in vain. . . that this nation, under God, shall have a new birth of freedom. . . and that government of the people. . .by the people. . .for the people. . . shall not perish from this earth.",
+    "fk": 10.7,
+    "level": 10.7,
+    "words": 268,
+    "sentences": 10,
+    "syllables": 359,
+    "questions": [
+      {
+        "depth": "inferential",
+        "q": "How long before the speech was the nation founded, if a 'score' is twenty?",
+        "right": "Eighty-seven years",
+        "wrong": [
+          "Forty-seven years",
+          "Seventy years",
+          "One hundred years"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Why had the people come to the battlefield?",
+        "right": "To set aside part of it as a resting place",
+        "wrong": [
+          "To fight one more battle there",
+          "To sign a peace treaty",
+          "To plan a brand-new city"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does Lincoln say 'we cannot dedicate' the ground?",
+        "right": "The soldiers already made it holy",
+        "wrong": [
+          "It belongs to someone else",
+          "It is raining far too hard",
+          "There is not enough money"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What does Lincoln say the world will not long remember?",
+        "right": "What is said here",
+        "wrong": [
+          "What the soldiers did",
+          "The name of the battle",
+          "The day of the year"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What task does Lincoln ask the living to take up?",
+        "right": "To finish the work the dead began",
+        "wrong": [
+          "To build a great monument",
+          "To go home in peace",
+          "To choose a new president"
+        ]
+      }
+    ],
+    "evaluate": "Lincoln's speech is under 300 words. Why might a short speech be remembered longer than a long one?",
+    "wordBank": [
+      "conceived",
+      "proposition",
+      "consecrate",
+      "hallow",
+      "devotion"
+    ]
+  },
+  {
+    "id": "douglass-bread",
+    "work": "douglass",
+    "title": "The bread of knowledge",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "text": "The plan which I adopted, and the one by which I was most successful, was that of making friends of all the little white boys whom I met in the street. As many of these as I could, I converted into teachers. With their kindly aid, obtained at different times and in different places, I finally succeeded in learning to read. When I was sent of errands, I always took my book with me, and by going one part of my errand quickly, I found time to get a lesson before my return. I used also to carry bread with me, enough of which was always in the house, and to which I was always welcome; for I was much better off in this regard than many of the poor white children in our neighborhood. This bread I used to bestow upon the hungry little urchins, who, in return, would give me that more valuable bread of knowledge. I am strongly tempted to give the names of two or three of those little boys, as a testimonial of the gratitude and affection I bear them; but prudence forbids;--not that it would injure me, but it might embarrass them; for it is almost an unpardonable offence to teach slaves to read in this Christian country. It is enough to say of the dear little fellows, that they lived on Philpot Street, very near Durgin and Bailey's ship-yard. I used to talk this matter of slavery over with them. I would sometimes say to them, I wished I could be as free as they would be when they got to be men. \"You will be free as soon as you are twenty-one, _but I am a slave for life!_ Have not I as good a right to be free as you have?\" These words used to trouble them; they would express for me the liveliest sympathy, and console me with the hope that something would occur by which I might be free.",
+    "fk": 10.4,
+    "level": 10.4,
+    "words": 331,
+    "sentences": 12,
+    "syllables": 427,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Whom did Douglass turn into his teachers?",
+        "right": "White boys he met in the street",
+        "wrong": [
+          "His master and mistress",
+          "The workers at the ship-yard",
+          "A teacher at the town school"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did Douglass give the boys in return?",
+        "right": "Bread",
+        "wrong": [
+          "Money",
+          "Marbles",
+          "Books"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What does Douglass mean by 'that more valuable bread of knowledge'?",
+        "right": "Learning was worth more than food",
+        "wrong": [
+          "The boys baked better bread",
+          "Knowledge can be eaten",
+          "He was paid for his reading"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Douglass not name the boys?",
+        "right": "It could have brought them trouble",
+        "wrong": [
+          "He had forgotten their names",
+          "They asked him not to",
+          "Their names were too long"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What difference between himself and the boys troubled Douglass?",
+        "right": "They would be free at twenty-one; he never would",
+        "wrong": [
+          "They could go to school and he could not",
+          "They had more bread than he had",
+          "They lived on a different street"
+        ]
+      }
+    ],
+    "evaluate": "Douglass risked a great deal to learn to read. What does his story tell you about why reading matters?",
+    "wordBank": [
+      "adopted",
+      "bestow",
+      "testimonial",
+      "gratitude",
+      "prudence"
+    ],
+    "needsReview": true,
+    "reviewNote": "A formerly enslaved man's own account of slavery in Maryland. The extract avoids the slurs that appear a page earlier, but slavery is the subject; it needs a grown-up note and a named reviewer, 11–14 only."
+  }
+]
