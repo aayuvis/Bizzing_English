@@ -157,10 +157,10 @@ replaces `gh-pages` wholesale and refuses to publish if the staged file count di
 
 ## Where to pick up
 
-1. **Paint the stories** — the image key's credit ran out on 3 Oct before the 85 story and 12 Alice
-   paintings were made: `node tools/art/story-prompts.mjs && python3 tools/art/gen.py --group stories`
-   (and `--group book`), LOOK at them, then `python3 tools/art/process.py --stories`. Until then each story
-   wears its shelf's world.
+1. **Story paintings** — 77 story and 12 Alice paintings are in (one re-rolled for lettering). A new passage
+   gets its picture with `node tools/art/story-prompts.mjs && python3 tools/art/gen.py --group stories`,
+   then LOOK, then `python3 tools/art/process.py --stories` (1280 for the stage, 480 for cards); until
+   then it wears its shelf's world.
 2. **Owner decisions still open** (SPEC §16):
    free vs family plan (as proposed: Word, Sentence and worlds 1–2 free); a 15+ Scholar band;
    domain and trademark checks.

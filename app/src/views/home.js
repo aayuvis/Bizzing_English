@@ -14,6 +14,7 @@ import { shippedLines, shippable } from '../reading.js';
 const PASSAGES = ALLP.filter(shippable);
 const LINES = shippedLines().filter((l) => !/^["'“‘]/.test(l.text));   // the card adds its own quotation marks
 import HOUR from '../data/hour-words.json';
+import { storyCard } from './stories.js';
 
 const TIPS = [
   'Read it aloud once — your ear catches what your eye skips.',
@@ -67,7 +68,7 @@ export function homeView() {
   const p = bookOf(k), w = p && WORKS.find((x) => x.id === p.work);
   const inWork = p ? PASSAGES.filter((x) => x.work === p.work) : [];
   const readN = inWork.filter((x) => k.stops['rd-' + x.id]?.passed).length;
-  const second = p && { kicker: 'The book you’re reading', title: w?.title || p.title, sub: `${p.title} · ${w?.author || ''}`, chip: w?.era || 'Classic', icon: 'book', href: `#/read/${p.id}`, plate: plate({ id: 'study' }, dark, true), cta: 'Read on', ctaIcon: 'book',
+  const second = p && { kicker: 'The book you’re reading', title: w?.title || p.title, sub: `${p.title} · ${w?.author || ''}`, chip: w?.era || 'Classic', icon: 'book', href: `#/story/${p.id}`, plate: storyCard(p.id), cta: 'Read on', ctaIcon: 'book',
     progress: { pct: inWork.length ? (readN / inWork.length) * 100 : 0, label: `${readN} of ${inWork.length} passages read` } };
   const hourWords = (p?.words || []).filter((x) => HOUR[x.toLowerCase()]);
   const hw = hourWords[hourIdx(hourWords.length)] || Object.keys(HOUR)[hourIdx(Object.keys(HOUR).length)];

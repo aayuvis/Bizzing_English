@@ -26,8 +26,9 @@ const BANDS = ['', '6–7', '8–10', '11–14'];
 /* a painting if one exists (data/story-art.json, written by tools/art/process.py), else the world of its shelf */
 const SHELF_WORLD = { fable: 'garden', children: 'garden', poetry: 'lakeside', novel: 'study', drama: 'playhouse', speech: 'forum', essay: 'scriptorium' };
 const shelfPlate = (pid) => { const p = PASSAGES.find((x) => x.id === pid), w = p && work(p.work); const wid = p?.kind === 'verse' ? 'lakeside' : SHELF_WORLD[w?.shelf] || 'study'; return `art/w-${wid}${isDark() ? '-night' : ''}-card.webp`; };
+export const storyCard = (id) => (ART.includes(`story/${id}`) ? `art/story/${id}-card.webp` : shelfPlate(id));
 export const storyArt = (id, two) => (ART.includes(`story/${id}-2`) && two ? `art/story/${id}-2.webp` : ART.includes(`story/${id}`) ? `art/story/${id}.webp` : shelfPlate(id));
-const bookArt = (n) => (ART.includes(`book/alice-${n}`) ? `art/book/alice-${n}.webp` : `art/w-study${isDark() ? '-night' : ''}-card.webp`);
+const bookArt = (n, small) => (ART.includes(`book/alice-${n}`) ? `art/book/alice-${n}${small ? '-card' : ''}.webp` : `art/w-study${isDark() ? '-night' : ''}-card.webp`);
 const bg = (src) => `background-image:url('${src}')`;
 export const EX = [['understand', 'Understand it', 'check'], ['words', 'Words from the story', 'key'], ['commas', 'The author’s commas', 'quill'],
   ['order', 'Rebuild a sentence', 'blocks'], ['copy', 'Copy a line', 'pen'], ['aloud', 'Say it aloud', 'mic'], ['talk', 'Talk about it', 'bubble']];
@@ -37,7 +38,7 @@ const exCount = (k, pid) => EX.filter(([e]) => exDone(k, pid)[e]).length;
 /* ---------------- the story room ---------------- */
 function card(p, k) {
   const w = work(p.work), n = exCount(k, p.id), heard = k.reading[p.id]?.heard;
-  return `<a class="scard" href="#/story/${p.id}"><span class="pic" style="${bg(storyArt(p.id))}"></span>
+  return `<a class="scard" href="#/story/${p.id}"><span class="pic" style="${bg(storyCard(p.id))}"></span>
     ${heard ? `<span class="sdone">${icon('check')}${n}/7</span>` : ''}<span class="nm">${esc(p.title)}</span><span class="hk">${esc(p.hook || w?.title || '')}</span>
     <span class="meta">${esc(w?.author || '')} · ages ${BANDS[p.band]}</span></a>`;
 }
@@ -53,7 +54,7 @@ export function storyRoom() {
   const k = kid(), all = SHIPPED(), mine = all.filter((p) => p.band <= k.band);
   const loved = all.filter((p) => k.reading[p.id]?.loved);
   const goingOn = all.filter((p) => k.reading[p.id]?.heard && exCount(k, p.id) < 7).slice(0, 8);
-  const mosaic = all.slice(0, 12).map((p) => `<i style="${bg(storyArt(p.id))}"></i>`).join('');
+  const mosaic = all.slice(0, 12).map((p) => `<i style="${bg(storyCard(p.id))}"></i>`).join('');
   const bk = book();
   const rail = (title, note, list) => (list.length ? `<h3 class="railh">${esc(title)}</h3>${note ? `<p class="railn">${esc(note)}</p>` : ''}<div class="rail">${list.map((p) => card(p, k)).join('')}</div>` : '');
   return `<a class="pickbar" href="#/story/random"><span class="mosaic" aria-hidden="true">${mosaic}</span><span class="pbveil"></span>
@@ -197,7 +198,7 @@ export function wholeView() {
   return pageHead({ title: 'Alice’s Adventures in Wonderland', sub: 'Lewis Carroll · 1865 · the whole book', back: { label: 'Stories', href: '#/library' }, strip: { chip: `${done.length} of 12`, pct: (done.length / 12) * 100, label: 'a chapter counts when its questions are passed' } }) + `<div class="grid2">
     <div class="card pin stack"><span class="kick">Your bookmark · chapter ${at}</span><h2 style="margin:0">${esc(cur.title)}</h2><p style="margin:0"><b>The story so far.</b> ${esc(cur.sofar)}</p>${link(at > 1 || (st.heard || []).length ? 'Read on' : 'Begin', `#/whole/alice/${at}`, { ic: 'book' })}</div>
     <div class="card"><h3>People you have met</h3>${met.length ? `<ul class="metlist">${met.map((m) => `<li><b>${esc(m.name)}</b> — ${esc(m.about)}</li>`).join('')}</ul>` : '<p class="muted">Nobody yet. Alice is sitting on a bank by a river, with nothing to do…</p>'}</div></div>
-    <div class="chapters">${b.chapters.map((c) => `<a class="chap${done.includes(c.n) ? ' done' : ''}${c.n === at ? ' at' : ''}" href="#/whole/alice/${c.n}"><span class="cpic" style="${bg(bookArt(c.n))}"></span><span class="cbody"><small>Chapter ${c.n}</small><b>${esc(c.title)}</b><span>${done.includes(c.n) ? 'Done' : (st.heard || []).includes(c.n) ? 'Heard — exercises to do' : c.n === at ? 'Your bookmark' : ''}</span></span></a>`).join('')}</div>`;
+    <div class="chapters">${b.chapters.map((c) => `<a class="chap${done.includes(c.n) ? ' done' : ''}${c.n === at ? ' at' : ''}" href="#/whole/alice/${c.n}"><span class="cpic" style="${bg(bookArt(c.n, true))}"></span><span class="cbody"><small>Chapter ${c.n}</small><b>${esc(c.title)}</b><span>${done.includes(c.n) ? 'Done' : (st.heard || []).includes(c.n) ? 'Heard — exercises to do' : c.n === at ? 'Your bookmark' : ''}</span></span></a>`).join('')}</div>`;
 }
 export async function openChapterExercises(n) {
   await Promise.all([loadBook(), loadLexicon()]);

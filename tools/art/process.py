@@ -113,8 +113,9 @@ def stories():
         else: continue
         im = Image.open(os.path.join(RAW, f)).convert('RGB')
         save(im.resize((1280, round(im.height * 1280 / im.width)), Image.LANCZOS), dst, 78)
-    have = sorted([('story/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'story')) if f.endswith('.webp')] +
-                  [('book/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'book')) if f.endswith('.webp')])
+        save(im.resize((480, round(im.height * 480 / im.width)), Image.LANCZOS), dst.replace('.webp', '-card.webp'), 74)   # rails and cards
+    have = sorted([('story/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'story')) if f.endswith('.webp') and not f.endswith('-card.webp')] +
+                  [('book/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'book')) if f.endswith('.webp') and not f.endswith('-card.webp')])
     json.dump(have, open(os.path.join(HERE, '..', '..', 'app', 'src', 'data', 'story-art.json'), 'w'))
     print(f'stories: {len(have)} paintings')
 

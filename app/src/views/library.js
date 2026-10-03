@@ -8,7 +8,7 @@ import { esc, icon, pageHead, link, empty, btn, plural } from '../ui.js';
 import { WORKS, PASSAGES } from '../data/library.js';
 import { cleared, shippable, shippedLines, levelOf } from '../reading.js';
 import { lookup, lexReady } from '../lexicon.js';
-import { storyRoom, storyArt } from './stories.js';
+import { storyRoom, storyCard as storyArt } from './stories.js';
 import { stepOf } from '../mastery.js';
 
 const NAV = (cur) => [['stories', 'Stories', 'play'], ['books', 'Books', 'book'], ['words', 'Words', 'key'], ['poems', 'Poems', 'quill'], ['speeches', 'Speeches', 'lectern'], ['authors', 'Authors', 'user']]
