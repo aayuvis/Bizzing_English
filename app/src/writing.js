@@ -47,5 +47,5 @@ export function counts(text, bank = {}) {
   const openers = new Set(ss.map((s) => (words(s)[0] || '').toLowerCase()).filter(Boolean));
   const used = [...new Set(ws.map((w) => w.toLowerCase()).filter((w) => bank[w]))];
   return { sentences: ss.length, words: ws.length, avg: ss.length ? Math.round((ws.length / ss.length) * 10) / 10 : 0,
-    openers: openers.size, paragraphs: t.split(/\n\s*\n/).filter((p) => p.trim()).length, bankUsed: used };
+    openers: openers.size, lines: t.split(/\n/).filter((l) => words(l).length).length, paragraphs: t.split(/\n\s*\n/).filter((p) => p.trim()).length, bankUsed: used };
 }

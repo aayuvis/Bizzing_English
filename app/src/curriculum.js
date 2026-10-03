@@ -13,6 +13,7 @@ import { LIT_STOPS, CASE_DESK } from './data/literature.js';
 import { WORD_STOPS } from './data/word-stops.js';
 import { SENTENCE_STOPS } from './data/sentence-stops.js';
 import { MYTH_WORD_STOPS } from './data/myth-words.js';
+import { GAP_STOPS, POEM_DESK_STOP } from './data/gap-stops.js';
 
 export const BANDS = [
   { id: 1, label: '6–7', age: 'ages 6–7' },
@@ -318,6 +319,12 @@ for (const x of [...WORD_STOPS, ...MYTH_WORD_STOPS]) wordLevels.find((l) => l.n 
 /* Sentence levels 6–10: written stops (data/sentence-stops.js) */
 const sentenceLevels = STRANDS.find((x) => x.id === 'sentence').levels;
 for (const x of SENTENCE_STOPS) sentenceLevels.find((l) => l.n === x.level).stops.push({ ...x, kind: 'authored' });
+
+/* Gaps closed (data/gap-stops.js): more word classes, tense and agreement, apostrophes, speech marks,
+   opposites — each beside the level that teaches its neighbours; and a poem of the child's own on Writing 6,
+   counted in the LINES of its poem part */
+for (const x of GAP_STOPS) STRANDS.find((s) => s.id === x.strand).levels.find((l) => l.n === x.level).stops.push({ ...x, kind: 'authored' });
+STRANDS.find((s) => s.id === 'writing').levels.find((l) => l.n === 6).stops.push({ ...POEM_DESK_STOP, desk: { ...POEM_DESK_STOP.desk, countPart: 1 } });
 
 /* Literature levels 1–9: written stops (data/literature.js); level 10 is a writing desk — the child's case for a book */
 for (const l of STRANDS.find((x) => x.id === 'literature').levels) {

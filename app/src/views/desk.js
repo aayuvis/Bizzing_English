@@ -19,6 +19,9 @@ import { shippable, work } from '../reading.js';
 import { storyArt } from './stories.js';
 
 const W = (k) => (k.writing ||= {});
+/* what a piece is counted in: sentences, or for a poem, the lines of its poem part (desk.unit, desk.countPart) */
+const unitOf = (st) => st.desk.unit || 'sentences';
+const enough = (st, parts, bank) => counts(st.desk.countPart != null ? parts[st.desk.countPart] || '' : parts.join('\n\n'), bank)[unitOf(st)];
 const draftOf = (k, id) => (W(k).drafts ||= {})[id];
 export function openDesk(id) {
   const k = kid(), st = stopById(id);
@@ -58,7 +61,7 @@ export function deskView() {
         <div class="stat"><b>${c.avg}</b><small>words a sentence</small></div><div class="stat"><b>${c.openers}</b><small>different openings</small></div></div>
         ${c.bankUsed.length ? `<p class="note">Words from your word bank: ${c.bankUsed.map((w) => `<b>${esc(w)}</b>`).join(', ')}</p>` : '<p class="note">Try using a word from your word bank.</p>'}</div>
       <div class="card stack"><span class="kick">You check it</span>${ticks}</div>
-      <div class="card stack">${btn(c.sentences >= st.desk.min ? 'Finish this piece' : `Write at least ${st.desk.min} sentences`, 'desk-finish', { ic: 'check', dis: c.sentences < st.desk.min })}
+      <div class="card stack">${btn(enough(st, d.parts, k.bank) >= st.desk.min ? 'Finish this piece' : `Write at least ${st.desk.min} ${unitOf(st)}`, 'desk-finish', { ic: 'check', dis: enough(st, d.parts, k.bank) < st.desk.min })}
         <p class="note" style="margin:0">${done ? `You have finished ${done} piece${done > 1 ? 's' : ''} here.` : 'When you finish, a grown-up can read it and give their judgement.'}</p></div></aside></div></div>`;
 }
 
@@ -67,7 +70,7 @@ export function deskInput(t) {
   const k = kid(), r = S.run, d = draftOf(k, r.id); d.parts[+t.dataset.arg] = t.value.slice(0, 6000); d.at = Date.now();
   clearTimeout(saveTimer); saveTimer = setTimeout(() => { save(); const c = counts(d.parts.join('\n\n'), k.bank);
     const stats = document.querySelectorAll('.desk .stat b'); [c.sentences, c.words, c.avg, c.openers].forEach((v, i) => { if (stats[i]) stats[i].textContent = v; });
-    const fin = document.querySelector('[data-act=desk-finish]'); if (fin) { const ok = c.sentences >= r.st.desk.min; fin.disabled = !ok; fin.querySelector('span').textContent = ok ? 'Finish this piece' : `Write at least ${r.st.desk.min} sentences`; } }, 350);
+    const fin = document.querySelector('[data-act=desk-finish]'); if (fin) { const ok = enough(r.st, d.parts, k.bank) >= r.st.desk.min; fin.disabled = !ok; fin.querySelector('span').textContent = ok ? 'Finish this piece' : `Write at least ${r.st.desk.min} ${unitOf(r.st)}`; } }, 350);
 }
 
 export const DESK_ACTIONS = {
@@ -79,7 +82,7 @@ export const DESK_ACTIONS = {
     save(); render(); },
   'desk-finish': () => {
     const k = kid(), r = S.run, d = draftOf(k, r.id), st = r.st, text = d.parts.join('\n\n');
-    if (counts(text, k.bank).sentences < st.desk.min) return;
+    if (enough(st, d.parts, k.bank) < st.desk.min) return;
     (W(k)[r.id] ||= []).push({ at: Date.now(), prompt: d.prompt, story: d.story, parts: d.parts, ticks: d.ticks });
     delete W(k).drafts[r.id];
     const rec = (k.stops[r.id] ||= { passed: false, tries: 0 }); rec.tries++; rec.at = Date.now();

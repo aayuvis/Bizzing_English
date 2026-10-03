@@ -6,6 +6,7 @@ import { nextStep } from '../src/next.js';
 import { migrate, VERSION } from '../src/store.js';
 import { makeBackup, restoreBackup, KID_FIELDS } from '../src/backup.js';
 import { award } from '../src/medals.js';
+import { level } from '../src/curriculum.js';
 const { ok, done } = tally('model');
 const D = 864e5;
 
@@ -19,7 +20,7 @@ ok('the report is pronoun-neutral', they(a) === 'Asha' && they(null) === 'they')
 const c = newKid('Mira', 1, 'tortoise');
 ok('Word is open to everyone', strandOpen(c, 'word'));
 ok('Writing waits for Sentence level 1 (band 1)', !strandOpen(c, 'writing'));
-for (const id of ['s1-noun', 's1-verb', 's1-adj']) c.stops[id] = { passed: true };
+for (const { id } of level('sentence', 1).stops) c.stops[id] = { passed: true };
 ok('…and opens after it', levelDone(c, 'sentence', 1) && strandOpen(c, 'writing'));
 ok('levels open in order', levelOpen(c, 'word', 1) && !levelOpen(c, 'word', 2));
 ok('an 11–14 starts at level 3, not rhymes', levelOpen(newKid('Zed', 3, 'x'), 'word', 3));

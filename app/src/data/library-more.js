@@ -338,7 +338,7 @@ export const MORE_PASSAGES = [
     end: 'Nor poverty the mind appal.',
     hook: 'Hungry children in a rich country, and a poet who will not stop asking why.',
     scenes: ['And their sun does never shine,'],
-    paint: 'Rows of thin, poorly dressed children walk two by two out of a great grey cathedral on a cold winter day, beneath a dark sky, with bare and thorny fields stretching away behind them. Painted in the glowing, hand-coloured style of an illuminated poetry book of the 1790s, with curling vines at the edges and no words.',
+    paint: 'Rows of thin, poorly dressed children walk two by two out of a great grey cathedral on a cold winter day, beneath a dark sky, with bare and thorny fields stretching away behind them. Painted in glowing, hand-coloured watercolour in the spirit of the 1790s, one continuous scene to every edge, no border.',
     questions: [
       { depth: 'inferential', q: "What is wrong with 'Babes reduced to misery' in 'a rich and fruitful land'?", right: 'Children starve in a land of plenty', wrong: ['The land has had a bad harvest', 'The babies are crying for toys', 'Rich children are unhappy too'] },
       { depth: 'inferential', q: "'Is that trembling cry a song?' What is the poet suggesting?", right: "The children's singing sounds like crying", wrong: ['The children sing perfectly in tune', 'The choir is singing a sad hymn', 'A bird is singing in the trees'] },

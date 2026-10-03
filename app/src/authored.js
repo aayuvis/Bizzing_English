@@ -8,7 +8,8 @@ import { LIT_STOPS } from './data/literature.js';
 import { WORD_STOPS } from './data/word-stops.js';
 import { SENTENCE_STOPS } from './data/sentence-stops.js';
 import { MYTH_WORD_STOPS } from './data/myth-words.js';
+import { GAP_STOPS } from './data/gap-stops.js';
 
-export const AUTHORED_STOPS = [...WORD_STOPS, ...MYTH_WORD_STOPS, ...SENTENCE_STOPS, ...LIT_STOPS, ...LANG_STOPS];
+export const AUTHORED_STOPS = [...GAP_STOPS, ...WORD_STOPS, ...MYTH_WORD_STOPS, ...SENTENCE_STOPS, ...LIT_STOPS, ...LANG_STOPS];
 export const AUTHORED = new Map(AUTHORED_STOPS.map((s) => [s.id, s]));
 export const addAuthored = (stops) => { for (const s of stops) { AUTHORED_STOPS.push(s); AUTHORED.set(s.id, s); } };
