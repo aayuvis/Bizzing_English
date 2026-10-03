@@ -72,10 +72,9 @@ def mascot():
         if f.startswith('mascot-') and f.endswith('.png'):
             im = key(os.path.join(RAW, f)); n = f[7:-4]
             save(square(im, 400, 1.02), os.path.join(PUB, 'mascot', n + '.webp'))
-            if n == 'wave':                                   # the logo head: the top of the model pose
-                head = im.crop((0, 0, im.width, int(im.height * 0.56)))
-                bb = head.getchannel('A').point(lambda v: 255 if v > 8 else 0).getbbox(); head = head.crop(bb)
-                save(square(head, 128, 1.0), os.path.join(PUB, 'mascot', 'head.webp'), 90)
+            if n == 'wave':                                   # the logo: the WHOLE fox, trimmed to its outline (the owner, 3 Oct:
+                bb = im.getchannel('A').point(lambda v: 255 if v > 8 else 0).getbbox()   # "in full, not cut off")
+                save(square(im.crop(bb), 160, 1.02), os.path.join(PUB, 'mascot', 'head.webp'), 90)
     print('mascot: poses + head')
 
 
