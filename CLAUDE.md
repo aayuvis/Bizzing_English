@@ -44,6 +44,14 @@ holds them to the same rules (a which-word-in-this-line question must have every
 Literature 10 is a writing desk: the child's case for a book. Figure Hunt (Play) is built on the
 figures bank. Every Language stop with a date waits on a named reviewer (`needsReview`).
 
+**Every level is filled** (70 of 70; `node tools/coverage/build.mjs` → `docs/coverage.html`, published as the
+owner's coverage map): Word 6–10 (`data/word-stops.js`; level 7 is words from the Greek myths, `data/myth-words.js`,
+each tied to the Reading 2 myth that tells it — Hawthorne, Kingsley, Bulfinch in `data/library-myths.js`),
+Sentence 6–10 (`data/sentence-stops.js`), concept gaps (`data/gap-stops.js`: word classes, tense, apostrophes,
+speech marks, opposites, a poem desk counted in lines), and Reading's drama, close reading, fairy tales, short
+stories and non-fiction (`data/library-more.js`). The Library grows in beside-files merged by `library.js`.
+A concept's status on the map is computed from the stops that exist.
+
 **The Elocution Contest** (`src/contest.js`, `#/stage/contest`): a poem, a passage, a one-minute talk
 against five of Bee's ten rivals. The child's points come ONLY from what the device measures (timing,
 pace, pauses, volume), each labelled; the rivals' are the app's own, seeded, and the screen says so.
@@ -181,8 +189,10 @@ BEE_REPO=../Bizzing-Bee node tools/import-bee.mjs   # the lexicon and manifest f
 
 ## Ship
 
-Commit first, then `cd app && ./deploy.sh`. It runs the tests and the browser check, builds,
-replaces `gh-pages` wholesale and refuses to publish if the staged file count differs from the build.
+Commit first, then `cd app && ./deploy.sh`. The owner (3 Oct): every push comes from one chat — no slow gate.
+`npm run verify` (tests + build + browser check) stamps the tree it passed; a deploy of the same tree publishes
+at once, any other tree runs verify first; `--fast` skips it. It always replaces `gh-pages` wholesale and refuses
+to publish if the staged file count differs from the build.
 
 ## Where to pick up
 
@@ -194,8 +204,10 @@ replaces `gh-pages` wholesale and refuses to publish if the staged file count di
    Pan; Pinocchio's translation; Panna Lal Basu's dates for The Hungry Stones.
 4. **Bee:** `docs/bee-person-definitions.md` — 904 Bee words whose definition is a person (hitler at
    level 1, "begin" defined as Menachem Begin). Bee's cuts are the owner's call; the import filters them.
-5. **More:** Eighty Days and the 20 newly held texts have no passages yet (`levels.mjs`); a third whole
-   book; Extras as paintings if the owner wants them.
+5. **More:** the 5 partly-taught concepts on the coverage map (spelling patterns live in Bee; semicolons;
+   planning and drafting; an original story; homophones); Eighty Days has no passage yet; a third whole book.
+6. **Home** shows three rings (right answers, passages read, said aloud or written — counts, never minutes);
+   every Home card opens its own topic (`test/ui.mjs` fails on a bare collection link).
 
 ## Branch
 
