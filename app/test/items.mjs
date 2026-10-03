@@ -13,7 +13,9 @@ const inText = (needle, hay) => new RegExp(`(^| )${norm(needle).replace(/[.*+?^$
 const slots = {};
 
 /* every authored stop names a generator that exists */
-for (const st of allStops()) if (st.kind !== 'readAloud' && !KINDS.includes(st.kind)) bad(`stop ${st.id}: kind ${st.kind} has no generator`);
+for (const st of allStops()) if (!/^(readAloud|desk|speak)$/.test(st.kind) && !KINDS.includes(st.kind)) bad(`stop ${st.id}: kind ${st.kind} has no generator`);
+for (const st of allStops().filter((x) => x.kind === 'desk')) if (!st.desk?.parts?.length || !st.desk.check?.length || !(st.desk.min > 0)) bad(`desk ${st.id}: needs parts, a checklist and a minimum`);
+for (const st of allStops().filter((x) => x.kind === 'speak')) if (!st.speak?.mode || !(st.speak.target?.[0] < st.speak.target?.[1])) bad(`speak ${st.id}: needs a mode and a target window`);
 
 /* rhyme, by Bee's respelling: the last syllable's vowel and coda ("KAT" → "AT") */
 const rime = (w) => { const p = (lex.words[w]?.[1] || '').split(/[-\s]/).filter(Boolean).at(-1)?.toUpperCase() || ''; const m = p.match(/[AEIOUY].*$/); return m ? m[0] : null; };
@@ -83,6 +85,21 @@ for (const pj of PJ) {
     if (it.type === 'copy' && (!check(it, it.text) || !pj.text.replace(/\s+/g, ' ').includes(it.text))) bad(`${it.id}: the copy line is not the author's`);
   }
 }
+/* imitation: every model has its own shape; a copy is refused; a child's own sentence in the shape passes */
+import { imitate, SHAPES } from '../src/writing.js';
+import WRITING from '../src/data/writing.js';
+for (const m of Object.values(WRITING.models).flat()) {
+  n++;
+  if (!SHAPES[m.shape].test(m.text)) bad(`model ${m.id} is not its own shape: ${m.text}`);
+  if (imitate(m.shape, m.text, m.text).ok) bad(`model ${m.id}: copying the model is accepted`);
+  if (!PJ.some((p) => p.text.replace(/\s+/g, ' ').includes(m.text)) && !readFileSync(new URL(`../public/texts/${m.work}.txt`, import.meta.url), 'utf8').replace(/\s+/g, ' ').includes(m.text)) bad(`model ${m.id} is not a real sentence of ${m.work}`);
+}
+const MINE = { opener: 'When the bell rang, my little brother cheered loudly.', list3: 'We packed apples, bananas and a big flask of tea.', simile: 'The lake was as smooth as a mirror this morning.',
+  but: 'I wanted to play cricket outside, but the monsoon had other plans.', fronted: 'Slowly, the old tortoise crossed the dusty road.', question: 'Why does the moon follow our car at night?' };
+for (const [k, v] of Object.entries(MINE)) { n++; if (!imitate(k, 'A completely different model sentence.', v).ok) bad(`shape ${k}: a good sentence of a child's own is refused: ${imitate(k, 'x', v).why}`); }
+for (const [k, v] of Object.entries(MINE)) for (const [k2] of Object.entries(MINE)) if (k !== k2 && SHAPES[k2].test(MINE[k]) && !(k === 'but' && k2 === 'opener')) { /* overlap is allowed: a sentence can have two shapes */ }
+if (imitate('opener', 'x', 'the bell rang and we ran').ok) bad('imitation accepts a sentence with no capital or end mark');
+for (const d of WRITING.dictation) { n++; if (!PJ.find((p) => p.id === d.passage)?.text.replace(/\s+/g, ' ').includes(d.text)) bad(`dictation ${d.id} is not a real sentence of its passage`); }
 /* copywork names the kind of mistake */
 const d = copyDiff('Where the mind is without fear,', 'where the mind is without fear');
 if (d.ok || d.errors.map((e) => e.kind).join() !== 'capital letter,punctuation') bad(`copyDiff: ${JSON.stringify(d.errors)}`);

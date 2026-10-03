@@ -16,6 +16,10 @@ import { speak, stop as stopVoice } from '../voice.js';
 import { stopsOf } from '../next.js';
 import { readingStop, passage, loadPassages } from '../reading.js';
 import { finishExercise, finishChapterExercise } from './stories.js';
+import { imitate as imitateCheck } from '../writing.js';
+import { narrate } from '../narrate.js';
+import { WORKS } from '../data/library.js';
+const workTitle = (id) => WORKS.find((w) => w.id === id)?.title || 'a classic';
 
 const PHASES = ['story', 'learn', 'turn', 'check', 'done'];
 const WORDY = /^(onset|def2word|word2def|prefixMake|suffixMake|origin)$/;
@@ -109,6 +113,13 @@ function itemView(r) {
     ui = `<div class="built" aria-live="polite">${built.map((i) => `<span class="tile">${esc(it.tiles[i])}</span>`).join('')}<span>${built.length === it.tiles.length ? esc(it.end) : ''}</span></div>
       <div class="tiles">${it.tiles.map((t, i) => `<button class="tile" data-act="tile" data-arg="${i}" ${built.includes(i) || st?.done ? 'disabled' : ''}>${esc(t)}</button>`).join('')}</div>
       ${st?.done ? '' : `<div class="row">${btn('Undo', 'untile', { ic: 'undo', cls: 'out', dis: !built.length })}${btn('Check', 'submit', { ic: 'check', dis: built.length !== it.tiles.length })}</div>`}`;
+  } else if (it.type === 'dictation' || it.type === 'imitate') {
+    const head = it.type === 'dictation'
+      ? `<div class="row">${btn(st?.done ? 'Hear it again' : 'Play the sentence', 'dict-play', { arg: it.clip, ic: 'speaker' })}<span class="note">from ${esc(workTitle(it.work))} — read by the narrator</span></div>`
+      : `<blockquote class="passage" style="margin:0;border-left:4px solid var(--bz-pin);padding-left:14px">${esc(it.model)}<br><small class="muted" style="font:13px var(--bz-body)">— ${esc(workTitle(it.work))}</small></blockquote><p class="tag" style="margin:0">${icon('blocks')}${esc(it.shapeName)}</p>`;
+    ui = `${head}<form data-act="submit-form"><label class="sr" for="ans">Your sentence</label><textarea id="ans" class="field" name="ans" rows="2" aria-label="Your sentence" spellcheck="false" autocomplete="off" ${st?.done ? 'disabled' : ''}>${esc(st?.text || '')}</textarea>
+      ${st?.done ? '' : `<div class="row" style="margin-top:10px">${btn('Check', 'submit', { ic: 'check' })}</div>`}</form>`;
+    if (st?.done && it.type === 'dictation' && !st.ok) ui += `<div class="diff">${diffHTML(it.text, st.text)}</div>`;
   } else if (it.type === 'type' || it.type === 'copy') {
     ui = `${it.type === 'copy' ? `<blockquote class="passage" style="margin:0;border-left:4px solid var(--bz-pin);padding-left:14px">${esc(it.text)}<br><small class="muted" style="font:13px var(--bz-body)">— ${esc(it.who)}</small></blockquote>` : ''}
       <form data-act="submit-form"><textarea class="field" name="ans" rows="${it.type === 'copy' ? 3 : 2}" aria-label="Your answer" spellcheck="false" autocomplete="off" ${st?.done ? 'disabled' : ''}>${esc(st?.text || '')}</textarea>
@@ -116,8 +127,8 @@ function itemView(r) {
     if (st?.done && it.type === 'copy' && !st.ok) ui += `<div class="diff">${diffHTML(it.text, st.text)}</div>`;
   }
   const hints = !st?.done && it.hint?.length ? `<div class="hints">${r.hintN < it.hint.length ? btn(r.hintN ? 'Another hint' : 'A hint', 'hint', { ic: 'lamp', cls: 'ghost small' }) : ''}${it.hint.slice(0, r.hintN).map((h) => `<span class="hintline">${esc(h)}</span>`).join('')}</div>` : '';
-  const fb = st?.done ? (st.ok ? `<div class="feedback ok pop" role="status"><div class="hd">${icon('check')}Right!</div></div>`
-    : `<div class="feedback no shake" role="status"><div class="hd">${icon('cross')}Not this time</div><div>${esc(it.explain || '')}</div><div>${btn('Got it', 'next-item', { ic: 'next' })}</div></div>`) : '';
+  const fb = st?.done ? (st.ok ? `<div class="feedback ok pop" role="status"><div class="hd">${icon('check')}${it.type === 'imitate' ? 'That is the shape' : 'Right!'}</div>${st.why ? `<div>${esc(st.why)}</div>` : ''}</div>`
+    : `<div class="feedback no shake" role="status"><div class="hd">${icon('cross')}Not this time</div><div>${esc(st.why || it.explain || '')}</div><div>${btn('Got it', 'next-item', { ic: 'next' })}</div></div>`) : '';
   const say = it.say ? btn('Hear it', 'sayword', { arg: it.say, ic: 'speaker', cls: 'ghost small' }) : '';
   return `<div class="card item">${top}<p class="prompt${it.type === 'mc' && it.prompt.length > 60 ? ' big' : ''}">${esc(it.prompt)}</p>${it.sub ? `<p class="subp">${esc(it.sub)}</p>` : ''}${say}${ui}${hints}${fb}</div>`;
 }
@@ -146,7 +157,7 @@ function answer(resp) {
   const r = S.run, it = r.items[r.i], k = kid();
   if (!it || r.state?.done) return;
   const ok = check(it, resp);
-  r.state = { ...(r.state || {}), done: true, ok, pick: typeof resp === 'number' ? resp : undefined, text: typeof resp === 'string' ? resp : r.state?.text };
+  r.state = { ...(r.state || {}), done: true, ok, pick: typeof resp === 'number' ? resp : undefined, text: typeof resp === 'string' ? resp : r.state?.text, why: r.state?.why };
   bumpDay(k, 'answers');
   if (ok) {
     r.right++; bumpDay(k, 'right'); sfx('right');
@@ -213,12 +224,16 @@ export const RUN_ACTIONS = {
     const r = S.run, it = r.items[r.i];
     if (it.type === 'mc' || it.type === 'chunk') return;
     if (it.type === 'order') return answer((r.state?.built || []).map((i) => it.tiles[i]));
-    if (it.type === 'type' || it.type === 'copy') { const v = document.querySelector('.item textarea')?.value || ''; if (!v.trim()) return; r.state = { text: v }; return answer(v); }
+    if (it.type === 'type' || it.type === 'copy' || it.type === 'dictation' || it.type === 'imitate') {
+      const v = document.querySelector('.item textarea')?.value || ''; if (!v.trim()) return;
+      r.state = { text: v, why: it.type === 'imitate' ? imitateCheck(it.shape, it.model, v).why : '' }; return answer(v);
+    }
     answer(r.state?.sel || []);
   },
   'next-item': () => advance(),
   hint: () => { S.run.hintN++; render(); },
   say: (a) => speak(a),
+  'dict-play': (a) => { const it = S.run.items[S.run.i]; narrate(a, it.text); setTimeout(() => document.querySelector('.item textarea')?.focus({ preventScroll: true }), 50); },
 };
 
 /* Keyboard: 1–4 pick; ←/→ walk the gaps or tokens; Space toggles; Enter checks or moves on. */

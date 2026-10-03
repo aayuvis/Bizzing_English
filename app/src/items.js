@@ -11,6 +11,8 @@
    An item's id is its seed: the same id always draws the same options in the same order. */
 
 import { rng, pick, shuffle, sample, permute, hash } from './rand.js';
+import WRITING from './data/writing.js';
+import { imitate as imitateCheck, SHAPES } from './writing.js';
 import * as SB from './data/sentences.js';
 import * as WP from './data/wordparts.js';
 import { LINES as ALL_LINES, WORKS } from './data/library.js';
@@ -203,6 +205,24 @@ const GEN = {
         hint: ['Which word has the capital letter?', 'Who does what — then to what, then where or when.'], explain: s };
     },
   },
+  /* dictation: a sentence from a classic, heard in the narrator's voice, written down; checked by kind */
+  dictation: {
+    keys: (ctx) => WRITING.dictation.filter((d) => d.band <= (ctx.band || 3)).map((d) => d.id),
+    make(key) {
+      const d = WRITING.dictation.find((x) => x.id === key);
+      return { id: 'dictation:' + key, kind: 'dictation', type: 'dictation', prompt: 'Listen, then write down the sentence — every capital and comma.', clip: `dict/${key}`, text: d.text, work: d.work,
+        hint: ['Play it again as often as you like.', 'Write a few words at a time, then check the end mark.'], explain: d.text };
+    },
+  },
+  /* imitation: write your own sentence in the shape of a classic one; checked for SHAPE, not meaning */
+  imitate: {
+    keys: (ctx) => Object.values(WRITING.models).flat().filter((m) => m.band <= (ctx.band || 3) + 1).map((m) => m.id),
+    make(key) {
+      const m = Object.values(WRITING.models).flat().find((x) => x.id === key), S = SHAPES[m.shape];
+      return { id: 'imitate:' + key, kind: 'imitate', type: 'imitate', prompt: 'Write your own sentence in the same shape — about anything you like.', model: m.text, shape: m.shape, shapeName: S.name, work: m.work,
+        sub: `The shape: ${S.say}.`, hint: [`It ${S.say}.`, 'Choose your own subject: your school, a pet, the monsoon, a match.'], explain: '' };
+    },
+  },
   copy: {
     keys: () => LINES.map((_, i) => String(i)).filter((i) => LINES[+i].text.length <= 140),
     make(key) {
@@ -297,7 +317,8 @@ export function check(it, r) {
     case 'tapmulti': case 'caps': case 'gaps': return Array.isArray(r) && same(r, it.answer);
     case 'order': return Array.isArray(r) && r.join(' ') === it.answer.join(' ');
     case 'type': { const n = (s) => norm(s); return it.accept.some((a) => n(a) === n(r)); }
-    case 'copy': return copyDiff(it.text, r).ok;
+    case 'copy': case 'dictation': return copyDiff(it.text, r).ok;
+    case 'imitate': return imitateCheck(it.shape, it.model, r).ok;
     default: return false;
   }
 }

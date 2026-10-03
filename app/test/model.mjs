@@ -49,6 +49,19 @@ for (const d of [0, 1, 3, 4, 6]) bumpDay(g, 'right', 5, T - d * D);
 ok('good days are counted in a window, not a run', goodDays(g, 7, T) === 5);
 ok('medals come from evidence and are recorded once', (() => { const e = newKid('E', 2, 'x'); e.stops['w1-rhyme'] = { passed: true }; const f1 = award(e, T).map((x) => x.id); const f2 = award(e, T); return f1.includes('first-stop') && f2.length === 0; })());
 
+/* judged objectives (writing, speaking): never due for a machine check; a grown-up on a later day */
+import { judge } from '../src/mastery.js';
+const j = newKid('J', 2, 'x'); taught(j, 'wr4-para', T, { judged: true });
+ok('a judged objective is never due for a machine check', !due(j, T + 3 * D).includes('wr4-para'));
+ok('a grown-up judging on the same day is practice', judge(j, 'wr4-para', 4, T + 1000) === 'practice' && stepOf(j, 'wr4-para') === 1);
+ok('a 3 from a grown-up on a later day makes it learned', judge(j, 'wr4-para', 3, T + D) === 'learned');
+/* store v1 → v2: free writing leaves the reading record (which backups carry) for k.writing (which they never do) */
+const old = { v: 1, parent: { plan: 'free' }, kids: [{ id: 'a', name: 'Old', band: 2, avatar: 'x', reading: { p1: { heard: true, thoughts: 'my secret thoughts' } } }], active: 'a' };
+const m2 = migrate(JSON.parse(JSON.stringify(old)));
+ok('v1 households migrate to v2', m2.v === 2 && m2.kids[0].writing.talk.p1 === 'my secret thoughts' && !('thoughts' in m2.kids[0].reading.p1));
+const wk = addKid(newHousehold(), newKid('W', 2, 'x')); wk.writing = { 'wr4-para': [{ parts: ['My private paragraph.'] }], talk: { p1: 'private' } };
+const hw = newHousehold(); hw.kids.push(wk);
+ok('a backup never carries free writing', !JSON.stringify(makeBackup(hw)).includes('private'));
 /* store and backup */
 ok('the store migrates the current version unchanged', migrate({ v: VERSION, kids: [] })?.v === VERSION);
 const bk = makeBackup(h);

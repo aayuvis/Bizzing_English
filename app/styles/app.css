@@ -361,3 +361,17 @@ html.calm .confetti { display: none; }
   .pbbody b { font-size: 24px; } .railh, .railn { margin-left: 0; margin-right: 0; } .rail { padding-left: 0; padding-right: 0; grid-auto-columns: 200px; }
   .sp-text { padding: 16px; } .sp-title h1 { font-size: 20px; }
 }
+
+/* ---------- the writing desk and the speaking room ---------- */
+.desk { display: grid; gap: 13px; }
+.deskgrid { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 13px; align-items: start; }
+.deskpart { display: grid; gap: 6px; } .deskpart b { font: 800 16px var(--bz-display); } .deskpart small { display: block; color: var(--muted); font-size: 13px; }
+.poem { font-size: calc(20px * var(--text-scale)); line-height: 1.9; }
+.fade { color: var(--muted); letter-spacing: .08em; }
+.pmark { color: var(--fox); font-weight: 800; } .lean { color: var(--bz-accent); }
+.clock { font: 800 34px var(--mono); text-align: center; min-height: 40px; }
+.storystrip { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.storystrip img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; } .storystrip small { font-size: 12.5px; color: var(--muted); }
+details.piece { border-top: 1px solid var(--line); padding: 8px 0; } details.piece summary { cursor: pointer; min-height: 32px; font-size: 14px; }
+@media (max-width: 720px) { .deskgrid { grid-template-columns: 1fr; } }
+.opt > svg { width: 22px; height: 22px; flex: 0 0 22px; color: var(--bz-accent); } .opt[aria-pressed="true"] { border-color: var(--good); background: var(--good-bg); } .opt[aria-pressed="true"] > svg { color: var(--good); }

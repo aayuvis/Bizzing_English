@@ -9,12 +9,22 @@
    Versioned: a change of shape adds a vN_to_vN+1 step to STEPS; an old step is never edited.
    ?demo holds a sample household in memory: nothing is read from or written to storage. */
 
-export const VERSION = 1;
+export const VERSION = 2;
 const KEY = 'bizzing-english.household';
 const DEV = 'bizzing-english.device';
 
-/* vN → vN+1. Empty at v1; the first change of shape adds `1: (h) => { …; h.v = 2; return h; }`. */
-const STEPS = {};
+/* vN → vN+1. Never edit an old step; add the next. */
+const STEPS = {
+  /* v2: a child's free writing gets its own record, k.writing, which no backup ever carries. The "talk
+     about it" thoughts lived in k.reading[passage].thoughts, inside a field backups do carry. */
+  1: (h) => {
+    for (const k of h.kids || []) {
+      k.writing ||= {};
+      for (const [pid, r] of Object.entries(k.reading || {})) if (r && r.thoughts != null) { (k.writing.talk ||= {})[pid] = r.thoughts; delete r.thoughts; }
+    }
+    h.v = 2; return h;
+  },
+};
 
 export function migrate(h) {
   if (!h || typeof h !== 'object') return null;

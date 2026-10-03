@@ -36,6 +36,7 @@ export function newKid(name, band, avatar) {
     targets: { words: 10, pages: 1, speak: 0 },              // daily ring targets, set by the grown-up
     prefs: { readAloud: band === 1 },
     milestones: [],                                          // named learning milestones reached (legendary avatars)
+    writing: {},                                             // free writing: desk pieces, talk-about-it thoughts — on this device only, never in a backup
   };
 }
 

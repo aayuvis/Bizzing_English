@@ -180,7 +180,7 @@ export function finishExercise() {
 }
 export function talkView(pid) {
   const ch = /^alice-(\d+)$/.exec(pid), c = ch && book()?.chapters.find((x) => x.n === +ch[1]);
-  const p = c ? { title: `${c.n}. ${c.title}`, evaluate: c.evaluate } : PASSAGES.find((x) => x.id === pid), k = kid(), mine = k.reading[pid]?.thoughts || '';
+  const p = c ? { title: `${c.n}. ${c.title}`, evaluate: c.evaluate } : PASSAGES.find((x) => x.id === pid), k = kid(), mine = k.writing?.talk?.[pid] || '';
   const back = c ? `#/whole/alice/${c.n}/do` : `#/story/${pid}/do`;
   return pageHead({ title: 'Talk about it', sub: p.title, back: { label: 'Exercises', href: back } }) + `<div class="reader"><div class="card stack pin"><p class="prompt big" style="margin:0">${esc(p.evaluate || '')}</p>
     <p class="note" style="margin:0">There is no right answer, so the app never marks this. Talk it over with a grown-up — or write your thoughts here. They stay on this device.</p>
@@ -244,7 +244,7 @@ export const STORY_ACTIONS = {
   'sp-prev': () => { const r = S.run; stopNarration(); r.i = Math.max(0, r.i - 1); render(); },
   'sp-again': () => { const r = S.run; r.i = 0; r.started = false; render(); },
   'sp-love': () => { const k = kid(), r = S.run; k.reading[r.id] = { ...(k.reading[r.id] || {}), loved: !k.reading[r.id]?.loved }; save(); render(); },
-  'talk-save': (pid) => { const k = kid(), key = pid; const v = document.querySelector('#th')?.value || ''; k.reading[key] = { ...(k.reading[key] || {}), thoughts: v.slice(0, 4000) }; (k.reading[key].ex ||= {}).talk = v.trim() ? 'thoughts' : k.reading[key].ex.talk; save(); history.back(); },
+  'talk-save': (pid) => { const k = kid(); const v = document.querySelector('#th')?.value || ''; ((k.writing ||= {}).talk ||= {})[pid] = v.slice(0, 4000); (k.reading[pid] ||= {}); (k.reading[pid].ex ||= {}).talk = v.trim() ? 'thoughts' : k.reading[pid].ex.talk; save(); history.back(); },
   'talk-done': (pid) => { const k = kid(); (k.reading[pid] ||= {}); (k.reading[pid].ex ||= {}).talk = 'talked'; save(); history.back(); },
 };
 export function storyKey(e) {

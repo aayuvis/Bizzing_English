@@ -70,7 +70,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     ok(`${tag}: ${h} is a ${kind} head`, (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === kind);
   }
   /* no sideways scroll, measured against the width we set */
-  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma']) {
+  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story']) {
     await go(page, h);
     const w = await page.evaluate(() => document.documentElement.scrollWidth);
     ok(`${tag}: ${h} does not scroll sideways (${w}px)`, w <= (phone ? 390 : 1280));
@@ -181,6 +181,61 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await page.keyboard.press('Escape'); await page.waitForTimeout(200);
   ok('Esc closes the drawer', await page.evaluate(() => document.querySelector('[data-bz=drawer]').hidden));
   ok('no page errors in the behaviour run', page.errs.length === 0, page.errs.slice(0, 3).join(' | '));
+  await ctx.close();
+}
+
+/* ---------- 2b. Phase 3 — writing and speaking, and the privacy promise: nothing typed or said leaves ---------- */
+{
+  const { ctx, page } = await ctxFor();
+  const posts = [], bodies = [];
+  page.on('request', (r) => { if (r.method() !== 'GET') posts.push(r.method() + ' ' + r.url()); const b = r.postData(); if (b) bodies.push(b); });
+  await makeKid(page, 'Ila', '11–14');
+  await page.evaluate(() => { const S = window.__bz.S; S.h.parent.tester = true; window.__bz.render(); });
+  /* dictation: the sentence is heard, not shown; a miss names the kind of mistake */
+  await go(page, '#/stop/wr2-dict'); await page.click('[data-act=run-phase][data-arg=learn]'); await page.click('[data-act=run-phase][data-arg=turn]');
+  ok('a dictation never shows its sentence before it is answered', await page.evaluate(() => { const it = window.__bz.S.run.items[0]; return !document.querySelector('.item').innerText.includes(it.text); }));
+  page.reqs.length = 0; await page.click('[data-act=dict-play]'); await page.waitForTimeout(500);
+  ok('the dictation is the narrator’s recording, from this site', page.reqs.some((u) => /voice\/dict\//.test(u)) && page.reqs.every(ALLOWED));
+  const want = await page.evaluate(() => window.__bz.S.run.items[0].text);
+  await page.fill('.item textarea', want.toLowerCase()); await page.click('[data-act=submit]'); await page.waitForTimeout(300);
+  ok('a dictation with no capitals is caught, by kind', /capital letter/.test(await page.textContent('.diff')));
+  /* imitation: the shape is checked, the meaning is the child's */
+  await go(page, '#/stop/wr3-imitate'); await page.click('[data-act=run-phase][data-arg=learn]'); await page.click('[data-act=run-phase][data-arg=turn]');
+  const shape = await page.evaluate(() => window.__bz.S.run.items[0].shape);
+  const mine = { opener: 'When the bell rang, my little brother cheered loudly.', list3: 'We packed apples, bananas and a big flask of tea.', simile: 'The lake was as smooth as a mirror this morning.',
+    but: 'I wanted to play cricket outside, but the monsoon had other plans.', fronted: 'Slowly, the old tortoise crossed the dusty road.', question: 'Why does the moon follow our car at night?' }[shape];
+  await page.fill('.item textarea', mine); await page.keyboard.press('Enter'); await page.waitForTimeout(300);
+  ok('a sentence of the child’s own in the shape is accepted, and says it checked the shape', /checked the shape/.test(await page.textContent('.feedback')));
+  /* the writing desk: counts, never marks; a finished piece; the words never travel */
+  const secret = 'Zebrafish whisper secrets under the violet bridge.';
+  await go(page, '#/stop/wr4-para'); await page.waitForTimeout(300);
+  ok('a desk stop opens the writing desk', /#\/desk\/wr4-para/.test(page.url()));
+  const tas = await page.$$('.desk textarea');
+  await tas[0].fill(secret); await tas[1].fill('The fish are small. The bridge is old. The water is cold.'); await tas[2].fill('That is my favourite place.');
+  await page.waitForTimeout(600);
+  ok('the desk counts sentences, labelled as counts', (await page.textContent('.desk')).includes('Counts — not marks') && (await page.$eval('.desk .stat b', (e) => e.textContent)) === '5');
+  await page.click('[data-act=desk-tick] >> nth=0'); await page.click('[data-act=desk-finish]'); await page.waitForTimeout(500);
+  ok('finishing a piece passes the stop', await page.evaluate(() => window.__bz.S.h.kids[0].stops['wr4-para']?.passed === true));
+  ok('a written piece is never machine-checked later (judged by a grown-up)', await page.evaluate(() => window.__bz.S.h.kids[0].mastery['wr4-para']?.judged === true));
+  /* a one-minute speech: plan, speak (microphone on a tap), stop — the tracks end */
+  await go(page, '#/stage/sp6-minute');
+  await page.fill('[data-act=sp-plan][data-arg=hook]', secret);
+  ok('a speaking stop does not open the microphone by itself', await page.evaluate(() => window.__tracks.length === 0));
+  await page.click('[data-act=sp-start]'); await page.waitForTimeout(1200); await page.click('[data-act=sp-stop]'); await page.waitForTimeout(200);
+  ok('Stop ends every microphone track (speech)', await page.evaluate(() => window.__tracks.length > 0 && window.__tracks.every((t) => t.readyState === 'ended')));
+  ok('the speech result shows only measured numbers and says what it cannot judge', /cannot hear expression/.test(await page.textContent('main')));
+  /* a debate: both sides, two recordings */
+  await go(page, '#/stage/sp10-debate'); await page.click('[data-act=sp-start]'); await page.waitForTimeout(800); await page.click('[data-act=sp-stop]'); await page.waitForTimeout(200);
+  ok('a debate asks for the other side next', /AGAINST/.test(await page.textContent('main')));
+  await page.click('[data-act=sp-start]'); await page.waitForTimeout(800); await page.click('[data-act=sp-stop]'); await page.waitForTimeout(200);
+  ok('both sides are measured', (await page.$$('.stats')).length === 2);
+  /* the grown-up's rubric is the only judge of quality */
+  await go(page, '#/grownups'); for (const d of '1357') await page.keyboard.press(d); await page.waitForTimeout(300);
+  ok('the grown-up can read the piece and judge it', (await page.textContent('main')).includes('Zebrafish') && (await page.$$('[data-act=wrubric]')).length >= 4);
+  ok('PRIVACY: nothing was posted anywhere', posts.length === 0, posts.join(' '));
+  ok('PRIVACY: nothing typed left the device in any request', page.reqs.every((u) => !/Zebrafish|violet/i.test(decodeURIComponent(u))) && bodies.every((b) => !/Zebrafish/.test(b)));
+  ok('PRIVACY: no request left the site but Bee’s word clips', page.reqs.every((u) => ALLOWED(u) || u.startsWith(BEE_AUDIO)));
+  ok('no page errors in the writing and speaking run', page.errs.length === 0, page.errs.slice(0, 3).join(' | '));
   await ctx.close();
 }
 

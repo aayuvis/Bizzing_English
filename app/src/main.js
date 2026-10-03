@@ -18,6 +18,9 @@ import { meView, medalsView, collectionView, shopView, practiceView, logView, re
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
 import { loadBook } from './book.js';
+import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './views/desk.js';
+import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.js';
+import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
 import { balance, startActivity } from './family.js';
@@ -40,7 +43,7 @@ const TABS = [
   { id: 'stage', label: 'Stage', icon: 'lectern', href: '#/stage', color: '#B91C1C' },
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', play: 'play' };
+const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', desk: 'atlas', play: 'play' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -49,13 +52,19 @@ function parse() {
 }
 async function route() {
   const r = parse(); const prev = S.route.name;
-  if (isLive()) micStop(0);                              // leaving the Stage mid-reading: the microphone goes off at once
+  if (isLive()) micStop(0);                              // any Stage room: leaving switches the microphone off                              // leaving the Stage mid-reading: the microphone goes off at once
   stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' ? S.sheet : null;
   if (prev === 'play' && S.run?.mode === 'game') leaveGame();
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
   S.route = r;
-  if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/alice/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
+  const sk = r.name === 'stop' && stopById(r.parts[1]);
+  if (sk && sk.kind === 'desk') { location.replace(`#/desk/${sk.id}`); return; }
+  if (sk && sk.kind === 'speak') { location.replace(`#/stage/${sk.id}`); return; }
+  if (sk && sk.kind === 'readAloud') { location.replace('#/stage/aloud'); return; }
+  if (r.name === 'desk') { if (r.parts[2] !== 'done') openDesk(r.parts[1]); else S.run = null; }
+  else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1]);
+  else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/alice/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
   else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
   else if (r.name === 'story') {
     const [, id, sub, ex] = r.parts;
@@ -95,7 +104,8 @@ function screen() {
     case 'book': return bookView(p[1]);
     case 'word': return wordView(p[1] || '');
     case 'bank': return libraryView('words');
-    case 'stage': return p[1] === 'aloud' ? aloudView() : stageView();
+    case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] ? speakView() : stageView();
+    case 'desk': return p[2] === 'done' ? deskDoneView(p[1]) : deskView();
     case 'recordings': return recordingsView();
     case 'play': return p[1] ? gameView() : playView();
     case 'me': return meView();
@@ -144,7 +154,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
+const ACTIONS = { ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
   'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -162,6 +172,11 @@ document.addEventListener('submit', (e) => {
   else if (a === 'ob-name-form') OB_ACTIONS['ob-name']();
   else if (a === 'add-kid-form') PAGE_ACTIONS['add-kid-go']();
   else if (a === 'word-search') { const q = f.q.value.trim(); if (q) go(`#/search/${encodeURIComponent(q)}`); }
+});
+document.addEventListener('input', (e) => {
+  const t = e.target.closest('[data-act]'); if (!t) return;
+  if (t.dataset.act === 'desk-type') deskInput(t);
+  else if (t.dataset.act === 'sp-plan') speakInput(t);
 });
 document.addEventListener('change', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;

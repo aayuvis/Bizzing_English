@@ -18,8 +18,9 @@ const SELF = ['I paused at the full stops', 'I spoke clearly enough for the back
 export function stageView() {
   const k = kid(), s = strand('speaking');
   const tries = (k.stage['sp1-aloud'] || []);
-  const ladder = s.levels.map((l) => `<div class="stoprow${l.stops.length && k.stops[l.stops[0].id]?.passed ? ' passed' : ''}"><span class="st">${icon(l.stops.length ? (k.stops[l.stops[0].id]?.passed ? 'check' : 'mic') : 'lock')}</span>
-    <span><b>${l.n}. ${esc(l.title)}</b><small>${esc(l.iCan)}${l.stops.length ? '' : ' — being written'}</small></span>${l.stops.length ? link('Open', '#/stage/aloud', { cls: 'small out' }) : '<span></span>'}</div>`).join('');
+  const ladder = s.levels.map((l) => { const st = l.stops[0], href = st ? (st.kind === 'readAloud' ? '#/stage/aloud' : `#/stage/${st.id}`) : '#/stage', done = st && k.stops[st.id]?.passed, n = st ? (k.stage[st.id] || []).length : 0;
+    return `<a class="stoprow${done ? ' passed' : ''}" href="${href}"><span class="st">${icon(done ? 'check' : st ? 'mic' : 'lock')}</span>
+    <span><b>${l.n}. ${esc(l.title)}</b><small>${esc(l.iCan)}${n ? ` · ${n} time${n > 1 ? 's' : ''}` : ''}</small></span><span>${icon('next')}</span></a>`; }).join('');
   return pageHead({ title: 'The Stage', sub: 'read aloud, recite, then speak', actions: [{ icon: 'mic', label: 'Read aloud', href: '#/stage/aloud' }] }) + `<div class="grid2" style="margin:0 20px">
     <div class="card pin stack" style="align-self:start"><div class="row"><img src="${mascot('point')}" alt="" style="width:110px;height:110px;object-fit:contain"><h3 style="margin:0">Read it aloud</h3></div><p style="margin:0">Pick a passage, tap Start, and read. The app listens only for loudness — never for your words — and keeps nothing but the numbers.</p>
       ${tries.length ? `<p class="tag ok">${icon('check')}${tries.length} time${tries.length > 1 ? 's' : ''} on the Stage · best pace ${Math.max(...tries.map((t) => t.wpm))} words a minute</p>` : ''}${link('Read aloud', '#/stage/aloud', { ic: 'mic' })}</div>

@@ -25,6 +25,17 @@ words (Bee's meanings), the author's commas, rebuild the author's sentence, copy
 the Stage, talk about it (never marked). The whole book (Alice) is told the same way, a chapter at a
 time, with a bookmark, the story so far, and the people met so far.
 
+**Writing and Speaking (Phase 3)** are built through level 10. Writing: copywork, dictation in the
+narrator's voice, sentence imitation (a real sentence from a classic as the model, `src/writing.js`
+checks the SHAPE — never the meaning), then the writing desk (paragraph, retelling, description,
+persuasion, letter, essay, after a model): parts to write, a checklist the child ticks, COUNTS (never
+marks). Speaking: read aloud, a poem learned by fading, recitation with expression marks, telling a
+story, show and tell, one- and three-minute speeches with a planner, the Gettysburg Address, impromptu
+with 30 s to think, and a debate on both sides — all measured on the device only. A piece of writing or a
+speech is never machine-checked later: only a grown-up's rubric (1–4) on a later day makes it learned
+(`mastery.judge`). Free writing and speech notes live in `k.writing`, which no backup carries (store v2
+moved the talk-about-it thoughts there).
+
 **The Atlas is a painted land** (`art/atlas.webp`, by day and night): each strand a place, with pins,
 progress rings and the child's avatar where they are next; each strand opens onto a road of ten stations
 with every stop a starred stepping stone. `ATLAS_PINS` in `views/atlas.js` are measured against the
@@ -126,7 +137,8 @@ npm test                         # items (50k), banks, texts (quotes, rights), m
 npm run build && npm run check   # the BUILT app in Chromium under /Bizzing_English/, desktop + phone, light + dark
 ```
 
-**Prove an assertion by breaking it.** Each check here was watched to fail: the drop-in hash, the
+**Prove an assertion by breaking it.** Each check here was watched to fail — the latest: a planted POST of
+a child's desk writing tripped all three privacy checks. Earlier: the drop-in hash, the
 avatar shape, the later-day rule, the backup allow-list, the coin events, the Bee manifest, the
 variety bonus (blind until a same-order case was added), phone overflow (the shell's sub-nav widened
 the page through a grid `auto` column), contrast on the paintings, the microphone left on, and a
@@ -166,11 +178,9 @@ replaces `gh-pages` wholesale and refuses to publish if the staged file count di
    domain and trademark checks.
 2. **A named reviewer** for the 10 `needsReview` passages and 14 works; **rights confirmation** for the
    five gated works (translators of Grimm, Andersen, Heidi; Peter Pan's UK right; Verne).
-3. **Phase 2–5 content** (SPEC §14): Reading levels with whole books chapter by chapter; Writing
-   (dictation, imitation, paragraph); Speaking 2–10 and the Elocution Contest with Bee's rivals;
-   Literature cards and appreciation games; the story of English. Every unbuilt level says so.
-4. **Art:** the image key's credit ran out on 2 Oct; one avatar (the Laurel Eagle) still reads as an
-   owl and should be repainted. Extras for the Shop.
+3. **Phase 4–5 content** (SPEC §14): the Elocution Contest with Bee's ten rivals; Literature cards and
+   appreciation games; the story of English and rhetoric; more whole books. Every unbuilt level says so.
+4. **Art:** Extras for the Shop.
 5. **Bee data:** Bee's list at 28948f81c still holds proper nouns (hitler, stalin, helen…) — the
    import filters them out here; worth fixing at the source in Bee.
 

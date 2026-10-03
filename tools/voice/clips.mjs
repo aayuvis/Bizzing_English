@@ -14,6 +14,7 @@ if (existsSync(ROOT + 'app/src/data/book-alice.json')) {
   const B = JSON.parse(readFileSync(ROOT + 'app/src/data/book-alice.json', 'utf8'));
   for (const c of B.chapters) (c.scenes || [c.text]).forEach((t, i) => clips.push({ key: `bk/alice-${c.n}-${i}`, text: clean(t) }));
 }
+if (existsSync(ROOT + 'app/src/data/writing.js')) { const W = (await import(pathToFileURL(ROOT + 'app/src/data/writing.js').href)).default; for (const d of W.dictation) clips.push({ key: `dict/${d.id}`, text: clean(d.text) }); }
 const { allStops } = await import(pathToFileURL(ROOT + 'app/src/curriculum.js').href);
 for (const s of allStops()) { clips.push({ key: `stop/${s.id}-story`, text: clean(s.story) }); clips.push({ key: `stop/${s.id}-learn`, text: clean(s.learn.why) }); }
 writeFileSync(ROOT + 'tools/voice/clips.json', JSON.stringify(clips, null, 1) + '\n');

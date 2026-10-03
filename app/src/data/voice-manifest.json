@@ -427,6 +427,314 @@
 54980,
 "f91952238a"
 ],
+"dict/aesop-hare-tortoise-0": [
+3580,
+"7148634612"
+],
+"dict/aesop-hare-tortoise-1": [
+2620,
+"804fcffd1b"
+],
+"dict/aesop-lion-mouse-0": [
+2180,
+"de9293d643"
+],
+"dict/aesop-town-mouse-0": [
+4820,
+"71dc82d758"
+],
+"dict/aesop-town-mouse-1": [
+5230,
+"c963efada3"
+],
+"dict/aesop-town-mouse-2": [
+2740,
+"fb22cda6c9"
+],
+"dict/alice-cheshire-0": [
+2470,
+"3665e250a3"
+],
+"dict/alice-cheshire-1": [
+3770,
+"4f2b017a28"
+],
+"dict/alice-cheshire-2": [
+3430,
+"e42fa2d77f"
+],
+"dict/alice-rabbit-hole-0": [
+6120,
+"9d27aa3b0b"
+],
+"dict/carol-scrooge-0": [
+6340,
+"55743344e5"
+],
+"dict/carol-scrooge-1": [
+7780,
+"0c6791569c"
+],
+"dict/carol-scrooge-2": [
+3980,
+"2467921744"
+],
+"dict/gettysburg-address-0": [
+2540,
+"66be77f477"
+],
+"dict/gettysburg-address-1": [
+3170,
+"6e986a19e5"
+],
+"dict/gettysburg-address-2": [
+5780,
+"e075acc457"
+],
+"dict/gettysburg-address-3": [
+6410,
+"788ca52fad"
+],
+"dict/happyprince-swallow-0": [
+4610,
+"4f6dfe08e7"
+],
+"dict/happyprince-swallow-1": [
+5090,
+"000485f501"
+],
+"dict/happyprince-swallow-2": [
+1850,
+"5fad8a159e"
+],
+"dict/happyprince-swallow-3": [
+3220,
+"b47004d98a"
+],
+"dict/happyprince-swallow-4": [
+3430,
+"f422aa421b"
+],
+"dict/happyprince-swallow-5": [
+2620,
+"212d5fdb97"
+],
+"dict/jungle-mowgli-0": [
+5780,
+"8a24c4c3cb"
+],
+"dict/jungle-mowgli-1": [
+4870,
+"d034b77ee2"
+],
+"dict/jungle-mowgli-2": [
+2810,
+"ec35498ca9"
+],
+"dict/jungle-mowgli-3": [
+2260,
+"62fd3e99ec"
+],
+"dict/justso-elephant-0": [
+4540,
+"69b62b8df6"
+],
+"dict/lamb-tempest-0": [
+6410,
+"1592ffd0c0"
+],
+"dict/lamb-tempest-1": [
+2470,
+"c73f829941"
+],
+"dict/lamb-tempest-2": [
+1850,
+"16bf852f20"
+],
+"dict/lamb-tempest-3": [
+3770,
+"c70cdf7bd6"
+],
+"dict/lamb-tempest-4": [
+3170,
+"4e0dbb3298"
+],
+"dict/littlewomen-presents-0": [
+4820,
+"845ec68298"
+],
+"dict/littlewomen-presents-1": [
+4130,
+"d15b9ca481"
+],
+"dict/lookingglass-humpty-0": [
+2540,
+"3de1d55de4"
+],
+"dict/magi-della-0": [
+3580,
+"46c1a1fedc"
+],
+"dict/magi-della-1": [
+5500,
+"9e33a120f1"
+],
+"dict/magi-della-2": [
+5710,
+"be73b5e3f0"
+],
+"dict/magi-della-3": [
+3910,
+"b1490367c8"
+],
+"dict/oz-cyclone-0": [
+2110,
+"82b29e2066"
+],
+"dict/oz-cyclone-1": [
+5300,
+"f85b5ec0f1"
+],
+"dict/oz-cyclone-2": [
+4130,
+"b3e2b9728d"
+],
+"dict/oz-cyclone-3": [
+1850,
+"1a05e54996"
+],
+"dict/oz-cyclone-4": [
+3290,
+"dd98cf63dd"
+],
+"dict/oz-cyclone-5": [
+2810,
+"c726c072b0"
+],
+"dict/peterrabbit-garden-0": [
+4540,
+"92c624f163"
+],
+"dict/peterrabbit-garden-1": [
+4940,
+"cb806cf137"
+],
+"dict/peterrabbit-garden-2": [
+2880,
+"f3747c7d45"
+],
+"dict/peterrabbit-garden-3": [
+4059,
+"cd52bd451f"
+],
+"dict/saki-window-0": [
+2950,
+"536290fcea"
+],
+"dict/saki-window-1": [
+4059,
+"aceabd98d1"
+],
+"dict/saki-window-2": [
+5640,
+"eabae689fa"
+],
+"dict/saki-window-3": [
+6600,
+"5f691832ae"
+],
+"dict/secretgarden-door-0": [
+5020,
+"7311daac06"
+],
+"dict/secretgarden-door-1": [
+1370,
+"276621a62b"
+],
+"dict/secretgarden-door-2": [
+3650,
+"837f8ff660"
+],
+"dict/secretgarden-door-3": [
+5640,
+"6c605ddaf3"
+],
+"dict/secretgarden-door-4": [
+2110,
+"4ba3ac52c0"
+],
+"dict/secretgarden-door-5": [
+2660,
+"ce56ccd6b2"
+],
+"dict/tagore-champa-0": [
+2880,
+"89b0387f0c"
+],
+"dict/tagore-champa-1": [
+3170,
+"4b85f4b8e4"
+],
+"dict/tagore-champa-2": [
+2330,
+"0b6ae1b076"
+],
+"dict/treasure-benbow-0": [
+4540,
+"f3cb7f547b"
+],
+"dict/treasure-benbow-1": [
+1440,
+"12fda5c9d5"
+],
+"dict/treasure-benbow-2": [
+1700,
+"bdc9544d52"
+],
+"dict/velveteen-real-0": [
+3980,
+"ce2827bdc3"
+],
+"dict/velveteen-real-1": [
+1630,
+"b5ee6bed2a"
+],
+"dict/velveteen-real-2": [
+6190,
+"cf05018360"
+],
+"dict/velveteen-real-3": [
+4610,
+"b4b4246036"
+],
+"dict/velveteen-real-4": [
+2470,
+"32fe5ccb10"
+],
+"dict/walden-woods-0": [
+6820,
+"4a12deba09"
+],
+"dict/walden-woods-1": [
+3170,
+"bfb5e44f45"
+],
+"dict/wind-boats-0": [
+3290,
+"c169ea2fde"
+],
+"dict/wind-boats-1": [
+3840,
+"f4535be314"
+],
+"dict/wind-boats-2": [
+1080,
+"be9edc24d2"
+],
+"dict/wind-boats-3": [
+5570,
+"ca8b35071a"
+],
 "st/aesop-hare-tortoise-0": [
 10900,
 "2348d4e138"
@@ -1307,6 +1615,78 @@
 4200,
 "0f7bc3233e"
 ],
+"stop/sp10-debate-learn": [
+11090,
+"f239913331"
+],
+"stop/sp10-debate-story": [
+5160,
+"c08965108c"
+],
+"stop/sp2-recite-learn": [
+10200,
+"deab3a0426"
+],
+"stop/sp2-recite-story": [
+5020,
+"8c2a28ab11"
+],
+"stop/sp3-express-learn": [
+16540,
+"c2da82378a"
+],
+"stop/sp3-express-story": [
+4200,
+"7e30f53d82"
+],
+"stop/sp4-story-learn": [
+10900,
+"c89254d993"
+],
+"stop/sp4-story-story": [
+4200,
+"3759a22488"
+],
+"stop/sp5-show-learn": [
+8060,
+"d2221621cc"
+],
+"stop/sp5-show-story": [
+5300,
+"65dafff11c"
+],
+"stop/sp6-minute-learn": [
+11860,
+"5252547d6d"
+],
+"stop/sp6-minute-story": [
+3980,
+"26014c823e"
+],
+"stop/sp7-three-learn": [
+12480,
+"c63c77c96d"
+],
+"stop/sp7-three-story": [
+4540,
+"d4a12d675f"
+],
+"stop/sp8-declaim-learn": [
+11300,
+"97f53e438f"
+],
+"stop/sp8-declaim-story": [
+6260,
+"b15e4ad581"
+],
+"stop/sp9-impromptu-learn": [
+9290,
+"3bb4006c0d"
+],
+"stop/sp9-impromptu-story": [
+3840,
+"7d9eef58fd"
+],
 "stop/w1-build-learn": [
 10940,
 "8ffdae28d1"
@@ -1402,5 +1782,77 @@
 "stop/wr1-copy-story": [
 5930,
 "c3a7271682"
+],
+"stop/wr10-model-learn": [
+11020,
+"28381d6f40"
+],
+"stop/wr10-model-story": [
+5380,
+"07b31e1f1c"
+],
+"stop/wr2-dict-learn": [
+13700,
+"15c41cec6d"
+],
+"stop/wr2-dict-story": [
+5230,
+"98cdc112a6"
+],
+"stop/wr3-imitate-learn": [
+11380,
+"b0990a02ca"
+],
+"stop/wr3-imitate-story": [
+6530,
+"274cf52063"
+],
+"stop/wr4-para-learn": [
+9430,
+"a5c356ce9f"
+],
+"stop/wr4-para-story": [
+5500,
+"baf76d3afd"
+],
+"stop/wr5-retell-learn": [
+13150,
+"30677e4905"
+],
+"stop/wr5-retell-story": [
+5090,
+"31516219c5"
+],
+"stop/wr6-describe-learn": [
+13440,
+"bebfd9af5c"
+],
+"stop/wr6-describe-story": [
+4610,
+"ff9d13b9df"
+],
+"stop/wr7-persuade-learn": [
+9650,
+"ef911b45bd"
+],
+"stop/wr7-persuade-story": [
+5570,
+"0c36a61549"
+],
+"stop/wr8-letter-learn": [
+11230,
+"b1f46090ec"
+],
+"stop/wr8-letter-story": [
+5300,
+"0ab0fc947e"
+],
+"stop/wr9-essay-learn": [
+9720,
+"cc0c9f0460"
+],
+"stop/wr9-essay-story": [
+5420,
+"00ca8712bd"
 ]
 }
