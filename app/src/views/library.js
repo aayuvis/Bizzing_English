@@ -12,10 +12,10 @@ import { lookup, lexReady } from '../lexicon.js';
 import { storyRoom, storyCard as storyArt } from './stories.js';
 import { stepOf } from '../mastery.js';
 import { mythsPage, mythProgress, authorCards, authorView } from './deep.js';
-import { author, authorOf, AUTHORS } from '../data/deep.js';
+import { author, authorOf } from '../data/deep.js';
 
 /* six chips at most (the shell's rule): Speeches share the Poems room, and the Greek myths have their own */
-const NAV = (cur) => [['stories', 'Stories', 'play'], ['myths', 'Greek myths', 'flag'], ['books', 'Books', 'book'], ['poems', 'Poems & speeches', 'quill'], ['authors', 'Authors', 'user'], ['words', 'Words', 'key']]
+const NAV = (cur) => [['stories', 'Stories', 'play'], ['myths', 'Greek myths', 'lamp'], ['books', 'Books', 'book'], ['poems', 'Poems & speeches', 'quill'], ['authors', 'Authors', 'user'], ['words', 'Words', 'key']]
   .map(([id, label, ic]) => ({ label, icon: ic, href: `#/library/${id}`, active: id === cur || (cur === 'speeches' && id === 'poems') || (cur === 'author' && id === 'authors') }));
 const SHELF = { fable: 'Fables and fairy tales', children: 'Children’s classics', novel: 'Novels and stories', poetry: 'Poetry', drama: 'Drama', speech: 'Speeches', essay: 'Essays' };
 const COLOURS = ['#7a3b2e', '#2f5d50', '#3b4a7a', '#7a5a1e', '#5b3a6e', '#2e5b7a', '#7a2e4a', '#4a6a2e'];
@@ -32,7 +32,7 @@ export function libraryView(tab = 'stories') {
   const k = kid();
   if (tab === 'stories') return pageHead({ title: 'The Library', sub: 'stories from the classics, read aloud', nav: NAV(tab) }) + storyRoom();
   if (tab === 'words') return head('every word you have met') + wordsTab(k);
-  if (tab === 'myths') { const pr = mythProgress(k); return head('fifteen stories, and the words they gave English', { chip: `${pr.heard} of ${pr.n} heard`, pct: pr.n ? (pr.heard / pr.n) * 100 : 0, label: 'a myth is heard when she has told it to the end' }) + mythsPage(); }
+  if (tab === 'myths') { const pr = mythProgress(k); return head('the old stories, and the words they gave English', { chip: `${pr.heard} of ${pr.n} heard`, pct: pr.n ? (pr.heard / pr.n) * 100 : 0, label: 'a myth is heard when she has told it to the end' }) + mythsPage(); }
   if (tab === 'author') { const a = author(S.route.parts[2]); return pageHead({ title: a ? a.name : 'Authors', sub: a ? (a.deepest ? 'a deep dive: the plays, the poems, the words' : 'a deep dive') : '', back: { label: 'Authors', href: '#/library/authors' } }) + authorView(S.route.parts[2]); }
   if (tab === 'poems') return head('poems to hear, and speeches to say') + `<div class="rail wrap">${PASSAGES.filter((p) => shippable(p) && (p.kind === 'verse' || WORKS.find((w) => w.id === p.work)?.shelf === 'poetry')).map((p) => `<a class="scard" href="#/story/${p.id}"><span class="pic" style="background-image:url('${storyArt(p.id)}')"></span><span class="nm">${esc(p.title)}</span><span class="hk">${esc(p.hook || '')}</span><span class="meta">${esc(WORKS.find((w) => w.id === p.work)?.author || '')}</span></a>`).join('')}</div>` + listWorks(WORKS.filter((w) => w.shelf === 'poetry'), k, true) + `<h3 class="railh" id="speeches" style="margin-left:0">Speeches</h3>` + listWorks(WORKS.filter((w) => w.shelf === 'speech'), k, true);
   if (tab === 'speeches') return head('great speeches, and the art of them') + listWorks(WORKS.filter((w) => w.shelf === 'speech'), k, true);

@@ -108,28 +108,31 @@ export const NAMES_NOTE = {
 
 /* `works` are WORKS ids (library.js and its beside-files); `surname` finds the death year in a work's own
    rights note ("Published 1609; Shakespeare died 1616.") — the year is read from the data, never typed.
+   `art` is the painting of one of THEIR stories that stands for them (never a portrait: a scene from the
+   work, chosen so no real person is its subject); `plate` a world painting where every story's painting
+   shows the author themself (Douglass's own life) or the speaker (Lincoln at Gettysburg).
    `speak` names Stage rooms that already use their words. `retold` is a retelling (CLAUDE.md rule 4). */
 export const AUTHORS = [
-  { id: 'shakespeare', name: 'William Shakespeare', surname: 'Shakespeare', works: ['midsummer', 'macbeth', 'caesar', 'sonnets'], deepest: true,
+  { id: 'shakespeare', art: 'midsummer-puck', name: 'William Shakespeare', surname: 'Shakespeare', works: ['midsummer', 'macbeth', 'caesar', 'sonnets'], deepest: true,
     speak: [{ label: 'Friends, Romans, countrymen — read it aloud', href: '#/stage/aloud/caesar-antony' }, { label: 'To-morrow, and to-morrow — read it aloud', href: '#/stage/aloud/macbeth-tomorrow' },
       { label: 'Sonnet 18 — learn it by heart', href: '#/stage/sp2-recite' }, { label: 'The Elocution Contest: a poem, a passage, a talk', href: '#/stage/contest' }],
     wordsStop: 'la4-shakespeare', howTo: 'la9-pentameter', retold: [{ work: 'lamb-tales', passage: 'lamb-tempest' }] },
-  { id: 'dickens', name: 'Charles Dickens', surname: 'Dickens', works: ['carol', 'oliver', 'great-expectations', 'two-cities'] },
-  { id: 'carroll', name: 'Lewis Carroll', surname: 'Carroll', works: ['alice', 'lookingglass'] },
-  { id: 'kipling', name: 'Rudyard Kipling', surname: 'Kipling', works: ['jungle', 'justso', 'kipling-rewards', 'kim'],
+  { id: 'dickens', art: 'carol-scrooge', name: 'Charles Dickens', surname: 'Dickens', works: ['carol', 'oliver', 'great-expectations', 'two-cities'] },
+  { id: 'carroll', art: 'alice-rabbit-hole', name: 'Lewis Carroll', surname: 'Carroll', works: ['alice', 'lookingglass'] },
+  { id: 'kipling', art: 'jungle-mowgli', name: 'Rudyard Kipling', surname: 'Kipling', works: ['jungle', 'justso', 'kipling-rewards', 'kim'],
     speak: [{ label: 'If — learn it by heart', href: '#/stage/sp2-recite' }] },
-  { id: 'stevenson', name: 'Robert Louis Stevenson', surname: 'Stevenson', works: ['treasure', 'kidnapped', 'garden-verses', 'jekyll'],
+  { id: 'stevenson', art: 'treasure-benbow', name: 'Robert Louis Stevenson', surname: 'Stevenson', works: ['treasure', 'kidnapped', 'garden-verses', 'jekyll'],
     speak: [{ label: 'A poem from A Child’s Garden of Verses — learn it by heart', href: '#/stage/sp2-recite' }] },
-  { id: 'wordsworth', name: 'William Wordsworth', surname: 'Wordsworth', works: ['wordsworth'],
+  { id: 'wordsworth', art: 'wordsworth-reaper', name: 'William Wordsworth', surname: 'Wordsworth', works: ['wordsworth'],
     speak: [{ label: 'Say a poem with expression', href: '#/stage/sp3-express' }] },
-  { id: 'austen', name: 'Jane Austen', surname: 'Austen', works: ['pride'] },
-  { id: 'twain', name: 'Mark Twain', surname: 'Twain', works: ['tomsawyer', 'prince-pauper'] },
-  { id: 'andersen', name: 'Hans Christian Andersen', surname: 'Andersen', works: ['andersen'] },
-  { id: 'grimm', name: 'The Brothers Grimm', surname: 'Grimm', works: ['grimm'] },
-  { id: 'aesop', name: 'Aesop', surname: 'Jacobs', teller: 'Joseph Jacobs, who told these fables in English,', works: ['aesop'] },
-  { id: 'grahame', name: 'Kenneth Grahame', surname: 'Grahame', works: ['wind'] },
-  { id: 'douglass', name: 'Frederick Douglass', surname: 'Douglass', works: ['douglass'] },
-  { id: 'lincoln', name: 'Abraham Lincoln', surname: 'Lincoln', works: ['gettysburg'],
+  { id: 'austen', art: 'pride-opening', name: 'Jane Austen', surname: 'Austen', works: ['pride'] },
+  { id: 'twain', art: 'tomsawyer-fence', name: 'Mark Twain', surname: 'Twain', works: ['tomsawyer', 'prince-pauper'] },
+  { id: 'andersen', plate: 'garden', name: 'Hans Christian Andersen', surname: 'Andersen', works: ['andersen'] },
+  { id: 'grimm', art: 'grimm-elves', name: 'The Brothers Grimm', surname: 'Grimm', works: ['grimm'] },
+  { id: 'aesop', art: 'aesop-lion-mouse', name: 'Aesop', surname: 'Jacobs', teller: 'Joseph Jacobs, who told these fables in English,', works: ['aesop'] },
+  { id: 'grahame', art: 'wind-boats', name: 'Kenneth Grahame', surname: 'Grahame', works: ['wind'] },
+  { id: 'douglass', plate: 'scriptorium', name: 'Frederick Douglass', surname: 'Douglass', works: ['douglass'] },
+  { id: 'lincoln', plate: 'forum', name: 'Abraham Lincoln', surname: 'Lincoln', works: ['gettysburg'],
     speak: [{ label: 'Deliver the Gettysburg Address on the Stage', href: '#/stage/sp8-declaim' }] },
 ];
 export const author = (id) => AUTHORS.find((a) => a.id === id) || null;
@@ -155,11 +158,11 @@ export const whyRead = (a) => authorWorks(a).sort((x, y) => (y.held ? 1 : 0) - (
    the right answer's slot, which permute() rotates with the item's ordinal, falls equally in each slot),
    at most eight. A question whose right answer is in its own words is left out. */
 const norm = (s) => ` ${String(s).toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim()} `;
-export const leaks = (q) => norm(q.q).includes(norm(q.right));
+export const leaks = (q, shown = []) => norm(q.q).includes(norm(q.right)) || shown.some((t) => norm(t).includes(norm(q.right)));   // nor in a line shown on the same page
 export function quizFor(a) {
-  const ps = authorPassages(a).filter((p) => (p.questions || []).length), pool = [];
+  const ps = authorPassages(a).filter((p) => (p.questions || []).length), pool = [], shown = authorLines(a).map((l) => l.text);
   for (let i = 0; pool.length < 8 && ps.some((p) => i < p.questions.length); i++)
-    for (const p of ps) { const q = p.questions[i]; if (q && !leaks(q) && pool.length < 8) pool.push({ p, qi: i, q }); }
+    for (const p of ps) { const q = p.questions[i]; if (q && !leaks(q, shown) && pool.length < 8) pool.push({ p, qi: i, q }); }
   const n = pool.length - (pool.length % 4);
   return pool.slice(0, n).map(({ p, qi, q }, i) => {
     const { options, answer } = permute(`deep:${a.id}:${i}`, [q.right, ...q.wrong]);

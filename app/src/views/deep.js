@@ -9,8 +9,8 @@
    answer advances, and pays once per question through pay('answer'). */
 
 import '../../styles/deep.css';
-import { S, kid, save, render, pay } from '../app.js';
-import { esc, icon, link, btn, empty, plural } from '../ui.js';
+import { S, kid, save, render, pay, isDark } from '../app.js';
+import { esc, icon, link, empty, plural } from '../ui.js';
 import { WORKS, PASSAGES } from '../data/library.js';
 import { MYTH_WORDS } from '../data/myth-words.js';
 import { bookMeta } from '../book.js';
@@ -38,8 +38,8 @@ export function mythProgress(k) {
 
 export function mythsPage() {
   const k = kid(), pr = mythProgress(k);
-  const intro = `<div class="card dp-intro"><p style="margin:0">Fifteen myths, told in the words of three old books — Nathaniel Hawthorne’s, Charles Kingsley’s and Thomas Bulfinch’s — and the English words that came out of them. Hear one, do its exercises, then meet its words.</p>
-    <p class="note" style="margin:8px 0 0">${esc(NAMES_NOTE.say)} <q>${esc(NAMES_NOTE.quote)}</q> — Bulfinch, ${esc(work(NAMES_NOTE.work).title)}. Kingsley uses the Greek names.</p>
+  const intro = `<div class="card dp-intro"><p style="margin:0">${['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen'][pr.n] || pr.n} myths, told in the words of three old books — Nathaniel Hawthorne’s, Charles Kingsley’s and Thomas Bulfinch’s — and the English words that came out of them. Hear one, do its exercises, then meet its words.</p>
+    <p class="note" style="margin:8px 0 0">${esc(NAMES_NOTE.say)} <q>${esc(NAMES_NOTE.quote)}</q> — ${esc(work(NAMES_NOTE.work).title)}. Kingsley uses the Greek names.</p>
     <p class="dp-prog" data-deep-progress>${icon('check')}<span><b>${pr.heard} of ${pr.n}</b> myths heard · <b>${pr.banked} of ${pr.words}</b> of their words in your word bank · Word level 7: <b>${pr.passed} of ${WORD7.length}</b> stops passed${pr.learned ? `, ${pr.learned} learned` : ''}</span></p>
     <div class="row">${WORD7.map((s) => link(s.title, `#/stop/${s.id}`, { ic: 'key', cls: 'out small' })).join('')}</div></div>`;
   let n = 0;
@@ -72,13 +72,13 @@ function mythStop(p, k, n) {
 }
 
 function whoCard(c) {
-  const p = mythPassage(c.passage), q = (x) => `<blockquote>${esc(x.quote)}<small>— ${x.passage ? `<a href="#/story/${x.passage}">${esc(mythPassage(x.passage)?.title || '')}</a>` : `Bulfinch, ${esc(work(x.work)?.title || '')}`}</small></blockquote>`;
+  const p = mythPassage(c.passage), q = (x) => `<blockquote>${esc(x.quote)}<small>— ${x.passage ? `<a href="#/story/${x.passage}">${esc(mythPassage(x.passage)?.title || '')}</a>` : esc(work(x.work)?.title || '')}</small></blockquote>`;
   return `<div class="card dp-who"><h4>${esc(c.name)}${c.greek ? ` <small class="muted">· the Greeks’ ${esc(c.greek.name)}</small>` : ''}</h4><p>${esc(c.fact)}</p>
     <blockquote>${esc(c.quote)}<small>— <a href="#/story/${p.id}">${esc(p.title)}</a></small></blockquote>${c.also ? q(c.also) : ''}${c.greek ? q(c.greek) : ''}</div>`;
 }
 
 /* ───────────── The authors ───────────── */
-const firstArt = (a) => { const ps = authorPassages(a); return ps.length ? storyCard(ps[0].id) : storyCard(`${a.works[0]}-none`); };
+const firstArt = (a) => (a.plate ? `art/w-${a.plate}${isDark() ? '-night' : ''}-card.webp` : storyCard(a.art));
 
 export function authorCards() {
   return `<div class="dp-authors">${AUTHORS.map((a) => {
@@ -134,7 +134,7 @@ function quizState(a) {
 }
 function quizSection(a) {
   const items = quizFor(a); if (!items.length) return '';
-  const st = quizState(a), n = items.length;
+  const st = quizState(a), n = items.length; st.items = items;   // in memory, for the browser check to read the drawn quiz
   if (st.i >= n) return `<section class="card dp-sec dq" id="dq" data-deep-quiz="${a.id}"><h3>Test yourself</h3><p class="prompt">You got ${st.right} of ${n}.</p><p class="note">Every question came from one of ${esc(a.name)}’s stories. A right answer pays a coin the first time only.</p>
     <div class="row"><button class="btn" data-deep="again">${icon('undo')}<span>Again</span></button></div></section>`;
   const it = items[st.i], answered = st.pick != null, ok = answered && st.pick === it.answer;

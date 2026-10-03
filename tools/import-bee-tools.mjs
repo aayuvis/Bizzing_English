@@ -9,6 +9,12 @@
      app/public/data/vocab.json Bee's two vocabulary-bee lists — "Meaning Masters" (nsf-vocab26-data.js,
                                 SB_VOCAB26) and "The Mighty 500" (nsf-finals500-data.js, SB_NSF500) — as
                                 [word, definition, respelling, origin, difficulty, part of speech, root, hint].
+     app/src/data/bee-quotes.json Bee's quotations (quotes.js + quotes-lib.js, window.SB_QUOTES) exactly as Bee
+                                has them — the line, Bee's attribution, Bee's category, who they were, Bee's
+                                plain-words meaning (the owner, 3 Oct 2026: "add bee quotes nonlabelled").
+                                They are shown ONLY in Tools → Quotes & Poems. They never enter LINES, the
+                                lines of the hour, the feed or any question (CLAUDE.md rule 2), and
+                                test/texts.mjs's held-text check does not apply to them (they are not held text).
 
    What is NOT carried: Bee's example sentences (`s`, written for Bee, unsourced) and anything Bee
    marks kid: false. A vocabulary word is dropped when its definition names a person or a place (a
@@ -32,7 +38,7 @@ const show = (f) => execFileSync('git', ['-C', REPO, 'show', `${COMMIT}:spellbou
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const win = {};
 const src = {};
-for (const f of ['figurative-data.js', 'nsf-vocab26-data.js', 'nsf-finals500-data.js']) { src[f] = show(f); vm.runInNewContext(src[f], { window: win }); }
+for (const f of ['figurative-data.js', 'nsf-vocab26-data.js', 'nsf-finals500-data.js', 'quotes.js', 'quotes-lib.js']) { src[f] = show(f); vm.runInNewContext(src[f], { window: win }); }
 
 /* ---------- idioms, proverbs and similes ---------- */
 const KEEP = ['p', 't', 'm', 'os', 'oc', 'ol', 'ex', 'th', 'diff', 'lit', 'pattern', 'region', 'eq'];
@@ -59,4 +65,9 @@ for (const [id, data] of [['vocab26', win.SB_VOCAB26], ['nsf500', win.SB_NSF500]
   }
 }
 writeFileSync(resolve(ROOT, 'app/public/data/vocab.json'), JSON.stringify({ bee: COMMIT, sources: { vocab26: 'spellbound-app/nsf-vocab26-data.js', nsf500: 'spellbound-app/nsf-finals500-data.js' }, lists }));
+/* ---------- Bee's quotations (Quotes & Poems only) ---------- */
+const qSeen = new Set(), quotes = [];
+for (const x of win.SB_QUOTES || []) { const q = String(x.q || '').trim(); if (!q || qSeen.has(q)) continue; qSeen.add(q); const o = { q, a: x.a || '', c: x.c || '' }; if (x.who) o.who = x.who; if (x.m) o.m = x.m; quotes.push(o); }
+writeFileSync(resolve(ROOT, 'app/src/data/bee-quotes.json'), JSON.stringify({ bee: COMMIT, sources: ['spellbound-app/quotes.js', 'spellbound-app/quotes-lib.js'], sha256: { 'quotes.js': sha(src['quotes.js']), 'quotes-lib.js': sha(src['quotes-lib.js']) }, quotes }));
+console.log(`Bee quotes: ${quotes.length}`);
 console.log(`Bee ${COMMIT.slice(0, 9)}: ${items.length} idioms, proverbs and similes; vocabulary ${Object.entries(lists).map(([k, v]) => `${k} ${v.length} (dropped ${dropped[k]})`).join(', ')}`);

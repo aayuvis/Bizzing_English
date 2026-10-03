@@ -24,6 +24,7 @@ import { MYTH_PASSAGES } from '../src/data/library-myths.js';
 import { MYTH_WORDS } from '../src/data/myth-words.js';
 import { cleared } from '../src/data/rights.js';
 import { stopById } from '../src/curriculum.js';
+const ART = JSON.parse(readFileSync(new URL('../src/data/story-art.json', import.meta.url), 'utf8'));
 
 const APP = join(dirname(fileURLToPath(import.meta.url)), '..');
 const collapse = (s) => String(s).replace(/\s+/g, ' ').trim();
@@ -83,6 +84,7 @@ function audit(d) {
     if (d.isGated(a)) {
       bad(!d.authorPassages(a).length && !d.authorLines(a).length && !d.quizFor(a).length, `${tag}: gated, yet passages, lines or a quiz are served`);
     }
+    bad(a.plate ? existsSync(join(APP, 'public/art', `w-${a.plate}-card.webp`)) : a.art && d.authorPassages(a).some((p) => p.id === a.art) && ART.includes(`story/${a.art}`), `${tag}: its picture must be a painting of one of their own stories, or a world plate`);
     const life = d.lifeNote(a);
     if (life) bad(life.basis.includes(`died ${life.year}`) && a.works.includes(life.work.id), `${tag}: life note not read from a rights note`);
     for (const s of a.speak || []) {
@@ -109,6 +111,7 @@ function audit(d) {
       bad(new Set(it.options.map(norm)).size === 4, `${tag} ${it.id}: options not distinct`);
       bad(it.options.filter((o) => o === q.right).length === 1, `${tag} ${it.id}: more than one right option`);
       bad(!norm(it.q).includes(norm(it.right)), `${tag} ${it.id}: the answer is in the question`);
+      bad(!d.authorLines(a).some((l) => norm(l.text).includes(norm(it.right))), `${tag} ${it.id}: the answer is in a line shown on the same page`);
       bad(!seen.has(it.id), `${tag} ${it.id}: asked twice`); seen.add(it.id);
       slots[it.answer]++; ALL[it.answer]++;
     }
@@ -145,6 +148,8 @@ const breaks = [
   ['a quiz with a favourite slot', clone({ quizFor: (a) => D.quizFor(a).map((it) => { const o = it.options.filter((x) => x !== it.right); return { ...it, options: [it.right, ...o], answer: 0 }; }) })],
   ['a gated author served', clone({ isGated: (a) => a.id === 'shakespeare' })],
   ['a Stage link to a passage not theirs', clone({ AUTHORS: [{ ...D.AUTHORS[0], speak: [{ label: 'x', href: '#/stage/aloud/gettysburg-address' }] }, ...D.AUTHORS.slice(1)] })],
+  ['an author pictured by someone else’s story', clone({ AUTHORS: [{ ...D.AUTHORS[0], art: 'gettysburg-address' }, ...D.AUTHORS.slice(1)] })],
+  ['a quiz answer shown in a line on the page', clone({ authorLines: (a) => [...D.authorLines(a), ...D.quizFor(a).map((it) => ({ text: it.right }))] })],
   ['a work left off an author', clone({ AUTHORS: [{ ...D.AUTHORS[0], works: D.AUTHORS[0].works.slice(1) }, ...D.AUTHORS.slice(1)] })],
 ];
 let proven = 0;

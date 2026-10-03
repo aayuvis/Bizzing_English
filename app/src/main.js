@@ -23,6 +23,7 @@ import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.j
 import { applyExtras } from './extras.js';
 import { openContest, contestView, CONTEST_ACTIONS } from './views/contest.js';
 import { openFeed, feedView } from './views/feed-view.js';
+import { openTool, toolsView, TOOL_ACTIONS, toolsKey, toolsInput, toolsChange, leaveTools } from './views/tools.js';
 import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
@@ -43,11 +44,11 @@ const TABS = [
   { id: 'home', label: 'Home', icon: 'home', href: '#/home', color: '#C2410C' },
   { id: 'atlas', label: 'Atlas', icon: 'map', href: '#/atlas', color: '#0E6F6A' },
   { id: 'library', label: 'Library', icon: 'book', href: '#/library', color: '#047857' },
-  { id: 'stage', label: 'Stage', icon: 'lectern', href: '#/stage', color: '#B91C1C' },
+  { id: 'tools', label: 'Tools', icon: 'key', href: '#/tools', color: '#B91C1C' },   // the Stage is a tool now (owner, 3 Oct)
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
   { id: 'feed', label: 'My Feed', icon: 'feed', href: '#/feed', color: '#6C4FE0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', desk: 'atlas', play: 'play', feed: 'feed' };
+const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', feed: 'feed' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -59,6 +60,8 @@ async function route() {
   if (isLive()) micStop(0);                              // any Stage room: leaving switches the microphone off                              // leaving the Stage mid-reading: the microphone goes off at once
   stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' ? S.sheet : null;
   if (prev === 'play' && S.run?.mode === 'game') leaveGame();
+  if (prev === 'tools') leaveTools();
+  if (r.name === 'myths' || r.name === 'author') { location.replace(`#/library/${r.parts.map(encodeURIComponent).join('/')}`); return; }   // the Library's deep dives (views/deep.js)
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
   S.route = r;
@@ -68,7 +71,7 @@ async function route() {
   if (sk && sk.kind === 'readAloud') { location.replace('#/stage/aloud'); return; }
   if (r.name === 'desk') { if (r.parts[2] !== 'done') openDesk(r.parts[1]); else S.run = null; }
   else if (r.name === 'stage' && r.parts[1] === 'contest') await openContest();
-  else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1]);
+  else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1], r.parts[2]);
   else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/${rs.book}/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
   else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
   else if (r.name === 'story') {
@@ -89,6 +92,7 @@ async function route() {
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
   else if (r.name === 'play' && r.parts[1]) openGame(r.parts[1]);
   else if (r.name === 'feed') { S.run = null; await openFeed(); }
+  else if (r.name === 'tools') await openTool(r.parts);
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
   render(); window.scrollTo(0, 0);
@@ -115,6 +119,7 @@ function screen() {
     case 'recordings': return recordingsView();
     case 'play': return p[1] ? gameView() : playView();
     case 'feed': return feedView();
+    case 'tools': return toolsView();
     case 'me': return meView();
     case 'medals': return medalsView();
     case 'certificate': return certificateView(p.slice(1).join('/'));
@@ -166,7 +171,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
+const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...TOOL_ACTIONS,
   'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -189,10 +194,12 @@ document.addEventListener('input', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   if (t.dataset.act === 'desk-type') deskInput(t);
   else if (t.dataset.act === 'sp-plan') speakInput(t);
+  else if (t.dataset.act === 'tl-q') toolsInput(t);
 });
 document.addEventListener('change', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   if (t.dataset.act === 'aloud-pick') return aloudPick(t.value);
+  if (t.dataset.act === 'tl-theme') return toolsChange(t);
   onChange(t);
 });
 document.addEventListener('keydown', (e) => {
@@ -202,7 +209,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (runKey(e) || readKey(e) || playKey(e) || storyKey(e)) e.preventDefault();
+  if (toolsKey(e) || runKey(e) || readKey(e) || playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 

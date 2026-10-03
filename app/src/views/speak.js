@@ -35,7 +35,7 @@ const W = (k) => (k.writing ||= {});
 const plan = (k, id) => ((W(k).speech ||= {})[id] ||= { hook: '', p1: '', p2: '', p3: '', close: '', against: '' });
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, '0')}`;
 
-export async function openSpeak(id) {
+export async function openSpeak(id, pre) {   // pre: a verse passage to recite (Tools → Quotes & Poems → Learn it by heart)
   await loadPassages();
   const k = kid(), st = stopById(id);
   if (!st?.speak) { S.run = { mode: 'speak', error: true }; return; }
@@ -45,6 +45,7 @@ export async function openSpeak(id) {
   const stories = heard.length ? heard : PASSAGES.filter((p) => shippable(p) && p.kind !== 'verse' && p.band <= k.band);
   const r = { mode: 'speak', id, st, cfg, phase: 'prep', fade: 0, side: 'for', results: [], self: [], think: 0 };
   if (cfg.mode === 'recite') r.pid = (poems[tries % Math.max(1, poems.length)] || PASSAGES.find((p) => p.kind === 'verse'))?.id;
+  if (cfg.mode === 'recite' && pre && PASSAGES.some((p) => p.id === pre && p.kind === 'verse' && shippable(p))) r.pid = pre;
   if (cfg.mode === 'story') r.pid = stories[tries % stories.length]?.id;
   if (cfg.mode === 'declaim') r.pid = cfg.passage;
   if (cfg.prompts) r.prompt = cfg.prompts[tries % cfg.prompts.length];

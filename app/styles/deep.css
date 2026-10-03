@@ -56,3 +56,4 @@ a.mj-w { display: inline-block; min-height: 28px; }
   .mj-stop { grid-template-columns: minmax(0, 1fr); } .mj-pic { min-height: 150px; }
   .dp-head { grid-template-columns: minmax(0, 1fr); } .dp-hart { min-height: 120px; }
 }
+.dq .prompt { margin-top: 10px; }

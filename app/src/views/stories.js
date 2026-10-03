@@ -20,6 +20,7 @@ import { sfx } from '../sound.js';
 import { showWord } from './reader.js';
 import { loadBook, book, chapterText, BOOKS, bookMeta, chapterKey } from '../book.js';
 import ART from '../data/story-art.json';
+import { mythStops, mythPassage, mythWords } from '../data/deep.js';
 
 const SHIPPED = () => PASSAGES.filter(shippable);
 const BANDS = ['', '6–7', '8–10', '11–14'];
@@ -43,7 +44,7 @@ function card(p, k) {
     <span class="meta">${esc(w?.author || '')} · ages ${BANDS[p.band]}</span></a>`;
 }
 const RAILS = [
-  ['fable', 'Fables and fairy tales', 'Short, sharp and very old — each ends on a lesson.', (p, w) => w?.shelf === 'fable'],
+  ['fable', 'Fables and fairy tales', 'Short, sharp and very old — each ends on a lesson.', (p, w) => w?.shelf === 'fable' && !mythStops().includes(p.id)],
   ['children', 'Children’s classics', 'Rabbit-holes, secret gardens, river-banks and jungles — in the original words.', (p, w) => w?.shelf === 'children'],
   ['poetry', 'Poems to hear and say', 'Better aloud. Listen once, then say it with her.', (p, w) => p.kind === 'verse' || w?.shelf === 'poetry'],
   ['novel', 'Novels and stories', 'Chapters from the great novels and short stories.', (p, w) => w?.shelf === 'novel'],
@@ -59,13 +60,21 @@ export function storyRoom() {
   return `<a class="pickbar" href="#/story/random"><span class="mosaic" aria-hidden="true">${mosaic}</span><span class="pbveil"></span>
       <span class="pbbody"><span><b>Tell me one</b><small>${all.length} stories in the original words, read aloud. Nothing to finish — you can have the same one again tomorrow.</small></span><span class="btn">${icon('play')}<span>Tell me one</span></span></span></a>
     <div class="topdoors">
+      ${mythDoor()}
       ${BOOKS.map((m) => { const d = (k.reading[`book:${m.id}`]?.done || []).length; return `<a class="bigdoor" href="#/whole/${m.id}"><span class="bdart" style="${bg(bookArt(m.id, 1))}"></span><span class="pbveil"></span><span class="bdbody"><small>The whole book · ${m.chapters.length} chapters</small><b>${esc(m.title)}</b><span>${d ? `${d} of ${m.chapters.length} chapters` : 'One chapter a night. A bookmark keeps your place.'}</span></span></a>`; }).join('')}
       <a class="bigdoor" href="#/library/poems"><span class="bdart" style="${bg(storyArt((all.find((p) => p.kind === 'verse') || all[0]).id))}"></span><span class="pbveil"></span><span class="bdbody"><small>${all.filter((p) => p.kind === 'verse').length} poems</small><b>Poems to say aloud</b><span>Hear one, then say it on the Stage.</span></span></a>
     </div>
+    ${rail('Greek myths', 'Gods, heroes and monsters — and the words English took from them.', mythStops().map(mythPassage).filter(Boolean))}
     ${rail('Going on', 'Stories you have heard, with exercises still to do.', goingOn)}
     ${rail('For you', `Chosen for ages ${BANDS[k.band]}.`, mine.filter((p) => !k.reading[p.id]?.heard).slice(0, 10))}
     ${rail('Again', 'The ones you loved. A story is not used up.', loved)}
     ${RAILS.map(([, t, n, f]) => rail(t, n, all.filter((p) => f(p, work(p.work))))).join('')}`;
+}
+
+/* the Greek myths' door (views/deep.js is the room behind it) */
+function mythDoor() {
+  const ps = mythStops().map(mythPassage).filter(Boolean), nw = ps.reduce((a, p) => a + mythWords(p.id).length, 0);
+  return `<a class="bigdoor mythdoor" href="#/library/myths"><span class="bdart" style="${bg(storyArt('wonderbook-atlas'))}"></span><span class="pbveil"></span><span class="bdbody"><small>Greek myths · ${ps.length} stories · the words they gave English</small><b>Greek myths</b><span>Pandora, Perseus, Icarus — and ${nw} words, from panic to cereal.</span></span></a>`;
 }
 
 /* ---------------- the player ---------------- */

@@ -64,13 +64,13 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const shell = await checkShell(page, { phone });
   ok(`${tag}: checkShell matches Bee`, shell.length === 0, '\n   ' + shell.join('\n   '));
   if (phone) { const b = await page.$eval('[data-bz=continue]', (e) => e.getBoundingClientRect().bottom); ok(`${tag}: Continue is wholly above the fold`, b <= 844 - 68, b); }
-  for (const [h, kind] of [['#/atlas', 'root'], ['#/library', 'root'], ['#/library/books', 'deep'], ['#/whole/alice', 'deep'], ['#/story/aesop-town-mouse/do', 'deep'], ['#/atlas/word', 'deep'], ['#/stage', 'root'], ['#/play', 'root'], ['#/shop', 'deep']]) {
+  for (const [h, kind] of [['#/atlas', 'root'], ['#/library', 'root'], ['#/library/books', 'deep'], ['#/whole/alice', 'deep'], ['#/story/aesop-town-mouse/do', 'deep'], ['#/atlas/word', 'deep'], ['#/tools', 'root'], ['#/stage', 'deep'], ['#/tools/vocab', 'deep'], ['#/tools/idioms', 'deep'], ['#/play', 'root'], ['#/shop', 'deep']]) {
     await go(page, h); const f = await checkPageHead(page, { phone });
     ok(`${tag}: ${h} page head matches Bee`, f.length === 0, f.join('; '));
     ok(`${tag}: ${h} is a ${kind} head`, (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === kind);
   }
   /* no sideways scroll, measured against the width we set */
-  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/whole/wind', '#/whole/wind/7', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story', '#/stage/contest', '#/shop/extras', '#/play/figure', '#/stop/la7-devices', '#/stop/li5-simile', '#/desk/li10-case']) {
+  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/whole/wind', '#/whole/wind/7', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story', '#/stage/contest', '#/tools', '#/tools/desk', '#/tools/vocab', '#/tools/vocab/vocab26', '#/tools/idioms', '#/tools/idioms/deck', '#/tools/idioms/quiz', '#/tools/typing', '#/tools/typing/home1', '#/tools/quotes', '#/tools/quotes/voices', '#/shop/extras', '#/play/figure', '#/stop/la7-devices', '#/stop/li5-simile', '#/desk/li10-case']) {
     await go(page, h);
     const w = await page.evaluate(() => document.documentElement.scrollWidth);
     ok(`${tag}: ${h} does not scroll sideways (${w}px)`, w <= (phone ? 390 : 1280));
@@ -358,6 +358,141 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     const pp = await P.page.$('.bzf-card:not(.bzf-end) .bzf-opt[data-o="0"]');
     if (pp) { await pp.tap(); await P.page.waitForTimeout(250); ok('My Feed (phone): a tap answers on the card', !!(await P.page.$('.bzf-after.ok'))); }
     ok('My Feed (phone): only Bizzing English was asked for anything', P.page.reqs.every(ALLOWED) && P.page.errs.length === 0, P.page.errs.slice(0, 2).join(' | '));
+    await P.ctx.close();
+  }
+  /* ---------- the Library's deep dives: the Greek myths door and journey, an author's page and its quiz ---------- */
+  {
+    await go(page, '#/library'); await page.waitForTimeout(300);
+    const door = await page.$('a.mythdoor');
+    ok('Deep: the story room shows the Greek myths door', !!door && /Greek myths/.test(await door.textContent()) && (await door.getAttribute('href')) === '#/library/myths');
+    ok('Deep: the Library sub-nav has a Greek myths chip (six chips at most)', (await page.$$eval('[data-bz=subnav] a', (a) => a.map((x) => x.textContent))).some((t) => /Greek myths/.test(t)) && (await page.$$('[data-bz=subnav] a')).length <= 6);
+    await go(page, '#/myths'); await page.waitForTimeout(300);
+    ok('Deep: #/myths opens the myths page', new URL(page.url()).hash === '#/library/myths' && (await page.$$('.mj-stop')).length === 15, `${page.url()} ${(await page.$$('.mj-stop')).length}`);
+    ok('Deep: each myth links to hear it and to its exercises', await page.$$eval('.mj-stop', (s) => s.every((x) => x.querySelector(`a[href="#/story/${x.dataset.myth}"]`) && x.querySelector(`a[href="#/story/${x.dataset.myth}/do"]`))));
+    ok('Deep: the myths show the words they gave English', (await page.$$('.mj-words li')).length >= 30 && !!(await page.$('.mj-words a[href="#/word/panic"]')));
+    ok('Deep: a Who’s who of gods and heroes, quoted', (await page.$$('.dp-who')).length >= 20 && /Juno \(Hera\)/.test(await page.textContent('#whos-who ~ .grid3')));
+    ok('Deep: a link to the Word 7 stops', !!(await page.$('a[href="#/stop/w7-myth-names"]')));
+    const fh = await checkPageHead(page, {}); ok('Deep: the myths page head matches Bee', fh.length === 0, fh.join('; '));
+    await go(page, '#/author/shakespeare'); await page.waitForTimeout(300);
+    ok('Deep: #/author/shakespeare opens his page', new URL(page.url()).hash === '#/library/author/shakespeare' && /William Shakespeare/.test(await page.textContent('[data-bz=pagehead]')));
+    const ah = await checkPageHead(page, {}); ok('Deep: the author page head matches Bee', ah.length === 0, ah.join('; '));
+    ok('Deep: Shakespeare’s page shows his scenes and sonnets', (await page.$$('.dp a.scard[href^="#/story/"]')).length >= 9 && !!(await page.$('a[href="#/story/caesar-antony"]')) && !!(await page.$('a[href="#/story/sonnet-116"]')));
+    ok('Deep: his lines, the words first recorded in him, how to read him, the Stage', !!(await page.$('[data-deep-lines] blockquote')) && /first recorded/i.test(await text(page)) && !!(await page.$('a[href="#/stop/la4-shakespeare"]')) && !!(await page.$('a[href="#/stop/la9-pentameter"]')) && !!(await page.$('a[href="#/stage/contest"]')));
+    const cur = () => page.evaluate(() => { const d = window.__bz.S.deep; return { i: d.i, answer: d.items[d.i]?.answer, pick: d.pick }; });
+    const paid0 = await page.evaluate(() => Object.keys(window.__bz.S.h.kids[0].deep?.paid || {}).length);
+    /* by TOUCH: a wrong option first — it holds, names the right one, and waits; Enter goes on */
+    let c = await cur();
+    await page.click(`#dq [data-deep=ans][data-arg="${(c.answer + 1) % 4}"]`); await page.waitForTimeout(250);
+    ok('Deep: a wrong answer holds and names the right one', !!(await page.$('#dq [data-deep=next]')) && /The answer is/.test(await page.textContent('#dq')) && (await cur()).i === 0);
+    await page.waitForTimeout(1100); ok('Deep: …and still holds a second later', (await cur()).i === 0);
+    await page.keyboard.press('Enter'); await page.waitForTimeout(250);
+    ok('Deep: Enter goes on after a wrong answer', (await cur()).i === 1);
+    /* the right option by touch advances and pays */
+    c = await cur(); await page.click(`#dq [data-deep=ans][data-arg="${c.answer}"]`); await page.waitForTimeout(200);
+    ok('Deep: a right answer by tap says so', !!(await page.$('#dq .feedback.ok')));
+    await page.waitForTimeout(1100); ok('Deep: …and advances by itself', (await cur()).i === 2);
+    /* by KEY: the number of the right option */
+    c = await cur(); await page.keyboard.press(String(c.answer + 1)); await page.waitForTimeout(200);
+    ok('Deep: a right answer by key 1–4', !!(await page.$('#dq .feedback.ok')));
+    await page.waitForTimeout(1100);
+    ok('Deep: each right answer paid once', (await page.evaluate(() => Object.keys(window.__bz.S.h.kids[0].deep?.paid || {}).length)) === paid0 + 2);
+    ok('Deep: no sideways scroll on the myths or an author', (await page.evaluate(() => document.documentElement.scrollWidth)) <= 1280);
+    const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Zara', '11–14');
+    for (const h of ['#/library/myths', '#/library/author/shakespeare', '#/library/authors', '#/library/author/andersen']) {
+      await go(P.page, h); const w = await P.page.evaluate(() => document.documentElement.scrollWidth);
+      ok(`Deep (phone): ${h} does not scroll sideways (${w}px)`, w <= 390);
+      const f = await checkPageHead(P.page, { phone: true }); ok(`Deep (phone): ${h} page head matches Bee`, f.length === 0, f.join('; '));
+    }
+    ok('Deep (phone): a gated author shows a card, no stories', !(await P.page.$('.dp a.scard[href^="#/story/"]')) && /rights/i.test(await P.page.textContent('.dp')));
+    await go(P.page, '#/library/author/lincoln'); const tb = await P.page.$('#dq [data-deep=ans]');
+    if (tb) { await tb.tap(); await P.page.waitForTimeout(200); ok('Deep (phone): a tap answers the quiz', !!(await P.page.$('#dq .feedback'))); }
+    ok('Deep (phone): no page errors, nothing asked of anyone else', P.page.errs.length === 0 && P.page.reqs.every(ALLOWED), P.page.errs.slice(0, 2).join(' | '));
+    await P.ctx.close();
+  }
+  /* Tools */
+  {
+    const tabs = await page.$$eval('[data-bz=tab]', (t) => t.map((x) => x.getAttribute('href')));
+    ok('Tools: the Tools tab sits where the Stage was, and the Stage is not a tab', tabs.join(' ') === '#/home #/atlas #/library #/tools #/play #/feed', tabs.join(' '));
+    await go(page, '#/tools'); await page.waitForTimeout(300);
+    ok('Tools: the tab is current on #/tools', (await page.getAttribute('[data-bz=tab][href="#/tools"]', 'aria-current')) === 'page');
+    const cards = await page.$$eval('a.tl-tile', (a) => a.map((x) => ({ href: x.getAttribute('href'), kick: x.querySelector('.tl-kick')?.textContent, title: x.querySelector('.tl-h')?.textContent, go: x.querySelector('.tl-go')?.textContent, img: x.querySelector('img')?.getAttribute('src') })));
+    ok(`Tools: six painted tool cards, each with a kicker, a name over the painting and a button (${cards.length})`, cards.length === 6 && cards.every((c) => c.kick && c.title && c.go && /^art\/tool-/.test(c.img)));
+    ok('Tools: Bee’s four kickers are there', ['MEANING', 'SAYINGS', 'SPEED', 'VOICES'].every((k) => cards.some((c) => c.kick.toUpperCase() === k)));
+    const widths = await page.$$eval('a.tl-tile img', (im) => Promise.all(im.map((i) => (i.complete ? i.naturalWidth : new Promise((r) => { i.onload = () => r(i.naturalWidth); i.onerror = () => r(0); })))));
+    ok('Tools: the paintings load', widths.length === 6 && widths.every((x) => x > 0), widths.join(' '));
+    ok('Tools: the Word bank and Dictionary are small cards', !!(await page.$('a.tl-small[href="#/library/words"]')) && !!(await page.$('a.tl-small[href="#/search"]')));
+    for (const c of [...cards, { href: '#/library/words' }, { href: '#/search' }]) {
+      await go(page, '#/tools'); await page.click(`a[href="${c.href}"]`); await page.waitForTimeout(600);
+      const head = await checkPageHead(page, {});
+      ok(`Tools: ${c.href} opens from its card, with a page head that matches Bee`, new URL(page.url()).hash.startsWith(c.href) && head.length === 0, head.join('; '));
+    }
+    await go(page, '#/stage'); ok('Tools: #/stage still works, under the Tools tab, with a way back to Tools', (await page.textContent('main')).includes('Elocution Contest') && (await page.getAttribute('[data-bz=tab][href="#/tools"]', 'aria-current')) === 'page' && (await page.getAttribute('[data-bz=back]', 'href')) === '#/tools');
+    await go(page, '#/tools/desk'); ok('Tools: the Writing Desk lists the desks and opens one', (await page.$$('a.stoprow[href^="#/desk/"]')).length >= 8);
+    /* Vocabulary: study, then the check — by touch and by key; a right answer pays and banks the word */
+    await go(page, '#/tools/vocab'); ok('Tools: Vocabulary offers Bee’s decks', (await page.$$('a.tl-deck')).length >= 10 && /Meaning Masters/.test(await text(page)));
+    await go(page, '#/tools/vocab/easy'); await page.waitForTimeout(300);
+    await page.keyboard.press('Space'); await page.waitForTimeout(150);
+    ok('Tools: Space turns the vocabulary card to its meaning', await page.evaluate(() => window.__bz.S.run.flip === true) && !!(await page.$('.tl-back')));
+    await page.keyboard.press('ArrowRight'); await page.waitForTimeout(150); ok('Tools: → moves to the next word', await page.evaluate(() => window.__bz.S.run.i === 1));
+    await page.click('[data-act=voc-check]'); await page.waitForTimeout(200);
+    const VQ = () => page.evaluate(() => { const r = window.__bz.S.run; return { qi: r.qi, answer: r.items[r.qi]?.answer, word: r.items[r.qi]?.word, n: r.items.length }; });
+    let q = await VQ();
+    ok(`Tools: the check asks one question per word in the set (${q.n})`, q.n === 10 || q.n === 20 || q.n === 50);
+    await page.click(`.tl-q [data-act=tl-ans][data-arg="${q.answer}"]`); await page.waitForTimeout(250);
+    ok('Tools: a vocabulary answer by touch is right, and says so', !!(await page.$('.tl-q .feedback.ok')));
+    ok('Tools: …and the word goes into the word bank', await page.evaluate((w) => !!window.__bz.S.h.kids[0].bank[w], q.word));
+    await page.waitForTimeout(1000); q = await VQ(); ok('Tools: a right answer advances by itself', q.qi === 1);
+    await page.keyboard.press(String(q.answer + 1)); await page.waitForTimeout(250);
+    ok('Tools: a vocabulary answer by key 1–4', !!(await page.$('.tl-q .feedback.ok')));
+    await page.waitForTimeout(1000); q = await VQ();
+    await page.keyboard.press(String(((q.answer + 1) % 4) + 1)); await page.waitForTimeout(250);
+    ok('Tools: a wrong answer holds and names the meaning', !!(await page.$('.tl-q [data-act=tl-next]')) && /means:/.test(await page.textContent('.tl-q .feedback')));
+    await page.waitForTimeout(1200); ok('Tools: …and still holds a second later', (await VQ()).qi === q.qi);
+    await page.keyboard.press('Enter'); await page.waitForTimeout(250); ok('Tools: Enter goes on after a wrong answer', (await VQ()).qi === q.qi + 1);
+    /* Idioms: browse with search, an origin story labelled with Bee's confidence, and the quiz */
+    await go(page, '#/tools/idioms'); await page.waitForTimeout(300);
+    ok('Tools: Idioms shows cards with meaning, example and a labelled origin awaiting a reviewer', (await page.$$('.tl-idiom')).length === 24 && /awaiting a named reviewer/.test(await page.textContent('.tl-idiom')) && !!(await page.$('.tl-idiom .tl-oc')));
+    await page.fill('#idq', 'midas'); await page.waitForTimeout(250);
+    ok('Tools: searching finds a saying and links it to its Library story', /midas touch/i.test(await page.textContent('.tl-results')) && !!(await page.$('.tl-results a[href="#/story/wonderbook-midas"]')));
+    await go(page, '#/tools/idioms/quiz'); await page.waitForTimeout(300);
+    const IQ = () => page.evaluate(() => { const r = window.__bz.S.run; return { qi: r.qi, answer: r.items[r.qi]?.answer }; });
+    let iq = await IQ(); await page.click(`.tl-q [data-act=tl-ans][data-arg="${iq.answer}"]`); await page.waitForTimeout(250);
+    ok('Tools: an idiom quiz question answered by touch', !!(await page.$('.tl-q .feedback.ok')));
+    await page.waitForTimeout(1000); iq = await IQ(); await page.keyboard.press(String(iq.answer + 1)); await page.waitForTimeout(250);
+    ok('Tools: …and by key', !!(await page.$('.tl-q .feedback.ok')) && iq.qi === 1);
+    await go(page, '#/tools/idioms/deck'); await page.click('a.tl-deck'); await page.waitForTimeout(300); await page.keyboard.press('Space'); await page.waitForTimeout(150);
+    ok('Tools: an idiom deck card turns to its meaning and story', /awaiting a named reviewer/.test(await page.textContent('.tl-flip')));
+    /* Typing: a lesson typed by keyboard, scored, kept, paid once */
+    await go(page, '#/tools/typing/home1'); await page.waitForTimeout(300);
+    const seq = await page.evaluate(() => window.__bz.S.run.ty.seq);
+    await page.keyboard.type(seq, { delay: 15 }); await page.waitForTimeout(400);
+    const ty = await page.evaluate(() => { const r = window.__bz.S.run.ty, t = window.__bz.S.h.kids[0].games.typing; return { done: r.done, wpm: r.wpm, acc: r.acc, best: t.lessons.home1, paid: !!t.paid.home1 }; });
+    ok(`Tools: a typing lesson typed by keyboard finishes at 100% (${JSON.stringify(ty)})`, ty.done && ty.acc === 100 && ty.wpm > 0 && ty.best === 100 && ty.paid);
+    ok('Tools: the result shows words a minute and accuracy', /words a minute/.test(await page.textContent('main')) && /accuracy/.test(await page.textContent('main')));
+    await go(page, '#/tools/typing/test'); await page.waitForTimeout(300); await page.click('[data-act=ty-tap] >> nth=0'); await page.waitForTimeout(400);
+    ok('Tools: the sixty-second test starts its clock on the first key (tapped on screen)', await page.evaluate(() => window.__bz.S.run.ty.startT > 0 && window.__bz.S.run.ty.typed === 1));
+    /* Quotes & Poems: held lines, by author, linked; learn a poem by heart on the Stage; Bee's quotations */
+    await go(page, '#/tools/quotes'); await page.waitForTimeout(300);
+    ok('Tools: Quotes & Poems shows held lines with their book', (await page.$$('.tl-quote')).length >= 300 && !!(await page.$('.tl-quote a[href^="#/book/"]')));
+    const learn = await page.$('.tl-quote a[href^="#/stage/sp2-recite/"]');
+    ok('Tools: a line from a poem offers “Learn it by heart”', !!learn);
+    if (learn) { const h = await learn.getAttribute('href'); await learn.click(); await page.waitForTimeout(500);
+      ok('Tools: …which opens the Stage’s fading recitation on that poem', await page.evaluate((pid) => window.__bz.S.run?.mode === 'speak' && window.__bz.S.run.pid === pid, h.split('/').pop()) && await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended'))); }
+    await go(page, '#/tools/quotes/voices'); await page.waitForTimeout(500);
+    ok('Tools: the quotations shelf shows Bee’s lines with their attribution', (await page.$$('.tl-quote figcaption')).length === 24);
+    const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Tara', '8–10');
+    for (const h of ['#/tools', '#/tools/vocab/medium', '#/tools/idioms', '#/tools/typing/caps', '#/tools/quotes']) {
+      await go(P.page, h); await P.page.waitForTimeout(300);
+      const w = await P.page.evaluate(() => document.documentElement.scrollWidth), f = await checkPageHead(P.page, { phone: true });
+      ok(`Tools (phone): ${h} fits (${w}px) and its head matches Bee`, w <= 390 && f.length === 0, f.join('; '));
+    }
+    { const wallet = () => P.page.evaluate(() => (JSON.parse(localStorage.getItem('bizzing.wallet') || '{}').kids?.tara?.coins) || 0);
+      await go(P.page, '#/tools/vocab/easy'); await P.page.tap('[data-act=voc-check]'); await P.page.waitForTimeout(200); const c0 = await wallet();
+      const a = await P.page.evaluate(() => window.__bz.S.run.items[0].answer); await P.page.tap(`.tl-q [data-act=tl-ans][data-arg="${a}"]`); await P.page.waitForTimeout(300);
+      ok('Tools (phone): a right vocabulary answer by tap pays one coin into the family wallet', (await wallet()) === c0 + 1); }
+    await go(P.page, '#/tools/typing/caps'); await P.page.tap('[data-act=ty-shift]'); await P.page.tap('[data-act=ty-tap][data-arg="f"]'); await P.page.waitForTimeout(150);
+    ok('Tools (phone): the on-screen keyboard types a capital with Shift', await P.page.evaluate(() => { const t = window.__bz.S.run.ty; return t.typed === 1 && t.errors === 0; }));
+    ok('Tools (phone): no page errors, nothing asked of anyone else', P.page.errs.length === 0 && P.page.reqs.every((u) => ALLOWED(u) || u.startsWith(BEE_AUDIO)), P.page.errs.slice(0, 2).join(' | '));
     await P.ctx.close();
   }
   ok('PRIVACY: nothing was posted anywhere', posts.length === 0, posts.join(' '));
