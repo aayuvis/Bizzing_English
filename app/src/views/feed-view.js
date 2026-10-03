@@ -14,6 +14,7 @@ import { feedCard, feedEnd, bindFeedKeys } from '../integration/bizzing-feed.js'
 import { session, markSeen, dayNo, levelName, payOnce } from '../feed.js';
 import { nextStep } from '../next.js';
 import { sfx } from '../sound.js';
+import { bumpDay } from '../model.js';
 
 let INDEX = null, BY = {};
 const BODY = {}, have = new Set();
@@ -79,7 +80,7 @@ export function feedView() {
 function answer(id, o) {
   const it = BODY[id], P = S.feed?.play; if (!it || !it.play || !P || (P[id] && P[id].st)) return;
   const k = kid();
-  if (+o === 0) { P[id] = { st: 'right', o: 0 }; sfx('right'); if (payOnce(k, id)) { save(); pay('answer'); } }
+  if (+o === 0) { P[id] = { st: 'right', o: 0 }; sfx('right'); bumpDay(k, 'right'); bumpDay(k, 'answers'); if (payOnce(k, id)) pay('answer', 'My Feed'); save(); }
   else { P[id] = { st: 'wrong', o: +o }; sfx('wrong'); }
   refocus(id);
 }

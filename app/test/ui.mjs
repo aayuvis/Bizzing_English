@@ -350,8 +350,9 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     ok(`My Feed: a card’s button opens its own topic (${at})`, at === want && !/^#\/(library|stage|play|atlas|home)?\/?$/.test(at));
     ok('My Feed: no request left the site', page.reqs.slice(reqs0).every(ALLOWED), page.reqs.slice(reqs0).filter((u) => !ALLOWED(u)).slice(0, 3).join(' '));
     /* on a phone: six tabs fit, the shell still matches Bee, nothing scrolls sideways, and a tap answers */
-    const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Noor', '6–7'); await go(P.page, '#/feed'); await P.page.waitForTimeout(600);
-    const sh = await checkShell(P.page, { phone: true });
+    const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Noor', '6–7'); await go(P.page, '#/home');
+    const sh = await checkShell(P.page, { phone: true });   // the shell is measured on Home, where it carries the home grid
+    await go(P.page, '#/feed'); await P.page.waitForTimeout(600);
     ok('My Feed (phone): checkShell matches Bee with six tabs', sh.length === 0 && (await P.page.$$('[data-bz=tabbar] a')).length === 6, sh.join('; '));
     ok('My Feed (phone): no sideways scroll', (await P.page.evaluate(() => document.documentElement.scrollWidth)) <= 390);
     const pp = await P.page.$('.bzf-card:not(.bzf-end) .bzf-opt[data-o="0"]');

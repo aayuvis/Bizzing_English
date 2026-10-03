@@ -184,6 +184,7 @@ export function grownupsView() {
     <p class="note" style="margin:0 20px">The PIN is a deterrent, not security. Nothing here is sent anywhere.</p>
     <div class="grid2">${cards}<section class="card stack"><h3>The household</h3>
       <div class="setrow"><label>Family plan<small>Opens Reading, Writing, Speaking, Literature, Language and worlds 3–6. Until the family server exists this is a switch here; nothing is charged.</small></label><button class="switch" role="switch" aria-checked="${h.parent.plan === 'family'}" data-act="plan" aria-label="Family plan"></button></div>
+      <div class="setrow"><label>My Feed<small>About twenty cards picked from the app for each child's level, then it ends. Switch it off and the tab says so.</small></label><button class="switch" role="switch" aria-checked="${!h.parent.feedOff}" data-act="feed-toggle" aria-label="My Feed"></button></div>
       <div class="setrow"><label>Tester mode<small>Opens every gate. It never rewrites a child’s record.</small></label><button class="switch" role="switch" aria-checked="${!!h.parent.tester}" data-act="tester" aria-label="Tester mode"></button></div>
       <div class="row">${btn('Add a child', 'add-kid', { ic: 'user', cls: 'out small' })}${btn('Save a backup', 'backup', { ic: 'check', cls: 'out small' })}<label class="btn out small" for="restore">${icon('undo')}<span>Restore</span></label><input type="file" id="restore" accept="application/json" data-act="restore" class="sr"></div>
       <p class="note" style="margin:0">A backup file holds progress, never a name or a voice; restoring asks for each child’s first name.</p>
@@ -253,6 +254,7 @@ async function pinDigit(a) {
   render();
 }
 export const PAGE_ACTIONS = {
+  'feed-toggle': () => { S.h.parent.feedOff = !S.h.parent.feedOff; save(); render(); },
   pin: (a) => pinDigit(a),
   'pin-lock': () => { lock(); render(); },
   'pin-change': () => { S.pinChange = true; lock(); render(); },

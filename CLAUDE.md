@@ -52,6 +52,16 @@ speech marks, opposites, a poem desk counted in lines), and Reading's drama, clo
 stories and non-fiction (`data/library-more.js`). The Library grows in beside-files merged by `library.js`.
 A concept's status on the map is computed from the stops that exist.
 
+**My Feed** is the sixth tab (FAMILY-STANDARD §6a; the family engine `integration/bizzing-feed.js`, pinned):
+about twenty cards cut from the corpus at build time (`node tools/build-feed.mjs` → `src/data/feed/`, ≥100 per
+level and ≥300 level-agnostic, nothing held for review), ranked on the device by the child's level and what
+slipped, each saying why, a question answered on the card, a button to the exact topic — then it ends. A
+grown-up can switch it off. **Games** (`src/games.js` rules, `views/play.js` boards): seven, each on a board
+with motion, a level per game that rises at 80% and falls below 40%, and a finish naming the stop to revisit.
+**Music** (`src/music.js`): a loop per world, one for Home, four for games, composed in code. **Certificates**
+(`src/certificates.js`) for every level and whole book finished; the report (`src/report.js`) always names
+specifics; each coin line names what earned it (`k.coinNotes`).
+
 **The Elocution Contest** (`src/contest.js`, `#/stage/contest`): a poem, a passage, a one-minute talk
 against five of Bee's ten rivals. The child's points come ONLY from what the device measures (timing,
 pace, pauses, volume), each labelled; the rivals' are the app's own, seeded, and the screen says so.
