@@ -595,6 +595,510 @@ export default {
    "work": "walden",
    "band": 2,
    "text": "To affect the quality of the day, that is the highest of arts."
+  },
+  {
+   "id": "wonderbook-midas-0",
+   "passage": "wonderbook-midas",
+   "work": "wonderbook",
+   "band": 2,
+   "text": "The Golden Touch had come to him with the first sunbeam!"
+  },
+  {
+   "id": "wonderbook-midas-1",
+   "passage": "wonderbook-midas",
+   "work": "wonderbook",
+   "band": 2,
+   "text": "He seized one of the bed-posts, and it became immediately a fluted golden pillar."
+  },
+  {
+   "id": "wonderbook-midas-2",
+   "passage": "wonderbook-midas",
+   "work": "wonderbook",
+   "band": 1,
+   "text": "He took up a book from the table."
+  },
+  {
+   "id": "wonderbook-midas-3",
+   "passage": "wonderbook-midas",
+   "work": "wonderbook",
+   "band": 3,
+   "text": "That was likewise gold, with the dear child's neat and pretty stitches running all along the border, in gold thread!"
+  },
+  {
+   "id": "wonderbook-pandora-0",
+   "passage": "wonderbook-pandora",
+   "work": "wonderbook",
+   "band": 3,
+   "text": "Pandora let fall the lid, and, starting up, looked about her, to see what had befallen Epimetheus."
+  },
+  {
+   "id": "wonderbook-pandora-1",
+   "passage": "wonderbook-pandora",
+   "work": "wonderbook",
+   "band": 3,
+   "text": "The thunder-cloud had so darkened the room that she could not very clearly discern what was in it."
+  },
+  {
+   "id": "wonderbook-pandora-2",
+   "passage": "wonderbook-pandora",
+   "work": "wonderbook",
+   "band": 1,
+   "text": "It was one of these that had stung Epimetheus."
+  },
+  {
+   "id": "wonderbook-pandora-3",
+   "passage": "wonderbook-pandora",
+   "work": "wonderbook",
+   "band": 2,
+   "text": "Had they been faithful to their trust, all would have gone well."
+  },
+  {
+   "id": "wonderbook-atlas-0",
+   "passage": "wonderbook-atlas",
+   "work": "wonderbook",
+   "band": 1,
+   "text": "You seem to be a fellow of some strength."
+  },
+  {
+   "id": "wonderbook-atlas-1",
+   "passage": "wonderbook-atlas",
+   "work": "wonderbook",
+   "band": 3,
+   "text": "Nevertheless, it seemed so difficult an undertaking, that, for the first time in his life, he hesitated."
+  },
+  {
+   "id": "wonderbook-atlas-2",
+   "passage": "wonderbook-atlas",
+   "work": "wonderbook",
+   "band": 3,
+   "text": "Accordingly, without more words, the sky was shifted from the shoulders of Atlas, and placed upon those of Hercules."
+  },
+  {
+   "id": "tanglewood-labyrinth-0",
+   "passage": "tanglewood-labyrinth",
+   "work": "tanglewood",
+   "band": 2,
+   "text": "How this labyrinth was built is more than I can tell you."
+  },
+  {
+   "id": "tanglewood-labyrinth-1",
+   "passage": "tanglewood-labyrinth",
+   "work": "tanglewood",
+   "band": 2,
+   "text": "But so cunningly contrived a mizmaze was never seen in the world, before nor since."
+  },
+  {
+   "id": "tanglewood-labyrinth-2",
+   "passage": "tanglewood-labyrinth",
+   "work": "tanglewood",
+   "band": 3,
+   "text": "O, indeed, I can assure you, there was a vast deal of human sympathy running along that slender thread of silk."
+  },
+  {
+   "id": "tanglewood-ceres-0",
+   "passage": "tanglewood-ceres",
+   "work": "tanglewood",
+   "band": 3,
+   "text": "But now, having nothing else to busy herself about, she became just as wretched as before."
+  },
+  {
+   "id": "tanglewood-ceres-1",
+   "passage": "tanglewood-ceres",
+   "work": "tanglewood",
+   "band": 3,
+   "text": "She even forbade the flowers to bloom, lest somebody's heart should be cheered by their beauty."
+  },
+  {
+   "id": "tanglewood-ceres-2",
+   "passage": "tanglewood-ceres",
+   "work": "tanglewood",
+   "band": 2,
+   "text": "The rich man's broad acres and the cottager's small garden patch were equally blighted."
+  },
+  {
+   "id": "tanglewood-ceres-3",
+   "passage": "tanglewood-ceres",
+   "work": "tanglewood",
+   "band": 2,
+   "text": "Every little girl's flower bed showed nothing but dry stalks."
+  },
+  {
+   "id": "bulfinch-echo-0",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "Echo was a beautiful nymph, fond of the woods and hills, where she devoted herself to woodland sports."
+  },
+  {
+   "id": "bulfinch-echo-1",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "She was a favorite of Diana, and attended her in the chase."
+  },
+  {
+   "id": "bulfinch-echo-2",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "One day Juno was seeking her husband, who, she had reason to fear, was amusing himself among the nymphs."
+  },
+  {
+   "id": "bulfinch-echo-3",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "Echo by her talk contrived to detain the goddess till the nymphs made their escape."
+  },
+  {
+   "id": "bulfinch-echo-4",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 1,
+   "text": "She loved him, and followed his footsteps."
+  },
+  {
+   "id": "bulfinch-echo-5",
+   "passage": "bulfinch-echo",
+   "work": "bulfinch",
+   "band": 1,
+   "text": "Echo asked the same question."
+  },
+  {
+   "id": "heroes-perseus-0",
+   "passage": "heroes-perseus",
+   "work": "heroes",
+   "band": 3,
+   "text": "Then he saw afar off above the sea a small white cloud, as bright as silver."
+  },
+  {
+   "id": "heroes-perseus-1",
+   "passage": "heroes-perseus",
+   "work": "heroes",
+   "band": 2,
+   "text": "And it came on, nearer and nearer, till its brightness dazzled his eyes."
+  },
+  {
+   "id": "heroes-perseus-2",
+   "passage": "heroes-perseus",
+   "work": "heroes",
+   "band": 2,
+   "text": "And Perseus fell down and worshipped, for he knew that they were more than man."
+  },
+  {
+   "id": "heroes-perseus-3",
+   "passage": "heroes-perseus",
+   "work": "heroes",
+   "band": 1,
+   "text": "You have braved Polydectes, and done manfully."
+  },
+  {
+   "id": "bulfinch-narcissus-0",
+   "passage": "bulfinch-narcissus",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "Hither came one day the youth, fatigued with hunting, heated and thirsty."
+  },
+  {
+   "id": "bulfinch-narcissus-1",
+   "passage": "bulfinch-narcissus",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "It fled at the touch, but returned again after a moment and renewed the fascination."
+  },
+  {
+   "id": "bulfinch-arachne-0",
+   "passage": "bulfinch-arachne",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "There was another contest, in which a mortal dared to come in competition with Minerva."
+  },
+  {
+   "id": "bulfinch-arachne-1",
+   "passage": "bulfinch-arachne",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "It was not only beautiful when it was done, but beautiful also in the doing."
+  },
+  {
+   "id": "bulfinch-arachne-2",
+   "passage": "bulfinch-arachne",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "But this she denied, and could not bear to be thought a pupil even of a goddess."
+  },
+  {
+   "id": "bulfinch-arachne-3",
+   "passage": "bulfinch-arachne",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "But she stood to her resolve, and with a foolish conceit of her own skill rushed on her fate."
+  },
+  {
+   "id": "bulfinch-icarus-0",
+   "passage": "bulfinch-icarus",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "So he set to work to fabricate wings for himself and his young son Icarus."
+  },
+  {
+   "id": "bulfinch-icarus-1",
+   "passage": "bulfinch-icarus",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "He wrought feathers together, beginning with the smallest and adding larger, so as to form an increasing surface."
+  },
+  {
+   "id": "bulfinch-icarus-2",
+   "passage": "bulfinch-icarus",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "He kissed the boy, not knowing that it was for the last time."
+  },
+  {
+   "id": "bulfinch-icarus-3",
+   "passage": "bulfinch-icarus",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "The nearness of the blazing sun softened the wax which held the feathers together, and they came off."
+  },
+  {
+   "id": "bulfinch-iris-0",
+   "passage": "bulfinch-iris",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "Near the Cimmerian country, a mountain cave is the abode of the dull god Somnus."
+  },
+  {
+   "id": "bulfinch-iris-1",
+   "passage": "bulfinch-iris",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "Here Phoebus dares not come, either rising, at midday, or setting."
+  },
+  {
+   "id": "bulfinch-iris-2",
+   "passage": "bulfinch-iris",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "No wild beast, nor cattle, nor branch moved with the wind, nor sound of human conversation, breaks the stillness."
+  },
+  {
+   "id": "bulfinch-iris-3",
+   "passage": "bulfinch-iris",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "As soon as the goddess entered and brushed away the dreams that hovered around her, her brightness lit up all the cave."
+  },
+  {
+   "id": "bulfinch-sirens-0",
+   "passage": "bulfinch-sirens",
+   "work": "bulfinch",
+   "band": 2,
+   "text": "At length his companions recalled him to nobler sentiments, and he received their admonition gratefully."
+  },
+  {
+   "id": "bulfinch-sirens-1",
+   "passage": "bulfinch-sirens",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "Circe aided their departure, and instructed them how to pass safely by the coast of the Sirens."
+  },
+  {
+   "id": "bulfinch-sirens-2",
+   "passage": "bulfinch-sirens",
+   "work": "bulfinch",
+   "band": 3,
+   "text": "He filled the ears of his people with wax, and suffered them to bind him with cords firmly to the mast."
+  },
+  {
+   "id": "grimm-rumpelstiltskin-0",
+   "passage": "grimm-rumpelstiltskin",
+   "work": "grimm",
+   "band": 3,
+   "text": "The miller's house was close by, and the miller, you must know, had a very beautiful daughter."
+  },
+  {
+   "id": "grimm-golden-goose-0",
+   "passage": "grimm-golden-goose",
+   "work": "grimm",
+   "band": 3,
+   "text": "His mother gave him a cake made with water and baked in the cinders, and with it a bottle of sour beer."
+  },
+  {
+   "id": "grimm-golden-goose-1",
+   "passage": "grimm-golden-goose",
+   "work": "grimm",
+   "band": 1,
+   "text": "Then the little man took leave of him."
+  },
+  {
+   "id": "grimm-golden-goose-2",
+   "passage": "grimm-golden-goose",
+   "work": "grimm",
+   "band": 3,
+   "text": "He lifted her up, and taking her with him, went to an inn where he thought he would stay the night."
+  },
+  {
+   "id": "grimm-golden-goose-3",
+   "passage": "grimm-golden-goose",
+   "work": "grimm",
+   "band": 2,
+   "text": "But she did not understand why she was to keep away."
+  },
+  {
+   "id": "grimm-golden-goose-4",
+   "passage": "grimm-golden-goose",
+   "work": "grimm",
+   "band": 2,
+   "text": "So they had to spend the night with the goose."
+  },
+  {
+   "id": "grimm-musicians-0",
+   "passage": "grimm-musicians",
+   "work": "grimm",
+   "band": 3,
+   "text": "The ass, being the tallest of the company, marched up to the window and peeped in."
+  },
+  {
+   "id": "grimm-musicians-1",
+   "passage": "grimm-musicians",
+   "work": "grimm",
+   "band": 2,
+   "text": "When all was ready a signal was given, and they began their music."
+  },
+  {
+   "id": "grimm-old-man-0",
+   "passage": "grimm-old-man",
+   "work": "grimm",
+   "band": 2,
+   "text": "And he used to look towards the table with his eyes full of tears."
+  },
+  {
+   "id": "grimm-old-man-1",
+   "passage": "grimm-old-man",
+   "work": "grimm",
+   "band": 3,
+   "text": "Once, too, his trembling hands could not hold the bowl, and it fell to the ground and broke."
+  },
+  {
+   "id": "grimm-old-man-2",
+   "passage": "grimm-old-man",
+   "work": "grimm",
+   "band": 2,
+   "text": "The young wife scolded him, but he said nothing and only sighed."
+  },
+  {
+   "id": "grimm-old-man-3",
+   "passage": "grimm-old-man",
+   "work": "grimm",
+   "band": 3,
+   "text": "Then they brought him a wooden bowl for a few half-pence, out of which he had to eat."
+  },
+  {
+   "id": "justso-camel-0",
+   "passage": "justso-camel",
+   "work": "justso",
+   "band": 2,
+   "text": "To-day is Thursday, and you've done no work since Monday, when the work began."
+  },
+  {
+   "id": "justso-camel-1",
+   "passage": "justso-camel",
+   "work": "justso",
+   "band": 2,
+   "text": "Come out of the Desert and go to the Three, and behave."
+  },
+  {
+   "id": "dragons-book-beasts-0",
+   "passage": "dragons-book-beasts",
+   "work": "dragons",
+   "band": 3,
+   "text": "The Dragon did not move, and the King shut up the book rather quickly and went back to bed."
+  },
+  {
+   "id": "dragons-book-beasts-1",
+   "passage": "dragons-book-beasts",
+   "work": "dragons",
+   "band": 2,
+   "text": "And then Lionel felt that he had indeed done it."
+  },
+  {
+   "id": "dragons-book-beasts-2",
+   "passage": "dragons-book-beasts",
+   "work": "dragons",
+   "band": 2,
+   "text": "And they had been saving up so long to buy him a crown, and everything!"
+  },
+  {
+   "id": "dragons-book-beasts-3",
+   "passage": "dragons-book-beasts",
+   "work": "dragons",
+   "band": 1,
+   "text": "Lionel began to cry."
+  },
+  {
+   "id": "holmes-carbuncle-0",
+   "passage": "holmes-carbuncle",
+   "work": "holmes",
+   "band": 2,
+   "text": "I took the tattered object in my hands and turned it over rather ruefully."
+  },
+  {
+   "id": "holmes-carbuncle-1",
+   "passage": "holmes-carbuncle",
+   "work": "holmes",
+   "band": 3,
+   "text": "It was a very ordinary black hat of the usual round shape, hard and much the worse for wear."
+  },
+  {
+   "id": "holmes-carbuncle-2",
+   "passage": "holmes-carbuncle",
+   "work": "holmes",
+   "band": 2,
+   "text": "The lining had been of red silk, but was a good deal discoloured."
+  },
+  {
+   "id": "wilde-selfish-giant-0",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 1,
+   "text": "One day the Giant came back."
+  },
+  {
+   "id": "wilde-selfish-giant-1",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 3,
+   "text": "He had been to visit his friend the Cornish ogre, and had stayed with him for seven years."
+  },
+  {
+   "id": "wilde-selfish-giant-2",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 2,
+   "text": "When he arrived he saw the children playing in the garden."
+  },
+  {
+   "id": "wilde-selfish-giant-3",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 2,
+   "text": "So he built a high wall all round it, and put up a notice-board."
+  },
+  {
+   "id": "wilde-selfish-giant-4",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 1,
+   "text": "The poor children had now nowhere to play."
+  },
+  {
+   "id": "wilde-selfish-giant-5",
+   "passage": "wilde-selfish-giant",
+   "work": "happyprince",
+   "band": 3,
+   "text": "They used to wander round the high wall when their lessons were over, and talk about the beautiful garden inside."
   }
  ],
  "models": {
@@ -610,13 +1114,45 @@ export default {
    {
     "id": "opener-1",
     "shape": "opener",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "When at last the work was done, the artist, waving his wings, found himself buoyed upward, and hung suspended, poising himself on the beaten air."
+   },
+   {
+    "id": "opener-2",
+    "shape": "opener",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "While he gave him these instructions and fitted the wings to his shoulders, the face of the father was wet with tears, and his hands trembled."
+   },
+   {
+    "id": "opener-3",
+    "shape": "opener",
+    "passage": "bulfinch-iris",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "As soon as the goddess entered and brushed away the dreams that hovered around her, her brightness lit up all the cave."
+   },
+   {
+    "id": "opener-4",
+    "shape": "opener",
+    "passage": "grimm-musicians",
+    "work": "grimm",
+    "band": 2,
+    "text": "When all was ready a signal was given, and they began their music."
+   },
+   {
+    "id": "opener-5",
+    "shape": "opener",
     "passage": null,
     "work": "aesop",
     "band": 2,
     "text": "As soon as they saw a single animal approach them, off they used to run."
    },
    {
-    "id": "opener-2",
+    "id": "opener-6",
     "shape": "opener",
     "passage": null,
     "work": "aesop",
@@ -624,7 +1160,7 @@ export default {
     "text": "When he came near them they soon discovered the cheat, and striding up to him pecked at him and plucked away his borrowed plumes."
    },
    {
-    "id": "opener-3",
+    "id": "opener-7",
     "shape": "opener",
     "passage": null,
     "work": "justso",
@@ -632,7 +1168,7 @@ export default {
     "text": "When he wanted fruit to eat he pulled fruit down from a tree, instead of waiting for it to fall as he used to do."
    },
    {
-    "id": "opener-4",
+    "id": "opener-8",
     "shape": "opener",
     "passage": null,
     "work": "justso",
@@ -640,7 +1176,7 @@ export default {
     "text": "When he wanted grass he plucked grass up from the ground, instead of going on his knees as he used to do."
    },
    {
-    "id": "opener-5",
+    "id": "opener-9",
     "shape": "opener",
     "passage": null,
     "work": "alice",
@@ -648,7 +1184,7 @@ export default {
     "text": "After a time she heard a little pattering of feet in the distance, and she hastily dried her eyes to see what was coming."
    },
    {
-    "id": "opener-6",
+    "id": "opener-10",
     "shape": "opener",
     "passage": null,
     "work": "alice",
@@ -656,7 +1192,7 @@ export default {
     "text": "When I used to read fairy-tales, I fancied that kind of thing never happened, and now here I am in the middle of one!"
    },
    {
-    "id": "opener-7",
+    "id": "opener-11",
     "shape": "opener",
     "passage": null,
     "work": "lookingglass",
@@ -664,7 +1200,7 @@ export default {
     "text": "After this, Alice was silent for a minute or two, pondering."
    },
    {
-    "id": "opener-8",
+    "id": "opener-12",
     "shape": "opener",
     "passage": null,
     "work": "lookingglass",
@@ -672,7 +1208,7 @@ export default {
     "text": "When he DID speak again, it was in a deep growl."
    },
    {
-    "id": "opener-9",
+    "id": "opener-13",
     "shape": "opener",
     "passage": null,
     "work": "secretgarden",
@@ -680,7 +1216,7 @@ export default {
     "text": "When she had passed through the shrubbery gate she found herself in great gardens, with wide lawns and winding walks with clipped borders."
    },
    {
-    "id": "opener-10",
+    "id": "opener-14",
     "shape": "opener",
     "passage": null,
     "work": "secretgarden",
@@ -688,7 +1224,7 @@ export default {
     "text": "If it were a quite alive garden, how wonderful it would be, and what thousands of roses would grow on every side!"
    },
    {
-    "id": "opener-11",
+    "id": "opener-15",
     "shape": "opener",
     "passage": null,
     "work": "blackbeauty",
@@ -696,7 +1232,7 @@ export default {
     "text": "When we came to a hill, instead of slackening her pace, she would throw her weight right into the collar, and pull away straight up."
    },
    {
-    "id": "opener-12",
+    "id": "opener-16",
     "shape": "opener",
     "passage": null,
     "work": "blackbeauty",
@@ -704,44 +1240,12 @@ export default {
     "text": "After we had been out two or three times together we grew quite friendly and sociable, which made me feel very much at home."
    },
    {
-    "id": "opener-13",
+    "id": "opener-17",
     "shape": "opener",
     "passage": null,
     "work": "treasure",
     "band": 3,
     "text": "When I got back with the basin, the doctor had already ripped up the captain's sleeve and exposed his great sinewy arm."
-   },
-   {
-    "id": "opener-14",
-    "shape": "opener",
-    "passage": null,
-    "work": "treasure",
-    "band": 2,
-    "text": "When I brought it to him, he seized it greedily and drank it out."
-   },
-   {
-    "id": "opener-15",
-    "shape": "opener",
-    "passage": null,
-    "work": "wind",
-    "band": 2,
-    "text": "Since early morning he had been swimming in the river, in company with his friends the ducks."
-   },
-   {
-    "id": "opener-16",
-    "shape": "opener",
-    "passage": null,
-    "work": "wind",
-    "band": 3,
-    "text": "After so much open air and excitement the Toad slept very soundly, and no amount of shaking could rouse him out of bed next morning."
-   },
-   {
-    "id": "opener-17",
-    "shape": "opener",
-    "passage": null,
-    "work": "littlewomen",
-    "band": 3,
-    "text": "If anyone had known the care lavished on that dolly, I think it would have touched their hearts, even while they laughed."
    }
   ],
   "list3": [
@@ -812,82 +1316,82 @@ export default {
    {
     "id": "list3-8",
     "shape": "list3",
-    "passage": null,
-    "work": "aesop",
+    "passage": "bulfinch-echo",
+    "work": "bulfinch",
     "band": 2,
-    "text": "As he crossed, he looked down and saw his own shadow reflected in the water beneath."
+    "text": "Echo was a beautiful nymph, fond of the woods and hills, where she devoted herself to woodland sports."
    },
    {
     "id": "list3-9",
     "shape": "list3",
-    "passage": null,
-    "work": "aesop",
+    "passage": "heroes-perseus",
+    "work": "heroes",
     "band": 2,
-    "text": "The Lion's Share The Lion went once a-hunting along with the Fox, the Jackal, and the Wolf."
+    "text": "And it came on, nearer and nearer, till its brightness dazzled his eyes."
    },
    {
     "id": "list3-10",
     "shape": "list3",
-    "passage": null,
+    "passage": "bulfinch-narcissus",
+    "work": "bulfinch",
+    "band": 1,
+    "text": "Hither came one day the youth, fatigued with hunting, heated and thirsty."
+   },
+   {
+    "id": "list3-11",
+    "shape": "list3",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 2,
+    "text": "He wrought feathers together, beginning with the smallest and adding larger, so as to form an increasing surface."
+   },
+   {
+    "id": "list3-12",
+    "shape": "list3",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "When at last the work was done, the artist, waving his wings, found himself buoyed upward, and hung suspended, poising himself on the beaten air."
+   },
+   {
+    "id": "list3-13",
+    "shape": "list3",
+    "passage": "bulfinch-iris",
+    "work": "bulfinch",
+    "band": 1,
+    "text": "Here Phoebus dares not come, either rising, at midday, or setting."
+   },
+   {
+    "id": "list3-14",
+    "shape": "list3",
+    "passage": "bulfinch-iris",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "Around him lie dreams, resembling all various forms, as many as the harvest bears stalks, or the forest leaves, or the seashore sand grains."
+   },
+   {
+    "id": "list3-15",
+    "shape": "list3",
+    "passage": "grimm-old-man",
+    "work": "grimm",
+    "band": 1,
+    "text": "The young wife scolded him, but he said nothing and only sighed."
+   },
+   {
+    "id": "list3-16",
+    "shape": "list3",
+    "passage": "justso-camel",
     "work": "justso",
     "band": 2,
     "text": "And the Camel humphed himself, humph and all, and went away to join the Three."
    },
    {
-    "id": "list3-11",
-    "shape": "list3",
-    "passage": null,
-    "work": "justso",
-    "band": 3,
-    "text": "Then he went away, a little warm, but not at all astonished, eating melons, and throwing the rind about, because he could not pick it up."
-   },
-   {
-    "id": "list3-12",
-    "shape": "list3",
-    "passage": null,
-    "work": "alice",
-    "band": 2,
-    "text": "As she said this, she looked up, and there was the Cat again, sitting on a branch of a tree."
-   },
-   {
-    "id": "list3-13",
-    "shape": "list3",
-    "passage": null,
-    "work": "alice",
-    "band": 2,
-    "text": "She said it to the Knave of Hearts, who only bowed and smiled in reply."
-   },
-   {
-    "id": "list3-14",
-    "shape": "list3",
-    "passage": null,
-    "work": "lookingglass",
-    "band": 1,
-    "text": "The chessmen were walking about, two and two!"
-   },
-   {
-    "id": "list3-15",
-    "shape": "list3",
-    "passage": null,
-    "work": "lookingglass",
-    "band": 3,
-    "text": "And she took a ribbon out of her pocket, marked in inches, and began measuring the ground, and sticking little pegs in here and there."
-   },
-   {
-    "id": "list3-16",
-    "shape": "list3",
-    "passage": null,
-    "work": "secretgarden",
-    "band": 2,
-    "text": "She had had servants, and food and clothes, but no one had taken any notice of her."
-   },
-   {
     "id": "list3-17",
     "shape": "list3",
-    "passage": null,
-    "work": "secretgarden",
-    "band": 3,
-    "text": "She thought Mrs. Medlock the most disagreeable person she had ever seen, with her common, highly colored face and her common fine bonnet."
+    "passage": "holmes-carbuncle",
+    "work": "holmes",
+    "band": 2,
+    "text": "It was a very ordinary black hat of the usual round shape, hard and much the worse for wear."
    }
   ],
   "simile": [
@@ -902,13 +1406,37 @@ export default {
    {
     "id": "simile-1",
     "shape": "simile",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "The larger ones he secured with thread and the smaller with wax, and gave the whole a gentle curvature like the wings of a bird."
+   },
+   {
+    "id": "simile-2",
+    "shape": "simile",
+    "passage": "bulfinch-iris",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "Around him lie dreams, resembling all various forms, as many as the harvest bears stalks, or the forest leaves, or the seashore sand grains."
+   },
+   {
+    "id": "simile-3",
+    "shape": "simile",
+    "passage": "bulfinch-iris",
+    "work": "bulfinch",
+    "band": 3,
+    "text": "As soon as the goddess entered and brushed away the dreams that hovered around her, her brightness lit up all the cave."
+   },
+   {
+    "id": "simile-4",
+    "shape": "simile",
     "passage": null,
     "work": "aesop",
     "band": 3,
     "text": "But as soon as he came near to Androcles he recognised his friend, and fawned upon him, and licked his hands like a friendly dog."
    },
    {
-    "id": "simile-2",
+    "id": "simile-5",
     "shape": "simile",
     "passage": null,
     "work": "aesop",
@@ -916,7 +1444,7 @@ export default {
     "text": "He finished off by squeaking so like a pig that the spectators thought that he had a porker concealed about him."
    },
    {
-    "id": "simile-3",
+    "id": "simile-6",
     "shape": "simile",
     "passage": null,
     "work": "justso",
@@ -924,7 +1452,7 @@ export default {
     "text": "He looked exactly like a Noah's Ark Rhinoceros, but of course much bigger."
    },
    {
-    "id": "simile-4",
+    "id": "simile-7",
     "shape": "simile",
     "passage": null,
     "work": "justso",
@@ -932,7 +1460,7 @@ export default {
     "text": "In those days it buttoned underneath with three buttons and looked like a waterproof."
    },
    {
-    "id": "simile-5",
+    "id": "simile-8",
     "shape": "simile",
     "passage": null,
     "work": "alice",
@@ -940,7 +1468,7 @@ export default {
     "text": "Oh, how I wish I could shut up like a telescope!"
    },
    {
-    "id": "simile-6",
+    "id": "simile-9",
     "shape": "simile",
     "passage": null,
     "work": "alice",
@@ -948,7 +1476,7 @@ export default {
     "text": "Alice did not at all like the tone of this remark, and thought it would be as well to introduce some other subject of conversation."
    },
    {
-    "id": "simile-7",
+    "id": "simile-10",
     "shape": "simile",
     "passage": null,
     "work": "lookingglass",
@@ -956,7 +1484,7 @@ export default {
     "text": "And certainly the glass WAS beginning to melt away, just like a bright silvery mist."
    },
    {
-    "id": "simile-8",
+    "id": "simile-11",
     "shape": "simile",
     "passage": null,
     "work": "lookingglass",
@@ -964,7 +1492,7 @@ export default {
     "text": "It's more like a corkscrew than a path!"
    },
    {
-    "id": "simile-9",
+    "id": "simile-12",
     "shape": "simile",
     "passage": null,
     "work": "secretgarden",
@@ -972,7 +1500,7 @@ export default {
     "text": "He was not like an Indian bird and she liked him and wondered if she should ever see him again."
    },
    {
-    "id": "simile-10",
+    "id": "simile-13",
     "shape": "simile",
     "passage": null,
     "work": "secretgarden",
@@ -980,7 +1508,7 @@ export default {
     "text": "The bird put his tiny head on one side and looked up at him with his soft bright eye which was like a black dewdrop."
    },
    {
-    "id": "simile-11",
+    "id": "simile-14",
     "shape": "simile",
     "passage": null,
     "work": "blackbeauty",
@@ -988,7 +1516,7 @@ export default {
     "text": "One would be just as sensible as the other."
    },
    {
-    "id": "simile-12",
+    "id": "simile-15",
     "shape": "simile",
     "passage": null,
     "work": "blackbeauty",
@@ -996,7 +1524,7 @@ export default {
     "text": "The news fell upon the household like the tolling of a deathbell."
    },
    {
-    "id": "simile-13",
+    "id": "simile-16",
     "shape": "simile",
     "passage": null,
     "work": "treasure",
@@ -1004,36 +1532,12 @@ export default {
     "text": "The stranger kept hanging about just inside the inn door, peering round the corner like a cat waiting for a mouse."
    },
    {
-    "id": "simile-14",
+    "id": "simile-17",
     "shape": "simile",
     "passage": null,
     "work": "treasure",
     "band": 2,
     "text": "The captain, for his part, stood staring at the signboard like a bewildered man."
-   },
-   {
-    "id": "simile-15",
-    "shape": "simile",
-    "passage": null,
-    "work": "wind",
-    "band": 1,
-    "text": "Not an Otter to be seen, as far as the distant horizon."
-   },
-   {
-    "id": "simile-16",
-    "shape": "simile",
-    "passage": null,
-    "work": "wind",
-    "band": 3,
-    "text": "He'll continue like that for days now, like an animal walking in a happy dream, quite useless for all practical purposes."
-   },
-   {
-    "id": "simile-17",
-    "shape": "simile",
-    "passage": null,
-    "work": "littlewomen",
-    "band": 3,
-    "text": "Just frizzle it, and tie your ribbon so the ends come on your forehead a bit, and it will look like the last fashion."
    }
   ],
   "but": [
@@ -1088,13 +1592,85 @@ export default {
    {
     "id": "but-6",
     "shape": "but",
+    "passage": "bulfinch-narcissus",
+    "work": "bulfinch",
+    "band": 2,
+    "text": "It fled at the touch, but returned again after a moment and renewed the fascination."
+   },
+   {
+    "id": "but-7",
+    "shape": "but",
+    "passage": "bulfinch-arachne",
+    "work": "bulfinch",
+    "band": 2,
+    "text": "It was not only beautiful when it was done, but beautiful also in the doing."
+   },
+   {
+    "id": "but-8",
+    "shape": "but",
+    "passage": "bulfinch-arachne",
+    "work": "bulfinch",
+    "band": 2,
+    "text": "Challenge your fellow-mortals as you will, but do not compete with a goddess."
+   },
+   {
+    "id": "but-9",
+    "shape": "but",
+    "passage": "bulfinch-icarus",
+    "work": "bulfinch",
+    "band": 2,
+    "text": "He fluttered with his arms, but no feathers remained to hold the air."
+   },
+   {
+    "id": "but-10",
+    "shape": "but",
+    "passage": "grimm-frog-prince",
+    "work": "grimm",
+    "band": 3,
+    "text": "The princess looked into the spring after her ball, but it was very deep, so deep that she could not see the bottom of it."
+   },
+   {
+    "id": "but-11",
+    "shape": "but",
+    "passage": "grimm-old-man",
+    "work": "grimm",
+    "band": 1,
+    "text": "The young wife scolded him, but he said nothing and only sighed."
+   },
+   {
+    "id": "but-12",
+    "shape": "but",
+    "passage": "holmes-carbuncle",
+    "work": "holmes",
+    "band": 2,
+    "text": "The lining had been of red silk, but was a good deal discoloured."
+   },
+   {
+    "id": "but-13",
+    "shape": "but",
+    "passage": "holmes-carbuncle",
+    "work": "holmes",
+    "band": 2,
+    "text": "It was pierced in the brim for a hat-securer, but the elastic was missing."
+   },
+   {
+    "id": "but-14",
+    "shape": "but",
+    "passage": "wilde-selfish-giant",
+    "work": "happyprince",
+    "band": 3,
+    "text": "They tried to play on the road, but the road was very dusty and full of hard stones, and they did not like it."
+   },
+   {
+    "id": "but-15",
+    "shape": "but",
     "passage": null,
     "work": "aesop",
     "band": 1,
     "text": "Injuries may be forgiven, but not forgotten."
    },
    {
-    "id": "but-7",
+    "id": "but-16",
     "shape": "but",
     "passage": null,
     "work": "aesop",
@@ -1102,89 +1678,25 @@ export default {
     "text": "Now this made Jove angry, so he sent among them a big Stork that soon set to work gobbling them all up."
    },
    {
-    "id": "but-8",
+    "id": "but-17",
     "shape": "but",
     "passage": null,
     "work": "justso",
     "band": 2,
     "text": "He looked exactly like a Noah's Ark Rhinoceros, but of course much bigger."
-   },
-   {
-    "id": "but-9",
-    "shape": "but",
-    "passage": null,
-    "work": "justso",
-    "band": 2,
-    "text": "And it spoiled his temper, but it didn't make the least difference to the cake-crumbs."
-   },
-   {
-    "id": "but-10",
-    "shape": "but",
-    "passage": null,
-    "work": "alice",
-    "band": 3,
-    "text": "She was moving them about as she spoke, but no result seemed to follow, except a little shaking among the distant green leaves."
-   },
-   {
-    "id": "but-11",
-    "shape": "but",
-    "passage": null,
-    "work": "alice",
-    "band": 3,
-    "text": "Alice was more and more puzzled, but she thought there was no use in saying anything more till the Pigeon had finished."
-   },
-   {
-    "id": "but-12",
-    "shape": "but",
-    "passage": null,
-    "work": "lookingglass",
-    "band": 2,
-    "text": "Let's pretend the glass has got all soft like gauze, so that we can get through."
-   },
-   {
-    "id": "but-13",
-    "shape": "but",
-    "passage": null,
-    "work": "lookingglass",
-    "band": 1,
-    "text": "Alice didn't like being criticised, so she began asking questions."
-   },
-   {
-    "id": "but-14",
-    "shape": "but",
-    "passage": null,
-    "work": "secretgarden",
-    "band": 3,
-    "text": "Other children seemed to belong to their fathers and mothers, but she had never seemed to really be anyone's little girl."
-   },
-   {
-    "id": "but-15",
-    "shape": "but",
-    "passage": null,
-    "work": "secretgarden",
-    "band": 2,
-    "text": "She often thought that other people were, but she did not know that she was so herself."
-   },
-   {
-    "id": "but-16",
-    "shape": "but",
-    "passage": null,
-    "work": "blackbeauty",
-    "band": 2,
-    "text": "My feet felt very stiff and heavy, but in time I got used to it."
-   },
-   {
-    "id": "but-17",
-    "shape": "but",
-    "passage": null,
-    "work": "blackbeauty",
-    "band": 2,
-    "text": "There was another man who helped in the yard, but he had very little to do with Ginger and me."
    }
   ],
   "fronted": [
    {
     "id": "fronted-0",
+    "shape": "fronted",
+    "passage": "wonderbook-atlas",
+    "work": "wonderbook",
+    "band": 2,
+    "text": "Accordingly, without more words, the sky was shifted from the shoulders of Atlas, and placed upon those of Hercules."
+   },
+   {
+    "id": "fronted-1",
     "shape": "fronted",
     "passage": null,
     "work": "lookingglass",
@@ -1192,7 +1704,7 @@ export default {
     "text": "Really, it's most disrespectful of you!"
    },
    {
-    "id": "fronted-1",
+    "id": "fronted-2",
     "shape": "fronted",
     "passage": null,
     "work": "treasure",
@@ -1200,7 +1712,7 @@ export default {
     "text": "Suddenly, with a loud huzza, a little cloud of pirates leaped from the woods on the north side and ran straight on the stockade."
    },
    {
-    "id": "fronted-2",
+    "id": "fronted-3",
     "shape": "fronted",
     "passage": null,
     "work": "treasure",
@@ -1208,7 +1720,7 @@ export default {
     "text": "Mechanically, I obeyed, turned eastwards, and with my cutlass raised, ran round the corner of the house."
    },
    {
-    "id": "fronted-3",
+    "id": "fronted-4",
     "shape": "fronted",
     "passage": null,
     "work": "littlewomen",
@@ -1216,7 +1728,7 @@ export default {
     "text": "Unfortunately, Mr. Davis particularly detested the odor of the fashionable pickle, and disgust added to his wrath."
    },
    {
-    "id": "fronted-4",
+    "id": "fronted-5",
     "shape": "fronted",
     "passage": null,
     "work": "littlewomen",
@@ -1224,7 +1736,7 @@ export default {
     "text": "Unfortunately, John didn't come, not seeing the matter in that light."
    },
    {
-    "id": "fronted-5",
+    "id": "fronted-6",
     "shape": "fronted",
     "passage": null,
     "work": "peterrabbit",
@@ -1232,7 +1744,7 @@ export default {
     "text": "Presently, he came to a pond where Mr. McGregor filled his water-cans."
    },
    {
-    "id": "fronted-6",
+    "id": "fronted-7",
     "shape": "fronted",
     "passage": null,
     "work": "happyprince",
@@ -1240,7 +1752,7 @@ export default {
     "text": "Really, considering that I am going to give you my wheelbarrow, I think you might work harder."
    },
    {
-    "id": "fronted-7",
+    "id": "fronted-8",
     "shape": "fronted",
     "passage": null,
     "work": "happyprince",

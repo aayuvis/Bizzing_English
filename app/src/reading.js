@@ -15,7 +15,7 @@ export const passageText = (id) => TEXTS?.[id] || null;
 export const work = (id) => WORKS.find((w) => w.id === id) || null;
 export const passage = (id) => PASSAGES.find((p) => p.id === id) || null;
 
-const FAIRY = /^(grimm|andersen|arabian)/;
+const FAIRY = /^(grimm|andersen|arabian|bulfinch|wonderbook|tanglewood|heroes)/;   // fairy tales and myths: Reading level 2
 const SHORT = /^(holmes|justso|kipling-rewards)/;
 export function levelOf(p) {
   const w = work(p.work); const sh = w?.shelf;

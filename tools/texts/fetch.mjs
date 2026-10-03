@@ -106,6 +106,11 @@ export const TEXTS = [
   ['rubaiyat', 'The-Rubaiyat-of-Omar-Khayyam_246', '246.txt', 246],
   ['macbeth', 'Macbeth_1533', '1533.txt', 1533],
   ['caesar', 'Julius-Caesar_1120', '1120.txt', 1120],
+  // Greek myths (library-myths.js). The Wonder Book is PG #32242 (the 1892 Walter Crane edition);
+  // PG #32 is Herland. Repository names from gitberg's GITenberg_repo_list.tsv.
+  ['wonderbook', 'A-Wonder-Book-for-Girls--amp--Boys_32242', '32242.txt', 32242],
+  ['tanglewood', 'Tanglewood-Tales_976', '976.txt', 976],
+  ['heroes', 'The-Heroes--Or-Greek-Fairy-Tales-for-My-Children_677', '677-0.txt', 677],
 ];
 
 export const urlOf = ([, repo, file]) => `${GIT}/${repo}/master/${file}`;
