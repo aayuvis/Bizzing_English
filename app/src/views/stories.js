@@ -18,7 +18,7 @@ import { addToBank, bumpDay } from '../model.js';
 import { taught } from '../mastery.js';
 import { sfx } from '../sound.js';
 import { showWord } from './reader.js';
-import { loadBook, book, chapterText } from '../book.js';
+import { loadBook, book, chapterText, BOOKS, bookMeta, chapterKey } from '../book.js';
 import ART from '../data/story-art.json';
 
 const SHIPPED = () => PASSAGES.filter(shippable);
@@ -28,7 +28,7 @@ const SHELF_WORLD = { fable: 'garden', children: 'garden', poetry: 'lakeside', n
 const shelfPlate = (pid) => { const p = PASSAGES.find((x) => x.id === pid), w = p && work(p.work); const wid = p?.kind === 'verse' ? 'lakeside' : SHELF_WORLD[w?.shelf] || 'study'; return `art/w-${wid}${isDark() ? '-night' : ''}-card.webp`; };
 export const storyCard = (id) => (ART.includes(`story/${id}`) ? `art/story/${id}-card.webp` : shelfPlate(id));
 export const storyArt = (id, two) => (ART.includes(`story/${id}-2`) && two ? `art/story/${id}-2.webp` : ART.includes(`story/${id}`) ? `art/story/${id}.webp` : shelfPlate(id));
-const bookArt = (n, small) => (ART.includes(`book/alice-${n}`) ? `art/book/alice-${n}${small ? '-card' : ''}.webp` : `art/w-study${isDark() ? '-night' : ''}-card.webp`);
+export const bookArt = (id, n, small) => (ART.includes(`book/${id}-${n}`) ? `art/book/${id}-${n}${small ? '-card' : ''}.webp` : `art/w-${id === 'wind' ? 'garden' : 'study'}${isDark() ? '-night' : ''}-card.webp`);
 const bg = (src) => `background-image:url('${src}')`;
 export const EX = [['understand', 'Understand it', 'check'], ['words', 'Words from the story', 'key'], ['commas', 'The author’s commas', 'quill'],
   ['order', 'Rebuild a sentence', 'blocks'], ['copy', 'Copy a line', 'pen'], ['aloud', 'Say it aloud', 'mic'], ['talk', 'Talk about it', 'bubble']];
@@ -55,12 +55,11 @@ export function storyRoom() {
   const loved = all.filter((p) => k.reading[p.id]?.loved);
   const goingOn = all.filter((p) => k.reading[p.id]?.heard && exCount(k, p.id) < 7).slice(0, 8);
   const mosaic = all.slice(0, 12).map((p) => `<i style="${bg(storyCard(p.id))}"></i>`).join('');
-  const bk = book();
   const rail = (title, note, list) => (list.length ? `<h3 class="railh">${esc(title)}</h3>${note ? `<p class="railn">${esc(note)}</p>` : ''}<div class="rail">${list.map((p) => card(p, k)).join('')}</div>` : '');
   return `<a class="pickbar" href="#/story/random"><span class="mosaic" aria-hidden="true">${mosaic}</span><span class="pbveil"></span>
       <span class="pbbody"><span><b>Tell me one</b><small>${all.length} stories in the original words, read aloud. Nothing to finish — you can have the same one again tomorrow.</small></span><span class="btn">${icon('play')}<span>Tell me one</span></span></span></a>
     <div class="topdoors">
-      <a class="bigdoor" href="#/whole/alice"><span class="bdart" style="${bg(bookArt(1))}"></span><span class="pbveil"></span><span class="bdbody"><small>The whole book · 12 chapters</small><b>Alice’s Adventures in Wonderland</b><span>${bk ? `${(k.reading['book:alice']?.done || []).length} of 12 chapters` : 'One chapter a night. A bookmark keeps your place.'}</span></span></a>
+      ${BOOKS.map((m) => { const d = (k.reading[`book:${m.id}`]?.done || []).length; return `<a class="bigdoor" href="#/whole/${m.id}"><span class="bdart" style="${bg(bookArt(m.id, 1))}"></span><span class="pbveil"></span><span class="bdbody"><small>The whole book · ${m.chapters.length} chapters</small><b>${esc(m.title)}</b><span>${d ? `${d} of ${m.chapters.length} chapters` : 'One chapter a night. A bookmark keeps your place.'}</span></span></a>`; }).join('')}
       <a class="bigdoor" href="#/library/poems"><span class="bdart" style="${bg(storyArt((all.find((p) => p.kind === 'verse') || all[0]).id))}"></span><span class="pbveil"></span><span class="bdbody"><small>${all.filter((p) => p.kind === 'verse').length} poems</small><b>Poems to say aloud</b><span>Hear one, then say it on the Stage.</span></span></a>
     </div>
     ${rail('Going on', 'Stories you have heard, with exercises still to do.', goingOn)}
@@ -81,13 +80,13 @@ export async function openStory(id) {
   k.book = { work: p.work, passage: id }; save();
   return true;
 }
-export async function openChapter(n) {
-  await Promise.all([loadBook(), loadLexicon()]);
-  const b = book(), c = b?.chapters.find((x) => x.n === +n), t = c && chapterText(+n);
+export async function openChapter(id, n) {
+  await Promise.all([loadBook(id), loadLexicon()]);
+  const m = bookMeta(id), b = book(id), c = b?.chapters.find((x) => x.n === +n), t = c && chapterText(id, +n);
   if (!c || !t) { S.run = { mode: 'story', error: true }; return; }
-  const k = kid(); (k.reading['book:alice'] ||= { at: 1, done: [] }).at = +n; save();
-  S.run = { mode: 'story', kind: 'chapter', id: `alice-${n}`, n: +n, scenes: t.scenes, i: 0, auto: !!k.prefs.readAloud, now: -1, title: `${c.n}. ${c.title}`, sub: 'Alice’s Adventures in Wonderland · Lewis Carroll',
-    art: () => bookArt(n), clip: (i) => `bk/alice-${n}-${i}`, back: { label: 'Alice', href: '#/whole/alice' } };
+  const k = kid(); (k.reading[`book:${id}`] ||= { at: 1, done: [] }).at = +n; save();
+  S.run = { mode: 'story', kind: 'chapter', book: id, id: `${id}-${n}`, n: +n, scenes: t.scenes, i: 0, auto: !!k.prefs.readAloud, now: -1, title: `${c.n}. ${c.title}`, sub: `${m.title} · ${m.author}`,
+    art: () => bookArt(id, n), clip: (i) => `bk/${id}-${n}-${i}`, back: { label: m.short, href: `#/whole/${id}` } };
 }
 
 function words(text, k) {
@@ -114,10 +113,10 @@ export function storyView() {
 function storyEnd() {
   const r = S.run, k = kid();
   if (r.kind === 'chapter') {
-    const c = book().chapters.find((x) => x.n === r.n);
+    const c = book(r.book).chapters.find((x) => x.n === r.n), last = book(r.book).chapters.length;
     return `<div class="story-player"><div class="sp-stage end" style="${bg(r.art())}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>End of chapter ${r.n}</h2>
       ${c.line ? `<blockquote class="lines" style="margin:0"><blockquote>${esc(c.line)}</blockquote></blockquote>` : ''}
-      <div class="row" style="justify-content:center">${link('Now the exercises', `#/whole/alice/${r.n}/do`, { ic: 'check' })}${btn('Hear it again', 'sp-again', { ic: 'undo', cls: 'out' })}${r.n < 12 ? link('Next chapter', `#/whole/alice/${r.n + 1}`, { cls: 'out', ic: 'next' }) : ''}</div></div></div>`;
+      <div class="row" style="justify-content:center">${link('Now the exercises', `#/whole/${r.book}/${r.n}/do`, { ic: 'check' })}${btn('Hear it again', 'sp-again', { ic: 'undo', cls: 'out' })}${r.n < last ? link('Next chapter', `#/whole/${r.book}/${r.n + 1}`, { cls: 'out', ic: 'next' }) : ''}</div></div></div>`;
   }
   const p = PASSAGES.find((x) => x.id === r.id), w = work(p.work), loved = k.reading[p.id]?.loved;
   return `<div class="story-player"><div class="sp-stage end" style="${bg(r.art(0, 1))}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>${esc(p.title)}</h2>
@@ -138,7 +137,7 @@ function readScene() {
 }
 function heard() {
   const r = S.run, k = kid();
-  if (r.kind === 'chapter') { const b = (k.reading['book:alice'] ||= { at: r.n, done: [] }); b.heard = [...new Set([...(b.heard || []), r.n])]; }
+  if (r.kind === 'chapter') { const b = (k.reading[`book:${r.book}`] ||= { at: r.n, done: [] }); b.heard = [...new Set([...(b.heard || []), r.n])]; }
   else { k.reading[r.id] = { ...(k.reading[r.id] || {}), heard: true, at: Date.now() }; k.last = { what: 'read', title: r.title, at: Date.now() }; }
   bumpDay(k, 'pages'); save();
 }
@@ -179,9 +178,9 @@ export function finishExercise() {
   location.hash = `#/story/${r.pid}/do`;
 }
 export function talkView(pid) {
-  const ch = /^alice-(\d+)$/.exec(pid), c = ch && book()?.chapters.find((x) => x.n === +ch[1]);
+  const ch = chapterKey(pid), c = ch && book(ch.id)?.chapters.find((x) => x.n === ch.n);
   const p = c ? { title: `${c.n}. ${c.title}`, evaluate: c.evaluate } : PASSAGES.find((x) => x.id === pid), k = kid(), mine = k.writing?.talk?.[pid] || '';
-  const back = c ? `#/whole/alice/${c.n}/do` : `#/story/${pid}/do`;
+  const back = c ? `#/whole/${ch.id}/${c.n}/do` : `#/story/${pid}/do`;
   return pageHead({ title: 'Talk about it', sub: p.title, back: { label: 'Exercises', href: back } }) + `<div class="reader"><div class="card stack pin"><p class="prompt big" style="margin:0">${esc(p.evaluate || '')}</p>
     <p class="note" style="margin:0">There is no right answer, so the app never marks this. Talk it over with a grown-up — or write your thoughts here. They stay on this device.</p>
     <label class="sr" for="th">Your thoughts</label><textarea id="th" class="field" rows="4" spellcheck="true">${esc(mine)}</textarea>
@@ -189,49 +188,55 @@ export function talkView(pid) {
 }
 
 /* ---------------- the whole book ---------------- */
-export function wholeView() {
-  const b = book(), k = kid();
+export function wholeView(id) {
+  const m = bookMeta(id), b = book(id), k = kid();
+  if (!m) return empty('oops', 'That book is not on the shelf.', link('Books', '#/library/books'));
   if (!b) return empty('think', 'Opening the book…', '');
-  const st = k.reading['book:alice'] || { at: 1, done: [] }, done = st.done || [], at = st.at || 1;
+  const N = b.chapters.length, st = k.reading[`book:${id}`] || { at: 1, done: [] }, done = st.done || [], at = st.at || 1;
   const met = b.chapters.filter((c) => (st.heard || []).includes(c.n) || done.includes(c.n)).flatMap((c) => c.meet || []);
   const cur = b.chapters.find((c) => c.n === at);
-  return pageHead({ title: 'Alice’s Adventures in Wonderland', sub: 'Lewis Carroll · 1865 · the whole book', back: { label: 'Stories', href: '#/library' }, strip: { chip: `${done.length} of 12`, pct: (done.length / 12) * 100, label: 'a chapter counts when its questions are passed' } }) + `<div class="grid2">
-    <div class="card pin stack"><span class="kick">Your bookmark · chapter ${at}</span><h2 style="margin:0">${esc(cur.title)}</h2><p style="margin:0"><b>The story so far.</b> ${esc(cur.sofar)}</p>${link(at > 1 || (st.heard || []).length ? 'Read on' : 'Begin', `#/whole/alice/${at}`, { ic: 'book' })}</div>
-    <div class="card"><h3>People you have met</h3>${met.length ? `<ul class="metlist">${met.map((m) => `<li><b>${esc(m.name)}</b> — ${esc(m.about)}</li>`).join('')}</ul>` : '<p class="muted">Nobody yet. Alice is sitting on a bank by a river, with nothing to do…</p>'}</div></div>
-    <div class="chapters">${b.chapters.map((c) => `<a class="chap${done.includes(c.n) ? ' done' : ''}${c.n === at ? ' at' : ''}" href="#/whole/alice/${c.n}"><span class="cpic" style="${bg(bookArt(c.n, true))}"></span><span class="cbody"><small>Chapter ${c.n}</small><b>${esc(c.title)}</b><span>${done.includes(c.n) ? 'Done' : (st.heard || []).includes(c.n) ? 'Heard — exercises to do' : c.n === at ? 'Your bookmark' : ''}</span></span></a>`).join('')}</div>`;
+  const notes = b.chapters.filter((c) => c.note || c.needsReview);
+  return pageHead({ title: m.title, sub: `${m.author} · ${m.year} · the whole book`, back: { label: 'Stories', href: '#/library' }, strip: { chip: `${done.length} of ${N}`, pct: (done.length / N) * 100, label: 'a chapter counts when its questions are passed' } }) + `<div class="grid2">
+    <div class="card pin stack"><span class="kick">Your bookmark · chapter ${at}</span><h2 style="margin:0">${esc(cur.title)}</h2><p style="margin:0"><b>The story so far.</b> ${esc(cur.sofar)}</p>${link(at > 1 || (st.heard || []).length ? 'Read on' : 'Begin', `#/whole/${id}/${at}`, { ic: 'book' })}</div>
+    <div class="card"><h3>People you have met</h3>${met.length ? `<ul class="metlist">${met.map((x) => `<li><b>${esc(x.name)}</b> — ${esc(x.about)}</li>`).join('')}</ul>` : `<p class="muted">${esc(m.start)}</p>`}</div></div>
+    <div class="chapters">${b.chapters.map((c) => `<a class="chap${done.includes(c.n) ? ' done' : ''}${c.n === at ? ' at' : ''}" href="#/whole/${id}/${c.n}"><span class="cpic" style="${bg(bookArt(id, c.n, true))}"></span><span class="cbody"><small>Chapter ${c.n}</small><b>${esc(c.title)}</b><span>${done.includes(c.n) ? 'Done' : (st.heard || []).includes(c.n) ? 'Heard — exercises to do' : c.n === at ? 'Your bookmark' : ''}</span></span></a>`).join('')}</div>
+    ${notes.length ? `<details class="card note" style="margin-top:13px"><summary><b>For grown-ups</b> — ${notes.length} chapter${notes.length > 1 ? 's' : ''} carry an attitude of ${m.year}. Nothing is cut.</summary><ul>${notes.map((c) => `<li><b>Chapter ${c.n}.</b> ${esc(c.note || '')}${c.needsReview ? ' <i>(awaiting a named reviewer)</i>' : ''}</li>`).join('')}</ul></details>` : ''}`;
 }
-export async function openChapterExercises(n) {
-  await Promise.all([loadBook(), loadLexicon()]);
-  const c = book().chapters.find((x) => x.n === +n), t = chapterText(+n);
-  const p = { id: `alice-${n}`, work: 'alice', questions: c.questions, words: c.wordBank };
+export async function openChapterExercises(id, n) {
+  await Promise.all([loadBook(id), loadLexicon()]);
+  const m = bookMeta(id), c = book(id)?.chapters.find((x) => x.n === +n), t = c && chapterText(id, +n);
+  if (!c) { S.run = { mode: 'chapex', error: true }; return; }
+  const p = { id: `${id}-${n}`, work: id, questions: c.questions, words: c.wordBank };
   const sets = storyExercises(p, t.text, lex());
-  sets.copy = c.line ? [{ id: `chapcopy:${n}`, kind: 'copy', type: 'copy', prompt: 'Copy this line exactly — every capital and comma.', text: c.line, who: 'Lewis Carroll', work: 'alice', hint: ['Copy a few words at a time.'], explain: c.line }] : sets.copy;
-  S.run = { mode: 'chapex', n: +n, sets, title: `${c.n}. ${c.title}`, evaluate: c.evaluate };
+  sets.copy = c.line ? [{ id: `chapcopy:${id === 'alice' ? '' : id + ':'}${n}`, kind: 'copy', type: 'copy', prompt: 'Copy this line exactly — every capital and comma.', text: c.line, who: m.author, work: id, hint: ['Copy a few words at a time.'], explain: c.line }] : sets.copy;
+  S.run = { mode: 'chapex', book: id, n: +n, sets, title: `${c.n}. ${c.title}`, evaluate: c.evaluate };
 }
 export function chapterExercisesView() {
-  const r = S.run, k = kid(), d = k.reading[`alice-${r.n}`]?.ex || {};
+  const r = S.run, k = kid();
+  if (!r || r.error) return empty('oops', 'Those exercises are not here.', link('Books', '#/library/books'));
+  const m = bookMeta(r.book), d = k.reading[`${r.book}-${r.n}`]?.ex || {};
   const tiles = EX.filter(([e]) => e !== 'aloud').map(([id, name, ic]) => {
     const n = id === 'talk' ? 1 : r.sets[id]?.length || 0; if (!n) return '';
-    const href = id === 'talk' ? `#/whole/alice/${r.n}/talk` : `#/whole/alice/${r.n}/do/${id}`;
+    const href = id === 'talk' ? `#/whole/${r.book}/${r.n}/talk` : `#/whole/${r.book}/${r.n}/do/${id}`;
     return `<a class="extile${d[id] ? ' done' : ''}" href="${href}"><span class="exi">${icon(d[id] ? 'check' : ic)}</span><b>${esc(name)}</b><small>${d[id] ? (typeof d[id] === 'object' ? `${d[id].right} of ${d[id].n} right` : 'Done') : id === 'understand' ? 'Passing this marks the chapter done' : `${n} to do`}</small></a>`;
   }).join('');
-  return pageHead({ title: r.title, sub: 'the exercises for this chapter', back: { label: 'Alice', href: '#/whole/alice' } }) + `<div class="exgrid">${tiles}</div>`;
+  return pageHead({ title: r.title, sub: 'the exercises for this chapter', back: { label: m.short, href: `#/whole/${r.book}` } }) + `<div class="exgrid">${tiles}</div>`;
 }
 export function openChapterExercise(n, ex) {
   const r = S.run; if (!r?.sets?.[ex]) return false;
-  S.run = { mode: 'ex', pid: `alice-${n}`, chapter: +n, ex, items: r.sets[ex], i: 0, right: 0, state: null, hintN: 0, phase: 'check', sets: r.sets, title: r.title, name: EX.find((x) => x[0] === ex)[1], evaluate: r.evaluate };
+  S.run = { mode: 'ex', book: r.book, pid: `${r.book}-${n}`, chapter: +n, ex, items: r.sets[ex], i: 0, right: 0, state: null, hintN: 0, phase: 'check', sets: r.sets, title: r.title, name: EX.find((x) => x[0] === ex)[1], evaluate: r.evaluate };
   return true;
 }
 export function finishChapterExercise() {
-  const r = S.run, k = kid(), key = `alice-${r.chapter}`, rec = (k.reading[key] ||= {}); rec.ex ||= {};
+  const r = S.run, k = kid(), m = bookMeta(r.book), key = `${r.book}-${r.chapter}`, rec = (k.reading[key] ||= {}); rec.ex ||= {};
   rec.ex[r.ex] = { right: r.right, n: r.items.length, at: Date.now() };
   if (r.ex === 'understand' && r.right >= Math.ceil(r.items.length * 0.75)) {
-    const id = `bk-alice-${r.chapter}`, st = (k.stops[id] ||= { passed: false, best: 0, tries: 0 }); st.tries++; st.best = Math.max(st.best, r.right);
-    const b = (k.reading['book:alice'] ||= { at: r.chapter, done: [] });
-    if (!st.passed) { st.passed = true; taught(k, id); pay('stop'); mark('stop', `Alice, chapter ${r.chapter}`); b.done = [...new Set([...(b.done || []), r.chapter])]; if (r.chapter < 12) b.at = r.chapter + 1; }
+    const id = `bk-${r.book}-${r.chapter}`, st = (k.stops[id] ||= { passed: false, best: 0, tries: 0 }); st.tries++; st.best = Math.max(st.best, r.right);
+    const b = (k.reading[`book:${r.book}`] ||= { at: r.chapter, done: [] });
+    if (!st.passed) { st.passed = true; taught(k, id); pay('stop'); mark('stop', `${m.short}, chapter ${r.chapter}`); b.done = [...new Set([...(b.done || []), r.chapter])]; if (r.chapter < m.chapters.length) b.at = r.chapter + 1; }
   }
   sfx('finish'); save(); checkMedals();
-  location.hash = `#/whole/alice/${r.chapter}/do`;
+  location.hash = `#/whole/${r.book}/${r.chapter}/do`;
 }
 
 export const STORY_ACTIONS = {

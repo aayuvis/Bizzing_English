@@ -39,8 +39,8 @@ export function readingStops() {
   return PASSAGES.filter(shippable).map((p) => ({ id: stopId(p), passage: p.id, title: p.title, level: levelOf(p), band: p.band, kind: 'passage', strand: 'reading',
     iCan: `I can understand “${p.title}” from ${work(p.work)?.title || 'a classic'}.` }));
 }
-import { BOOK } from './data/book-alice.js';
-/* the whole book: each chapter of Alice is a stop on Reading level 8 ("whole novels") */
-export const bookStops = () => BOOK.chapters.map((c) => ({ id: `bk-alice-${c.n}`, chapter: c.n, title: `Alice, chapter ${c.n}: ${c.title}`, level: 8, band: 2, kind: 'passage', strand: 'reading',
-  iCan: `I can understand chapter ${c.n} of Alice’s Adventures in Wonderland.`, questions: c.questions }));
+import { BOOKS } from './book.js';
+/* the whole books: each chapter is a stop on Reading level 8 ("whole novels") */
+export const bookStops = () => BOOKS.flatMap((b) => b.chapters.map((c) => ({ id: `bk-${b.id}-${c.n}`, book: b.id, chapter: c.n, title: `${b.short}, chapter ${c.n}: ${c.title}`, level: 8, band: b.band, kind: 'passage', strand: 'reading',
+  iCan: `I can understand chapter ${c.n} of ${b.title}.`, questions: c.questions })));
 export const readingStop = (id) => readingStops().find((s) => s.id === id) || bookStops().find((s) => s.id === id) || null;

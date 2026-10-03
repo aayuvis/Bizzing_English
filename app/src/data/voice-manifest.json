@@ -427,6 +427,718 @@
 54980,
 "f91952238a"
 ],
+"bk/wind-1-0": [
+88370,
+"1cee44cd6d"
+],
+"bk/wind-1-1": [
+119830,
+"f8fcf2b2f9"
+],
+"bk/wind-1-10": [
+88580,
+"fe51dcd5a0"
+],
+"bk/wind-1-11": [
+91680,
+"628541c64e"
+],
+"bk/wind-1-12": [
+90020,
+"7db3573de1"
+],
+"bk/wind-1-2": [
+84500,
+"41c1d123d4"
+],
+"bk/wind-1-3": [
+104450,
+"e291b4e4a3"
+],
+"bk/wind-1-4": [
+99140,
+"e97c15df3e"
+],
+"bk/wind-1-5": [
+96380,
+"1463a03bf1"
+],
+"bk/wind-1-6": [
+117000,
+"d66fee7f5d"
+],
+"bk/wind-1-7": [
+105220,
+"02202a53ab"
+],
+"bk/wind-1-8": [
+96310,
+"fb95b30356"
+],
+"bk/wind-1-9": [
+99140,
+"f96913353d"
+],
+"bk/wind-10-0": [
+89060,
+"76ed214cb0"
+],
+"bk/wind-10-1": [
+82300,
+"b22172d928"
+],
+"bk/wind-10-10": [
+80500,
+"b3b4e3cf20"
+],
+"bk/wind-10-11": [
+79680,
+"9c79cf8d60"
+],
+"bk/wind-10-12": [
+105220,
+"548d1bc6e1"
+],
+"bk/wind-10-13": [
+87340,
+"4f8e548921"
+],
+"bk/wind-10-14": [
+87120,
+"c48889ced5"
+],
+"bk/wind-10-15": [
+88370,
+"f771adb0d1"
+],
+"bk/wind-10-16": [
+92590,
+"c3c27e06f2"
+],
+"bk/wind-10-17": [
+95280,
+"283a43fd76"
+],
+"bk/wind-10-18": [
+100920,
+"85f1733034"
+],
+"bk/wind-10-2": [
+84500,
+"ed39a54b6f"
+],
+"bk/wind-10-3": [
+84310,
+"73d410e5f1"
+],
+"bk/wind-10-4": [
+88580,
+"10633759e9"
+],
+"bk/wind-10-5": [
+94850,
+"4df4d5193b"
+],
+"bk/wind-10-6": [
+100920,
+"fa75c913b1"
+],
+"bk/wind-10-7": [
+100729,
+"0ae0918762"
+],
+"bk/wind-10-8": [
+85680,
+"92a423dc48"
+],
+"bk/wind-10-9": [
+86090,
+"1fb414019c"
+],
+"bk/wind-11-0": [
+126940,
+"2e5dc8d978"
+],
+"bk/wind-11-1": [
+86090,
+"c406e53c8e"
+],
+"bk/wind-11-10": [
+108860,
+"5e36365177"
+],
+"bk/wind-11-11": [
+89330,
+"2ad66c20e6"
+],
+"bk/wind-11-12": [
+106580,
+"8daea8baf9"
+],
+"bk/wind-11-13": [
+100509,
+"7ffeff1808"
+],
+"bk/wind-11-14": [
+85820,
+"6bc2eebf34"
+],
+"bk/wind-11-15": [
+85610,
+"ba29b8a9c1"
+],
+"bk/wind-11-16": [
+88100,
+"238f3ba338"
+],
+"bk/wind-11-17": [
+101210,
+"120fac6036"
+],
+"bk/wind-11-2": [
+95280,
+"01092e4adc"
+],
+"bk/wind-11-3": [
+106580,
+"abab6e8a8e"
+],
+"bk/wind-11-4": [
+85970,
+"bc2c1a280f"
+],
+"bk/wind-11-5": [
+104660,
+"d9ccf515a2"
+],
+"bk/wind-11-6": [
+96100,
+"cea903109b"
+],
+"bk/wind-11-7": [
+106180,
+"dbfec46de6"
+],
+"bk/wind-11-8": [
+102310,
+"11cdf93d94"
+],
+"bk/wind-11-9": [
+105479,
+"42a054afe0"
+],
+"bk/wind-12-0": [
+103820,
+"1eac62acb5"
+],
+"bk/wind-12-1": [
+88780,
+"ac2bf90b77"
+],
+"bk/wind-12-10": [
+99620,
+"98e0e8e742"
+],
+"bk/wind-12-11": [
+107210,
+"f49be43bd1"
+],
+"bk/wind-12-12": [
+112460,
+"7daa0bc9bb"
+],
+"bk/wind-12-13": [
+102240,
+"4904974040"
+],
+"bk/wind-12-2": [
+109900,
+"10d5f67c2d"
+],
+"bk/wind-12-3": [
+104740,
+"fa5754ffd6"
+],
+"bk/wind-12-4": [
+93190,
+"f6ae1103ea"
+],
+"bk/wind-12-5": [
+91750,
+"986b61b04b"
+],
+"bk/wind-12-6": [
+91130,
+"d00f8384fb"
+],
+"bk/wind-12-7": [
+84860,
+"8084d89cf0"
+],
+"bk/wind-12-8": [
+100800,
+"efea5dc61f"
+],
+"bk/wind-12-9": [
+102789,
+"2ecc4c5931"
+],
+"bk/wind-2-0": [
+88100,
+"88e1ce3dbe"
+],
+"bk/wind-2-1": [
+105620,
+"008fba532b"
+],
+"bk/wind-2-10": [
+93140,
+"413a0b40fd"
+],
+"bk/wind-2-11": [
+102580,
+"ffb48c9d17"
+],
+"bk/wind-2-12": [
+84720,
+"db02fd60fc"
+],
+"bk/wind-2-2": [
+83880,
+"eec4dccfe0"
+],
+"bk/wind-2-3": [
+119690,
+"13d5933040"
+],
+"bk/wind-2-4": [
+97490,
+"34f5a6d6cb"
+],
+"bk/wind-2-5": [
+92039,
+"4ad0859341"
+],
+"bk/wind-2-6": [
+105000,
+"3336c22e5e"
+],
+"bk/wind-2-7": [
+110660,
+"e176c6367e"
+],
+"bk/wind-2-8": [
+108380,
+"f14164eb96"
+],
+"bk/wind-2-9": [
+96240,
+"e2bd32a49d"
+],
+"bk/wind-3-0": [
+79680,
+"5ba65b92ce"
+],
+"bk/wind-3-1": [
+108460,
+"c6faff565e"
+],
+"bk/wind-3-10": [
+80230,
+"f6a6e6b6e9"
+],
+"bk/wind-3-11": [
+103009,
+"ef69177f8d"
+],
+"bk/wind-3-12": [
+99220,
+"6888fc7ee5"
+],
+"bk/wind-3-13": [
+100030,
+"28794a74d3"
+],
+"bk/wind-3-2": [
+71330,
+"ea60488f58"
+],
+"bk/wind-3-3": [
+88580,
+"f91acb35e8"
+],
+"bk/wind-3-4": [
+102530,
+"9e297f4561"
+],
+"bk/wind-3-5": [
+103560,
+"8b8a7706c3"
+],
+"bk/wind-3-6": [
+77810,
+"107f93fa48"
+],
+"bk/wind-3-7": [
+104380,
+"9ccd1633c5"
+],
+"bk/wind-3-8": [
+93000,
+"623ba1adc5"
+],
+"bk/wind-3-9": [
+96500,
+"78511e3158"
+],
+"bk/wind-4-0": [
+92860,
+"dab0e80df5"
+],
+"bk/wind-4-1": [
+102530,
+"64a1995868"
+],
+"bk/wind-4-10": [
+94440,
+"6794da31d6"
+],
+"bk/wind-4-11": [
+103009,
+"e9e310a056"
+],
+"bk/wind-4-12": [
+74300,
+"89b6192bec"
+],
+"bk/wind-4-13": [
+110450,
+"b401dbf3a5"
+],
+"bk/wind-4-2": [
+109340,
+"2a852f3fbc"
+],
+"bk/wind-4-3": [
+105140,
+"9de01d087e"
+],
+"bk/wind-4-4": [
+109009,
+"897cad1f9c"
+],
+"bk/wind-4-5": [
+85270,
+"40d6e24ad6"
+],
+"bk/wind-4-6": [
+88850,
+"40596cdf7e"
+],
+"bk/wind-4-7": [
+124870,
+"381b7cc7f5"
+],
+"bk/wind-4-8": [
+95690,
+"3f7b76cad4"
+],
+"bk/wind-4-9": [
+111479,
+"7dc8de4cb4"
+],
+"bk/wind-5-0": [
+88990,
+"c09043ad63"
+],
+"bk/wind-5-1": [
+115009,
+"21de59d0f2"
+],
+"bk/wind-5-10": [
+106440,
+"a917ca3626"
+],
+"bk/wind-5-11": [
+97560,
+"df620858e1"
+],
+"bk/wind-5-12": [
+95690,
+"6a138e3aa0"
+],
+"bk/wind-5-13": [
+109700,
+"2e725d0df5"
+],
+"bk/wind-5-14": [
+84650,
+"e319dfec69"
+],
+"bk/wind-5-15": [
+73460,
+"1403e7a008"
+],
+"bk/wind-5-2": [
+102100,
+"606d9bdfc6"
+],
+"bk/wind-5-3": [
+96020,
+"5c847c67ad"
+],
+"bk/wind-5-4": [
+116180,
+"dfa5295b3c"
+],
+"bk/wind-5-5": [
+101539,
+"af69c661de"
+],
+"bk/wind-5-6": [
+97610,
+"486091752c"
+],
+"bk/wind-5-7": [
+110660,
+"36c3035a94"
+],
+"bk/wind-5-8": [
+74500,
+"f61e8c8316"
+],
+"bk/wind-5-9": [
+106870,
+"e75bd302a8"
+],
+"bk/wind-6-0": [
+94180,
+"eb81b83ad4"
+],
+"bk/wind-6-1": [
+101690,
+"f76038e49d"
+],
+"bk/wind-6-10": [
+122660,
+"5db0da8cb6"
+],
+"bk/wind-6-11": [
+93960,
+"6e5f7d4b61"
+],
+"bk/wind-6-12": [
+118390,
+"93f0bf347f"
+],
+"bk/wind-6-2": [
+109700,
+"68612a84c1"
+],
+"bk/wind-6-3": [
+120190,
+"6da07243c3"
+],
+"bk/wind-6-4": [
+100920,
+"49d7fce1df"
+],
+"bk/wind-6-5": [
+106660,
+"01e1b63da0"
+],
+"bk/wind-6-6": [
+96310,
+"bd6763f406"
+],
+"bk/wind-6-7": [
+106390,
+"01a32914b6"
+],
+"bk/wind-6-8": [
+87620,
+"90540482d1"
+],
+"bk/wind-6-9": [
+79940,
+"9d7908d0a1"
+],
+"bk/wind-7-0": [
+84580,
+"c73dccee1d"
+],
+"bk/wind-7-1": [
+83470,
+"d9aa1e9dc7"
+],
+"bk/wind-7-10": [
+92640,
+"3d6fb7d119"
+],
+"bk/wind-7-11": [
+113620,
+"3b5b75ae7a"
+],
+"bk/wind-7-2": [
+83950,
+"0641e02ec3"
+],
+"bk/wind-7-3": [
+86930,
+"2db923ecf3"
+],
+"bk/wind-7-4": [
+104180,
+"215a476d3a"
+],
+"bk/wind-7-5": [
+107620,
+"c1f1b32c39"
+],
+"bk/wind-7-6": [
+104110,
+"d8e7f40993"
+],
+"bk/wind-7-7": [
+72650,
+"e68b8314be"
+],
+"bk/wind-7-8": [
+101539,
+"52445c6f31"
+],
+"bk/wind-7-9": [
+88100,
+"34debfd6b2"
+],
+"bk/wind-8-0": [
+129070,
+"e5c2f8efe0"
+],
+"bk/wind-8-1": [
+93890,
+"8c3e582a4a"
+],
+"bk/wind-8-10": [
+89950,
+"b9fd5d8066"
+],
+"bk/wind-8-11": [
+87550,
+"0765de0604"
+],
+"bk/wind-8-12": [
+82780,
+"1a2136cb09"
+],
+"bk/wind-8-13": [
+87000,
+"424306623d"
+],
+"bk/wind-8-14": [
+97420,
+"2784a6c6b8"
+],
+"bk/wind-8-2": [
+85060,
+"e2f039efdc"
+],
+"bk/wind-8-3": [
+88440,
+"2a7ec3f380"
+],
+"bk/wind-8-4": [
+94370,
+"e1cdd78043"
+],
+"bk/wind-8-5": [
+83400,
+"5c6d7af3fa"
+],
+"bk/wind-8-6": [
+99220,
+"fb03b9f02e"
+],
+"bk/wind-8-7": [
+80780,
+"15d6a9b65c"
+],
+"bk/wind-8-8": [
+111000,
+"a02b8757a9"
+],
+"bk/wind-8-9": [
+106580,
+"552e89fab2"
+],
+"bk/wind-9-0": [
+131160,
+"10189b712c"
+],
+"bk/wind-9-1": [
+117979,
+"c199b1e846"
+],
+"bk/wind-9-10": [
+81050,
+"fbc62b31a5"
+],
+"bk/wind-9-11": [
+114789,
+"426abe993e"
+],
+"bk/wind-9-12": [
+126460,
+"9114ed57a1"
+],
+"bk/wind-9-13": [
+95400,
+"725fc05a63"
+],
+"bk/wind-9-14": [
+91060,
+"4ca23bc147"
+],
+"bk/wind-9-15": [
+114380,
+"5847fa1868"
+],
+"bk/wind-9-16": [
+91490,
+"ce385c3349"
+],
+"bk/wind-9-2": [
+104660,
+"35f622f458"
+],
+"bk/wind-9-3": [
+92229,
+"11fbe7a1ce"
+],
+"bk/wind-9-4": [
+99479,
+"26f7b5e305"
+],
+"bk/wind-9-5": [
+109270,
+"4200755cc2"
+],
+"bk/wind-9-6": [
+114600,
+"f202eb94fa"
+],
+"bk/wind-9-7": [
+100920,
+"ef19ad42f8"
+],
+"bk/wind-9-8": [
+102020,
+"9fa7261760"
+],
+"bk/wind-9-9": [
+63670,
+"c097c8d5e6"
+],
 "dict/aesop-hare-tortoise-0": [
 3580,
 "7148634612"
@@ -495,6 +1207,14 @@
 6410,
 "788ca52fad"
 ],
+"dict/grimm-elves-0": [
+3910,
+"1a5a2f9ee8"
+],
+"dict/grimm-elves-1": [
+5380,
+"ce4d85afde"
+],
 "dict/happyprince-swallow-0": [
 4610,
 "4f6dfe08e7"
@@ -518,6 +1238,30 @@
 "dict/happyprince-swallow-5": [
 2620,
 "212d5fdb97"
+],
+"dict/heidi-fire-0": [
+2180,
+"1d2158525a"
+],
+"dict/heidi-fire-1": [
+3650,
+"a60254cb81"
+],
+"dict/heidi-fire-2": [
+4130,
+"61b1fcb5a8"
+],
+"dict/heidi-fire-3": [
+2180,
+"de14c36814"
+],
+"dict/heidi-fire-4": [
+5640,
+"b5ed933d22"
+],
+"dict/heidi-fire-5": [
+5570,
+"7bc8866baa"
 ],
 "dict/jungle-mowgli-0": [
 5780,
@@ -959,6 +1703,26 @@
 7630,
 "74c3a2e515"
 ],
+"st/grimm-elves-0": [
+10340,
+"d03a57cb34"
+],
+"st/grimm-elves-1": [
+35520,
+"575ac5abd0"
+],
+"st/grimm-elves-2": [
+20620,
+"ea3aed9c24"
+],
+"st/grimm-elves-3": [
+17380,
+"1f098c62c5"
+],
+"st/grimm-elves-4": [
+18410,
+"a0af33bf5b"
+],
 "st/happyprince-swallow-0": [
 13990,
 "9dfe1a3501"
@@ -982,6 +1746,22 @@
 "st/happyprince-swallow-5": [
 16970,
 "9bd69ada1f"
+],
+"st/heidi-fire-0": [
+40630,
+"8403865ea2"
+],
+"st/heidi-fire-1": [
+21500,
+"a448fc29b8"
+],
+"st/heidi-fire-2": [
+14210,
+"d5a9352212"
+],
+"st/heidi-fire-3": [
+27580,
+"2d586f6b1c"
 ],
 "st/holmes-observe-0": [
 34080,
@@ -1502,6 +2282,246 @@
 "stop/la1-origin-story": [
 6670,
 "35ce9b32b8"
+],
+"stop/la10-indian-learn": [
+25370,
+"0812743ce3"
+],
+"stop/la10-indian-story": [
+11300,
+"98a3b71fd9"
+],
+"stop/la10-world-learn": [
+18890,
+"2ce80ad420"
+],
+"stop/la10-world-story": [
+10820,
+"034d35e21c"
+],
+"stop/la2-india-learn": [
+13780,
+"c9e8bfa2d9"
+],
+"stop/la2-india-story": [
+12600,
+"1e55dca3c9"
+],
+"stop/la2-world-learn": [
+11500,
+"8f1136f740"
+],
+"stop/la2-world-story": [
+10200,
+"921f71ae6f"
+],
+"stop/la3-old-english-learn": [
+25730,
+"b60acce08b"
+],
+"stop/la3-old-english-story": [
+11380,
+"f7a12bca15"
+],
+"stop/la3-print-learn": [
+32420,
+"2ea577f61b"
+],
+"stop/la3-print-story": [
+13850,
+"3331ab176d"
+],
+"stop/la4-shakespeare-learn": [
+18740,
+"4e093d6192"
+],
+"stop/la4-shakespeare-story": [
+11090,
+"c2479bce03"
+],
+"stop/la5-fables-learn": [
+12000,
+"935e424057"
+],
+"stop/la5-fables-story": [
+11780,
+"63748106a8"
+],
+"stop/la5-myths-learn": [
+14690,
+"53bccc73ea"
+],
+"stop/la5-myths-story": [
+8880,
+"fdabe1f204"
+],
+"stop/la6-dialect-learn": [
+26540,
+"8d672ef536"
+],
+"stop/la6-dialect-story": [
+13510,
+"89f2ed2f8c"
+],
+"stop/la6-register-learn": [
+16340,
+"176d90ccb0"
+],
+"stop/la6-register-story": [
+12410,
+"43b4207b91"
+],
+"stop/la7-antithesis-learn": [
+17520,
+"46890f3aa9"
+],
+"stop/la7-antithesis-story": [
+11930,
+"ad886bed6f"
+],
+"stop/la7-devices-learn": [
+21100,
+"41d552aa92"
+],
+"stop/la7-devices-story": [
+11230,
+"a1f6d0fd96"
+],
+"stop/la8-concise-learn": [
+13440,
+"c0622cdbe2"
+],
+"stop/la8-concise-story": [
+10610,
+"94e3ca6937"
+],
+"stop/la8-modifiers-learn": [
+20830,
+"be774e0cb5"
+],
+"stop/la8-modifiers-story": [
+9290,
+"308141c2c2"
+],
+"stop/la9-pentameter-learn": [
+28610,
+"9301524c83"
+],
+"stop/la9-pentameter-story": [
+11500,
+"1a3e37ee77"
+],
+"stop/la9-stress-learn": [
+15240,
+"98cf088988"
+],
+"stop/la9-stress-story": [
+11500,
+"09d03b90e7"
+],
+"stop/li1-problem-learn": [
+14810,
+"baa964c40d"
+],
+"stop/li1-problem-story": [
+8260,
+"28b3228b1a"
+],
+"stop/li1-who-where-learn": [
+15360,
+"d125a792ff"
+],
+"stop/li1-who-where-story": [
+8950,
+"97a2a7e6a1"
+],
+"stop/li10-case-learn": [
+12050,
+"1f182e768e"
+],
+"stop/li10-case-story": [
+7630,
+"d7e40b31b4"
+],
+"stop/li2-traits-learn": [
+18410,
+"a808e7aa34"
+],
+"stop/li2-traits-story": [
+9020,
+"68dae60c8a"
+],
+"stop/li2-wants-learn": [
+15240,
+"053322c417"
+],
+"stop/li2-wants-story": [
+7990,
+"f5a56865ff"
+],
+"stop/li3-mood-learn": [
+16129,
+"bf99a098e1"
+],
+"stop/li3-mood-story": [
+9580,
+"a9ef712339"
+],
+"stop/li4-theme-learn": [
+18120,
+"3d95b64a52"
+],
+"stop/li4-theme-story": [
+10340,
+"45410c77c9"
+],
+"stop/li5-simile-learn": [
+20140,
+"bede159ee5"
+],
+"stop/li5-simile-story": [
+9980,
+"dec073ac81"
+],
+"stop/li5-sound-learn": [
+18480,
+"907493aed4"
+],
+"stop/li5-sound-story": [
+10200,
+"0f34818795"
+],
+"stop/li6-form-learn": [
+26280,
+"07aab295d6"
+],
+"stop/li6-form-story": [
+11020,
+"697d2b572d"
+],
+"stop/li7-genre-learn": [
+23710,
+"9977780da5"
+],
+"stop/li7-genre-story": [
+10750,
+"0949e042a2"
+],
+"stop/li8-periods-learn": [
+30620,
+"4c2d9c4aae"
+],
+"stop/li8-periods-story": [
+8400,
+"0ab762d766"
+],
+"stop/li9-compare-learn": [
+16340,
+"1a3fccc781"
+],
+"stop/li9-compare-story": [
+8690,
+"6d86001cd8"
 ],
 "stop/s1-adj-learn": [
 6820,

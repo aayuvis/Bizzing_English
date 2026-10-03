@@ -4,7 +4,9 @@
 
 import { S, kid, save, render, pay, checkMedals, isDark } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot } from '../ui.js';
-import { builderNew, builderStep, rushNew, rushStep, whoRound, ROUND_MS } from '../games.js';
+import { builderNew, builderStep, rushNew, rushStep, whoRound, figureRound, FIGURE_KINDS, ROUND_MS } from '../games.js';
+import { FIGURES } from '../data/literature.js';
+import { cleared } from '../data/rights.js';
 import { shippedLines } from '../reading.js';
 import { WORKS } from '../data/library.js';
 import { plate } from '../worlds.js';
@@ -14,6 +16,7 @@ import { bumpDay } from '../model.js';
 export const GAMES = {
   builder: { name: 'Sentence Builder', world: 'scriptorium', practises: 'main and dependent clauses, in both orders', how: 'Tap the three parts in an order that makes a sentence. Build it the other way round next time for a bonus.', keys: '1 2 3 pick · Backspace undo' },
   rush: { name: 'Punctuation Rush', world: 'study', practises: 'where commas go — lists, openings, names and asides', how: 'Tap every gap that needs a comma, then Enter. Right commas score; wrong ones cost a point.', keys: '← → move · Space comma · Enter next' },
+  figure: { name: 'Figure Hunt', world: 'lakeside', practises: 'similes, metaphors, personification and alliteration in real lines', how: 'Read the line from a classic. Which figure of speech is it — or is it none?', keys: '1–5 choose' },
   who: { name: 'Who Said It?', world: 'playhouse', practises: 'famous lines from the books in the Library', how: 'Read the line. Who said it — or wrote it?', keys: '1–4 choose' },
 };
 
@@ -32,6 +35,7 @@ export function leaveGame() { stopTimer(); stopMusic(); }
 function startGame() {
   const r = S.run, k = kid(), seed = `${k.id}:${Date.now()}`;
   r.phase = 'play';
+  if (r.id === 'figure') { r.g = { kind: 'figure', rounds: figureRound(FIGURES.filter((f) => cleared(WORKS.find((w) => w.id === f.work))), WORKS, seed), i: 0, score: 0, state: null }; music('games'); return render(); }
   if (r.id === 'who') { r.g = { kind: 'who', rounds: whoRound(shippedLines(), WORKS, seed), i: 0, score: 0, state: null }; music('games'); return render(); }
   r.g = r.id === 'builder' ? builderNew(seed, k.band) : rushNew(seed, k.band);
   music('games');
@@ -57,7 +61,7 @@ function finish() {
   const right = g.kind === 'builder' ? g.built : g.kind === 'rush' ? g.right : g.score;
   for (let i = 0; i < Math.min(right, 10); i++) pay('answer');
   bumpDay(k, 'right', right); bumpDay(k, 'answers', right);
-  k.last = { what: 'game', title: GAMES[r.id].name, right: g.kind === 'builder' ? `${g.built} sentences` : g.kind === 'rush' ? `${g.right} commas` : `${g.score} lines`, at: Date.now() };
+  k.last = { what: 'game', title: GAMES[r.id].name, right: g.kind === 'builder' ? `${g.built} sentences` : g.kind === 'rush' ? `${g.right} commas` : g.kind === 'figure' ? `${g.score} figures` : `${g.score} lines`, at: Date.now() };
   r.phase = 'done'; r.newBest = newBest; sfx('finish'); save(); render(); checkMedals(); render();
 }
 
@@ -68,9 +72,16 @@ export function gameView() {
     <h2>${esc(gm.name)}</h2><p style="margin:0;max-width:52ch">${esc(gm.how)}</p><p class="note" style="margin:0">Keys: ${esc(gm.keys)} — or just tap.</p>${btn('Start', 'game-start', { ic: 'next' })}</div></div>`;
   const g = r.g;
   if (r.phase === 'done') {
-    const what = g.kind === 'builder' ? `${g.built} sentences built, ${g.variety} turned round` : g.kind === 'rush' ? `${g.right} commas placed, ${g.clean} sentences perfect` : `${g.score} of ${g.rounds.length} lines matched`;
+    const what = g.kind === 'builder' ? `${g.built} sentences built, ${g.variety} turned round` : g.kind === 'rush' ? `${g.right} commas placed, ${g.clean} sentences perfect` : g.kind === 'figure' ? `${g.score} of ${g.rounds.length} figures spotted` : `${g.score} of ${g.rounds.length} lines matched`;
     return head + `<div class="game"><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><div class="score">${g.score}</div><p>${esc(what)}.</p><p class="note">You practised ${esc(gm.practises)}. Your best: ${kid().games[r.id].best}${r.newBest ? ' — a new best' : ''}.</p>
       <div class="row" style="justify-content:center">${btn('Play again', 'game-start', { ic: 'undo' })}${link('All games', '#/play', { cls: 'out', ic: 'play' })}</div></div></div>`;
+  }
+  if (g.kind === 'figure') {
+    const q = g.rounds[g.i], st = g.state, k = FIGURE_KINDS[q.answer];
+    return head + `<div class="game"><div class="gamehud"><span>Line ${g.i + 1} of ${g.rounds.length}</span><span>Score ${g.score}</span></div>
+      <div class="card item"><blockquote class="prompt big" style="margin:0">“${esc(q.text)}”</blockquote><p class="subp">${esc(q.work)} — which figure of speech?</p>
+      <div class="opts">${FIGURE_KINDS.map(([, name], i) => `<button class="opt${st ? (i === q.answer ? ' right' : st.pick === i ? ' wrong' : '') : ''}" data-act="fig-pick" data-arg="${i}" ${st ? 'disabled' : ''}><kbd>${i + 1}</kbd><span>${esc(name)}</span></button>`).join('')}</div>
+      ${st ? `<div class="feedback ${st.ok ? 'ok pop' : 'no'}"><div class="hd">${icon(st.ok ? 'check' : 'cross')}${st.ok ? 'Right!' : `It is ${esc(k[1].toLowerCase())}`}</div><div>${esc(k[1])}: it ${esc(k[2])}.</div>${st.ok ? '' : btn('Next', 'who-next', { ic: 'next' })}</div>` : ''}</div></div>`;
   }
   if (g.kind === 'who') {
     const q = g.rounds[g.i], st = g.state;
@@ -102,12 +113,14 @@ export const PLAY_ACTIONS = {
   'r-submit': () => step({ type: 'submit' }),
   'who-pick': (a) => { const g = S.run.g, q = g.rounds[g.i]; if (g.state) return; const ok = +a === q.answer; g.state = { pick: +a, ok }; if (ok) { g.score++; sfx('right'); setTimeout(() => { if (S.run?.g === g && g.state?.ok) whoNext(); }, 1100); } else sfx('wrong'); render(); },
   'who-next': () => whoNext(),
+  'fig-pick': (a) => { const g = S.run.g, q = g.rounds[g.i]; if (g.state) return; const ok = +a === q.answer; g.state = { pick: +a, ok }; if (ok) { g.score++; sfx('right'); setTimeout(() => { if (S.run?.g === g && g.state?.ok) whoNext(); }, 1100); } else sfx('wrong'); render(); },
 };
 function whoNext() { const g = S.run.g; g.i++; g.state = null; if (g.i >= g.rounds.length) { g.over = true; finish(); } else render(); }
 
 export function playKey(e) {
   const r = S.run; if (!r || r.mode !== 'game' || r.phase !== 'play') return false;
   const g = r.g;
+  if (g.kind === 'figure') { if (/^[1-5]$/.test(e.key) && !g.state) { PLAY_ACTIONS['fig-pick'](+e.key - 1); return true; } if (e.key === 'Enter' && g.state && !g.state.ok) { whoNext(); return true; } return false; }
   if (g.kind === 'who') { if (/^[1-4]$/.test(e.key) && !g.state) { PLAY_ACTIONS['who-pick'](+e.key - 1); return true; } if (e.key === 'Enter' && g.state && !g.state.ok) { whoNext(); return true; } return false; }
   if (g.kind === 'builder') { if (/^[1-3]$/.test(e.key)) { step({ type: 'pick', i: +e.key - 1 }); return true; } if (e.key === 'Backspace') { step({ type: 'undo' }); return true; } return false; }
   if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { step({ type: 'move', d: e.key === 'ArrowRight' ? 1 : -1 }); return true; }

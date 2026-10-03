@@ -12,6 +12,7 @@
 
 import { rng, pick, shuffle, sample, permute, hash } from './rand.js';
 import WRITING from './data/writing.js';
+import { AUTHORED, AUTHORED_STOPS } from './authored.js';
 import { imitate as imitateCheck, SHAPES } from './writing.js';
 import * as SB from './data/sentences.js';
 import * as WP from './data/wordparts.js';
@@ -294,6 +295,16 @@ function defDistractors(key, ctx, n) {
 }
 
 /* ---------------- the public face ---------------- */
+
+/* written questions (authored.js): a stop's own items when the runner names the stop, every stop's when
+   the item test asks for the whole pool; a quoted line is shown under the question, with its book */
+GEN.authored = {
+  keys: (ctx) => (ctx.stop ? (AUTHORED.get(ctx.stop)?.items || []).map((_, i) => `${ctx.stop}:${i}`) : AUTHORED_STOPS.filter((s) => !ctx.band || !s.band || s.band <= ctx.band + 1).flatMap((s) => s.items.map((_, i) => `${s.id}:${i}`))),
+  make: (key) => { const [sid, i] = key.split(':'), x = AUTHORED.get(sid).items[+i];
+    return mc(`au:${sid}:${i}`, 'authored', x.q, x.right, x.wrong, { sub: x.quote ? `“${x.quote}”${x.work ? ` — ${WORKS.find((w) => w.id === x.work)?.title || ''}` : ''}` : '', explain: `${x.right}.`, sources: x.sources,
+      select: [x.right, ...x.wrong].every((o) => `${x.q} ${x.quote || ''}`.toLowerCase().includes(o.toLowerCase())) }); },  // a which-word-in-this-line question: every option is in the line
+
+};
 
 export const KINDS = Object.keys(GEN);
 export const keys = (kind, ctx) => GEN[kind].keys(ctx);

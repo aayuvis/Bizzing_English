@@ -140,6 +140,90 @@
     ]
   },
   {
+    "id": "grimm-elves",
+    "work": "grimm",
+    "title": "The Elves and the Shoemaker",
+    "band": 1,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "A poor shoemaker goes to bed, and wakes to find the work already done.",
+    "text": "There was once a shoemaker, who worked very hard and was very honest: but still he could not earn enough to live upon; and at last all he had in the world was gone, save just leather enough to make one pair of shoes.\n\nThen he cut his leather out, all ready to make up the next day, meaning to rise early in the morning to his work. His conscience was clear and his heart light amidst all his troubles; so he went peaceably to bed, left all his cares to Heaven, and soon fell asleep. In the morning after he had said his prayers, he sat himself down to his work; when, to his great wonder, there stood the shoes all ready made, upon the table. The good man knew not what to say or think at such an odd thing happening. He looked at the workmanship; there was not one false stitch in the whole job; all was so neat and true, that it was quite a masterpiece.\n\nThe same day a customer came in, and the shoes suited him so well that he willingly paid a price higher than usual for them; and the poor shoemaker, with the money, bought leather enough to make two pairs more. In the evening he cut out the work, and went to bed early, that he might get up and begin betimes next day; but he was saved all the trouble, for when he got up in the morning the work was done ready to his hand. Soon in came buyers, who paid him handsomely for his goods, so that he bought leather enough for four pair more. He cut out the work again overnight and found it done in the morning, as before; and so it went on for some time: what was got ready in the evening was always done by daybreak, and the good man soon became thriving and well off again.\n\nOne evening, about Christmas-time, as he and his wife were sitting over the fire chatting together, he said to her, 'I should like to sit up and watch tonight, that we may see who it is that comes and does my work for me.' The wife liked the thought; so they left a light burning, and hid themselves in a corner of the room, behind a curtain that was hung up there, and watched what would happen.",
+    "scenes": [
+      "There was once a shoemaker, who worked very hard and was very honest: but still he could not earn enough to live upon; and at last all he had in the world was gone, save just leather enough to make one pair of shoes.",
+      "Then he cut his leather out, all ready to make up the next day, meaning to rise early in the morning to his work. His conscience was clear and his heart light amidst all his troubles; so he went peaceably to bed, left all his cares to Heaven, and soon fell asleep. In the morning after he had said his prayers, he sat himself down to his work; when, to his great wonder, there stood the shoes all ready made, upon the table. The good man knew not what to say or think at such an odd thing happening. He looked at the workmanship; there was not one false stitch in the whole job; all was so neat and true, that it was quite a masterpiece.",
+      "The same day a customer came in, and the shoes suited him so well that he willingly paid a price higher than usual for them; and the poor shoemaker, with the money, bought leather enough to make two pairs more. In the evening he cut out the work, and went to bed early, that he might get up and begin betimes next day; but he was saved all the trouble, for when he got up in the morning the work was done ready to his hand.",
+      "Soon in came buyers, who paid him handsomely for his goods, so that he bought leather enough for four pair more. He cut out the work again overnight and found it done in the morning, as before; and so it went on for some time: what was got ready in the evening was always done by daybreak, and the good man soon became thriving and well off again.",
+      "One evening, about Christmas-time, as he and his wife were sitting over the fire chatting together, he said to her, 'I should like to sit up and watch tonight, that we may see who it is that comes and does my work for me.' The wife liked the thought; so they left a light burning, and hid themselves in a corner of the room, behind a curtain that was hung up there, and watched what would happen."
+    ],
+    "fk": 11.9,
+    "fkOverride": 5,
+    "level": 5,
+    "words": 401,
+    "sentences": 12,
+    "syllables": 492,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "How much leather did the shoemaker have left at the start?",
+        "right": "Enough for one pair of shoes",
+        "wrong": [
+          "Enough for ten pairs of shoes",
+          "Only a scrap for a shoelace",
+          "Enough for a coat and a belt"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What did the shoemaker find on his table in the morning?",
+        "right": "A finished pair of shoes",
+        "wrong": [
+          "A bag of gold coins",
+          "A note from a customer",
+          "A pile of cut leather"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why could the shoemaker buy more leather each time?",
+        "right": "Buyers paid him well for the perfect shoes",
+        "wrong": [
+          "His wife sold her cakes at market",
+          "A rich uncle sent him some money",
+          "He borrowed it from his neighbour"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Where did the shoemaker and his wife hide to watch?",
+        "right": "Behind a curtain in a corner",
+        "wrong": [
+          "Under the shoemaker's bench",
+          "Inside a big cupboard",
+          "Out in the snowy garden"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What kind of man was the shoemaker?",
+        "right": "Honest and hard-working",
+        "wrong": [
+          "Lazy and careless",
+          "Greedy and unkind",
+          "Clever but dishonest"
+        ]
+      }
+    ],
+    "evaluate": "Who do you think is making the shoes? What makes you think so?",
+    "wordBank": [
+      "workmanship",
+      "handsomely",
+      "honest",
+      "customer",
+      "leather",
+      "curtain"
+    ]
+  },
+  {
     "id": "justso-elephant",
     "work": "justso",
     "title": "The Elephant's Child asks a question",
@@ -1303,6 +1387,87 @@
       "untrimmed",
       "trailing",
       "excitement"
+    ]
+  },
+  {
+    "id": "heidi-fire",
+    "work": "heidi",
+    "title": "The mountains on fire",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "At sunset the mountains seem to catch fire. A goatherd says it happens every night.",
+    "text": "And thus imperceptibly the day had crept on to its close, and now the sun was on the point of sinking out of sight behind the high mountains. Heidi was again sitting on the ground, silently gazing at the blue bell-shaped flowers, as they glistened in the evening sun, for a golden light lay on the grass and flowers, and the rocks above were beginning to shine and glow. All at once she sprang to her feet, \"Peter! Peter! everything is on fire! All the rocks are burning, and the great snow mountain and the sky! O look, look! the high rock up there is red with flame! O the beautiful, fiery snow! Stand up, Peter! See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees! Everything, everything is on fire!\"\n\n\"It is always like that,\" said Peter composedly, continuing to peel his stick; \"but it is not really fire.\"\n\n\"What is it then?\" cried Heidi, as she ran backwards and forwards to look first one side and then the other, for she felt she could not have enough of such a beautiful sight. \"What is it, Peter, what is it?\" she repeated.\n\n\"It gets like that of itself,\" explained Peter.\n\n\"Look, look!\" cried Heidi in fresh excitement, \"now they have turned all rose color! Look at that one covered with snow, and that with the high, pointed rocks! What do you call them?\"\n\n\"Mountains have not any names,\" he answered.\n\n\"O how beautiful, look at the crimson snow! And up there on the rocks there are ever so many roses! Oh! now they are turning grey! Oh! oh! now all the color has died away! it's all gone, Peter.\" And Heidi sat down on the ground looking as full of distress as if everything had really come to an end.\n\n\"It will come again to-morrow,\" said Peter. \"Get up, we must go home now.\" He whistled to his goats and together they all started on their homeward way.",
+    "scenes": [
+      "And thus imperceptibly the day had crept on to its close, and now the sun was on the point of sinking out of sight behind the high mountains. Heidi was again sitting on the ground, silently gazing at the blue bell-shaped flowers, as they glistened in the evening sun, for a golden light lay on the grass and flowers, and the rocks above were beginning to shine and glow. All at once she sprang to her feet, \"Peter! Peter! everything is on fire! All the rocks are burning, and the great snow mountain and the sky! O look, look! the high rock up there is red with flame! O the beautiful, fiery snow! Stand up, Peter! See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees! Everything, everything is on fire!\"",
+      "\"It is always like that,\" said Peter composedly, continuing to peel his stick; \"but it is not really fire.\"\n\n\"What is it then?\" cried Heidi, as she ran backwards and forwards to look first one side and then the other, for she felt she could not have enough of such a beautiful sight. \"What is it, Peter, what is it?\" she repeated.\n\n\"It gets like that of itself,\" explained Peter.",
+      "\"Look, look!\" cried Heidi in fresh excitement, \"now they have turned all rose color! Look at that one covered with snow, and that with the high, pointed rocks! What do you call them?\"\n\n\"Mountains have not any names,\" he answered.",
+      "\"O how beautiful, look at the crimson snow! And up there on the rocks there are ever so many roses! Oh! now they are turning grey! Oh! oh! now all the color has died away! it's all gone, Peter.\" And Heidi sat down on the ground looking as full of distress as if everything had really come to an end.\n\n\"It will come again to-morrow,\" said Peter. \"Get up, we must go home now.\" He whistled to his goats and together they all started on their homeward way."
+    ],
+    "fk": 3.1,
+    "level": 3.1,
+    "words": 337,
+    "sentences": 37,
+    "syllables": 433,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What did Heidi think was happening to the mountains?",
+        "right": "That they were burning",
+        "wrong": [
+          "That they were falling down",
+          "That the snow was melting",
+          "That a storm was coming"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What was Peter doing while Heidi shouted?",
+        "right": "Peeling his stick",
+        "wrong": [
+          "Milking a goat",
+          "Eating his cheese",
+          "Climbing a rock"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What colours did the snow turn?",
+        "right": "Rose and then crimson",
+        "wrong": [
+          "Blue and then purple",
+          "Yellow and then green",
+          "Black and then silver"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Peter seem so calm about it?",
+        "right": "He had seen it many times before",
+        "wrong": [
+          "He could not see the mountains",
+          "He was too tired to look up",
+          "He did not like Heidi at all"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why did Heidi sit down looking so upset?",
+        "right": "The beautiful colours had faded",
+        "wrong": [
+          "She had hurt her foot",
+          "Peter had been unkind",
+          "She was hungry and cold"
+        ]
+      }
+    ],
+    "evaluate": "Peter says 'it is not really fire'. Who sees the sunset better, Heidi or Peter? Why?",
+    "wordBank": [
+      "imperceptibly",
+      "glistened",
+      "composedly",
+      "crimson",
+      "distress"
     ]
   },
   {

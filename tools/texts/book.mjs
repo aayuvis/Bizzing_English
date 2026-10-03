@@ -2,8 +2,10 @@
 // Cut a whole book into chapters and scenes from its held text, level each chapter, and write
 // app/src/data/book-<id>.json (docs/00-spec.md §4, "A whole book").
 //
-//   node tools/texts/book.mjs           # write book-alice.json
-//   node tools/texts/book.mjs --check   # exit 1 if it is out of date
+//   node tools/texts/book.mjs               # write book-alice.json (the default book)
+//   node tools/texts/book.mjs wind          # write book-wind.json
+//   node tools/texts/book.mjs --all         # every app/src/data/book-<id>.js
+//   node tools/texts/book.mjs wind --check  # exit 1 if book-wind.json is out of date
 //
 // The chapter list, summaries, characters and questions live in app/src/data/book-<id>.js;
 // this file only adds the text. Each chapter runs from its `start` to its `end` (inclusive),
@@ -11,12 +13,14 @@
 // whitespace-normalised: one paragraph per line run, paragraphs separated by a blank line,
 // and a row of asterisks (the book's own break) becomes "* * *".
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { ROOT, looseRegex, readText, measure } from './levels.mjs';
 
-export const BOOKS = ['alice'];
+export const DATA = join(ROOT, 'app', 'src', 'data');
+/** Every whole book: each app/src/data/book-<id>.js. */
+export const bookIds = () => readdirSync(DATA).map((f) => /^book-([a-z0-9-]+)\.js$/.exec(f)?.[1]).filter(Boolean).sort();
 export const outFile = (id) => join(ROOT, 'app', 'src', 'data', `book-${id}.json`);
 export const srcFile = (id) => join(ROOT, 'app', 'src', 'data', `book-${id}.js`);
 
@@ -78,6 +82,8 @@ export function buildBook(book, text) {
       meet: c.meet.map(({ id, name, about }) => ({ id, name, about })),
       questions: c.questions, evaluate: c.evaluate, wordBank: c.words,
       line: c.line, paint: c.paint,
+      ...(c.needsReview ? { needsReview: true } : {}),
+      ...(c.note ? { note: c.note } : {}),
       scenes,
     };
   });
@@ -95,9 +101,13 @@ export async function loadBook(id) {
 }
 
 async function main() {
-  const check = process.argv.includes('--check');
+  const args = process.argv.slice(2);
+  const check = args.includes('--check');
+  const named = args.filter((a) => !a.startsWith('--'));
+  const ids = args.includes('--all') ? bookIds() : named.length ? named : ['alice'];
   let bad = false;
-  for (const id of BOOKS) {
+  for (const id of ids) {
+    if (!existsSync(srcFile(id))) { console.error(`${id}: no book at app/src/data/book-${id}.js`); process.exit(1); }
     const book = await loadBook(id);
     const text = readText(book.work);
     if (text == null) { console.error(`${id}: no held text for ${book.work}`); process.exit(1); }
@@ -107,7 +117,7 @@ async function main() {
     const out = outFile(id);
     if (check) {
       const now = existsSync(out) ? readFileSync(out, 'utf8') : '';
-      if (now !== json) { console.error(`book-${id}.json is out of date: run node tools/texts/book.mjs`); bad = true; }
+      if (now !== json) { console.error(`book-${id}.json is out of date: run node tools/texts/book.mjs ${id}`); bad = true; }
       else console.log(`book-${id}.json is up to date`);
       continue;
     }

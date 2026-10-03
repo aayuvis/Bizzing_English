@@ -38,4 +38,8 @@ ok(!buyExtra(k, 'curtain-gold', () => false) && !owns(k, 'curtain-gold'), 'no co
 let paid = 0, why = ''; ok(buyExtra(k, 'curtain-gold', (p, y) => { paid = p; why = y; return true; }) && paid === 150 && why === 'extra:curtain-gold', 'a buy spends the printed price');
 ok(wearing(k, 'curtain') === 'curtain-gold' && !buyExtra(k, 'curtain-gold', () => true), 'worn at once, never bought twice');
 const k2 = { name: 'Ben' }; ok(!owns(k2, 'curtain-gold') && extrasOf(k2).owned.length === 0, 'a second child inherits nothing');
+// Figure Hunt: every line from the bank, the five answers fixed, every round has a real answer
+const { figureRound, FIGURE_KINDS } = await import('../src/games.js'); const { FIGURES } = await import('../src/data/literature.js');
+for (let sd = 0; sd < 60; sd++) { const r = figureRound(FIGURES, [], 's' + sd); ok(r.length === 10 && r.every((q) => q.answer >= 0 && q.answer < 5 && FIGURES.some((f) => f.text === q.text)) && new Set(r.map((q) => q.text)).size === 10, 'figure round: ten different real lines'); }
+ok(FIGURE_KINDS.every(([k]) => FIGURES.filter((f) => f.figure === k).length >= 12), 'at least 12 lines of each figure');
 console.log(`contest: ${n - fails}/${n}`); if (fails) process.exit(1);

@@ -70,7 +70,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     ok(`${tag}: ${h} is a ${kind} head`, (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === kind);
   }
   /* no sideways scroll, measured against the width we set */
-  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story', '#/stage/contest', '#/shop/extras']) {
+  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/whole/wind', '#/whole/wind/7', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story', '#/stage/contest', '#/shop/extras', '#/play/figure', '#/stop/la7-devices', '#/stop/li5-simile', '#/desk/li10-case']) {
     await go(page, h);
     const w = await page.evaluate(() => document.documentElement.scrollWidth);
     ok(`${tag}: ${h} does not scroll sideways (${w}px)`, w <= (phone ? 390 : 1280));
@@ -162,6 +162,11 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const play = async (how) => { const t = await page.evaluate(() => window.__bz.S.run.g.cur.tiles.map((x) => x.k)); for (const k of ['sub', 'dep', 'main']) { const i = t.indexOf(k); if (how === 'keys') await page.keyboard.press(String(i + 1)); else await page.click(`[data-act=b-pick][data-arg="${i}"]`); } await page.waitForTimeout(120); };
   await play('touch'); await play('keys');
   ok('Sentence Builder plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.built === 2));
+  await go(page, '#/play/figure'); await page.click('[data-act=game-start]');
+  const figAns = () => page.evaluate(() => window.__bz.S.run.g.rounds[window.__bz.S.run.g.i].answer);
+  await page.click(`[data-act=fig-pick][data-arg="${await figAns()}"]`); await page.waitForTimeout(1300);
+  await page.keyboard.press(String((await figAns()) + 1)); await page.waitForTimeout(200);
+  ok('Figure Hunt plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.score === 2));
   await go(page, '#/play/rush'); await page.click('[data-act=game-start]');
   const commas = await page.evaluate(() => window.__bz.S.run.g.cur.commas);
   for (const i of commas) await page.click(`[data-act=r-gap][data-arg="${i}"]`); await page.keyboard.press('Enter'); await page.waitForTimeout(150);
@@ -243,11 +248,11 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     if (!round) ok('the contest opens the microphone on Start', await page.evaluate(() => window.__tracks.at(-1).readyState === 'live'));
     await page.click('[data-act=ct-stop]'); await page.waitForTimeout(250);
     ok(`contest round ${round + 1}: Stop ends every track`, await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
-    if (round < 2) { ok(`contest round ${round + 1}: every point names what measured it`, /Timing — inside the window/.test(await page.textContent('main')) && (await page.$$('.standings li')).length === 6); await page.click('[data-act=ct-next]'); }
+    if (round < 2) { ok(`contest round ${round + 1}: every point names what measured it`, /Timing — inside the window|Too quiet to measure/.test(await page.textContent('main')) && (await page.$$('.standings li')).length === 6); await page.click('[data-act=ct-next]'); }
   }
   ok('the contest ends with places and says what it never scores', (await page.$$('.standings li')).length === 6 && /never scored/.test(await page.textContent('main')));
   ok('a finished contest keeps numbers only', await page.evaluate(() => { const c = window.__bz.S.h.kids[0].contests; return c.length === 1 && Object.values(c[0]).every((v) => typeof v === 'number' || Array.isArray(v)); }));
-  await go(page, '#/stage/contest'); await page.click('[data-act=ct-begin]'); await page.click('[data-act=ct-start]'); await page.waitForTimeout(600); await go(page, '#/home');
+  await go(page, '#/stage'); await go(page, '#/stage/contest'); await page.click('[data-act=ct-begin]'); await page.click('[data-act=ct-start]'); await page.waitForTimeout(600); await go(page, '#/home');
   ok('leaving the contest mid-round switches the microphone off', await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
   /* the Shop's Extras: a look at a printed price; the paper is worn at once */
   await go(page, '#/shop/extras');

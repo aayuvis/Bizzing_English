@@ -3,6 +3,7 @@
    A modern work is a card only (our summary, why it matters), never quoted. A work not cleared in
    all three markets says so, and its passages wait. */
 
+import { bookMeta } from '../book.js';
 import { S, kid } from '../app.js';
 import { esc, icon, pageHead, link, empty, btn, plural } from '../ui.js';
 import { WORKS, PASSAGES } from '../data/library.js';
@@ -79,7 +80,7 @@ export function bookView(id) {
   return pageHead({ title: w.title, sub: `${w.author} · ${w.year}`, back: { label: 'Library', href: '#/library' } }) + `<div class="stack">
     <div class="card bookcard"><div class="bookcover" style="--c:${col(w.id)}">${esc(w.title)}</div><div><span class="kick">${esc(w.era)}</span><p style="font-size:17px;margin:4px 0 8px"><b>${esc(w.why)}</b></p><p style="margin:0">${esc(w.summary)}</p>
       ${w.needsReview ? `<p class="tag warn" style="margin-top:10px">${icon('help')}A note for grown-ups</p><p class="note">${esc(w.reviewNote || 'This book carries attitudes of its time. A named reviewer has not yet cleared it.')}</p>` : ''}</div></div>
-    <div class="card"><h3>Read</h3>${id === 'alice' ? `<p>${link('Read the whole book, chapter by chapter', '#/whole/alice', { ic: 'book' })}</p>` : ''}${passages}</div>
+    <div class="card"><h3>Read</h3>${bookMeta(id) ? `<p>${link('Read the whole book, chapter by chapter', `#/whole/${id}`, { ic: 'book' })}</p>` : ''}${passages}</div>
     ${lines.length ? `<div class="card lines"><h3>Famous lines</h3>${lines.map((l) => `<blockquote>${esc(l.text)}<br><small class="muted" style="font:13px var(--bz-body)">— ${esc(l.who)}</small></blockquote>`).join('')}</div>` : ''}
     ${liked.length ? `<div class="card"><h3>If you liked this…</h3><div class="row">${liked.map((x) => `<a class="bz-chip" href="#/book/${x.id}">${esc(x.title)}</a>`).join('')}</div></div>` : ''}
     <div class="card">${rights}<p class="source">${(w.sources || []).map(esc).join(' · ')}</p></div></div>`;

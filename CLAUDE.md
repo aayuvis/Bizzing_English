@@ -22,8 +22,9 @@ and then exercises linked to it"). Every passage is told scene by scene over its
 narrator's voice (`en-IN-Chirp3-HD-Laomedeia` 1.02 — recorded narration approved by the owner), words lit
 as she reads; then seven exercises built FROM that story: understand it (passes the Reading stop), its
 words (Bee's meanings), the author's commas, rebuild the author's sentence, copy a line, say it aloud on
-the Stage, talk about it (never marked). The whole book (Alice) is told the same way, a chapter at a
-time, with a bookmark, the story so far, and the people met so far.
+the Stage, talk about it (never marked). Two whole books — Alice and The Wind in the Willows — are told
+the same way, a chapter at a time, with a bookmark, the story so far, the people met so far, and the
+chapters' grown-up notes (`src/book.js` is the one place a book is added; `#/whole/<id>`).
 
 **Writing and Speaking (Phase 3)** are built through level 10. Writing: copywork, dictation in the
 narrator's voice, sentence imitation (a real sentence from a classic as the model, `src/writing.js`
@@ -35,6 +36,19 @@ with 30 s to think, and a debate on both sides — all measured on the device on
 speech is never machine-checked later: only a grown-up's rubric (1–4) on a later day makes it learned
 (`mastery.judge`). Free writing and speech notes live in `k.writing`, which no backup carries (store v2
 moved the talk-about-it thoughts there).
+
+**Literature and Language (Phase 4–5)** are built through level 10. Their questions are WRITTEN
+(`data/literature.js`, `data/language.js`), every quote an exact substring of a held text, every date or
+origin sourced, run through the item engine as kind `authored` (`src/authored.js`) so `test/items.mjs`
+holds them to the same rules (a which-word-in-this-line question must have every option in the line).
+Literature 10 is a writing desk: the child's case for a book. Figure Hunt (Play) is built on the
+figures bank. Every Language stop with a date waits on a named reviewer (`needsReview`).
+
+**The Elocution Contest** (`src/contest.js`, `#/stage/contest`): a poem, a passage, a one-minute talk
+against five of Bee's ten rivals. The child's points come ONLY from what the device measures (timing,
+pace, pauses, volume), each labelled; the rivals' are the app's own, seeded, and the screen says so.
+Bee owns spelling contests; this is speaking. **Extras** (`src/extras.js`): reading paper, bookplates,
+stage curtains — drawn in CSS, fixed prices, the first of each free.
 
 **The Atlas is a painted land** (`art/atlas.webp`, by day and night): each strand a place, with pins,
 progress rings and the child's avatar where they are next; each strand opens onto a road of ten stations
@@ -59,8 +73,10 @@ Inherited from the family, and it holds here:
    ≤ 1930; UK/EU: author and translator dead 70+ years; India: 60+). The app never asks where a child
    is, so a work marked `check` anywhere is held back from every child: its text lives in
    `tools/texts/gated/` (never the published site), its passages and lines are not served, and its
-   card says why (`src/data/rights.js`). Grimm, Andersen, Peter Pan, Heidi and Eighty Days wait on a
-   translator's or a UK right's confirmation.
+   card says why (`src/data/rights.js`). Grimm (Taylor & Edwardes), Heidi (Edwardes) and Eighty Days
+   (Towle) were cleared on 3 Oct 2026 from search-quoted sources — a human should click through them.
+   Andersen (translator unknown), Peter Pan (GOSH's UK royalty, CDPA s.301), Pinocchio (no
+   translation chosen) and The Hungry Stones (a translator's death date) still wait.
 2. **Never invent a quotation.** Every line of the hour is an exact substring of its held text;
    `test/texts.mjs` is the check-quotes lint. Bee's quotes are never imported (unsourced).
 3. **Modern works are cards, never quotes:** our own summary and why it matters.
@@ -137,8 +153,9 @@ npm test                         # items (50k), banks, texts (quotes, rights), m
 npm run build && npm run check   # the BUILT app in Chromium under /Bizzing_English/, desktop + phone, light + dark
 ```
 
-**Prove an assertion by breaking it.** Each check here was watched to fail — the latest: a planted POST of
-a child's desk writing tripped all three privacy checks. Earlier: the drop-in hash, the
+**Prove an assertion by breaking it.** Each check here was watched to fail — the latest: marking every
+written question "which word in this line" tripped 985 items whose options were not all in the line.
+Earlier: a planted POST of a child's desk writing tripped all three privacy checks; the drop-in hash, the
 avatar shape, the later-day rule, the backup allow-list, the coin events, the Bee manifest, the
 variety bonus (blind until a same-order case was added), phone overflow (the shell's sub-nav widened
 the page through a grid `auto` column), contrast on the paintings, the microphone left on, and a
@@ -169,20 +186,16 @@ replaces `gh-pages` wholesale and refuses to publish if the staged file count di
 
 ## Where to pick up
 
-1. **Story paintings** — 77 story and 12 Alice paintings are in (one re-rolled for lettering). A new passage
-   gets its picture with `node tools/art/story-prompts.mjs && python3 tools/art/gen.py --group stories`,
-   then LOOK, then `python3 tools/art/process.py --stories` (1280 for the stage, 480 for cards); until
-   then it wears its shelf's world.
-2. **Owner decisions still open** (SPEC §16):
-   free vs family plan (as proposed: Word, Sentence and worlds 1–2 free); a 15+ Scholar band;
-   domain and trademark checks.
-2. **A named reviewer** for the 10 `needsReview` passages and 14 works; **rights confirmation** for the
-   five gated works (translators of Grimm, Andersen, Heidi; Peter Pan's UK right; Verne).
-3. **Phase 4–5 content** (SPEC §14): the Elocution Contest with Bee's ten rivals; Literature cards and
-   appreciation games; the story of English and rhetoric; more whole books. Every unbuilt level says so.
-4. **Art:** Extras for the Shop.
-5. **Bee data:** Bee's list at 28948f81c still holds proper nouns (hitler, stalin, helen…) — the
-   import filters them out here; worth fixing at the source in Bee.
+1. **Owner decisions still open** (SPEC §16): free vs family plan (as proposed: Word, Sentence and worlds
+   1–2 free); a 15+ Scholar band; domain and trademark checks.
+2. **A named reviewer** for the `needsReview` passages, works (now incl. The Wind in the Willows,
+   chapters 5, 8, 10–12) and every dated Language stop (no OED page could be opened from here).
+3. **Rights:** click through the three new clearances; Andersen's translator; terms with GOSH for Peter
+   Pan; Pinocchio's translation; Panna Lal Basu's dates for The Hungry Stones.
+4. **Bee:** `docs/bee-person-definitions.md` — 904 Bee words whose definition is a person (hitler at
+   level 1, "begin" defined as Menachem Begin). Bee's cuts are the owner's call; the import filters them.
+5. **More:** Eighty Days and the 20 newly held texts have no passages yet (`levels.mjs`); a third whole
+   book; Extras as paintings if the owner wants them.
 
 ## Branch
 

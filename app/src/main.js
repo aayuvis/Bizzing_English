@@ -17,7 +17,7 @@ import { meView, medalsView, collectionView, shopView, practiceView, logView, re
   settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
-import { loadBook } from './book.js';
+import { loadBook, chapterKey } from './book.js';
 import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './views/desk.js';
 import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.js';
 import { applyExtras } from './extras.js';
@@ -67,20 +67,20 @@ async function route() {
   if (r.name === 'desk') { if (r.parts[2] !== 'done') openDesk(r.parts[1]); else S.run = null; }
   else if (r.name === 'stage' && r.parts[1] === 'contest') await openContest();
   else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1]);
-  else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/alice/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
+  else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/${rs.book}/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
   else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
   else if (r.name === 'story') {
     const [, id, sub, ex] = r.parts;
     if (sub === 'do') { await openExercises(id); if (ex && !openExercise(id, ex)) { location.replace(`#/story/${id}/do`); return; } }
-    else if (sub === 'talk') await loadBook();
+    else if (sub === 'talk') { const ck = chapterKey(id); if (ck) await loadBook(ck.id); }
     else if (!(await openStory(id))) return;
   }
   else if (r.name === 'whole') {
-    const [, , n, sub, ex] = r.parts; await loadBook();
+    const [, id, n, sub, ex] = r.parts; if (!id) { location.replace('#/library/books'); return; } await loadBook(id);
     if (!n) S.run = null;
-    else if (sub === 'do') { await openChapterExercises(n); if (ex && !openChapterExercise(n, ex)) { location.replace(`#/whole/alice/${n}/do`); return; } }
+    else if (sub === 'do') { await openChapterExercises(id, n); if (ex && !openChapterExercise(n, ex)) { location.replace(`#/whole/${id}/${n}/do`); return; } }
     else if (sub === 'talk') S.run = null;
-    else await openChapter(n);
+    else await openChapter(id, n);
   }
   else if (r.name === 'practice' && r.parts[1] === 'check') { const nx = nextStep(S.h, kid()); await openCheck(nx.kind === 'check' ? nx.ids : due(kid())); }
   else if (r.name === 'read') await openRead(r.parts[1]);
@@ -102,7 +102,7 @@ function screen() {
     case 'stop': case 'practice': return S.run ? runnerView() : practiceView();
     case 'read': return readerView();
     case 'story': return p[2] === 'talk' ? talkView(p[1]) : p[2] === 'do' ? (p[3] ? runnerView() : exercisesView()) : storyView();
-    case 'whole': return !p[2] ? wholeView() : p[3] === 'talk' ? talkView(`alice-${p[2]}`) : p[3] === 'do' ? (p[4] ? runnerView() : chapterExercisesView()) : storyView();
+    case 'whole': return !p[2] ? wholeView(p[1]) : p[3] === 'talk' ? talkView(`${p[1]}-${p[2]}`) : p[3] === 'do' ? (p[4] ? runnerView() : chapterExercisesView()) : storyView();
     case 'library': return libraryView(p[1] || 'stories');
     case 'book': return bookView(p[1]);
     case 'word': return wordView(p[1] || '');

@@ -34,6 +34,7 @@ for (const band of [1, 2, 3]) {
         if (!(it.answer >= 0 && it.answer < it.options.length)) bad(`${it.id}: answer out of range`);
         if (!check(it, it.answer) || it.options.some((_, i) => i !== it.answer && check(it, i))) bad(`${it.id}: not exactly one right option`);
         const right = it.options[it.answer];
+        if (it.select && kind === 'authored' && !it.options.every((o) => inText(o, it.prompt + ' ' + (it.sub || '')))) bad(`${it.id}: a which-word question whose options are not all in its line`);
         if (!it.fixed && !it.select && kind !== 'passage' && (inText(right, it.prompt) || inText(right, it.sub || ''))) bad(`${it.id}: the answer "${right}" is in the question`);
         if (!it.fixed && it.options.length === 4) { const s = (slots[kind] ||= [0, 0, 0, 0]); s[it.answer]++; }
         if (kind === 'rhyme') {

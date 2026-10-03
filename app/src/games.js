@@ -106,3 +106,14 @@ export function whoRound(lines, works, seed, n = 8) {
     return { text: l.text, work: works.find((w) => w.id === l.work)?.title || '', options: opts, answer: opts.indexOf(right), right };
   });
 }
+
+/* ---------- Figure Hunt ---------- */
+/* A line from a held text (data/literature.js FIGURES, each checked word for word by test/literature.mjs):
+   which figure of speech is it? The five answers are always in the same order, so no slot can lean. */
+export const FIGURE_KINDS = [['simile', 'Simile', 'compares two things using “like” or “as”'], ['metaphor', 'Metaphor', 'says one thing IS another'],
+  ['personification', 'Personification', 'gives a thing or an idea a person’s actions or feelings'], ['alliteration', 'Alliteration', 'repeats the first sound of words close together'], ['none', 'None of these', 'says it plainly — no figure at all']];
+export function figureRound(figures, works, seed, n = 10) {
+  const R = rng('fig:' + seed), byKind = FIGURE_KINDS.map(([k]) => shuffle(rng('fk:' + seed + k), figures.filter((f) => f.figure === k)));
+  const out = []; for (let i = 0; out.length < n && i < 40; i++) { const pool = byKind[Math.floor(R() * byKind.length)]; const f = pool.pop(); if (f) out.push(f); }
+  return out.map((f) => ({ text: f.text, work: works.find((w) => w.id === f.work)?.title || '', answer: FIGURE_KINDS.findIndex(([k]) => k === f.figure) }));
+}

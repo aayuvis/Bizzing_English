@@ -30,6 +30,20 @@ export default {
    "text": "Little friends may prove great friends."
   },
   {
+   "id": "grimm-elves-0",
+   "passage": "grimm-elves",
+   "work": "grimm",
+   "band": 3,
+   "text": "The good man knew not what to say or think at such an odd thing happening."
+  },
+  {
+   "id": "grimm-elves-1",
+   "passage": "grimm-elves",
+   "work": "grimm",
+   "band": 3,
+   "text": "Soon in came buyers, who paid him handsomely for his goods, so that he bought leather enough for four pair more."
+  },
+  {
    "id": "justso-elephant-0",
    "passage": "justso-elephant",
    "work": "justso",
@@ -224,6 +238,48 @@ export default {
    "work": "secretgarden",
    "band": 2,
    "text": "It took two hands to do it, but it did turn."
+  },
+  {
+   "id": "heidi-fire-0",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 1,
+   "text": "Peter! everything is on fire!"
+  },
+  {
+   "id": "heidi-fire-1",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 2,
+   "text": "All the rocks are burning, and the great snow mountain and the sky!"
+  },
+  {
+   "id": "heidi-fire-2",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 2,
+   "text": "O look, look! the high rock up there is red with flame!"
+  },
+  {
+   "id": "heidi-fire-3",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 1,
+   "text": "O the beautiful, fiery snow!"
+  },
+  {
+   "id": "heidi-fire-4",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 3,
+   "text": "See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees!"
+  },
+  {
+   "id": "heidi-fire-5",
+   "passage": "heidi-fire",
+   "work": "heidi",
+   "band": 3,
+   "text": "And Heidi sat down on the ground looking as full of distress as if everything had really come to an end."
   },
   {
    "id": "velveteen-real-0",

@@ -8,6 +8,8 @@
    and point somewhere useful; they are never a dead end.
 
    `kind` names the item generator in items.js; `plan` marks what the family plan opens. */
+import { LANG_STOPS } from './data/language.js';
+import { LIT_STOPS, CASE_DESK } from './data/literature.js';
 
 export const BANDS = [
   { id: 1, label: '6–7', age: 'ages 6–7' },
@@ -305,6 +307,16 @@ export const STRANDS = [
       L(10, 'World Englishes', 'I can describe Indian English and other Englishes.'),
     ] },
 ];
+
+/* Literature levels 1–9: written stops (data/literature.js); level 10 is a writing desk — the child's case for a book */
+for (const l of STRANDS.find((x) => x.id === 'literature').levels) {
+  if (l.n <= 9) l.stops.push(...LIT_STOPS.filter((x) => x.level === l.n).map((x) => ({ ...x, kind: 'authored' })));
+  else l.stops.push(S('li10-case', 'My case for this book', 'desk', 'I can make the case for a book I love, with reasons and lines from it.',
+    'Quill has a favourite book and a friend who will not read it. "It is old," says the friend. Quill smiles: "Then let me make my case."',
+    { why: 'A case has a claim, reasons, evidence from the book itself — a line, a moment — an answer to the other side, and a close. You are not marked on which book you choose, only on how well you argue for it.', example: ['Claim: Treasure Island is the best adventure ever written.', "Evidence: “Fifteen men on the dead man's chest” — you hear the danger in one line."] }, { desk: CASE_DESK }));
+}
+/* Language levels 2–10: written stops (data/language.js), run as kind `authored` */
+for (const l of STRANDS.find((x) => x.id === 'language').levels) if (l.n >= 2) l.stops.push(...LANG_STOPS.filter((x) => x.level === l.n).map((x) => ({ ...x, kind: 'authored' })));
 
 /* Reading levels carry no authored stops: their stops are made from the passages (reading.js). */
 export const strand = (id) => STRANDS.find((s) => s.id === id);

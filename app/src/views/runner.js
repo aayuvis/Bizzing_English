@@ -50,14 +50,14 @@ function itemsFor(id, n, salt) {
   const rs = readingStop(id);
   if (rs) return passageItems(rs.questions ? { id, questions: rs.questions } : passage(rs.passage)).slice(0, n).map((it) => ({ ...it, stop: id }));
   const st = stopById(id); if (!st) return [];
-  return draw(st.kind, n, ctxOf(), salt).map((it) => ({ ...it, stop: id }));
+  return draw(st.kind, n, { ...ctxOf(), stop: id }, salt).map((it) => ({ ...it, stop: id }));
 }
 
 function start(phase) {
   const r = S.run, k = kid();
   r.phase = phase; r.i = 0; r.right = 0; r.state = null; r.hintN = 0;
   const n = phase === 'turn' ? 3 : 8;
-  r.items = draw(r.st.kind, n, ctxOf(), `${phase}:${k.id}:${(k.stops[r.id]?.tries || 0)}`);
+  r.items = draw(r.st.kind, n, { ...ctxOf(), stop: r.id }, `${phase}:${k.id}:${(k.stops[r.id]?.tries || 0)}`);
   k.stops[r.id].step = PHASES.indexOf(phase); k.stops[r.id].at = Date.now(); save();
 }
 
@@ -67,7 +67,7 @@ export function runnerView() {
   const r = S.run;
   if (!r || r.error) return empty('oops', 'That stop could not be found.', link('Back to the Atlas', '#/atlas'));
   if (r.mode === 'check') return checkView();
-  if (r.mode === 'ex') return pageHead({ title: r.name, sub: r.title, back: { label: 'Exercises', href: r.chapter ? `#/whole/alice/${r.chapter}/do` : `#/story/${r.pid}/do` } })
+  if (r.mode === 'ex') return pageHead({ title: r.name, sub: r.title, back: { label: 'Exercises', href: r.chapter ? `#/whole/${r.book}/${r.chapter}/do` : `#/story/${r.pid}/do` } })
     + `<div class="runner"><div class="phases">${r.items.map((_, i) => `<i class="${i <= r.i ? 'on' : ''}"></i>`).join('')}</div>${itemView(r)}</div>`;
   const st = r.st, sd = strand(st.strand), lv = level(st.strand, st.level);
   const head = pageHead({ title: st.title, sub: `${sd.title} · level ${st.level} · ${lv.title}`, back: { label: sd.title, href: `#/atlas/${st.strand}` } });
@@ -166,7 +166,7 @@ function answer(resp) {
     setTimeout(() => { if (S.run === r && r.state?.done && r.state.ok) advance(); }, 950);
   } else {
     sfx('wrong');
-    if (r.phase === 'check' || r.mode === 'check') { k.misses.push({ stop: it.stop || r.id || (r.chapter ? `bk-alice-${r.chapter}` : r.pid && r.ex === 'understand' ? 'rd-' + r.pid : null), item: it.id, at: Date.now() }); if (k.misses.length > 200) k.misses.splice(0, k.misses.length - 200); }
+    if (r.phase === 'check' || r.mode === 'check') { k.misses.push({ stop: it.stop || r.id || (r.chapter ? `bk-${r.book}-${r.chapter}` : r.pid && r.ex === 'understand' ? 'rd-' + r.pid : null), item: it.id, at: Date.now() }); if (k.misses.length > 200) k.misses.splice(0, k.misses.length - 200); }
   }
   if (r.byStop && it.stop) (r.byStop[it.stop] ||= [0, 0])[1]++;
   save(); render();
