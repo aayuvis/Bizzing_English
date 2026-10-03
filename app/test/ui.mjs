@@ -141,6 +141,14 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await page.reload(); await page.waitForTimeout(600); await go(page, '#/grownups');
   ok('a reload asks for the PIN again', await page.locator('.pinpad').isVisible());
 
+  /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), My page, Settings, Add a child */
+  await go(page, '#/home'); await page.click('.bz-kid'); await page.waitForTimeout(250);
+  ok('the avatar opens its menu, not a page', await page.locator('.kidmenu').isVisible());
+  ok('the menu lists the children, My page, Settings and Add a child (grown-ups)', await page.evaluate(() => { const t = document.querySelector('.kidmenu').textContent; return document.querySelectorAll('.kidmenu .km-kid').length >= 1 && !!document.querySelector('.kidmenu .km-kid[aria-current] svg') && /My page — avatar, badges, collection/.test(t) && /Settings/.test(t) && /\+ Add a child\s*grown-ups/.test(t); }));
+  ok('the menu sits under the avatar, on the screen', await page.evaluate(() => { const b = document.querySelector('.bz-kid').getBoundingClientRect(), m = document.querySelector('.kidmenu').getBoundingClientRect(); return m.top >= b.bottom && m.right <= innerWidth && m.left >= 0; }));
+  await page.keyboard.press('ArrowDown'); ok('arrows move through the menu', await page.evaluate(() => document.activeElement?.classList.contains('km-item')));
+  await page.keyboard.press('Escape'); await page.waitForTimeout(150); ok('Esc closes the menu', !(await page.locator('.kidmenu').count()));
+  await page.click('.bz-kid'); await page.click('.kidmenu [data-arg="#/me"]'); await page.waitForTimeout(300); ok('My page opens from the menu', /#\/me$/.test(page.url()));
   /* settings: the family's five sections, in order */
   await go(page, '#/settings'); await page.waitForTimeout(300);
   ok('Settings sections are Me · Sound · Look · Comfort · Grown-ups', (await page.$$eval('.sheet [data-section]', (e) => e.map((x) => x.dataset.section).join())) === 'me,sound,look,comfort,grownups');

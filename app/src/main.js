@@ -152,7 +152,10 @@ function doRender() {
       { icon: 'check', label: 'Practice', sub: 'prove it on a later day; your mistakes deck', href: '#/practice' }] },
     content: hive + screen(),
   }) + wordCard() + sheetHTML;
-  if (S.sheet) requestAnimationFrame(() => document.querySelector('.sheet button, .sheet input')?.focus());
+  if (S.sheet?.kind === 'kids') { const b = document.querySelector('.bz-kid')?.getBoundingClientRect(), m = document.querySelector('.kidmenu');
+    if (b && m) { m.style.top = `${Math.round(b.bottom + 8)}px`; m.style.right = `${Math.max(8, Math.round(innerWidth - b.right))}px`; }
+    requestAnimationFrame(() => (document.querySelector('.kidmenu [aria-current]') || document.querySelector('.kidmenu button'))?.focus()); }
+  else if (S.sheet) requestAnimationFrame(() => document.querySelector('.sheet button, .sheet input')?.focus());
 }
 onRender(doRender);
 
@@ -188,6 +191,8 @@ document.addEventListener('change', (e) => {
 });
 document.addEventListener('keydown', (e) => {
   if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (S.sheet?.kind === 'kids' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { const items = [...document.querySelectorAll('.kidmenu button')], i = items.indexOf(document.activeElement);
+    items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length]?.focus(); e.preventDefault(); return; }
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;

@@ -209,11 +209,14 @@ export function settingsSheet() {
     <p class="foot"><a href="#/privacy">Privacy</a> · <a href="#/help">About</a> · version 0.1</p>`);
 }
 
+/* The avatar menu (top right): a dropdown under the avatar, the family's shape — every child (the one
+   reading ticked), then My page, Settings, and Add a child (behind the grown-ups' PIN). Esc or a tap
+   outside closes it; arrows move through it. */
 export function kidSheet() {
-  return sheet('Who is reading?', 'user', `<div class="kids">${S.h.kids.map((k) => `<button class="kidrow" data-act="switch-kid" data-arg="${k.id}" aria-current="${k.id === S.h.active}"><img src="${avatarOf(k)}" alt=""><span><b>${esc(k.name)}</b><br><small class="muted">${esc(headline(k))}</small></span></button>`).join('')}</div>
-    ${btn('Add a child (grown-ups)', 'add-kid', { cls: 'out', ic: 'lock' })}
-    <div class="setrow"><label>Sound</label><button class="switch" role="switch" aria-checked="${!!S.dev.sound}" data-act="dev-sound" aria-label="Sound"></button></div>
-    <div class="setrow"><label>Dark</label><button class="switch" role="switch" aria-checked="${isDark()}" data-act="theme-toggle" aria-label="Dark"></button></div>`);
+  const item = (act, arg, body, cls = '', cur = false) => `<button class="km-item ${cls}" role="menuitem" data-act="${act}"${arg ? ` data-arg="${esc(arg)}"` : ''}${cur ? ' aria-current="true"' : ''}>${body}</button>`;
+  return `<div class="scrim km-scrim" data-act="sheet-close" data-self="1"><div class="kidmenu" role="menu" aria-label="Who is reading">
+    ${S.h.kids.map((k) => { const on = k.id === S.h.active; return item('switch-kid', k.id, `<img src="${avatarOf(k)}" alt=""><b>${esc(k.name)}</b>${on ? icon('check') : ''}`, `km-kid${on ? ' on' : ''}`, on); }).join('')}
+    <hr>${item('km-go', '#/me', 'My page — avatar, badges, collection')}${item('km-go', '#/settings', 'Settings')}${item('add-kid', '', '<span>+ Add a child</span><small>grown-ups</small>', 'km-add')}</div></div>`;
 }
 export function coinSheet() {
   const k = kid(), L = ledger(k.name).slice(-30).reverse();
@@ -254,6 +257,7 @@ export const PAGE_ACTIONS = {
   'practice-check': () => go('#/practice/check'),
   rename: () => {},
   'kid-sheet': () => { S.sheet = { kind: 'kids' }; render(); },
+  'km-go': (a) => { S.sheet = null; go(a); },
   'switch-kid': (a) => { S.h.active = a; save(); S.sheet = null; go('#/home'); },
   'add-kid': () => { if (!isUnlocked() && S.h.kids.length) { S.sheet = null; go('#/grownups'); return; } S.sheet = { kind: 'addkid' }; render(); },
   'nk-band': (a) => { S.nkBand = +a; render(); },

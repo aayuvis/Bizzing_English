@@ -424,3 +424,18 @@ span.rv.you svg { width: 18px; height: 18px; }
 .curtain.mini { margin: 0; height: 40px; border-radius: 10px; }
 .extragrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
 .extragrid .card { display: grid; gap: 8px; align-content: start; }
+
+/* the avatar menu (pages.js kidSheet): a dropdown under the avatar */
+.scrim.km-scrim { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.kidmenu { position: fixed; top: 64px; right: 12px; width: min(340px, calc(100vw - 16px)); background: var(--card); color: var(--bz-ink); border: 1px solid var(--line); border-radius: 22px; box-shadow: 0 18px 50px rgba(20, 16, 40, .22); padding: 10px; display: grid; gap: 2px; z-index: 60; animation: km-in .14s ease-out; }
+@keyframes km-in { from { opacity: 0; transform: translateY(-6px); } }
+.kidmenu .km-item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 10px 14px; border: 0; border-radius: 16px; background: none; color: inherit; font: 700 16px var(--bz-body); text-align: left; cursor: pointer; }
+.kidmenu .km-item:hover, .kidmenu .km-item:focus-visible { background: var(--bz-chip); outline: none; }
+.kidmenu .km-kid img { width: 44px; height: 44px; border-radius: 50%; background: var(--bz-chip); object-fit: cover; }
+.kidmenu .km-kid b { flex: 1; font-size: 17px; }
+.kidmenu .km-kid.on { background: color-mix(in srgb, var(--bz-accent) 12%, var(--card)); }
+.kidmenu .km-kid svg { width: 22px; height: 22px; color: var(--bz-accent); }
+.kidmenu hr { border: 0; border-top: 2px solid var(--line); margin: 6px 8px; }
+.kidmenu .km-add span { flex: 1; }
+.kidmenu .km-add small { color: var(--bz-muted); font-weight: 700; font-size: 13px; }
+@media (prefers-reduced-motion: reduce) { .kidmenu { animation: none; } }
