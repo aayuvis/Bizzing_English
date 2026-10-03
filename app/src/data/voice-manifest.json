@@ -1179,6 +1179,98 @@
 6120,
 "9d27aa3b0b"
 ],
+"dict/bulfinch-arachne-0": [
+4320,
+"d05cb4ecbb"
+],
+"dict/bulfinch-arachne-1": [
+4130,
+"b5160d9800"
+],
+"dict/bulfinch-arachne-2": [
+4460,
+"cfd6a2f7d3"
+],
+"dict/bulfinch-arachne-3": [
+4680,
+"08854d1cff"
+],
+"dict/bulfinch-echo-0": [
+5420,
+"cad3206b0a"
+],
+"dict/bulfinch-echo-1": [
+3430,
+"5b4e365eaf"
+],
+"dict/bulfinch-echo-2": [
+5780,
+"f5a2e1fba9"
+],
+"dict/bulfinch-echo-3": [
+4680,
+"8be1495225"
+],
+"dict/bulfinch-echo-4": [
+2470,
+"37ae91a73f"
+],
+"dict/bulfinch-echo-5": [
+1920,
+"ed3d4e3aa8"
+],
+"dict/bulfinch-icarus-0": [
+3770,
+"7a4b7baa72"
+],
+"dict/bulfinch-icarus-1": [
+5980,
+"a34327260b"
+],
+"dict/bulfinch-icarus-2": [
+3100,
+"728aaa8e17"
+],
+"dict/bulfinch-icarus-3": [
+4870,
+"dcb2c82475"
+],
+"dict/bulfinch-iris-0": [
+4390,
+"3cc1341ab5"
+],
+"dict/bulfinch-iris-1": [
+4059,
+"86885aed61"
+],
+"dict/bulfinch-iris-2": [
+6410,
+"2dc724f985"
+],
+"dict/bulfinch-iris-3": [
+6120,
+"cb25f749fa"
+],
+"dict/bulfinch-narcissus-0": [
+4390,
+"a3c61ec80c"
+],
+"dict/bulfinch-narcissus-1": [
+4870,
+"39b4e5c113"
+],
+"dict/bulfinch-sirens-0": [
+5710,
+"fe1b0ebe60"
+],
+"dict/bulfinch-sirens-1": [
+5570,
+"55395fe243"
+],
+"dict/bulfinch-sirens-2": [
+5570,
+"96052b813b"
+],
 "dict/carol-scrooge-0": [
 6340,
 "55743344e5"
@@ -1190,6 +1282,22 @@
 "dict/carol-scrooge-2": [
 3980,
 "2467921744"
+],
+"dict/dragons-book-beasts-0": [
+5020,
+"5dcccc5cb6"
+],
+"dict/dragons-book-beasts-1": [
+3020,
+"5a63a3b1a0"
+],
+"dict/dragons-book-beasts-2": [
+3770,
+"035653d0d7"
+],
+"dict/dragons-book-beasts-3": [
+1510,
+"8deed0779f"
 ],
 "dict/gettysburg-address-0": [
 2540,
@@ -1214,6 +1322,54 @@
 "dict/grimm-elves-1": [
 5380,
 "ce4d85afde"
+],
+"dict/grimm-golden-goose-0": [
+5930,
+"335b7a90d6"
+],
+"dict/grimm-golden-goose-1": [
+2110,
+"d74ee5cb9a"
+],
+"dict/grimm-golden-goose-2": [
+4870,
+"8d42a229e9"
+],
+"dict/grimm-golden-goose-3": [
+2810,
+"1565b75f35"
+],
+"dict/grimm-golden-goose-4": [
+1990,
+"85c501dcc4"
+],
+"dict/grimm-musicians-0": [
+4460,
+"7e149aec33"
+],
+"dict/grimm-musicians-1": [
+4460,
+"c2d36d46f7"
+],
+"dict/grimm-old-man-0": [
+3290,
+"ce237c717d"
+],
+"dict/grimm-old-man-1": [
+5090,
+"3f6504e668"
+],
+"dict/grimm-old-man-2": [
+4200,
+"b41cfb1854"
+],
+"dict/grimm-old-man-3": [
+4750,
+"83fee928fa"
+],
+"dict/grimm-rumpelstiltskin-0": [
+5020,
+"b026a60b84"
 ],
 "dict/happyprince-swallow-0": [
 4610,
@@ -1263,6 +1419,34 @@
 5570,
 "7bc8866baa"
 ],
+"dict/heroes-perseus-0": [
+4750,
+"8c58d79575"
+],
+"dict/heroes-perseus-1": [
+4460,
+"5f853cc717"
+],
+"dict/heroes-perseus-2": [
+3910,
+"31cb5f69c1"
+],
+"dict/heroes-perseus-3": [
+2880,
+"40f096f28f"
+],
+"dict/holmes-carbuncle-0": [
+3910,
+"72376c8c18"
+],
+"dict/holmes-carbuncle-1": [
+5020,
+"5275dab1a2"
+],
+"dict/holmes-carbuncle-2": [
+3580,
+"bb70d39f5e"
+],
 "dict/jungle-mowgli-0": [
 5780,
 "8a24c4c3cb"
@@ -1278,6 +1462,14 @@
 "dict/jungle-mowgli-3": [
 2260,
 "62fd3e99ec"
+],
+"dict/justso-camel-0": [
+4390,
+"7ae2104640"
+],
+"dict/justso-camel-1": [
+3100,
+"e19b5ac2ab"
 ],
 "dict/justso-elephant-0": [
 4540,
@@ -1423,6 +1615,34 @@
 2330,
 "0b6ae1b076"
 ],
+"dict/tanglewood-ceres-0": [
+5570,
+"dc1d39ff18"
+],
+"dict/tanglewood-ceres-1": [
+4540,
+"109931a440"
+],
+"dict/tanglewood-ceres-2": [
+4680,
+"6460ec4ff6"
+],
+"dict/tanglewood-ceres-3": [
+3580,
+"49211d920d"
+],
+"dict/tanglewood-labyrinth-0": [
+3100,
+"60ba3a7d4b"
+],
+"dict/tanglewood-labyrinth-1": [
+5020,
+"e81ebbdce1"
+],
+"dict/tanglewood-labyrinth-2": [
+6190,
+"297a0c5b82"
+],
 "dict/treasure-benbow-0": [
 4540,
 "f3cb7f547b"
@@ -1463,6 +1683,30 @@
 3170,
 "bfb5e44f45"
 ],
+"dict/wilde-selfish-giant-0": [
+1920,
+"5fa9080e1d"
+],
+"dict/wilde-selfish-giant-1": [
+4460,
+"129f3be1b0"
+],
+"dict/wilde-selfish-giant-2": [
+2810,
+"273ab936a5"
+],
+"dict/wilde-selfish-giant-3": [
+3770,
+"1b92ae40ed"
+],
+"dict/wilde-selfish-giant-4": [
+2260,
+"7aee8a4985"
+],
+"dict/wilde-selfish-giant-5": [
+5570,
+"7f55c2bc81"
+],
 "dict/wind-boats-0": [
 3290,
 "c169ea2fde"
@@ -1478,6 +1722,46 @@
 "dict/wind-boats-3": [
 5570,
 "ca8b35071a"
+],
+"dict/wonderbook-atlas-0": [
+2330,
+"3317630fdb"
+],
+"dict/wonderbook-atlas-1": [
+5380,
+"c2ef09a3f5"
+],
+"dict/wonderbook-atlas-2": [
+6190,
+"b1b1f383e0"
+],
+"dict/wonderbook-midas-0": [
+2660,
+"5529532899"
+],
+"dict/wonderbook-midas-1": [
+4390,
+"68e425dc68"
+],
+"dict/wonderbook-midas-3": [
+6260,
+"5a66d2de6e"
+],
+"dict/wonderbook-pandora-0": [
+5930,
+"420fbd82f5"
+],
+"dict/wonderbook-pandora-1": [
+4870,
+"02aed4d185"
+],
+"dict/wonderbook-pandora-2": [
+2660,
+"0b29e6cefe"
+],
+"dict/wonderbook-pandora-3": [
+3170,
+"5a99043abc"
 ],
 "st/aesop-hare-tortoise-0": [
 10900,
@@ -1611,6 +1895,14 @@
 9790,
 "63de03d727"
 ],
+"st/blake-holy-thursday-0": [
+13700,
+"ceaa31e5e5"
+],
+"st/blake-holy-thursday-1": [
+14690,
+"76b0b7ebd1"
+],
 "st/blake-lamb-0": [
 18670,
 "409b647577"
@@ -1630,6 +1922,170 @@
 "st/blake-tiger-2": [
 14210,
 "d834225405"
+],
+"st/bulfinch-arachne-0": [
+18410,
+"15321a2aac"
+],
+"st/bulfinch-arachne-1": [
+22270,
+"6d588ae52a"
+],
+"st/bulfinch-arachne-2": [
+28820,
+"25b0f2946c"
+],
+"st/bulfinch-arachne-3": [
+15650,
+"05bc6543dc"
+],
+"st/bulfinch-arachne-4": [
+25730,
+"d2619043f7"
+],
+"st/bulfinch-arachne-5": [
+20880,
+"ae607e50b6"
+],
+"st/bulfinch-echo-0": [
+41260,
+"a147b294fa"
+],
+"st/bulfinch-echo-1": [
+17780,
+"0d88507bc9"
+],
+"st/bulfinch-echo-2": [
+40200,
+"8a77ae0060"
+],
+"st/bulfinch-echo-3": [
+23780,
+"e0273a6dc4"
+],
+"st/bulfinch-icarus-0": [
+28130,
+"333f02639c"
+],
+"st/bulfinch-icarus-1": [
+28820,
+"a1b299652b"
+],
+"st/bulfinch-icarus-2": [
+25510,
+"0f2cda61ad"
+],
+"st/bulfinch-icarus-3": [
+35450,
+"ef89af5992"
+],
+"st/bulfinch-iris-0": [
+41040,
+"db3c4b2c3c"
+],
+"st/bulfinch-iris-1": [
+20540,
+"e538673c09"
+],
+"st/bulfinch-iris-2": [
+32060,
+"c3cb904d57"
+],
+"st/bulfinch-iris-3": [
+10750,
+"59db00e908"
+],
+"st/bulfinch-iris-4": [
+39720,
+"89351da4dc"
+],
+"st/bulfinch-narcissus-0": [
+37320,
+"7249146768"
+],
+"st/bulfinch-narcissus-1": [
+18820,
+"98fcb63641"
+],
+"st/bulfinch-narcissus-2": [
+27720,
+"122e98b1d8"
+],
+"st/bulfinch-narcissus-3": [
+14880,
+"22af6c5b1c"
+],
+"st/bulfinch-narcissus-4": [
+24000,
+"db7dfbcd44"
+],
+"st/bulfinch-pan-0": [
+17380,
+"8978642325"
+],
+"st/bulfinch-pan-1": [
+15020,
+"b0a39c0ce1"
+],
+"st/bulfinch-pan-2": [
+20690,
+"65ccabe6de"
+],
+"st/bulfinch-pegasus-0": [
+14760,
+"0b3d737b0b"
+],
+"st/bulfinch-pegasus-1": [
+19510,
+"9f68e59a98"
+],
+"st/bulfinch-pegasus-2": [
+31320,
+"c02b8c0836"
+],
+"st/bulfinch-pegasus-3": [
+24260,
+"06612dea44"
+],
+"st/bulfinch-pegasus-4": [
+23520,
+"27412cff4f"
+],
+"st/bulfinch-sirens-0": [
+20470,
+"ff92b30ed2"
+],
+"st/bulfinch-sirens-1": [
+20280,
+"112a768eca"
+],
+"st/bulfinch-sirens-2": [
+27650,
+"c5c6ef0753"
+],
+"st/bulfinch-tantalus-0": [
+41590,
+"4cf4910f14"
+],
+"st/bulfinch-tantalus-1": [
+21020,
+"569fdb7ad3"
+],
+"st/bulfinch-tantalus-2": [
+25440,
+"a69d9be238"
+],
+"st/caesar-antony-0": [
+34490,
+"07d1c8567f"
+],
+"st/caesar-antony-1": [
+25660,
+"29e247992f"
+],
+"st/caesar-antony-2": [
+19180,
+"ce94403be4"
 ],
 "st/carol-scrooge-0": [
 16900,
@@ -1679,6 +2135,42 @@
 21170,
 "1cfab55eb1"
 ],
+"st/douglass-sails-0": [
+28560,
+"2ce9651c5f"
+],
+"st/douglass-sails-1": [
+13440,
+"7d0f461b94"
+],
+"st/douglass-sails-2": [
+27860,
+"e50bf4c158"
+],
+"st/douglass-sails-3": [
+16460,
+"b3b010fc73"
+],
+"st/douglass-sails-4": [
+12050,
+"5792360e67"
+],
+"st/dragons-book-beasts-0": [
+11160,
+"c55553a3de"
+],
+"st/dragons-book-beasts-1": [
+19990,
+"7f0c5dc814"
+],
+"st/dragons-book-beasts-2": [
+32689,
+"f97c54e4b0"
+],
+"st/dragons-book-beasts-3": [
+14210,
+"967bf8caba"
+],
 "st/gettysburg-address-0": [
 18550,
 "6547f895d9"
@@ -1723,6 +2215,90 @@
 18410,
 "a0af33bf5b"
 ],
+"st/grimm-frog-prince-0": [
+19850,
+"d634601beb"
+],
+"st/grimm-frog-prince-1": [
+24340,
+"ee12ca0180"
+],
+"st/grimm-frog-prince-2": [
+22340,
+"0b6dca8222"
+],
+"st/grimm-frog-prince-3": [
+16340,
+"822a0268c2"
+],
+"st/grimm-frog-prince-4": [
+25800,
+"6b49ca4444"
+],
+"st/grimm-golden-goose-0": [
+21720,
+"483862845c"
+],
+"st/grimm-golden-goose-1": [
+38060,
+"4071872cfb"
+],
+"st/grimm-golden-goose-2": [
+29110,
+"3a35f60bf8"
+],
+"st/grimm-golden-goose-3": [
+28900,
+"bdc39f4e58"
+],
+"st/grimm-musicians-0": [
+24000,
+"4baf983d98"
+],
+"st/grimm-musicians-1": [
+31370,
+"4d10974c54"
+],
+"st/grimm-musicians-2": [
+28270,
+"2f8bed42d4"
+],
+"st/grimm-musicians-3": [
+37800,
+"20ee9fe4bd"
+],
+"st/grimm-old-man-0": [
+26060,
+"d04e4c7ee6"
+],
+"st/grimm-old-man-1": [
+13660,
+"83fb47307a"
+],
+"st/grimm-old-man-2": [
+13850,
+"a9db571fe5"
+],
+"st/grimm-old-man-3": [
+12050,
+"e3f684eeb5"
+],
+"st/grimm-rumpelstiltskin-0": [
+30770,
+"e83840348e"
+],
+"st/grimm-rumpelstiltskin-1": [
+19440,
+"9d0c90f764"
+],
+"st/grimm-rumpelstiltskin-2": [
+21380,
+"b60533baf1"
+],
+"st/grimm-rumpelstiltskin-3": [
+15580,
+"86386dff81"
+],
 "st/happyprince-swallow-0": [
 13990,
 "9dfe1a3501"
@@ -1762,6 +2338,38 @@
 "st/heidi-fire-3": [
 27580,
 "2d586f6b1c"
+],
+"st/heroes-perseus-0": [
+38420,
+"eb03194671"
+],
+"st/heroes-perseus-1": [
+19920,
+"840f72e700"
+],
+"st/heroes-perseus-2": [
+27580,
+"3bc109ab4c"
+],
+"st/holmes-carbuncle-0": [
+22420,
+"66c3437795"
+],
+"st/holmes-carbuncle-1": [
+34080,
+"31a53d91ac"
+],
+"st/holmes-carbuncle-2": [
+12000,
+"35ae94303c"
+],
+"st/holmes-carbuncle-3": [
+32980,
+"cc2cb1210e"
+],
+"st/holmes-carbuncle-4": [
+11500,
+"b550cd5650"
 ],
 "st/holmes-observe-0": [
 34080,
@@ -1819,6 +2427,26 @@
 28560,
 "866121b105"
 ],
+"st/justso-camel-0": [
+25100,
+"b4147251f2"
+],
+"st/justso-camel-1": [
+16270,
+"b96f5bc94e"
+],
+"st/justso-camel-2": [
+23160,
+"86ad1cdcf9"
+],
+"st/justso-camel-3": [
+18820,
+"6a3beb72c8"
+],
+"st/justso-camel-4": [
+16340,
+"e4d299dd93"
+],
 "st/justso-elephant-0": [
 25030,
 "d79e3b94dd"
@@ -1838,6 +2466,14 @@
 "st/justso-elephant-4": [
 25510,
 "2a27a0b563"
+],
+"st/keats-chapman-0": [
+18480,
+"ec370ec457"
+],
+"st/keats-chapman-1": [
+14880,
+"d95e03d820"
 ],
 "st/keats-grasshopper-0": [
 19180,
@@ -1927,6 +2563,34 @@
 10820,
 "361dc19763"
 ],
+"st/macbeth-tomorrow-0": [
+24550,
+"f06fff8087"
+],
+"st/macbeth-tomorrow-1": [
+11640,
+"c9f0013f8e"
+],
+"st/macbeth-tomorrow-2": [
+21940,
+"60031054c6"
+],
+"st/macbeth-witches-0": [
+33650,
+"65fcc3868c"
+],
+"st/macbeth-witches-1": [
+12120,
+"d16fa38613"
+],
+"st/macbeth-witches-2": [
+56160,
+"ac6f31ed45"
+],
+"st/macbeth-witches-3": [
+30700,
+"017976e324"
+],
 "st/magi-della-0": [
 39600,
 "d3a198821f"
@@ -1963,6 +2627,22 @@
 6260,
 "c42f65c0a1"
 ],
+"st/midsummer-casting-0": [
+24820,
+"27e6a9a53d"
+],
+"st/midsummer-casting-1": [
+35590,
+"7026171b26"
+],
+"st/midsummer-casting-2": [
+42140,
+"6c35c47bdf"
+],
+"st/midsummer-casting-3": [
+9720,
+"c9e7bf3732"
+],
 "st/midsummer-epilogue-0": [
 7700,
 "7f4dd4cc59"
@@ -1990,6 +2670,22 @@
 "st/midsummer-puck-3": [
 39790,
 "163dae2181"
+],
+"st/midsummer-titania-0": [
+22900,
+"af16b050f0"
+],
+"st/midsummer-titania-1": [
+42770,
+"8865caee5f"
+],
+"st/midsummer-titania-2": [
+39170,
+"6049f466eb"
+],
+"st/midsummer-titania-3": [
+66980,
+"3c9f7d6aed"
 ],
 "st/naidu-palanquin-0": [
 14260,
@@ -2095,6 +2791,18 @@
 11450,
 "8a6363cbcb"
 ],
+"st/sonnet-116-0": [
+19370,
+"6b01a4a58e"
+],
+"st/sonnet-116-1": [
+10270,
+"01e5463e87"
+],
+"st/sonnet-116-2": [
+4870,
+"a4d1ae4b1c"
+],
 "st/sonnet-18-0": [
 9240,
 "4e6b943129"
@@ -2171,6 +2879,42 @@
 13220,
 "f86487d253"
 ],
+"st/tanglewood-ceres-0": [
+30700,
+"57ea1b95e1"
+],
+"st/tanglewood-ceres-1": [
+30340,
+"9c5dbab677"
+],
+"st/tanglewood-ceres-2": [
+30410,
+"b1438509fd"
+],
+"st/tanglewood-ceres-3": [
+7370,
+"81219e8069"
+],
+"st/tanglewood-labyrinth-0": [
+28970,
+"3ed5a819f5"
+],
+"st/tanglewood-labyrinth-1": [
+20400,
+"bdff949214"
+],
+"st/tanglewood-labyrinth-2": [
+25730,
+"6d6a94047d"
+],
+"st/tanglewood-labyrinth-3": [
+33310,
+"cddf51d115"
+],
+"st/tanglewood-labyrinth-4": [
+12550,
+"b69a4a0114"
+],
 "st/tomsawyer-fence-0": [
 43870,
 "135fedf8bc"
@@ -2243,6 +2987,26 @@
 12670,
 "9957d98dc7"
 ],
+"st/wilde-selfish-giant-0": [
+35180,
+"ef2da48771"
+],
+"st/wilde-selfish-giant-1": [
+19780,
+"f6b2ead8e9"
+],
+"st/wilde-selfish-giant-2": [
+23520,
+"e89ffc22a0"
+],
+"st/wilde-selfish-giant-3": [
+15650,
+"bbb9b902fd"
+],
+"st/wilde-selfish-giant-4": [
+27170,
+"a5559ad205"
+],
 "st/wind-boats-0": [
 9360,
 "5272873113"
@@ -2263,6 +3027,54 @@
 11780,
 "f7ccb67540"
 ],
+"st/wonderbook-atlas-0": [
+36410,
+"8426407f75"
+],
+"st/wonderbook-atlas-1": [
+32980,
+"5029c52ca8"
+],
+"st/wonderbook-atlas-2": [
+30140,
+"b3cd3160f5"
+],
+"st/wonderbook-atlas-3": [
+23710,
+"c15f308ea1"
+],
+"st/wonderbook-midas-0": [
+36890,
+"e872a5dbb1"
+],
+"st/wonderbook-midas-1": [
+37030,
+"a1d2e2899b"
+],
+"st/wonderbook-midas-2": [
+19990,
+"ce035651eb"
+],
+"st/wonderbook-midas-3": [
+12670,
+"adc09d7e51"
+],
+"st/wonderbook-pandora-0": [
+26830,
+"7f8ef7df04"
+],
+"st/wonderbook-pandora-1": [
+30480,
+"61111a3167"
+],
+"st/wonderbook-pandora-2": [
+21500,
+"0db1f08712"
+],
+"st/wonderbook-pandora-3": [
+22340,
+"8e9ca2701a"
+],
 "st/wordsworth-daffodils-0": [
 11380,
 "08542ffe5c"
@@ -2274,6 +3086,22 @@
 "st/wordsworth-daffodils-2": [
 10900,
 "88e8fc3b4a"
+],
+"st/wordsworth-reaper-0": [
+15310,
+"4c92ed577c"
+],
+"st/wordsworth-reaper-1": [
+14470,
+"8232a93e9b"
+],
+"st/wordsworth-reaper-2": [
+13780,
+"aae5aec4c5"
+],
+"st/wordsworth-reaper-3": [
+14260,
+"87a8d25be4"
 ],
 "stop/la1-origin-learn": [
 11230,
@@ -2547,6 +3375,22 @@
 5090,
 "cf8bd74524"
 ],
+"stop/s10-check-learn": [
+19990,
+"4459ba1998"
+],
+"stop/s10-check-story": [
+9720,
+"12f415ebac"
+],
+"stop/s10-meet-learn": [
+19100,
+"cb31e95362"
+],
+"stop/s10-meet-story": [
+11020,
+"3a5388a3e3"
+],
 "stop/s2-split-learn": [
 8880,
 "b5aca77cb9"
@@ -2626,6 +3470,70 @@
 "stop/s5-order-story": [
 4460,
 "f5e5187edf"
+],
+"stop/s6-fold-learn": [
+17090,
+"20dd93ca43"
+],
+"stop/s6-fold-story": [
+11090,
+"ac44924e63"
+],
+"stop/s6-join-learn": [
+17380,
+"6e768f6fd2"
+],
+"stop/s6-join-story": [
+11230,
+"bd938e8192"
+],
+"stop/s7-name-learn": [
+19220,
+"fe416e9eb6"
+],
+"stop/s7-name-story": [
+10270,
+"414e82e0a5"
+],
+"stop/s7-vary-learn": [
+14470,
+"25ee605932"
+],
+"stop/s7-vary-story": [
+10200,
+"45d7644b7b"
+],
+"stop/s8-fix-learn": [
+16970,
+"4378ecb698"
+],
+"stop/s8-fix-story": [
+8880,
+"dc94ceb374"
+],
+"stop/s8-spot-learn": [
+13780,
+"b1d4bc3fa9"
+],
+"stop/s8-spot-story": [
+7990,
+"d474129957"
+],
+"stop/s9-effect-learn": [
+17780,
+"e74170027b"
+],
+"stop/s9-effect-story": [
+12190,
+"5efc51081a"
+],
+"stop/s9-spot-learn": [
+16460,
+"48e49a7187"
+],
+"stop/s9-spot-story": [
+10060,
+"1085ac06e3"
 ],
 "stop/sp1-aloud-learn": [
 13700,
@@ -2731,6 +3639,22 @@
 6260,
 "36576676ef"
 ],
+"stop/w10-clues-learn": [
+22610,
+"1960b0fbca"
+],
+"stop/w10-clues-story": [
+14210,
+"0f29730219"
+],
+"stop/w10-meanings-learn": [
+20950,
+"7d390bac3e"
+],
+"stop/w10-meanings-story": [
+9580,
+"4c74ead324"
+],
 "stop/w2-meaning-learn": [
 7780,
 "c8068e7282"
@@ -2794,6 +3718,78 @@
 "stop/w5-root-story": [
 6340,
 "f347fb145f"
+],
+"stop/w6-build-learn": [
+18000,
+"e8bc8323a5"
+],
+"stop/w6-build-story": [
+9430,
+"78d8864a68"
+],
+"stop/w6-families-learn": [
+21940,
+"1abdf942d5"
+],
+"stop/w6-families-story": [
+11160,
+"3871320131"
+],
+"stop/w7-myth-heroes-learn": [
+12960,
+"c79ff3286c"
+],
+"stop/w7-myth-heroes-story": [
+10460,
+"f9588ff338"
+],
+"stop/w7-myth-names-learn": [
+12960,
+"f55f6305cf"
+],
+"stop/w7-myth-names-story": [
+10270,
+"b772592e2b"
+],
+"stop/w7-myth-story-inside-learn": [
+16750,
+"e81bec2be1"
+],
+"stop/w7-myth-story-inside-story": [
+9910,
+"88d95446d6"
+],
+"stop/w8-formal-learn": [
+17930,
+"8a9b3020ea"
+],
+"stop/w8-formal-story": [
+10940,
+"a339f886ab"
+],
+"stop/w8-purpose-learn": [
+21500,
+"43bccf6cc6"
+],
+"stop/w8-purpose-story": [
+10060,
+"45fdf6ef3f"
+],
+"stop/w9-feeling-learn": [
+14950,
+"c46d340a05"
+],
+"stop/w9-feeling-story": [
+11020,
+"65c57a9ecc"
+],
+"stop/w9-strength-learn": [
+17710,
+"54b8039e56"
+],
+"stop/w9-strength-story": [
+12600,
+"09d182a036"
 ],
 "stop/wr1-copy-learn": [
 9910,
