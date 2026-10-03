@@ -9,7 +9,7 @@ tools/art/raw/ before process.py ships it.
 
     python3 tools/art/gen.py --only mascot-wave          # the mascot's model pose first
     python3 tools/art/gen.py --only mascot-cheer --ref raw/mascot-wave.png
-    python3 tools/art/gen.py --group worlds|avatars|medals|mascot
+    python3 tools/art/gen.py --group worlds|avatars|medals|mascot|tools
     python3 tools/art/gen.py --force --only av-tortoise
 
 The key is read from $GKEY_FILE or /root/.gkey — never from the repo, never printed.
@@ -157,8 +157,36 @@ STORY_STYLE = ("A storybook illustration for a classic children's book, in warm 
 _sp = os.path.join(HERE, 'story-prompts.json')
 if os.path.exists(_sp):
     for k, v in json.load(open(_sp)).items(): JOBS[k] = (STORY_STYLE + v, '16:9')
+# Tool headers (the Tools tab, views/tools.js): a painted strip behind each tool card. Places and objects only;
+# the tool's name is drawn by the app over the painting, so nothing here may carry a letter or a digit.
+TOOL_STYLE = ("Painted header illustration for a children's reading-and-writing app, in a warm hand-painted storybook "
+              "style: soft gouache and watercolour textures, gentle directional light, rich but not garish colour, clean "
+              "readable shapes. One continuous full-bleed scene, very wide, with the main object in the middle and calm "
+              "space at the top and bottom edges. No frame, no border, no blank panels. No people, no human figures, no "
+              "faces, no hands. " + NO_TEXT + " The scene: ")
+TOOLS = {
+    'stage':  "a small wooden lectern on a little raised wooden stage, heavy red velvet curtains drawn back on both sides "
+              "with gold tassels, a warm spotlight pool on the boards, footlights glowing along the front edge. Deep red, "
+              "honey wood, gold.",
+    'desk':   "an old wooden writing desk by a window, a long white feather quill standing in a round glass inkwell, a "
+              "sheet of cream paper with only faint grey squiggle lines, a brass candlestick, a sprig of lavender in a jar. "
+              "Walnut brown, cream, indigo ink.",
+    'vocab':  "a tall arched library window with afternoon light falling on a big open book on a reading stand, a brass "
+              "magnifying glass resting over its pages (the pages show only soft grey squiggle lines), shelves of books "
+              "with plain unmarked spines on either side. Deep green, amber, brass.",
+    'idioms': "a whimsical walled garden of sayings: a large china teapot planter spilling flowers, a hedge clipped into "
+              "the shape of a bull, a bronze bell hanging from an arch of roses, little round clouds drifting low over a "
+              "lawn, a ladder leaning against an apple tree. Plum, rose pink, leaf green, sky blue.",
+    'typing': "a cosy desk with an old-fashioned computer keyboard whose keys are all completely blank and unmarked, "
+              "smooth round cream keys with nothing printed on them, ivy trailing over the desk edge, a small potted fern, "
+              "a cup of cocoa, soft morning light. Cobalt blue, cream, ivy green.",
+    'quotes': "a cosy reading nook in a window seat piled with cushions, several open books floating gently in the air "
+              "above it with their pages fanning (pages show only soft grey squiggle lines), a few loose pages drifting "
+              "like leaves, a warm lamp, twilight outside. Ochre gold, plum, midnight blue.",
+}
+for k, v in TOOLS.items(): JOBS[f'tool-{k}'] = (TOOL_STYLE + v, '21:9')
 GROUPS = {'stories': [k for k in JOBS if k.startswith('story-')], 'book': [k for k in JOBS if k.startswith('book-')], 'atlas': ['atlas', 'atlas-night'], 'worlds': [k for k in JOBS if k.startswith('w-')], 'avatars': [k for k in JOBS if k.startswith('av-')],
-          'medals': [k for k in JOBS if k.startswith('medal-')], 'mascot': [k for k in JOBS if k.startswith('mascot-') and k != 'mascot-wave'] + ['icon']}
+          'medals': [k for k in JOBS if k.startswith('medal-')], 'tools': [k for k in JOBS if k.startswith('tool-')], 'mascot': [k for k in JOBS if k.startswith('mascot-') and k != 'mascot-wave'] + ['icon']}
 
 
 def call(model, prompt, ratio, ref=None):

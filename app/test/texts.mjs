@@ -11,6 +11,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { WORKS, PASSAGES, LINES } from '../src/data/library.js';
 import { cleared } from '../src/data/rights.js';
+import { MORE_LINES } from '../src/data/lines-more.js';
 import { buildPassages, serialise, locate, readText, OUT, shipped, splitScenes, measure } from '../../tools/texts/levels.mjs';
 
 const APP = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -159,10 +160,11 @@ const quoteFound = (line) => {
   return corpus.get(line.work).includes(collapse(line.text));
 };
 const seen = new Set();
-for (const l of LINES) {
+for (const l of [...LINES, ...MORE_LINES]) {   // MORE_LINES: the Tools tab's Quotes & Poems — the same lint, and only cleared works
   const tag = `line "${l.text.slice(0, 40)}…"`;
   const w = byId.get(l.work);
   if (!ok(w && w.held, `${tag}: work ${l.work} is not held, so it cannot be quoted`)) continue;
+  if (MORE_LINES.includes(l)) ok(cleared(w) && l.text.trim().length >= 10 && /\s/.test(l.text.trim()), `${tag}: Quotes & Poems holds only lines of 2+ words from works cleared in all three markets`);
   ok(typeof l.who === 'string' && l.who.trim(), `${tag}: who is missing`);
   ok(l.text.length <= 200, `${tag}: longer than 200 characters`);
   ok(!seen.has(l.text), `${tag}: duplicate line`);
@@ -170,6 +172,7 @@ for (const l of LINES) {
   ok(quoteFound(l), `${tag}: not found in texts/${l.work}.txt (never paraphrase, never quote from memory)`);
 }
 ok(LINES.length >= 40, `need at least 40 lines (have ${LINES.length})`);
+ok(MORE_LINES.length >= 200, `Quotes & Poems needs at least 200 more lines (have ${MORE_LINES.length})`);
 // The lint must be able to fail: a line with one word changed is rejected.
 const broken = { ...LINES[0], text: LINES[0].text.replace(/[A-Za-z]+/, (m) => m + 'x') };
 ok(!quoteFound(broken), 'check-quotes accepted an altered line: the lint is blind');

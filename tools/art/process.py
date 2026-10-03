@@ -2,7 +2,7 @@
 """process.py — size the raw paintings for the app (look at every one in raw/ first).
 
     python3 tools/art/process.py --all
-    python3 tools/art/process.py --avatars | --mascot | --worlds | --medals | --icon
+    python3 tools/art/process.py --avatars | --mascot | --worlds | --medals | --icon | --tools
 
 Avatars and mascot poses are keyed off their flat magenta ground to alpha (Bizzing Maths'
 keying, after Bee's champions-pack.py), trimmed and centred. The key fails LOUDLY on a ghost:
@@ -141,6 +141,17 @@ def icon():
     print('icons: done')
 
 
+def tools():
+    """raw/tool-<id>.png → art/tool-<id>.webp (1280 wide) and art/tool-<id>-card.webp (720 wide), the Tools tab's card headers."""
+    t = 0
+    for f in sorted(os.listdir(RAW)):
+        if f.startswith('tool-') and f.endswith('.png'):
+            im = Image.open(os.path.join(RAW, f)).convert('RGB'); n = f[:-4]
+            t += save(im.resize((1280, round(im.height * 1280 / im.width)), Image.LANCZOS), os.path.join(PUB, 'art', n + '.webp'), 78)
+            t += save(im.resize((720, round(im.height * 720 / im.width)), Image.LANCZOS), os.path.join(PUB, 'art', n + '-card.webp'), 76)
+    print(f'tools: {t // 1024} KB')
+
+
 a = sys.argv
 if '--all' in a or '--avatars' in a: avatars()
 if '--all' in a or '--mascot' in a: mascot()
@@ -149,5 +160,6 @@ if '--all' in a or '--medals' in a: medals()
 if '--all' in a or '--icon' in a: icon()
 if '--all' in a or '--atlas' in a: atlas()
 if '--all' in a or '--stories' in a: stories()
+if '--all' in a or '--tools' in a: tools()
 if GHOSTS:
     print('REPAINT — the key failed on:\n  ' + '\n  '.join(GHOSTS)); sys.exit(1)

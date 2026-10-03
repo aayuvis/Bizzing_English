@@ -11,9 +11,12 @@ import { cleared, shippable, shippedLines, levelOf } from '../reading.js';
 import { lookup, lexReady } from '../lexicon.js';
 import { storyRoom, storyCard as storyArt } from './stories.js';
 import { stepOf } from '../mastery.js';
+import { mythsPage, mythProgress, authorCards, authorView } from './deep.js';
+import { author, authorOf, AUTHORS } from '../data/deep.js';
 
-const NAV = (cur) => [['stories', 'Stories', 'play'], ['books', 'Books', 'book'], ['words', 'Words', 'key'], ['poems', 'Poems', 'quill'], ['speeches', 'Speeches', 'lectern'], ['authors', 'Authors', 'user']]
-  .map(([id, label, ic]) => ({ label, icon: ic, href: `#/library/${id}`, active: id === cur }));
+/* six chips at most (the shell's rule): Speeches share the Poems room, and the Greek myths have their own */
+const NAV = (cur) => [['stories', 'Stories', 'play'], ['myths', 'Greek myths', 'flag'], ['books', 'Books', 'book'], ['poems', 'Poems & speeches', 'quill'], ['authors', 'Authors', 'user'], ['words', 'Words', 'key']]
+  .map(([id, label, ic]) => ({ label, icon: ic, href: `#/library/${id}`, active: id === cur || (cur === 'speeches' && id === 'poems') || (cur === 'author' && id === 'authors') }));
 const SHELF = { fable: 'Fables and fairy tales', children: 'Children’s classics', novel: 'Novels and stories', poetry: 'Poetry', drama: 'Drama', speech: 'Speeches', essay: 'Essays' };
 const COLOURS = ['#7a3b2e', '#2f5d50', '#3b4a7a', '#7a5a1e', '#5b3a6e', '#2e5b7a', '#7a2e4a', '#4a6a2e'];
 const col = (id) => COLOURS[[...id].reduce((a, c) => a + c.charCodeAt(0), 0) % COLOURS.length];
@@ -29,9 +32,11 @@ export function libraryView(tab = 'stories') {
   const k = kid();
   if (tab === 'stories') return pageHead({ title: 'The Library', sub: 'stories from the classics, read aloud', nav: NAV(tab) }) + storyRoom();
   if (tab === 'words') return head('every word you have met') + wordsTab(k);
-  if (tab === 'poems') return head('poems to hear and say aloud') + `<div class="rail wrap">${PASSAGES.filter((p) => shippable(p) && (p.kind === 'verse' || WORKS.find((w) => w.id === p.work)?.shelf === 'poetry')).map((p) => `<a class="scard" href="#/story/${p.id}"><span class="pic" style="background-image:url('${storyArt(p.id)}')"></span><span class="nm">${esc(p.title)}</span><span class="hk">${esc(p.hook || '')}</span><span class="meta">${esc(WORKS.find((w) => w.id === p.work)?.author || '')}</span></a>`).join('')}</div>` + listWorks(WORKS.filter((w) => w.shelf === 'poetry'), k, true);
+  if (tab === 'myths') { const pr = mythProgress(k); return head('fifteen stories, and the words they gave English', { chip: `${pr.heard} of ${pr.n} heard`, pct: pr.n ? (pr.heard / pr.n) * 100 : 0, label: 'a myth is heard when she has told it to the end' }) + mythsPage(); }
+  if (tab === 'author') { const a = author(S.route.parts[2]); return pageHead({ title: a ? a.name : 'Authors', sub: a ? (a.deepest ? 'a deep dive: the plays, the poems, the words' : 'a deep dive') : '', back: { label: 'Authors', href: '#/library/authors' } }) + authorView(S.route.parts[2]); }
+  if (tab === 'poems') return head('poems to hear, and speeches to say') + `<div class="rail wrap">${PASSAGES.filter((p) => shippable(p) && (p.kind === 'verse' || WORKS.find((w) => w.id === p.work)?.shelf === 'poetry')).map((p) => `<a class="scard" href="#/story/${p.id}"><span class="pic" style="background-image:url('${storyArt(p.id)}')"></span><span class="nm">${esc(p.title)}</span><span class="hk">${esc(p.hook || '')}</span><span class="meta">${esc(WORKS.find((w) => w.id === p.work)?.author || '')}</span></a>`).join('')}</div>` + listWorks(WORKS.filter((w) => w.shelf === 'poetry'), k, true) + `<h3 class="railh" id="speeches" style="margin-left:0">Speeches</h3>` + listWorks(WORKS.filter((w) => w.shelf === 'speech'), k, true);
   if (tab === 'speeches') return head('great speeches, and the art of them') + listWorks(WORKS.filter((w) => w.shelf === 'speech'), k, true);
-  if (tab === 'authors') return head('who wrote them') + authorsTab();
+  if (tab === 'authors') return head('who wrote them') + `<h3 class="railh" style="margin-left:0">Deep dives</h3><p class="railn" style="margin-left:0">Each author’s stories, lines, a quiz — pictured by a painting of their own work.</p>` + authorCards() + `<h3 class="railh" style="margin-left:0">Every author on the shelves</h3>` + authorsTab();
   const met = WORKS.filter((w) => PASSAGES.some((p) => p.work === w.id && k.stops['rd-' + p.id]?.passed)).length;
   const shelves = Object.entries(SHELF).map(([id, name]) => {
     const ws = WORKS.filter((w) => w.shelf === id); if (!ws.length) return '';
@@ -53,7 +58,7 @@ function listWorks(ws, k, withPassages) {
 function authorsTab() {
   const by = {};
   for (const w of WORKS) (by[w.author] ||= []).push(w);
-  return `<div class="grid3">${Object.entries(by).sort((a, b) => a[0].localeCompare(b[0])).map(([a, ws]) => `<div class="card"><h3>${esc(a)}</h3>${ws.map((w) => `<a href="#/book/${w.id}" style="display:block;padding:6px 0;min-height:32px">${esc(w.title)} <small class="muted">(${w.year})</small></a>`).join('')}</div>`).join('')}</div>`;
+  return `<div class="grid3">${Object.entries(by).sort((a, b) => a[0].localeCompare(b[0])).map(([a, ws]) => `<div class="card"><h3>${authorOf(ws[0].id) ? `<a href="#/library/author/${authorOf(ws[0].id).id}">${esc(a)}</a>` : esc(a)}</h3>${ws.map((w) => `<a href="#/book/${w.id}" style="display:block;padding:6px 0;min-height:32px">${esc(w.title)} <small class="muted">(${w.year})</small></a>`).join('')}</div>`).join('')}</div>`;
 }
 
 function wordsTab(k) {
@@ -80,6 +85,7 @@ export function bookView(id) {
   return pageHead({ title: w.title, sub: `${w.author} · ${w.year}`, back: { label: 'Library', href: '#/library' } }) + `<div class="stack">
     <div class="card bookcard"><div class="bookcover" style="--c:${col(w.id)}">${esc(w.title)}</div><div><span class="kick">${esc(w.era)}</span><p style="font-size:17px;margin:4px 0 8px"><b>${esc(w.why)}</b></p><p style="margin:0">${esc(w.summary)}</p>
       ${w.needsReview ? `<p class="tag warn" style="margin-top:10px">${icon('help')}A note for grown-ups</p><p class="note">${esc(w.reviewNote || 'This book carries attitudes of its time. A named reviewer has not yet cleared it.')}</p>` : ''}</div></div>
+    ${authorOf(id) ? `<p style="margin:0">${link(`More about ${authorOf(id).name}`, `#/library/author/${authorOf(id).id}`, { ic: 'user', cls: 'out small' })}</p>` : ''}
     <div class="card"><h3>Read</h3>${bookMeta(id) ? `<p>${link('Read the whole book, chapter by chapter', `#/whole/${id}`, { ic: 'book' })}</p>` : ''}${passages}</div>
     ${lines.length ? `<div class="card lines"><h3>Famous lines</h3>${lines.map((l) => `<blockquote>${esc(l.text)}<br><small class="muted" style="font:13px var(--bz-body)">— ${esc(l.who)}</small></blockquote>`).join('')}</div>` : ''}
     ${liked.length ? `<div class="card"><h3>If you liked this…</h3><div class="row">${liked.map((x) => `<a class="bz-chip" href="#/book/${x.id}">${esc(x.title)}</a>`).join('')}</div></div>` : ''}

@@ -1,0 +1,58 @@
+/* deep.css — the Library's deep dives (views/deep.js): the myths' road and the authors' pages.
+   Colours through the app's tokens only, so light and dark both hold. */
+
+.dp .railh { margin-left: 0; margin-right: 0; } .dp .railn { margin-left: 0; margin-right: 0; }
+.dp .rail.wrap { padding: 4px 0 0; margin-bottom: 4px; }
+.dp-intro q, .dp q { font-family: var(--read); font-style: italic; }
+.dp-prog { display: flex; gap: 8px; align-items: flex-start; margin: 12px 0 10px; font-size: 15px; }
+.dp-prog svg { width: 20px; height: 20px; flex: none; color: var(--good); margin-top: 1px; }
+.dp-sub { font-size: 17px; margin-top: 14px; }
+
+/* the journey: a road of stones down the page, each region a stretch of it */
+.mj-road { list-style: none; margin: 0; padding: 0 0 0 30px; position: relative; display: grid; gap: 18px; }
+.mj-road::before { content: ''; position: absolute; left: 13px; top: 8px; bottom: 8px; border-left: 4px dashed color-mix(in srgb, var(--bz-accent, #047857) 45%, var(--line)); border-radius: 2px; }
+.mj-rhead h3 { margin: 0; font: 800 19px var(--bz-display); } .mj-rhead .note { margin: 2px 0 8px; }
+.mj-stops { display: grid; gap: 12px; }
+.mj-stop { position: relative; display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 12px; }
+.mj-stone { position: absolute; left: -31px; top: 18px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--card); border: 3px solid var(--line); font: 800 12.5px var(--mono); color: var(--ink); }
+.mj-stop.heard .mj-stone { background: var(--good); border-color: var(--good); color: #fff; }
+.mj-stone svg { width: 15px; height: 15px; }
+.mj-pic { display: block; min-height: 130px; border-radius: 12px; background-size: cover; background-position: center; }
+.mj-body h4 { margin: 0; font: 800 18px/1.25 var(--bz-display); }
+.mj-hook { margin: 4px 0 2px; color: var(--muted); font-size: 14.5px; line-height: 1.4; }
+.mj-body .meta { margin: 0 0 8px; font: 600 12.5px var(--bz-body); color: var(--muted); }
+.mj-words { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+.mj-words ul { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 7px; }
+.mj-words li { line-height: 1.4; font-size: 14.5px; }
+.mj-words small { display: block; color: var(--muted); font-size: 13px; }
+.mj-w { font: 700 17px var(--read); color: var(--ink); text-underline-offset: 3px; }
+a.mj-w { display: inline-block; min-height: 28px; }
+.mj-w.banked { text-decoration-color: var(--good); text-decoration-thickness: 2px; }
+.mj-words .tag { font-size: 11.5px; padding: 1px 7px; }
+
+/* Who's who */
+.dp-who h4 { margin: 0 0 4px; font: 800 17px var(--bz-display); } .dp-who h4 small { font: 600 13px var(--bz-body); }
+.dp-who p { margin: 0 0 6px; }
+.dp blockquote { margin: 8px 0; padding: 6px 12px; border-left: 4px solid var(--bz-pin, var(--line)); font: italic 500 15.5px/1.5 var(--read); }
+.dp blockquote small { display: block; font: normal 600 12.5px var(--bz-body); color: var(--muted); margin-top: 2px; }
+
+/* the authors */
+.dp-authors { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 13px; margin-bottom: 18px; }
+.dp-acard { scroll-snap-align: none; }
+.dp-head { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; align-items: start; }
+.dp-hart { display: block; min-height: 140px; border-radius: 14px; background-size: cover; background-position: center; }
+.dp-head .bz-chip { min-height: 36px; }
+.dp-sec h3 { margin-top: 0; }
+.dp-wt { margin: 14px 0 4px; font: 800 16.5px var(--bz-display); } .dp-wt:first-of-type { margin-top: 0; }
+.dp-learn { font-style: normal !important; }
+.dp-ex { margin: 4px 0 8px; padding-left: 20px; } .dp-ex li { margin: 3px 0; }
+.dp-retold { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.dq .opts { margin: 12px 0; }
+.dq .feedback a { color: inherit; font-weight: 700; }
+
+@media (max-width: 640px) {
+  .mj-road { padding-left: 24px; } .mj-road::before { left: 9px; }
+  .mj-stone { left: -25px; width: 24px; height: 24px; }
+  .mj-stop { grid-template-columns: minmax(0, 1fr); } .mj-pic { min-height: 150px; }
+  .dp-head { grid-template-columns: minmax(0, 1fr); } .dp-hart { min-height: 120px; }
+}
