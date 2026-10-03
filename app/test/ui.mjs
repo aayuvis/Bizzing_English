@@ -304,7 +304,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('the finish shows the run’s stars, score, best, accuracy, new items met and the level', await page.evaluate(() => { const t = document.querySelector('.gb-done')?.textContent || ''; return /You practised/.test(t) && /accuracy/.test(t) && /best/.test(t) && /Level \d/.test(t) && /new items met/.test(t) && document.querySelectorAll('.gb-done .gb-stars i').length === 3; }));
   const nx = await page.evaluate(() => document.querySelector('.gb-done [data-next]')?.getAttribute('href'));
   ok('the finish names one next step: the stop that teaches what was missed', nx === '#/stop/la7-devices' || nx === '#/stop/la7-antithesis', nx);
-  ok('the level, the stars and the memory are kept per game', await KID().then((g) => g.duel.level >= 1 && g.duel.stars?.[1] >= 1 && g.duel.rounds === 2 && Object.keys(g.duel.seen).length >= 5 && g.duel.plays === 1));
+  ok('the level, the stars and the memory are kept per game', await KID().then((g) => g.duel.level >= 1 && g.duel.stars?.[1] >= 1 && g.duel.rounds === 2 && Object.keys(g.duel.seen).length >= 5 && g.duel.plays === 2 && g.duel.runs === 1));
   /* by touch on a phone: a Plot Line story tapped in order; nothing scrolls sideways */
   { const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Ivo', '8–10'); await go(P.page, '#/play/plot');
     await P.page.waitForFunction(() => /new to you/.test(document.querySelector('[data-mem]')?.textContent || ''), null, { timeout: 15000 });

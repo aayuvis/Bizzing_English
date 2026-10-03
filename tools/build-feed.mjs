@@ -16,12 +16,46 @@
    `level` is the card's place on English's ladder: the level (1–10) of the strand stop it belongs
    to. Works, lines of the hour, Bee's words, figures, devices and games carry no level.
 
+   THE NEW SOURCES (Tools, the deep dives, the Stage, certificates, the games' pools) and the level each
+   is given. A card's level is its rung on English's ladder; where a source is not a strand stop, the rung is
+   the strand level whose subject it is, set by the source's own difficulty field — never by hand per card:
+     Vocabulary (public/data/vocab.json + Bee's lexicon, the tool's own decks; one card per word, in the
+       first of its decks in this order: Mighty 500, Meaning Masters, Champ, Hard, Medium, Easy; the
+       question is the tool's own vocItem, so its options are the tool's fair ones). Bee's 1–9 difficulty:
+         The Mighty 500 (Bee's finals list) and Champ (Bee 7–9) → Word 10 · Ready for the Bee
+         Hard: Bee 4 → Word 8, Bee 5–6 → Word 9 · Shades of meaning
+         Meaning Masters (Bee's junior-final list): Bee 1–2 → Word 4, Bee 3 → Word 5 (≤ 7 letters) or
+           Word 6 (longer), Bee 4–5 → Word 7
+         Medium: Bee 2 → Word 3, Bee 3 → Word 4 · Easy (Bee 1) → Word 2 · What words mean
+       Word origins (Bee's origin decks) are Language 1, cut from that stop's own generator (more of its
+       items than the six the strand section takes).
+     Idioms & Similes (src/data/idioms.json; meaning, Bee's example and the tool's own idiomItem question —
+       NEVER the origin story, which awaits a reviewer): Bee's diff → idioms and proverbs easy → Language 5
+       · Idioms, medium/hard → Language 6 · Register and dialect (when a saying fits); similes easy →
+       Literature 5 · Figurative language, medium/hard → Word 9 · Shades of meaning.
+     Quotes & Poems: the held lines only (LINES are already here; lines-more.js MORE_LINES are new), each at
+       the Reading level of its work's passages. Bee's quotes (bee-quotes.json) are never read here.
+     The Greek myths (data/deep.js): the journey's rooms and Who's who (exact quotes) at the Reading level of
+       their passages; myth words as before (Word 7), skipping any deep.js holds back (heldBack).
+     The authors: one card each and a "why read" card per work told in the Library, at the Reading level of
+       their passages. Their quiz is their passages' own questions, already cut here, so it is not repeated.
+     Typing Trainer lessons → Writing 1 · Copywork. The Elocution Contest's rounds → Speaking 1 (a passage),
+       2 (a poem), 6 (a one-minute talk). Certificates → the level they certify (levels with a stop held for
+       review are left out). The games' five levels each stay level-agnostic, as the games do.
+     The games' pools (read when present): builder.json → Sentence 3 (band 1) or 4 (bands 2–3), "which part
+       is the main clause?"; rush.json → "where does the comma go?" (one-comma sentences) at Sentence 4
+       (compound), 5 (address, aside) or 7 (fronted openings); figures-more.js → Literature 5;
+       rhetoric-more.js → the level of the Language stop that teaches the device (Language 7).
+   A level holds at most BUDGET cards and BYTES of words (its file stays small): the strand stops, passages and
+   small sources first, then the big pools in turn (a stable hash order, so no alphabet bias), then more of
+   the generators' own items where a level is still short.
+
      node tools/build-feed.mjs           → app/src/data/feed/ (index.json + one group per level; loaded only when #/feed opens)
      node tools/build-feed.mjs --check   → exits 1 if those files are not today's cut */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { STRANDS, allStops, level as levelOfStrand } from '../app/src/curriculum.js';
+import { STRANDS, allStops, stopById, level as levelOfStrand } from '../app/src/curriculum.js';
 import { AUTHORED } from '../app/src/authored.js';
 import { keys, make } from '../app/src/items.js';
 import { PASSAGES, WORKS, LINES } from '../app/src/data/library.js';
@@ -33,6 +67,11 @@ import { RHETORIC } from '../app/src/data/language.js';
 import { MYTH_WORDS } from '../app/src/data/myth-words.js';
 import { GAMES } from '../app/src/games.js';
 import { readText } from './texts/levels.mjs';
+import { vocDecks, vocItem, idiomItem, TY_LESSONS, quoteShelf, authorKey } from '../app/src/tools.js';
+import { MORE_LINES } from '../app/src/data/lines-more.js';
+import { MYTH_JOURNEY, WHO, AUTHORS, heldBack, authorPassages, authorWorks, isGated, lifeNote } from '../app/src/data/deep.js';
+import { ROUNDS } from '../app/src/contest.js';
+import { hash, rng, shuffle } from '../app/src/rand.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url)), APP = join(HERE, '..', 'app');
 const json = (p) => JSON.parse(readFileSync(join(APP, p), 'utf8'));
@@ -41,6 +80,15 @@ const TEXTS = Object.fromEntries(json('src/data/passages.json').map((p) => [p.id
 const HOUR = json('src/data/hour-words.json');
 const ART = json('src/data/story-art.json');
 const BOOKDATA = Object.fromEntries(BOOKS.map((b) => [b.id, json(`src/data/book-${b.id}.json`)]));
+export const VOCAB = json('public/data/vocab.json'), IDIOMS = json('src/data/idioms.json').items;
+/* the games' pools, written by their own agent: read only when they are there */
+const optJson = (p) => { try { const j = json(p); return Array.isArray(j) ? j : []; } catch { return []; } };
+const optMod = async (p) => { try { return await import(p); } catch { return {}; } };
+export const POOLS = {
+  builder: optJson('src/data/games/builder.json'), rush: optJson('src/data/games/rush.json'),
+  figures: (await optMod('../app/src/data/figures-more.js')).FIGURES_MORE || [],
+  rhetoric: (await optMod('../app/src/data/rhetoric-more.js')).RHETORIC_MORE || [],
+};
 
 /* ---------------------------------------------------------------- shared rules */
 export const norm = (s) => String(s).toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9' ]+/g, ' ').replace(/\s+/g, ' ').trim();
@@ -133,7 +181,7 @@ export function cut() {
   /* 2. myth words (Word 7): the word, where it comes from, and the myth that tells it */
   for (const m of MYTH_WORDS) {
     const p = PASSAGES.find((x) => x.id === m.passage), w = work(m.work);
-    if (m.needsReview || !p || p.needsReview || !TEXTS[p.id] || !quotable(w)) continue;
+    if (m.needsReview || heldBack(m) || !p || p.needsReview || !TEXTS[p.id] || !quotable(w)) continue;
     add({ id: `myth~${m.word}`, kind: 'myth', src: `myth:${m.word}`, level: 7, bands: bandsFrom(p.band), topics: [`stop:rd-${p.id}`, 'strand:word', `work:${m.work}`],
       where: placeName('word', 7), title: `${m.word} — from ${m.from}`, body: `“${m.quote}”`, cite: m.work, quote: m.quote, source: `${w.title} — ${w.author}`,
       more: `Its meaning: ${stop(m.meaning)} Told in “${p.title}”.`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
@@ -220,13 +268,221 @@ export function cut() {
   /* 10. the games: their own names and what they practise (games.js) */
   for (const g of games()) add({ id: `game~${g.id}`, kind: 'game', src: `game:${g.id}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: 'Play', title: g.name, body: g.how, more: stop(`Practises ${g.practises}`), route: `#/play/${g.id}`, cta: `Play ${g.name}` });
 
+  grow(cards, add, play);
+
   /* no favourite slot: a card whose right option lands where too many already sit is still kept — the
      engine's order() spreads them; the test holds the whole set to ≤ 35% in any slot */
   return cards.map((c) => Object.fromEntries(Object.entries(c).filter(([, v]) => v !== undefined && v !== '')));
 }
 
+/* ---------------------------------------------------------------- the new sources (see the header) */
+export const BUDGET = 560, BYTES = 390000;
+const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
+const hashOrder = (list, salt) => list.map((c) => [hash(salt + c.id), c]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
+export const bandsOfLevel = (L) => (L <= 3 ? [1, 2, 3] : L <= 7 ? [2, 3] : [3]);
+const DIFF_BANDS = { easy: [1, 2, 3], medium: [2, 3], hard: [3] };
+const shippedP = (p) => !!p && TEXTS[p.id] && !p.needsReview && quotable(work(p.work));
+/* a work's place on the ladder: the Reading level of its easiest passage the Library tells */
+export const workLevel = (wid) => { const ls = PASSAGES.filter((p) => p.work === wid && shippedP(p)).map(levelOf); return ls.length ? Math.min(...ls) : null; };
+const firstStop = (sid, L) => allStops().find((s) => s.strand === sid && s.level === L && !s.needsReview);
+const taughtAt = (sid, L) => { const st = firstStop(sid, L); return st ? stop(`Taught at: ${placeName(sid, L)} — ${st.title}`) : ''; };
+
+/* Vocabulary: the deck a word is carded from, and its rung */
+export const VOCAB_HOME = ['nsf500', 'vocab26', 'champ', 'hard', 'medium', 'easy'];
+export function vocabLevel(deckId, e) {
+  if (deckId === 'nsf500' || deckId === 'champ') return 10;
+  if (deckId === 'hard') return e.y <= 4 ? 8 : 9;
+  if (deckId === 'vocab26') return e.y <= 2 ? 4 : e.y === 3 ? (e.w.length <= 7 ? 5 : 6) : 7;
+  if (deckId === 'medium') return e.y <= 2 ? 3 : 4;
+  if (deckId === 'easy') return 2;
+  return null;
+}
+export const DECKS = vocDecks(VOCAB, LEX);
+export const vocabQ = (w) => `What does “${w}” mean?`;
+/* Idioms & Similes: [strand, level] by Bee's diff */
+export const idiomPlace = (x) => (x.t === 'simile' ? (x.diff === 'easy' ? ['literature', 5] : ['word', 9]) : x.diff === 'easy' ? ['language', 5] : ['language', 6]);
+export const idiomQ = (x) => `What does this ${x.t} mean?`;
+export const idiomOk = (x) => !!x.ex && !norm(x.m).includes(norm(x.p)) && !norm(x.ex).includes(norm(x.m));
+/* Sentence Builder's sentences: the main clause against three other cuts of the same sentence */
+const SUBS = /^(when|because|if|although|after|before|while|until|since|as|unless|once|whenever|though)\b/i;
+export const BUILDER_Q = 'Which part is the main clause — the part that could stand alone as a sentence?';
+export function builderCut(x) {
+  const m = String(x.s || '').match(/^(.*)\[(.+)\](.*)$/); if (!m) return null;
+  const before = m[1].trim(), after = m[3].trim(); if (before && after) return null;
+  const S = (m[1] + m[2] + m[3]).replace(/\s+/g, ' ').trim(), strip = (t) => t.replace(/^[,;:\s]+|[,.!?;:\s]+$/g, '');
+  const main = strip(m[2]), dep = strip(before || after);
+  if (!SUBS.test(dep) || /[;:—]/.test(main + dep)) return null;
+  const M = main.split(' '), D = dep.split(' '); if (M.length < 3 || D.length < 3) return null;
+  const cuts = after ? [[...M.slice(1), D[0]], [...M.slice(-2), ...D.slice(0, -1)]] : [[...D.slice(-2), ...M.slice(0, -1)], [...D, M[0]]];
+  const opts = [main, dep, ...cuts.map((c) => strip(c.join(' ')))];
+  return new Set(opts.map(norm)).size === 4 && opts.every((o) => inText(o, S)) ? { S, opts, level: (x.band || 1) <= 1 ? 3 : 4 } : null;
+}
+/* Punctuation Rush's sentences: where does the ONE comma go? Three other gaps, none a comma could fairly take */
+export const RUSH_Q = 'Where does the comma go?';
+export const RUSH_LEVEL = { compound: 4, address: 5, aside: 5, fronted: 7 };
+const NOGAP = /^(and|but|or|so|yet|for|nor|which|who|whom|whose|when|where|while|if|because|though|although|as|then|too|until|unless|since|after|before|that|than|said|says|cried|asked|replied|however|perhaps|indeed|sir|madam)$/i;
+export function rushCut(x) {
+  const words = String(x.s || '').trim().split(/\s+/), at = words.map((w, j) => (w.endsWith(',') ? j : -1)).filter((j) => j >= 0);
+  if (at.length !== 1 || at[0] >= words.length - 1 || words.some((w, j) => j !== at[0] && w.includes(','))) return null;
+  const bare = words.map((w) => w.replace(/,$/, '')), label = (j) => bare[j].replace(/^[“"‘'(]+|[”"’'.!?;:)]+$/g, '');
+  const once = (j) => bare.filter((_, i) => norm(label(i)) === norm(label(j))).length === 1, g = at[0];
+  if (!label(g) || !once(g)) return null;
+  const fair = (j) => j > 0 && j !== g && Math.abs(j - g) > 1 && j < bare.length - 1 && once(j) && bare[j] === label(j) && /^[a-z]+$/.test(bare[j]) && /^[a-z]+$/.test(bare[j + 1]) && !NOGAP.test(bare[j]) && !NOGAP.test(bare[j + 1]);
+  const cand = bare.map((_, j) => j).filter(fair); if (cand.length < 3) return null;
+  const wrong = shuffle(rng('rush:' + x.s), cand).slice(0, 3).sort((a, b) => a - b);
+  return { body: bare.join(' '), right: `after “${label(g)}”`, wrong: wrong.map((j) => `after “${label(j)}”`), level: RUSH_LEVEL[x.rule] || 5 };
+}
+export const FIG_KINDS = () => [...new Set([...FIGURES, ...POOLS.figures].map((f) => f.figure))].sort();
+export const DEV_ALL = () => [...new Set([...RHETORIC, ...POOLS.rhetoric].map((r) => r.device))].sort();
+export const TYPING_LEVEL = 1, CONTEST_LEVEL = { prose: 1, poem: 2, talk: 6 };
+
+function grow(cards, add, play) {
+  const have = new Set(cards.map((c) => c.id)), bodies = new Set(cards.map((c) => norm(c.body || '')));
+  const A = [], B = {}, C = {};                                  // always · the big pools · more generator items
+  const pool = (o, L, name, c) => (((o[L] ||= {})[name] ||= []).push(c));
+
+  /* --- always: the small sources --- */
+  TY_LESSONS.forEach((l, i) => A.push({ id: `typing~${l.id}`, kind: 'typing', src: `typing:${l.id}`, level: TYPING_LEVEL, bands: [1, 2, 3], topics: ['strand:writing', 'tool:typing'],
+    where: `${placeName('writing', TYPING_LEVEL)} · Typing Trainer`, title: l.name, body: l.tip, more: l.seq ? `Practises the keys: ${l.seq}` : '', route: `#/tools/typing/${l.id}`, cta: `Lesson ${i + 1}: ${l.name}` }));
+  for (const r of ROUNDS) { const L = CONTEST_LEVEL[r.id]; if (!L) continue;
+    A.push({ id: `contest~${r.id}`, kind: 'contest', src: `contest:${r.id}`, level: L, bands: [1, 2, 3], topics: ['strand:speaking', 'contest'], where: `${placeName('speaking', L)} · The Elocution Contest`,
+      title: `The Elocution Contest: ${r.title}`, body: r.say, more: taughtAt('speaking', L), route: '#/stage/contest', cta: 'The Elocution Contest' }); }
+  for (const s of STRANDS) for (const l of s.levels) {
+    if (!l.stops.length || l.stops.some((st) => st.needsReview)) continue;
+    A.push({ id: `cert~${s.id}-${l.n}`, kind: 'certificate', src: `cert:${s.id}-${l.n}`, level: l.n, bands: bandsFrom(Math.min(...l.stops.map((st) => st.band || 1))), topics: [`strand:${s.id}`, `cert:${s.id}-${l.n}`],
+      where: placeName(s.id, l.n), title: `The certificate for ${s.title} level ${l.n} · ${l.title}`, body: `Pass every stop: ${l.stops.map((st) => st.title).join(' · ')}.`,
+      more: l.iCan ? `It says you can: “${l.iCan}”` : '', route: `#/atlas/${s.id}`, cta: `The ${s.title} road` });
+  }
+  for (const b of BOOKS) if (quotable(work(b.id)) && b.chapters.every((c) => !c.needsReview))
+    A.push({ id: `cert~book-${b.id}`, kind: 'certificate', src: `cert:book-${b.id}`, level: 8, bands: bandsFrom(b.band), topics: ['strand:reading', `work:${b.id}`], where: `${placeName('reading', 8)} · ${b.title}`,
+      title: `The certificate for ${b.title}`, body: `Read every chapter of ${b.title} by ${b.author} and answer its questions.`, more: '', route: `#/whole/${b.id}/1`, cta: `Chapter 1: ${b.chapters[0].title}` });
+  for (const r of MYTH_JOURNEY) {
+    const ps = r.stops.map((id) => PASSAGES.find((p) => p.id === id)).filter(shippedP); if (!ps.length) continue;
+    const L = Math.min(...ps.map(levelOf));
+    A.push({ id: `mythroom~${r.id}`, kind: 'myths', src: `mythroom:${r.id}`, level: L, bands: bandsFrom(Math.min(...ps.map((p) => p.band || 1))), topics: ['strand:reading', ...ps.map((p) => `stop:rd-${p.id}`)],
+      where: `${placeName('reading', L)} · The Greek myths`, title: r.title, body: r.note, more: `Told in: ${ps.map((p) => `“${p.title}”`).join(' · ')}.`, route: '#/library/myths', cta: 'The Greek myths' });
+  }
+  for (const c of WHO) {
+    const p = PASSAGES.find((x) => x.id === c.passage); if (!shippedP(p)) continue;
+    const L = levelOf(p), base = { level: L, bands: bandsFrom(p.band), topics: [`stop:rd-${p.id}`, 'strand:reading', `work:${p.work}`], key: `stop:rd-${p.id}`, where: `${placeName('reading', L)} · Who’s who in the myths`,
+      more: `Who’s who: ${c.fact}`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` };
+    A.push({ ...base, id: `who~${slug(c.name)}`, kind: 'who', src: `who:${c.name}#quote`, title: c.name, body: `“${c.quote}”`, cite: p.work, quote: c.quote, source: `${p.title} — ${work(p.work).author}` });
+    if (c.greek && quotable(work(c.greek.work))) A.push({ ...base, id: `who~${slug(c.name)}~greek`, kind: 'who', src: `who:${c.name}#greek`, title: `${c.name} — the Greeks called ${c.greek.as ? 'her' : ''}${c.greek.as ? ' ' : ''}${c.greek.name}`.replace(/called\s+/, 'called '), body: `“${c.greek.quote}”`, cite: c.greek.work, quote: c.greek.quote, source: `${work(c.greek.work).title} — ${work(c.greek.work).author}` });
+  }
+  for (const a of AUTHORS) {
+    if (isGated(a)) continue;
+    const ps = authorPassages(a).filter(shippedP), ws = authorWorks(a).filter(workOk); if (!ps.length || !ws.length) continue;
+    const L = Math.min(...ps.map(levelOf)), life = lifeNote(a);
+    A.push({ id: `author~${a.id}`, kind: 'author', src: `author:${a.id}`, level: L, bands: bandsFrom(Math.min(...ps.map((p) => p.band || 1))), topics: ['strand:reading', ...ws.map((w) => `work:${w.id}`)],
+      where: `${placeName('reading', L)} · The authors`, title: a.name, body: life && workOk(life.work) ? life.basis : '', more: `Their books in the Library: ${ws.map((w) => w.title).join(' · ')}.`,
+      route: `#/library/author/${a.id}`, cta: `${a.name} in the Library` });
+  }
+  for (const w of WORKS) {
+    if (!workOk(w) || !w.why) continue;
+    const ps = PASSAGES.filter((p) => p.work === w.id && shippedP(p)); if (!ps.length) continue;
+    const L = Math.min(...ps.map(levelOf));
+    A.push({ id: `why~${w.id}`, kind: 'why', src: `why:${w.id}`, level: L, bands: bandsFrom(Math.min(...ps.map((p) => p.band || 1))), topics: ['strand:reading', `work:${w.id}`],
+      where: `${placeName('reading', L)} · the Library`, title: `Why read ${w.title}?`, body: w.why, source: `${w.author}, ${w.year}`, more: `Told in the Library: ${ps.slice(0, 3).map((p) => `“${p.title}”`).join(' · ')}.`, route: `#/book/${w.id}`, cta: `${w.title} in the Library` });
+  }
+  const shelfKeys = new Set(quoteShelf([...LINES, ...MORE_LINES], WORKS).map((x) => x.key)), lineTexts = new Set(LINES.map((l) => norm(l.text)));
+  MORE_LINES.forEach((l, i) => {
+    const w = work(l.work), L = w && workLevel(w.id); if (!quotable(w) || !L || lineTexts.has(norm(l.text)) || !shelfKeys.has(authorKey(w.author))) return;
+    A.push({ id: `mline~${i}`, kind: 'line', src: `mline:${i}`, level: L, bands: bandsOfLevel(L), topics: [`work:${l.work}`, 'tool:quotes'], where: `${placeName('reading', L)} · Quotes & Poems`, title: `A line from ${w.title}`,
+      body: l.text, cite: l.work, quote: l.text, source: l.who, route: `#/tools/quotes/${authorKey(w.author)}`, cta: `${w.author} in Quotes & Poems` });
+  });
+  for (const g of games()) for (const [n, t] of Object.entries(g.levels)) A.push({ id: `game~${g.id}~${n}`, kind: 'game', src: `glevel:${g.id}#${n}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: `Play · ${g.name}`,
+    title: `${g.name}, level ${n}`, body: stop(t.charAt(0).toUpperCase() + t.slice(1)), more: stop(`Practises ${g.practises}`), route: `#/play/${g.id}`, cta: `Play ${g.name}` });
+
+  /* --- the big pools --- */
+  const seenWord = new Set(cards.filter((c) => c.src.startsWith('gen:def2word') || c.src.startsWith('gen:word2def')).map((c) => c.play.opts[0]));
+  const carded = new Set();
+  for (const id of VOCAB_HOME) {
+    const d = DECKS.find((x) => x.id === id); if (!d) continue;
+    d.words.forEach((e, i) => {
+      if (carded.has(e.w) || seenWord.has(e.w)) return; carded.add(e.w);
+      const L = vocabLevel(d.id, e), it = vocItem(d, e, i); if (!L || it.options.length !== 4) return;
+      const right = it.options[it.answer], inLex = !!LEX.words[e.w];
+      pool(B, L, 'vocab', { id: `voc~${slug(e.w)}`, kind: 'vocab', src: `vocab:${d.id}#${e.w}`, level: L, bands: bandsOfLevel(L), topics: ['strand:word', `word:${e.w}`, 'tool:vocab'], where: `${placeName('word', L)} · Vocabulary`,
+        title: e.w, body: [e.ps, e.p].filter(Boolean).join(' · '), play: play(vocabQ(e.w), right, it.options.filter((_, j) => j !== it.answer), ''), more: `From Bee’s ${d.group === 'Bee’s lists' ? 'list' : 'deck'}: ${d.label} — ${d.sub}.`,
+        route: inLex ? `#/word/${encodeURIComponent(e.w)}` : `#/tools/vocab/${d.id}`, cta: inLex ? `“${e.w}” in the word list` : `${d.label} in Vocabulary` });
+    });
+  }
+  IDIOMS.forEach((x, i) => {
+    if (!idiomOk(x)) return;
+    const [sid, L] = idiomPlace(x), it = idiomItem(IDIOMS, x, i); if (it.options.length !== 4) return;
+    pool(B, L, x.t === 'simile' ? 'simile' : 'idiom', { id: `idiom~${i}`, kind: 'idiom', src: `idiom:${i}`, level: L, bands: DIFF_BANDS[x.diff] || [2, 3], topics: [`strand:${sid}`, 'tool:idioms'], where: `${placeName(sid, L)} · Idioms & Similes`,
+      title: `“${x.p}”`, body: x.ex, play: play(idiomQ(x), x.m, it.options.filter((_, j) => j !== it.answer), ''), more: `From Bizzing Bee’s Idioms & Similes list: ${x.t === 'proverb' ? 'a proverb' : `an ${x.t}`}.`.replace('an simile', 'a simile'),
+      route: `#/tools/idioms/p/${encodeURIComponent(x.p)}`, cta: `“${x.p}” in Idioms & Similes` });
+  });
+  const s3 = stopById('s3-main');
+  POOLS.builder.forEach((x, i) => {
+    const w = work(x.work), b = quotable(w) && builderCut(x); if (!b || !held(x.work).includes(b.S)) return;
+    pool(B, b.level, 'builder', { id: `build~${i}`, kind: 'clause', src: `builder:${i}`, level: b.level, bands: bandsFrom(x.band), topics: ['strand:sentence', 'game:builder', `work:${x.work}`], where: `${placeName('sentence', b.level)} · Sentence Builder`,
+      title: `A sentence from ${w.title}`, body: b.S, cite: x.work, quote: b.S, source: w.author, play: play(BUILDER_Q, b.opts[0], b.opts.slice(1), ''), more: s3 ? stop(`Taught at: ${placeName('sentence', 3)} — ${s3.title}`) : '', route: '#/play/builder', cta: 'Play Sentence Builder' });
+  });
+  POOLS.rush.forEach((x, i) => {
+    const w = work(x.work), r = quotable(w) && rushCut(x); if (!r) return;
+    pool(B, r.level, 'rush', { id: `rush~${i}`, kind: 'comma', src: `rush:${i}`, level: r.level, bands: bandsFrom(x.band), topics: ['strand:sentence', 'game:rush', `work:${x.work}`], where: `${placeName('sentence', r.level)} · Punctuation Rush`,
+      title: `A sentence from ${w.title}, its comma taken out`, body: r.body, source: w.author, play: play(RUSH_Q, r.right, r.wrong, ''), more: taughtAt('sentence', r.level), route: '#/play/rush', cta: 'Play Punctuation Rush' });
+  });
+  const figTexts = new Set(FIGURES.map((f) => norm(f.text))), KINDS = FIG_KINDS();
+  POOLS.figures.forEach((f, i) => {
+    const w = work(f.work); if (!quotable(w) || figTexts.has(norm(f.text)) || !held(f.work).includes(f.text)) return;
+    const by = teaches('li', f.figure)[0];
+    pool(B, 5, 'figure', { id: `figm~${i}`, kind: 'figure', src: `figmore:${i}`, level: 5, bands: [2, 3], topics: ['strand:literature', `work:${f.work}`, 'game:figure'], where: `${placeName('literature', 5)} · Figure Hunt`,
+      title: `A line from ${w.title}`, body: f.text, cite: f.work, quote: f.text, source: w.author, play: play('Which figure of speech is this line?', f.figure, KINDS.filter((k) => k !== f.figure), ''),
+      more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : taughtAt('literature', 5), route: '#/play/figure', cta: 'Figure Hunt' });
+  });
+  const rhTexts = new Set(RHETORIC.map((r) => norm(r.text))), DEV = DEV_ALL();
+  POOLS.rhetoric.forEach((r, i) => {
+    const w = work(r.work); if (!quotable(w) || rhTexts.has(norm(r.text)) || !held(r.work).includes(r.text)) return;
+    const by = teaches('la', r.device)[0], L = by ? by.level : 7, wrong = DEV.filter((d) => d !== r.device && !(r.also || []).includes(d)).slice(0, 3); if (wrong.length < 3) return;
+    pool(B, L, 'rhetoric', { id: `rhm~${i}`, kind: 'device', src: `rhmore:${i}`, level: L, bands: by ? bandsFrom(by.band) : [2, 3], topics: ['strand:language', `work:${r.work}`, 'game:duel'], where: by ? placeName(by.strand, by.level) : placeName('language', 7),
+      title: `A line from ${w.title}`, body: r.text, cite: r.work, quote: r.text, source: w.author, play: play('Which device is the speaker using here?', r.device, wrong, ''),
+      more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : taughtAt('language', 7), route: by ? stopRoute(by) : '#/play/duel', cta: by ? `${by.title} on the Language road` : 'Play Rhetoric Duel' });
+  });
+
+  /* --- more of the generators' own items, for a level still short --- */
+  const twin = new Set(cards.filter((c) => c.src.startsWith('gen:')).map((c) => `${c.key}|${c.play.q}|${[...c.play.opts].sort().join('|')}`));
+  for (const st of allStops()) {
+    if (st.needsReview || AUTHORED.get(st.id) || /^(desk|speak|readAloud|authored)$/.test(st.kind)) continue;
+    const where = placeName(st.strand, st.level), taught = stop(`Taught at: ${where} — ${st.title}`), cta = `${st.title} on the ${strandOf(st.strand).title} road`;
+    for (const b of bandsFrom(st.band)) {
+      let ks; try { ks = keys(st.kind, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
+      let n = 0;
+      for (const key of shuffle(rng(`fill:${st.id}:${b}`), ks)) {
+        if (n >= 80) break;
+        let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
+        if (!it || it.type !== 'mc' || it.say || it.fixed) continue;
+        const right = it.options[it.answer], tk = `stop:${st.id}|${it.prompt}|${[...it.options].sort().join('|')}`;
+        if (twin.has(tk)) continue;
+        const c = { level: st.level, bands: [b], topics: [`stop:${st.id}`, `strand:${st.strand}`], key: `stop:${st.id}`, where, route: stopRoute(st), cta, id: `${st.id}~g${b}~${String(key).replace(/[^\w-]+/g, '_').slice(0, 40)}`, kind: 'question',
+          src: `gen:${st.kind}#${b}#${key}`, title: st.title, body: genBody(it, st), play: play(it.prompt, right, it.options.filter((_, j) => j !== it.answer), it.explain || ''), more: taught };
+        if (have.has(c.id) || leaks(c)) continue;
+        twin.add(tk); pool(C, st.level, st.id, c); n++;
+      }
+    }
+  }
+
+  /* --- fill each level: always the small sources, then the pools in turn, then the generators --- */
+  const size = (c) => JSON.stringify(c).length + 8, count = {}, bytes = {};
+  for (const c of cards) if (c.level != null) { count[c.level] = (count[c.level] || 0) + 1; bytes[c.level] = (bytes[c.level] || 0) + size(c); }
+  const take = (c) => {
+    if (have.has(c.id) || leaks(c) || (c.body && c.kind !== 'game' && c.kind !== 'certificate' && bodies.has(norm(c.body)) && c.cite)) return false;
+    const L = c.level; if (L != null && ((count[L] || 0) >= BUDGET || (bytes[L] || 0) + size(c) > BYTES)) return false;
+    const n0 = cards.length; add(c); if (cards.length === n0) return false;
+    have.add(c.id); if (c.body) bodies.add(norm(c.body)); if (L != null) { count[L] = (count[L] || 0) + 1; bytes[L] = (bytes[L] || 0) + size(c); }
+    return true;
+  };
+  A.forEach(take);
+  for (const tier of [B, C]) for (let L = 1; L <= 10; L++) {
+    const lists = Object.entries(tier[L] || {}).sort(([a], [b]) => (a < b ? -1 : 1)).map(([name, l]) => hashOrder(l, name));
+    for (let i = 0, any = true; any && (count[L] || 0) < BUDGET; i++) { any = false; for (const l of lists) if (i < l.length) { any = true; take(l[i]); } }
+  }
+}
+
 /* the games, as games.js names them (that file belongs to the games; only its words are read) */
-export const games = () => Object.entries(GAMES).map(([id, g]) => ({ id, name: g.name, practises: g.practises, how: g.how }));
+export const games = () => Object.entries(GAMES).map(([id, g]) => ({ id, name: g.name, practises: g.practises, how: g.how, levels: g.levels || {} }));
 
 export function manifest(cards) {
   const byLevel = {}; let agnostic = 0, plays = 0;

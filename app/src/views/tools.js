@@ -45,7 +45,7 @@ export async function openTool(parts) {
   stopTyping();
   const r = { mode: 'tool', key: parts.join('/'), tool: tool || '' };
   if (tool === 'vocab') { await Promise.all([loadVocab(), loadLexicon()]); if (a) Object.assign(r, { deck: a, phase: 'study', i: 0, flip: false }); }
-  else if (tool === 'idioms') { await loadIdioms(); Object.assign(r, a === 'deck' ? { phase: 'deck', deck: b, i: 0, flip: false } : a === 'quiz' ? newQuiz() : { phase: 'browse', q: '', type: 'all', theme: 'all', page: 0 }); }
+  else if (tool === 'idioms') { await loadIdioms(); Object.assign(r, a === 'deck' ? { phase: 'deck', deck: b, i: 0, flip: false } : a === 'quiz' ? newQuiz() : { phase: 'browse', q: a === 'p' ? b || '' : '', type: 'all', theme: 'all', page: 0 }); }   // #/tools/idioms/p/<phrase>: that phrase, found (My Feed's button)
   else if (tool === 'typing') { await loadLexicon(); if (a) Object.assign(r, newTyping(a)); }
   else if (tool === 'quotes') { await loadPassages(); if (a === 'voices') { await loadQuotes(); Object.assign(r, { phase: 'voices', cat: b || 'all', q: '', page: 0 }); } else Object.assign(r, { phase: 'lines', author: a || 'all' }); }
   S.run = r;

@@ -59,7 +59,7 @@ export function playView() {
   const k = kid();
   return pageHead({ title: 'Play', sub: 'games where the learning is the game' }) + `<div class="grid3" style="margin:0 20px">${Object.entries(GAMES).map(([id, g]) => { const rec = k.games[id]; return `<a class="card gcard" href="#/play/${id}" style="text-decoration:none;color:inherit;padding:0;overflow:hidden">
     <div style="height:120px;background:url('${plate({ id: g.world }, isDark(), true)}') center/cover"></div><div style="padding:14px 16px"><h3>${esc(g.name)}</h3><p class="muted" style="margin:0 0 6px">Practises ${esc(g.practises)}.</p>
-    <div class="row" style="gap:6px">${rec?.best != null ? `<span class="tag ok">${icon('star')}Your best: ${rec.best}</span>` : `<span class="tag">New</span>`}<span class="tag">Level ${rec?.level || 1}</span>${levelStars(rec, rec?.level || 1) ? starRow(levelStars(rec, rec?.level || 1)) : ''}</div></div></a>`; }).join('')}</div>`;
+    <div class="row" style="gap:6px">${rec?.best > 0 ? `<span class="tag ok">${icon('star')}Your best: ${rec.best}</span>` : `<span class="tag">New</span>`}<span class="tag">Level ${rec?.level || 1}</span>${levelStars(rec, rec?.level || 1) ? starRow(levelStars(rec, rec?.level || 1)) : ''}</div></div></a>`; }).join('')}</div>`;
 }
 
 /* ---------- the pools: today's in the bundle, the big ones loaded when a game opens ---------- */
@@ -205,7 +205,7 @@ function endRound() {
   stopTimer();
   const r = S.run, k = kid(), g = r.g, rec = recOf(r.id), gm = GAMES[r.id], now = Date.now();
   const log = roundLog(g), had = rec.seen || {}, met = new Set(log.filter((x) => x.key && !had[x.key]).map((x) => x.key)).size;
-  const mem = memRecord(memOf(rec), log, now); rec.seen = mem.seen; rec.rounds = mem.plays;
+  const mem = memRecord(memOf(rec), log, now); rec.seen = mem.seen; rec.rounds = mem.plays; rec.plays = (rec.plays || 0) + 1;   // a round played (the Game On medal counts these)
   const acc = accuracy(g), n = r.run.round + 1;
   for (let i = 0; i < Math.min(acc.right, 10); i++) pay('answer', `${gm.name}: ${n > RUN_ROUNDS ? 'final' : `round ${n}`}`);
   bumpDay(k, 'right', acc.right); bumpDay(k, 'answers', acc.total);
@@ -220,7 +220,7 @@ function finishRun() {
   stopTimer(); stopMusic();
   const r = S.run, k = kid(), id = r.id, gm = GAMES[id], run = r.run, rec = recOf(id), L = run.level;
   const score = runScore(run), pct = runPct(run), stars = starsFor(pct), enough = run.total >= (gm.timed ? 4 : 1);
-  rec.plays = (rec.plays || 0) + 1; const newBest = score > (rec.best || 0); rec.best = Math.max(rec.best || 0, score);
+  rec.runs = (rec.runs || 0) + 1; const newBest = score > (rec.best || 0); rec.best = Math.max(rec.best || 0, score);
   rec.stars = { ...(rec.stars || {}) }; const newStars = stars > (rec.stars[L] || 0); rec.stars[L] = Math.max(rec.stars[L] || 0, stars);
   const before = levelOf(id);
   if (L === before) rec.level = nextLevel(before, enough ? pct : null);
@@ -264,7 +264,7 @@ export function gameView() {
   if (r.phase === 'title') {
     const pool = r.ready ? levelPool(id, L) : null, c = pool ? memCounts(pool.items, pool.key, memOf(rec)) : null;
     return head + `<div class="game"><div class="card titlecard"><div class="plate" style="background-image:url('${plate({ id: gm.world }, isDark())}')"><img class="gb-ava" src="${avatarOf(k)}" alt=""><img class="tc-quill" src="${mascot('wave')}" alt=""></div>
-    <h2>${esc(gm.name)}</h2><p style="margin:0;max-width:52ch">${esc(gm.how)}</p><p class="note" style="margin:0">Keys: ${esc(gm.keys)} — or just tap.</p>
+    <h2>${esc(gm.name)}</h2><p style="margin:0;max-width:52ch">${esc(gm.how)}${gm.more ? ` ${esc(gm.more)}` : ''}</p><p class="note" style="margin:0">Keys: ${esc(gm.keys)} — or just tap.</p>
     ${levelMap(id, rec, L)}
     <p class="gb-level" style="margin:0"><b>Level ${L}</b> · ${esc(gm.levels[L])}${rec.best ? ` · your best ${rec.best}` : ''}</p>
     <p class="gb-mem" data-mem style="margin:0">${c ? `<b>${c.fresh}</b> new to you · <b>${c.back}</b> to win back · pool ${c.pool}` : 'Getting the cards ready…'}</p>
@@ -356,7 +356,7 @@ function bodyOf(id, g) {
     if (q.type === 'missing') {
       const rows = q.cards.map((c, j) => (j === q.gap ? `<li class="gb-slot gb-gap${st ? (st.ok ? ' ok' : ' no') : ''}"><b>${j + 1}</b><span>${st ? esc(c.text) : '?'}</span></li>` : `<li class="gb-slot full"><b>${j + 1}</b><span>${esc(c.text)}</span></li>`)).join('');
       return `<p class="prompt">${esc(q.title)}: one scene is missing. Which one goes in the gap?</p><ol class="gb-line">${rows}</ol>
-        <div class="opts">${q.options.map((o, i) => optBtn('q-pick', i, esc(o), st, q.answer)).join('')}</div>
+        <div class="opts gb-scenes">${q.options.map((o, i) => optBtn('q-pick', i, esc(o), st, q.answer)).join('')}</div>
         ${fb(st, st?.ok ? 'That is the missing scene!' : 'Not that one', `Scene ${q.gap + 1} opens: “${esc(q.cards[q.gap].text)}” The others come from elsewhere in the book.`)}`;
     }
     const n = q.cards.length, done = !!st;

@@ -46,6 +46,7 @@ const rhet = [...RHETORIC, ...RHETORIC_MORE].filter((x) => shipped(x.work)), pla
 const shipP = PJ.filter((p) => shipped(p.work));
 const chapters = BOOKS.flatMap((b) => JSON.parse(readFileSync(url(`../src/data/book-${b.id}.json`))).chapters.map((c) => ({ book: b.id, n: c.n, short: b.short, band: b.band, scenes: c.scenes })));
 const HUNTS = huntsFrom(figs, Object.entries(TEXTS).filter(([w]) => shipped(w)).map(([work, text]) => ({ work, text })), WORKS);
+console.log(`games: ${HUNTS.length} passage hunts (${HUNT_KINDS.map((k) => `${k} ${HUNTS.filter((h) => h.figure === k).length}`).join(", ")})`);
 
 /* ---------- Sentence Builder ---------- */
 ok('Sentence Builder has a pool in every band', [1, 2, 3].every((b) => builderPool(b, XB).length >= 5));
@@ -239,7 +240,7 @@ const subtle = (L) => SEEDS.flatMap((sd) => figureRound(figs, WORKS, sd, L)).fil
 ok('Figure Hunt: higher levels lean on the subtle figures', subtle(5) > subtle(3) && subtle(3) > subtle(1));
 ok('Figure Hunt: every figure is held, word for word', figs.every((f) => held(f.work, f.text)));
 /* the passage hunts: exact passages from the held text, the figure in the keyed sentence and nowhere else */
-ok(`Figure Hunt: passages to hunt in (${HUNTS.length}), across at least three kinds`, HUNTS.length >= 15 && new Set(HUNTS.map((h) => h.figure)).size >= 3);
+ok(`Figure Hunt: passages to hunt in (${HUNTS.length}), across at least three kinds`, HUNTS.length >= (FIGURES_MORE.length ? 100 : 15) && new Set(HUNTS.map((h) => h.figure)).size >= 3);
 ok('Figure Hunt: every hunt passage (each window of it) is word for word from its held text', HUNTS.every((h) => h.windows.every((x) => held(h.work, x.sentences.join(' ')) && x.sentences[x.at].includes(sp(h.text)))));
 ok('Figure Hunt: the figure sits in the keyed sentence, and only there', HUNTS.every((h) => h.sentences[h.at].includes(sp(h.text)) && h.sentences.every((x, i) => i === h.at || !x.includes(sp(h.text)))));
 ok('Figure Hunt: the other sentences carry no simile marker and no other figure from the bank', HUNTS.every((h) => h.sentences.every((x, i) => i === h.at || (!/\blike\b|\bas if\b|\bas though\b|\bas \w+ as\b/i.test(x) && !figs.some((f) => f.figure !== 'none' && x.includes(sp(f.text)))))));
