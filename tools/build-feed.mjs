@@ -81,6 +81,18 @@ const HOUR = json('src/data/hour-words.json');
 const ART = json('src/data/story-art.json');
 const BOOKDATA = Object.fromEntries(BOOKS.map((b) => [b.id, json(`src/data/book-${b.id}.json`)]));
 export const VOCAB = json('public/data/vocab.json'), IDIOMS = json('src/data/idioms.json').items;
+/* Bee's quotes are read for ONE thing: to keep them out (CLAUDE.md rule 2). A new card whose words hold one
+   — a saying in Bee's idiom list that is also a famous quotation, a book's sentence Bee also quotes — is not cut. */
+let BEE_Q, BEE_HEADS, HELD_ALL;
+/* …unless the words are a held book's own (a line Bee also quotes is still the book's line): never on a card
+   cut from Bee's own lists (a saying, a vocabulary word) */
+const heldSomewhere = (q) => (HELD_ALL ??= WORKS.filter(quotable).map((w) => norm(held(w.id)))).some((t) => t.includes(q));
+export function beeQuoted(c) {
+  if (!BEE_Q) { BEE_Q = json('src/data/bee-quotes.json').quotes.map((x) => norm(x.q)).filter((q) => q.split(' ').length >= 3); BEE_HEADS = new Set(BEE_Q.map((q) => q.split(' ').slice(0, 3).join(' '))); }
+  const t = norm([c.title, c.body, c.more, c.source, c.play?.q, ...(c.play?.opts || []), c.play?.after].filter(Boolean).join(' ')), w = t.split(' ');
+  for (let i = 0; i + 3 <= w.length; i++) if (BEE_HEADS.has(w.slice(i, i + 3).join(' '))) { const at = w.slice(i).join(' '); const q = BEE_Q.find((x) => at.startsWith(x)); if (q && (c.kind === 'idiom' || c.kind === 'vocab' || !heldSomewhere(q))) return true; }
+  return false;
+}
 /* the games' pools, written by their own agent: read only when they are there */
 const optJson = (p) => { try { const j = json(p); return Array.isArray(j) ? j : []; } catch { return []; } };
 const optMod = async (p) => { try { return await import(p); } catch { return {}; } };
@@ -162,11 +174,11 @@ export function cut() {
       /* a generator's own multiple-choice items: the first few keys of each band, made exactly as the stop makes them */
       for (const b of bands) {
         let ks; try { ks = keys(st.kind, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
-        let n = 0;
+        let n = 0, miss = 0;
         for (const key of ks) {
-          if (n >= 6) break;
-          let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
-          if (!it || it.type !== 'mc' || it.say || it.fixed) continue;
+          if (n >= 6 || miss >= 200) break;                      // a generator whose items are never a card's (tap, type, say) is left soon
+          let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { miss++; continue; }
+          if (!it || it.type !== 'mc' || it.say || it.fixed) { miss++; continue; }
           const right = it.options[it.answer], c = { ...base, bands: [b], id: `${st.id}~g${b}~${String(key).replace(/[^\w-]+/g, '_').slice(0, 40)}`, kind: 'question',
             src: `gen:${st.kind}#${b}#${key}`, title: st.title, body: genBody(it, st), play: play(it.prompt, right, it.options.filter((_, j) => j !== it.answer), it.explain || ''), more: taught };
           const twin = cards.find((x) => x.key === c.key && x.src.startsWith('gen:') && x.play.q === c.play.q && x.play.opts.join('|') === c.play.opts.join('|') && (x.body || '') === (c.body || ''));
@@ -319,7 +331,7 @@ export function builderCut(x) {
 }
 /* Punctuation Rush's sentences: where does the ONE comma go? Three other gaps, none a comma could fairly take */
 export const RUSH_Q = 'Where does the comma go?';
-export const RUSH_LEVEL = { compound: 4, address: 5, aside: 5, fronted: 7 };
+export const RUSH_LEVEL = { compound: 4, address: 5, aside: 5, fronted: 7 }, RUSH_STOP = { 4: 's4-conj', 5: 's5-comma', 7: 's7-vary' };
 const NOGAP = /^(and|but|or|so|yet|for|nor|which|who|whom|whose|when|where|while|if|because|though|although|as|then|too|until|unless|since|after|before|that|than|said|says|cried|asked|replied|however|perhaps|indeed|sir|madam)$/i;
 export function rushCut(x) {
   const words = String(x.s || '').trim().split(/\s+/), at = words.map((w, j) => (w.endsWith(',') ? j : -1)).filter((j) => j >= 0);
@@ -367,7 +379,7 @@ function grow(cards, add, play) {
     const L = levelOf(p), base = { level: L, bands: bandsFrom(p.band), topics: [`stop:rd-${p.id}`, 'strand:reading', `work:${p.work}`], key: `stop:rd-${p.id}`, where: `${placeName('reading', L)} · Who’s who in the myths`,
       more: `Who’s who: ${c.fact}`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` };
     A.push({ ...base, id: `who~${slug(c.name)}`, kind: 'who', src: `who:${c.name}#quote`, title: c.name, body: `“${c.quote}”`, cite: p.work, quote: c.quote, source: `${p.title} — ${work(p.work).author}` });
-    if (c.greek && quotable(work(c.greek.work))) A.push({ ...base, id: `who~${slug(c.name)}~greek`, kind: 'who', src: `who:${c.name}#greek`, title: `${c.name} — the Greeks called ${c.greek.as ? 'her' : ''}${c.greek.as ? ' ' : ''}${c.greek.name}`.replace(/called\s+/, 'called '), body: `“${c.greek.quote}”`, cite: c.greek.work, quote: c.greek.quote, source: `${work(c.greek.work).title} — ${work(c.greek.work).author}` });
+    if (c.greek && quotable(work(c.greek.work))) A.push({ ...base, id: `who~${slug(c.name)}~greek`, kind: 'who', src: `who:${c.name}#greek`, title: `${c.name} and ${c.greek.name}`, body: `“${c.greek.quote}”`, cite: c.greek.work, quote: c.greek.quote, source: `${work(c.greek.work).title} — ${work(c.greek.work).author}` });
   }
   for (const a of AUTHORS) {
     if (isGated(a)) continue;
@@ -423,7 +435,7 @@ function grow(cards, add, play) {
   POOLS.rush.forEach((x, i) => {
     const w = work(x.work), r = quotable(w) && rushCut(x); if (!r) return;
     pool(B, r.level, 'rush', { id: `rush~${i}`, kind: 'comma', src: `rush:${i}`, level: r.level, bands: bandsFrom(x.band), topics: ['strand:sentence', 'game:rush', `work:${x.work}`], where: `${placeName('sentence', r.level)} · Punctuation Rush`,
-      title: `A sentence from ${w.title}, its comma taken out`, body: r.body, source: w.author, play: play(RUSH_Q, r.right, r.wrong, ''), more: taughtAt('sentence', r.level), route: '#/play/rush', cta: 'Play Punctuation Rush' });
+      title: `A sentence from ${w.title}, its comma taken out`, body: r.body, source: w.author, play: play(RUSH_Q, r.right, r.wrong, ''), more: stop(`Taught at: ${placeName('sentence', r.level)} — ${stopById(RUSH_STOP[r.level]).title}`), route: '#/play/rush', cta: 'Play Punctuation Rush' });
   });
   const figTexts = new Set(FIGURES.map((f) => norm(f.text))), KINDS = FIG_KINDS();
   POOLS.figures.forEach((f, i) => {
@@ -449,11 +461,11 @@ function grow(cards, add, play) {
     const where = placeName(st.strand, st.level), taught = stop(`Taught at: ${where} — ${st.title}`), cta = `${st.title} on the ${strandOf(st.strand).title} road`;
     for (const b of bandsFrom(st.band)) {
       let ks; try { ks = keys(st.kind, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
-      let n = 0;
+      let n = 0, miss = 0;
       for (const key of shuffle(rng(`fill:${st.id}:${b}`), ks)) {
-        if (n >= 80) break;
-        let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
-        if (!it || it.type !== 'mc' || it.say || it.fixed) continue;
+        if (n >= 80 || miss >= 40) break;                         // a generator whose items are not a card's (tap, type, say) is left at once
+        let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { miss++; continue; }
+        if (!it || it.type !== 'mc' || it.say || it.fixed) { miss++; continue; }
         const right = it.options[it.answer], tk = `stop:${st.id}|${it.prompt}|${[...it.options].sort().join('|')}`;
         if (twin.has(tk)) continue;
         const c = { level: st.level, bands: [b], topics: [`stop:${st.id}`, `strand:${st.strand}`], key: `stop:${st.id}`, where, route: stopRoute(st), cta, id: `${st.id}~g${b}~${String(key).replace(/[^\w-]+/g, '_').slice(0, 40)}`, kind: 'question',
@@ -468,7 +480,7 @@ function grow(cards, add, play) {
   const size = (c) => JSON.stringify(c).length + 8, count = {}, bytes = {};
   for (const c of cards) if (c.level != null) { count[c.level] = (count[c.level] || 0) + 1; bytes[c.level] = (bytes[c.level] || 0) + size(c); }
   const take = (c) => {
-    if (have.has(c.id) || leaks(c) || (c.body && c.kind !== 'game' && c.kind !== 'certificate' && bodies.has(norm(c.body)) && c.cite)) return false;
+    if (have.has(c.id) || leaks(c) || beeQuoted(c) || (c.body && c.kind !== 'game' && c.kind !== 'certificate' && bodies.has(norm(c.body)) && c.cite)) return false;
     const L = c.level; if (L != null && ((count[L] || 0) >= BUDGET || (bytes[L] || 0) + size(c) > BYTES)) return false;
     const n0 = cards.length; add(c); if (cards.length === n0) return false;
     have.add(c.id); if (c.body) bodies.add(norm(c.body)); if (L != null) { count[L] = (count[L] || 0) + 1; bytes[L] = (bytes[L] || 0) + size(c); }
