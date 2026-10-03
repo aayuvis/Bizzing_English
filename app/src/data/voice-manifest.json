@@ -1,4038 +1,4038 @@
 {
 "bk/alice-1-0": [
-71740,
-"7f92f368b3"
+74090,
+"ed67b63c8c"
 ],
 "bk/alice-1-1": [
-62230,
-"40e7ba4c98"
+66290,
+"5cd123de6d"
 ],
 "bk/alice-1-2": [
-72220,
-"a35ecd85ca"
+81050,
+"62c5367299"
 ],
 "bk/alice-1-3": [
-57530,
-"c123b2412c"
+65110,
+"c7ab1ddaad"
 ],
 "bk/alice-1-4": [
-42620,
-"cbe5151f2f"
+48770,
+"845ee60a3c"
 ],
 "bk/alice-1-5": [
-64489,
-"463d5e1a7b"
+74020,
+"883099541a"
 ],
 "bk/alice-1-6": [
-67390,
-"5d60491d5c"
+75530,
+"41c1ddea64"
 ],
 "bk/alice-1-7": [
-60700,
-"2d56ed5157"
+65330,
+"8c012750ee"
 ],
 "bk/alice-1-8": [
-82510,
-"e31765ea78"
+83060,
+"a48064aa6b"
 ],
 "bk/alice-10-0": [
-41930,
-"c4f6a68359"
+45170,
+"608920e232"
 ],
 "bk/alice-10-1": [
-78020,
-"1bcc4abbaa"
+84580,
+"2c518c6761"
 ],
 "bk/alice-10-2": [
-77260,
-"e851e075ae"
+92380,
+"7c0376f36b"
 ],
 "bk/alice-10-3": [
-99479,
-"7062bdf221"
+108310,
+"70caa161b6"
 ],
 "bk/alice-10-4": [
-92930,
-"265f09274a"
+100870,
+"cf746fde85"
 ],
 "bk/alice-10-5": [
-92930,
-"6bc38ab016"
+101280,
+"f0177de706"
 ],
 "bk/alice-10-6": [
-70150,
-"cf98c23cdb"
+73870,
+"042de03794"
 ],
 "bk/alice-10-7": [
-74420,
-"c6fac61ac4"
+95900,
+"9253004fae"
 ],
 "bk/alice-11-0": [
-36220,
-"b4e037e071"
+40340,
+"a9b66245c5"
 ],
 "bk/alice-11-1": [
-44420,
-"cde91464cf"
+45720,
+"bf74ae5f33"
 ],
 "bk/alice-11-2": [
-67460,
-"1d13af4714"
+76080,
+"a572379be4"
 ],
 "bk/alice-11-3": [
-66770,
-"e8689ae29c"
+78100,
+"1f79e92346"
 ],
 "bk/alice-11-4": [
-93410,
-"213aa59480"
+99700,
+"3ff76f0419"
 ],
 "bk/alice-11-5": [
-76920,
-"a0c1689703"
+85970,
+"b33a28dd01"
 ],
 "bk/alice-11-6": [
-64849,
-"a9d9dc4d89"
+71660,
+"1905b59e60"
 ],
 "bk/alice-11-7": [
-85130,
-"39a65d52c2"
+98229,
+"c916f4edd0"
 ],
 "bk/alice-12-0": [
-88030,
-"e13b042310"
+97490,
+"c8548e2091"
 ],
 "bk/alice-12-1": [
-85270,
-"bb799535c0"
+90430,
+"17b865aa3f"
 ],
 "bk/alice-12-2": [
-88780,
-"2c0f9a7e97"
+99820,
+"2f210480a7"
 ],
 "bk/alice-12-3": [
-64150,
-"76a79c86e8"
+78500,
+"2b25497b49"
 ],
 "bk/alice-12-4": [
-94180,
-"cba0c4b116"
+111479,
+"2a91828714"
 ],
 "bk/alice-12-5": [
-64989,
-"a0cc24c55c"
+74780,
+"e0e62cae48"
 ],
 "bk/alice-12-6": [
 58850,
-"9626ecec02"
+"4ae575a8b8"
 ],
 "bk/alice-12-7": [
-57310,
-"36cd89dd39"
+57670,
+"8723b3c892"
 ],
 "bk/alice-2-0": [
-56640,
-"4c14d9baa6"
+59950,
+"7217f407ea"
 ],
 "bk/alice-2-1": [
-37390,
-"8300624f96"
+40630,
+"b1e0bc435c"
 ],
 "bk/alice-2-2": [
-72430,
-"4ef42f2bac"
+84170,
+"64f4126af5"
 ],
 "bk/alice-2-3": [
-67680,
-"3c4182a20a"
+80300,
+"604bd33f9b"
 ],
 "bk/alice-2-4": [
-97200,
-"2aaa4cf269"
+108380,
+"2ee726e972"
 ],
 "bk/alice-2-5": [
-64440,
-"77cc869eb8"
+69340,
+"7e317689c8"
 ],
 "bk/alice-2-6": [
-66980,
-"f91052c195"
+71180,
+"fbbb11fe62"
 ],
 "bk/alice-2-7": [
-39720,
-"dc69f8d5ec"
+47040,
+"870c7e0486"
 ],
 "bk/alice-2-8": [
-89690,
-"fbe6f0efd3"
+102240,
+"e12495bd3f"
 ],
 "bk/alice-3-0": [
-56640,
-"59e6e1a2e6"
+60020,
+"65b0a550d7"
 ],
 "bk/alice-3-1": [
-81050,
-"78565172d6"
+85750,
+"f67dba65d1"
 ],
 "bk/alice-3-2": [
-45790,
-"84042c2e4f"
+50210,
+"c45a05b682"
 ],
 "bk/alice-3-3": [
-58150,
-"e3853d19da"
+57120,
+"fe55ce1066"
 ],
 "bk/alice-3-4": [
-66290,
-"aac3f2d2c3"
+72360,
+"8e11a277d2"
 ],
 "bk/alice-3-5": [
-47660,
-"3238a0d91d"
+57310,
+"19772934a7"
 ],
 "bk/alice-3-6": [
-40420,
-"a79b9d05ae"
+51050,
+"a72580ea9b"
 ],
 "bk/alice-3-7": [
-90500,
-"cb1859936d"
+100030,
+"0b8b86e50b"
 ],
 "bk/alice-4-0": [
-84170,
-"2fd1debb18"
+90310,
+"2626263403"
 ],
 "bk/alice-4-1": [
-61320,
-"e4e21320fc"
+69260,
+"6cbe2fa995"
 ],
 "bk/alice-4-2": [
-58490,
-"45ab961e99"
+65950,
+"3942f8e535"
 ],
 "bk/alice-4-3": [
-63890,
-"fb21e1864c"
+68570,
+"f65fd16b00"
 ],
 "bk/alice-4-4": [
-53040,
-"e46d76c8b6"
+58560,
+"630c6a51c6"
 ],
 "bk/alice-4-5": [
-65180,
-"d53b66480a"
+76780,
+"249ab3c2d3"
 ],
 "bk/alice-4-6": [
-106990,
-"7287792d57"
+122400,
+"3721abdc6c"
 ],
 "bk/alice-4-7": [
-82660,
-"ffc3d34bf5"
+89060,
+"1c651c2d78"
 ],
 "bk/alice-4-8": [
-92090,
-"3f1861f78c"
+109820,
+"fd773bcd9e"
 ],
 "bk/alice-4-9": [
-69960,
-"328c535ae6"
+76780,
+"0e337373d4"
 ],
 "bk/alice-5-0": [
-67870,
-"22da7b50f9"
+78650,
+"9e230d0e08"
 ],
 "bk/alice-5-1": [
-72770,
-"b2176a0eae"
+85680,
+"6ae0eda4ce"
 ],
 "bk/alice-5-2": [
-77620,
-"5c5e495846"
+91060,
+"fbe1ae7295"
 ],
 "bk/alice-5-3": [
-60700,
-"a8fb6962db"
+69050,
+"25ad60ea13"
 ],
 "bk/alice-5-4": [
-71950,
-"7d7338f47a"
+76300,
+"c2b281f677"
 ],
 "bk/alice-5-5": [
-64560,
-"9123133c56"
+69050,
+"acb281869a"
 ],
 "bk/alice-5-6": [
-67870,
-"18adb704ee"
+74860,
+"52e72f2b5e"
 ],
 "bk/alice-5-7": [
-80020,
-"eb431c61b7"
+86230,
+"089471b475"
 ],
 "bk/alice-5-8": [
-42000,
-"9fbaa653f1"
+46010,
+"02896dabde"
 ],
 "bk/alice-6-0": [
-67870,
-"d7b183bbea"
+76920,
+"15de41dfd5"
 ],
 "bk/alice-6-1": [
-107140,
-"13a5dc6e52"
+126310,
+"8df44a244c"
 ],
 "bk/alice-6-2": [
-78170,
-"f07c186945"
+80160,
+"68b359583e"
 ],
 "bk/alice-6-3": [
-59810,
-"32ea514c30"
+68230,
+"c8e1e66cac"
 ],
 "bk/alice-6-4": [
-60580,
-"8914d3f08d"
+67060,
+"9270d11ea0"
 ],
 "bk/alice-6-5": [
-87670,
-"edf2dec442"
+92780,
+"1d0717a4d9"
 ],
 "bk/alice-6-6": [
-69670,
-"710301d60c"
+75530,
+"75a7e46561"
 ],
 "bk/alice-6-7": [
-82510,
-"f7a40d0137"
+92090,
+"991c97bd25"
 ],
 "bk/alice-6-8": [
-32900,
-"41c00769be"
+37990,
+"015f9f3dfb"
 ],
 "bk/alice-6-9": [
-77740,
-"f2d3ee3cd1"
+85900,
+"3e4729de0b"
 ],
 "bk/alice-7-0": [
-58850,
-"f07a291a70"
+60840,
+"f1a8cb3a43"
 ],
 "bk/alice-7-1": [
-74930,
-"f9754df95b"
+93479,
+"441a58ecb2"
 ],
 "bk/alice-7-2": [
-84310,
-"3abb98b083"
+96500,
+"a34049d4ab"
 ],
 "bk/alice-7-3": [
-78580,
-"c0d2042aaf"
+90860,
+"ed3f78f3d1"
 ],
 "bk/alice-7-4": [
-77740,
-"a5b19c6d21"
+88030,
+"f3c61239c3"
 ],
 "bk/alice-7-5": [
-69600,
-"df9e5d47b7"
+77690,
+"94e3eab9e0"
 ],
 "bk/alice-7-6": [
-69960,
-"c6d9108388"
+79060,
+"a083a96a14"
 ],
 "bk/alice-7-7": [
-96500,
-"c23a46aabf"
+108650,
+"4c3ac692e2"
 ],
 "bk/alice-7-8": [
-66020,
-"680412a1d0"
+71880,
+"ea3c9223b8"
 ],
 "bk/alice-8-0": [
-98300,
-"2cbc3952a2"
+102020,
+"5b12d2e132"
 ],
 "bk/alice-8-1": [
-87260,
-"c0b5c5037c"
+92160,
+"fdebacddda"
 ],
 "bk/alice-8-2": [
-112870,
-"d53cea8de4"
+126260,
+"fbe0e09a1a"
 ],
 "bk/alice-8-3": [
-74570,
-"d69be8fef7"
+79270,
+"23e6e249eb"
 ],
 "bk/alice-8-4": [
-58370,
-"1b0bcea1e3"
+61060,
+"8a8d77450c"
 ],
 "bk/alice-8-5": [
-68570,
-"85d2c55cb0"
+75190,
+"0b3e522ddf"
 ],
 "bk/alice-8-6": [
-69050,
-"dccc773be0"
+69260,
+"8d12fa1d99"
 ],
 "bk/alice-8-7": [
-53880,
-"bbd5f139b2"
+53450,
+"63ae7c4f2b"
 ],
 "bk/alice-8-8": [
-77740,
-"fc6689a04a"
+83810,
+"573e2ad763"
 ],
 "bk/alice-9-0": [
-84650,
-"b05abc842c"
+88580,
+"b3800cd3fc"
 ],
 "bk/alice-9-1": [
-65540,
-"bff23609fa"
+74020,
+"274dd05dcf"
 ],
 "bk/alice-9-2": [
-64220,
-"b1b2e83e18"
+67940,
+"4c87dbf828"
 ],
 "bk/alice-9-3": [
-66140,
-"28f8ad93f6"
+71880,
+"fc11b97c5b"
 ],
 "bk/alice-9-4": [
-55870,
-"bf83dd8e04"
+61940,
+"64050f9fe0"
 ],
 "bk/alice-9-5": [
-51940,
-"512ee0b56c"
+64489,
+"1aa3b093b0"
 ],
 "bk/alice-9-6": [
-73390,
-"85c85652fe"
+83760,
+"9e8433ad56"
 ],
 "bk/alice-9-7": [
-85610,
-"342990558d"
+100250,
+"ebff7da508"
 ],
 "bk/alice-9-8": [
-70850,
-"e8b836f74e"
+78020,
+"a759c29b2c"
 ],
 "bk/alice-9-9": [
-54980,
-"f91952238a"
+58490,
+"e87be3d3bf"
 ],
 "bk/wind-1-0": [
-88370,
-"1cee44cd6d"
+106729,
+"445016dc54"
 ],
 "bk/wind-1-1": [
-119830,
-"f8fcf2b2f9"
+130680,
+"000d6dfd4a"
 ],
 "bk/wind-1-10": [
-88580,
-"fe51dcd5a0"
+101280,
+"2083600988"
 ],
 "bk/wind-1-11": [
-91680,
-"628541c64e"
+107620,
+"a9407b3a0b"
 ],
 "bk/wind-1-12": [
-90020,
-"7db3573de1"
+100030,
+"12204089bd"
 ],
 "bk/wind-1-2": [
-84500,
-"41c1d123d4"
+97680,
+"80ac782b67"
 ],
 "bk/wind-1-3": [
-104450,
-"e291b4e4a3"
+132120,
+"1dcff7b2fc"
 ],
 "bk/wind-1-4": [
-99140,
-"e97c15df3e"
+117000,
+"8de7f075eb"
 ],
 "bk/wind-1-5": [
-96380,
-"1463a03bf1"
+102789,
+"45bad7eebf"
 ],
 "bk/wind-1-6": [
-117000,
-"d66fee7f5d"
+132340,
+"d1befb0b77"
 ],
 "bk/wind-1-7": [
-105220,
-"02202a53ab"
+119210,
+"c45dacbb3b"
 ],
 "bk/wind-1-8": [
-96310,
-"fb95b30356"
+109150,
+"3dc4e05fba"
 ],
 "bk/wind-1-9": [
-99140,
-"f96913353d"
+116520,
+"d13f6113f1"
 ],
 "bk/wind-10-0": [
-89060,
-"76ed214cb0"
+99259,
+"b34e80a941"
 ],
 "bk/wind-10-1": [
-82300,
-"b22172d928"
+97130,
+"d814ef7e0b"
 ],
 "bk/wind-10-10": [
-80500,
-"b3b4e3cf20"
+99479,
+"6bc681949d"
 ],
 "bk/wind-10-11": [
-79680,
-"9c79cf8d60"
+95690,
+"64785b4ccf"
 ],
 "bk/wind-10-12": [
-105220,
-"548d1bc6e1"
+121010,
+"22727340d0"
 ],
 "bk/wind-10-13": [
-87340,
-"4f8e548921"
+93000,
+"7f2ef99c98"
 ],
 "bk/wind-10-14": [
-87120,
-"c48889ced5"
+103490,
+"79d2f8d8b8"
 ],
 "bk/wind-10-15": [
-88370,
-"f771adb0d1"
+96460,
+"89c4fe8323"
 ],
 "bk/wind-10-16": [
-92590,
-"c3c27e06f2"
+106800,
+"43047a880d"
 ],
 "bk/wind-10-17": [
-95280,
-"283a43fd76"
+112100,
+"84816af922"
 ],
 "bk/wind-10-18": [
-100920,
-"85f1733034"
+110930,
+"b54f293de3"
 ],
 "bk/wind-10-2": [
-84500,
-"ed39a54b6f"
+96789,
+"0089dd1cfc"
 ],
 "bk/wind-10-3": [
-84310,
-"73d410e5f1"
+88030,
+"b594283999"
 ],
 "bk/wind-10-4": [
-88580,
-"10633759e9"
+93960,
+"96c0f573ee"
 ],
 "bk/wind-10-5": [
-94850,
-"4df4d5193b"
+105620,
+"5b93501781"
 ],
 "bk/wind-10-6": [
-100920,
-"fa75c913b1"
+116740,
+"9c295091d2"
 ],
 "bk/wind-10-7": [
-100729,
-"0ae0918762"
+114789,
+"63e5d7e1f3"
 ],
 "bk/wind-10-8": [
-85680,
-"92a423dc48"
+108380,
+"62dc5e0d18"
 ],
 "bk/wind-10-9": [
-86090,
-"1fb414019c"
+90100,
+"1a832fb70a"
 ],
 "bk/wind-11-0": [
-126940,
-"2e5dc8d978"
+134400,
+"1346939105"
 ],
 "bk/wind-11-1": [
-86090,
-"c406e53c8e"
+100370,
+"1fd2f05440"
 ],
 "bk/wind-11-10": [
-108860,
-"5e36365177"
+124320,
+"32c9bbf8f9"
 ],
 "bk/wind-11-11": [
-89330,
-"2ad66c20e6"
+103270,
+"4052955196"
 ],
 "bk/wind-11-12": [
-106580,
-"8daea8baf9"
+124060,
+"2ec292e976"
 ],
 "bk/wind-11-13": [
-100509,
-"7ffeff1808"
+99550,
+"d6fd8f0592"
 ],
 "bk/wind-11-14": [
-85820,
-"6bc2eebf34"
+102170,
+"5bd20b6135"
 ],
 "bk/wind-11-15": [
-85610,
-"ba29b8a9c1"
+104380,
+"2b84858662"
 ],
 "bk/wind-11-16": [
-88100,
-"238f3ba338"
+93140,
+"9a0c31e17a"
 ],
 "bk/wind-11-17": [
-101210,
-"120fac6036"
+108240,
+"f9e077d48d"
 ],
 "bk/wind-11-2": [
-95280,
-"01092e4adc"
+109560,
+"14a2ac1f2f"
 ],
 "bk/wind-11-3": [
-106580,
-"abab6e8a8e"
+117430,
+"dfc2bf6b63"
 ],
 "bk/wind-11-4": [
-85970,
-"bc2c1a280f"
+98229,
+"1f182428f9"
 ],
 "bk/wind-11-5": [
-104660,
-"d9ccf515a2"
+103490,
+"49cbe13af7"
 ],
 "bk/wind-11-6": [
-96100,
-"cea903109b"
+100920,
+"3f44663b4d"
 ],
 "bk/wind-11-7": [
-106180,
-"dbfec46de6"
+124250,
+"7f19959f90"
 ],
 "bk/wind-11-8": [
-102310,
-"11cdf93d94"
+113979,
+"4f3db0014c"
 ],
 "bk/wind-11-9": [
-105479,
-"42a054afe0"
+118100,
+"fc5bd94058"
 ],
 "bk/wind-12-0": [
-103820,
-"1eac62acb5"
+118460,
+"2211247273"
 ],
 "bk/wind-12-1": [
-88780,
-"ac2bf90b77"
+103970,
+"b3d381a6a2"
 ],
 "bk/wind-12-10": [
-99620,
-"98e0e8e742"
+113280,
+"7d63644120"
 ],
 "bk/wind-12-11": [
-107210,
-"f49be43bd1"
+125020,
+"b7d32690c6"
 ],
 "bk/wind-12-12": [
-112460,
-"7daa0bc9bb"
+117550,
+"eda829a607"
 ],
 "bk/wind-12-13": [
-102240,
-"4904974040"
+115340,
+"0a4b5a5fb0"
 ],
 "bk/wind-12-2": [
-109900,
-"10d5f67c2d"
+136390,
+"e06aaa0dbc"
 ],
 "bk/wind-12-3": [
-104740,
-"fa5754ffd6"
+123840,
+"65464e3368"
 ],
 "bk/wind-12-4": [
-93190,
-"f6ae1103ea"
+102580,
+"4c58e2d1bf"
 ],
 "bk/wind-12-5": [
-91750,
-"986b61b04b"
+102580,
+"5b60ec37ff"
 ],
 "bk/wind-12-6": [
-91130,
-"d00f8384fb"
+98300,
+"24e34fb157"
 ],
 "bk/wind-12-7": [
-84860,
-"8084d89cf0"
+92640,
+"004f57e31d"
 ],
 "bk/wind-12-8": [
-100800,
-"efea5dc61f"
+110590,
+"43e362f44d"
 ],
 "bk/wind-12-9": [
-102789,
-"2ecc4c5931"
+117140,
+"6cf0216b3f"
 ],
 "bk/wind-2-0": [
-88100,
-"88e1ce3dbe"
+101979,
+"660d5d1809"
 ],
 "bk/wind-2-1": [
-105620,
-"008fba532b"
+114310,
+"f85d87f915"
 ],
 "bk/wind-2-10": [
-93140,
-"413a0b40fd"
+109820,
+"5fc16ee4d6"
 ],
 "bk/wind-2-11": [
-102580,
-"ffb48c9d17"
+121780,
+"c28dba86fc"
 ],
 "bk/wind-2-12": [
-84720,
-"db02fd60fc"
+87670,
+"6e6d6bbe49"
 ],
 "bk/wind-2-2": [
-83880,
-"eec4dccfe0"
+91130,
+"a1157896aa"
 ],
 "bk/wind-2-3": [
-119690,
-"13d5933040"
+134260,
+"6b5058c2e1"
 ],
 "bk/wind-2-4": [
-97490,
-"34f5a6d6cb"
+111770,
+"25cc06500c"
 ],
 "bk/wind-2-5": [
-92039,
-"4ad0859341"
+101620,
+"b5f98c55da"
 ],
 "bk/wind-2-6": [
-105000,
-"3336c22e5e"
+114789,
+"c9f0c77a4e"
 ],
 "bk/wind-2-7": [
-110660,
-"e176c6367e"
+123070,
+"cf2d334989"
 ],
 "bk/wind-2-8": [
-108380,
-"f14164eb96"
+111910,
+"6a7dcae11a"
 ],
 "bk/wind-2-9": [
-96240,
-"e2bd32a49d"
+106030,
+"548dc0304b"
 ],
 "bk/wind-3-0": [
-79680,
-"5ba65b92ce"
+87550,
+"4e5bf7d6fe"
 ],
 "bk/wind-3-1": [
-108460,
-"c6faff565e"
+119210,
+"4de2c0e313"
 ],
 "bk/wind-3-10": [
-80230,
-"f6a6e6b6e9"
+93740,
+"e7c314d770"
 ],
 "bk/wind-3-11": [
-103009,
-"ef69177f8d"
+125280,
+"2e61b9a6d0"
 ],
 "bk/wind-3-12": [
-99220,
-"6888fc7ee5"
+114120,
+"d4d7926455"
 ],
 "bk/wind-3-13": [
-100030,
-"28794a74d3"
+109820,
+"87d523a1b9"
 ],
 "bk/wind-3-2": [
-71330,
-"ea60488f58"
+79340,
+"4305cd785c"
 ],
 "bk/wind-3-3": [
-88580,
-"f91acb35e8"
+100100,
+"4f0cc2ae8d"
 ],
 "bk/wind-3-4": [
-102530,
-"9e297f4561"
+116110,
+"b07285f03c"
 ],
 "bk/wind-3-5": [
-103560,
-"8b8a7706c3"
+118940,
+"40cf89b3d3"
 ],
 "bk/wind-3-6": [
-77810,
-"107f93fa48"
+87120,
+"c7e8fe9773"
 ],
 "bk/wind-3-7": [
-104380,
-"9ccd1633c5"
+116520,
+"0d548d4023"
 ],
 "bk/wind-3-8": [
-93000,
-"623ba1adc5"
+102720,
+"4ac187e9a5"
 ],
 "bk/wind-3-9": [
-96500,
-"78511e3158"
+117550,
+"d09e608432"
 ],
 "bk/wind-4-0": [
-92860,
-"dab0e80df5"
+103130,
+"d3d72d0f2e"
 ],
 "bk/wind-4-1": [
-102530,
-"64a1995868"
+114860,
+"e9de8d17d4"
 ],
 "bk/wind-4-10": [
-94440,
-"6794da31d6"
+101979,
+"607b9c6b7b"
 ],
 "bk/wind-4-11": [
-103009,
-"e9e310a056"
+116180,
+"8ab590abe7"
 ],
 "bk/wind-4-12": [
-74300,
-"89b6192bec"
+80860,
+"06e2effb76"
 ],
 "bk/wind-4-13": [
-110450,
-"b401dbf3a5"
+122400,
+"4d8bd47cc4"
 ],
 "bk/wind-4-2": [
-109340,
-"2a852f3fbc"
+114460,
+"bf78cf439f"
 ],
 "bk/wind-4-3": [
-105140,
-"9de01d087e"
+115150,
+"b548c1ade2"
 ],
 "bk/wind-4-4": [
-109009,
-"897cad1f9c"
+114240,
+"9f5e415b11"
 ],
 "bk/wind-4-5": [
-85270,
-"40d6e24ad6"
+87070,
+"9071de4546"
 ],
 "bk/wind-4-6": [
-88850,
-"40596cdf7e"
+97009,
+"d441ba972f"
 ],
 "bk/wind-4-7": [
-124870,
-"381b7cc7f5"
+139850,
+"6b1b92fbed"
 ],
 "bk/wind-4-8": [
-95690,
-"3f7b76cad4"
+104180,
+"f72e889c0e"
 ],
 "bk/wind-4-9": [
-111479,
-"7dc8de4cb4"
+124390,
+"df5f2e4624"
 ],
 "bk/wind-5-0": [
-88990,
-"c09043ad63"
+102720,
+"cf6417d638"
 ],
 "bk/wind-5-1": [
-115009,
-"21de59d0f2"
+135840,
+"f6aa2bbbe7"
 ],
 "bk/wind-5-10": [
-106440,
-"a917ca3626"
+110660,
+"a08fbe94b7"
 ],
 "bk/wind-5-11": [
-97560,
-"df620858e1"
+113280,
+"670122cc61"
 ],
 "bk/wind-5-12": [
-95690,
-"6a138e3aa0"
+115820,
+"fc036b1189"
 ],
 "bk/wind-5-13": [
-109700,
-"2e725d0df5"
+117070,
+"95ff4bdd76"
 ],
 "bk/wind-5-14": [
-84650,
-"e319dfec69"
+95470,
+"5e0b877e99"
 ],
 "bk/wind-5-15": [
-73460,
-"1403e7a008"
+81550,
+"88b3735bfc"
 ],
 "bk/wind-5-2": [
-102100,
-"606d9bdfc6"
+107280,
+"aaa33473d9"
 ],
 "bk/wind-5-3": [
-96020,
-"5c847c67ad"
+117430,
+"548d7c263e"
 ],
 "bk/wind-5-4": [
-116180,
-"dfa5295b3c"
+124870,
+"2bf0e4c035"
 ],
 "bk/wind-5-5": [
-101539,
-"af69c661de"
+107140,
+"b39be48bb8"
 ],
 "bk/wind-5-6": [
-97610,
-"486091752c"
+115220,
+"07aa16ab09"
 ],
 "bk/wind-5-7": [
-110660,
-"36c3035a94"
+125350,
+"7d1621ba5e"
 ],
 "bk/wind-5-8": [
-74500,
-"f61e8c8316"
+93410,
+"09c63712b2"
 ],
 "bk/wind-5-9": [
-106870,
-"e75bd302a8"
+123840,
+"1fe302f1a6"
 ],
 "bk/wind-6-0": [
-94180,
-"eb81b83ad4"
+102720,
+"6047bc990e"
 ],
 "bk/wind-6-1": [
-101690,
-"f76038e49d"
+123500,
+"204b256f80"
 ],
 "bk/wind-6-10": [
-122660,
-"5db0da8cb6"
+137160,
+"dd38491476"
 ],
 "bk/wind-6-11": [
-93960,
-"6e5f7d4b61"
+104180,
+"34046a4c49"
 ],
 "bk/wind-6-12": [
-118390,
-"93f0bf347f"
+135650,
+"17f055438c"
 ],
 "bk/wind-6-2": [
-109700,
-"68612a84c1"
+115900,
+"9abbb8c186"
 ],
 "bk/wind-6-3": [
-120190,
-"6da07243c3"
+131090,
+"6619680f75"
 ],
 "bk/wind-6-4": [
-100920,
-"49d7fce1df"
+112940,
+"1bfc5ba9ad"
 ],
 "bk/wind-6-5": [
-106660,
-"01e1b63da0"
+122110,
+"67780bcdbb"
 ],
 "bk/wind-6-6": [
-96310,
-"bd6763f406"
+106030,
+"c6f0667e7b"
 ],
 "bk/wind-6-7": [
-106390,
-"01a32914b6"
+119210,
+"41475602ef"
 ],
 "bk/wind-6-8": [
-87620,
-"90540482d1"
+97009,
+"0bbb55db5c"
 ],
 "bk/wind-6-9": [
-79940,
-"9d7908d0a1"
+91820,
+"5c139ae131"
 ],
 "bk/wind-7-0": [
-84580,
-"c73dccee1d"
+101140,
+"27f3be86b8"
 ],
 "bk/wind-7-1": [
-83470,
-"d9aa1e9dc7"
+93960,
+"b2ca4c5eae"
 ],
 "bk/wind-7-10": [
-92640,
-"3d6fb7d119"
+102100,
+"5c4bcd521b"
 ],
 "bk/wind-7-11": [
-113620,
-"3b5b75ae7a"
+138260,
+"e777a861d1"
 ],
 "bk/wind-7-2": [
-83950,
-"0641e02ec3"
+92930,
+"91087ed9ad"
 ],
 "bk/wind-7-3": [
-86930,
-"2db923ecf3"
+102860,
+"9a1435d092"
 ],
 "bk/wind-7-4": [
-104180,
-"215a476d3a"
+126530,
+"665976c2e2"
 ],
 "bk/wind-7-5": [
-107620,
-"c1f1b32c39"
+130320,
+"99439b8ae9"
 ],
 "bk/wind-7-6": [
-104110,
-"d8e7f40993"
+115220,
+"67fb1837eb"
 ],
 "bk/wind-7-7": [
-72650,
-"e68b8314be"
+83330,
+"902f1a8b5c"
 ],
 "bk/wind-7-8": [
-101539,
-"52445c6f31"
+121080,
+"8da9ba76ba"
 ],
 "bk/wind-7-9": [
-88100,
-"34debfd6b2"
+93550,
+"2c0cb956c7"
 ],
 "bk/wind-8-0": [
-129070,
-"e5c2f8efe0"
+142060,
+"9a9653d5ef"
 ],
 "bk/wind-8-1": [
-93890,
-"8c3e582a4a"
+100660,
+"2fef7ff8f3"
 ],
 "bk/wind-8-10": [
-89950,
-"b9fd5d8066"
+90789,
+"8a298b1212"
 ],
 "bk/wind-8-11": [
-87550,
-"0765de0604"
+97680,
+"9c842e82c4"
 ],
 "bk/wind-8-12": [
-82780,
-"1a2136cb09"
+89830,
+"6e49cb8655"
 ],
 "bk/wind-8-13": [
-87000,
-"424306623d"
+102650,
+"dc4cb96e73"
 ],
 "bk/wind-8-14": [
-97420,
-"2784a6c6b8"
+108600,
+"fb58de171a"
 ],
 "bk/wind-8-2": [
-85060,
-"e2f039efdc"
+97750,
+"7207c58284"
 ],
 "bk/wind-8-3": [
-88440,
-"2a7ec3f380"
+85610,
+"f2676bf4bf"
 ],
 "bk/wind-8-4": [
-94370,
-"e1cdd78043"
+96310,
+"8c9a4b4004"
 ],
 "bk/wind-8-5": [
-83400,
-"5c6d7af3fa"
+89330,
+"4340831ecf"
 ],
 "bk/wind-8-6": [
-99220,
-"fb03b9f02e"
+110259,
+"beb9f1817f"
 ],
 "bk/wind-8-7": [
-80780,
-"15d6a9b65c"
+88180,
+"deb163492e"
 ],
 "bk/wind-8-8": [
-111000,
-"a02b8757a9"
+120050,
+"d5f25ec0fb"
 ],
 "bk/wind-8-9": [
-106580,
-"552e89fab2"
+116660,
+"4cf408c6f0"
 ],
 "bk/wind-9-0": [
-131160,
-"10189b712c"
+151510,
+"39eec8628b"
 ],
 "bk/wind-9-1": [
-117979,
-"c199b1e846"
+133630,
+"d26755d7bb"
 ],
 "bk/wind-9-10": [
-81050,
-"fbc62b31a5"
+91820,
+"1c34d80d19"
 ],
 "bk/wind-9-11": [
-114789,
-"426abe993e"
+127420,
+"9013465969"
 ],
 "bk/wind-9-12": [
-126460,
-"9114ed57a1"
+145920,
+"07df0a5557"
 ],
 "bk/wind-9-13": [
-95400,
-"725fc05a63"
+105620,
+"c903deba45"
 ],
 "bk/wind-9-14": [
-91060,
-"4ca23bc147"
+110300,
+"02f7506da9"
 ],
 "bk/wind-9-15": [
-114380,
-"5847fa1868"
+135840,
+"ddbfb370af"
 ],
 "bk/wind-9-16": [
-91490,
-"ce385c3349"
+102020,
+"e91e034a23"
 ],
 "bk/wind-9-2": [
-104660,
-"35f622f458"
+121340,
+"21150cbfb8"
 ],
 "bk/wind-9-3": [
-92229,
-"11fbe7a1ce"
+110259,
+"70ca4bd76d"
 ],
 "bk/wind-9-4": [
-99479,
-"26f7b5e305"
+118539,
+"93f9085a33"
 ],
 "bk/wind-9-5": [
-109270,
-"4200755cc2"
+129840,
+"4819fa3c84"
 ],
 "bk/wind-9-6": [
-114600,
-"f202eb94fa"
+131230,
+"6b887af1fd"
 ],
 "bk/wind-9-7": [
-100920,
-"ef19ad42f8"
+117220,
+"16fe963c05"
 ],
 "bk/wind-9-8": [
-102020,
-"9fa7261760"
+115560,
+"1927147e0b"
 ],
 "bk/wind-9-9": [
-63670,
-"c097c8d5e6"
+72980,
+"51d4297adf"
 ],
 "dict/aesop-hare-tortoise-0": [
-3580,
-"7148634612"
+3980,
+"f1c223c163"
 ],
 "dict/aesop-hare-tortoise-1": [
-2620,
-"804fcffd1b"
+2950,
+"8474f4b9bd"
 ],
 "dict/aesop-lion-mouse-0": [
-2180,
-"de9293d643"
+2260,
+"38bfdf634a"
 ],
 "dict/aesop-town-mouse-0": [
-4820,
-"71dc82d758"
+6120,
+"74679eb118"
 ],
 "dict/aesop-town-mouse-1": [
-5230,
-"c963efada3"
+5980,
+"95013e11e9"
 ],
 "dict/aesop-town-mouse-2": [
-2740,
-"fb22cda6c9"
+2060,
+"dbe114618e"
 ],
 "dict/alice-cheshire-0": [
-2470,
-"3665e250a3"
+2540,
+"b7db5ba498"
 ],
 "dict/alice-cheshire-1": [
-3770,
-"4f2b017a28"
+4540,
+"e4865f84d5"
 ],
 "dict/alice-cheshire-2": [
-3430,
-"e42fa2d77f"
+3980,
+"3a42fd436a"
 ],
 "dict/alice-rabbit-hole-0": [
-6120,
-"9d27aa3b0b"
+8470,
+"8be7267204"
 ],
 "dict/bulfinch-arachne-0": [
-4320,
-"d05cb4ecbb"
+5780,
+"58800220a9"
 ],
 "dict/bulfinch-arachne-1": [
-4130,
-"b5160d9800"
+4320,
+"788ab3d6e3"
 ],
 "dict/bulfinch-arachne-2": [
-4460,
-"cfd6a2f7d3"
+5020,
+"148a0f081d"
 ],
 "dict/bulfinch-arachne-3": [
-4680,
-"08854d1cff"
+5420,
+"ec590ba83f"
 ],
 "dict/bulfinch-echo-0": [
-5420,
-"cad3206b0a"
+6530,
+"57f5fb7080"
 ],
 "dict/bulfinch-echo-1": [
-3430,
-"5b4e365eaf"
+3770,
+"550afaf102"
 ],
 "dict/bulfinch-echo-2": [
-5780,
-"f5a2e1fba9"
+6670,
+"653f60cc74"
 ],
 "dict/bulfinch-echo-3": [
-4680,
-"8be1495225"
+5160,
+"03ba4e9485"
 ],
 "dict/bulfinch-echo-4": [
-2470,
-"37ae91a73f"
+1990,
+"aa3c7b9eef"
 ],
 "dict/bulfinch-echo-5": [
-1920,
-"ed3d4e3aa8"
+1440,
+"9f40346986"
 ],
 "dict/bulfinch-icarus-0": [
-3770,
-"7a4b7baa72"
+4750,
+"52f363a1e3"
 ],
 "dict/bulfinch-icarus-1": [
 5980,
-"a34327260b"
+"be1864f59b"
 ],
 "dict/bulfinch-icarus-2": [
-3100,
-"728aaa8e17"
+2400,
+"141968c669"
 ],
 "dict/bulfinch-icarus-3": [
-4870,
-"dcb2c82475"
+6670,
+"fc0eafd680"
 ],
 "dict/bulfinch-iris-0": [
-4390,
-"3cc1341ab5"
+5020,
+"cf3ab9208c"
 ],
 "dict/bulfinch-iris-1": [
-4059,
-"86885aed61"
+5570,
+"8c6b213865"
 ],
 "dict/bulfinch-iris-2": [
-6410,
-"2dc724f985"
+7630,
+"84be5ff2d2"
 ],
 "dict/bulfinch-iris-3": [
-6120,
-"cb25f749fa"
+6530,
+"0f4b38a69d"
 ],
 "dict/bulfinch-narcissus-0": [
-4390,
-"a3c61ec80c"
+4750,
+"6dfac2c059"
 ],
 "dict/bulfinch-narcissus-1": [
-4870,
-"39b4e5c113"
+5160,
+"7205d7f440"
 ],
 "dict/bulfinch-sirens-0": [
-5710,
-"fe1b0ebe60"
+6190,
+"04a040ddbf"
 ],
 "dict/bulfinch-sirens-1": [
-5570,
-"55395fe243"
+4820,
+"b2b5f78bab"
 ],
 "dict/bulfinch-sirens-2": [
-5570,
-"96052b813b"
+5640,
+"a4801bc55a"
 ],
 "dict/carol-scrooge-0": [
-6340,
-"55743344e5"
+7030,
+"b4a65f872a"
 ],
 "dict/carol-scrooge-1": [
-7780,
-"0c6791569c"
+8880,
+"fdc3aa2898"
 ],
 "dict/carol-scrooge-2": [
-3980,
-"2467921744"
+5090,
+"e29fb3520f"
 ],
 "dict/darwin-tortoises-0": [
-4820,
-"6a253f14a1"
+5160,
+"713c646f1d"
 ],
 "dict/darwin-tortoises-1": [
-6260,
-"143c85c109"
+7150,
+"34718e50c2"
 ],
 "dict/darwin-tortoises-2": [
-6260,
-"2adfa4c893"
+7440,
+"2063063e67"
 ],
 "dict/dragons-book-beasts-0": [
-5020,
-"5dcccc5cb6"
+5090,
+"680ed79f37"
 ],
 "dict/dragons-book-beasts-1": [
-3020,
-"5a63a3b1a0"
+3170,
+"65a40a6390"
 ],
 "dict/dragons-book-beasts-2": [
-3770,
-"035653d0d7"
+3580,
+"89aff79f0a"
 ],
 "dict/dragons-book-beasts-3": [
-1510,
-"8deed0779f"
+1440,
+"2708f7b475"
 ],
 "dict/fabre-bad-name-0": [
-5300,
-"7921366e92"
+6340,
+"96f3fcd4d1"
 ],
 "dict/faraday-cup-0": [
-3430,
-"5380d49672"
+4870,
+"93aed03235"
 ],
 "dict/faraday-made-0": [
 4320,
-"1f9a21a081"
+"eb4c329925"
 ],
 "dict/faraday-made-1": [
 1920,
-"5434485e77"
+"a7e1138a29"
 ],
 "dict/faraday-made-2": [
-4870,
-"ae913e6907"
+5570,
+"9d71abc4b0"
 ],
 "dict/faraday-made-3": [
-3430,
-"b8b8b826a3"
+3770,
+"0fed6c4b47"
 ],
 "dict/faraday-made-4": [
-2880,
-"a7a1f1bf8f"
+2740,
+"7752ae5e35"
 ],
 "dict/gettysburg-address-0": [
-2540,
-"66be77f477"
+3020,
+"17b1e728d6"
 ],
 "dict/gettysburg-address-1": [
-3170,
-"6e986a19e5"
+3290,
+"0f3def96d7"
 ],
 "dict/gettysburg-address-2": [
-5780,
-"e075acc457"
+6600,
+"6b002bb825"
 ],
 "dict/gettysburg-address-3": [
-6410,
-"788ca52fad"
+7700,
+"9c9c1a52f1"
 ],
 "dict/grimm-elves-0": [
-3910,
-"1a5a2f9ee8"
+5420,
+"6cd8700e83"
 ],
 "dict/grimm-elves-1": [
-5380,
-"ce4d85afde"
+7030,
+"d9a551252d"
 ],
 "dict/grimm-golden-goose-0": [
-5930,
-"335b7a90d6"
+6960,
+"726185bce9"
 ],
 "dict/grimm-golden-goose-1": [
-2110,
-"d74ee5cb9a"
+2330,
+"21aaa9bf77"
 ],
 "dict/grimm-golden-goose-2": [
-4870,
-"8d42a229e9"
+5380,
+"cb28e29014"
 ],
 "dict/grimm-golden-goose-3": [
-2810,
-"1565b75f35"
+2470,
+"abb4cd0957"
 ],
 "dict/grimm-golden-goose-4": [
-1990,
-"85c501dcc4"
+2470,
+"71991bf7bf"
 ],
 "dict/grimm-musicians-0": [
-4460,
-"7e149aec33"
+5160,
+"8af0f64584"
 ],
 "dict/grimm-musicians-1": [
-4460,
-"c2d36d46f7"
+4320,
+"c9230e1a76"
 ],
 "dict/grimm-old-man-0": [
-3290,
-"ce237c717d"
+3430,
+"7300acf864"
 ],
 "dict/grimm-old-man-1": [
-5090,
-"3f6504e668"
+5570,
+"2af4d00876"
 ],
 "dict/grimm-old-man-2": [
-4200,
-"b41cfb1854"
+3770,
+"b61f42f465"
 ],
 "dict/grimm-old-man-3": [
-4750,
-"83fee928fa"
+5230,
+"50c107570f"
 ],
 "dict/grimm-rumpelstiltskin-0": [
-5020,
-"b026a60b84"
+6530,
+"39938751e0"
 ],
 "dict/happyprince-swallow-0": [
-4610,
-"4f6dfe08e7"
+5710,
+"151ac1afa9"
 ],
 "dict/happyprince-swallow-1": [
-5090,
-"000485f501"
+4270,
+"41eff9630d"
 ],
 "dict/happyprince-swallow-2": [
-1850,
-"5fad8a159e"
+2260,
+"4d0b7e8e8e"
 ],
 "dict/happyprince-swallow-3": [
-3220,
-"b47004d98a"
+3100,
+"b0177dfbf7"
 ],
 "dict/happyprince-swallow-4": [
-3430,
-"f422aa421b"
+3770,
+"44d5f74ca5"
 ],
 "dict/happyprince-swallow-5": [
-2620,
-"212d5fdb97"
+2740,
+"30cd10b622"
 ],
 "dict/heidi-fire-0": [
-2180,
-"1d2158525a"
+1990,
+"42a717df13"
 ],
 "dict/heidi-fire-1": [
-3650,
-"a60254cb81"
+3910,
+"30a2a90962"
 ],
 "dict/heidi-fire-2": [
-4130,
-"61b1fcb5a8"
+4540,
+"ecc28bf59f"
 ],
 "dict/heidi-fire-3": [
-2180,
-"de14c36814"
+3020,
+"0263b48bb1"
 ],
 "dict/heidi-fire-4": [
-5640,
-"b5ed933d22"
+5300,
+"93eadae891"
 ],
 "dict/heidi-fire-5": [
-5570,
-"7bc8866baa"
+5420,
+"61587d7b0b"
 ],
 "dict/heroes-perseus-0": [
-4750,
-"8c58d79575"
+5710,
+"6760835ce3"
 ],
 "dict/heroes-perseus-1": [
-4460,
-"5f853cc717"
+5930,
+"202caaf2ab"
 ],
 "dict/heroes-perseus-2": [
-3910,
-"31cb5f69c1"
+4460,
+"b1ee211d38"
 ],
 "dict/heroes-perseus-3": [
-2880,
-"40f096f28f"
+2950,
+"6662db148e"
 ],
 "dict/holmes-carbuncle-0": [
-3910,
-"72376c8c18"
+4610,
+"e62e021209"
 ],
 "dict/holmes-carbuncle-1": [
-5020,
-"5275dab1a2"
+7440,
+"30df7a7b1e"
 ],
 "dict/holmes-carbuncle-2": [
-3580,
-"bb70d39f5e"
+4460,
+"097772e5b3"
 ],
 "dict/jungle-mowgli-0": [
-5780,
-"8a24c4c3cb"
+6480,
+"92b0cec779"
 ],
 "dict/jungle-mowgli-1": [
-4870,
-"d034b77ee2"
+5020,
+"c7ceed95cf"
 ],
 "dict/jungle-mowgli-2": [
-2810,
-"ec35498ca9"
+2740,
+"9928a09a97"
 ],
 "dict/jungle-mowgli-3": [
-2260,
-"62fd3e99ec"
+2810,
+"de4b60a092"
 ],
 "dict/justso-camel-0": [
-4390,
-"7ae2104640"
+4820,
+"e9a22ea31e"
 ],
 "dict/justso-camel-1": [
-3100,
-"e19b5ac2ab"
+4130,
+"947566d470"
 ],
 "dict/justso-elephant-0": [
-4540,
-"69b62b8df6"
+4610,
+"0ef48b2cfc"
 ],
 "dict/lamb-tempest-0": [
-6410,
-"1592ffd0c0"
+7370,
+"8567c7a106"
 ],
 "dict/lamb-tempest-1": [
 2470,
-"c73f829941"
+"3f58b31cc7"
 ],
 "dict/lamb-tempest-2": [
-1850,
-"16bf852f20"
+3290,
+"9005193e99"
 ],
 "dict/lamb-tempest-3": [
-3770,
-"c70cdf7bd6"
+4750,
+"9ded6d22dc"
 ],
 "dict/lamb-tempest-4": [
-3170,
-"4e0dbb3298"
+2260,
+"0227dc0d11"
 ],
 "dict/littlewomen-presents-0": [
-4820,
-"845ec68298"
+5570,
+"27f7023c7d"
 ],
 "dict/littlewomen-presents-1": [
-4130,
-"d15b9ca481"
+3770,
+"251477a88a"
 ],
 "dict/lookingglass-humpty-0": [
-2540,
-"3de1d55de4"
+2740,
+"3770a36449"
 ],
 "dict/magi-della-0": [
-3580,
-"46c1a1fedc"
+4540,
+"64da80e9ae"
 ],
 "dict/magi-della-1": [
-5500,
-"9e33a120f1"
+6260,
+"9063e12ecd"
 ],
 "dict/magi-della-2": [
-5710,
-"be73b5e3f0"
+6530,
+"c191851068"
 ],
 "dict/magi-della-3": [
-3910,
-"b1490367c8"
+4320,
+"b545c73f4d"
 ],
 "dict/oz-cyclone-0": [
-2110,
-"82b29e2066"
+2180,
+"a65a0aaa2e"
 ],
 "dict/oz-cyclone-1": [
-5300,
-"f85b5ec0f1"
+6530,
+"ece3196a7c"
 ],
 "dict/oz-cyclone-2": [
-4130,
-"b3e2b9728d"
+4540,
+"5784f5c76a"
 ],
 "dict/oz-cyclone-3": [
-1850,
-"1a05e54996"
+2330,
+"a9108d34a8"
 ],
 "dict/oz-cyclone-4": [
-3290,
-"dd98cf63dd"
+4130,
+"0d6a9a91e4"
 ],
 "dict/oz-cyclone-5": [
-2810,
-"c726c072b0"
+3020,
+"d880e93df8"
 ],
 "dict/peterrabbit-garden-0": [
-4540,
-"92c624f163"
+5640,
+"4068a0e4a9"
 ],
 "dict/peterrabbit-garden-1": [
-4940,
-"cb806cf137"
+5300,
+"0568d44eae"
 ],
 "dict/peterrabbit-garden-2": [
-2880,
-"f3747c7d45"
+3840,
+"dc636b9669"
 ],
 "dict/peterrabbit-garden-3": [
-4059,
-"cd52bd451f"
+4540,
+"4beaca38e1"
 ],
 "dict/saki-window-0": [
-2950,
-"536290fcea"
+3430,
+"461e991e9c"
 ],
 "dict/saki-window-1": [
-4059,
-"aceabd98d1"
+4540,
+"68ddfbfc41"
 ],
 "dict/saki-window-2": [
-5640,
-"eabae689fa"
+7080,
+"c29b6beb9d"
 ],
 "dict/saki-window-3": [
-6600,
-"5f691832ae"
+6960,
+"5c2e94e0c8"
 ],
 "dict/secretgarden-door-0": [
-5020,
-"7311daac06"
+5380,
+"5f029fcdb2"
 ],
 "dict/secretgarden-door-1": [
-1370,
-"276621a62b"
+2060,
+"aa2beee8bd"
 ],
 "dict/secretgarden-door-2": [
-3650,
-"837f8ff660"
+3910,
+"c29003e18a"
 ],
 "dict/secretgarden-door-3": [
-5640,
-"6c605ddaf3"
+8470,
+"f5ef8f4a87"
 ],
 "dict/secretgarden-door-4": [
-2110,
-"4ba3ac52c0"
+2330,
+"d1998b7106"
 ],
 "dict/secretgarden-door-5": [
-2660,
-"ce56ccd6b2"
+3170,
+"3543f4dddc"
 ],
 "dict/tagore-champa-0": [
-2880,
-"89b0387f0c"
+3430,
+"203c7d448f"
 ],
 "dict/tagore-champa-1": [
-3170,
-"4b85f4b8e4"
+3840,
+"a4bb5e97f2"
 ],
 "dict/tagore-champa-2": [
-2330,
-"0b6ae1b076"
+1440,
+"25ecf7508d"
 ],
 "dict/tanglewood-ceres-0": [
-5570,
-"dc1d39ff18"
+5020,
+"dfeda253aa"
 ],
 "dict/tanglewood-ceres-1": [
-4540,
-"109931a440"
+6340,
+"ba22437f93"
 ],
 "dict/tanglewood-ceres-2": [
-4680,
-"6460ec4ff6"
+5020,
+"41d4f2a7f2"
 ],
 "dict/tanglewood-ceres-3": [
-3580,
-"49211d920d"
+3770,
+"1a6c31143e"
 ],
 "dict/tanglewood-labyrinth-0": [
-3100,
-"60ba3a7d4b"
+3910,
+"3f1182e94f"
 ],
 "dict/tanglewood-labyrinth-1": [
-5020,
-"e81ebbdce1"
+5420,
+"17db34a447"
 ],
 "dict/tanglewood-labyrinth-2": [
 6190,
-"297a0c5b82"
+"c8a6feefe0"
 ],
 "dict/treasure-benbow-0": [
 4540,
-"f3cb7f547b"
+"9011228232"
 ],
 "dict/treasure-benbow-1": [
-1440,
-"12fda5c9d5"
+1630,
+"d559f3ac0c"
 ],
 "dict/treasure-benbow-2": [
-1700,
-"bdc9544d52"
+1630,
+"72567a6117"
 ],
 "dict/velveteen-real-0": [
-3980,
-"ce2827bdc3"
+3770,
+"573087fe0a"
 ],
 "dict/velveteen-real-1": [
-1630,
-"b5ee6bed2a"
+1440,
+"24181becdd"
 ],
 "dict/velveteen-real-2": [
-6190,
-"cf05018360"
+6480,
+"5cd94c74bd"
 ],
 "dict/velveteen-real-3": [
-4610,
-"b4b4246036"
+5710,
+"965eb56ae9"
 ],
 "dict/velveteen-real-4": [
-2470,
-"32fe5ccb10"
+2110,
+"06230c3a71"
 ],
 "dict/walden-woods-0": [
-6820,
-"4a12deba09"
+7780,
+"70fbaf0a9d"
 ],
 "dict/walden-woods-1": [
-3170,
-"bfb5e44f45"
+3430,
+"b5d0df5539"
 ],
 "dict/wilde-selfish-giant-0": [
-1920,
-"5fa9080e1d"
+1990,
+"c239918d09"
 ],
 "dict/wilde-selfish-giant-1": [
-4460,
-"129f3be1b0"
+4750,
+"23abc4060c"
 ],
 "dict/wilde-selfish-giant-2": [
-2810,
-"273ab936a5"
+2950,
+"58d3735842"
 ],
 "dict/wilde-selfish-giant-3": [
-3770,
-"1b92ae40ed"
+4200,
+"8af2d3928f"
 ],
 "dict/wilde-selfish-giant-4": [
-2260,
-"7aee8a4985"
+2740,
+"7fb935a515"
 ],
 "dict/wilde-selfish-giant-5": [
-5570,
-"7f55c2bc81"
+5640,
+"f90d1f91fc"
 ],
 "dict/wind-boats-0": [
 3290,
-"c169ea2fde"
+"b86c900c67"
 ],
 "dict/wind-boats-1": [
-3840,
-"f4535be314"
+3980,
+"4ad7336342"
 ],
 "dict/wind-boats-2": [
-1080,
-"be9edc24d2"
+960,
+"e422d560df"
 ],
 "dict/wind-boats-3": [
-5570,
-"ca8b35071a"
+5930,
+"c2b81bb79e"
 ],
 "dict/wonderbook-atlas-0": [
-2330,
-"3317630fdb"
+2400,
+"a7564ef90a"
 ],
 "dict/wonderbook-atlas-1": [
-5380,
-"c2ef09a3f5"
+5930,
+"acb43193c6"
 ],
 "dict/wonderbook-atlas-2": [
-6190,
-"b1b1f383e0"
+7440,
+"7b6caa0ec9"
 ],
 "dict/wonderbook-midas-0": [
-2660,
-"5529532899"
+4059,
+"13b1c54a79"
 ],
 "dict/wonderbook-midas-1": [
-4390,
-"68e425dc68"
+5160,
+"7195c285a3"
 ],
 "dict/wonderbook-midas-2": [
-1780,
-"d0cb698103"
+1920,
+"edbe7b99d9"
 ],
 "dict/wonderbook-midas-3": [
-6260,
-"5a66d2de6e"
+7300,
+"e5fffd3f3f"
 ],
 "dict/wonderbook-pandora-0": [
-5930,
-"420fbd82f5"
+7080,
+"16c2ffcf4b"
 ],
 "dict/wonderbook-pandora-1": [
 4870,
-"02aed4d185"
+"8ba8ad477e"
 ],
 "dict/wonderbook-pandora-2": [
-2660,
-"0b29e6cefe"
+3360,
+"c2a2162f4a"
 ],
 "dict/wonderbook-pandora-3": [
-3170,
-"5a99043abc"
+4540,
+"51603460a1"
 ],
 "st/aesop-hare-tortoise-0": [
-10900,
-"2348d4e138"
+11500,
+"1bfd4b195d"
 ],
 "st/aesop-hare-tortoise-1": [
-12410,
-"97060ffbca"
+15360,
+"00e4342716"
 ],
 "st/aesop-hare-tortoise-2": [
-21980,
-"4c6857a750"
+25250,
+"00311ea749"
 ],
 "st/aesop-lion-mouse-0": [
-17090,
-"0231f7e220"
+20140,
+"3e39d43650"
 ],
 "st/aesop-lion-mouse-1": [
-5930,
-"b12d454b7c"
+7440,
+"11f6c3422a"
 ],
 "st/aesop-lion-mouse-2": [
-8810,
-"cc9f6975c7"
+10390,
+"3065f0b16c"
 ],
 "st/aesop-lion-mouse-3": [
-14060,
-"260f1e4495"
+15860,
+"8606c06626"
 ],
 "st/aesop-town-mouse-0": [
-32280,
-"531ff18d69"
+34900,
+"3fab8937b2"
 ],
 "st/aesop-town-mouse-1": [
-18670,
-"34d0339150"
+21860,
+"27c020e1a3"
 ],
 "st/aesop-town-mouse-2": [
-29450,
-"eaf6bab38c"
+31580,
+"e591ea4f0e"
 ],
 "st/alice-cheshire-0": [
-9840,
-"3a7b689277"
+9980,
+"257b618ba3"
 ],
 "st/alice-cheshire-1": [
-30140,
-"d21bbc8840"
+34080,
+"d76b29ce9d"
 ],
 "st/alice-cheshire-2": [
-20540,
-"57886a1a03"
+21790,
+"978f272292"
 ],
 "st/alice-cheshire-3": [
-15790,
-"2ccf4638c3"
+15500,
+"3860e71171"
 ],
 "st/alice-cheshire-4": [
-22900,
-"ba4d65e513"
+23640,
+"9c55afea1c"
 ],
 "st/alice-rabbit-hole-0": [
-15500,
-"8a6a79aeb1"
+15790,
+"c84585feb5"
 ],
 "st/alice-rabbit-hole-1": [
-14760,
-"13c01ca6c2"
+14400,
+"42ff1e8487"
 ],
 "st/alice-rabbit-hole-2": [
-17570,
-"bce735c505"
+18890,
+"aa259d0386"
 ],
 "st/alice-rabbit-hole-3": [
-25100,
-"cd0bc0767e"
+21170,
+"79fbda185a"
 ],
 "st/alice-rabbit-hole-4": [
-16900,
-"45d588262f"
+19660,
+"bd973edc15"
 ],
 "st/anne-matthew-0": [
-21790,
-"b1b6a7e28a"
+26400,
+"d2294365d9"
 ],
 "st/anne-matthew-1": [
-40010,
-"9970dbfe33"
+38760,
+"2d4dd3c45f"
 ],
 "st/anne-matthew-2": [
-36290,
-"3966d89780"
+39530,
+"86c71dc19b"
 ],
 "st/anne-matthew-3": [
-27460,
-"392a08b242"
+28490,
+"72b25be3f2"
 ],
 "st/bacon-studies-0": [
-23520,
-"472dccdb46"
+26280,
+"0778f682c4"
 ],
 "st/bacon-studies-1": [
-31440,
-"6926b13c49"
+38540,
+"de6e23cb7c"
 ],
 "st/bacon-studies-2": [
-20210,
-"bd1ff531fb"
+24620,
+"f8ea2a6e4f"
 ],
 "st/bacon-studies-3": [
-16610,
-"8c35af500c"
+19990,
+"17cd1f64ad"
 ],
 "st/blackbeauty-advice-0": [
-22420,
-"70828eee3e"
+24740,
+"ec3db4a44c"
 ],
 "st/blackbeauty-advice-1": [
-21310,
-"94c9e006f2"
+23520,
+"5ba556e933"
 ],
 "st/blackbeauty-advice-2": [
-22680,
-"e7b8088b02"
+26140,
+"e645899982"
 ],
 "st/blackbeauty-advice-3": [
-32980,
-"ee67bdbb65"
+37870,
+"a1f3934136"
 ],
 "st/blackbeauty-advice-4": [
-9790,
-"63de03d727"
+10390,
+"27ad5b7924"
 ],
 "st/blake-holy-thursday-0": [
-13700,
-"ceaa31e5e5"
+19100,
+"d140d77659"
 ],
 "st/blake-holy-thursday-1": [
-14690,
-"76b0b7ebd1"
+15980,
+"5072131f2f"
 ],
 "st/blake-lamb-0": [
-18670,
-"409b647577"
+21790,
+"4b577e95c3"
 ],
 "st/blake-lamb-1": [
-17710,
-"6a29320ecb"
+19730,
+"da662336d7"
 ],
 "st/blake-tiger-0": [
-14210,
-"566e773c1b"
+19730,
+"b9df969c66"
 ],
 "st/blake-tiger-1": [
-16200,
-"660ef66440"
+19730,
+"afdcd3af53"
 ],
 "st/blake-tiger-2": [
-14210,
-"d834225405"
+19030,
+"2236dbfbc7"
 ],
 "st/bulfinch-arachne-0": [
-18410,
-"15321a2aac"
+21940,
+"c0fc78a708"
 ],
 "st/bulfinch-arachne-1": [
-22270,
-"6d588ae52a"
+27380,
+"7ba60f294e"
 ],
 "st/bulfinch-arachne-2": [
-28820,
-"25b0f2946c"
+30340,
+"b193145181"
 ],
 "st/bulfinch-arachne-3": [
-15650,
-"05bc6543dc"
+16970,
+"b23561bd9c"
 ],
 "st/bulfinch-arachne-4": [
-25730,
-"d2619043f7"
+27380,
+"c86efcdaef"
 ],
 "st/bulfinch-arachne-5": [
-20880,
-"ae607e50b6"
+20470,
+"63763ab365"
 ],
 "st/bulfinch-echo-0": [
-41260,
-"a147b294fa"
+44350,
+"00f885ef52"
 ],
 "st/bulfinch-echo-1": [
-17780,
-"0d88507bc9"
+21100,
+"7b56489410"
 ],
 "st/bulfinch-echo-2": [
-40200,
-"8a77ae0060"
+42960,
+"9ec5160252"
 ],
 "st/bulfinch-echo-3": [
-23780,
-"e0273a6dc4"
+24960,
+"732e4d84ba"
 ],
 "st/bulfinch-icarus-0": [
-28130,
-"333f02639c"
+30890,
+"50fc38e897"
 ],
 "st/bulfinch-icarus-1": [
-28820,
-"a1b299652b"
+34080,
+"f4126180e9"
 ],
 "st/bulfinch-icarus-2": [
-25510,
-"0f2cda61ad"
+28610,
+"eb5979c88b"
 ],
 "st/bulfinch-icarus-3": [
-35450,
-"ef89af5992"
+43250,
+"a4a70f1e21"
 ],
 "st/bulfinch-iris-0": [
-41040,
-"db3c4b2c3c"
+50900,
+"6085359221"
 ],
 "st/bulfinch-iris-1": [
-20540,
-"e538673c09"
+27580,
+"04b2ae6f4e"
 ],
 "st/bulfinch-iris-2": [
-32060,
-"c3cb904d57"
+34270,
+"06e9a445b0"
 ],
 "st/bulfinch-iris-3": [
-10750,
-"59db00e908"
+12000,
+"b9617d7172"
 ],
 "st/bulfinch-iris-4": [
-39720,
-"89351da4dc"
+46150,
+"5c62f8a2c1"
 ],
 "st/bulfinch-narcissus-0": [
-37320,
-"7249146768"
+42840,
+"e7f5275f81"
 ],
 "st/bulfinch-narcissus-1": [
-18820,
-"98fcb63641"
+23160,
+"5cb232d03c"
 ],
 "st/bulfinch-narcissus-2": [
-27720,
-"122e98b1d8"
+30000,
+"74a01aefc5"
 ],
 "st/bulfinch-narcissus-3": [
-14880,
-"22af6c5b1c"
+18820,
+"c1fd5464f7"
 ],
 "st/bulfinch-narcissus-4": [
-24000,
-"db7dfbcd44"
+27860,
+"765e3cd46e"
 ],
 "st/bulfinch-pan-0": [
-17380,
-"8978642325"
+22130,
+"a31de8d437"
 ],
 "st/bulfinch-pan-1": [
-15020,
-"b0a39c0ce1"
+18190,
+"bbf021f085"
 ],
 "st/bulfinch-pan-2": [
-20690,
-"65ccabe6de"
+26140,
+"0ddbb7aff9"
 ],
 "st/bulfinch-pegasus-0": [
-14760,
-"0b3d737b0b"
+16200,
+"f563a74e0a"
 ],
 "st/bulfinch-pegasus-1": [
-19510,
-"9f68e59a98"
+20540,
+"c366accb8b"
 ],
 "st/bulfinch-pegasus-2": [
-31320,
-"c02b8c0836"
+35300,
+"d0fd558c40"
 ],
 "st/bulfinch-pegasus-3": [
-24260,
-"06612dea44"
+28060,
+"74ed8321d2"
 ],
 "st/bulfinch-pegasus-4": [
-23520,
-"27412cff4f"
+24140,
+"8aacf0545a"
 ],
 "st/bulfinch-sirens-0": [
-20470,
-"ff92b30ed2"
+22270,
+"28243ee599"
 ],
 "st/bulfinch-sirens-1": [
-20280,
-"112a768eca"
+24070,
+"7b728df221"
 ],
 "st/bulfinch-sirens-2": [
-27650,
-"c5c6ef0753"
+29160,
+"b722b22e47"
 ],
 "st/bulfinch-tantalus-0": [
-41590,
-"4cf4910f14"
+43510,
+"8aa573a0c6"
 ],
 "st/bulfinch-tantalus-1": [
-21020,
-"569fdb7ad3"
+23640,
+"5b4bd3f8f2"
 ],
 "st/bulfinch-tantalus-2": [
-25440,
-"a69d9be238"
+30000,
+"95a4c658db"
 ],
 "st/caesar-antony-0": [
-34490,
-"07d1c8567f"
+43660,
+"965adc3f91"
 ],
 "st/caesar-antony-1": [
-25660,
-"29e247992f"
+35040,
+"077a837449"
 ],
 "st/caesar-antony-2": [
-19180,
-"ce94403be4"
+22540,
+"05c8798abe"
 ],
 "st/carol-scrooge-0": [
-16900,
-"12bc31adb3"
+20620,
+"e3725223d7"
 ],
 "st/carol-scrooge-1": [
-36960,
-"d384f61f6f"
+45170,
+"ee75dff295"
 ],
 "st/carol-scrooge-2": [
-25300,
-"31f0d9bdba"
+31100,
+"8ce62d6cd4"
 ],
 "st/carol-scrooge-3": [
-29160,
-"33b44b1391"
+34130,
+"f1b4604875"
 ],
 "st/carol-scrooge-4": [
-11640,
-"7c25480f49"
+13510,
+"c813332de6"
 ],
 "st/darwin-tortoises-0": [
-18000,
-"00c435bd91"
+20830,
+"c01ad0564d"
 ],
 "st/darwin-tortoises-1": [
-14880,
-"348642c745"
+17710,
+"cf4b21ebb5"
 ],
 "st/darwin-tortoises-2": [
-19510,
-"494b46494a"
+22680,
+"ba20ae2789"
 ],
 "st/darwin-tortoises-3": [
-21170,
-"114dde1a40"
+23230,
+"8ec7c8745e"
 ],
 "st/dickinson-hope-0": [
-5780,
-"b3514779d1"
+6890,
+"6917079ad3"
 ],
 "st/dickinson-hope-1": [
-7220,
-"4293bb9d3b"
+7370,
+"156144f7f7"
 ],
 "st/dickinson-hope-2": [
-7220,
-"81f6c9d752"
+7030,
+"3d3f556e46"
 ],
 "st/douglass-bread-0": [
-17230,
-"2eea6c4960"
+18340,
+"c9abd66928"
 ],
 "st/douglass-bread-1": [
-23090,
-"a17cafd50a"
+25850,
+"26e2217533"
 ],
 "st/douglass-bread-2": [
-22060,
-"16354cd04e"
+25250,
+"6a1d18c3c6"
 ],
 "st/douglass-bread-3": [
-21170,
-"1cfab55eb1"
+25030,
+"365c77976b"
 ],
 "st/douglass-sails-0": [
-28560,
-"2ce9651c5f"
+33460,
+"0ee0ce8261"
 ],
 "st/douglass-sails-1": [
-13440,
-"7d0f461b94"
+12190,
+"441996f927"
 ],
 "st/douglass-sails-2": [
-27860,
-"e50bf4c158"
+35860,
+"864d09e354"
 ],
 "st/douglass-sails-3": [
-16460,
-"b3b010fc73"
+19580,
+"8eec235afe"
 ],
 "st/douglass-sails-4": [
-12050,
-"5792360e67"
+14470,
+"ba5948b703"
 ],
 "st/dragons-book-beasts-0": [
-11160,
-"c55553a3de"
+12340,
+"d10ca9fda9"
 ],
 "st/dragons-book-beasts-1": [
-19990,
-"7f0c5dc814"
+24260,
+"d78a7ef8dc"
 ],
 "st/dragons-book-beasts-2": [
-32689,
-"f97c54e4b0"
+35040,
+"76f243c239"
 ],
 "st/dragons-book-beasts-3": [
-14210,
-"967bf8caba"
+17160,
+"92d77e2ef6"
 ],
 "st/fabre-bad-name-0": [
-17160,
-"17e7a8dd72"
+19780,
+"649428d79e"
 ],
 "st/fabre-bad-name-1": [
-9430,
-"5a73ae7257"
+12000,
+"8acc255558"
 ],
 "st/fabre-bad-name-2": [
-10200,
-"557f817124"
+12740,
+"2eba66635b"
 ],
 "st/fabre-bad-name-3": [
-13440,
-"791226d26e"
+16900,
+"7397c5140a"
 ],
 "st/faraday-cup-0": [
-14950,
-"525db28fca"
+18070,
+"0d9a361df7"
 ],
 "st/faraday-cup-1": [
-8260,
-"6b4c411568"
+10390,
+"01a927ac94"
 ],
 "st/faraday-cup-2": [
-15910,
-"e148638663"
+16460,
+"ef6d33d5eb"
 ],
 "st/faraday-cup-3": [
-7850,
-"c6d790e595"
+11020,
+"515b4c8144"
 ],
 "st/faraday-made-0": [
-11570,
-"4d3ae759fc"
+12340,
+"bb12167382"
 ],
 "st/faraday-made-1": [
-19180,
-"bce4639246"
+21100,
+"78c9afdac5"
 ],
 "st/faraday-made-2": [
-20280,
-"2b5283ba25"
+23780,
+"168a9993e8"
 ],
 "st/faraday-made-3": [
-15430,
-"84160a80e4"
+18000,
+"977c4cc999"
 ],
 "st/gettysburg-address-0": [
-18550,
-"6547f895d9"
+24550,
+"befb4935fd"
 ],
 "st/gettysburg-address-1": [
-29710,
-"f3afced826"
+32470,
+"b14ade172b"
 ],
 "st/gettysburg-address-2": [
-32350,
-"6f49621d1f"
+33790,
+"501bdeb348"
 ],
 "st/gitanjali-35-0": [
-8690,
-"d1f9eb87af"
+9240,
+"56d617281f"
 ],
 "st/gitanjali-35-1": [
-10900,
-"d3e74e9e9a"
+12820,
+"b2d80d8f87"
 ],
 "st/gitanjali-35-2": [
-7630,
-"74c3a2e515"
+8060,
+"468e068d46"
 ],
 "st/grimm-elves-0": [
-10340,
-"d03a57cb34"
+13580,
+"a11a5bdc43"
 ],
 "st/grimm-elves-1": [
-35520,
-"575ac5abd0"
+38350,
+"b56c9cd35b"
 ],
 "st/grimm-elves-2": [
-20620,
-"ea3aed9c24"
+23230,
+"dfee4cfda8"
 ],
 "st/grimm-elves-3": [
-17380,
-"1f098c62c5"
+19990,
+"69cd8adbb4"
 ],
 "st/grimm-elves-4": [
-18410,
-"a0af33bf5b"
+21170,
+"a81cf735fa"
 ],
 "st/grimm-frog-prince-0": [
-19850,
-"d634601beb"
+21170,
+"811d3d7d50"
 ],
 "st/grimm-frog-prince-1": [
-24340,
-"ee12ca0180"
+28130,
+"ff9f626126"
 ],
 "st/grimm-frog-prince-2": [
-22340,
-"0b6dca8222"
+27500,
+"7e7db7f9c8"
 ],
 "st/grimm-frog-prince-3": [
-16340,
-"822a0268c2"
+17230,
+"5bd5355172"
 ],
 "st/grimm-frog-prince-4": [
-25800,
-"6b49ca4444"
+27240,
+"753ec52003"
 ],
 "st/grimm-golden-goose-0": [
-21720,
-"483862845c"
+23930,
+"304f8586ac"
 ],
 "st/grimm-golden-goose-1": [
-38060,
-"4071872cfb"
+44980,
+"abf9b2f41e"
 ],
 "st/grimm-golden-goose-2": [
-29110,
-"3a35f60bf8"
+31730,
+"b378a53264"
 ],
 "st/grimm-golden-goose-3": [
-28900,
-"bdc39f4e58"
+29860,
+"ec47042e5c"
 ],
 "st/grimm-musicians-0": [
-24000,
-"4baf983d98"
+25100,
+"ecbb128137"
 ],
 "st/grimm-musicians-1": [
-31370,
-"4d10974c54"
+34130,
+"4469bb2493"
 ],
 "st/grimm-musicians-2": [
-28270,
-"2f8bed42d4"
+28340,
+"729a7abffc"
 ],
 "st/grimm-musicians-3": [
-37800,
-"20ee9fe4bd"
+38760,
+"36c953b1ad"
 ],
 "st/grimm-old-man-0": [
-26060,
-"d04e4c7ee6"
+32060,
+"9c648cae97"
 ],
 "st/grimm-old-man-1": [
-13660,
-"83fb47307a"
+14540,
+"1593ca330f"
 ],
 "st/grimm-old-man-2": [
-13850,
-"a9db571fe5"
+16059,
+"e07917d36a"
 ],
 "st/grimm-old-man-3": [
-12050,
-"e3f684eeb5"
+14060,
+"0c28f2a716"
 ],
 "st/grimm-rumpelstiltskin-0": [
-30770,
-"e83840348e"
+36770,
+"8dd55d0237"
 ],
 "st/grimm-rumpelstiltskin-1": [
-19440,
-"9d0c90f764"
+21170,
+"ffff0283c3"
 ],
 "st/grimm-rumpelstiltskin-2": [
-21380,
-"b60533baf1"
+24820,
+"bbb845d989"
 ],
 "st/grimm-rumpelstiltskin-3": [
-15580,
-"86386dff81"
+17520,
+"0e9c7bd923"
 ],
 "st/happyprince-swallow-0": [
-13990,
-"9dfe1a3501"
+15720,
+"8cddadff79"
 ],
 "st/happyprince-swallow-1": [
-17230,
-"30a2b549a2"
+18820,
+"742a8afb9e"
 ],
 "st/happyprince-swallow-2": [
-15100,
-"eb228621c4"
+15360,
+"29a2092508"
 ],
 "st/happyprince-swallow-3": [
-32140,
-"121a68dcd9"
+36550,
+"d36c45a0b0"
 ],
 "st/happyprince-swallow-4": [
-23860,
-"37ad79c3a4"
+29110,
+"c7b9995a17"
 ],
 "st/happyprince-swallow-5": [
-16970,
-"9bd69ada1f"
+21860,
+"c72be01586"
 ],
 "st/heidi-fire-0": [
-40630,
-"8403865ea2"
+53880,
+"e0e492629c"
 ],
 "st/heidi-fire-1": [
-21500,
-"a448fc29b8"
+21790,
+"1529774369"
 ],
 "st/heidi-fire-2": [
-14210,
-"d5a9352212"
+14060,
+"a9863309db"
 ],
 "st/heidi-fire-3": [
-27580,
-"2d586f6b1c"
+32830,
+"3414d34df1"
 ],
 "st/heroes-perseus-0": [
-38420,
-"eb03194671"
+41860,
+"855a30e214"
 ],
 "st/heroes-perseus-1": [
-19920,
-"840f72e700"
+23590,
+"12db02ee2d"
 ],
 "st/heroes-perseus-2": [
-27580,
-"3bc109ab4c"
+30070,
+"031fad0a10"
 ],
 "st/holmes-carbuncle-0": [
-22420,
-"66c3437795"
+26690,
+"f6122d5766"
 ],
 "st/holmes-carbuncle-1": [
-34080,
-"31a53d91ac"
+37730,
+"da3e8620d5"
 ],
 "st/holmes-carbuncle-2": [
-12000,
-"35ae94303c"
+12820,
+"c9039b9999"
 ],
 "st/holmes-carbuncle-3": [
-32980,
-"cc2cb1210e"
+34680,
+"0127ebcbed"
 ],
 "st/holmes-carbuncle-4": [
-11500,
-"b550cd5650"
+13100,
+"6a9bf5a3c5"
 ],
 "st/holmes-observe-0": [
-34080,
-"25cb7e6cfb"
+35230,
+"1ba172026e"
 ],
 "st/holmes-observe-1": [
-24740,
-"ddc23aa126"
+30410,
+"20dd492599"
 ],
 "st/holmes-observe-2": [
-18000,
-"f405fc7cdf"
+19300,
+"21a8e95e90"
 ],
 "st/holmes-observe-3": [
-18890,
-"25caf1fbb9"
+20620,
+"3388dbf3f0"
 ],
 "st/holmes-observe-4": [
-26950,
-"d74f274006"
+39050,
+"5b260c0541"
 ],
 "st/jungle-mowgli-0": [
-21980,
-"7e774839fc"
+25510,
+"e8ad299a14"
 ],
 "st/jungle-mowgli-1": [
-16340,
-"a0c9bcbeab"
+15650,
+"22647f51f5"
 ],
 "st/jungle-mowgli-2": [
-17380,
-"10de7a09ac"
+19220,
+"8bed6afe6a"
 ],
 "st/jungle-mowgli-3": [
-27860,
-"43312a34da"
+35180,
+"02fa3d5b6c"
 ],
 "st/jungle-rikki-0": [
-17450,
-"c9447b735b"
+20140,
+"287740c61d"
 ],
 "st/jungle-rikki-1": [
-24140,
-"f6b2e7635d"
+26060,
+"af278bec82"
 ],
 "st/jungle-rikki-2": [
-26830,
-"114c4f067b"
+31800,
+"a958646920"
 ],
 "st/jungle-rikki-3": [
-20210,
-"0b361792c7"
+20880,
+"139a6fc0e7"
 ],
 "st/jungle-rikki-4": [
-28560,
-"866121b105"
+34900,
+"9722a3c5ba"
 ],
 "st/justso-camel-0": [
-25100,
-"b4147251f2"
+28970,
+"0d82d5f7d2"
 ],
 "st/justso-camel-1": [
-16270,
-"b96f5bc94e"
+18890,
+"2021006045"
 ],
 "st/justso-camel-2": [
-23160,
-"86ad1cdcf9"
+22900,
+"b32459b9f7"
 ],
 "st/justso-camel-3": [
-18820,
-"6a3beb72c8"
+21650,
+"68ff21cf76"
 ],
 "st/justso-camel-4": [
-16340,
-"e4d299dd93"
+20210,
+"8893dcba81"
 ],
 "st/justso-elephant-0": [
-25030,
-"d79e3b94dd"
+28900,
+"14ac0a9c24"
 ],
 "st/justso-elephant-1": [
-18550,
-"8e183cbc25"
+21100,
+"2be8238f1d"
 ],
 "st/justso-elephant-2": [
-29300,
-"ab01054c88"
+33170,
+"b7524a484c"
 ],
 "st/justso-elephant-3": [
-17450,
-"e14bbe611a"
+24000,
+"edba94ed4b"
 ],
 "st/justso-elephant-4": [
-25510,
-"2a27a0b563"
+29300,
+"a00d0ef82e"
 ],
 "st/keats-chapman-0": [
-18480,
-"ec370ec457"
+23160,
+"2ed0741ce1"
 ],
 "st/keats-chapman-1": [
-14880,
-"d95e03d820"
+15360,
+"d00728b561"
 ],
 "st/keats-grasshopper-0": [
-19180,
-"be44c6133e"
+22750,
+"c0eb0cb463"
 ],
 "st/keats-grasshopper-1": [
-14260,
-"e11f9caeff"
+17300,
+"936f3493fb"
 ],
 "st/kipling-if-0": [
-20330,
-"d06d4b5a0e"
+22900,
+"f5bffd67a4"
 ],
 "st/kipling-if-1": [
-20470,
-"90ad5e50e0"
+24070,
+"460d161040"
 ],
 "st/kipling-if-2": [
-17450,
-"c0b0ba2df8"
+22540,
+"c80a919153"
 ],
 "st/kipling-if-3": [
-20210,
-"1fa4552e58"
+21980,
+"4b4d28ff0d"
 ],
 "st/lamb-tempest-0": [
-18410,
-"f3e545530f"
+22900,
+"d9044f9b26"
 ],
 "st/lamb-tempest-1": [
-20280,
-"2d1d8f105b"
+26060,
+"19e4e6074f"
 ],
 "st/lamb-tempest-2": [
-23710,
-"129c1424ac"
+27240,
+"a7c56a7c18"
 ],
 "st/lamb-tempest-3": [
-26060,
-"9510675a07"
+29110,
+"70b5b0fff3"
 ],
 "st/lear-limericks-0": [
-9170,
-"8550e396e8"
+10200,
+"104f0578f8"
 ],
 "st/lear-limericks-1": [
-8540,
-"f35ce6b6fb"
+10270,
+"370633104e"
 ],
 "st/lear-limericks-2": [
-9290,
-"77b80d0c14"
+10340,
+"5b769e1b17"
 ],
 "st/lear-limericks-3": [
-9430,
-"517dfbe5a8"
+10610,
+"f0625948fb"
 ],
 "st/littlewomen-presents-0": [
-19780,
-"0b662b6d45"
+22420,
+"206a16b51e"
 ],
 "st/littlewomen-presents-1": [
-16680,
-"fb6cb2055b"
+17090,
+"110c5f675a"
 ],
 "st/littlewomen-presents-2": [
-26900,
-"82c1616059"
+25250,
+"e0a44ae327"
 ],
 "st/littlewomen-presents-3": [
-28820,
-"1ae0fa8db6"
+32540,
+"a2bdc827d1"
 ],
 "st/lookingglass-humpty-0": [
-31320,
-"7ba3fff213"
+34750,
+"73a873b22e"
 ],
 "st/lookingglass-humpty-1": [
-29160,
-"2ae5952af2"
+30000,
+"a8445fa130"
 ],
 "st/lookingglass-humpty-2": [
-29380,
-"46885ef766"
+29710,
+"60970b969f"
 ],
 "st/lookingglass-humpty-3": [
-10820,
-"361dc19763"
+11020,
+"7184de6c1f"
 ],
 "st/macbeth-tomorrow-0": [
-24550,
-"f06fff8087"
+34340,
+"302371d53c"
 ],
 "st/macbeth-tomorrow-1": [
-11640,
-"c9f0013f8e"
+12340,
+"94942bc567"
 ],
 "st/macbeth-tomorrow-2": [
-21940,
-"60031054c6"
+28900,
+"289360d0a5"
 ],
 "st/macbeth-witches-0": [
-33650,
-"65fcc3868c"
+40080,
+"817beb422e"
 ],
 "st/macbeth-witches-1": [
-12120,
-"d16fa38613"
+14260,
+"919c780a2b"
 ],
 "st/macbeth-witches-2": [
-56160,
-"ac6f31ed45"
+63940,
+"c2696cd39f"
 ],
 "st/macbeth-witches-3": [
-30700,
-"017976e324"
+37440,
+"29f40b8e99"
 ],
 "st/magi-della-0": [
-39600,
-"d3a198821f"
+42070,
+"bb299ee10b"
 ],
 "st/magi-della-1": [
-31730,
-"eaf0a8cfec"
+35180,
+"6fcc0a5a8f"
 ],
 "st/magi-della-2": [
-28900,
-"5b506d489d"
+32980,
+"ed9708ef88"
 ],
 "st/magi-della-3": [
-26470,
-"e92109eea5"
+30620,
+"5c0760dc16"
 ],
 "st/mariner-calm-0": [
-6740,
-"70da38313d"
+9980,
+"4cf985d884"
 ],
 "st/mariner-calm-1": [
-7300,
-"9746e20b4a"
+9360,
+"39d98082ab"
 ],
 "st/mariner-calm-2": [
-6410,
-"93b86d7999"
+7580,
+"fd7a0a1275"
 ],
 "st/mariner-calm-3": [
-7990,
-"71dcef72d0"
+8400,
+"7fba0efe2c"
 ],
 "st/mariner-calm-4": [
-6260,
-"c42f65c0a1"
+9500,
+"a27047467d"
 ],
 "st/midsummer-casting-0": [
-24820,
-"27e6a9a53d"
+28610,
+"9d4890b3b3"
 ],
 "st/midsummer-casting-1": [
-35590,
-"7026171b26"
+52900,
+"39a784e936"
 ],
 "st/midsummer-casting-2": [
-42140,
-"6c35c47bdf"
+54500,
+"be2c10223a"
 ],
 "st/midsummer-casting-3": [
-9720,
-"c9e7bf3732"
+14060,
+"d1d534834f"
 ],
 "st/midsummer-epilogue-0": [
-7700,
-"7f4dd4cc59"
+9650,
+"851ed43497"
 ],
 "st/midsummer-epilogue-1": [
-7220,
-"3937d53df9"
+8540,
+"bc9c52954e"
 ],
 "st/midsummer-epilogue-2": [
-13700,
-"6587dd195f"
+17710,
+"b6783b939d"
 ],
 "st/midsummer-puck-0": [
-39310,
-"b94e42f26b"
+44420,
+"2cf245721c"
 ],
 "st/midsummer-puck-1": [
-34270,
-"3152116a3e"
+36480,
+"f5909604a2"
 ],
 "st/midsummer-puck-2": [
-25100,
-"2c80077ca3"
+30140,
+"e3f94b166c"
 ],
 "st/midsummer-puck-3": [
-39790,
-"163dae2181"
+54430,
+"354a5fd11a"
 ],
 "st/midsummer-titania-0": [
-22900,
-"af16b050f0"
+24410,
+"0380deb5f3"
 ],
 "st/midsummer-titania-1": [
-42770,
-"8865caee5f"
+50210,
+"03edd2f902"
 ],
 "st/midsummer-titania-2": [
-39170,
-"6049f466eb"
+49030,
+"60f83b62f0"
 ],
 "st/midsummer-titania-3": [
-66980,
-"3c9f7d6aed"
+72170,
+"3a9de3afca"
 ],
 "st/naidu-palanquin-0": [
-14260,
-"1a9873b843"
+19180,
+"231392a1c3"
 ],
 "st/naidu-palanquin-1": [
-14470,
-"6939d5f5a4"
+16900,
+"6875eaedcc"
 ],
 "st/oz-cyclone-0": [
-31510,
-"53691d87e3"
+35180,
+"a2869dc04d"
 ],
 "st/oz-cyclone-1": [
-15980,
-"230c236fb2"
+17640,
+"0e9ee4a876"
 ],
 "st/oz-cyclone-2": [
-25250,
-"e01edbb212"
+26060,
+"0ea12451af"
 ],
 "st/oz-cyclone-3": [
-28340,
-"3b7b5b9fb2"
+35660,
+"3b2014fecc"
 ],
 "st/oz-cyclone-4": [
-13780,
-"955ea2383b"
+15360,
+"b68fc4edb1"
 ],
 "st/peterrabbit-garden-0": [
-34340,
-"60ace7bd29"
+42220,
+"6be225d0e3"
 ],
 "st/peterrabbit-garden-1": [
-18960,
-"5bfb4bb3d6"
+19300,
+"aa0d80b833"
 ],
 "st/peterrabbit-garden-2": [
-12340,
-"2be2f94e39"
+12890,
+"fb6b79dc3a"
 ],
 "st/peterrabbit-garden-3": [
-23300,
-"5b85870e11"
+25100,
+"dac56518cd"
 ],
 "st/peterrabbit-garden-4": [
-17450,
-"83f61f219f"
+19780,
+"468c722b97"
 ],
 "st/pride-opening-0": [
-18620,
-"8dfa9e0c5a"
+21100,
+"aa24458068"
 ],
 "st/pride-opening-1": [
-27940,
-"c09a2683a7"
+25370,
+"f8a0157e79"
 ],
 "st/pride-opening-2": [
-26620,
-"b95910b1a7"
+25300,
+"84c0883954"
 ],
 "st/pride-opening-3": [
-32060,
-"8356d75d68"
+32140,
+"9251f2f180"
 ],
 "st/saki-window-0": [
-23780,
-"3b1f84eaa0"
+28340,
+"74cd353075"
 ],
 "st/saki-window-1": [
-36220,
-"307f952b92"
+41180,
+"06b4b15bfe"
 ],
 "st/saki-window-2": [
-22420,
-"bbd8f10f88"
+27860,
+"ec8a7306dd"
 ],
 "st/saki-window-3": [
-16059,
-"0b1276186c"
+20060,
+"a5277d89f7"
 ],
 "st/saki-window-4": [
-20760,
-"e4d0ebad94"
+23450,
+"6d7e6bdcfe"
 ],
 "st/secretgarden-door-0": [
-29300,
-"1f50d16b35"
+34080,
+"b6c84786d2"
 ],
 "st/secretgarden-door-1": [
-27310,
-"eee25d15d6"
+28490,
+"24fdeaac41"
 ],
 "st/secretgarden-door-2": [
-13660,
-"040e23990f"
+13440,
+"fde5c6ddc7"
 ],
 "st/secretgarden-door-3": [
-17930,
-"a7f368153e"
+20210,
+"6f32fc6164"
 ],
 "st/secretgarden-door-4": [
-11450,
-"8a6363cbcb"
+10940,
+"17aa2d38fd"
 ],
 "st/sonnet-116-0": [
-19370,
-"6b01a4a58e"
+24000,
+"ed8d2835ba"
 ],
 "st/sonnet-116-1": [
-10270,
-"01e5463e87"
+14210,
+"cd40d9768e"
 ],
 "st/sonnet-116-2": [
-4870,
-"a4d1ae4b1c"
+6740,
+"7e47402dcd"
 ],
 "st/sonnet-18-0": [
-9240,
-"4e6b943129"
+10750,
+"f2df4704cc"
 ],
 "st/sonnet-18-1": [
-9650,
-"2ade51454b"
+14260,
+"4ecd40eea2"
 ],
 "st/sonnet-18-2": [
-10270,
-"49c6c4f140"
+11090,
+"18bb8ddb91"
 ],
 "st/sonnet-18-3": [
-5570,
-"cc48bee504"
+7580,
+"930c701543"
 ],
 "st/stevenson-counterpane-0": [
-7080,
-"221462dd70"
+10130,
+"b84a55a60c"
 ],
 "st/stevenson-counterpane-1": [
-7920,
-"daa40feaf0"
+9020,
+"5fae8679ad"
 ],
 "st/stevenson-counterpane-2": [
-7780,
-"4a51465f76"
+7990,
+"47561ad2b1"
 ],
 "st/stevenson-counterpane-3": [
-7990,
-"958c41faa7"
+9430,
+"58c50286f5"
 ],
 "st/stevenson-shadow-0": [
-11710,
-"fc6eb01bfa"
+13700,
+"baca220cb0"
 ],
 "st/stevenson-shadow-1": [
-11020,
-"df29fa3998"
+13030,
+"6d57346fce"
 ],
 "st/stevenson-shadow-2": [
-12190,
-"9d2c32fe07"
+12890,
+"7c78f9a1e3"
 ],
 "st/stevenson-shadow-3": [
-11090,
-"7c8d390037"
+15430,
+"574719120d"
 ],
 "st/stevenson-swing-0": [
-6260,
-"7446183b6a"
+8620,
+"9e98c8ba60"
 ],
 "st/stevenson-swing-1": [
-6260,
-"1b08626f67"
+9100,
+"bd2522ba7b"
 ],
 "st/stevenson-swing-2": [
-6890,
-"c531601dc4"
+9500,
+"43ee0ea3cb"
 ],
 "st/tagore-champa-0": [
-14330,
-"01b89c2a79"
+15100,
+"dfcfc3f14e"
 ],
 "st/tagore-champa-1": [
-15240,
-"85cd748cb7"
+15860,
+"b7efd09547"
 ],
 "st/tagore-champa-2": [
-13580,
-"cd151da13d"
+16540,
+"7b43318a1e"
 ],
 "st/tagore-champa-3": [
-13220,
-"f86487d253"
+15720,
+"bb11673563"
 ],
 "st/tanglewood-ceres-0": [
-30700,
-"57ea1b95e1"
+38060,
+"7d0671de96"
 ],
 "st/tanglewood-ceres-1": [
-30340,
-"9c5dbab677"
+34200,
+"7b91406972"
 ],
 "st/tanglewood-ceres-2": [
-30410,
-"b1438509fd"
+31730,
+"96a81fe1be"
 ],
 "st/tanglewood-ceres-3": [
-7370,
-"81219e8069"
+7990,
+"3cb5b6a3f2"
 ],
 "st/tanglewood-labyrinth-0": [
-28970,
-"3ed5a819f5"
+33100,
+"7f8ec3d5e5"
 ],
 "st/tanglewood-labyrinth-1": [
-20400,
-"bdff949214"
+24550,
+"62284d7cce"
 ],
 "st/tanglewood-labyrinth-2": [
-25730,
-"6d6a94047d"
+28200,
+"60fa177f52"
 ],
 "st/tanglewood-labyrinth-3": [
-33310,
-"cddf51d115"
+38900,
+"96e74e3874"
 ],
 "st/tanglewood-labyrinth-4": [
-12550,
-"b69a4a0114"
+12190,
+"8c557bd103"
 ],
 "st/tomsawyer-fence-0": [
-43870,
-"135fedf8bc"
+51380,
+"0cbfdb2a3c"
 ],
 "st/tomsawyer-fence-1": [
-24620,
-"ac6e7b8261"
+28340,
+"7138773ada"
 ],
 "st/tomsawyer-fence-2": [
-30000,
-"dab131a9e2"
+31440,
+"7a83ba9470"
 ],
 "st/tomsawyer-fence-3": [
-27100,
-"5adc917a42"
+29590,
+"93fbcdb0b4"
 ],
 "st/tomsawyer-fence-4": [
-22750,
-"8a06149201"
+24190,
+"f35e204c3a"
 ],
 "st/treasure-benbow-0": [
-25990,
-"05933bf4d7"
+22060,
+"614c380f10"
 ],
 "st/treasure-benbow-1": [
-35860,
-"8f804c8eeb"
+44420,
+"733ca5ecd9"
 ],
 "st/treasure-benbow-2": [
-30140,
-"38d5750038"
+33460,
+"22f3b418b0"
 ],
 "st/treasure-benbow-3": [
-32210,
-"1b1a357dbc"
+34630,
+"ddc884f880"
 ],
 "st/velveteen-real-0": [
-31870,
-"b8de4e1c7d"
+38140,
+"9e2861a7d7"
 ],
 "st/velveteen-real-1": [
-22060,
-"371e030b19"
+25180,
+"21e551f498"
 ],
 "st/velveteen-real-2": [
-14330,
-"a4b2b0f4b0"
+14950,
+"2583a35162"
 ],
 "st/velveteen-real-3": [
-35780,
-"4fa5369864"
+41740,
+"70ff71a165"
 ],
 "st/walden-woods-0": [
-27720,
-"ebeaf3cdb3"
+31180,
+"bbfc1a2fb5"
 ],
 "st/walden-woods-1": [
-17230,
-"2da976ac5a"
+21380,
+"06a7338e5f"
 ],
 "st/walden-woods-2": [
-18000,
-"30175682b5"
+20470,
+"b8bb387556"
 ],
 "st/walden-woods-3": [
-26760,
-"0c0702d946"
+29300,
+"3bd25ee12a"
 ],
 "st/walden-woods-4": [
-12670,
-"9957d98dc7"
+13440,
+"c891a41959"
 ],
 "st/wilde-selfish-giant-0": [
-35180,
-"ef2da48771"
+36410,
+"8afee27c1d"
 ],
 "st/wilde-selfish-giant-1": [
-19780,
-"f6b2ead8e9"
+22490,
+"143363aac3"
 ],
 "st/wilde-selfish-giant-2": [
-23520,
-"e89ffc22a0"
+25250,
+"8f83240f79"
 ],
 "st/wilde-selfish-giant-3": [
-15650,
-"bbb9b902fd"
+16680,
+"9507e1abbd"
 ],
 "st/wilde-selfish-giant-4": [
-27170,
-"a5559ad205"
+28610,
+"f0b62473d0"
 ],
 "st/wind-boats-0": [
-9360,
-"5272873113"
+11710,
+"e9144ad283"
 ],
 "st/wind-boats-1": [
-32830,
-"ba3bf14945"
+41180,
+"0b1b33f881"
 ],
 "st/wind-boats-2": [
-14810,
-"62e80e6859"
+18000,
+"8d9c61fcc3"
 ],
 "st/wind-boats-3": [
-29230,
-"63be4348f1"
+33460,
+"b50296a814"
 ],
 "st/wind-boats-4": [
-11780,
-"f7ccb67540"
+12480,
+"f935f6acf8"
 ],
 "st/wonderbook-atlas-0": [
-36410,
-"8426407f75"
+40080,
+"fd5924cc84"
 ],
 "st/wonderbook-atlas-1": [
-32980,
-"5029c52ca8"
+38500,
+"7e746b3ae3"
 ],
 "st/wonderbook-atlas-2": [
-30140,
-"b3cd3160f5"
+34560,
+"6e57925a6d"
 ],
 "st/wonderbook-atlas-3": [
-23710,
-"c15f308ea1"
+26280,
+"9b27ff8721"
 ],
 "st/wonderbook-midas-0": [
-36890,
-"e872a5dbb1"
+40150,
+"37e659ab2f"
 ],
 "st/wonderbook-midas-1": [
-37030,
-"a1d2e2899b"
+40820,
+"483abd4eee"
 ],
 "st/wonderbook-midas-2": [
-19990,
-"ce035651eb"
+21940,
+"ab3993c92e"
 ],
 "st/wonderbook-midas-3": [
-12670,
-"adc09d7e51"
+11780,
+"54ab9b58b8"
 ],
 "st/wonderbook-pandora-0": [
-26830,
-"7f8ef7df04"
+30000,
+"08c025f998"
 ],
 "st/wonderbook-pandora-1": [
-30480,
-"61111a3167"
+34080,
+"6fc74c2979"
 ],
 "st/wonderbook-pandora-2": [
-21500,
-"0db1f08712"
+24340,
+"8dfa85c9bd"
 ],
 "st/wonderbook-pandora-3": [
-22340,
-"8e9ca2701a"
+26690,
+"beba919a24"
 ],
 "st/wordsworth-daffodils-0": [
-11380,
-"08542ffe5c"
+14260,
+"750e1f8639"
 ],
 "st/wordsworth-daffodils-1": [
-11500,
-"4b9be34044"
+13370,
+"3b22952273"
 ],
 "st/wordsworth-daffodils-2": [
-10900,
-"88e8fc3b4a"
+14140,
+"74ed0528ad"
 ],
 "st/wordsworth-reaper-0": [
-15310,
-"4c92ed577c"
+18120,
+"afde1a3cbc"
 ],
 "st/wordsworth-reaper-1": [
-14470,
-"8232a93e9b"
+17230,
+"4c051e3c86"
 ],
 "st/wordsworth-reaper-2": [
-13780,
-"aae5aec4c5"
+20280,
+"6c74735d0a"
 ],
 "st/wordsworth-reaper-3": [
-14260,
-"87a8d25be4"
+18120,
+"54b668c18f"
 ],
 "stop/la1-origin-learn": [
-11230,
-"50a638c762"
+13920,
+"d355037d62"
 ],
 "stop/la1-origin-story": [
-6670,
-"35ce9b32b8"
+8260,
+"93a6d15f88"
 ],
 "stop/la10-indian-learn": [
-25370,
-"0812743ce3"
+30700,
+"6fe92e4a7e"
 ],
 "stop/la10-indian-story": [
-11300,
-"98a3b71fd9"
+13440,
+"38d96e9eb1"
 ],
 "stop/la10-world-learn": [
-18890,
-"2ce80ad420"
+21790,
+"aa2c791b67"
 ],
 "stop/la10-world-story": [
-10820,
-"034d35e21c"
+13370,
+"28dac63fae"
 ],
 "stop/la2-india-learn": [
-13780,
-"c9e8bfa2d9"
+15020,
+"86a5480fba"
 ],
 "stop/la2-india-story": [
-12600,
-"1e55dca3c9"
+14950,
+"e5c4fc715c"
 ],
 "stop/la2-world-learn": [
-11500,
-"8f1136f740"
+12550,
+"d82e942bc6"
 ],
 "stop/la2-world-story": [
-10200,
-"921f71ae6f"
+13660,
+"484c3e0a23"
 ],
 "stop/la3-old-english-learn": [
-25730,
-"b60acce08b"
+32540,
+"21c0cec52c"
 ],
 "stop/la3-old-english-story": [
-11380,
-"f7a12bca15"
+13150,
+"d021859a59"
 ],
 "stop/la3-print-learn": [
-32420,
-"2ea577f61b"
+36700,
+"69b9864e88"
 ],
 "stop/la3-print-story": [
-13850,
-"3331ab176d"
+15360,
+"7a625afcc4"
 ],
 "stop/la4-shakespeare-learn": [
-18740,
-"4e093d6192"
+21580,
+"31e3c0d015"
 ],
 "stop/la4-shakespeare-story": [
-11090,
-"c2479bce03"
+13510,
+"72abc213c6"
 ],
 "stop/la5-fables-learn": [
-12000,
-"935e424057"
+13150,
+"cec5b7a418"
 ],
 "stop/la5-fables-story": [
-11780,
-"63748106a8"
+12740,
+"1feffd0a8c"
 ],
 "stop/la5-myths-learn": [
-14690,
-"53bccc73ea"
+17160,
+"a0485730a8"
 ],
 "stop/la5-myths-story": [
-8880,
-"fdabe1f204"
+11570,
+"60bf8b6a00"
 ],
 "stop/la6-dialect-learn": [
-26540,
-"8d672ef536"
+30000,
+"b632438861"
 ],
 "stop/la6-dialect-story": [
-13510,
-"89f2ed2f8c"
+14950,
+"5d7af40629"
 ],
 "stop/la6-register-learn": [
-16340,
-"176d90ccb0"
+18000,
+"1a2f7bac28"
 ],
 "stop/la6-register-story": [
-12410,
-"43b4207b91"
+13780,
+"16f82ff91b"
 ],
 "stop/la7-antithesis-learn": [
-17520,
-"46890f3aa9"
+18820,
+"e50098a88a"
 ],
 "stop/la7-antithesis-story": [
-11930,
-"ad886bed6f"
+17160,
+"20ea0ec79b"
 ],
 "stop/la7-devices-learn": [
-21100,
-"41d552aa92"
+21500,
+"a731611d2b"
 ],
 "stop/la7-devices-story": [
-11230,
-"a1f6d0fd96"
+14210,
+"f8483d5690"
 ],
 "stop/la8-concise-learn": [
-13440,
-"c0622cdbe2"
+16460,
+"517c1ef916"
 ],
 "stop/la8-concise-story": [
-10610,
-"94e3ca6937"
+11640,
+"ac5fcbb8c3"
 ],
 "stop/la8-modifiers-learn": [
-20830,
-"be774e0cb5"
+24140,
+"ea5dd6e7f4"
 ],
 "stop/la8-modifiers-story": [
-9290,
-"308141c2c2"
+11570,
+"8374bff886"
 ],
 "stop/la9-pentameter-learn": [
-28610,
-"9301524c83"
+30410,
+"3353a33f4a"
 ],
 "stop/la9-pentameter-story": [
-11500,
-"1a3e37ee77"
+13510,
+"a3ff4a919e"
 ],
 "stop/la9-stress-learn": [
-15240,
-"98cf088988"
+21940,
+"ab37252851"
 ],
 "stop/la9-stress-story": [
-11500,
-"09d03b90e7"
+16820,
+"6e261508dc"
 ],
 "stop/li1-problem-learn": [
-14810,
-"baa964c40d"
+21650,
+"70fa281592"
 ],
 "stop/li1-problem-story": [
-8260,
-"28b3228b1a"
+11230,
+"ec09eb5a2d"
 ],
 "stop/li1-who-where-learn": [
-15360,
-"d125a792ff"
+18120,
+"b25b54c2b0"
 ],
 "stop/li1-who-where-story": [
-8950,
-"97a2a7e6a1"
+10610,
+"2ba86dc2d3"
 ],
 "stop/li10-case-learn": [
-12050,
-"1f182e768e"
+13920,
+"4ab046ed09"
 ],
 "stop/li10-case-story": [
-7630,
-"d7e40b31b4"
+9020,
+"d572d91940"
 ],
 "stop/li2-traits-learn": [
-18410,
-"a808e7aa34"
+20760,
+"9f8b412028"
 ],
 "stop/li2-traits-story": [
-9020,
-"68dae60c8a"
+10340,
+"934c832349"
 ],
 "stop/li2-wants-learn": [
-15240,
-"053322c417"
+17230,
+"ca1e09243d"
 ],
 "stop/li2-wants-story": [
-7990,
-"f5a56865ff"
+10610,
+"d9d9ba64a1"
 ],
 "stop/li3-mood-learn": [
-16129,
-"bf99a098e1"
+20400,
+"f1ab9ec07a"
 ],
 "stop/li3-mood-story": [
-9580,
-"a9ef712339"
+12550,
+"6e72043c89"
 ],
 "stop/li4-theme-learn": [
-18120,
-"3d95b64a52"
+22420,
+"71e6a21189"
 ],
 "stop/li4-theme-story": [
-10340,
-"45410c77c9"
+9650,
+"340377a785"
 ],
 "stop/li5-simile-learn": [
-20140,
-"bede159ee5"
+26620,
+"acf5a1e94e"
 ],
 "stop/li5-simile-story": [
-9980,
-"dec073ac81"
+13100,
+"bfcc51e2a5"
 ],
 "stop/li5-sound-learn": [
-18480,
-"907493aed4"
+22060,
+"82b38c96b2"
 ],
 "stop/li5-sound-story": [
-10200,
-"0f34818795"
+12410,
+"23aa90a79e"
 ],
 "stop/li6-form-learn": [
-26280,
-"07aab295d6"
+31100,
+"ada7894e7b"
 ],
 "stop/li6-form-story": [
-11020,
-"697d2b572d"
+14060,
+"d81bd6dc9a"
 ],
 "stop/li7-genre-learn": [
-23710,
-"9977780da5"
+27380,
+"0174a910c5"
 ],
 "stop/li7-genre-story": [
-10750,
-"0949e042a2"
+11230,
+"1f7c1f0bcc"
 ],
 "stop/li8-periods-learn": [
-30620,
-"4c2d9c4aae"
+37580,
+"70fe7236dc"
 ],
 "stop/li8-periods-story": [
-8400,
-"0ab762d766"
+9910,
+"4af18a505b"
 ],
 "stop/li9-compare-learn": [
-16340,
-"1a3fccc781"
+19220,
+"acaffe86a5"
 ],
 "stop/li9-compare-story": [
-8690,
-"6d86001cd8"
+11500,
+"face6641ea"
 ],
 "stop/s1-adj-learn": [
-6820,
-"286b3190fb"
+7700,
+"857a9862fe"
 ],
 "stop/s1-adj-story": [
-5570,
-"3bc0bd7250"
+7300,
+"ad844c051b"
 ],
 "stop/s1-more-learn": [
-19030,
-"f2cf47da5c"
+24190,
+"26d11898e1"
 ],
 "stop/s1-more-story": [
-9100,
-"e982d43914"
+9980,
+"20aead12a9"
 ],
 "stop/s1-noun-learn": [
-10900,
-"3956bda27d"
+12190,
+"dd7b37dcec"
 ],
 "stop/s1-noun-story": [
-5570,
-"39631e5140"
+7030,
+"555e9d825e"
 ],
 "stop/s1-verb-learn": [
-7920,
-"a3bb485c3e"
+9430,
+"20cd158753"
 ],
 "stop/s1-verb-story": [
-5090,
-"cf8bd74524"
+5780,
+"553a48e8bb"
 ],
 "stop/s10-check-learn": [
-19990,
-"4459ba1998"
+26280,
+"5581c3efbe"
 ],
 "stop/s10-check-story": [
-9720,
-"12f415ebac"
+9100,
+"ba6bf97b15"
 ],
 "stop/s10-meet-learn": [
-19100,
-"cb31e95362"
+22540,
+"aff671e6a2"
 ],
 "stop/s10-meet-story": [
-11020,
-"3a5388a3e3"
+12740,
+"3ecec0aaf1"
 ],
 "stop/s2-agree-learn": [
-27460,
-"10977be359"
+31510,
+"fdad5b5ef2"
 ],
 "stop/s2-agree-story": [
-9240,
-"2daab7e642"
+10060,
+"3b81ff96a5"
 ],
 "stop/s2-split-learn": [
-8880,
-"b5aca77cb9"
+11090,
+"f2d044ccf6"
 ],
 "stop/s2-split-story": [
-4270,
-"0c9412cce1"
+5710,
+"1ffe91dcf6"
 ],
 "stop/s2-subject-learn": [
-6960,
-"c5e33e30cf"
+6820,
+"7408f615fd"
 ],
 "stop/s2-subject-story": [
-4270,
-"f3c3c37aaa"
+4750,
+"c576f37298"
 ],
 "stop/s2-tense-learn": [
-23090,
-"886dcfe811"
+31320,
+"a85a4ffdc5"
 ],
 "stop/s2-tense-story": [
-10270,
-"c83eda5a1c"
+12740,
+"24732ef9e8"
 ],
 "stop/s3-main-learn": [
-8330,
-"736495f905"
+10340,
+"caaaaec5a2"
 ],
 "stop/s3-main-story": [
-5930,
-"a689097050"
+7030,
+"cfc4e67b63"
 ],
 "stop/s3-pc-learn": [
-8140,
-"7cc6ce8d20"
+9430,
+"560539d054"
 ],
 "stop/s3-pc-story": [
-5380,
-"d42e200791"
+5090,
+"7b8b850b15"
 ],
 "stop/s4-combine-learn": [
-8540,
-"bf6e44f36b"
+10610,
+"441658dc32"
 ],
 "stop/s4-combine-story": [
 4270,
-"5b55d7e525"
+"ed57f5c9af"
 ],
 "stop/s4-conj-learn": [
-9980,
-"3d628728f5"
+12740,
+"4f6d07acec"
 ],
 "stop/s4-conj-story": [
-5570,
-"eb85aa800f"
+5710,
+"19fe5ea3a8"
 ],
 "stop/s5-apostrophe-learn": [
-24140,
-"9c6a139874"
+31250,
+"0926437ae8"
 ],
 "stop/s5-apostrophe-story": [
-9840,
-"77b0e04add"
+10750,
+"3354ea4531"
 ],
 "stop/s5-caps-learn": [
-8470,
-"aa4db981fc"
+10200,
+"1e937038b1"
 ],
 "stop/s5-caps-story": [
-4820,
-"387171aafa"
+4870,
+"adac717c3a"
 ],
 "stop/s5-comma-learn": [
-7920,
-"ea48b4040b"
+10540,
+"beccc60664"
 ],
 "stop/s5-comma-story": [
-3650,
-"db33f67c70"
+4270,
+"dca968cd4c"
 ],
 "stop/s5-end-learn": [
-7780,
-"77acd96f62"
+9020,
+"dd3308526e"
 ],
 "stop/s5-end-story": [
-4320,
-"1bdda15ca9"
+5090,
+"bbe79c6ac8"
 ],
 "stop/s5-order-learn": [
-8060,
-"0fd1bdcefb"
+9500,
+"77e9f2911d"
 ],
 "stop/s5-order-story": [
-4460,
-"f5e5187edf"
+4610,
+"4156e7155b"
 ],
 "stop/s5-speech-learn": [
-22270,
-"259600de88"
+24620,
+"f193ffdc57"
 ],
 "stop/s5-speech-story": [
-9650,
-"b840863ef1"
+8740,
+"9129c50738"
 ],
 "stop/s6-fold-learn": [
-17090,
-"20dd93ca43"
+19990,
+"56d6e79b64"
 ],
 "stop/s6-fold-story": [
-11090,
-"ac44924e63"
+13150,
+"91aed53cff"
 ],
 "stop/s6-join-learn": [
-17380,
-"6e768f6fd2"
+22340,
+"88a5447646"
 ],
 "stop/s6-join-story": [
-11230,
-"bd938e8192"
+13150,
+"1d44c485a2"
 ],
 "stop/s7-name-learn": [
-19220,
-"fe416e9eb6"
+22340,
+"54eed0aa46"
 ],
 "stop/s7-name-story": [
-10270,
-"414e82e0a5"
+10610,
+"4158e15ee5"
 ],
 "stop/s7-vary-learn": [
-14470,
-"25ee605932"
+18120,
+"bbdb7a787c"
 ],
 "stop/s7-vary-story": [
-10200,
-"45d7644b7b"
+11020,
+"508b5321de"
 ],
 "stop/s8-fix-learn": [
-16970,
-"4378ecb698"
+18070,
+"e7375901d5"
 ],
 "stop/s8-fix-story": [
-8880,
-"dc94ceb374"
+10540,
+"3c42732137"
 ],
 "stop/s8-spot-learn": [
-13780,
-"b1d4bc3fa9"
+15310,
+"30c4df2bf0"
 ],
 "stop/s8-spot-story": [
-7990,
-"d474129957"
+9020,
+"5859d4f8ac"
 ],
 "stop/s9-effect-learn": [
-17780,
-"e74170027b"
+21860,
+"01e5a71f36"
 ],
 "stop/s9-effect-story": [
-12190,
-"5efc51081a"
+13510,
+"2204ba7eec"
 ],
 "stop/s9-spot-learn": [
-16460,
-"48e49a7187"
+19780,
+"eab358f6a8"
 ],
 "stop/s9-spot-story": [
-10060,
-"1085ac06e3"
+11640,
+"079a316f3e"
 ],
 "stop/sp1-aloud-learn": [
-13700,
-"c96b32d9dd"
+15650,
+"853b56bd26"
 ],
 "stop/sp1-aloud-story": [
-4200,
-"0f7bc3233e"
+4059,
+"7523c29cde"
 ],
 "stop/sp10-debate-learn": [
-11090,
-"f239913331"
+10820,
+"c85a1da7f7"
 ],
 "stop/sp10-debate-story": [
-5160,
-"c08965108c"
+5780,
+"e978fe4617"
 ],
 "stop/sp2-recite-learn": [
-10200,
-"deab3a0426"
+11860,
+"32ac21ed95"
 ],
 "stop/sp2-recite-story": [
-5020,
-"8c2a28ab11"
+6260,
+"f872865234"
 ],
 "stop/sp3-express-learn": [
-16540,
-"c2da82378a"
+18410,
+"d90da21075"
 ],
 "stop/sp3-express-story": [
-4200,
-"7e30f53d82"
+4750,
+"b114154408"
 ],
 "stop/sp4-story-learn": [
-10900,
-"c89254d993"
+11640,
+"75658c587b"
 ],
 "stop/sp4-story-story": [
-4200,
-"3759a22488"
+4270,
+"f78002ff13"
 ],
 "stop/sp5-show-learn": [
-8060,
-"d2221621cc"
+8880,
+"ac2fa8a1f0"
 ],
 "stop/sp5-show-story": [
-5300,
-"65dafff11c"
+7150,
+"c2194eb123"
 ],
 "stop/sp6-minute-learn": [
-11860,
-"5252547d6d"
+13920,
+"316a96bb72"
 ],
 "stop/sp6-minute-story": [
-3980,
-"26014c823e"
+4200,
+"be7af65c91"
 ],
 "stop/sp7-three-learn": [
-12480,
-"c63c77c96d"
+14060,
+"ec25f5ce1f"
 ],
 "stop/sp7-three-story": [
 4540,
-"d4a12d675f"
+"9bce76401b"
 ],
 "stop/sp8-declaim-learn": [
-11300,
-"97f53e438f"
+12190,
+"95de3373a9"
 ],
 "stop/sp8-declaim-story": [
-6260,
-"b15e4ad581"
+6960,
+"a2ddcc3e9b"
 ],
 "stop/sp9-impromptu-learn": [
-9290,
-"3bb4006c0d"
+10750,
+"19c86480b2"
 ],
 "stop/sp9-impromptu-story": [
-3840,
-"7d9eef58fd"
+5090,
+"103b4b2d5e"
 ],
 "stop/w1-build-learn": [
-10940,
-"8ffdae28d1"
+13100,
+"ee45a400bd"
 ],
 "stop/w1-build-story": [
-4750,
-"cc718a9d47"
+6190,
+"90e1ace80f"
 ],
 "stop/w1-odd-learn": [
-8060,
-"5c959804dd"
+9980,
+"c50ce4c98c"
 ],
 "stop/w1-odd-story": [
 5780,
-"3f403a4a43"
+"59e7628b57"
 ],
 "stop/w1-rhyme-learn": [
-9100,
-"00546e352a"
+11710,
+"c4a2f04a59"
 ],
 "stop/w1-rhyme-story": [
-6260,
-"36576676ef"
+7510,
+"490dd7e761"
 ],
 "stop/w10-clues-learn": [
-22610,
-"1960b0fbca"
+27790,
+"654514537f"
 ],
 "stop/w10-clues-story": [
-14210,
-"0f29730219"
+16200,
+"38c5cd4f62"
 ],
 "stop/w10-meanings-learn": [
-20950,
-"7d390bac3e"
+22340,
+"1277726a37"
 ],
 "stop/w10-meanings-story": [
-9580,
-"4c74ead324"
+10820,
+"9e06be6fb8"
 ],
 "stop/w2-meaning-learn": [
-7780,
-"c8068e7282"
+9240,
+"4977da8092"
 ],
 "stop/w2-meaning-story": [
-5570,
-"e4059fe91e"
+7510,
+"efefa1a854"
 ],
 "stop/w2-opposite-learn": [
-21240,
-"68b23376be"
+24550,
+"27e21cefa9"
 ],
 "stop/w2-opposite-story": [
-12000,
-"bc1d7e8a40"
+16270,
+"7e9d8ec702"
 ],
 "stop/w2-word-learn": [
-6670,
-"e36e0ff579"
+7440,
+"3cc964f539"
 ],
 "stop/w2-word-story": [
-3170,
-"61b1c41215"
+4130,
+"d4ebdc3467"
 ],
 "stop/w3-make-learn": [
-7990,
-"4e0020c105"
+11640,
+"e1894c1a6d"
 ],
 "stop/w3-make-story": [
-4200,
-"a8166a1dc0"
+5020,
+"b129fdc857"
 ],
 "stop/w3-meaning-learn": [
-9290,
-"5100d61241"
+10900,
+"5732e21d5b"
 ],
 "stop/w3-meaning-story": [
-5860,
-"b1061a77f7"
+7990,
+"97c742f43d"
 ],
 "stop/w4-make-learn": [
-8400,
-"b011757de8"
+10540,
+"9a709862d1"
 ],
 "stop/w4-make-story": [
-4200,
-"de070e3017"
+5500,
+"07f44144d9"
 ],
 "stop/w4-meaning-learn": [
-13660,
-"5724c41198"
+17450,
+"effac73a34"
 ],
 "stop/w4-meaning-story": [
-5570,
-"d6a4815cb3"
+8810,
+"f30686998e"
 ],
 "stop/w5-find-learn": [
-7990,
-"a7cab83ce0"
+9100,
+"c26c8eeab1"
 ],
 "stop/w5-find-story": [
-4460,
-"a67fa468c8"
+4870,
+"cf54baa53e"
 ],
 "stop/w5-root-learn": [
-7990,
-"c72a0e0222"
+9720,
+"0df5ca6036"
 ],
 "stop/w5-root-story": [
-6340,
-"f347fb145f"
+7440,
+"a588a4e15e"
 ],
 "stop/w6-build-learn": [
-18000,
-"e8bc8323a5"
+21650,
+"e4c40cf0c6"
 ],
 "stop/w6-build-story": [
-9430,
-"78d8864a68"
+8470,
+"6b30fa1666"
 ],
 "stop/w6-families-learn": [
-21940,
-"1abdf942d5"
+28490,
+"b1246e9b84"
 ],
 "stop/w6-families-story": [
-11160,
-"3871320131"
+11710,
+"cae206514b"
 ],
 "stop/w7-myth-heroes-learn": [
-12960,
-"c79ff3286c"
+14880,
+"f27c0acd87"
 ],
 "stop/w7-myth-heroes-story": [
-10460,
-"f9588ff338"
+11230,
+"586d18f65a"
 ],
 "stop/w7-myth-names-learn": [
-12960,
-"f55f6305cf"
+12820,
+"bef68c9253"
 ],
 "stop/w7-myth-names-story": [
-10270,
-"b772592e2b"
+10610,
+"d341a23733"
 ],
 "stop/w7-myth-story-inside-learn": [
-16750,
-"e81bec2be1"
+18960,
+"0f52b6e11b"
 ],
 "stop/w7-myth-story-inside-story": [
-9910,
-"88d95446d6"
+11160,
+"791b1e626d"
 ],
 "stop/w8-formal-learn": [
-17930,
-"8a9b3020ea"
+21980,
+"daddff65a9"
 ],
 "stop/w8-formal-story": [
-10940,
-"a339f886ab"
+12670,
+"598dfa89c6"
 ],
 "stop/w8-purpose-learn": [
-21500,
-"43bccf6cc6"
+29520,
+"e50bf39d38"
 ],
 "stop/w8-purpose-story": [
-10060,
-"45fdf6ef3f"
+10610,
+"8b44688dde"
 ],
 "stop/w9-feeling-learn": [
-14950,
-"c46d340a05"
+18670,
+"fc82e9099e"
 ],
 "stop/w9-feeling-story": [
-11020,
-"65c57a9ecc"
+11780,
+"c034519d45"
 ],
 "stop/w9-strength-learn": [
-17710,
-"54b8039e56"
+24140,
+"a2a738c975"
 ],
 "stop/w9-strength-story": [
-12600,
-"09d182a036"
+14810,
+"56968d3a5e"
 ],
 "stop/wr1-copy-learn": [
-9910,
-"9e52a42760"
+10750,
+"8b284fe839"
 ],
 "stop/wr1-copy-story": [
-5930,
-"c3a7271682"
+5980,
+"bd0d94a146"
 ],
 "stop/wr10-model-learn": [
-11020,
-"28381d6f40"
+10750,
+"141d5ecba8"
 ],
 "stop/wr10-model-story": [
-5380,
-"07b31e1f1c"
+7220,
+"a9b2fee0ad"
 ],
 "stop/wr2-dict-learn": [
-13700,
-"15c41cec6d"
+16540,
+"8785f65c5b"
 ],
 "stop/wr2-dict-story": [
-5230,
-"98cdc112a6"
+7080,
+"37b0630864"
 ],
 "stop/wr3-imitate-learn": [
-11380,
-"b0990a02ca"
+16340,
+"71f594502c"
 ],
 "stop/wr3-imitate-story": [
-6530,
-"274cf52063"
+7370,
+"8ac80974d0"
 ],
 "stop/wr4-para-learn": [
-9430,
-"a5c356ce9f"
+9720,
+"c8a15565ae"
 ],
 "stop/wr4-para-story": [
-5500,
-"baf76d3afd"
+5300,
+"d2ca6f98a1"
 ],
 "stop/wr5-retell-learn": [
-13150,
-"30677e4905"
+14760,
+"e544f2ea1b"
 ],
 "stop/wr5-retell-story": [
-5090,
-"31516219c5"
+4130,
+"84a78c8bc3"
 ],
 "stop/wr6-describe-learn": [
-13440,
-"bebfd9af5c"
+18550,
+"497a8e5e22"
 ],
 "stop/wr6-describe-story": [
-4610,
-"ff9d13b9df"
+5300,
+"dfb8a2dea3"
 ],
 "stop/wr6-poem-learn": [
-24960,
-"d9594782ba"
+29160,
+"49e22edc44"
 ],
 "stop/wr6-poem-story": [
-10900,
-"39f7d7a7e5"
+11930,
+"376bd6e09a"
 ],
 "stop/wr7-persuade-learn": [
-9650,
-"ef911b45bd"
+11230,
+"da63f1b35f"
 ],
 "stop/wr7-persuade-story": [
-5570,
-"0c36a61549"
+6190,
+"b97388b590"
 ],
 "stop/wr8-letter-learn": [
-11230,
-"b1f46090ec"
+13660,
+"188c5dc1b9"
 ],
 "stop/wr8-letter-story": [
-5300,
-"0ab0fc947e"
+6050,
+"b8cc86ea00"
 ],
 "stop/wr9-essay-learn": [
-9720,
-"cc0c9f0460"
+12260,
+"68bee4c424"
 ],
 "stop/wr9-essay-story": [
-5420,
-"00ca8712bd"
+7030,
+"9dd444b1b5"
 ]
 }
