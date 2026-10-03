@@ -1,0 +1,6 @@
+/* feed.css — the two lines an English feed card adds to the family's card (bizzing-feed.css, never
+   restyled): where the card lives, and where it is taught. Tokens only, so the night holds. */
+.bzf-where { margin: 10px 0 -4px; font: 800 11.5px var(--bz-body); letter-spacing: .08em; text-transform: uppercase; color: var(--bz-muted); }
+.bzf-more { margin: 8px 0 0; font-size: 13.5px; color: var(--bz-muted); line-height: 1.45; }
+/* a button names the specific place, so its words may run to two lines on a phone */
+.bzf-row .bz-btn { height: auto; min-height: 44px; padding-top: 10px; padding-bottom: 10px; white-space: normal; max-width: 100%; box-sizing: border-box; line-height: 1.3; }

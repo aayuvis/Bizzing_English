@@ -30,6 +30,26 @@
 import { rng, shuffle, sample, permute, hash } from './rand.js';
 import { MAIN_CLAUSE, COMMAS } from './data/sentences.js';
 
+/* The games as the Play page lists them: a world (whose painting is the board), what each practises,
+   a three-second how-to, its keys, and what each of its five levels means. */
+const LV = (a) => Object.fromEntries(a.map((t, i) => [i + 1, t]));
+export const GAMES = {
+  builder: { name: 'Sentence Builder', world: 'scriptorium', music: 'games-sentence', timed: true, practises: 'main and dependent clauses, in both orders', how: 'Tap the three parts in an order that makes a sentence. Build it the other way round next time for a bonus.', keys: '1 2 3 pick · Backspace undo',
+    levels: LV(['short sentences, first-band words', 'longer clauses from the second band', 'every band, starting a little further along', 'longer sentences from the start', 'the longest clauses first']) },
+  rush: { name: 'Punctuation Rush', world: 'study', music: 'games-sentence', timed: true, practises: 'where commas go — lists, openings, names and asides', how: 'Tap every gap that needs a comma, then Enter. Right commas score; wrong ones cost a point.', keys: '← → move · Space comma · Enter next',
+    levels: LV(['one comma a sentence', 'one comma, then a few with two', 'one comma, then lists and asides', 'mostly two commas or more', 'lists and asides first']) },
+  figure: { name: 'Figure Hunt', world: 'lakeside', music: 'games-word', practises: 'similes, metaphors, personification and alliteration in real lines', how: 'Read the line from a classic. Which figure of speech is it — or is it none?', keys: '1–5 choose · Enter next',
+    levels: LV(['simile, alliteration or none', 'metaphor joins in', 'all five, evenly', 'more metaphor and personification', 'the subtle ones, mostly']) },
+  who: { name: 'Who Said It?', world: 'playhouse', music: 'games-reading', practises: 'famous lines from the books in the Library', how: 'Read the line. Who said it — or wrote it?', keys: '1–4 choose · Enter next',
+    levels: LV(['famous lines from children’s books', 'poems, plays and novels join in', 'every shelf; rivals from the same shelf', 'rivals from the same author’s books', 'poems, plays, essays and speeches']) },
+  plot: { name: 'Plot Line', world: 'garden', music: 'games-reading', practises: 'the order of events in a story', how: 'Each card opens a scene of one story. Tap them in the order they happen.', keys: '1–5 place · ← → choose · Enter place · Backspace undo',
+    levels: LV(['four scenes from first stories', 'four scenes, longer stories', 'five scenes', 'five scenes from the oldest books', 'five scenes, the hardest stories']) },
+  root: { name: 'Root Forge', world: 'scriptorium', music: 'games-word', practises: 'prefixes, suffixes and roots that make real words', how: 'One word part and four pieces. Forge the one that makes a real word.', keys: '1–4 forge · Enter next',
+    levels: LV(['first prefixes and endings', 'more prefixes and endings', 'every prefix and ending', 'Latin roots join in', 'mostly roots and harder parts']) },
+  duel: { name: 'Rhetoric Duel', world: 'forum', music: 'games-sentence', practises: 'why a sentence is strong — the devices great writers use', how: 'Two versions of one sentence. Pick the stronger — then say why. The reason scores.', keys: '1 2 pick · 1–4 why · Enter next',
+    levels: LV(['alliteration and questions', 'groups of three and repeated openings', 'every device', 'every device, longer lines', 'antithesis and the hardest lines']) },
+};
+
 export const ROUND_MS = 60000;
 export const MAX_LEVEL = 5;
 const SUBS = /^(when|because|if|although|after|before|while|until|since|as|unless|once|whenever|though)\b/i;

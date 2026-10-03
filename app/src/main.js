@@ -22,6 +22,7 @@ import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './vie
 import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.js';
 import { applyExtras } from './extras.js';
 import { openContest, contestView, CONTEST_ACTIONS } from './views/contest.js';
+import { openFeed, feedView } from './views/feed-view.js';
 import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
@@ -44,8 +45,9 @@ const TABS = [
   { id: 'library', label: 'Library', icon: 'book', href: '#/library', color: '#047857' },
   { id: 'stage', label: 'Stage', icon: 'lectern', href: '#/stage', color: '#B91C1C' },
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
+  { id: 'feed', label: 'My Feed', icon: 'feed', href: '#/feed', color: '#6C4FE0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', desk: 'atlas', play: 'play' };
+const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', desk: 'atlas', play: 'play', feed: 'feed' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -86,6 +88,7 @@ async function route() {
   else if (r.name === 'read') await openRead(r.parts[1]);
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
   else if (r.name === 'play' && r.parts[1]) openGame(r.parts[1]);
+  else if (r.name === 'feed') { S.run = null; await openFeed(); }
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
   render(); window.scrollTo(0, 0);
@@ -111,6 +114,7 @@ function screen() {
     case 'desk': return p[2] === 'done' ? deskDoneView(p[1]) : deskView();
     case 'recordings': return recordingsView();
     case 'play': return p[1] ? gameView() : playView();
+    case 'feed': return feedView();
     case 'me': return meView();
     case 'medals': return medalsView();
     case 'certificate': return certificateView(p.slice(1).join('/'));

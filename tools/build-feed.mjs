@@ -55,6 +55,7 @@ const work = (id) => WORKS.find((w) => w.id === id);
 export const workOk = (w) => !!w && !w.needsReview && !['us', 'uk', 'in'].some((k) => w.rights?.[k] === 'check');
 export const quotable = (w) => workOk(w) && cleared(w) && w.held;
 const strandOf = (id) => STRANDS.find((s) => s.id === id);
+const stop = (s) => (/[.?!…”]$/.test(s) ? s : s + '.');        // a sentence ends once: "Which word means…?" takes no full stop
 export const placeName = (sid, n) => `${strandOf(sid).title} ${n} · ${levelOfStrand(sid, n)?.title || ''}`.replace(/ · $/, '');
 const bandsFrom = (b) => (b ? [1, 2, 3].filter((x) => x >= b) : [1, 2, 3]);
 export const stopRoute = (st) => (st.kind === 'desk' ? `#/desk/${st.id}` : st.kind === 'speak' ? `#/stage/${st.id}` : st.kind === 'readAloud' ? '#/stage/aloud' : `#/stop/${st.id}`);
@@ -86,7 +87,7 @@ export function cut() {
     const where = placeName(st.strand, st.level), bands = bandsFrom(st.band), route = stopRoute(st);
     const cta = st.kind === 'desk' ? `${st.title} at the writing desk` : st.kind === 'speak' || st.kind === 'readAloud' ? `${st.title} on the Stage` : `${st.title} on the ${strandOf(st.strand).title} road`;
     const base = { level: st.level, bands, topics: [`stop:${st.id}`, `strand:${st.strand}`], key: `stop:${st.id}`, where, route, cta };
-    const taught = `Taught at: ${where} — ${st.title}.`;
+    const taught = stop(`Taught at: ${where} — ${st.title}`);
     if (st.learn?.why) add({ ...base, id: `${st.id}~idea`, kind: 'lesson', src: `stop:${st.id}#why`, title: st.title, body: st.learn.why, more: st.iCan });
     if (st.story) add({ ...base, id: `${st.id}~story`, kind: 'story', src: `stop:${st.id}#story`, title: st.title, body: st.story, more: taught });
     if (st.learn?.example?.length) add({ ...base, id: `${st.id}~eg`, kind: 'example', src: `stop:${st.id}#example`, title: `${st.title}: for example`, body: st.learn.example.join(' · '), more: taught });
@@ -125,7 +126,7 @@ export function cut() {
     if (m.needsReview || !p || p.needsReview || !TEXTS[p.id] || !quotable(w)) continue;
     add({ id: `myth~${m.word}`, kind: 'myth', src: `myth:${m.word}`, level: 7, bands: bandsFrom(p.band), topics: [`stop:rd-${p.id}`, 'strand:word', `work:${m.work}`],
       where: placeName('word', 7), title: `${m.word} — from ${m.from}`, body: `“${m.quote}”`, cite: m.work, quote: m.quote, source: `${w.title} — ${w.author}`,
-      more: `Its meaning: ${m.meaning}. Told in “${p.title}”.`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
+      more: `Its meaning: ${stop(m.meaning)} Told in “${p.title}”.`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
   }
 
   /* 3. the Library's passages: the story, how it begins, its own questions */
@@ -134,7 +135,7 @@ export function cut() {
     if (!T || p.needsReview || !quotable(w)) continue;
     const L = levelOf(p), where = `${placeName('reading', L)} · the Library`, bands = bandsFrom(p.band), art = ART.includes(`story/${p.id}`) ? `art/story/${p.id}-card.webp` : undefined;
     const base = { level: L, bands, topics: [`stop:rd-${p.id}`, 'strand:reading', `work:${p.work}`], key: `stop:rd-${p.id}`, where, source: `${w.title} — ${w.author}` };
-    const taught = `Taught at: ${placeName('reading', L)} — “${p.title}”.`;
+    const taught = stop(`Taught at: ${placeName('reading', L)} — “${p.title}”`);
     add({ ...base, id: `rd~${p.id}`, kind: 'tale', src: `passage:${p.id}#hook`, title: p.title, body: p.hook, art, more: taught, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
     const open = opening(T.text);
     if (open) add({ ...base, id: `rd~${p.id}~open`, kind: 'opening', src: `passage:${p.id}#open`, title: `How it begins: ${p.title}`, body: open, cite: p.work, quote: open, more: taught, route: `#/story/${p.id}`, cta: `Hear the rest of “${p.title}”` });
@@ -147,7 +148,7 @@ export function cut() {
       const lw = String(wd).toLowerCase(), e = LEX.words[lw]; if (!e || !e[0]) continue;
       const line = sents.find((x) => x.length <= 300 && new RegExp(`\\b${esc(wd)}\\b`, 'i').test(x)); if (!line) continue;
       add({ ...base, id: `rd~${p.id}~w~${lw}`, kind: 'inline', src: `pword:${p.id}#${lw}`, title: `“${lw}” in ${p.title}`, body: line, cite: p.work, quote: line,
-        more: `Bee’s meaning: ${e[0]}.`, route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
+        more: stop(`Bee’s meaning: ${e[0]}`), route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
     }
   }
 
@@ -159,10 +160,10 @@ export function cut() {
       const full = BOOKDATA[b.id].chapters.find((x) => x.n === c.n) || {}, where = `${placeName('reading', 8)} · ${b.title}`;
       const base = { level: 8, bands: bandsFrom(b.band), topics: [`stop:bk-${b.id}-${c.n}`, 'strand:reading', `work:${b.id}`], key: `stop:bk-${b.id}-${c.n}`, where, source: `${b.title} — ${b.author}` };
       const art = ART.includes(`book/${b.id}-${c.n}`) ? `art/book/${b.id}-${c.n}-card.webp` : undefined, route = `#/whole/${b.id}/${c.n}`, cta = `Chapter ${c.n}: ${c.title}`;
-      const taught = `Taught at: ${b.short}, chapter ${c.n}: ${c.title}.`;
+      const taught = stop(`Taught at: ${b.short}, chapter ${c.n}: ${c.title}`);
       const sofar = c.sofar || full.sofar;
       if (sofar) add({ ...base, id: `bk~${b.id}~${c.n}`, kind: 'chapter', src: `chapter:${b.id}/${c.n}#sofar`, title: `Chapter ${c.n}: ${c.title}`, body: sofar, art, more: taught, route, cta });
-      (c.meet || full.meet || []).forEach((m, i) => add({ ...base, id: `bk~${b.id}~${c.n}~m${i}`, kind: 'person', src: `chapter:${b.id}/${c.n}#meet${i}`, title: m.name, body: m.about, more: `Met in ${b.short}, chapter ${c.n}: ${c.title}.`, route, cta }));
+      (c.meet || full.meet || []).forEach((m, i) => add({ ...base, id: `bk~${b.id}~${c.n}~m${i}`, kind: 'person', src: `chapter:${b.id}/${c.n}#meet${i}`, title: m.name, body: m.about, more: stop(`Met in ${b.short}, chapter ${c.n}: ${c.title}`), route, cta }));
       (c.questions || full.questions || []).forEach((x, i) => add({ ...base, id: `bk~${b.id}~${c.n}~q${i}`, kind: 'question', src: `chapter:${b.id}/${c.n}#q${i}`, title: `${b.short}, chapter ${c.n}`, body: '',
         play: play(x.q, x.right, x.wrong, ''), more: taught, route: `${route}/do`, cta: `The exercises for chapter ${c.n}` }));
       const ev = c.evaluate || full.evaluate;
@@ -190,7 +191,7 @@ export function cut() {
     const w = work(f.work); if (!quotable(w)) return;
     const wrong = KINDS.filter((k) => k !== f.figure), by = teaches('li', f.figure)[0];
     add({ id: `fig~${i}`, kind: 'figure', src: `figure:${i}`, bands: [2, 3], topics: [`work:${f.work}`, 'game:figure'], where: 'Figure Hunt', title: `A line from ${w.title}`, body: f.text, cite: f.work, quote: f.text,
-      source: w.author, play: play('Which figure of speech is this line?', f.figure, wrong, ''), more: by ? `Taught at: ${placeName(by.strand, by.level)} — ${by.title}.` : '', route: '#/play/figure', cta: 'Figure Hunt' });
+      source: w.author, play: play('Which figure of speech is this line?', f.figure, wrong, ''), more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : '', route: '#/play/figure', cta: 'Figure Hunt' });
   });
   /* 8. the great speakers' devices */
   const DEV = [...new Set(RHETORIC.map((r) => r.device))].sort();
@@ -199,7 +200,7 @@ export function cut() {
     const by = teaches('la', r.device)[0]; if (!by) return;
     const wrong = DEV.filter((d) => d !== r.device && !(r.also || []).includes(d)).slice(0, 3);
     add({ id: `rh~${i}`, kind: 'device', src: `rhetoric:${i}`, bands: bandsFrom(by.band), topics: [`stop:${by.id}`, `work:${r.work}`], where: placeName(by.strand, by.level), title: `A line from ${w.title}`, body: r.text, cite: r.work, quote: r.text,
-      source: w.author, play: play('Which device is the speaker using here?', r.device, wrong, ''), more: `Taught at: ${placeName(by.strand, by.level)} — ${by.title}.`, route: stopRoute(by), cta: `${by.title} on the Language road` });
+      source: w.author, play: play('Which device is the speaker using here?', r.device, wrong, ''), more: stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`), route: stopRoute(by), cta: `${by.title} on the Language road` });
   });
   /* 9. Bee's words for the hour */
   for (const [wd, def] of Object.entries(HOUR)) {
@@ -207,7 +208,7 @@ export function cut() {
     add({ id: `hw~${wd}`, kind: 'word', src: `hour:${wd}`, bands: [1, 2, 3], topics: [`word:${wd}`], where: 'A word from the books', title: wd, body: def, source: 'Bizzing Bee’s word list', route: `#/word/${encodeURIComponent(wd)}`, cta: `“${wd}” in the word list` });
   }
   /* 10. the games (their own names and what they practise, read from views/play.js) */
-  for (const g of games()) add({ id: `game~${g.id}`, kind: 'game', src: `game:${g.id}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: 'Play', title: g.name, body: g.how, more: `Practises ${g.practises}.`, route: `#/play/${g.id}`, cta: `Play ${g.name}` });
+  for (const g of games()) add({ id: `game~${g.id}`, kind: 'game', src: `game:${g.id}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: 'Play', title: g.name, body: g.how, more: stop(`Practises ${g.practises}`), route: `#/play/${g.id}`, cta: `Play ${g.name}` });
 
   /* no favourite slot: a card whose right option lands where too many already sit is still kept — the
      engine's order() spreads them; the test holds the whole set to ≤ 35% in any slot */

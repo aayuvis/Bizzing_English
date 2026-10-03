@@ -174,16 +174,25 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await go(page, '#/stage'); await go(page, '#/stage/aloud'); await page.click('[data-act=aloud-start]'); await page.waitForTimeout(800); await go(page, '#/home');
   ok('leaving the Stage mid-reading switches the microphone off', await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
 
-  /* games, both ways */
+  /* games, both ways — all seven, by touch AND by keys, each on its board (plate, framed area, track, avatar, Quill) */
+  const G = () => page.evaluate(() => { const g = window.__bz.S.run.g; return JSON.parse(JSON.stringify({ i: g.i, score: g.score, right: g.right, stage: g.stage, state: g.state, line: g.line, cursor: g.cursor, q: g.rounds?.[g.i] })); });
   await go(page, '#/play/builder'); await page.click('[data-act=game-start]');
+  ok('a game is played on a board: plate, frame, track, avatar and Quill', await page.evaluate(() => { const b = document.querySelector('.gboard'); return !!b && /url\(/.test(b.style.getPropertyValue('--plate')) && !!b.querySelector('.gb-frame') && !!b.querySelector('.gb-time') && !!b.querySelector('.gb-ava') && !!b.querySelector('.gb-quill') && /Level \d/.test(b.textContent); }));
   const play = async (how) => { const t = await page.evaluate(() => window.__bz.S.run.g.cur.tiles.map((x) => x.k)); for (const k of ['sub', 'dep', 'main']) { const i = t.indexOf(k); if (how === 'keys') await page.keyboard.press(String(i + 1)); else await page.click(`[data-act=b-pick][data-arg="${i}"]`); } await page.waitForTimeout(120); };
-  await play('touch'); await play('keys');
+  await play('touch');
+  ok('a right answer moves: the frame pops and "+N" flies up', await page.evaluate(() => !!document.querySelector('.gb-frame.gb-ok') && !!document.querySelector('.gb-fly')));
+  await play('keys');
   ok('Sentence Builder plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.built === 2));
   await go(page, '#/play/figure'); await page.click('[data-act=game-start]');
+  ok('an untimed game shows one pip per item', await page.evaluate(() => document.querySelectorAll('.gb-pips .pip').length === window.__bz.S.run.g.rounds.length));
   const figAns = () => page.evaluate(() => window.__bz.S.run.g.rounds[window.__bz.S.run.g.i].answer);
-  await page.click(`[data-act=fig-pick][data-arg="${await figAns()}"]`); await page.waitForTimeout(1300);
+  await page.click(`[data-act=q-pick][data-arg="${await figAns()}"]`); await page.waitForTimeout(1300);
   await page.keyboard.press(String((await figAns()) + 1)); await page.waitForTimeout(200);
   ok('Figure Hunt plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.score === 2));
+  await page.waitForTimeout(1200); const fw = await figAns(); await page.keyboard.press(String(((fw + 1) % (await G()).q.options.length) + 1)); await page.waitForTimeout(200);
+  ok('a wrong answer shakes, holds and explains on the item', await page.evaluate(() => !!document.querySelector('.gb-frame.gb-no') && !!document.querySelector('.feedback.no [data-act=q-next]')));
+  await page.waitForTimeout(1500); ok('…and is still held a moment later', await page.evaluate(() => !!window.__bz.S.run.g.state && !window.__bz.S.run.g.state.ok));
+  await page.keyboard.press('Enter'); await page.waitForTimeout(150); ok('Enter dismisses it', await page.evaluate(() => !window.__bz.S.run.g.state));
   await go(page, '#/play/rush'); await page.click('[data-act=game-start]');
   const commas = await page.evaluate(() => window.__bz.S.run.g.cur.commas);
   for (const i of commas) await page.click(`[data-act=r-gap][data-arg="${i}"]`); await page.keyboard.press('Enter'); await page.waitForTimeout(150);
@@ -193,9 +202,36 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await page.keyboard.press('Enter'); await page.waitForTimeout(150);
   ok('Punctuation Rush plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.clean === 2));
   await go(page, '#/play/who'); await page.click('[data-act=game-start]');
-  let a = await page.evaluate(() => window.__bz.S.run.g.rounds[0].answer); await page.click(`[data-act=who-pick][data-arg="${a}"]`); await page.waitForTimeout(1300);
+  let a = await page.evaluate(() => window.__bz.S.run.g.rounds[0].answer); await page.click(`[data-act=q-pick][data-arg="${a}"]`); await page.waitForTimeout(1300);
   a = await page.evaluate(() => window.__bz.S.run.g.rounds[1].answer); await page.keyboard.press(String(a + 1)); await page.waitForTimeout(300);
   ok('Who Said It? plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.score === 2));
+  /* Plot Line: tap the scenes in order; then by keys — arrows to the card, Enter to place it */
+  await go(page, '#/play/plot'); await page.click('[data-act=game-start]'); await page.waitForSelector('[data-act=pl-place]');
+  let pq = (await G()).q; for (let at = 0; at < pq.cards.length; at++) await page.click(`[data-act=pl-place][data-arg="${pq.cards.findIndex((c) => c.at === at)}"]`);
+  await page.waitForTimeout(1800); pq = (await G()).q;
+  for (let at = 0; at < pq.cards.length; at++) { const want = pq.cards.findIndex((c) => c.at === at); for (let k = 0; k < 10 && (await G()).cursor !== want; k++) await page.keyboard.press('ArrowRight'); await page.keyboard.press('Enter'); }
+  await page.waitForTimeout(200);
+  ok('Plot Line plays by touch and by keys', await page.evaluate(() => { const g = window.__bz.S.run.g; return g.perfect === 2 && g.right === g.total; }));
+  /* Root Forge: the lexicon loads, then tap the real word's piece, then press its number */
+  await go(page, '#/play/root'); await page.click('[data-act=game-start]'); await page.waitForSelector('.gb-forge', { timeout: 15000 });
+  a = (await G()).q.answer; await page.click(`[data-act=q-pick][data-arg="${a}"]`); await page.waitForTimeout(300);
+  ok('Root Forge shows the forged word and its meaning', await page.evaluate(() => { const q = window.__bz.S.run.g.rounds[0]; return document.querySelector('.gb-fused') && document.querySelector('.feedback.ok')?.textContent.includes(q.word); }));
+  await page.waitForTimeout(1100); a = (await G()).q.answer; await page.keyboard.press(String(a + 1)); await page.waitForTimeout(250);
+  ok('Root Forge plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.right === 2));
+  /* Rhetoric Duel: stronger version, then the reason — by touch, then by keys */
+  await go(page, '#/play/duel'); await page.click('[data-act=game-start]');
+  let dq = (await G()).q; await page.click(`[data-act=du-pick][data-arg="${dq.strong}"]`); await page.waitForTimeout(150);
+  ok('Rhetoric Duel names the original and labels the plain version as written for the game', await page.evaluate(() => /The original/.test(document.querySelector('.gb-duel').textContent) && /written for this game/.test(document.querySelector('.gb-duel').textContent)));
+  await page.click(`[data-act=q-pick][data-arg="${dq.answer}"]`); await page.waitForTimeout(1300);
+  dq = (await G()).q; await page.keyboard.press(String(dq.strong + 1)); await page.waitForTimeout(150); await page.keyboard.press(String(dq.answer + 1)); await page.waitForTimeout(250);
+  ok('Rhetoric Duel plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.score === 2 && window.__bz.S.run.g.strongRight === 2));
+  /* the finish: what was practised, score, best, accuracy, level change and ONE next step to a real stop */
+  await page.evaluate(() => { const r = window.__bz.S.run; r.g = { ...r.g, i: r.g.rounds.length - 1, state: null, stage: 'which', which: null }; window.__bz.render(); });
+  dq = (await G()).q; await page.keyboard.press(String(dq.strong + 1)); await page.waitForTimeout(100); await page.keyboard.press(String(((dq.answer + 1) % 4) + 1)); await page.waitForTimeout(150); await page.keyboard.press('Enter'); await page.waitForTimeout(300);
+  ok('the finish shows practised, score, best, accuracy and the level', await page.evaluate(() => { const t = document.querySelector('.gb-done')?.textContent || ''; return /You practised/.test(t) && /accuracy/.test(t) && /best/.test(t) && /Level \d/.test(t); }));
+  const nx = await page.evaluate(() => document.querySelector('.gb-done [data-next]')?.getAttribute('href'));
+  ok('the finish names one next step: the stop that teaches what was missed', nx === '#/stop/la7-devices' || nx === '#/stop/la7-antithesis', nx);
+  ok('the level is kept per game', await page.evaluate(() => { const h = window.__bz.S.h; return h.kids.find((k) => k.id === h.active)?.games.duel?.level >= 1; }));
 
   /* ☰ by keyboard (checkShell drives it too): Tab stays inside, Esc closes */
   await go(page, '#/home'); await page.click('[data-bz=menu]'); for (let i = 0; i < 25; i++) await page.keyboard.press('Tab');

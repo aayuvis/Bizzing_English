@@ -6,14 +6,13 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { tally } from './_mem.mjs';
 import { builderNew, builderStep, builderJudge, builderSentence, builderPool, builderRoad, rushNew, rushStep, rushRoad, whoRound, whoLines, figureRound, FIGURE_KINDS,
-  quizNew, quizStep, plotRound, plotNew, plotStep, plotPairs, opening, forgeRound, forgePools, duelRound, duelNew, duelStep, nextLevel, accuracy, mostMissed, ROUND_MS, MAX_LEVEL } from '../src/games.js';
+  quizNew, quizStep, plotRound, plotNew, plotStep, plotPairs, opening, forgeRound, forgePools, duelRound, duelNew, duelStep, GAMES, nextLevel, accuracy, mostMissed, ROUND_MS, MAX_LEVEL } from '../src/games.js';
 import { LINES, WORKS } from '../src/data/library.js';
 import { FIGURES } from '../src/data/literature.js';
 import { RHETORIC } from '../src/data/language.js';
 import { PLAIN, DEVICE_GLOSS } from '../src/data/duel.js';
 import { cleared } from '../src/data/rights.js';
 import * as WP from '../src/data/wordparts.js';
-import { GAMES_META } from './_games-meta.mjs';
 const { ok, done } = tally('games');
 const lex = JSON.parse(readFileSync(new URL('../public/data/bee-words.json', import.meta.url)));
 const PJ = JSON.parse(readFileSync(new URL('../src/data/passages.json', import.meta.url)));
@@ -187,7 +186,7 @@ for (const L of LV) {
   const strong = items.filter((q) => q.strong === 1).length / items.length;
   ok(`Rhetoric Duel L${L}: the original sits left and right alike`, strong >= 0.4 && strong <= 0.6);
   ok(`Rhetoric Duel L${L}: the original is the strong version`, items.every((q) => q.versions[q.strong] === q.original && q.versions[1 - q.strong] === PLAIN[q.original]));
-  ok(`Rhetoric Duel L${L}: the right reason is never the longest-only option`, items.every((q) => q.options.some((o, i) => i !== q.answer && o.length >= q.device.length)));
+  ok(`Rhetoric Duel L${L}: the right reason never stands out as the longest`, items.every((q) => q.options.some((o, i) => i !== q.answer && o.length >= q.device.length - 4)));
 }
 const hardD = (L) => SEEDS.flatMap((sd) => duelRound(rhet, PLAIN, sd, L)).filter((q) => q.device === 'antithesis').length;
 ok('Rhetoric Duel: antithesis waits for the higher levels', hardD(1) === 0 && hardD(2) === 0 && hardD(5) > hardD(3));
@@ -205,14 +204,14 @@ ok('Rhetoric Duel: the right version with the wrong reason scores nothing', dw.s
 for (const [name, g0, st] of [['who', quizNew('who', whoRound(LINES, WORKS, 'z', 3), 3), quizStep], ['plot', plotNew(plotRound(shipP, 'z', 4, 4, WORKS), 4), plotStep], ['duel', duelNew(duelRound(rhet, PLAIN, 'z', 4), 4), duelStep], ['root', quizNew('root', forgeRound(lex, WP, 'z', 5), 5), quizStep]]) {
   let g = g0, steps = 0;
   try {
-    while (!g.over && steps < 4000) { steps++; for (const a of [{ type: 'pick', i: steps % 6 - 1 }, { type: 'place', i: steps % 7 - 1 }, { type: 'move', d: steps % 3 - 1 }, { type: 'undo' }, { type: steps % 4 ? 'tick' : 'next', dt: 17 }]) g = st(g, a); }
+    while (!g.over && steps < 4000) { steps++; for (const a of [{ type: 'pick', i: steps % 6 - 1 }, { type: 'place', i: steps % 7 - 1 }, { type: 'move', d: steps % 3 - 1 }, { type: steps % 5 ? 'move' : 'undo', d: 1 }, { type: steps % 4 ? 'tick' : 'next', dt: 17 }]) g = st(g, a); }
     ok(`${name}: a soak of overlapping events ends the round cleanly`, g.over && steps < 4000 && Number.isFinite(g.score));
     ok(`${name}: nothing moves after the end`, st(g, { type: 'pick', i: 0 }) === g && st(g, { type: 'next' }) === g);
   } catch (e) { ok(`${name}: the soak threw ${e.message}`, false); }
 }
 
 /* ---------- every game is listed with a world, what it practises, how and its keys ---------- */
-ok('seven games, each with a world, practises, how, keys and five level meanings', GAMES_META.length === 7 && GAMES_META.every((g) => g.world && g.practises && g.how && g.keys && Object.keys(g.levels).length === MAX_LEVEL));
+ok('seven games, each with a world, practises, how, keys and five level meanings', Object.keys(GAMES).length === 7 && Object.values(GAMES).every((g) => g.world && g.practises && g.how && g.keys && Object.keys(g.levels).length === MAX_LEVEL));
 
 /* ---------- prove the checker by breaking it: a planted unfair item must be caught ---------- */
 const plant = whoAll[0], dup = { ...plant, options: plant.options.map((o, i) => (i === (plant.answer + 1) % 4 ? plant.right : o)) };

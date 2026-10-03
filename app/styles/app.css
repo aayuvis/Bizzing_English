@@ -489,3 +489,69 @@ span.rv.you svg { width: 18px; height: 18px; }
 .cert svg { width: 22px; height: 22px; color: var(--cc); flex: none; } .cert b { display: block; font-size: 14px; } .cert small { color: var(--bz-muted); }
 .certview { padding: 8px; } .certview svg { width: 100%; height: auto; display: block; }
 @media print { body * { visibility: hidden; } .certview, .certview * { visibility: visible; } .certview { position: absolute; inset: 0; border: 0; box-shadow: none; } }
+
+/* games: boards and motion — each game is played on a board in its world's painted style: the
+   world's plate behind (--plate, set by play.js), a framed play area, a track of the round (pips or a
+   time bar), the child's avatar and Quill. Motion on every answer (pop, shake, "+N" flying up, a
+   combo bump, a tile sliding in, a gap glowing) is stilled under prefers-reduced-motion and the
+   device's "Reduce motion" (html.still); Calm mode keeps no confetti (app.js) and drops the bounce. */
+.gboard { position: relative; display: grid; gap: 10px; padding: 12px; border-radius: 22px; min-width: 0; isolation: isolate; overflow: hidden;
+  background: linear-gradient(180deg, rgba(20,14,30,.30), rgba(20,14,30,.55)), var(--plate) center / cover; box-shadow: 0 10px 28px rgba(26,21,35,.20); }
+.gb-bar { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 6px 10px; border-radius: 16px; background: color-mix(in srgb, var(--card) 88%, transparent); border: 1px solid var(--line); }
+.gb-ava { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: none; background: var(--bz-chip); border: 2px solid var(--card); box-shadow: 0 1px 4px rgba(0,0,0,.18); }
+.gb-time { flex: 1 1 auto; min-width: 60px; height: 12px; border-radius: 999px; background: color-mix(in srgb, var(--ink) 12%, transparent); overflow: hidden; }
+.gb-time i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--good), var(--bz-accent)); transition: width .25s linear; }
+.gb-bar .time { font: 800 16px var(--mono); color: var(--ink); min-width: 3ch; text-align: right; }
+.gb-pips { flex: 1 1 auto; min-width: 0; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.pip { width: 14px; height: 14px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--ink) 30%, transparent); background: transparent; flex: none; }
+.pip.ok { background: var(--good); border-color: var(--good); } .pip.no { background: var(--bad-bg); border-color: var(--bad); }
+.pip.cur { border-color: var(--bz-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--bz-accent) 30%, transparent); }
+.gb-combo { font: 800 13px var(--bz-display); color: var(--fox, var(--bz-accent)); white-space: nowrap; min-width: 0; }
+.gb-combo.on { padding: 3px 9px; border-radius: 999px; background: color-mix(in srgb, var(--bz-accent) 14%, var(--card)); }
+.gb-score { display: grid; justify-items: center; line-height: 1; flex: none; } .gb-score b { font: 800 22px var(--mono); color: var(--ink); } .gb-score small { font-size: 11px; color: var(--muted); }
+.gb-frame { position: relative; display: grid; gap: 12px; min-width: 0; padding: 18px; border-radius: 18px; background: var(--card); color: var(--ink);
+  border: 3px solid color-mix(in srgb, var(--bz-accent) 45%, var(--line)); box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--card) 70%, transparent), 0 6px 18px rgba(0,0,0,.18); }
+.gb-foot { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.gb-quill { width: 64px; height: 64px; object-fit: contain; flex: none; filter: drop-shadow(0 3px 4px rgba(0,0,0,.3)); animation: bob 3.2s ease-in-out infinite; }
+.gb-foot .gb-level { padding: 6px 12px; border-radius: 999px; background: color-mix(in srgb, var(--card) 90%, transparent); color: var(--ink); font-size: 13.5px; min-width: 0; }
+.gb-level b { font-family: var(--bz-display); }
+.gb-fly { position: absolute; right: 22px; top: 10px; z-index: 2; pointer-events: none; font: 800 26px var(--bz-display); color: var(--good); animation: gbfly .9s ease-out forwards; }
+@keyframes gbfly { 0% { opacity: 0; transform: translateY(8px) scale(.8); } 20% { opacity: 1; transform: translateY(0) scale(1.15); } 100% { opacity: 0; transform: translateY(-46px) scale(1); } }
+.gb-frame.gb-ok { animation: gbpop .42s cubic-bezier(.3,1.6,.5,1); } @keyframes gbpop { 0% { transform: scale(.97); } 55% { transform: scale(1.025); } 100% { transform: none; } }
+.gb-frame.gb-no { animation: gbshake .42s ease-out; } @keyframes gbshake { 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+.gb-combo.gb-bump { animation: gbbump .5s cubic-bezier(.3,1.8,.5,1); } @keyframes gbbump { 40% { transform: scale(1.35) rotate(-4deg); } 100% { transform: none; } }
+.gb-slide { animation: gbslide .3s ease-out; } @keyframes gbslide { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.gap.gb-glow { animation: gbglow .6s ease-out; } @keyframes gbglow { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--bz-accent) 70%, transparent); } 100% { box-shadow: 0 0 0 12px transparent; } }
+/* Root Forge: the piece and the base meet in the forge */
+.gb-forge { display: flex; justify-content: center; align-items: stretch; gap: 0; font: 800 clamp(24px, 6vw, 34px) var(--read); }
+.gb-base, .gb-aff { padding: 10px 16px; border: 3px solid var(--line); background: var(--bz-chip); color: var(--ink); }
+.gb-base { border-radius: 0 14px 14px 0; } .gb-aff:first-child { border-radius: 14px 0 0 14px; } .gb-base:first-child { border-radius: 14px 0 0 14px; } .gb-aff:last-child { border-radius: 0 14px 14px 0; }
+.gb-aff { border-style: dashed; color: var(--bz-accent); min-width: 2.2em; text-align: center; } .gb-aff.ok { border-style: solid; border-color: var(--good); color: var(--good); background: var(--good-bg); } .gb-aff.no { border-style: solid; border-color: var(--bad); color: var(--bad); background: var(--bad-bg); }
+.gb-fused { animation: gbpop .5s cubic-bezier(.3,1.6,.5,1); }
+/* Plot Line: the story's line of slots and the scene cards */
+.gb-line { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.gb-slot { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 10px; align-items: center; min-height: 44px; padding: 6px 10px; border-radius: 12px; border: 2px dashed var(--line); font: 500 15.5px/1.4 var(--read); }
+.gb-slot > b { font: 800 15px var(--mono); color: var(--muted); } .gb-slot.full { border-style: solid; background: var(--bz-chip); }
+.gb-slot.ok { border-color: var(--good); background: var(--good-bg); } .gb-slot.no { border-color: var(--bad); background: var(--bad-bg); } .gb-slot small { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.gb-cards { display: grid; gap: 8px; } .gb-card { display: flex; gap: 10px; align-items: flex-start; text-align: left; font: 500 15.5px/1.4 var(--read); min-width: 0; }
+.gb-card kbd, .gb-version kbd { font: 700 12px var(--mono); opacity: .6; flex: none; padding-top: 3px; }
+.gb-card.cursor { box-shadow: 0 0 0 3px var(--bz-pin, var(--bz-accent)); }
+/* Rhetoric Duel: two versions face each other */
+.gb-duel { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+.gb-version { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 10px; align-items: start; text-align: left; padding: 14px; border-radius: 16px; border: 2px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; min-height: 72px; }
+.gb-version .gb-vtext { font: italic 600 17px/1.45 var(--bz-display); } .gb-version small { grid-column: 2; font-size: 12.5px; color: var(--muted); }
+.gb-version.right { border-color: var(--good); background: var(--good-bg); } .gb-version.wrong { border-color: var(--bad); background: var(--bad-bg); }
+.opt small.muted { font-weight: 500; font-size: 13px; }
+/* the finish */
+.gb-done .gb-frame { justify-items: center; text-align: center; }
+.gb-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 520px; }
+.gb-stats span { display: grid; padding: 8px 4px; border-radius: 12px; background: var(--bz-chip); } .gb-stats b { font: 800 20px var(--mono); } .gb-stats small { font-size: 12px; color: var(--muted); }
+.gb-lvchange { font-weight: 650; }
+.gb-next { display: flex; align-items: center; gap: 12px; text-align: left; text-decoration: none; color: inherit; padding: 12px 16px; border: 2px solid var(--bz-accent); max-width: 520px; width: 100%; min-width: 0; }
+.gb-next span { display: grid; flex: 1; min-width: 0; } .gb-next small { color: var(--muted); font-size: 12.5px; } .gb-next b { font: 700 16px var(--bz-display); } .gb-next svg { width: 22px; height: 22px; color: var(--bz-accent); flex: none; }
+.titlecard .plate { position: relative; } .titlecard .plate .gb-ava { position: absolute; left: 14px; bottom: 12px; width: 52px; height: 52px; }
+.titlecard .tc-quill { position: absolute; right: 12px; bottom: 6px; width: 84px; height: 84px; object-fit: contain; filter: drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
+@media (max-width: 560px) { .gboard { padding: 8px; border-radius: 16px; } .gb-frame { padding: 14px; } .gb-quill { width: 48px; height: 48px; } .gb-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gb-ava { width: 34px; height: 34px; } }
+html.calm .gb-quill, html.calm .gb-combo.gb-bump { animation: none; }
+html.still .gboard *, html.still .titlecard * { animation: none !important; transition: none !important; } html.still .gb-fly { display: none; }
+@media (prefers-reduced-motion: reduce) { .gboard *, .titlecard * { animation: none !important; transition: none !important; } .gb-fly { display: none; } }
