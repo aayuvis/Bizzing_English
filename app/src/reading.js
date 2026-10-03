@@ -19,8 +19,9 @@ const FAIRY = /^(grimm|andersen|arabian)/;
 const SHORT = /^(holmes|justso|kipling-rewards)/;
 export function levelOf(p) {
   const w = work(p.work); const sh = w?.shelf;
+  if (p.level) return p.level;                       // a passage may name its level (close reading: 10)
+  if (sh === 'drama') return 7;                      // a play's verse is still drama
   if (p.kind === 'verse' || sh === 'poetry') return 4;
-  if (sh === 'drama') return 7;
   if (sh === 'essay' || sh === 'speech') return 9;
   if (FAIRY.test(p.work)) return 2;
   if (sh === 'fable') return 1;

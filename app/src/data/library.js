@@ -13,13 +13,12 @@
 // Rights are as of `checked`. US: published 1930 or earlier. UK/EU: author (and translator)
 // died 1955 or earlier (70 years). India: died 1965 or earlier (60 years).
 
-const CHECKED = '2026-10-02';
-const PG = (n) => `Project Gutenberg #${n} (via the GITenberg mirror)`;
-const pd = (basis) => ({ us: 'PD', uk: 'PD', in: 'PD', basis, checked: CHECKED });
-const r = (us, uk, inn, basis) => ({ us, uk, in: inn, basis, checked: CHECKED });
-const held = (id) => ({ held: true, file: `texts/${id}.txt` });
+import { CHECKED, PG, pd, r, held } from './library-kit.js';
+// More of the Library lives beside this file, merged below, so it can grow in parallel:
+import { MYTH_WORKS, MYTH_PASSAGES } from './library-myths.js';     // Greek myths: Hawthorne, Kingsley, Bulfinch
+import { MORE_WORKS, MORE_PASSAGES } from './library-more.js';      // drama, close reading, more fairy tales and short stories
 
-export const WORKS = [
+const BASE_WORKS = [
   // ── Fable & myth ──────────────────────────────────────────────────────────
   {
     id: 'aesop', title: "Aesop's Fables", author: 'Aesop, told by Joseph Jacobs', year: 1894,
@@ -951,7 +950,7 @@ export const WORKS = [
 // start/end are exact text in the held file; any run of whitespace in them matches any
 // run of whitespace in the text (line breaks included).
 // ─────────────────────────────────────────────────────────────────────────────
-export const PASSAGES = [
+const BASE_PASSAGES = [
   // ── Band 1 ────────────────────────────────────────────────────────────────
   {
     id: 'aesop-town-mouse', work: 'aesop', title: 'The Town Mouse and the Country Mouse', band: 1,
@@ -1988,3 +1987,6 @@ export const LINES = [
   { work: 'aesop', who: 'Aesop, "The Town Mouse and the Country Mouse"', text: 'Better beans and bacon in peace than cakes and ale in fear.' },
   { work: 'andersen', who: "A little child, in The Emperor's New Clothes", text: '"But the Emperor has nothing at all on!" said a little child.' },
 ];
+
+export const WORKS = [...BASE_WORKS, ...MYTH_WORKS, ...MORE_WORKS];
+export const PASSAGES = [...BASE_PASSAGES, ...MYTH_PASSAGES, ...MORE_PASSAGES];
