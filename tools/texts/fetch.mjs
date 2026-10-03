@@ -49,6 +49,7 @@ export const TEXTS = [
   ['anne', 'Anne-of-Green-Gables_45', '45.txt', 45],
   ['oz', 'The-Wonderful-Wizard-of-Oz_55', '55.txt', 55],
   ['velveteen', 'The-Velveteen-Rabbit_11757', '11757.txt', 11757],
+  ['peterrabbit', 'The-Tale-of-Peter-Rabbit_14838', '14838.txt', 14838],
   ['happyprince', 'The-Happy-Prince-and-Other-Tales_902', '902-0.txt', 902],
   ['lamb-tales', 'Tales-from-Shakespeare_573', '573.txt', 573],
   ['tomsawyer', 'The-Adventures-of-Tom-Sawyer_74', '74.txt', 74],

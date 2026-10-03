@@ -66,6 +66,23 @@ for (const [kind, s] of Object.entries(slots)) { const t = s.reduce((a, b) => a 
 for (const kind of ['phraseClause', 'endMark']) { const ks = keys(kind, { band: 3, lex }); const c = {}; ks.forEach((k) => { const a = make(kind, k, { band: 3, lex }).answer; c[a] = (c[a] || 0) + 1; }); Object.values(c).forEach((v) => { if (v / ks.length < 0.25) bad(`${kind}: one answer is only ${Math.round((v / ks.length) * 100)}% of items`); }); }
 /* passages */
 for (const p of PASSAGES) for (const it of passageItems(p)) { n++; if (!check(it, it.answer) || it.options.some((_, i) => i !== it.answer && check(it, i))) bad(`${it.id}: not exactly one right`); }
+/* every shipped story's own exercises: one right answer, the author's commas and order recoverable */
+import { storyExercises } from '../src/items.js';
+import { WORKS } from '../src/data/library.js';
+import { cleared } from '../src/data/rights.js';
+const PJ = JSON.parse(readFileSync(new URL('../src/data/passages.json', import.meta.url)));
+for (const pj of PJ) {
+  const p = PASSAGES.find((x) => x.id === pj.id); const sets = storyExercises(p, pj.text, lex);
+  if (!sets.understand.length) bad(`${p.id}: no comprehension questions`);
+  if (!sets.words.length) bad(`${p.id}: none of its words is in the lexicon`);
+  for (const it of [...sets.words, ...sets.commas, ...sets.order, ...sets.copy]) {
+    n++;
+    if (it.type === 'mc' && (new Set(it.options.map(norm)).size !== it.options.length || !check(it, it.answer))) bad(`${it.id}: options repeat or answer wrong`);
+    if (it.type === 'gaps' && (!it.answer.length || !check(it, it.answer) || it.tokens.some((t) => /,$/.test(t)))) bad(`${it.id}: commas not recoverable`);
+    if (it.type === 'order' && (!check(it, it.answer) || it.tiles.join(' ') === it.answer.join(' '))) bad(`${it.id}: order item broken`);
+    if (it.type === 'copy' && (!check(it, it.text) || !pj.text.replace(/\s+/g, ' ').includes(it.text))) bad(`${it.id}: the copy line is not the author's`);
+  }
+}
 /* copywork names the kind of mistake */
 const d = copyDiff('Where the mind is without fear,', 'where the mind is without fear');
 if (d.ok || d.errors.map((e) => e.kind).join() !== 'capital letter,punctuation') bad(`copyDiff: ${JSON.stringify(d.errors)}`);

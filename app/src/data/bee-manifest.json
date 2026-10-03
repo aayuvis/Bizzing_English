@@ -7,15 +7,15 @@
   },
   "counts": {
     "beeWords": 126594,
-    "lexicon": 8092,
+    "lexicon": 8336,
     "defPool": 6158,
     "originPool": 2060,
     "rimes": 29,
-    "passages": 33
+    "passages": 47
   },
   "wrote": {
-    "app/public/data/bee-words.json": "1277327e2f65dbc001ce006fa2ff02d47799e2926a139edb3994663511c7da1d",
-    "app/src/data/hour-words.json": "d3393555700f54cccc111c256bc9406dce67f8be3e7230e15d4424735fb02d4e"
+    "app/public/data/bee-words.json": "5d8dba45780d860035caf9c14acb5c12ab4d7ae4a9011ef31dee022b73a028a8",
+    "app/src/data/hour-words.json": "cec15cce8b5013bce3eec1c873cb28acdbe78c3cf880fef7d3e3621ee812cc7d"
   },
-  "at": "2026-10-02"
+  "at": "2026-10-03"
 }

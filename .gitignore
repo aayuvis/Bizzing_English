@@ -3,3 +3,4 @@ app/build/
 tools/art/raw/
 tools/texts/raw/
 .DS_Store
+*.part

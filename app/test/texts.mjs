@@ -11,7 +11,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { WORKS, PASSAGES, LINES } from '../src/data/library.js';
 import { cleared } from '../src/data/rights.js';
-import { buildPassages, serialise, locate, readText, OUT, shipped } from '../../tools/texts/levels.mjs';
+import { buildPassages, serialise, locate, readText, OUT, shipped, splitScenes, measure } from '../../tools/texts/levels.mjs';
 
 const APP = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fails = [];
@@ -108,6 +108,49 @@ for (const p of built) {
 for (const b of [1, 2, 3]) ok(built.filter((p) => p.band === b).length >= 6, `band ${b}: needs at least 6 passages`);
 ok(built.length >= 24, `need at least 24 passages (have ${built.length})`);
 
+// ── Stories: each passage is told scene by scene over a painting ────────────
+// hook: one line of our own (no ending given away); scenes: markers where the 2nd, 3rd…
+// scenes start, found in order; paint (and paint2, a later moment for longer prose): a
+// painting prompt with no quoted words for a model to letter.
+const QUOTES = /["“”‘]|(^|\s)'[^']+'(\s|[.,;]|$)/;
+const squash = (s) => s.replace(/\s+/g, ' ').trim();
+const lib = new Map(PASSAGES.map((p) => [p.id, p]));
+for (const p of PASSAGES) {
+  const tag = `passage ${p.id}`;
+  ok(typeof p.hook === 'string' && p.hook.trim() && p.hook.length <= 90, `${tag}: needs a hook of at most 90 characters`);
+  for (const k of ['paint', 'paint2']) {
+    if (k === 'paint2' && p[k] == null) continue;
+    const v = p[k];
+    if (!ok(typeof v === 'string' && v.length > 80, `${tag}: ${k} must be a painting prompt`)) continue;
+    ok(!QUOTES.test(v), `${tag}: ${k} quotes words a painter would letter`);
+    const sentences = (v.match(/[.!?](\s|$)/g) || []).length;
+    ok(sentences >= 2 && sentences <= 4, `${tag}: ${k} should be 2–4 sentences (has ${sentences})`);
+  }
+  ok(Array.isArray(p.scenes) && p.scenes.every((m) => typeof m === 'string' && m.trim()), `${tag}: scenes must be a list of markers`);
+}
+for (const p of built) {
+  const tag = `passage ${p.id}`;
+  const src = lib.get(p.id);
+  const n = p.scenes.length;
+  ok(n >= (p.kind === 'verse' ? 2 : 3) && n <= 6, `${tag}: ${n} scenes (prose 3–6, verse 2–6)`);
+  ok(n === (src.scenes || []).length + 1, `${tag}: a scene marker was not found in order`);
+  ok(squash(p.scenes.join(' ')) === squash(p.text), `${tag}: scenes joined are not the passage text`);
+  if (p.kind === 'prose') p.scenes.forEach((s, i) => { const w = measure(s).words; ok(w >= 25 && w <= 140, `${tag}: scene ${i + 1} is ${w} words (prose scenes are 25–140)`); });
+  if (src.paint2) ok(p.kind === 'prose' && n >= 4, `${tag}: paint2 is for prose told in 4 or more scenes`);
+}
+// The scene check must be able to fail: a marker with one word changed is not found.
+{
+  const b = built.find((x) => lib.get(x.id).scenes?.length);
+  const p = lib.get(b.id);
+  const bent = p.scenes.map((m, i) => (i === 0 ? m.replace(/[A-Za-z]+/, (w) => w + 'x') : m));
+  ok(!!splitScenes(b.text, bent).error, 'scene check accepted an altered marker: the check is blind');
+  ok(!!splitScenes(b.text, [...p.scenes].reverse()).error || p.scenes.length < 2, 'scene check accepted markers out of order');
+}
+const ship = shipped(built, WORKS, cleared);
+const MIN = { 1: 10, 2: 14, 3: 12 };
+ok(ship.length >= 42, `need at least 42 shippable passages (have ${ship.length})`);
+for (const b of [1, 2, 3]) ok(ship.filter((p) => p.band === b).length >= MIN[b], `band ${b}: needs at least ${MIN[b]} shippable passages`);
+
 // ── LINES: the check-quotes lint ────────────────────────────────────────────
 const collapse = (s) => s.replace(/\s+/g, ' ').trim();
 const corpus = new Map();
@@ -138,5 +181,6 @@ if (fails.length) {
   process.exit(1);
 }
 const bands = [1, 2, 3].map((b) => built.filter((p) => p.band === b).length).join('/');
+const shipBands = [1, 2, 3].map((b) => ship.filter((p) => p.band === b).length).join('/');
 console.log(`texts: all ${checks} passed — ${heldWorks.length} held works, ${modern.length} summary-only, ` +
-  `${built.length} passages (bands ${bands}), ${LINES.length} lines`);
+  `${built.length} passages (bands ${bands}; ${ship.length} shipped, ${shipBands}), ${LINES.length} lines`);

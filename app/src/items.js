@@ -322,3 +322,41 @@ export function copyDiff(want, got) {
 }
 
 export const _test = { norm, hash };
+
+/* ---------------- a story's own exercises (the Stories library) ----------------
+   Built from the passage itself, so the practice is linked to what was just heard: its words (Bee's
+   meanings), the AUTHOR's commas put back, the author's sentence rebuilt, a line copied. The comma and
+   order items say "the author's" — a classic's punctuation is the writer's choice, and the child is
+   asked to recover that choice, not to obey a rule it might not follow. */
+const SENT = (t) => String(t).replace(/\s+/g, ' ').split(/(?<=[.!?][’”"']?)\s+(?=[A-Z“"‘'])/).map((s) => s.trim()).filter(Boolean);
+const plainSentence = (s) => !/[;:—–()\[\]_*"“”]/.test(s) && !/\s'|'\s|^'|‘|’ /.test(s) && /^[A-Z]/.test(s) && /[.!?]$/.test(s);
+export function storyExercises(p, text, lx) {
+  const id = p.id, R = rng('story:' + id), out = {};
+  out.understand = passageItems(p);
+  /* words: Bee's meaning, three meanings from other stories' words as the wrong options */
+  const L = lx?.words || {}, look = (w) => { const k = w.toLowerCase(); for (const f of [k, k.replace(/s$/, ''), k.replace(/es$/, ''), k.replace(/ed$/, ''), k.replace(/ed$/, 'e'), k.replace(/ing$/, ''), k.replace(/ing$/, 'e'), k.replace(/ies$/, 'y'), k.replace(/ly$/, '')]) if (L[f]) return [f, L[f]]; return null; };
+  const others = ALL_WORDS_OF(p.id).map(look).filter(Boolean);
+  out.words = (p.words || p.wordBank || []).map(look).filter(Boolean).slice(0, 5).map(([w, r], i) => {
+    const seen = new Set([norm(r[DEF])]), pool = others.filter(([o, rr]) => { const d = norm(rr[DEF]); if (o === w || seen.has(d)) return false; seen.add(d); return true; });
+    const same = pool.filter(([, rr]) => rr[PS] === r[PS]), pick3 = sample(rng(`sw:${id}:${w}`), same.length >= 3 ? same : pool, 3);
+    return mc(`storyword:${id}:${i}`, 'storyword', `In the story, what does “${w}” mean?`, cap1(r[DEF]), pick3.map(([, rr]) => cap1(rr[DEF])), { say: w, explain: `“${w}” means: ${r[DEF]}`, source: 'Bizzing Bee’s word list' });
+  });
+  const sents = SENT(text).filter(plainSentence);
+  out.commas = sample(R, sents.filter((s) => { const n = (s.match(/,/g) || []).length, w = s.split(' ').length; return n >= 1 && n <= 3 && w >= 6 && w <= 30; }), 3).map((s, i) => {
+    const words = s.split(' ');
+    return { id: `storycomma:${id}:${i}`, kind: 'storycomma', type: 'gaps', multi: true, prompt: 'Put back the author’s commas.', tokens: words.map((w) => w.replace(/,$/, '')),
+      answer: words.map((w, j) => (w.endsWith(',') ? j : -1)).filter((j) => j >= 0), hint: ['Read it aloud: where does the voice pause?'], explain: s };
+  });
+  out.order = sample(R, sents.filter((s) => { const w = s.slice(0, -1).split(' '); return w.length >= 5 && w.length <= 11 && !/,/.test(s) && new Set(w.map((x) => x.toLowerCase())).size === w.length; }), 3).map((s, i) => {
+    const end = s.slice(-1), words = s.slice(0, -1).split(' ');
+    let tiles = shuffle(rng(`so:${id}:${i}`), words); if (tiles.join(' ') === words.join(' ')) tiles = [...tiles.slice(1), tiles[0]];
+    return { id: `storyorder:${id}:${i}`, kind: 'storyorder', type: 'order', prompt: 'Rebuild the author’s sentence.', tiles, answer: words, end, hint: ['Which word has the capital letter?'], explain: s };
+  });
+  const cp = SENT(text).filter((s) => { const w = s.split(' ').length; return w >= 8 && w <= 24 && !/[_*]/.test(s); });
+  out.copy = cp.length ? [{ id: `storycopy:${id}`, kind: 'copy', type: 'copy', prompt: 'Copy this line exactly — every capital and comma.', text: pick(rng('sc:' + id), cp), who: '', work: p.work, hint: ['Copy a few words at a time.'], explain: '' }] : [];
+  out.copy.forEach((c) => (c.explain = c.text));
+  return out;
+}
+let ALLW = null;
+function ALL_WORDS_OF(except) { ALLW ||= [...new Set(ALL_PASSAGES.flatMap((x) => (x.words || []).map((w) => [x.id, w])).map((x) => x.join('|')))].map((x) => x.split('|')); return ALLW.filter(([pid]) => pid !== except).map(([, w]) => w); }
+import { PASSAGES as ALL_PASSAGES } from './data/library.js';

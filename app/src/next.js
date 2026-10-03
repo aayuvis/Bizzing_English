@@ -7,10 +7,10 @@
 import { STRANDS } from './curriculum.js';
 import { strandOpen, planOpen, levelOpen, headStart } from './model.js';
 import { due } from './mastery.js';
-import { readingStops } from './reading.js';
+import { readingStops, bookStops } from './reading.js';
 
 export function stopsOf(sid) {
-  if (sid === 'reading') return readingStops();
+  if (sid === 'reading') return [...readingStops(), ...bookStops()];
   const s = STRANDS.find((x) => x.id === sid);
   return s.levels.flatMap((l) => l.stops.map((st) => ({ ...st, strand: sid, level: l.n })));
 }

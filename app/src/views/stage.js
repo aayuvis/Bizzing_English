@@ -26,10 +26,11 @@ export function stageView() {
     <div class="card"><h3>The ladder</h3><div class="ladder">${ladder}</div></div></div>`;
 }
 
-export async function openAloud() {
+export async function openAloud(pre) {
   await loadPassages();
   const k = kid(), ps = PASSAGES.filter((p) => shippable(p) && p.band <= k.band && p.kind === 'prose');
-  S.run = { mode: 'aloud', list: ps.map((p) => p.id), pid: ps[0]?.id, phase: 'pick', result: null, self: [] };
+  const list = ps.map((p) => p.id); if (pre && !list.includes(pre) && PASSAGES.some((p) => p.id === pre && shippable(p))) list.unshift(pre);
+  S.run = { mode: 'aloud', list, pid: pre && list.includes(pre) ? pre : list[0], phase: 'pick', result: null, self: [], from: pre };
 }
 
 export function aloudView() {
@@ -70,7 +71,8 @@ export const STAGE_ACTIONS = {
     k.last = { what: 'stage', right: m.wpm, at: Date.now() };
     const rec = (k.stops['sp1-aloud'] ||= { passed: false, tries: 0 }); rec.tries++;
     if (!rec.passed && !m.quiet && m.secs >= 20) { rec.passed = true; taught(k, 'sp1-aloud'); pay('stop'); mark('stop', 'Read a passage aloud on the Stage'); }
-    save(); location.hash = '#/stage'; checkMedals();
+    if (r.from) { (k.reading[r.from] ||= {}); (k.reading[r.from].ex ||= {}).aloud = { right: m.wpm, n: 0, at: Date.now() }; }
+    save(); location.hash = r.from ? `#/story/${r.from}/do` : '#/stage'; checkMedals();
   },
 };
 export function aloudPick(v) { S.run.pid = v; render(); }

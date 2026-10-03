@@ -91,6 +91,34 @@ def worlds():
     print(f'worlds: {t // 1024} KB')
 
 
+def atlas():
+    for n in ('atlas', 'atlas-night'):
+        f = os.path.join(RAW, n + '.png')
+        if not os.path.exists(f): continue
+        im = Image.open(f).convert('RGB')
+        save(im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS), os.path.join(PUB, 'art', n + '.webp'), 80)
+        save(im.resize((800, round(im.height * 800 / im.width)), Image.LANCZOS), os.path.join(PUB, 'art', n + '-small.webp'), 76)
+    print('atlas: done')
+
+
+def stories():
+    """raw/story-<id>(-2).png → art/story/<id>(-2).webp; raw/book-alice-<n>.png → art/book/alice-<n>.webp;
+    then app/src/data/story-art.json lists exactly what exists, so a story with no painting yet wears its
+    shelf's world instead of asking for a file that is not there."""
+    import json
+    for sub in ('story', 'book'): os.makedirs(os.path.join(PUB, 'art', sub), exist_ok=True)
+    for f in sorted(os.listdir(RAW)):
+        if f.startswith('story-') and f.endswith('.png'): dst = os.path.join(PUB, 'art', 'story', f[6:-4] + '.webp')
+        elif f.startswith('book-') and f.endswith('.png'): dst = os.path.join(PUB, 'art', 'book', f[5:-4] + '.webp')
+        else: continue
+        im = Image.open(os.path.join(RAW, f)).convert('RGB')
+        save(im.resize((1280, round(im.height * 1280 / im.width)), Image.LANCZOS), dst, 78)
+    have = sorted([('story/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'story')) if f.endswith('.webp')] +
+                  [('book/' + f[:-5]) for f in os.listdir(os.path.join(PUB, 'art', 'book')) if f.endswith('.webp')])
+    json.dump(have, open(os.path.join(HERE, '..', '..', 'app', 'src', 'data', 'story-art.json'), 'w'))
+    print(f'stories: {len(have)} paintings')
+
+
 def medals():
     from PIL import ImageChops
     for f in sorted(os.listdir(RAW)):
@@ -119,5 +147,7 @@ if '--all' in a or '--mascot' in a: mascot()
 if '--all' in a or '--worlds' in a: worlds()
 if '--all' in a or '--medals' in a: medals()
 if '--all' in a or '--icon' in a: icon()
+if '--all' in a or '--atlas' in a: atlas()
+if '--all' in a or '--stories' in a: stories()
 if GHOSTS:
     print('REPAINT — the key failed on:\n  ' + '\n  '.join(GHOSTS)); sys.exit(1)

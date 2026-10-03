@@ -16,6 +16,8 @@ import { playView, openGame, gameView, PLAY_ACTIONS, playKey, leaveGame } from '
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
   settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
+import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
+import { loadBook } from './book.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
 import { balance, startActivity } from './family.js';
@@ -38,7 +40,7 @@ const TABS = [
   { id: 'stage', label: 'Stage', icon: 'lectern', href: '#/stage', color: '#B91C1C' },
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', play: 'play' };
+const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'stage', recordings: 'stage', play: 'play' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -48,15 +50,29 @@ function parse() {
 async function route() {
   const r = parse(); const prev = S.route.name;
   if (isLive()) micStop(0);                              // leaving the Stage mid-reading: the microphone goes off at once
-  stopVoice(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' ? S.sheet : null;
+  stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' ? S.sheet : null;
   if (prev === 'play' && S.run?.mode === 'game') leaveGame();
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
   S.route = r;
-  if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(`#/read/${rs.passage}`); return; } await openStop(r.parts[1]); }
+  if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/alice/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
+  else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
+  else if (r.name === 'story') {
+    const [, id, sub, ex] = r.parts;
+    if (sub === 'do') { await openExercises(id); if (ex && !openExercise(id, ex)) { location.replace(`#/story/${id}/do`); return; } }
+    else if (sub === 'talk') await loadBook();
+    else if (!(await openStory(id))) return;
+  }
+  else if (r.name === 'whole') {
+    const [, , n, sub, ex] = r.parts; await loadBook();
+    if (!n) S.run = null;
+    else if (sub === 'do') { await openChapterExercises(n); if (ex && !openChapterExercise(n, ex)) { location.replace(`#/whole/alice/${n}/do`); return; } }
+    else if (sub === 'talk') S.run = null;
+    else await openChapter(n);
+  }
   else if (r.name === 'practice' && r.parts[1] === 'check') { const nx = nextStep(S.h, kid()); await openCheck(nx.kind === 'check' ? nx.ids : due(kid())); }
   else if (r.name === 'read') await openRead(r.parts[1]);
-  else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud();
+  else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
   else if (r.name === 'play' && r.parts[1]) openGame(r.parts[1]);
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
@@ -73,7 +89,9 @@ function screen() {
     case 'atlas': return p[1] ? strandView(p[1]) : atlasView();
     case 'stop': case 'practice': return S.run ? runnerView() : practiceView();
     case 'read': return readerView();
-    case 'library': return libraryView(p[1] || 'books');
+    case 'story': return p[2] === 'talk' ? talkView(p[1]) : p[2] === 'do' ? (p[3] ? runnerView() : exercisesView()) : storyView();
+    case 'whole': return !p[2] ? wholeView() : p[3] === 'talk' ? talkView(`alice-${p[2]}`) : p[3] === 'do' ? (p[4] ? runnerView() : chapterExercisesView()) : storyView();
+    case 'library': return libraryView(p[1] || 'stories');
     case 'book': return bookView(p[1]);
     case 'word': return wordView(p[1] || '');
     case 'bank': return libraryView('words');
@@ -115,7 +133,7 @@ function doRender() {
     app: 'english', name: 'English', mascot: 'mascot/head.webp', tabs: TABS, active: TAB_OF[S.route.name] || '', coins: balance(k.name), dark: isDark(),
     kid: { name: k.name, avatar: avatarOf(k) }, search: 'Search any word, book or stop…', query: S.route.name === 'search' ? S.route.parts.slice(1).join('/') : '', inRun,
     drawer: { sub: headline(k), routes: { settings: '#/settings' }, app: [
-      { icon: 'book', label: 'Reading log', sub: 'what you have read and understood', href: '#/log' },
+      { icon: 'book', label: 'Reading log', sub: 'what you have heard, read and understood', href: '#/log' },
       { icon: 'bank', label: 'Word bank', sub: 'every word you tapped', href: '#/library/words' },
       { icon: 'mic', label: 'My recordings', sub: 'numbers only — no sound is kept', href: '#/recordings' },
       { icon: 'check', label: 'Practice', sub: 'prove it on a later day; your mistakes deck', href: '#/practice' }] },
@@ -126,7 +144,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
+const ACTIONS = { ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
   'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -155,7 +173,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (runKey(e) || readKey(e) || playKey(e)) e.preventDefault();
+  if (runKey(e) || readKey(e) || playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 

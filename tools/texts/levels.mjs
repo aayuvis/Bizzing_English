@@ -36,6 +36,27 @@ export function locate(text, start, end) {
   return { from: ms.index, to: me.index + me[0].length };
 }
 
+// Scenes: a passage is told scene by scene over its painting. `markers` are exact text in the
+// passage (whitespace-loose, as start/end are) where the 2nd, 3rd… scenes begin, in order.
+// Returns the scenes cut from `text` itself, so scenes joined are the text.
+export function splitScenes(text, markers = []) {
+  const scenes = [];
+  let from = 0;
+  let pos = 0;
+  for (const m of markers) {
+    const re = looseRegex(m);
+    re.lastIndex = pos;
+    const hit = re.exec(text);
+    if (!hit) return { error: `scene marker not found after the previous one: ${JSON.stringify(m)}` };
+    if (hit.index <= from) return { error: `scene marker starts an empty scene: ${JSON.stringify(m)}` };
+    scenes.push(text.slice(from, hit.index).trim());
+    from = hit.index;
+    pos = hit.index + hit[0].length;
+  }
+  scenes.push(text.slice(from).trim());
+  return { scenes };
+}
+
 export const GATED = join(ROOT, 'tools', 'texts', 'gated');   // held, but not cleared in all three markets (data/rights.js)
 export function readText(work) {
   for (const d of [TEXTS, GATED]) { const f = join(d, `${work}.txt`); if (existsSync(f)) return readFileSync(f, 'utf8'); }
@@ -48,6 +69,7 @@ export const shipped = (passages, WORKS, cleared) => passages.filter((p) => clea
 export function shape(raw, p) {
   let t = raw.replace(/\r/g, '');
   if (p.stripLineNumbers) t = t.replace(/[ \t]{2,}\d+[ \t]*$/gm, '');
+  t = t.replace(/^[ \t]*\[Illustration[^\]]*\][ \t]*$/gm, '');   // an edition's picture markers are not the text
   const lines = t.split('\n').map((l) => l.replace(/\s+$/, ''));
   if (p.kind === 'verse') {
     // An editor's item numbers between poems (Lear's "2.") are not part of the verse.
@@ -90,10 +112,14 @@ export function buildPassages(PASSAGES) {
     const from = p.kind === 'verse' ? text.lastIndexOf('\n', at.from) + 1 : at.from;
     const body = shape(text.slice(from, at.to), p);
     const m = measure(body);
+    const cut = splitScenes(body, p.scenes || []);
+    if (cut.error) { errors.push(`${p.id}: ${cut.error}`); continue; }
     out.push({
       id: p.id, work: p.work, title: p.title, band: p.band, kind: p.kind,
       abridged: !!p.abridged, ...(p.abridged ? { label: RETOLD } : {}),
+      ...(p.hook ? { hook: p.hook } : {}),
       text: body,
+      scenes: cut.scenes,
       fk: m.fk, ...(p.fkOverride != null ? { fkOverride: p.fkOverride } : {}),
       level: p.fkOverride != null ? p.fkOverride : Math.max(0, m.fk),
       words: m.words, sentences: m.sentences, syllables: m.syllables,

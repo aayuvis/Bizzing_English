@@ -64,13 +64,13 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const shell = await checkShell(page, { phone });
   ok(`${tag}: checkShell matches Bee`, shell.length === 0, '\n   ' + shell.join('\n   '));
   if (phone) { const b = await page.$eval('[data-bz=continue]', (e) => e.getBoundingClientRect().bottom); ok(`${tag}: Continue is wholly above the fold`, b <= 844 - 68, b); }
-  for (const [h, kind] of [['#/atlas', 'root'], ['#/library', 'deep'], ['#/atlas/word', 'deep'], ['#/stage', 'root'], ['#/play', 'root'], ['#/shop', 'deep']]) {
+  for (const [h, kind] of [['#/atlas', 'root'], ['#/library', 'root'], ['#/library/books', 'deep'], ['#/whole/alice', 'deep'], ['#/story/aesop-town-mouse/do', 'deep'], ['#/atlas/word', 'deep'], ['#/stage', 'root'], ['#/play', 'root'], ['#/shop', 'deep']]) {
     await go(page, h); const f = await checkPageHead(page, { phone });
     ok(`${tag}: ${h} page head matches Bee`, f.length === 0, f.join('; '));
     ok(`${tag}: ${h} is a ${kind} head`, (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === kind);
   }
   /* no sideways scroll, measured against the width we set */
-  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/words', '#/book/jungle', '#/read/aesop-town-mouse', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma']) {
+  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma']) {
     await go(page, h);
     const w = await page.evaluate(() => document.documentElement.scrollWidth);
     ok(`${tag}: ${h} does not scroll sideways (${w}px)`, w <= (phone ? 390 : 1280));
@@ -113,13 +113,24 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 
   /* tap a word: the card opens, the word is banked; the only outside request is Bee's clip */
   page.reqs.length = 0;
-  await go(page, '#/read/aesop-town-mouse'); await page.waitForTimeout(600);
+  await go(page, '#/story/aesop-town-mouse'); await page.waitForTimeout(600);
   await page.click('.passage span.w >> text=heartily');
   ok('tapping a word shows its meaning', await page.locator('.wordcard').isVisible());
   ok('the word goes in the bank', await page.evaluate(() => !!window.__bz.S.h.kids[0].bank.heartily));
   ok('the only request off the site is Bee’s recorded word', page.reqs.filter((u) => !ALLOWED(u)).every((u) => u.startsWith(BEE_AUDIO)));
-  await page.fill('#lk', 'feast'); await page.click('[data-act=lookup]');
-  ok('a word can be looked up by keyboard too', await page.evaluate(() => window.__bz.S.wordcard?.raw === 'feast'));
+  await page.keyboard.press('Escape');
+  /* a story told scene by scene, by keyboard: → moves on; the end opens the exercises */
+  const scenes = await page.evaluate(() => window.__bz.S.run.scenes.length);
+  ok('a story is told in 2–6 scenes', scenes >= 2 && scenes <= 6, scenes);
+  for (let i = 0; i < scenes; i++) { await page.keyboard.press('ArrowRight'); await page.waitForTimeout(200); }
+  ok('the end of a story offers its exercises', await page.locator('a:has-text("Now the exercises")').isVisible());
+  ok('hearing a story is recorded', await page.evaluate(() => !!window.__bz.S.h.kids[0].reading['aesop-town-mouse']?.heard));
+  await go(page, '#/story/aesop-town-mouse/do');
+  ok('a story has seven linked exercises', (await page.$$('.extile')).length >= 6);
+  await page.click('.extile >> nth=0'); await page.waitForTimeout(400);
+  for (let i = 0; i < 6; i++) { const a = await page.evaluate(() => { const r = window.__bz.S.run; return r?.mode === 'ex' ? r.items[r.i]?.answer : null; }); if (a == null) break; await page.keyboard.press(String(a + 1)); await page.waitForTimeout(1150); }
+  ok('passing a story’s questions passes its Reading stop', await page.evaluate(() => window.__bz.S.h.kids[0].stops['rd-aesop-town-mouse']?.passed === true));
+  ok('…and the exercise shows as done', await page.evaluate(() => !!window.__bz.S.h.kids[0].reading['aesop-town-mouse']?.ex?.understand));
 
   /* the grown-ups' page needs the PIN; the PIN is stored hashed */
   await go(page, '#/grownups');

@@ -72,10 +72,28 @@ WORLDS = {
 }
 
 JOBS = {}
+# The Atlas of English: one painted land where each strand is a PLACE. Described, never named (a named
+# place gets lettered). The app draws the road, the pins and every word on top (views/atlas.js ATLAS_PINS,
+# measured against this painting — repaint it, re-measure).
+JOBS['atlas'] = (PLACE.replace('A wide panorama', 'A storybook map-painting seen from high above at a gentle angle') + ' '
+  "An imaginary green island land with seven clearly separate places spread across it, joined by one pale winding path: "
+  "bottom left, a flower garden at the edge of a fairy-tale wood with a stone well and giant red toadstools; "
+  "lower centre, a stone monastery with arched windows and a cloister; "
+  "upper left, a tall old townhouse with many lit windows and chimneys among a few rooftops; "
+  "right, a misty lake among soft green hills with a little boathouse and daffodils; "
+  "centre, a square of pale marble with columns and broad steps; "
+  "upper right, a round wooden open-air playhouse with pennants on its thatched roof; "
+  "top centre, an old grey stone castle on a hill with a windmill. "
+  "Sea around the edges, small boats, trees, fields, soft clouds. Leave open grass between the places. "
+  "Warm, bright, inviting, like the endpaper map of a classic children's book.", '16:9')
+
+NIGHT_REF_ATLAS = True
 for k, v in WORLDS.items():
     JOBS[f'w-{k}'] = (PLACE + ' ' + v, '21:9')
     JOBS[f'w-{k}-night'] = (NIGHT, '21:9')
     NIGHT_REF[f'w-{k}-night'] = os.path.join(RAW, f'w-{k}.png')
+JOBS['atlas-night'] = (NIGHT.replace('No people, no animals, no frame.', 'Keep it a map-painting seen from above. No people, no frame.'), '16:9')
+NIGHT_REF['atlas-night'] = os.path.join(RAW, 'atlas.png')
 
 # The mascot: a fox with a quill (owner's pick, 2 Oct 2026). Six poses on flat magenta so
 # process.py --mascot keys them to alpha. The first pose is the model; the rest pass it as --ref.
@@ -131,7 +149,15 @@ MEDALS = {
 }
 for k, v in MEDALS.items(): JOBS[k] = (MEDAL_STYLE + v, '1:1')
 
-GROUPS = {'worlds': [k for k in JOBS if k.startswith('w-')], 'avatars': [k for k in JOBS if k.startswith('av-')],
+# Story paintings: every passage's `paint` (and `paint2`) and every Alice chapter's, read from the data
+# so a story and its picture cannot drift (tools/art/story-prompts.mjs writes the JSON).
+STORY_STYLE = ("A storybook illustration for a classic children's book, in warm hand-painted watercolour and gouache with "
+               "fine ink line, gentle light, rich period detail, kind faces, one continuous full-bleed scene, 16:9. "
+               "No frame, no border. " + NO_TEXT + " The scene: ")
+_sp = os.path.join(HERE, 'story-prompts.json')
+if os.path.exists(_sp):
+    for k, v in json.load(open(_sp)).items(): JOBS[k] = (STORY_STYLE + v, '16:9')
+GROUPS = {'stories': [k for k in JOBS if k.startswith('story-')], 'book': [k for k in JOBS if k.startswith('book-')], 'atlas': ['atlas', 'atlas-night'], 'worlds': [k for k in JOBS if k.startswith('w-')], 'avatars': [k for k in JOBS if k.startswith('av-')],
           'medals': [k for k in JOBS if k.startswith('medal-')], 'mascot': [k for k in JOBS if k.startswith('mascot-') and k != 'mascot-wave'] + ['icon']}
 
 

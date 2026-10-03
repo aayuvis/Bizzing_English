@@ -1,0 +1,642 @@
+{
+"bk/alice-1-0": [
+71740,
+"7f92f368b3"
+],
+"bk/alice-1-1": [
+62230,
+"40e7ba4c98"
+],
+"bk/alice-1-2": [
+72220,
+"a35ecd85ca"
+],
+"bk/alice-1-3": [
+57530,
+"c123b2412c"
+],
+"bk/alice-1-4": [
+42620,
+"cbe5151f2f"
+],
+"bk/alice-1-5": [
+64489,
+"463d5e1a7b"
+],
+"bk/alice-1-6": [
+67390,
+"5d60491d5c"
+],
+"bk/alice-1-7": [
+60700,
+"2d56ed5157"
+],
+"bk/alice-1-8": [
+82510,
+"e31765ea78"
+],
+"bk/alice-10-0": [
+41930,
+"c4f6a68359"
+],
+"bk/alice-10-1": [
+78020,
+"1bcc4abbaa"
+],
+"bk/alice-10-2": [
+77260,
+"e851e075ae"
+],
+"bk/alice-10-3": [
+99479,
+"7062bdf221"
+],
+"bk/alice-10-4": [
+92930,
+"265f09274a"
+],
+"bk/alice-10-5": [
+92930,
+"6bc38ab016"
+],
+"bk/alice-10-6": [
+70150,
+"cf98c23cdb"
+],
+"bk/alice-10-7": [
+74420,
+"c6fac61ac4"
+],
+"bk/alice-11-0": [
+36220,
+"b4e037e071"
+],
+"bk/alice-11-1": [
+44420,
+"cde91464cf"
+],
+"bk/alice-11-2": [
+67460,
+"1d13af4714"
+],
+"bk/alice-11-3": [
+66770,
+"e8689ae29c"
+],
+"bk/alice-11-4": [
+93410,
+"213aa59480"
+],
+"bk/alice-11-5": [
+76920,
+"a0c1689703"
+],
+"bk/alice-11-6": [
+64849,
+"a9d9dc4d89"
+],
+"bk/alice-11-7": [
+85130,
+"39a65d52c2"
+],
+"bk/alice-12-0": [
+88030,
+"e13b042310"
+],
+"bk/alice-12-1": [
+85270,
+"bb799535c0"
+],
+"bk/alice-12-2": [
+88780,
+"2c0f9a7e97"
+],
+"bk/alice-12-3": [
+64150,
+"76a79c86e8"
+],
+"bk/alice-12-4": [
+94180,
+"cba0c4b116"
+],
+"bk/alice-12-5": [
+64989,
+"a0cc24c55c"
+],
+"bk/alice-12-6": [
+58850,
+"9626ecec02"
+],
+"bk/alice-12-7": [
+57310,
+"36cd89dd39"
+],
+"bk/alice-2-0": [
+56640,
+"4c14d9baa6"
+],
+"bk/alice-2-1": [
+37390,
+"8300624f96"
+],
+"bk/alice-2-2": [
+72430,
+"4ef42f2bac"
+],
+"bk/alice-2-3": [
+67680,
+"3c4182a20a"
+],
+"bk/alice-2-4": [
+97200,
+"2aaa4cf269"
+],
+"bk/alice-2-5": [
+64440,
+"77cc869eb8"
+],
+"bk/alice-2-6": [
+66980,
+"f91052c195"
+],
+"bk/alice-2-7": [
+39720,
+"dc69f8d5ec"
+],
+"bk/alice-2-8": [
+89690,
+"fbe6f0efd3"
+],
+"bk/alice-3-0": [
+56640,
+"59e6e1a2e6"
+],
+"bk/alice-3-1": [
+81050,
+"78565172d6"
+],
+"bk/alice-3-2": [
+45790,
+"84042c2e4f"
+],
+"bk/alice-3-3": [
+58150,
+"e3853d19da"
+],
+"bk/alice-3-4": [
+66290,
+"aac3f2d2c3"
+],
+"bk/alice-3-5": [
+47660,
+"3238a0d91d"
+],
+"bk/alice-3-6": [
+40420,
+"a79b9d05ae"
+],
+"bk/alice-3-7": [
+90500,
+"cb1859936d"
+],
+"bk/alice-4-0": [
+84170,
+"2fd1debb18"
+],
+"bk/alice-4-1": [
+61320,
+"e4e21320fc"
+],
+"bk/alice-4-2": [
+58490,
+"45ab961e99"
+],
+"bk/alice-4-3": [
+63890,
+"fb21e1864c"
+],
+"bk/alice-4-4": [
+53040,
+"e46d76c8b6"
+],
+"bk/alice-4-5": [
+65180,
+"d53b66480a"
+],
+"bk/alice-4-6": [
+106990,
+"7287792d57"
+],
+"bk/alice-4-7": [
+82660,
+"ffc3d34bf5"
+],
+"bk/alice-4-9": [
+69960,
+"328c535ae6"
+],
+"bk/alice-5-0": [
+67870,
+"22da7b50f9"
+],
+"bk/alice-5-1": [
+72770,
+"b2176a0eae"
+],
+"bk/alice-5-2": [
+77620,
+"5c5e495846"
+],
+"bk/alice-5-3": [
+60700,
+"a8fb6962db"
+],
+"bk/alice-5-4": [
+71950,
+"7d7338f47a"
+],
+"bk/alice-5-5": [
+64560,
+"9123133c56"
+],
+"bk/alice-5-6": [
+67870,
+"18adb704ee"
+],
+"bk/alice-5-7": [
+80020,
+"eb431c61b7"
+],
+"bk/alice-5-8": [
+42000,
+"9fbaa653f1"
+],
+"bk/alice-6-0": [
+67870,
+"d7b183bbea"
+],
+"bk/alice-6-1": [
+107140,
+"13a5dc6e52"
+],
+"bk/alice-6-2": [
+78170,
+"f07c186945"
+],
+"bk/alice-6-3": [
+59810,
+"32ea514c30"
+],
+"bk/alice-6-4": [
+60580,
+"8914d3f08d"
+],
+"bk/alice-6-5": [
+87670,
+"edf2dec442"
+],
+"bk/alice-6-6": [
+69670,
+"710301d60c"
+],
+"bk/alice-6-7": [
+82510,
+"f7a40d0137"
+],
+"bk/alice-6-8": [
+32900,
+"41c00769be"
+],
+"bk/alice-6-9": [
+77740,
+"f2d3ee3cd1"
+],
+"bk/alice-7-0": [
+58850,
+"f07a291a70"
+],
+"bk/alice-7-1": [
+74930,
+"f9754df95b"
+],
+"bk/alice-7-2": [
+84310,
+"3abb98b083"
+],
+"bk/alice-7-3": [
+78580,
+"c0d2042aaf"
+],
+"bk/alice-7-4": [
+77740,
+"a5b19c6d21"
+],
+"bk/alice-7-5": [
+69600,
+"df9e5d47b7"
+],
+"bk/alice-7-6": [
+69960,
+"c6d9108388"
+],
+"bk/alice-7-7": [
+96500,
+"c23a46aabf"
+],
+"bk/alice-7-8": [
+66020,
+"680412a1d0"
+],
+"bk/alice-8-0": [
+98300,
+"2cbc3952a2"
+],
+"bk/alice-8-1": [
+87260,
+"c0b5c5037c"
+],
+"bk/alice-8-2": [
+112870,
+"d53cea8de4"
+],
+"bk/alice-8-3": [
+74570,
+"d69be8fef7"
+],
+"bk/alice-8-4": [
+58370,
+"1b0bcea1e3"
+],
+"bk/alice-8-5": [
+68570,
+"85d2c55cb0"
+],
+"bk/alice-8-6": [
+69050,
+"dccc773be0"
+],
+"bk/alice-8-7": [
+53880,
+"bbd5f139b2"
+],
+"bk/alice-8-8": [
+77740,
+"fc6689a04a"
+],
+"bk/alice-9-0": [
+84650,
+"b05abc842c"
+],
+"bk/alice-9-1": [
+65540,
+"bff23609fa"
+],
+"bk/alice-9-2": [
+64220,
+"b1b2e83e18"
+],
+"bk/alice-9-3": [
+66140,
+"28f8ad93f6"
+],
+"bk/alice-9-4": [
+55870,
+"bf83dd8e04"
+],
+"bk/alice-9-5": [
+51940,
+"512ee0b56c"
+],
+"bk/alice-9-6": [
+73390,
+"85c85652fe"
+],
+"bk/alice-9-7": [
+85610,
+"342990558d"
+],
+"bk/alice-9-8": [
+70850,
+"e8b836f74e"
+],
+"bk/alice-9-9": [
+54980,
+"f91952238a"
+],
+"stop/la1-origin-learn": [
+11230,
+"50a638c762"
+],
+"stop/la1-origin-story": [
+6670,
+"35ce9b32b8"
+],
+"stop/s1-adj-learn": [
+6820,
+"286b3190fb"
+],
+"stop/s1-adj-story": [
+5570,
+"3bc0bd7250"
+],
+"stop/s1-noun-learn": [
+10900,
+"3956bda27d"
+],
+"stop/s1-noun-story": [
+5570,
+"39631e5140"
+],
+"stop/s1-verb-learn": [
+7920,
+"a3bb485c3e"
+],
+"stop/s1-verb-story": [
+5090,
+"cf8bd74524"
+],
+"stop/s2-split-learn": [
+8880,
+"b5aca77cb9"
+],
+"stop/s2-split-story": [
+4270,
+"0c9412cce1"
+],
+"stop/s2-subject-learn": [
+6960,
+"c5e33e30cf"
+],
+"stop/s2-subject-story": [
+4270,
+"f3c3c37aaa"
+],
+"stop/s3-main-learn": [
+8330,
+"736495f905"
+],
+"stop/s3-main-story": [
+5930,
+"a689097050"
+],
+"stop/s3-pc-learn": [
+8140,
+"7cc6ce8d20"
+],
+"stop/s3-pc-story": [
+5380,
+"d42e200791"
+],
+"stop/s4-combine-learn": [
+8540,
+"bf6e44f36b"
+],
+"stop/s4-combine-story": [
+4270,
+"5b55d7e525"
+],
+"stop/s4-conj-learn": [
+9980,
+"3d628728f5"
+],
+"stop/s4-conj-story": [
+5570,
+"eb85aa800f"
+],
+"stop/s5-caps-learn": [
+8470,
+"aa4db981fc"
+],
+"stop/s5-caps-story": [
+4820,
+"387171aafa"
+],
+"stop/s5-comma-learn": [
+7920,
+"ea48b4040b"
+],
+"stop/s5-comma-story": [
+3650,
+"db33f67c70"
+],
+"stop/s5-end-learn": [
+7780,
+"77acd96f62"
+],
+"stop/s5-end-story": [
+4320,
+"1bdda15ca9"
+],
+"stop/s5-order-learn": [
+8060,
+"0fd1bdcefb"
+],
+"stop/s5-order-story": [
+4460,
+"f5e5187edf"
+],
+"stop/sp1-aloud-learn": [
+13700,
+"c96b32d9dd"
+],
+"stop/sp1-aloud-story": [
+4200,
+"0f7bc3233e"
+],
+"stop/w1-build-learn": [
+10940,
+"8ffdae28d1"
+],
+"stop/w1-build-story": [
+4750,
+"cc718a9d47"
+],
+"stop/w1-odd-learn": [
+8060,
+"5c959804dd"
+],
+"stop/w1-odd-story": [
+5780,
+"3f403a4a43"
+],
+"stop/w1-rhyme-learn": [
+9100,
+"00546e352a"
+],
+"stop/w1-rhyme-story": [
+6260,
+"36576676ef"
+],
+"stop/w2-meaning-learn": [
+7780,
+"c8068e7282"
+],
+"stop/w2-meaning-story": [
+5570,
+"e4059fe91e"
+],
+"stop/w2-word-learn": [
+6670,
+"e36e0ff579"
+],
+"stop/w2-word-story": [
+3170,
+"61b1c41215"
+],
+"stop/w3-make-learn": [
+7990,
+"4e0020c105"
+],
+"stop/w3-make-story": [
+4200,
+"a8166a1dc0"
+],
+"stop/w3-meaning-learn": [
+9290,
+"5100d61241"
+],
+"stop/w3-meaning-story": [
+5860,
+"b1061a77f7"
+],
+"stop/w4-make-learn": [
+8400,
+"b011757de8"
+],
+"stop/w4-make-story": [
+4200,
+"de070e3017"
+],
+"stop/w4-meaning-learn": [
+13660,
+"5724c41198"
+],
+"stop/w4-meaning-story": [
+5570,
+"d6a4815cb3"
+],
+"stop/w5-find-learn": [
+7990,
+"a7cab83ce0"
+],
+"stop/w5-find-story": [
+4460,
+"a67fa468c8"
+],
+"stop/w5-root-learn": [
+7990,
+"c72a0e0222"
+],
+"stop/w5-root-story": [
+6340,
+"f347fb145f"
+],
+"stop/wr1-copy-learn": [
+9910,
+"9e52a42760"
+],
+"stop/wr1-copy-story": [
+5930,
+"c3a7271682"
+]
+}

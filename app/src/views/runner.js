@@ -15,6 +15,7 @@ import { sfx } from '../sound.js';
 import { speak, stop as stopVoice } from '../voice.js';
 import { stopsOf } from '../next.js';
 import { readingStop, passage, loadPassages } from '../reading.js';
+import { finishExercise, finishChapterExercise } from './stories.js';
 
 const PHASES = ['story', 'learn', 'turn', 'check', 'done'];
 const WORDY = /^(onset|def2word|word2def|prefixMake|suffixMake|origin)$/;
@@ -43,7 +44,7 @@ export async function openCheck(ids) {
 
 function itemsFor(id, n, salt) {
   const rs = readingStop(id);
-  if (rs) return passageItems(passage(rs.passage)).slice(0, n);
+  if (rs) return passageItems(rs.questions ? { id, questions: rs.questions } : passage(rs.passage)).slice(0, n).map((it) => ({ ...it, stop: id }));
   const st = stopById(id); if (!st) return [];
   return draw(st.kind, n, ctxOf(), salt).map((it) => ({ ...it, stop: id }));
 }
@@ -62,6 +63,8 @@ export function runnerView() {
   const r = S.run;
   if (!r || r.error) return empty('oops', 'That stop could not be found.', link('Back to the Atlas', '#/atlas'));
   if (r.mode === 'check') return checkView();
+  if (r.mode === 'ex') return pageHead({ title: r.name, sub: r.title, back: { label: 'Exercises', href: r.chapter ? `#/whole/alice/${r.chapter}/do` : `#/story/${r.pid}/do` } })
+    + `<div class="runner"><div class="phases">${r.items.map((_, i) => `<i class="${i <= r.i ? 'on' : ''}"></i>`).join('')}</div>${itemView(r)}</div>`;
   const st = r.st, sd = strand(st.strand), lv = level(st.strand, st.level);
   const head = pageHead({ title: st.title, sub: `${sd.title} · level ${st.level} · ${lv.title}`, back: { label: sd.title, href: `#/atlas/${st.strand}` } });
   const ph = `<div class="phases" aria-hidden="true">${['story', 'learn', 'turn', 'check'].map((p, i) => `<i class="${PHASES.indexOf(r.phase) >= i ? 'on' : ''}"></i>`).join('')}</div>`;
@@ -152,7 +155,7 @@ function answer(resp) {
     setTimeout(() => { if (S.run === r && r.state?.done && r.state.ok) advance(); }, 950);
   } else {
     sfx('wrong');
-    if (r.phase === 'check' || r.mode === 'check') { k.misses.push({ stop: it.stop || r.id, item: it.id, at: Date.now() }); if (k.misses.length > 200) k.misses.splice(0, k.misses.length - 200); }
+    if (r.phase === 'check' || r.mode === 'check') { k.misses.push({ stop: it.stop || r.id || (r.chapter ? `bk-alice-${r.chapter}` : r.pid && r.ex === 'understand' ? 'rd-' + r.pid : null), item: it.id, at: Date.now() }); if (k.misses.length > 200) k.misses.splice(0, k.misses.length - 200); }
   }
   if (r.byStop && it.stop) (r.byStop[it.stop] ||= [0, 0])[1]++;
   save(); render();
@@ -162,6 +165,7 @@ function advance() {
   const r = S.run; r.i++; r.state = null; r.hintN = 0;
   if (r.i < r.items.length) { render(); focusFirst(); return; }
   if (r.mode === 'check') return finishCheck();
+  if (r.mode === 'ex') return r.chapter ? finishChapterExercise() : finishExercise();
   if (r.phase === 'turn') { start('check'); render(); focusFirst(); return; }
   finishStop();
 }
@@ -219,7 +223,7 @@ export const RUN_ACTIONS = {
 
 /* Keyboard: 1–4 pick; ←/→ walk the gaps or tokens; Space toggles; Enter checks or moves on. */
 export function runKey(e) {
-  const r = S.run; if (!r || !r.items?.length || !['turn', 'check'].includes(r.phase)) return false;
+  const r = S.run; if (!r || !r.items?.length || !['turn', 'check'].includes(r.phase) || !/^(stop|check|ex)$/.test(r.mode)) return false;
   const it = r.items[r.i]; if (!it) return false;
   if (e.target.tagName === 'TEXTAREA') { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); r.state?.done ? (!r.state.ok && advance()) : RUN_ACTIONS.submit(); return true; } return false; }
   if (r.state?.done) { if (e.key === 'Enter' && !r.state.ok) { e.preventDefault(); advance(); return true; } return false; }

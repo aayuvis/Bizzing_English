@@ -8,9 +8,10 @@ import { esc, icon, pageHead, link, empty, btn, plural } from '../ui.js';
 import { WORKS, PASSAGES } from '../data/library.js';
 import { cleared, shippable, shippedLines, levelOf } from '../reading.js';
 import { lookup, lexReady } from '../lexicon.js';
+import { storyRoom, storyArt } from './stories.js';
 import { stepOf } from '../mastery.js';
 
-const NAV = (cur) => [['books', 'Books', 'book'], ['words', 'Words', 'key'], ['poems', 'Poems', 'quill'], ['speeches', 'Speeches', 'lectern'], ['authors', 'Authors', 'user']]
+const NAV = (cur) => [['stories', 'Stories', 'play'], ['books', 'Books', 'book'], ['words', 'Words', 'key'], ['poems', 'Poems', 'quill'], ['speeches', 'Speeches', 'lectern'], ['authors', 'Authors', 'user']]
   .map(([id, label, ic]) => ({ label, icon: ic, href: `#/library/${id}`, active: id === cur }));
 const SHELF = { fable: 'Fables and fairy tales', children: 'Children’s classics', novel: 'Novels and stories', poetry: 'Poetry', drama: 'Drama', speech: 'Speeches', essay: 'Essays' };
 const COLOURS = ['#7a3b2e', '#2f5d50', '#3b4a7a', '#7a5a1e', '#5b3a6e', '#2e5b7a', '#7a2e4a', '#4a6a2e'];
@@ -22,11 +23,12 @@ function spine(w) {
   return `<a class="spine${w.held ? '' : ' modern'}" href="#/book/${w.id}" style="--c:${col(w.id)};--h:${h}px;--w:${wd}px" aria-label="${esc(w.title)} by ${esc(w.author)}">${esc(t.length > 52 ? t.slice(0, 50) + '…' : t)}</a>`;
 }
 
-export function libraryView(tab = 'books') {
+export function libraryView(tab = 'stories') {
   const head = (sub, strip) => pageHead({ title: 'The Library', sub, back: { label: 'Home', href: '#/home' }, nav: NAV(tab), strip });
   const k = kid();
+  if (tab === 'stories') return pageHead({ title: 'The Library', sub: 'stories from the classics, read aloud', nav: NAV(tab) }) + storyRoom();
   if (tab === 'words') return head('every word you have met') + wordsTab(k);
-  if (tab === 'poems') return head('poems to read and say aloud') + listWorks(WORKS.filter((w) => w.shelf === 'poetry'), k, true);
+  if (tab === 'poems') return head('poems to hear and say aloud') + `<div class="rail wrap">${PASSAGES.filter((p) => shippable(p) && (p.kind === 'verse' || WORKS.find((w) => w.id === p.work)?.shelf === 'poetry')).map((p) => `<a class="scard" href="#/story/${p.id}"><span class="pic" style="background-image:url('${storyArt(p.id)}')"></span><span class="nm">${esc(p.title)}</span><span class="hk">${esc(p.hook || '')}</span><span class="meta">${esc(WORKS.find((w) => w.id === p.work)?.author || '')}</span></a>`).join('')}</div>` + listWorks(WORKS.filter((w) => w.shelf === 'poetry'), k, true);
   if (tab === 'speeches') return head('great speeches, and the art of them') + listWorks(WORKS.filter((w) => w.shelf === 'speech'), k, true);
   if (tab === 'authors') return head('who wrote them') + authorsTab();
   const met = WORKS.filter((w) => PASSAGES.some((p) => p.work === w.id && k.stops['rd-' + p.id]?.passed)).length;
@@ -72,12 +74,12 @@ export function bookView(id) {
   const rights = `<p class="note"><b>Rights.</b> US: ${esc(w.rights.us)} · UK: ${esc(w.rights.uk)} · India: ${esc(w.rights.in)} — ${esc(w.rights.basis)} (checked ${esc(w.rights.checked)}).</p>`;
   const passages = !w.held ? `<p class="note">This is a modern book: we tell you about it in our own words. Look for it in a library or bookshop.</p>`
     : !ok ? `<p class="note">The rights in one of our three countries are still being checked, so its passages wait until they are confirmed.</p>`
-      : ps.length ? `<div class="stoplist">${ps.map((p) => `<a class="stoprow${k.stops['rd-' + p.id]?.passed ? ' passed' : ''}" href="#/read/${p.id}"><span class="st">${icon(k.stops['rd-' + p.id]?.passed ? 'check' : 'book')}</span><span><b>${esc(p.title)}</b><small>ages ${['', '6–7', '8–10', '11–14'][p.band]} · Reading level ${levelOf(p)}${stepOf(k, 'rd-' + p.id) >= 2 ? ' · understood' : ''}</small></span><span>${icon('next')}</span></a>`).join('')}</div>`
+      : ps.length ? `<div class="stoplist">${ps.map((p) => `<a class="stoprow${k.stops['rd-' + p.id]?.passed ? ' passed' : ''}" href="#/story/${p.id}"><span class="st">${icon(k.stops['rd-' + p.id]?.passed ? 'check' : 'book')}</span><span><b>${esc(p.title)}</b><small>ages ${['', '6–7', '8–10', '11–14'][p.band]} · Reading level ${levelOf(p)}${stepOf(k, 'rd-' + p.id) >= 2 ? ' · understood' : ''}</small></span><span>${icon('next')}</span></a>`).join('')}</div>`
         : `<p class="note">No passages from this book yet.</p>`;
   return pageHead({ title: w.title, sub: `${w.author} · ${w.year}`, back: { label: 'Library', href: '#/library' } }) + `<div class="stack">
     <div class="card bookcard"><div class="bookcover" style="--c:${col(w.id)}">${esc(w.title)}</div><div><span class="kick">${esc(w.era)}</span><p style="font-size:17px;margin:4px 0 8px"><b>${esc(w.why)}</b></p><p style="margin:0">${esc(w.summary)}</p>
       ${w.needsReview ? `<p class="tag warn" style="margin-top:10px">${icon('help')}A note for grown-ups</p><p class="note">${esc(w.reviewNote || 'This book carries attitudes of its time. A named reviewer has not yet cleared it.')}</p>` : ''}</div></div>
-    <div class="card"><h3>Read</h3>${passages}</div>
+    <div class="card"><h3>Read</h3>${id === 'alice' ? `<p>${link('Read the whole book, chapter by chapter', '#/whole/alice', { ic: 'book' })}</p>` : ''}${passages}</div>
     ${lines.length ? `<div class="card lines"><h3>Famous lines</h3>${lines.map((l) => `<blockquote>${esc(l.text)}<br><small class="muted" style="font:13px var(--bz-body)">— ${esc(l.who)}</small></blockquote>`).join('')}</div>` : ''}
     ${liked.length ? `<div class="card"><h3>If you liked this…</h3><div class="row">${liked.map((x) => `<a class="bz-chip" href="#/book/${x.id}">${esc(x.title)}</a>`).join('')}</div></div>` : ''}
     <div class="card">${rights}<p class="source">${(w.sources || []).map(esc).join(' · ')}</p></div></div>`;

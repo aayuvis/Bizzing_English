@@ -17,6 +17,19 @@ The promise: *a child who reads the great books, writes a sentence worth reading
 
 **Mascot:** Quill, a fox with a quill (the owner's pick, 2 Oct 2026). Six poses in `app/public/mascot/`.
 
+**The Library is a story room** (owner, 3 Oct: "like the Stories section of Bizzing India, with narration
+and then exercises linked to it"). Every passage is told scene by scene over its painting in the family
+narrator's voice (`en-IN-Chirp3-HD-Laomedeia` 1.02 — recorded narration approved by the owner), words lit
+as she reads; then seven exercises built FROM that story: understand it (passes the Reading stop), its
+words (Bee's meanings), the author's commas, rebuild the author's sentence, copy a line, say it aloud on
+the Stage, talk about it (never marked). The whole book (Alice) is told the same way, a chapter at a
+time, with a bookmark, the story so far, and the people met so far.
+
+**The Atlas is a painted land** (`art/atlas.webp`, by day and night): each strand a place, with pins,
+progress rings and the child's avatar where they are next; each strand opens onto a road of ten stations
+with every stop a starred stepping stone. `ATLAS_PINS` in `views/atlas.js` are measured against the
+painting — repaint it, re-measure.
+
 ## Working style (the user's pace)
 
 Inherited from the family, and it holds here:
@@ -119,6 +132,16 @@ variety bonus (blind until a same-order case was added), phone overflow (the she
 the page through a grid `auto` column), contrast on the paintings, the microphone left on, and a
 third-party font.
 
+## Narration
+
+```bash
+node tools/voice/clips.mjs           # every clip, asked of the data (story scenes, Alice scenes, stop stories)
+python3 tools/voice/tts.py [--only=st/] [--prune]   # key: /root/.gttskey (GTTS_FILE overrides), never in the repo
+```
+Each clip is linted (< −20 dB or < 0.35 s is rejected), written via a temp file, and re-recorded when its
+text changes (the manifest keeps a hash). A sentence too long for the voice is given full stops at its own
+semicolons and commas — for the voice only. No clip: the device's own voice reads it.
+
 ## Rebuild the data
 
 ```bash
@@ -134,7 +157,11 @@ replaces `gh-pages` wholesale and refuses to publish if the staged file count di
 
 ## Where to pick up
 
-1. **Owner decisions still open** (SPEC §16): recorded narration (v1 uses the device's own voice);
+1. **Paint the stories** — the image key's credit ran out on 3 Oct before the 85 story and 12 Alice
+   paintings were made: `node tools/art/story-prompts.mjs && python3 tools/art/gen.py --group stories`
+   (and `--group book`), LOOK at them, then `python3 tools/art/process.py --stories`. Until then each story
+   wears its shelf's world.
+2. **Owner decisions still open** (SPEC §16):
    free vs family plan (as proposed: Word, Sentence and worlds 1–2 free); a 15+ Scholar band;
    domain and trademark checks.
 2. **A named reviewer** for the 10 `needsReview` passages and 14 works; **rights confirmation** for the
