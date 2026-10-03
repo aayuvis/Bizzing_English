@@ -1,0 +1,2435 @@
+const e=[{id:"aesop-town-mouse",work:"aesop",title:"The Town Mouse and the Country Mouse",band:1,kind:"prose",abridged:!1,hook:"A town mouse, a country mouse, and a feast with teeth in it.",text:`Now you must know that a Town Mouse once upon a time went on a visit to his cousin in the country. He was rough and ready, this cousin, but he loved his town friend and made him heartily welcome. Beans and bacon, cheese and bread, were all he had to offer, but he offered them freely. The Town Mouse rather turned up his long nose at this country fare, and said: "I cannot understand, Cousin, how you can put up with such poor food as this, but of course you cannot expect anything better in the country; come you with me and I will show you how to live. When you have been in town a week you will wonder how you could ever have stood a country life." No sooner said than done: the two mice set off for the town and arrived at the Town Mouse's residence late at night. "You will want some refreshment after our long journey," said the polite Town Mouse, and took his friend into the grand dining-room. There they found the remains of a fine feast, and soon the two mice were eating up jellies and cakes and all that was nice. Suddenly they heard growling and barking. "What is that?" said the Country Mouse. "It is only the dogs of the house," answered the other. "Only!" said the Country Mouse. "I do not like that music at my dinner." Just at that moment the door flew open, in came two huge mastiffs, and the two mice had to scamper down and run off. "Good-bye, Cousin," said the Country Mouse, "What! going so soon?" said the other. "Yes," he replied;
+
+"Better beans and bacon in peace than cakes and ale in fear."`,scenes:['Now you must know that a Town Mouse once upon a time went on a visit to his cousin in the country. He was rough and ready, this cousin, but he loved his town friend and made him heartily welcome. Beans and bacon, cheese and bread, were all he had to offer, but he offered them freely. The Town Mouse rather turned up his long nose at this country fare, and said: "I cannot understand, Cousin, how you can put up with such poor food as this, but of course you cannot expect anything better in the country; come you with me and I will show you how to live. When you have been in town a week you will wonder how you could ever have stood a country life."',`No sooner said than done: the two mice set off for the town and arrived at the Town Mouse's residence late at night. "You will want some refreshment after our long journey," said the polite Town Mouse, and took his friend into the grand dining-room. There they found the remains of a fine feast, and soon the two mice were eating up jellies and cakes and all that was nice.`,`Suddenly they heard growling and barking. "What is that?" said the Country Mouse. "It is only the dogs of the house," answered the other. "Only!" said the Country Mouse. "I do not like that music at my dinner." Just at that moment the door flew open, in came two huge mastiffs, and the two mice had to scamper down and run off. "Good-bye, Cousin," said the Country Mouse, "What! going so soon?" said the other. "Yes," he replied;
+
+"Better beans and bacon in peace than cakes and ale in fear."`],fk:4.6,level:4.6,words:290,sentences:20,syllables:356,questions:[{depth:"literal",q:"Where did the Town Mouse go to visit his cousin?",right:"To the country",wrong:["To the seaside","To a castle","To a ship"]},{depth:"literal",q:"What food did the Country Mouse have to offer?",right:"Beans and bacon, cheese and bread",wrong:["Jellies and cakes and ale","Apples, nuts and honey","Fish, rice and warm milk"]},{depth:"literal",q:"What frightened the two mice away from the feast?",right:"Two huge dogs burst in",wrong:["A cat crept up on them","The cook came with a broom","A storm blew in the window"]},{depth:"inferential",q:"Why did the Country Mouse decide to go home?",right:"He would rather eat plain food without fear",wrong:["He did not like the taste of cake","He missed his mother and father","The journey to town was too long"]}],evaluate:"Would you rather live like the Town Mouse or the Country Mouse? Why?",wordBank:["residence","refreshment","mastiffs","scamper","heartily"]},{id:"aesop-lion-mouse",work:"aesop",title:"The Lion and the Mouse",band:1,kind:"prose",abridged:!1,hook:"A lion laughs at a tiny mouse. Then the lion needs help.",text:`Once when a Lion was asleep a little Mouse began running up and down upon him; this soon wakened the Lion, who placed his huge paw upon him, and opened his big jaws to swallow him. "Pardon, O King," cried the little Mouse: "forgive me this time, I shall never forget it: who knows but what I may be able to do you a turn some of these days?" The Lion was so tickled at the idea of the Mouse being able to help him, that he lifted up his paw and let him go. Some time after the Lion was caught in a trap, and the hunters who desired to carry him alive to the King, tied him to a tree while they went in search of a waggon to carry him on. Just then the little Mouse happened to pass by, and seeing the sad plight in which the Lion was, went up to him and soon gnawed away the ropes that bound the King of the Beasts. "Was I not right?" said the little Mouse.
+
+Little friends may prove great friends.`,scenes:['Once when a Lion was asleep a little Mouse began running up and down upon him; this soon wakened the Lion, who placed his huge paw upon him, and opened his big jaws to swallow him. "Pardon, O King," cried the little Mouse: "forgive me this time, I shall never forget it: who knows but what I may be able to do you a turn some of these days?"',"The Lion was so tickled at the idea of the Mouse being able to help him, that he lifted up his paw and let him go.","Some time after the Lion was caught in a trap, and the hunters who desired to carry him alive to the King, tied him to a tree while they went in search of a waggon to carry him on.",`Just then the little Mouse happened to pass by, and seeing the sad plight in which the Lion was, went up to him and soon gnawed away the ropes that bound the King of the Beasts. "Was I not right?" said the little Mouse.
+
+Little friends may prove great friends.`],fk:7.2,level:7.2,words:184,sentences:8,syllables:216,questions:[{depth:"literal",q:"What woke the Lion up?",right:"A little Mouse running over him",wrong:["A hunter blowing a horn","Rain falling on his nose","A bird singing in a tree"]},{depth:"literal",q:"Why did the hunters tie the Lion to a tree?",right:"They went to fetch a waggon for him",wrong:["They wanted to paint his picture","They were waiting for the Mouse","They were too tired to carry him"]},{depth:"literal",q:"How did the Mouse set the Lion free?",right:"It gnawed through the ropes",wrong:["It untied the knots with its paws","It called other lions to help","It frightened the hunters away"]},{depth:"inferential",q:"Why did the Lion let the Mouse go at the start?",right:"The thought of a mouse helping him amused him",wrong:["He was not hungry that day","The Mouse was too quick to catch","He was afraid of the little Mouse"]}],evaluate:"The Lion laughed at the idea that a mouse could help him. Has anyone ever helped you when you did not expect it?",wordBank:["plight","gnawed","waggon","tickled"]},{id:"grimm-elves",work:"grimm",title:"The Elves and the Shoemaker",band:1,kind:"prose",abridged:!1,hook:"A poor shoemaker goes to bed, and wakes to find the work already done.",text:`There was once a shoemaker, who worked very hard and was very honest: but still he could not earn enough to live upon; and at last all he had in the world was gone, save just leather enough to make one pair of shoes.
+
+Then he cut his leather out, all ready to make up the next day, meaning to rise early in the morning to his work. His conscience was clear and his heart light amidst all his troubles; so he went peaceably to bed, left all his cares to Heaven, and soon fell asleep. In the morning after he had said his prayers, he sat himself down to his work; when, to his great wonder, there stood the shoes all ready made, upon the table. The good man knew not what to say or think at such an odd thing happening. He looked at the workmanship; there was not one false stitch in the whole job; all was so neat and true, that it was quite a masterpiece.
+
+The same day a customer came in, and the shoes suited him so well that he willingly paid a price higher than usual for them; and the poor shoemaker, with the money, bought leather enough to make two pairs more. In the evening he cut out the work, and went to bed early, that he might get up and begin betimes next day; but he was saved all the trouble, for when he got up in the morning the work was done ready to his hand. Soon in came buyers, who paid him handsomely for his goods, so that he bought leather enough for four pair more. He cut out the work again overnight and found it done in the morning, as before; and so it went on for some time: what was got ready in the evening was always done by daybreak, and the good man soon became thriving and well off again.
+
+One evening, about Christmas-time, as he and his wife were sitting over the fire chatting together, he said to her, 'I should like to sit up and watch tonight, that we may see who it is that comes and does my work for me.' The wife liked the thought; so they left a light burning, and hid themselves in a corner of the room, behind a curtain that was hung up there, and watched what would happen.`,scenes:["There was once a shoemaker, who worked very hard and was very honest: but still he could not earn enough to live upon; and at last all he had in the world was gone, save just leather enough to make one pair of shoes.","Then he cut his leather out, all ready to make up the next day, meaning to rise early in the morning to his work. His conscience was clear and his heart light amidst all his troubles; so he went peaceably to bed, left all his cares to Heaven, and soon fell asleep. In the morning after he had said his prayers, he sat himself down to his work; when, to his great wonder, there stood the shoes all ready made, upon the table. The good man knew not what to say or think at such an odd thing happening. He looked at the workmanship; there was not one false stitch in the whole job; all was so neat and true, that it was quite a masterpiece.","The same day a customer came in, and the shoes suited him so well that he willingly paid a price higher than usual for them; and the poor shoemaker, with the money, bought leather enough to make two pairs more. In the evening he cut out the work, and went to bed early, that he might get up and begin betimes next day; but he was saved all the trouble, for when he got up in the morning the work was done ready to his hand.","Soon in came buyers, who paid him handsomely for his goods, so that he bought leather enough for four pair more. He cut out the work again overnight and found it done in the morning, as before; and so it went on for some time: what was got ready in the evening was always done by daybreak, and the good man soon became thriving and well off again.","One evening, about Christmas-time, as he and his wife were sitting over the fire chatting together, he said to her, 'I should like to sit up and watch tonight, that we may see who it is that comes and does my work for me.' The wife liked the thought; so they left a light burning, and hid themselves in a corner of the room, behind a curtain that was hung up there, and watched what would happen."],fk:11.9,fkOverride:5,level:5,words:401,sentences:12,syllables:492,questions:[{depth:"literal",q:"How much leather did the shoemaker have left at the start?",right:"Enough for one pair of shoes",wrong:["Enough for ten pairs of shoes","Only a scrap for a shoelace","Enough for a coat and a belt"]},{depth:"literal",q:"What did the shoemaker find on his table in the morning?",right:"A finished pair of shoes",wrong:["A bag of gold coins","A note from a customer","A pile of cut leather"]},{depth:"inferential",q:"Why could the shoemaker buy more leather each time?",right:"Buyers paid him well for the perfect shoes",wrong:["His wife sold her cakes at market","A rich uncle sent him some money","He borrowed it from his neighbour"]},{depth:"literal",q:"Where did the shoemaker and his wife hide to watch?",right:"Behind a curtain in a corner",wrong:["Under the shoemaker's bench","Inside a big cupboard","Out in the snowy garden"]},{depth:"inferential",q:"What kind of man was the shoemaker?",right:"Honest and hard-working",wrong:["Lazy and careless","Greedy and unkind","Clever but dishonest"]}],evaluate:"Who do you think is making the shoes? What makes you think so?",wordBank:["workmanship","handsomely","honest","customer","leather","curtain"]},{id:"justso-elephant",work:"justso",title:"The Elephant's Child asks a question",band:1,kind:"prose",abridged:!1,hook:"A young elephant with a short nose asks one question too many.",text:`IN the High and Far-Off Times the Elephant, O Best Beloved, had no trunk. He had only a blackish, bulgy nose, as big as a boot, that he could wriggle about from side to side; but he couldn't pick up things with it. But there was one Elephant--a new Elephant--an Elephant's Child--who was full of 'satiable curtiosity, and that means he asked ever so many questions. And he lived in Africa, and he filled all Africa with his 'satiable curtiosities. He asked his tall aunt, the Ostrich, why her tail-feathers grew just so, and his tall aunt the Ostrich spanked him with her hard, hard claw. He asked his tall uncle, the Giraffe, what made his skin spotty, and his tall uncle, the Giraffe, spanked him with his hard, hard hoof. And still he was full of 'satiable curtiosity! He asked his broad aunt, the Hippopotamus, why her eyes were red, and his broad aunt, the Hippopotamus, spanked him with her broad, broad hoof; and he asked his hairy uncle, the Baboon, why melons tasted just so, and his hairy uncle, the Baboon, spanked him with his hairy, hairy paw. And still he was full of 'satiable curtiosity! He asked questions about everything that he saw, or heard, or felt, or smelt, or touched, and all his uncles and his aunts spanked him. And still he was full of 'satiable curtiosity!
+
+One fine morning in the middle of the Precession of the Equinoxes this 'satiable Elephant's Child asked a new fine question that he had never asked before. He asked, 'What does the Crocodile have for dinner?' Then everybody said, 'Hush!' in a loud and dretful tone, and they spanked him immediately and directly, without stopping, for a long time.
+
+By and by, when that was finished, he came upon Kolokolo Bird sitting in the middle of a wait-a-bit thorn-bush, and he said, 'My father has spanked me, and my mother has spanked me; all my aunts and uncles have spanked me for my 'satiable curtiosity; and still I want to know what the Crocodile has for dinner!'
+
+Then Kolokolo Bird said, with a mournful cry, 'Go to the banks of the great grey-green, greasy Limpopo River, all set about with fever-trees, and find out.'`,scenes:["IN the High and Far-Off Times the Elephant, O Best Beloved, had no trunk. He had only a blackish, bulgy nose, as big as a boot, that he could wriggle about from side to side; but he couldn't pick up things with it. But there was one Elephant--a new Elephant--an Elephant's Child--who was full of 'satiable curtiosity, and that means he asked ever so many questions. And he lived in Africa, and he filled all Africa with his 'satiable curtiosities.","He asked his tall aunt, the Ostrich, why her tail-feathers grew just so, and his tall aunt the Ostrich spanked him with her hard, hard claw. He asked his tall uncle, the Giraffe, what made his skin spotty, and his tall uncle, the Giraffe, spanked him with his hard, hard hoof. And still he was full of 'satiable curtiosity!","He asked his broad aunt, the Hippopotamus, why her eyes were red, and his broad aunt, the Hippopotamus, spanked him with her broad, broad hoof; and he asked his hairy uncle, the Baboon, why melons tasted just so, and his hairy uncle, the Baboon, spanked him with his hairy, hairy paw. And still he was full of 'satiable curtiosity! He asked questions about everything that he saw, or heard, or felt, or smelt, or touched, and all his uncles and his aunts spanked him. And still he was full of 'satiable curtiosity!","One fine morning in the middle of the Precession of the Equinoxes this 'satiable Elephant's Child asked a new fine question that he had never asked before. He asked, 'What does the Crocodile have for dinner?' Then everybody said, 'Hush!' in a loud and dretful tone, and they spanked him immediately and directly, without stopping, for a long time.",`By and by, when that was finished, he came upon Kolokolo Bird sitting in the middle of a wait-a-bit thorn-bush, and he said, 'My father has spanked me, and my mother has spanked me; all my aunts and uncles have spanked me for my 'satiable curtiosity; and still I want to know what the Crocodile has for dinner!'
+
+Then Kolokolo Bird said, with a mournful cry, 'Go to the banks of the great grey-green, greasy Limpopo River, all set about with fever-trees, and find out.'`],fk:9.5,fkOverride:5,level:5,words:375,sentences:17,syllables:523,questions:[{depth:"literal",q:"What did the Elephant have before he had a trunk?",right:"A bulgy nose as big as a boot",wrong:["A long spotted neck","A curly pink snout","Two noses side by side"]},{depth:"literal",q:"What did the Elephant's Child's relations do whenever he asked a question?",right:"They spanked him",wrong:["They gave him a bun","They sent him to bed","They laughed at him"]},{depth:"literal",q:"Which new question had he never asked before?",right:"What the Crocodile has for dinner",wrong:["Why the sky is so very blue","Where the Limpopo River ends","How the Giraffe got so tall"]},{depth:"inferential",q:"What does 'satiable curtiosity mean?",right:"He asked a great many questions",wrong:["He was always very hungry","He liked to play tricks","He was afraid of everything"]},{depth:"literal",q:"Who told him where to go to find out?",right:"Kolokolo Bird",wrong:["The Ostrich","The Baboon","The Hippopotamus"]}],evaluate:"Is it good to be as curious as the Elephant's Child? Was it fair that he was spanked for asking questions?",wordBank:["wriggle","bulgy","mournful","equinoxes"]},{id:"stevenson-shadow",work:"garden-verses",title:"My Shadow",band:1,kind:"verse",abridged:!1,hook:"Somebody follows you everywhere, copies everything, and is sometimes very tall.",text:`I have a little shadow that goes in and out with me,
+And what can be the use of him is more than I can see.
+He is very, very like me from the heels up to the head;
+And I see him jump before me, when I jump into my bed.
+
+The funniest thing about him is the way he likes to grow--
+Not at all like proper children, which is always very slow;
+For he sometimes shoots up taller like an india-rubber ball,
+And he sometimes goes so little that there's none of him at all.
+
+He hasn't got a notion of how children ought to play,
+And can only make a fool of me in every sort of way.
+He stays so close behind me, he's a coward you can see;
+I'd think shame to stick to nursie as that shadow sticks to me!
+
+One morning, very early, before the sun was up,
+I rose and found the shining dew on every buttercup;
+But my lazy little shadow, like an arrant sleepy-head,
+Had stayed at home behind me and was fast asleep in bed.`,scenes:[`I have a little shadow that goes in and out with me,
+And what can be the use of him is more than I can see.
+He is very, very like me from the heels up to the head;
+And I see him jump before me, when I jump into my bed.`,`The funniest thing about him is the way he likes to grow--
+Not at all like proper children, which is always very slow;
+For he sometimes shoots up taller like an india-rubber ball,
+And he sometimes goes so little that there's none of him at all.`,`He hasn't got a notion of how children ought to play,
+And can only make a fool of me in every sort of way.
+He stays so close behind me, he's a coward you can see;
+I'd think shame to stick to nursie as that shadow sticks to me!`,`One morning, very early, before the sun was up,
+I rose and found the shining dew on every buttercup;
+But my lazy little shadow, like an arrant sleepy-head,
+Had stayed at home behind me and was fast asleep in bed.`],fk:11.4,fkOverride:3,level:3,words:187,sentences:6,syllables:235,questions:[{depth:"literal",q:"What does the shadow do when the child jumps into bed?",right:"It jumps in front of the child",wrong:["It hides under the pillow","It runs out of the door","It stays by the window"]},{depth:"literal",q:"What is funny about the way the shadow grows?",right:"It shoots up tall or shrinks to nothing",wrong:["It grows a little every birthday","It only grows after dinner","It never changes size at all"]},{depth:"inferential",q:"Why does the child call the shadow a coward?",right:"It always stays close behind",wrong:["It runs away from dogs","It is afraid of the dark","It cries when it falls over"]},{depth:"inferential",q:"Why was the shadow missing that early morning?",right:"There was no sunshine yet to make it",wrong:["It had run off to play","The child lost it in the garden","It was hiding behind a tree"]}],evaluate:"The child talks about the shadow as if it were a person. Which line do you like best, and why?",wordBank:["notion","arrant","india-rubber","buttercup"]},{id:"stevenson-swing",work:"garden-verses",title:"The Swing",band:1,kind:"verse",abridged:!1,hook:"Up over the wall, so high you can see the whole countryside.",text:`How do you like to go up in a swing,
+     Up in the air so blue?
+Oh, I do think it the pleasantest thing
+     Ever a child can do!
+
+Up in the air and over the wall,
+     Till I can see so wide,
+River and trees and cattle and all
+     Over the countryside--
+
+Till I look down on the garden green,
+     Down on the roof so brown--
+Up in the air I go flying again,
+     Up in the air and down!`,scenes:[`How do you like to go up in a swing,
+     Up in the air so blue?
+Oh, I do think it the pleasantest thing
+     Ever a child can do!`,`Up in the air and over the wall,
+     Till I can see so wide,
+River and trees and cattle and all
+     Over the countryside--`,`Till I look down on the garden green,
+     Down on the roof so brown--
+Up in the air I go flying again,
+     Up in the air and down!`],fk:8.3,fkOverride:2,level:2,words:81,sentences:3,syllables:92,questions:[{depth:"literal",q:"What colour is the air in the poem?",right:"Blue",wrong:["Grey","Gold","Pink"]},{depth:"literal",q:"Which of these can the child see from the swing?",right:"River, trees and cattle",wrong:["Ships, sand and seagulls","Shops, buses and towers","Mountains deep in snow"]},{depth:"inferential",q:"How does the child feel about swinging?",right:"It is the best fun a child can have",wrong:["It is frightening and far too high","It is boring after a little while","It is only fun with a friend"]},{depth:"literal",q:"What colour is the roof the child looks down on?",right:"Brown",wrong:["Red","White","Green"]}],evaluate:"Say the poem aloud. Can you hear the swing going up and down in its rhythm? Where?",wordBank:["pleasantest","countryside","cattle"]},{id:"blake-lamb",work:"blake",title:"The Lamb",band:1,kind:"verse",abridged:!1,hook:"A child asks a little lamb the biggest question of all.",text:`   Little lamb, who made thee?
+   Does thou know who made thee,
+Gave thee life, and bid thee feed
+By the stream and o'er the mead;
+Gave thee clothing of delight,
+Softest clothing, woolly, bright;
+Gave thee such a tender voice,
+Making all the vales rejoice?
+   Little lamb, who made thee?
+   Does thou know who made thee?
+
+   Little lamb, I'll tell thee;
+   Little lamb, I'll tell thee:
+He is called by thy name,
+For He calls Himself a Lamb.
+He is meek, and He is mild,
+He became a little child.
+I a child, and thou a lamb,
+We are called by His name.
+   Little lamb, God bless thee!
+   Little lamb, God bless thee!`,scenes:[`Little lamb, who made thee?
+   Does thou know who made thee,
+Gave thee life, and bid thee feed
+By the stream and o'er the mead;
+Gave thee clothing of delight,
+Softest clothing, woolly, bright;
+Gave thee such a tender voice,
+Making all the vales rejoice?
+   Little lamb, who made thee?
+   Does thou know who made thee?`,`Little lamb, I'll tell thee;
+   Little lamb, I'll tell thee:
+He is called by thy name,
+For He calls Himself a Lamb.
+He is meek, and He is mild,
+He became a little child.
+I a child, and thou a lamb,
+We are called by His name.
+   Little lamb, God bless thee!
+   Little lamb, God bless thee!`],fk:3.2,fkOverride:2,level:2,words:113,sentences:9,syllables:133,questions:[{depth:"literal",q:"Where does the lamb feed, in the poem?",right:"By the stream and over the meadow",wrong:["In a barn full of hay","On a rocky mountain top","In a garden by the house"]},{depth:"literal",q:"What is the lamb's 'clothing of delight'?",right:"Its soft, woolly fleece",wrong:["A coat the farmer made","A ribbon round its neck","A blanket of flowers"]},{depth:"inferential",q:"Who does the speaker say made the lamb?",right:"God, who became a little child",wrong:["The farmer who looks after it","Its mother, the old ewe","The stream and the meadow"]},{depth:"inferential",q:"Who is speaking in the poem?",right:"A child talking to a lamb",wrong:["A shepherd counting sheep","The lamb's own mother","A farmer at the market"]}],evaluate:"The poem is made of questions and answers. Why do you think Blake wrote it that way?",wordBank:["mead","vales","meek","rejoice"]},{id:"lear-limericks",work:"lear",title:"Four Limericks",band:1,kind:"verse",abridged:!1,hook:"Owls in a beard, spotty dogs, a very long nose, and a man who never stands still.",text:`There was an Old Man with a beard,
+Who said, "It is just as I feared!--
+Two Owls and a Hen,
+Four Larks and a Wren,
+Have all built their nests in my beard!"
+
+There was a Young Lady of Ryde,
+Whose shoe-strings were seldom untied;
+She purchased some clogs,
+And some small spotty dogs,
+And frequently walked about Ryde.
+
+There was an Old Man with a nose,
+Who said, "If you choose to suppose,
+That my nose is too long,
+You are certainly wrong!"
+That remarkable Man with a nose.
+
+There was an Old Man on a hill,
+Who seldom, if ever, stood still;
+He ran up and down,
+In his Grandmother's gown,
+Which adorned that Old Man on a hill.`,scenes:[`There was an Old Man with a beard,
+Who said, "It is just as I feared!--
+Two Owls and a Hen,
+Four Larks and a Wren,
+Have all built their nests in my beard!"`,`There was a Young Lady of Ryde,
+Whose shoe-strings were seldom untied;
+She purchased some clogs,
+And some small spotty dogs,
+And frequently walked about Ryde.`,`There was an Old Man with a nose,
+Who said, "If you choose to suppose,
+That my nose is too long,
+You are certainly wrong!"
+That remarkable Man with a nose.`,`There was an Old Man on a hill,
+Who seldom, if ever, stood still;
+He ran up and down,
+In his Grandmother's gown,
+Which adorned that Old Man on a hill.`],fk:7.7,fkOverride:3,level:3,words:122,sentences:5,syllables:142,questions:[{depth:"literal",q:"How many owls built nests in the old man's beard?",right:"Two",wrong:["Four","One","Six"]},{depth:"literal",q:"What did the Young Lady of Ryde buy?",right:"Clogs and small spotty dogs",wrong:["A boat and a big red hat","Shoes with very long laces","A cake and a cage of birds"]},{depth:"literal",q:"What did the Old Man on a hill wear while running about?",right:"His grandmother's gown",wrong:["His grandfather's coat","A crown and a cloak","A pair of spotty socks"]},{depth:"inferential",q:"What do all four poems have in common?",right:"Each is a funny five-line rhyme",wrong:["Each tells a true story","Each is about an animal","Each ends with a sad lesson"]}],evaluate:"Which limerick made you smile most? Could you make up one about a silly (made-up) person?",wordBank:["purchased","seldom","adorned","remarkable"]},{id:"aesop-hare-tortoise",work:"aesop",title:"The Hare and the Tortoise",band:1,kind:"prose",abridged:!1,hook:"The fastest runner in the field challenges the slowest. What could go wrong?",text:`The Hare was once boasting of his speed before the other animals. "I have never yet been beaten," said he, "when I put forth my full speed. I challenge any one here to race with me."
+
+The Tortoise said quietly, "I accept your challenge."
+
+"That is a good joke," said the Hare; "I could dance round you all the way."
+
+"Keep your boasting till you've beaten," answered the Tortoise. "Shall we race?"
+
+So a course was fixed and a start was made. The Hare darted almost out of sight at once, but soon stopped and, to show his contempt for the Tortoise, lay down to have a nap. The Tortoise plodded on and plodded on, and when the Hare awoke from his nap, he saw the Tortoise just near the winning-post and could not run up in time to save the race. Then said the Tortoise:
+
+"Plodding wins the race."`,scenes:['The Hare was once boasting of his speed before the other animals. "I have never yet been beaten," said he, "when I put forth my full speed. I challenge any one here to race with me."',`The Tortoise said quietly, "I accept your challenge."
+
+"That is a good joke," said the Hare; "I could dance round you all the way."
+
+"Keep your boasting till you've beaten," answered the Tortoise. "Shall we race?"`,`So a course was fixed and a start was made. The Hare darted almost out of sight at once, but soon stopped and, to show his contempt for the Tortoise, lay down to have a nap. The Tortoise plodded on and plodded on, and when the Hare awoke from his nap, he saw the Tortoise just near the winning-post and could not run up in time to save the race. Then said the Tortoise:
+
+"Plodding wins the race."`],fk:3.7,level:3.7,words:150,sentences:11,syllables:177,questions:[{depth:"literal",q:"What did the Hare dare the other animals to do?",right:"Race against him",wrong:["Jump over a river","Find the most food","Climb the tallest tree"]},{depth:"literal",q:"What did the Hare do part of the way round the course?",right:"Lay down and had a nap",wrong:["Stopped to eat some carrots","Ran off the wrong way","Hurt his foot on a stone"]},{depth:"literal",q:"Where was the Tortoise when the Hare woke up?",right:"Near the winning-post",wrong:["Still at the starting line","Asleep under a bush","Halfway up a hill"]},{depth:"inferential",q:"Why did the Hare stop for a sleep?",right:"He was sure he could not lose",wrong:["He had been up all night","The Tortoise asked him to wait","The sun was making him ill"]},{depth:"inferential",q:"What does the Tortoise mean at the very end?",right:"Slow and steady work gets there",wrong:["The fastest runner always wins","Never race against a friend","Sleeping makes you stronger"]}],evaluate:"The Hare was faster, but he lost. What would you have done if you were the Hare?",wordBank:["boasting","challenge","contempt","plodded"]},{id:"peterrabbit-garden",work:"peterrabbit",title:"Peter Rabbit in Mr. McGregor's garden",band:1,kind:"prose",abridged:!1,hook:"One rule: keep out of the garden. One naughty rabbit goes straight in.",text:`Once upon a time there were four little Rabbits, and their names were--
+
+Flopsy, Mopsy, Cotton-tail, and Peter.
+
+They lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.
+
+'Now my dears,' said old Mrs. Rabbit one morning, 'you may go into the fields or down the lane, but don't go into Mr. McGregor's garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.'
+
+'Now run along, and don't get into mischief. I am going out.'
+
+Then old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker's. She bought a loaf of brown bread and five currant buns.
+
+Flopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:
+
+But Peter, who was very naughty, ran straight away to Mr. McGregor's garden, and squeezed under the gate!
+
+First he ate some lettuces and some French beans; and then he ate some radishes;
+
+And then, feeling rather sick, he went to look for some parsley.
+
+But round the end of a cucumber frame, whom should he meet but Mr. McGregor!
+
+Mr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, 'Stop thief!'
+
+Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.
+
+He lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.
+
+After losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.
+
+Peter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.
+
+Mr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.`,scenes:[`Once upon a time there were four little Rabbits, and their names were--
+
+Flopsy, Mopsy, Cotton-tail, and Peter.
+
+They lived with their Mother in a sand-bank, underneath the root of a very big fir-tree.
+
+'Now my dears,' said old Mrs. Rabbit one morning, 'you may go into the fields or down the lane, but don't go into Mr. McGregor's garden: your Father had an accident there; he was put in a pie by Mrs. McGregor.'
+
+'Now run along, and don't get into mischief. I am going out.'
+
+Then old Mrs. Rabbit took a basket and her umbrella, and went through the wood to the baker's. She bought a loaf of brown bread and five currant buns.`,`Flopsy, Mopsy, and Cottontail, who were good little bunnies, went down the lane to gather blackberries:
+
+But Peter, who was very naughty, ran straight away to Mr. McGregor's garden, and squeezed under the gate!
+
+First he ate some lettuces and some French beans; and then he ate some radishes;
+
+And then, feeling rather sick, he went to look for some parsley.`,`But round the end of a cucumber frame, whom should he meet but Mr. McGregor!
+
+Mr. McGregor was on his hands and knees planting out young cabbages, but he jumped up and ran after Peter, waving a rake and calling out, 'Stop thief!'`,`Peter was most dreadfully frightened; he rushed all over the garden, for he had forgotten the way back to the gate.
+
+He lost one of his shoes among the cabbages, and the other shoe amongst the potatoes.
+
+After losing them, he ran on four legs and went faster, so that I think he might have got away altogether if he had not unfortunately run into a gooseberry net, and got caught by the large buttons on his jacket. It was a blue jacket with brass buttons, quite new.`,`Peter gave himself up for lost, and shed big tears; but his sobs were overheard by some friendly sparrows, who flew to him in great excitement, and implored him to exert himself.
+
+Mr. McGregor came up with a sieve, which he intended to pop upon the top of Peter; but Peter wriggled out just in time, leaving his jacket behind him.`],fk:5.8,level:5.8,words:369,sentences:25,syllables:489,questions:[{depth:"literal",q:"Where did old Mrs. Rabbit tell the little rabbits never to go?",right:"Into Mr. McGregor's garden",wrong:["Down the lane by the wood","Into the fields by the river","To the baker's in the wood"]},{depth:"literal",q:"What did Flopsy, Mopsy and Cotton-tail do that morning?",right:"Picked blackberries in the lane",wrong:["Went to the baker's shop","Followed Peter to the garden","Stayed at home asleep"]},{depth:"literal",q:"How did Peter get into the garden?",right:"He squeezed under the gate",wrong:["He climbed over the wall","He dug a long tunnel","He hopped through a window"]},{depth:"literal",q:"What caught Peter by his jacket's buttons?",right:"A gooseberry net",wrong:["A rose bush","A garden rake","A cucumber frame"]},{depth:"inferential",q:"Why did the sparrows fly to Peter?",right:"To urge him not to give up",wrong:["To peck at his new jacket","To eat the lettuces too","To warn Mr. McGregor"]}],evaluate:"Peter was told not to go into the garden. Why do you think he went anyway? What would you say to him?",wordBank:["mischief","dreadfully","implored","exert","sieve"]},{id:"tagore-champa",work:"crescentmoon",title:"The Champa Flower",band:1,kind:"prose",abridged:!1,hook:"A child imagines turning into a flower, just to play hide and seek with mother.",text:`Supposing I became a _champa_ flower, just for fun, and grew on a branch high up that tree, and shook in the wind with laughter and danced upon the newly budded leaves, would you know me, mother?
+
+You would call, "Baby, where are you?" and I should laugh to myself and keep quite quiet.
+
+I should slyly open my petals and watch you at your work.
+
+When after your bath, with wet hair spread on your shoulders, you walked through the shadow of the _champa_ tree to the little court where you say your prayers, you would notice the scent of the flower, but not know that it came from me.
+
+When after the midday meal you sat at the window reading _Ramayana_, and the tree's shadow fell over your hair and your lap, I should fling my wee little shadow on to the page of your book, just where you were reading.
+
+But would you guess that it was the tiny shadow of your little child?
+
+When in the evening you went to the cow-shed with the lighted lamp in your hand, I should suddenly drop on to the earth again and be your own baby once more, and beg you to tell me a story.
+
+"Where have you been, you naughty child?"
+
+"I won't tell you, mother." That's what you and I would say then.`,scenes:[`Supposing I became a _champa_ flower, just for fun, and grew on a branch high up that tree, and shook in the wind with laughter and danced upon the newly budded leaves, would you know me, mother?
+
+You would call, "Baby, where are you?" and I should laugh to myself and keep quite quiet.`,`I should slyly open my petals and watch you at your work.
+
+When after your bath, with wet hair spread on your shoulders, you walked through the shadow of the _champa_ tree to the little court where you say your prayers, you would notice the scent of the flower, but not know that it came from me.`,`When after the midday meal you sat at the window reading _Ramayana_, and the tree's shadow fell over your hair and your lap, I should fling my wee little shadow on to the page of your book, just where you were reading.
+
+But would you guess that it was the tiny shadow of your little child?`,`When in the evening you went to the cow-shed with the lighted lamp in your hand, I should suddenly drop on to the earth again and be your own baby once more, and beg you to tell me a story.
+
+"Where have you been, you naughty child?"
+
+"I won't tell you, mother." That's what you and I would say then.`],fk:6.8,fkOverride:4,level:4,words:227,sentences:11,syllables:275,questions:[{depth:"literal",q:"What does the child imagine turning into?",right:"A flower high up on a tree",wrong:["A bird singing on a roof","A cloud floating in the sky","A fish in the village pond"]},{depth:"literal",q:"What would the mother be reading after the midday meal?",right:"The Ramayana",wrong:["A letter from a friend","A book of riddles","A newspaper"]},{depth:"literal",q:"When would the child become a baby again?",right:"In the evening, at the cow-shed",wrong:["Early in the morning, at the well","At midday, in the kitchen","At night, under the stars"]},{depth:"inferential",q:"How would the mother sense the flower near her, without knowing it was her child?",right:"She would notice its sweet scent",wrong:["She would hear it laughing","She would see it waving","It would call out her name"]},{depth:"inferential",q:`Why does the child say "I won't tell you" at the end?`,right:"It is a happy secret game",wrong:["The child is cross with mother","The child has forgotten","Mother said to keep quiet"]}],evaluate:"If you could turn into something just for fun for one day, what would you choose, and how would you surprise your family?",wordBank:["supposing","slyly","petals","scent"]},{id:"stevenson-counterpane",work:"garden-verses",title:"The Land of Counterpane",band:1,kind:"verse",abridged:!1,hook:"Stuck in bed? Then the bedclothes become hills, seas and cities.",text:`When I was sick and lay a-bed,
+I had two pillows at my head,
+And all my toys beside me lay,
+To keep me happy all the day.
+
+And sometimes for an hour or so
+I watched my leaden soldiers go,
+With different uniforms and drills,
+Among the bed-clothes, through the hills;
+
+And sometimes sent my ships in fleets
+All up and down among the sheets;
+Or brought my trees and houses out,
+And planted cities all about.
+
+I was the giant great and still
+That sits upon the pillow-hill,
+And sees before him, dale and plain,
+The pleasant land of counterpane.`,scenes:[`When I was sick and lay a-bed,
+I had two pillows at my head,
+And all my toys beside me lay,
+To keep me happy all the day.`,`And sometimes for an hour or so
+I watched my leaden soldiers go,
+With different uniforms and drills,
+Among the bed-clothes, through the hills;`,`And sometimes sent my ships in fleets
+All up and down among the sheets;
+Or brought my trees and houses out,
+And planted cities all about.`,`I was the giant great and still
+That sits upon the pillow-hill,
+And sees before him, dale and plain,
+The pleasant land of counterpane.`],fk:12.6,fkOverride:3,level:3,words:102,sentences:3,syllables:129,questions:[{depth:"literal",q:"Why was the child lying in bed all day?",right:"The child was ill",wrong:["It was the middle of the night","The child was being punished","It was a snowy day"]},{depth:"literal",q:"What did the child have at the head of the bed?",right:"Two pillows",wrong:["A candle","A teddy bear","A big book"]},{depth:"literal",q:"Which toys marched among the bed-clothes?",right:"Leaden soldiers",wrong:["Wooden horses","Rag dolls","Tin trains"]},{depth:"inferential",q:"What is the 'land of counterpane'?",right:"The bed covers, made into a pretend land",wrong:["A faraway land the child once visited","A picture in a book of maps","The garden outside the window"]},{depth:"inferential",q:"Why does the child say he is a giant?",right:"The toys and hills look tiny beside him",wrong:["He has grown very tall that year","He has read a book about giants","His father calls him a giant"]}],evaluate:"The child turns a dull day in bed into an adventure. What games would you play if you had to stay in bed?",wordBank:["leaden","uniforms","fleets","counterpane"]},{id:"jungle-mowgli",work:"jungle",title:"A man's cub comes to the wolves' cave",band:2,kind:"prose",abridged:!1,hook:"A wolf leaps at a rustle in the bushes, and finds a laughing baby.",text:`The bushes rustled a little in the thicket, and Father Wolf dropped with his haunches under him, ready for his leap. Then, if you had been watching, you would have seen the most wonderful thing in the world--the wolf checked in mid-spring. He made his bound before he saw what it was he was jumping at, and then he tried to stop himself. The result was that he shot up straight into the air for four or five feet, landing almost where he left ground.
+
+"Man!" he snapped. "A man's cub. Look!"
+
+Directly in front of him, holding on by a low branch, stood a naked brown baby who could just walk--as soft and as dimpled a little atom as ever came to a wolf's cave at night. He looked up into Father Wolf's face, and laughed.
+
+"Is that a man's cub?" said Mother Wolf. "I have never seen one. Bring it here."
+
+A Wolf accustomed to moving his own cubs can, if necessary, mouth an egg without breaking it, and though Father Wolf's jaws closed right on the child's back not a tooth even scratched the skin as he laid it down among the cubs.
+
+"How little! How naked, and--how bold!" said Mother Wolf softly. The baby was pushing his way between the cubs to get close to the warm hide. "Ahai! He is taking his meal with the others. And so this is a man's cub. Now, was there ever a wolf that could boast of a man's cub among her children?"
+
+"I have heard now and again of such a thing, but never in our Pack or in my time," said Father Wolf. "He is altogether without hair, and I could kill him with a touch of my foot. But see, he looks up and is not afraid."`,scenes:["The bushes rustled a little in the thicket, and Father Wolf dropped with his haunches under him, ready for his leap. Then, if you had been watching, you would have seen the most wonderful thing in the world--the wolf checked in mid-spring. He made his bound before he saw what it was he was jumping at, and then he tried to stop himself. The result was that he shot up straight into the air for four or five feet, landing almost where he left ground.",`"Man!" he snapped. "A man's cub. Look!"
+
+Directly in front of him, holding on by a low branch, stood a naked brown baby who could just walk--as soft and as dimpled a little atom as ever came to a wolf's cave at night. He looked up into Father Wolf's face, and laughed.`,`"Is that a man's cub?" said Mother Wolf. "I have never seen one. Bring it here."
+
+A Wolf accustomed to moving his own cubs can, if necessary, mouth an egg without breaking it, and though Father Wolf's jaws closed right on the child's back not a tooth even scratched the skin as he laid it down among the cubs.`,`"How little! How naked, and--how bold!" said Mother Wolf softly. The baby was pushing his way between the cubs to get close to the warm hide. "Ahai! He is taking his meal with the others. And so this is a man's cub. Now, was there ever a wolf that could boast of a man's cub among her children?"
+
+"I have heard now and again of such a thing, but never in our Pack or in my time," said Father Wolf. "He is altogether without hair, and I could kill him with a touch of my foot. But see, he looks up and is not afraid."`],fk:3.2,level:3.2,words:301,sentences:26,syllables:364,questions:[{depth:"literal",q:"What did Father Wolf do when he saw what he was jumping at?",right:"He stopped himself in mid-leap",wrong:["He ran back into the cave","He howled for the Pack","He jumped higher to attack"]},{depth:"literal",q:"What did the baby do when he looked up at Father Wolf?",right:"He laughed",wrong:["He cried","He slept","He ran"]},{depth:"literal",q:"How did Father Wolf carry the baby without hurting him?",right:"Gently in his mouth, as wolves carry cubs",wrong:["On his back, holding on to his fur","Wrapped in a bundle of leaves","In a basket from the village"]},{depth:"inferential",q:"Why was Mother Wolf so pleased with the baby?",right:"He was tiny, yet bold and unafraid",wrong:["He was big and strong already","He could talk like a wolf","He brought food to the cave"]},{depth:"inferential",q:"What is the baby doing when Mother Wolf says he is 'taking his meal with the others'?",right:"Pushing in among the cubs to feed",wrong:["Eating a bone by the fire","Drinking from a stream","Sharing berries with Father Wolf"]}],evaluate:"Mother Wolf decides to keep the man's cub. Was she right? What might go wrong?",wordBank:["thicket","haunches","dimpled","accustomed","boast"]},{id:"jungle-rikki",work:"jungle",title:"Rikki-tikki-tavi arrives",band:2,kind:"prose",abridged:!1,hook:"A flood, a half-drowned mongoose, and a family that takes him in.",text:`This is the story of the great war that Rikki-tikki-tavi fought single-handed, through the bath-rooms of the big bungalow in Segowlee cantonment. Darzee, the Tailorbird, helped him, and Chuchundra, the musk-rat, who never comes out into the middle of the floor, but always creeps round by the wall, gave him advice, but Rikki-tikki did the real fighting.
+
+He was a mongoose, rather like a little cat in his fur and his tail, but quite like a weasel in his head and his habits. His eyes and the end of his restless nose were pink. He could scratch himself anywhere he pleased with any leg, front or back, that he chose to use. He could fluff up his tail till it looked like a bottle brush, and his war cry as he scuttled through the long grass was: "Rikk-tikk-tikki-tikki-tchk!"
+
+One day, a high summer flood washed him out of the burrow where he lived with his father and mother, and carried him, kicking and clucking, down a roadside ditch. He found a little wisp of grass floating there, and clung to it till he lost his senses. When he revived, he was lying in the hot sun on the middle of a garden path, very draggled indeed, and a small boy was saying, "Here's a dead mongoose. Let's have a funeral."
+
+"No," said his mother, "let's take him in and dry him. Perhaps he isn't really dead."
+
+They took him into the house, and a big man picked him up between his finger and thumb and said he was not dead but half choked. So they wrapped him in cotton wool, and warmed him over a little fire, and he opened his eyes and sneezed.
+
+"Now," said the big man (he was an Englishman who had just moved into the bungalow), "don't frighten him, and we'll see what he'll do."
+
+It is the hardest thing in the world to frighten a mongoose, because he is eaten up from nose to tail with curiosity. The motto of all the mongoose family is "Run and find out," and Rikki-tikki was a true mongoose. He looked at the cotton wool, decided that it was not good to eat, ran all round the table, sat up and put his fur in order, scratched himself, and jumped on the small boy's shoulder.
+
+"Don't be frightened, Teddy," said his father. "That's his way of making friends."
+
+"Ouch! He's tickling under my chin," said Teddy.`,scenes:["This is the story of the great war that Rikki-tikki-tavi fought single-handed, through the bath-rooms of the big bungalow in Segowlee cantonment. Darzee, the Tailorbird, helped him, and Chuchundra, the musk-rat, who never comes out into the middle of the floor, but always creeps round by the wall, gave him advice, but Rikki-tikki did the real fighting.",'He was a mongoose, rather like a little cat in his fur and his tail, but quite like a weasel in his head and his habits. His eyes and the end of his restless nose were pink. He could scratch himself anywhere he pleased with any leg, front or back, that he chose to use. He could fluff up his tail till it looked like a bottle brush, and his war cry as he scuttled through the long grass was: "Rikk-tikk-tikki-tikki-tchk!"',`One day, a high summer flood washed him out of the burrow where he lived with his father and mother, and carried him, kicking and clucking, down a roadside ditch. He found a little wisp of grass floating there, and clung to it till he lost his senses. When he revived, he was lying in the hot sun on the middle of a garden path, very draggled indeed, and a small boy was saying, "Here's a dead mongoose. Let's have a funeral."
+
+"No," said his mother, "let's take him in and dry him. Perhaps he isn't really dead."`,`They took him into the house, and a big man picked him up between his finger and thumb and said he was not dead but half choked. So they wrapped him in cotton wool, and warmed him over a little fire, and he opened his eyes and sneezed.
+
+"Now," said the big man (he was an Englishman who had just moved into the bungalow), "don't frighten him, and we'll see what he'll do."`,`It is the hardest thing in the world to frighten a mongoose, because he is eaten up from nose to tail with curiosity. The motto of all the mongoose family is "Run and find out," and Rikki-tikki was a true mongoose. He looked at the cotton wool, decided that it was not good to eat, ran all round the table, sat up and put his fur in order, scratched himself, and jumped on the small boy's shoulder.
+
+"Don't be frightened, Teddy," said his father. "That's his way of making friends."
+
+"Ouch! He's tickling under my chin," said Teddy.`],fk:6.7,level:6.7,words:407,sentences:22,syllables:521,questions:[{depth:"literal",q:"What kind of animal is Rikki-tikki?",right:"A mongoose",wrong:["A weasel","A musk-rat","A tailorbird"]},{depth:"literal",q:"How did Rikki-tikki come to the garden?",right:"A summer flood washed him there",wrong:["Teddy caught him in a trap","He followed a snake into it","A man bought him at market"]},{depth:"literal",q:"What did Teddy first think had happened to Rikki-tikki?",right:"That he was dead",wrong:["That he was lost","That he was hungry","That he was a pet"]},{depth:"inferential",q:"What does the motto 'Run and find out' tell us about mongooses?",right:"They are very curious",wrong:["They are very fast runners","They are easily frightened","They like to be left alone"]},{depth:"inferential",q:"Why did Rikki-tikki jump on Teddy's shoulder?",right:"It was his way of making friends",wrong:["He wanted to bite Teddy's ear","He was trying to escape","He was looking for food"]}],evaluate:"Teddy's mother thinks Rikki is tame because the family was kind to him. Can kindness tame a wild creature? Should it?",wordBank:["cantonment","revived","draggled","scuttled","curiosity"],needsReview:!0,reviewNote:'Set in a British cantonment in colonial India; "the big man" is "an Englishman who had just moved into the bungalow". The extract is gentle, but it takes the colonial household as normal. A grown-up note should name the setting.'},{id:"alice-rabbit-hole",work:"alice",title:"Down the rabbit-hole",band:2,kind:"prose",abridged:!1,hook:"A white rabbit with a pocket-watch runs past. Alice follows.",text:`Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'
+
+So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.
+
+There was nothing so VERY remarkable in that; nor did Alice think it so VERY much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural); but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.
+
+In another moment down went Alice after it, never once considering how in the world she was to get out again.
+
+The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well.`,scenes:["Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversations?'","So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.","There was nothing so VERY remarkable in that; nor did Alice think it so VERY much out of the way to hear the Rabbit say to itself, 'Oh dear! Oh dear! I shall be late!' (when she thought it over afterwards, it occurred to her that she ought to have wondered at this, but at the time it all seemed quite natural);","but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-POCKET, and looked at it, and then hurried on, Alice started to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole under the hedge.",`In another moment down went Alice after it, never once considering how in the world she was to get out again.
+
+The rabbit-hole went straight on like a tunnel for some way, and then dipped suddenly down, so suddenly that Alice had not a moment to think about stopping herself before she found herself falling down a very deep well.`],fk:15.7,fkOverride:7,level:7,words:313,sentences:8,syllables:426,questions:[{depth:"literal",q:"Why didn't Alice think much of her sister's book?",right:"It had no pictures or conversations",wrong:["It was written in French","It was far too long to read","It was all about rabbits"]},{depth:"literal",q:"What did the White Rabbit take out of its waistcoat-pocket?",right:"A watch",wrong:["A key","A carrot","A map"]},{depth:"inferential",q:"Why did Alice run after the Rabbit?",right:"She was very curious about it",wrong:["She wanted to catch it for dinner","Her sister told her to follow it","She thought it had taken her watch"]},{depth:"literal",q:"Where was the rabbit-hole?",right:"Under the hedge",wrong:["Beside the river","Behind the house","Under an oak tree"]},{depth:"inferential",q:"What does 'never once considering how in the world she was to get out again' tell us about Alice?",right:"She acted without thinking ahead",wrong:["She was a very careful girl","She knew the way out already","She was afraid of the dark"]}],evaluate:"Would you have followed the White Rabbit down the hole? Why or why not?",wordBank:["remarkable","waistcoat","curiosity","considering"]},{id:"alice-cheshire",work:"alice",title:"The Cheshire Cat",band:2,kind:"prose",abridged:!1,hook:"Which way should you go? Ask a cat with an enormous grin.",text:`The Cat only grinned when it saw Alice. It looked good-natured, she thought: still it had VERY long claws and a great many teeth, so she felt that it ought to be treated with respect.
+
+'Cheshire Puss,' she began, rather timidly, as she did not at all know whether it would like the name: however, it only grinned a little wider. 'Come, it's pleased so far,' thought Alice, and she went on. 'Would you tell me, please, which way I ought to go from here?'
+
+'That depends a good deal on where you want to get to,' said the Cat.
+
+'I don't much care where--' said Alice.
+
+'Then it doesn't matter which way you go,' said the Cat.
+
+'--so long as I get SOMEWHERE,' Alice added as an explanation.
+
+'Oh, you're sure to do that,' said the Cat, 'if you only walk long enough.'
+
+Alice felt that this could not be denied, so she tried another question. 'What sort of people live about here?'
+
+'In THAT direction,' the Cat said, waving its right paw round, 'lives a Hatter: and in THAT direction,' waving the other paw, 'lives a March Hare. Visit either you like: they're both mad.'
+
+'But I don't want to go among mad people,' Alice remarked.
+
+'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'
+
+'How do you know I'm mad?' said Alice.
+
+'You must be,' said the Cat, 'or you wouldn't have come here.'
+
+Alice didn't think that proved it at all; however, she went on 'And how do you know that you're mad?'
+
+'To begin with,' said the Cat, 'a dog's not mad. You grant that?'
+
+'I suppose so,' said Alice.
+
+'Well, then,' the Cat went on, 'you see, a dog growls when it's angry, and wags its tail when it's pleased. Now I growl when I'm pleased, and wag my tail when I'm angry. Therefore I'm mad.'
+
+'I call it purring, not growling,' said Alice.`,scenes:["The Cat only grinned when it saw Alice. It looked good-natured, she thought: still it had VERY long claws and a great many teeth, so she felt that it ought to be treated with respect.",`'Cheshire Puss,' she began, rather timidly, as she did not at all know whether it would like the name: however, it only grinned a little wider. 'Come, it's pleased so far,' thought Alice, and she went on. 'Would you tell me, please, which way I ought to go from here?'
+
+'That depends a good deal on where you want to get to,' said the Cat.
+
+'I don't much care where--' said Alice.
+
+'Then it doesn't matter which way you go,' said the Cat.
+
+'--so long as I get SOMEWHERE,' Alice added as an explanation.
+
+'Oh, you're sure to do that,' said the Cat, 'if you only walk long enough.'`,`Alice felt that this could not be denied, so she tried another question. 'What sort of people live about here?'
+
+'In THAT direction,' the Cat said, waving its right paw round, 'lives a Hatter: and in THAT direction,' waving the other paw, 'lives a March Hare. Visit either you like: they're both mad.'
+
+'But I don't want to go among mad people,' Alice remarked.`,`'Oh, you can't help that,' said the Cat: 'we're all mad here. I'm mad. You're mad.'
+
+'How do you know I'm mad?' said Alice.
+
+'You must be,' said the Cat, 'or you wouldn't have come here.'
+
+Alice didn't think that proved it at all; however, she went on 'And how do you know that you're mad?'`,`'To begin with,' said the Cat, 'a dog's not mad. You grant that?'
+
+'I suppose so,' said Alice.
+
+'Well, then,' the Cat went on, 'you see, a dog growls when it's angry, and wags its tail when it's pleased. Now I growl when I'm pleased, and wag my tail when I'm angry. Therefore I'm mad.'
+
+'I call it purring, not growling,' said Alice.`],fk:3,level:3,words:327,sentences:29,syllables:392,questions:[{depth:"literal",q:"Why did Alice feel the Cat should be treated with respect?",right:"It had very long claws and many teeth",wrong:["It belonged to the Queen herself","It was much bigger than she was","It could vanish whenever it liked"]},{depth:"literal",q:"Who does the Cat say lives in the two directions?",right:"A Hatter and a March Hare",wrong:["A Queen and a King","A Duchess and her cook","A White Rabbit and a Mouse"]},{depth:"inferential",q:"Why does the Cat say it doesn't matter which way Alice goes?",right:"She does not mind where she gets to",wrong:["Every path leads to the same place","The Cat wants her to stay put","All the other paths are blocked"]},{depth:"literal",q:"What does Alice call the sound a cat makes when it is pleased?",right:"Purring",wrong:["Growling","Hissing","Mewing"]},{depth:"inferential",q:"What is wrong with the Cat's argument that it is mad?",right:"A cat is not a dog, so the comparison fails",wrong:["Cats really do growl when pleased","Dogs never wag their tails at all","Alice agrees with every step of it"]}],evaluate:"The Cat's answers are clever but not very helpful. Was it trying to help Alice? Which answer is the cleverest?",wordBank:["grinned","timidly","direction","remarked"]},{id:"wind-boats",work:"wind",title:"Messing about in boats",band:2,kind:"prose",abridged:!1,hook:"A mole who has never been in a boat meets a rat who loves nothing more.",text:`'Would you like to come over?' enquired the Rat presently.
+
+'Oh, its all very well to TALK,' said the Mole, rather pettishly, he being new to a river and riverside life and its ways.
+
+The Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly stepped into a little boat which the Mole had not observed. It was painted blue outside and white within, and was just the size for two animals; and the Mole's whole heart went out to it at once, even though he did not yet fully understand its uses.
+
+The Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole stepped gingerly down. 'Lean on that!' he said. 'Now then, step lively!' and the Mole to his surprise and rapture found himself actually seated in the stern of a real boat.
+
+'This has been a wonderful day!' said he, as the Rat shoved off and took to the sculls again. 'Do you know, I've never been in a boat before in all my life.'
+
+'What?' cried the Rat, open-mouthed: 'Never been in a--you never--well I--what have you been doing, then?'
+
+'Is it so nice as all that?' asked the Mole shyly, though he was quite prepared to believe it as he leant back in his seat and surveyed the cushions, the oars, the rowlocks, and all the fascinating fittings, and felt the boat sway lightly under him.
+
+'Nice? It's the ONLY thing,' said the Water Rat solemnly, as he leant forward for his stroke. 'Believe me, my young friend, there is NOTHING--absolute nothing--half so much worth doing as simply messing about in boats. Simply messing,' he went on dreamily: 'messing--about--in--boats; messing----'
+
+'Look ahead, Rat!' cried the Mole suddenly.
+
+It was too late. The boat struck the bank full tilt. The dreamer, the joyous oarsman, lay on his back at the bottom of the boat, his heels in the air.`,scenes:[`'Would you like to come over?' enquired the Rat presently.
+
+'Oh, its all very well to TALK,' said the Mole, rather pettishly, he being new to a river and riverside life and its ways.`,`The Rat said nothing, but stooped and unfastened a rope and hauled on it; then lightly stepped into a little boat which the Mole had not observed. It was painted blue outside and white within, and was just the size for two animals; and the Mole's whole heart went out to it at once, even though he did not yet fully understand its uses.
+
+The Rat sculled smartly across and made fast. Then he held up his forepaw as the Mole stepped gingerly down. 'Lean on that!' he said. 'Now then, step lively!' and the Mole to his surprise and rapture found himself actually seated in the stern of a real boat.`,`'This has been a wonderful day!' said he, as the Rat shoved off and took to the sculls again. 'Do you know, I've never been in a boat before in all my life.'
+
+'What?' cried the Rat, open-mouthed: 'Never been in a--you never--well I--what have you been doing, then?'`,`'Is it so nice as all that?' asked the Mole shyly, though he was quite prepared to believe it as he leant back in his seat and surveyed the cushions, the oars, the rowlocks, and all the fascinating fittings, and felt the boat sway lightly under him.
+
+'Nice? It's the ONLY thing,' said the Water Rat solemnly, as he leant forward for his stroke. 'Believe me, my young friend, there is NOTHING--absolute nothing--half so much worth doing as simply messing about in boats. Simply messing,' he went on dreamily: 'messing--about--in--boats; messing----'`,`'Look ahead, Rat!' cried the Mole suddenly.
+
+It was too late. The boat struck the bank full tilt. The dreamer, the joyous oarsman, lay on his back at the bottom of the boat, his heels in the air.`],fk:4.9,level:4.9,words:324,sentences:26,syllables:430,questions:[{depth:"literal",q:"What colours was the Rat's little boat?",right:"Blue outside and white inside",wrong:["Red outside and gold inside","Green and brown all over","White outside and blue inside"]},{depth:"literal",q:"What amazed the Rat about the Mole?",right:"He had never been in a boat before",wrong:["He could not swim at all","He had never seen a river","He was afraid of water rats"]},{depth:"literal",q:"What happened while the Rat was talking dreamily?",right:"The boat crashed into the bank",wrong:["The Mole fell into the water","An oar floated away","A storm began to blow"]},{depth:"inferential",q:"How did the Mole feel when he first saw the boat?",right:"He loved it at once",wrong:["He was frightened of it","He thought it too small","He did not notice it"]}],evaluate:"The Rat says nothing is 'half so much worth doing' as messing about in boats. What could you happily do all day?",wordBank:["pettishly","sculled","gingerly","rapture","rowlocks"]},{id:"secretgarden-door",work:"secretgarden",title:"The door in the wall",band:2,kind:"prose",abridged:!1,hook:"A robin, a gust of wind, and a door no one has opened for ten years.",text:`One of the nice little gusts of wind rushed down the walk, and it was a stronger one than the rest. It was strong enough to wave the branches of the trees, and it was more than strong enough to sway the trailing sprays of untrimmed ivy hanging from the wall. Mary had stepped close to the robin, and suddenly the gust of wind swung aside some loose ivy trails, and more suddenly still she jumped toward it and caught it in her hand. This she did because she had seen something under it--a round knob which had been covered by the leaves hanging over it. It was the knob of a door.
+
+She put her hands under the leaves and began to pull and push them aside. Thick as the ivy hung, it nearly all was a loose and swinging curtain, though some had crept over wood and iron. Mary's heart began to thump and her hands to shake a little in her delight and excitement. The robin kept singing and twittering away and tilting his head on one side, as if he were as excited as she was. What was this under her hands which was square and made of iron and which her fingers found a hole in?
+
+It was the lock of the door which had been closed ten years and she put her hand in her pocket, drew out the key and found it fitted the keyhole. She put the key in and turned it. It took two hands to do it, but it did turn.
+
+And then she took a long breath and looked behind her up the long walk to see if any one was coming. No one was coming. No one ever did come, it seemed, and she took another long breath, because she could not help it, and she held back the swinging curtain of ivy and pushed back the door which opened slowly--slowly.
+
+Then she slipped through it, and shut it behind her, and stood with her back against it, looking about her and breathing quite fast with excitement, and wonder, and delight.
+
+She was standing inside the secret garden.`,scenes:["One of the nice little gusts of wind rushed down the walk, and it was a stronger one than the rest. It was strong enough to wave the branches of the trees, and it was more than strong enough to sway the trailing sprays of untrimmed ivy hanging from the wall. Mary had stepped close to the robin, and suddenly the gust of wind swung aside some loose ivy trails, and more suddenly still she jumped toward it and caught it in her hand. This she did because she had seen something under it--a round knob which had been covered by the leaves hanging over it. It was the knob of a door.","She put her hands under the leaves and began to pull and push them aside. Thick as the ivy hung, it nearly all was a loose and swinging curtain, though some had crept over wood and iron. Mary's heart began to thump and her hands to shake a little in her delight and excitement. The robin kept singing and twittering away and tilting his head on one side, as if he were as excited as she was. What was this under her hands which was square and made of iron and which her fingers found a hole in?","It was the lock of the door which had been closed ten years and she put her hand in her pocket, drew out the key and found it fitted the keyhole. She put the key in and turned it. It took two hands to do it, but it did turn.","And then she took a long breath and looked behind her up the long walk to see if any one was coming. No one was coming. No one ever did come, it seemed, and she took another long breath, because she could not help it, and she held back the swinging curtain of ivy and pushed back the door which opened slowly--slowly.",`Then she slipped through it, and shut it behind her, and stood with her back against it, looking about her and breathing quite fast with excitement, and wonder, and delight.
+
+She was standing inside the secret garden.`],fk:6.6,level:6.6,words:360,sentences:18,syllables:439,questions:[{depth:"literal",q:"What did the wind blow aside?",right:"Some loose trails of ivy",wrong:["A pile of dead leaves","The robin's little nest","A heap of melting snow"]},{depth:"literal",q:"What did Mary find under the ivy first?",right:"A round knob",wrong:["A rusty key","A stone bench","A small window"]},{depth:"literal",q:"How many hands did it take to turn the key?",right:"Two",wrong:["One","Three","Four"]},{depth:"inferential",q:"Why did Mary look behind her before opening the door?",right:"She did not want anyone to see",wrong:["She heard the robin calling","She thought the wind had stopped","She had dropped her key"]},{depth:"inferential",q:"How did Mary feel once she was inside?",right:"Thrilled and amazed",wrong:["Lonely and sad","Bored and sleepy","Cross and grumpy"]}],evaluate:"Mary keeps the garden a secret. Is it ever right to keep a secret like this one? Why?",wordBank:["gusts","untrimmed","trailing","excitement"]},{id:"heidi-fire",work:"heidi",title:"The mountains on fire",band:2,kind:"prose",abridged:!1,hook:"At sunset the mountains seem to catch fire. A goatherd says it happens every night.",text:`And thus imperceptibly the day had crept on to its close, and now the sun was on the point of sinking out of sight behind the high mountains. Heidi was again sitting on the ground, silently gazing at the blue bell-shaped flowers, as they glistened in the evening sun, for a golden light lay on the grass and flowers, and the rocks above were beginning to shine and glow. All at once she sprang to her feet, "Peter! Peter! everything is on fire! All the rocks are burning, and the great snow mountain and the sky! O look, look! the high rock up there is red with flame! O the beautiful, fiery snow! Stand up, Peter! See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees! Everything, everything is on fire!"
+
+"It is always like that," said Peter composedly, continuing to peel his stick; "but it is not really fire."
+
+"What is it then?" cried Heidi, as she ran backwards and forwards to look first one side and then the other, for she felt she could not have enough of such a beautiful sight. "What is it, Peter, what is it?" she repeated.
+
+"It gets like that of itself," explained Peter.
+
+"Look, look!" cried Heidi in fresh excitement, "now they have turned all rose color! Look at that one covered with snow, and that with the high, pointed rocks! What do you call them?"
+
+"Mountains have not any names," he answered.
+
+"O how beautiful, look at the crimson snow! And up there on the rocks there are ever so many roses! Oh! now they are turning grey! Oh! oh! now all the color has died away! it's all gone, Peter." And Heidi sat down on the ground looking as full of distress as if everything had really come to an end.
+
+"It will come again to-morrow," said Peter. "Get up, we must go home now." He whistled to his goats and together they all started on their homeward way.`,scenes:[`And thus imperceptibly the day had crept on to its close, and now the sun was on the point of sinking out of sight behind the high mountains. Heidi was again sitting on the ground, silently gazing at the blue bell-shaped flowers, as they glistened in the evening sun, for a golden light lay on the grass and flowers, and the rocks above were beginning to shine and glow. All at once she sprang to her feet, "Peter! Peter! everything is on fire! All the rocks are burning, and the great snow mountain and the sky! O look, look! the high rock up there is red with flame! O the beautiful, fiery snow! Stand up, Peter! See, the fire has reached the great bird's nest! look at the rocks! look at the fir trees! Everything, everything is on fire!"`,`"It is always like that," said Peter composedly, continuing to peel his stick; "but it is not really fire."
+
+"What is it then?" cried Heidi, as she ran backwards and forwards to look first one side and then the other, for she felt she could not have enough of such a beautiful sight. "What is it, Peter, what is it?" she repeated.
+
+"It gets like that of itself," explained Peter.`,`"Look, look!" cried Heidi in fresh excitement, "now they have turned all rose color! Look at that one covered with snow, and that with the high, pointed rocks! What do you call them?"
+
+"Mountains have not any names," he answered.`,`"O how beautiful, look at the crimson snow! And up there on the rocks there are ever so many roses! Oh! now they are turning grey! Oh! oh! now all the color has died away! it's all gone, Peter." And Heidi sat down on the ground looking as full of distress as if everything had really come to an end.
+
+"It will come again to-morrow," said Peter. "Get up, we must go home now." He whistled to his goats and together they all started on their homeward way.`],fk:3.1,level:3.1,words:337,sentences:37,syllables:433,questions:[{depth:"literal",q:"What did Heidi think was happening to the mountains?",right:"That they were burning",wrong:["That they were falling down","That the snow was melting","That a storm was coming"]},{depth:"literal",q:"What was Peter doing while Heidi shouted?",right:"Peeling his stick",wrong:["Milking a goat","Eating his cheese","Climbing a rock"]},{depth:"literal",q:"What colours did the snow turn?",right:"Rose and then crimson",wrong:["Blue and then purple","Yellow and then green","Black and then silver"]},{depth:"inferential",q:"Why did Peter seem so calm about it?",right:"He had seen it many times before",wrong:["He could not see the mountains","He was too tired to look up","He did not like Heidi at all"]},{depth:"inferential",q:"Why did Heidi sit down looking so upset?",right:"The beautiful colours had faded",wrong:["She had hurt her foot","Peter had been unkind","She was hungry and cold"]}],evaluate:"Peter says 'it is not really fire'. Who sees the sunset better, Heidi or Peter? Why?",wordBank:["imperceptibly","glistened","composedly","crimson","distress"]},{id:"blackbeauty-advice",work:"blackbeauty",title:"My mother's advice",band:2,kind:"prose",abridged:!1,hook:"A young horse plays rough with the other colts, and his mother has something to say.",text:`The first place that I can well remember was a large pleasant meadow with a pond of clear water in it. Some shady trees leaned over it, and rushes and water-lilies grew at the deep end. Over the hedge on one side we looked into a plowed field, and on the other we looked over a gate at our master's house, which stood by the roadside; at the top of the meadow was a grove of fir trees, and at the bottom a running brook overhung by a steep bank.
+
+While I was young I lived upon my mother's milk, as I could not eat grass. In the daytime I ran by her side, and at night I lay down close by her. When it was hot we used to stand by the pond in the shade of the trees, and when it was cold we had a nice warm shed near the grove.
+
+As soon as I was old enough to eat grass my mother used to go out to work in the daytime, and come back in the evening.
+
+There were six young colts in the meadow besides me; they were older than I was; some were nearly as large as grown-up horses. I used to run with them, and had great fun; we used to gallop all together round and round the field as hard as we could go. Sometimes we had rather rough play, for they would frequently bite and kick as well as gallop.
+
+One day, when there was a good deal of kicking, my mother whinnied to me to come to her, and then she said:
+
+"I wish you to pay attention to what I am going to say to you. The colts who live here are very good colts, but they are cart-horse colts, and of course they have not learned manners. You have been well-bred and well-born; your father has a great name in these parts, and your grandfather won the cup two years at the Newmarket races; your grandmother had the sweetest temper of any horse I ever knew, and I think you have never seen me kick or bite. I hope you will grow up gentle and good, and never learn bad ways; do your work with a good will, lift your feet up well when you trot, and never bite or kick even in play."
+
+I have never forgotten my mother's advice; I knew she was a wise old horse, and our master thought a great deal of her. Her name was Duchess, but he often called her Pet.`,scenes:["The first place that I can well remember was a large pleasant meadow with a pond of clear water in it. Some shady trees leaned over it, and rushes and water-lilies grew at the deep end. Over the hedge on one side we looked into a plowed field, and on the other we looked over a gate at our master's house, which stood by the roadside; at the top of the meadow was a grove of fir trees, and at the bottom a running brook overhung by a steep bank.",`While I was young I lived upon my mother's milk, as I could not eat grass. In the daytime I ran by her side, and at night I lay down close by her. When it was hot we used to stand by the pond in the shade of the trees, and when it was cold we had a nice warm shed near the grove.
+
+As soon as I was old enough to eat grass my mother used to go out to work in the daytime, and come back in the evening.`,`There were six young colts in the meadow besides me; they were older than I was; some were nearly as large as grown-up horses. I used to run with them, and had great fun; we used to gallop all together round and round the field as hard as we could go. Sometimes we had rather rough play, for they would frequently bite and kick as well as gallop.
+
+One day, when there was a good deal of kicking, my mother whinnied to me to come to her, and then she said:`,'"I wish you to pay attention to what I am going to say to you. The colts who live here are very good colts, but they are cart-horse colts, and of course they have not learned manners. You have been well-bred and well-born; your father has a great name in these parts, and your grandfather won the cup two years at the Newmarket races; your grandmother had the sweetest temper of any horse I ever knew, and I think you have never seen me kick or bite. I hope you will grow up gentle and good, and never learn bad ways; do your work with a good will, lift your feet up well when you trot, and never bite or kick even in play."',"I have never forgotten my mother's advice; I knew she was a wise old horse, and our master thought a great deal of her. Her name was Duchess, but he often called her Pet."],fk:8.8,level:8.8,words:430,sentences:16,syllables:508,questions:[{depth:"literal",q:"Who is telling this story?",right:"A young horse",wrong:["The master","A farmer's boy","An old donkey"]},{depth:"literal",q:"What did the colts sometimes do in their rough play?",right:"Bite and kick",wrong:["Sing and dance","Hide and seek","Swim and dive"]},{depth:"literal",q:"What had the young horse's grandfather won?",right:"The cup at Newmarket, two years",wrong:["A ribbon at the village show","A race against a steam train","A prize for the best manners"]},{depth:"literal",q:"What was the mother horse's name?",right:"Duchess",wrong:["Ginger","Merrylegs","Beauty"]},{depth:"inferential",q:"Why did the mother call her foal over?",right:"She wanted him to learn good manners",wrong:["She wanted him to stop eating grass","It was time to go into the town","The master was calling for him"]}],evaluate:"The mother says the other colts 'have not learned manners' because they are cart-horse colts. Is it fair to judge someone by their family? What do you think?",wordBank:["meadow","whinnied","colts","temper"],needsReview:!0,reviewNote:"The mother's advice ranks the 'well-bred' above 'cart-horse colts', a period class attitude. The evaluative question invites the child to question it; a reviewer should approve that framing."},{id:"tomsawyer-fence",work:"tomsawyer",title:"Whitewashing the fence",band:2,kind:"prose",abridged:!1,hook:"Tom has a long fence to whitewash and a sunny day ruined. Or has he?",text:`"Hello, old chap, you got to work, hey?"
+
+Tom wheeled suddenly and said:
+
+"Why, it's you, Ben! I warn't noticing."
+
+"Say--I'm going in a-swimming, I am. Don't you wish you could? But of course you'd druther WORK--wouldn't you? Course you would!"
+
+Tom contemplated the boy a bit, and said:
+
+"What do you call work?"
+
+"Why, ain't THAT work?"
+
+Tom resumed his whitewashing, and answered carelessly:
+
+"Well, maybe it is, and maybe it ain't. All I know, is, it suits Tom Sawyer."
+
+"Oh come, now, you don't mean to let on that you LIKE it?"
+
+The brush continued to move.
+
+"Like it? Well, I don't see why I oughtn't to like it. Does a boy get a chance to whitewash a fence every day?"
+
+That put the thing in a new light. Ben stopped nibbling his apple. Tom swept his brush daintily back and forth--stepped back to note the effect--added a touch here and there--criticised the effect again--Ben watching every move and getting more and more interested, more and more absorbed. Presently he said:
+
+"Say, Tom, let ME whitewash a little."
+
+Tom considered, was about to consent; but he altered his mind:
+
+"No--no--I reckon it wouldn't hardly do, Ben. You see, Aunt Polly's awful particular about this fence--right here on the street, you know --but if it was the back fence I wouldn't mind and SHE wouldn't. Yes, she's awful particular about this fence; it's got to be done very careful; I reckon there ain't one boy in a thousand, maybe two thousand, that can do it the way it's got to be done."
+
+"No--is that so? Oh come, now--lemme just try. Only just a little--I'd let YOU, if you was me, Tom."
+
+"Ben, I'd like to, honest injun; but Aunt Polly--well, Jim wanted to do it, but she wouldn't let him; Sid wanted to do it, and she wouldn't let Sid. Now don't you see how I'm fixed? If you was to tackle this fence and anything was to happen to it--"
+
+"Oh, shucks, I'll be just as careful. Now lemme try. Say--I'll give you the core of my apple."
+
+"Well, here--No, Ben, now don't. I'm afeard--"
+
+"I'll give you ALL of it!"
+
+Tom gave up the brush with reluctance in his face, but alacrity in his heart. And while the late steamer Big Missouri worked and sweated in the sun, the retired artist sat on a barrel in the shade close by, dangled his legs, munched his apple, and planned the slaughter of more innocents. There was no lack of material; boys happened along every little while; they came to jeer, but remained to whitewash.`,scenes:[`"Hello, old chap, you got to work, hey?"
+
+Tom wheeled suddenly and said:
+
+"Why, it's you, Ben! I warn't noticing."
+
+"Say--I'm going in a-swimming, I am. Don't you wish you could? But of course you'd druther WORK--wouldn't you? Course you would!"
+
+Tom contemplated the boy a bit, and said:
+
+"What do you call work?"
+
+"Why, ain't THAT work?"
+
+Tom resumed his whitewashing, and answered carelessly:
+
+"Well, maybe it is, and maybe it ain't. All I know, is, it suits Tom Sawyer."
+
+"Oh come, now, you don't mean to let on that you LIKE it?"
+
+The brush continued to move.
+
+"Like it? Well, I don't see why I oughtn't to like it. Does a boy get a chance to whitewash a fence every day?"`,`That put the thing in a new light. Ben stopped nibbling his apple. Tom swept his brush daintily back and forth--stepped back to note the effect--added a touch here and there--criticised the effect again--Ben watching every move and getting more and more interested, more and more absorbed. Presently he said:
+
+"Say, Tom, let ME whitewash a little."
+
+Tom considered, was about to consent; but he altered his mind:`,`"No--no--I reckon it wouldn't hardly do, Ben. You see, Aunt Polly's awful particular about this fence--right here on the street, you know --but if it was the back fence I wouldn't mind and SHE wouldn't. Yes, she's awful particular about this fence; it's got to be done very careful; I reckon there ain't one boy in a thousand, maybe two thousand, that can do it the way it's got to be done."
+
+"No--is that so? Oh come, now--lemme just try. Only just a little--I'd let YOU, if you was me, Tom."`,`"Ben, I'd like to, honest injun; but Aunt Polly--well, Jim wanted to do it, but she wouldn't let him; Sid wanted to do it, and she wouldn't let Sid. Now don't you see how I'm fixed? If you was to tackle this fence and anything was to happen to it--"
+
+"Oh, shucks, I'll be just as careful. Now lemme try. Say--I'll give you the core of my apple."
+
+"Well, here--No, Ben, now don't. I'm afeard--"
+
+"I'll give you ALL of it!"`,"Tom gave up the brush with reluctance in his face, but alacrity in his heart. And while the late steamer Big Missouri worked and sweated in the sun, the retired artist sat on a barrel in the shade close by, dangled his legs, munched his apple, and planned the slaughter of more innocents. There was no lack of material; boys happened along every little while; they came to jeer, but remained to whitewash."],fk:4.4,level:4.4,words:436,sentences:36,syllables:563,questions:[{depth:"literal",q:"Where was Ben going?",right:"Swimming",wrong:["Fishing","To school","Home"]},{depth:"literal",q:"What did Ben first offer Tom for a turn?",right:"The core of his apple",wrong:["A kite in good repair","A dead rat on a string","A shiny new marble"]},{depth:"inferential",q:"Why did Ben suddenly want to whitewash?",right:"Tom made it seem rare and special",wrong:["Aunt Polly asked him to help","He wanted to earn some money","He had nothing else to do"]},{depth:"inferential",q:"Why did Tom say Aunt Polly was 'awful particular' about the fence?",right:"To make the job seem hard to get",wrong:["Because she was very cross","To warn Ben about the paint","Because the fence was new"]},{depth:"literal",q:"What did Tom do while Ben worked?",right:"Sat in the shade eating the apple",wrong:["Went swimming in the river","Painted the back fence","Ran to tell Aunt Polly"]}],evaluate:"Was Tom clever, or unfair to the other boys? Would you have handed over your apple?",wordBank:["contemplated","particular","reluctance","alacrity","jeer"],needsReview:!0,reviewNote:"Tom says 'honest injun', a slur on Native Americans in common use in 1876. Kept as Twain wrote it (never bowdlerised); it needs a grown-up note and a named reviewer's sign-off."},{id:"velveteen-real",work:"velveteen",title:"What is REAL?",band:2,kind:"prose",abridged:!1,hook:"A toy rabbit asks the oldest toy in the nursery how to become Real.",text:`The Skin Horse had lived longer in the nursery than any of the others. He was so old that his brown coat was bald in patches and showed the seams underneath, and most of the hairs in his tail had been pulled out to string bead necklaces. He was wise, for he had seen a long succession of mechanical toys arrive to boast and swagger, and by-and-by break their mainsprings and pass away, and he knew that they were only toys, and would never turn into anything else. For nursery magic is very strange and wonderful, and only those playthings that are old and wise and experienced like the Skin Horse understand all about it.
+
+"What is REAL?" asked the Rabbit one day, when they were lying side by side near the nursery fender, before Nana came to tidy the room. "Does it mean having things that buzz inside you and a stick-out handle?"
+
+"Real isn't how you are made," said the Skin Horse. "It's a thing that happens to you. When a child loves you for a long, long time, not just to play with, but REALLY loves you, then you become Real."
+
+"Does it hurt?" asked the Rabbit.
+
+"Sometimes," said the Skin Horse, for he was always truthful. "When you are Real you don't mind being hurt."
+
+"Does it happen all at once, like being wound up," he asked, "or bit by bit?"
+
+"It doesn't happen all at once," said the Skin Horse. "You become. It takes a long time. That's why it doesn't happen often to people who break easily, or have sharp edges, or who have to be carefully kept. Generally, by the time you are Real, most of your hair has been loved off, and your eyes drop out and you get loose in the joints and very shabby. But these things don't matter at all, because once you are Real you can't be ugly, except to people who don't understand."
+
+"I suppose you are real?" said the Rabbit. And then he wished he had not said it, for he thought the Skin Horse might be sensitive. But the Skin Horse only smiled.`,scenes:["The Skin Horse had lived longer in the nursery than any of the others. He was so old that his brown coat was bald in patches and showed the seams underneath, and most of the hairs in his tail had been pulled out to string bead necklaces. He was wise, for he had seen a long succession of mechanical toys arrive to boast and swagger, and by-and-by break their mainsprings and pass away, and he knew that they were only toys, and would never turn into anything else. For nursery magic is very strange and wonderful, and only those playthings that are old and wise and experienced like the Skin Horse understand all about it.",`"What is REAL?" asked the Rabbit one day, when they were lying side by side near the nursery fender, before Nana came to tidy the room. "Does it mean having things that buzz inside you and a stick-out handle?"
+
+"Real isn't how you are made," said the Skin Horse. "It's a thing that happens to you. When a child loves you for a long, long time, not just to play with, but REALLY loves you, then you become Real."`,`"Does it hurt?" asked the Rabbit.
+
+"Sometimes," said the Skin Horse, for he was always truthful. "When you are Real you don't mind being hurt."
+
+"Does it happen all at once, like being wound up," he asked, "or bit by bit?"`,`"It doesn't happen all at once," said the Skin Horse. "You become. It takes a long time. That's why it doesn't happen often to people who break easily, or have sharp edges, or who have to be carefully kept. Generally, by the time you are Real, most of your hair has been loved off, and your eyes drop out and you get loose in the joints and very shabby. But these things don't matter at all, because once you are Real you can't be ugly, except to people who don't understand."
+
+"I suppose you are real?" said the Rabbit. And then he wished he had not said it, for he thought the Skin Horse might be sensitive. But the Skin Horse only smiled.`],fk:4.6,level:4.6,words:358,sentences:25,syllables:444,questions:[{depth:"literal",q:"Why was the Skin Horse bald in patches?",right:"He was very old and well-worn",wrong:["A dog had chewed his coat","He was left out in the rain","He was made that way"]},{depth:"literal",q:"According to the Skin Horse, how does a toy become Real?",right:"A child loves it for a long, long time",wrong:["It is wound up with a golden key","It is stuffed with the best sawdust","It is kept safe inside a box"]},{depth:"literal",q:"Does becoming Real happen all at once?",right:"No, it takes a long time",wrong:["Yes, in a single night","Yes, on the child's birthday","No, it never happens"]},{depth:"inferential",q:"Why does it seldom happen to toys that 'break easily, or have sharp edges'?",right:"They are hard to love and hold for years",wrong:["They cost too much to buy","They are always kept in shops","They are too new and shiny"]},{depth:"inferential",q:"Why did the Rabbit wish he had not asked his last question?",right:"It might upset the old Horse",wrong:["He was afraid of the answer","Nana came in to tidy the room","The Horse was fast asleep"]}],evaluate:"The Skin Horse says once you are Real 'you can't be ugly, except to people who don't understand'. What do you think he means?",wordBank:["succession","mainsprings","experienced","shabby","sensitive"]},{id:"littlewomen-presents",work:"littlewomen",title:"No presents this Christmas",band:2,kind:"prose",abridged:!1,hook:"Four sisters, one dollar each, and a Christmas with no presents.",text:`"Christmas won't be Christmas without any presents," grumbled Jo, lying on the rug.
+
+"It's so dreadful to be poor!" sighed Meg, looking down at her old dress.
+
+"I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all," added little Amy, with an injured sniff.
+
+"We've got Father and Mother, and each other," said Beth contentedly from her corner.
+
+The four young faces on which the firelight shone brightened at the cheerful words, but darkened again as Jo said sadly, "We haven't got Father, and shall not have him for a long time." She didn't say "perhaps never," but each silently added it, thinking of Father far away, where the fighting was.
+
+Nobody spoke for a minute; then Meg said in an altered tone, "You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone; and she thinks we ought not to spend money for pleasure, when our men are suffering so in the army. We can't do much, but we can make our little sacrifices, and ought to do it gladly. But I am afraid I don't," and Meg shook her head, as she thought regretfully of all the pretty things she wanted.
+
+"But I don't think the little we should spend would do any good. We've each got a dollar, and the army wouldn't be much helped by our giving that. I agree not to expect anything from Mother or you, but I do want to buy _Undine and Sintran_ for myself. I've wanted it so long," said Jo, who was a bookworm.
+
+"I planned to spend mine in new music," said Beth, with a little sigh, which no one heard but the hearth brush and kettle-holder.
+
+"I shall get a nice box of Faber's drawing pencils; I really need them," said Amy decidedly.`,scenes:[`"Christmas won't be Christmas without any presents," grumbled Jo, lying on the rug.
+
+"It's so dreadful to be poor!" sighed Meg, looking down at her old dress.
+
+"I don't think it's fair for some girls to have plenty of pretty things, and other girls nothing at all," added little Amy, with an injured sniff.
+
+"We've got Father and Mother, and each other," said Beth contentedly from her corner.`,`The four young faces on which the firelight shone brightened at the cheerful words, but darkened again as Jo said sadly, "We haven't got Father, and shall not have him for a long time." She didn't say "perhaps never," but each silently added it, thinking of Father far away, where the fighting was.`,`Nobody spoke for a minute; then Meg said in an altered tone, "You know the reason Mother proposed not having any presents this Christmas was because it is going to be a hard winter for everyone; and she thinks we ought not to spend money for pleasure, when our men are suffering so in the army. We can't do much, but we can make our little sacrifices, and ought to do it gladly. But I am afraid I don't," and Meg shook her head, as she thought regretfully of all the pretty things she wanted.`,`"But I don't think the little we should spend would do any good. We've each got a dollar, and the army wouldn't be much helped by our giving that. I agree not to expect anything from Mother or you, but I do want to buy _Undine and Sintran_ for myself. I've wanted it so long," said Jo, who was a bookworm.
+
+"I planned to spend mine in new music," said Beth, with a little sigh, which no one heard but the hearth brush and kettle-holder.
+
+"I shall get a nice box of Faber's drawing pencils; I really need them," said Amy decidedly.`],fk:7.3,level:7.3,words:318,sentences:16,syllables:408,questions:[{depth:"literal",q:"Where was Father?",right:"Away at the war",wrong:["At work in the city","Visiting his sister","Asleep upstairs"]},{depth:"literal",q:"How much money did each girl have?",right:"A dollar",wrong:["A penny","Ten dollars","Nothing"]},{depth:"literal",q:"What did Jo want to buy?",right:"A book she had long wanted",wrong:["Some new sheets of music","A box of drawing pencils","A new dress for parties"]},{depth:"inferential",q:"Why had Mother suggested no presents this year?",right:"Times were hard and soldiers were suffering",wrong:["The girls had been very naughty","The shops were closed for winter","Father asked for it in a letter"]},{depth:"inferential",q:"Which sister seems most content with what she has?",right:"Beth",wrong:["Meg","Jo","Amy"]}],evaluate:"Each sister reacts differently to having no presents. Which sister are you most like, and why?",wordBank:["contentedly","sacrifices","regretfully","decidedly","bookworm"]},{id:"anne-matthew",work:"anne",title:"Matthew meets Anne",band:2,kind:"prose",abridged:!1,hook:"A shy farmer goes to the station expecting a boy. Someone else is waiting.",text:`A child of about eleven, garbed in a very short, very tight, very ugly dress of yellowish-gray wincey. She wore a faded brown sailor hat and beneath the hat, extending down her back, were two braids of very thick, decidedly red hair. Her face was small, white and thin, also much freckled; her mouth was large and so were her eyes, which looked green in some lights and moods and gray in others.
+
+So far, the ordinary observer; an extraordinary observer might have seen that the chin was very pointed and pronounced; that the big eyes were full of spirit and vivacity; that the mouth was sweet-lipped and expressive; that the forehead was broad and full; in short, our discerning extraordinary observer might have concluded that no commonplace soul inhabited the body of this stray woman-child of whom shy Matthew Cuthbert was so ludicrously afraid.
+
+Matthew, however, was spared the ordeal of speaking first, for as soon as she concluded that he was coming to her she stood up, grasping with one thin brown hand the handle of a shabby, old-fashioned carpet-bag; the other she held out to him.
+
+"I suppose you are Mr. Matthew Cuthbert of Green Gables?" she said in a peculiarly clear, sweet voice. "I'm very glad to see you. I was beginning to be afraid you weren't coming for me and I was imagining all the things that might have happened to prevent you. I had made up my mind that if you didn't come for me to-night I'd go down the track to that big wild cherry-tree at the bend, and climb up into it to stay all night. I wouldn't be a bit afraid, and it would be lovely to sleep in a wild cherry-tree all white with bloom in the moonshine, don't you think? You could imagine you were dwelling in marble halls, couldn't you? And I was quite sure you would come for me in the morning, if you didn't to-night."
+
+Matthew had taken the scrawny little hand awkwardly in his; then and there he decided what to do. He could not tell this child with the glowing eyes that there had been a mistake; he would take her home and let Marilla do that. She couldn't be left at Bright River anyhow, no matter what mistake had been made, so all questions and explanations might as well be deferred until he was safely back at Green Gables.
+
+"I'm sorry I was late," he said shyly. "Come along. The horse is over in the yard. Give me your bag."`,scenes:["A child of about eleven, garbed in a very short, very tight, very ugly dress of yellowish-gray wincey. She wore a faded brown sailor hat and beneath the hat, extending down her back, were two braids of very thick, decidedly red hair. Her face was small, white and thin, also much freckled; her mouth was large and so were her eyes, which looked green in some lights and moods and gray in others.",`So far, the ordinary observer; an extraordinary observer might have seen that the chin was very pointed and pronounced; that the big eyes were full of spirit and vivacity; that the mouth was sweet-lipped and expressive; that the forehead was broad and full; in short, our discerning extraordinary observer might have concluded that no commonplace soul inhabited the body of this stray woman-child of whom shy Matthew Cuthbert was so ludicrously afraid.
+
+Matthew, however, was spared the ordeal of speaking first, for as soon as she concluded that he was coming to her she stood up, grasping with one thin brown hand the handle of a shabby, old-fashioned carpet-bag; the other she held out to him.`,`"I suppose you are Mr. Matthew Cuthbert of Green Gables?" she said in a peculiarly clear, sweet voice. "I'm very glad to see you. I was beginning to be afraid you weren't coming for me and I was imagining all the things that might have happened to prevent you. I had made up my mind that if you didn't come for me to-night I'd go down the track to that big wild cherry-tree at the bend, and climb up into it to stay all night. I wouldn't be a bit afraid, and it would be lovely to sleep in a wild cherry-tree all white with bloom in the moonshine, don't you think? You could imagine you were dwelling in marble halls, couldn't you? And I was quite sure you would come for me in the morning, if you didn't to-night."`,`Matthew had taken the scrawny little hand awkwardly in his; then and there he decided what to do. He could not tell this child with the glowing eyes that there had been a mistake; he would take her home and let Marilla do that. She couldn't be left at Bright River anyhow, no matter what mistake had been made, so all questions and explanations might as well be deferred until he was safely back at Green Gables.
+
+"I'm sorry I was late," he said shyly. "Come along. The horse is over in the yard. Give me your bag."`],fk:8.2,level:8.2,words:427,sentences:21,syllables:574,questions:[{depth:"literal",q:"What colour was the girl's hair?",right:"Red",wrong:["Brown","Black","Fair"]},{depth:"literal",q:"Where had she planned to sleep if no one came?",right:"Up in a wild cherry-tree",wrong:["On a bench at the station","In the station-master's house","Under the wooden platform"]},{depth:"inferential",q:"Why was Matthew afraid to speak to her?",right:"He was shy, and she was not a boy",wrong:["She looked cross and unfriendly","He had forgotten her name","She had a large dog with her"]},{depth:"inferential",q:"Why did Matthew decide to take her home?",right:"He could not bear to tell her of the mistake",wrong:["Marilla had told him to bring her","She would not let go of his hand","He had wanted a girl all along"]},{depth:"literal",q:"What did 'an extraordinary observer' notice?",right:"Her eyes were full of spirit",wrong:["Her dress was brand new","She was about to cry","She was tall for eleven"]}],evaluate:"Anne talks a great deal when she is nervous. Is talking a good way to handle being nervous? What do you do?",wordBank:["observer","vivacity","discerning","ludicrously","deferred"],needsReview:!0,reviewNote:"Anne is an orphan, and the Cuthberts had asked for a boy. For a child who is adopted or fostered this may land closely; offer a grown-up note, reviewer to approve."},{id:"treasure-benbow",work:"treasure",title:"The old sea-dog at the Admiral Benbow",band:2,kind:"prose",abridged:!1,hook:"A scarred old sailor arrives at a seaside inn with a heavy sea-chest.",text:`SQUIRE TRELAWNEY, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still treasure not yet lifted, I take up my pen in the year of grace 17__ and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under our roof.
+
+I remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow--a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white. I remember him looking round the cover and whistling to himself as he did so, and then breaking out in that old sea-song that he sang so often afterwards:
+
+"Fifteen men on the dead man's chest-- Yo-ho-ho, and a bottle of rum!"
+
+in the high, old tottering voice that seemed to have been tuned and broken at the capstan bars. Then he rapped on the door with a bit of stick like a handspike that he carried, and when my father appeared, called roughly for a glass of rum. This, when it was brought to him, he drank slowly, like a connoisseur, lingering on the taste and still looking about him at the cliffs and up at our signboard.
+
+"This is a handy cove," says he at length; "and a pleasant sittyated grog-shop. Much company, mate?"
+
+My father told him no, very little company, the more was the pity.
+
+"Well, then," said he, "this is the berth for me. Here you, matey," he cried to the man who trundled the barrow; "bring up alongside and help up my chest. I'll stay here a bit," he continued. "I'm a plain man; rum and bacon and eggs is what I want, and that head up there for to watch ships off. What you mought call me? You mought call me captain. Oh, I see what you're at--there"; and he threw down three or four gold pieces on the threshold. "You can tell me when I've worked through that," says he, looking as fierce as a commander.`,scenes:["SQUIRE TRELAWNEY, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still treasure not yet lifted, I take up my pen in the year of grace 17__ and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under our roof.",`I remember him as if it were yesterday, as he came plodding to the inn door, his sea-chest following behind him in a hand-barrow--a tall, strong, heavy, nut-brown man, his tarry pigtail falling over the shoulder of his soiled blue coat, his hands ragged and scarred, with black, broken nails, and the sabre cut across one cheek, a dirty, livid white. I remember him looking round the cover and whistling to himself as he did so, and then breaking out in that old sea-song that he sang so often afterwards:
+
+"Fifteen men on the dead man's chest-- Yo-ho-ho, and a bottle of rum!"`,`in the high, old tottering voice that seemed to have been tuned and broken at the capstan bars. Then he rapped on the door with a bit of stick like a handspike that he carried, and when my father appeared, called roughly for a glass of rum. This, when it was brought to him, he drank slowly, like a connoisseur, lingering on the taste and still looking about him at the cliffs and up at our signboard.
+
+"This is a handy cove," says he at length; "and a pleasant sittyated grog-shop. Much company, mate?"
+
+My father told him no, very little company, the more was the pity.`,`"Well, then," said he, "this is the berth for me. Here you, matey," he cried to the man who trundled the barrow; "bring up alongside and help up my chest. I'll stay here a bit," he continued. "I'm a plain man; rum and bacon and eggs is what I want, and that head up there for to watch ships off. What you mought call me? You mought call me captain. Oh, I see what you're at--there"; and he threw down three or four gold pieces on the threshold. "You can tell me when I've worked through that," says he, looking as fierce as a commander.`],fk:8.3,level:8.3,words:404,sentences:18,syllables:517,questions:[{depth:"literal",q:"Who is telling the story?",right:"The innkeeper's son",wrong:["Squire Trelawney","Dr. Livesey","The old seaman"]},{depth:"literal",q:"What was the name of the narrator's father's inn?",right:"The Admiral Benbow",wrong:["The Royal George","The Dead Man's Chest","The Spyglass"]},{depth:"literal",q:"What mark did the seaman have on his cheek?",right:"A sabre cut",wrong:["A ship tattoo","A burn mark","A black patch"]},{depth:"inferential",q:"Why did the captain choose this inn?",right:"It was quiet and looked out to sea",wrong:["It was the cheapest on the coast","An old friend of his kept it","It was close to the busy town"]},{depth:"inferential",q:"What does 'keeping nothing back but the bearings of the island' mean?",right:"He will tell all except where it is",wrong:["He will keep the treasure himself","He has forgotten most of it","He will only tell happy parts"]}],evaluate:"The narrator says there is 'still treasure not yet lifted'. How does that make you feel about reading on?",wordBank:["particulars","connoisseur","sabre","threshold","handspike"]},{id:"wordsworth-daffodils",work:"wordsworth",title:"I wandered lonely as a Cloud",band:2,kind:"verse",abridged:!1,hook:"A lonely walk, a sudden crowd of golden flowers, and a memory that never fades.",text:`I wandered lonely as a Cloud
+That floats on high o'er Vales and Hills,
+When all at once I saw a crowd
+A host of dancing Daffodills;
+Along the Lake, beneath the trees,
+Ten thousand dancing in the breeze.
+
+The waves beside them danced, but they
+Outdid the sparkling waves in glee:--
+A Poet could not but be gay
+In such a laughing company:
+I gaz'd--and gaz'd--but little thought
+What wealth the shew to me had brought:
+
+For oft when on my couch I lie
+In vacant or in pensive mood,
+They flash upon that inward eye
+Which is the bliss of solitude,
+And then my heart with pleasure fills,
+And dances with the Daffodils.`,scenes:[`I wandered lonely as a Cloud
+That floats on high o'er Vales and Hills,
+When all at once I saw a crowd
+A host of dancing Daffodills;
+Along the Lake, beneath the trees,
+Ten thousand dancing in the breeze.`,`The waves beside them danced, but they
+Outdid the sparkling waves in glee:--
+A Poet could not but be gay
+In such a laughing company:
+I gaz'd--and gaz'd--but little thought
+What wealth the shew to me had brought:`,`For oft when on my couch I lie
+In vacant or in pensive mood,
+They flash upon that inward eye
+Which is the bliss of solitude,
+And then my heart with pleasure fills,
+And dances with the Daffodils.`],fk:21.6,fkOverride:6,level:6,words:115,sentences:2,syllables:144,questions:[{depth:"literal",q:"What does the poet compare himself to?",right:"A lonely cloud",wrong:["A dancing wave","A bird in a tree","A falling leaf"]},{depth:"literal",q:"How many daffodils does the poet say he saw?",right:"Ten thousand",wrong:["A hundred","A few dozen","A million"]},{depth:"literal",q:"What did the daffodils outdo in glee?",right:"The sparkling waves",wrong:["The singing birds","The rushing wind","The shining stars"]},{depth:"inferential",q:"What is the 'wealth' the poet did not notice at first?",right:"A memory that brings him joy later",wrong:["Money he found by the lake","Flowers he picked to sell","A gift from a friend"]}],evaluate:"Is there a place or a sight you remember that still makes you happy? How is your memory like the poet's?",wordBank:["host","glee","pensive","solitude","vacant"]},{id:"dickinson-hope",work:"dickinson",title:"Hope",band:2,kind:"verse",abridged:!1,hook:"What if hope were a small bird that never stops singing?",text:`Hope is the thing with feathers
+That perches in the soul,
+And sings the tune without the words,
+And never stops at all,
+
+And sweetest in the gale is heard;
+And sore must be the storm
+That could abash the little bird
+That kept so many warm.
+
+I 've heard it in the chillest land,
+And on the strangest sea;
+Yet, never, in extremity,
+It asked a crumb of me.`,scenes:[`Hope is the thing with feathers
+That perches in the soul,
+And sings the tune without the words,
+And never stops at all,`,`And sweetest in the gale is heard;
+And sore must be the storm
+That could abash the little bird
+That kept so many warm.`,`I 've heard it in the chillest land,
+And on the strangest sea;
+Yet, never, in extremity,
+It asked a crumb of me.`],fk:12.2,fkOverride:6,level:6,words:70,sentences:2,syllables:84,questions:[{depth:"literal",q:"Where does the poem say hope perches?",right:"In the soul",wrong:["On a branch","In a cage","On the roof"]},{depth:"inferential",q:"What is hope compared to in the poem?",right:"A little bird",wrong:["A warm fire","A bright star","A small boat"]},{depth:"literal",q:"When is its song sweetest?",right:"In the gale",wrong:["In the morning","At midnight","In the summer"]},{depth:"inferential",q:"What does 'never ... It asked a crumb of me' mean?",right:"Hope never wanted anything back",wrong:["The bird was always hungry","The poet fed it every day","Hope only comes if you pay"]}],evaluate:"Why do you think the poet chose a bird to stand for hope? What would you choose?",wordBank:["perches","abash","extremity","gale"]},{id:"lookingglass-humpty",work:"lookingglass",title:"Alice meets Humpty Dumpty",band:2,kind:"prose",abridged:!1,hook:"An enormous egg on a very narrow wall, and the rudest conversation ever.",text:`'And how exactly like an egg he is!' she said aloud, standing with her hands ready to catch him, for she was every moment expecting him to fall.
+
+'It's VERY provoking,' Humpty Dumpty said after a long silence, looking away from Alice as he spoke, 'to be called an egg--VERY!'
+
+'I said you LOOKED like an egg, Sir,' Alice gently explained. 'And some eggs are very pretty, you know' she added, hoping to turn her remark into a sort of a compliment.
+
+'Some people,' said Humpty Dumpty, looking away from her as usual, 'have no more sense than a baby!'
+
+Alice didn't know what to say to this: it wasn't at all like conversation, she thought, as he never said anything to HER; in fact, his last remark was evidently addressed to a tree--so she stood and softly repeated to herself:--
+
+'Humpty Dumpty sat on a wall: Humpty Dumpty had a great fall. All the King's horses and all the King's men Couldn't put Humpty Dumpty in his place again.'
+
+'That last line is much too long for the poetry,' she added, almost out loud, forgetting that Humpty Dumpty would hear her.
+
+'Don't stand there chattering to yourself like that,' Humpty Dumpty said, looking at her for the first time, 'but tell me your name and your business.'
+
+'My NAME is Alice, but--'
+
+'It's a stupid enough name!' Humpty Dumpty interrupted impatiently. 'What does it mean?'
+
+'MUST a name mean something?' Alice asked doubtfully.
+
+'Of course it must,' Humpty Dumpty said with a short laugh: 'MY name means the shape I am--and a good handsome shape it is, too. With a name like yours, you might be any shape, almost.'
+
+'Why do you sit out here all alone?' said Alice, not wishing to begin an argument.
+
+'Why, because there's nobody with me!' cried Humpty Dumpty. 'Did you think I didn't know the answer to THAT? Ask another.'`,scenes:[`'And how exactly like an egg he is!' she said aloud, standing with her hands ready to catch him, for she was every moment expecting him to fall.
+
+'It's VERY provoking,' Humpty Dumpty said after a long silence, looking away from Alice as he spoke, 'to be called an egg--VERY!'
+
+'I said you LOOKED like an egg, Sir,' Alice gently explained. 'And some eggs are very pretty, you know' she added, hoping to turn her remark into a sort of a compliment.
+
+'Some people,' said Humpty Dumpty, looking away from her as usual, 'have no more sense than a baby!'`,`Alice didn't know what to say to this: it wasn't at all like conversation, she thought, as he never said anything to HER; in fact, his last remark was evidently addressed to a tree--so she stood and softly repeated to herself:--
+
+'Humpty Dumpty sat on a wall: Humpty Dumpty had a great fall. All the King's horses and all the King's men Couldn't put Humpty Dumpty in his place again.'
+
+'That last line is much too long for the poetry,' she added, almost out loud, forgetting that Humpty Dumpty would hear her.`,`'Don't stand there chattering to yourself like that,' Humpty Dumpty said, looking at her for the first time, 'but tell me your name and your business.'
+
+'My NAME is Alice, but--'
+
+'It's a stupid enough name!' Humpty Dumpty interrupted impatiently. 'What does it mean?'
+
+'MUST a name mean something?' Alice asked doubtfully.
+
+'Of course it must,' Humpty Dumpty said with a short laugh: 'MY name means the shape I am--and a good handsome shape it is, too. With a name like yours, you might be any shape, almost.'`,`'Why do you sit out here all alone?' said Alice, not wishing to begin an argument.
+
+'Why, because there's nobody with me!' cried Humpty Dumpty. 'Did you think I didn't know the answer to THAT? Ask another.'`],fk:5.7,level:5.7,words:317,sentences:23,syllables:428,questions:[{depth:"literal",q:"Why did Alice stand with her hands held out?",right:"She expected him to fall",wrong:["She wanted to shake his hand","She was trying to catch a bird","Her hands were cold"]},{depth:"literal",q:"What did Humpty Dumpty hate being called?",right:"An egg",wrong:["A baby","A fool","A king"]},{depth:"literal",q:"Who did Humpty Dumpty seem to be talking to instead of Alice?",right:"A tree",wrong:["The King","A bird","A horse"]},{depth:"inferential",q:"Why did Alice ask if he would be safer on the ground?",right:"She was kindly worried about him",wrong:["She wanted to sit on the wall","She was setting him a riddle","She wanted him to go away"]},{depth:"inferential",q:"What does Humpty Dumpty think a name must do?",right:"Tell you the shape of its owner",wrong:["Be long and hard to spell","Rhyme with something funny","Be the same as your father's"]}],evaluate:"Humpty Dumpty is rude to Alice, and she stays polite. Was she right to? What would you have said?",wordBank:["provoking","compliment","conversation","doubtfully","impatiently"]},{id:"oz-cyclone",work:"oz",title:"The cyclone",band:2,kind:"prose",abridged:!1,hook:"A grey prairie, a little black dog, and a wind that is coming for the house.",text:`Today, however, they were not playing. Uncle Henry sat upon the doorstep and looked anxiously at the sky, which was even grayer than usual. Dorothy stood in the door with Toto in her arms, and looked at the sky too. Aunt Em was washing the dishes.
+
+From the far north they heard a low wail of the wind, and Uncle Henry and Dorothy could see where the long grass bowed in waves before the coming storm. There now came a sharp whistling in the air from the south, and as they turned their eyes that way they saw ripples in the grass coming from that direction also.
+
+Suddenly Uncle Henry stood up.
+
+"There's a cyclone coming, Em," he called to his wife. "I'll go look after the stock." Then he ran toward the sheds where the cows and horses were kept.
+
+Aunt Em dropped her work and came to the door. One glance told her of the danger close at hand.
+
+"Quick, Dorothy!" she screamed. "Run for the cellar!"
+
+Toto jumped out of Dorothy's arms and hid under the bed, and the girl started to get him. Aunt Em, badly frightened, threw open the trap door in the floor and climbed down the ladder into the small, dark hole. Dorothy caught Toto at last and started to follow her aunt. When she was halfway across the room there came a great shriek from the wind, and the house shook so hard that she lost her footing and sat down suddenly upon the floor.
+
+Then a strange thing happened.
+
+The house whirled around two or three times and rose slowly through the air. Dorothy felt as if she were going up in a balloon.
+
+The north and south winds met where the house stood, and made it the exact center of the cyclone. In the middle of a cyclone the air is generally still, but the great pressure of the wind on every side of the house raised it up higher and higher, until it was at the very top of the cyclone; and there it remained and was carried miles and miles away as easily as you could carry a feather.
+
+It was very dark, and the wind howled horribly around her, but Dorothy found she was riding quite easily. After the first few whirls around, and one other time when the house tipped badly, she felt as if she were being rocked gently, like a baby in a cradle.`,scenes:[`Today, however, they were not playing. Uncle Henry sat upon the doorstep and looked anxiously at the sky, which was even grayer than usual. Dorothy stood in the door with Toto in her arms, and looked at the sky too. Aunt Em was washing the dishes.
+
+From the far north they heard a low wail of the wind, and Uncle Henry and Dorothy could see where the long grass bowed in waves before the coming storm. There now came a sharp whistling in the air from the south, and as they turned their eyes that way they saw ripples in the grass coming from that direction also.
+
+Suddenly Uncle Henry stood up.`,`"There's a cyclone coming, Em," he called to his wife. "I'll go look after the stock." Then he ran toward the sheds where the cows and horses were kept.
+
+Aunt Em dropped her work and came to the door. One glance told her of the danger close at hand.
+
+"Quick, Dorothy!" she screamed. "Run for the cellar!"`,"Toto jumped out of Dorothy's arms and hid under the bed, and the girl started to get him. Aunt Em, badly frightened, threw open the trap door in the floor and climbed down the ladder into the small, dark hole. Dorothy caught Toto at last and started to follow her aunt. When she was halfway across the room there came a great shriek from the wind, and the house shook so hard that she lost her footing and sat down suddenly upon the floor.",`Then a strange thing happened.
+
+The house whirled around two or three times and rose slowly through the air. Dorothy felt as if she were going up in a balloon.
+
+The north and south winds met where the house stood, and made it the exact center of the cyclone. In the middle of a cyclone the air is generally still, but the great pressure of the wind on every side of the house raised it up higher and higher, until it was at the very top of the cyclone; and there it remained and was carried miles and miles away as easily as you could carry a feather.`,"It was very dark, and the wind howled horribly around her, but Dorothy found she was riding quite easily. After the first few whirls around, and one other time when the house tipped badly, she felt as if she were being rocked gently, like a baby in a cradle."],fk:5.6,level:5.6,words:410,sentences:26,syllables:523,questions:[{depth:"literal",q:"Where did Uncle Henry run when the storm was coming?",right:"To the sheds, to see to the animals",wrong:["Into the cellar with Aunt Em","Into town to warn the neighbours","Up on to the roof"]},{depth:"literal",q:"Why did Dorothy not reach the cellar in time?",right:"She stopped to catch Toto under the bed",wrong:["She could not open the trap door","She went to fetch her best dress","She was asleep in her little bed"]},{depth:"literal",q:"What did Dorothy feel the house was like as it rose?",right:"Going up in a balloon",wrong:["Sailing on a ship","Falling down a well","Riding on a horse"]},{depth:"inferential",q:"Why was the house carried so high?",right:"It sat in the middle of the whirlwind",wrong:["Uncle Henry had tied it to a kite","The house was made of light paper","A wizard lifted it by magic"]},{depth:"inferential",q:"How did Dorothy feel once the house was up in the air?",right:"Calmer than she expected",wrong:["More frightened every minute","Angry with Aunt Em","Very sick and dizzy"]}],evaluate:"Dorothy goes back for Toto instead of running to the cellar. Was that brave or foolish? What would you have done?",wordBank:["anxiously","cyclone","glance","whirled","pressure"]},{id:"happyprince-swallow",work:"happyprince",title:"The Swallow and the Happy Prince",band:2,kind:"prose",abridged:!1,hook:"A swallow shelters under a golden statue and is rained on, though the sky is clear.",text:`“What is the use of a statue if it cannot keep the rain off?” he said; “I must look for a good chimney-pot,” and he determined to fly away.
+
+But before he had opened his wings, a third drop fell, and he looked up, and saw—Ah! what did he see?
+
+The eyes of the Happy Prince were filled with tears, and tears were running down his golden cheeks. His face was so beautiful in the moonlight that the little Swallow was filled with pity.
+
+“Who are you?” he said.
+
+“I am the Happy Prince.”
+
+“Why are you weeping then?” asked the Swallow; “you have quite drenched me.”
+
+“When I was alive and had a human heart,” answered the statue, “I did not know what tears were, for I lived in the Palace of Sans-Souci, where sorrow is not allowed to enter. In the daytime I played with my companions in the garden, and in the evening I led the dance in the Great Hall. Round the garden ran a very lofty wall, but I never cared to ask what lay beyond it, everything about me was so beautiful. My courtiers called me the Happy Prince, and happy indeed I was, if pleasure be happiness. So I lived, and so I died. And now that I am dead they have set me up here so high that I can see all the ugliness and all the misery of my city, and though my heart is made of lead yet I cannot chose but weep.”
+
+“What! is he not solid gold?” said the Swallow to himself. He was too polite to make any personal remarks out loud.
+
+“Far away,” continued the statue in a low musical voice, “far away in a little street there is a poor house. One of the windows is open, and through it I can see a woman seated at a table. Her face is thin and worn, and she has coarse, red hands, all pricked by the needle, for she is a seamstress. She is embroidering passion-flowers on a satin gown for the loveliest of the Queen’s maids-of-honour to wear at the next Court-ball. In a bed in the corner of the room her little boy is lying ill. He has a fever, and is asking for oranges. His mother has nothing to give him but river water, so he is crying. Swallow, Swallow, little Swallow, will you not bring her the ruby out of my sword-hilt? My feet are fastened to this pedestal and I cannot move.”`,scenes:[`“What is the use of a statue if it cannot keep the rain off?” he said; “I must look for a good chimney-pot,” and he determined to fly away.
+
+But before he had opened his wings, a third drop fell, and he looked up, and saw—Ah! what did he see?`,`The eyes of the Happy Prince were filled with tears, and tears were running down his golden cheeks. His face was so beautiful in the moonlight that the little Swallow was filled with pity.
+
+“Who are you?” he said.
+
+“I am the Happy Prince.”
+
+“Why are you weeping then?” asked the Swallow; “you have quite drenched me.”`,"“When I was alive and had a human heart,” answered the statue, “I did not know what tears were, for I lived in the Palace of Sans-Souci, where sorrow is not allowed to enter. In the daytime I played with my companions in the garden, and in the evening I led the dance in the Great Hall.",`Round the garden ran a very lofty wall, but I never cared to ask what lay beyond it, everything about me was so beautiful. My courtiers called me the Happy Prince, and happy indeed I was, if pleasure be happiness. So I lived, and so I died. And now that I am dead they have set me up here so high that I can see all the ugliness and all the misery of my city, and though my heart is made of lead yet I cannot chose but weep.”
+
+“What! is he not solid gold?” said the Swallow to himself. He was too polite to make any personal remarks out loud.`,"“Far away,” continued the statue in a low musical voice, “far away in a little street there is a poor house. One of the windows is open, and through it I can see a woman seated at a table. Her face is thin and worn, and she has coarse, red hands, all pricked by the needle, for she is a seamstress. She is embroidering passion-flowers on a satin gown for the loveliest of the Queen’s maids-of-honour to wear at the next Court-ball.","In a bed in the corner of the room her little boy is lying ill. He has a fever, and is asking for oranges. His mother has nothing to give him but river water, so he is crying. Swallow, Swallow, little Swallow, will you not bring her the ruby out of my sword-hilt? My feet are fastened to this pedestal and I cannot move.”"],fk:5.1,level:5.1,words:422,sentences:30,syllables:544,questions:[{depth:"literal",q:"What fell on the Swallow, though the sky was clear?",right:"Drops of water",wrong:["Leaves of gold","Petals from a tree","Grains of sand"]},{depth:"literal",q:"Where did the Prince live when he was alive?",right:"In a palace where sorrow could not enter",wrong:["In a cottage at the edge of the city","In a castle high on a mountain","On a ship that sailed the seas"]},{depth:"literal",q:"What is the statue's heart made of?",right:"Lead",wrong:["Gold","Ruby","Stone"]},{depth:"literal",q:"What does the seamstress's little boy ask for?",right:"Oranges",wrong:["Water","Bread","Toys"]},{depth:"inferential",q:"Why is the statue weeping?",right:"He can now see how poor and sad his city is",wrong:["He misses his friends from the palace","The Swallow has made him angry","His gold leaves are wearing away"]}],evaluate:"The Prince never asked what lay beyond his garden wall while he was alive. Why does it matter that he sees it now?",wordBank:["determined","drenched","misery","seamstress","pedestal"]},{id:"lamb-tempest",work:"lamb-tales",title:"Prospero raises a storm",band:2,kind:"prose",abridged:!1,hook:"A father with magic powers, his daughter, and a ship caught in a storm he made.",text:`Having these powerful spirits obedient to his will, Prospero could by their means command the winds, and the waves of the sea. By his orders they raised a violent storm, in the midst of which, and struggling with the wild sea-waves that every moment threatened to swallow it up, he showed his daughter a fine large ship, which he told her was full of living beings like themselves. 'O my dear father,' said she, 'if by your art you have raised this dreadful storm, have pity on their sad distress. See! the vessel will be dashed to pieces. Poor souls! they will all perish. If I had power, I would sink the sea beneath the earth, rather than the good ship should be destroyed, with all the precious souls within her.'
+
+'Be not so amazed, daughter Miranda,' said Prospero; 'there is no harm done. I have so ordered it, that no person in the ship shall receive any hurt. What I have done has been in care of you, my dear child. You are ignorant who you are, or where you came from, and you know no more of me, but that I am your father, and live in this poor cave Can you remember a time before you came to this cell? I think you cannot for you were not then three years of age.'
+
+'Certainly I can, sir,' replied Miranda.
+
+'By what?' asked Prospero; 'by any other house or person? Tell me what you can remember, my child.'
+
+Miranda said: 'It seems to me like the recollection of a dream. But had I not once four or five women who attended upon me?'
+
+Prospero answered: 'You had, and more. How is it that this still lives in your mind? Do you remember how you came here?'
+
+'No, sir,' said Miranda, 'I remember nothing more.'`,scenes:["Having these powerful spirits obedient to his will, Prospero could by their means command the winds, and the waves of the sea. By his orders they raised a violent storm, in the midst of which, and struggling with the wild sea-waves that every moment threatened to swallow it up, he showed his daughter a fine large ship, which he told her was full of living beings like themselves.","'O my dear father,' said she, 'if by your art you have raised this dreadful storm, have pity on their sad distress. See! the vessel will be dashed to pieces. Poor souls! they will all perish. If I had power, I would sink the sea beneath the earth, rather than the good ship should be destroyed, with all the precious souls within her.'","'Be not so amazed, daughter Miranda,' said Prospero; 'there is no harm done. I have so ordered it, that no person in the ship shall receive any hurt. What I have done has been in care of you, my dear child. You are ignorant who you are, or where you came from, and you know no more of me, but that I am your father, and live in this poor cave Can you remember a time before you came to this cell? I think you cannot for you were not then three years of age.'",`'Certainly I can, sir,' replied Miranda.
+
+'By what?' asked Prospero; 'by any other house or person? Tell me what you can remember, my child.'
+
+Miranda said: 'It seems to me like the recollection of a dream. But had I not once four or five women who attended upon me?'
+
+Prospero answered: 'You had, and more. How is it that this still lives in your mind? Do you remember how you came here?'
+
+'No, sir,' said Miranda, 'I remember nothing more.'`],fk:4.5,level:4.5,words:306,sentences:23,syllables:386,questions:[{depth:"literal",q:"How did Prospero raise the storm?",right:"Through the spirits who obeyed him",wrong:["By ringing a great bell","With help from the ship's crew","By climbing a high rock"]},{depth:"literal",q:"What did Miranda beg her father to do?",right:"Have pity on the people in the ship",wrong:["Teach her his magic","Take her away from the island","Make the storm even stronger"]},{depth:"literal",q:"How old was Miranda when she came to the cell?",right:"Not yet three",wrong:["Seven years old","Just twelve","Almost grown up"]},{depth:"literal",q:"What can Miranda remember from before the island?",right:"Women who looked after her",wrong:["A garden full of horses","Her mother singing","A great grey castle"]},{depth:"inferential",q:"What does Prospero mean when he says the storm was done 'in care of you'?",right:"He did it to help his daughter",wrong:["He wanted to frighten her","He was angry with her","It was an accident"]}],evaluate:"Prospero says no one in the ship will be hurt. Is it right to frighten people with a storm, even if no one is harmed?",wordBank:["vessel","perish","amazed","recollection"]},{id:"naidu-palanquin",work:"naidu",title:"Palanquin Bearers",band:2,kind:"verse",abridged:!1,hook:"The bearers sing as they walk, so lightly that she seems to float.",text:`Lightly, O lightly we bear her along,
+She sways like a flower in the wind of our song;
+She skims like a bird on the foam of a stream,
+She floats like a laugh from the lips of a dream.
+Gaily, O gaily we glide and we sing,
+We bear her along like a pearl on a string.
+
+Softly, O softly we bear her along,
+She hangs like a star in the dew of our song;
+She springs like a beam on the brow of the tide,
+She falls like a tear from the eyes of a bride.
+Lightly, O lightly we glide and we sing,
+We bear her along like a pearl on a string.`,scenes:[`Lightly, O lightly we bear her along,
+She sways like a flower in the wind of our song;
+She skims like a bird on the foam of a stream,
+She floats like a laugh from the lips of a dream.
+Gaily, O gaily we glide and we sing,
+We bear her along like a pearl on a string.`,`Softly, O softly we bear her along,
+She hangs like a star in the dew of our song;
+She springs like a beam on the brow of the tide,
+She falls like a tear from the eyes of a bride.
+Lightly, O lightly we glide and we sing,
+We bear her along like a pearl on a string.`],fk:8.9,fkOverride:4,level:4,words:116,sentences:4,syllables:130,questions:[{depth:"literal",q:"Who is singing in this poem?",right:"The men carrying her",wrong:["The bride's mother","A bird by the stream","A crowd of wedding guests"]},{depth:"literal",q:"In the first verse, what does she sway like?",right:"A flower in the wind",wrong:["A boat on the sea","A leaf on a branch","A bell in a tower"]},{depth:"literal",q:"What do the bearers say they carry her like, at the end of each verse?",right:"A pearl on a string",wrong:["A jewel in a box","A bird in a cage","A lamp in the dark"]},{depth:"inferential",q:"How do the bearers want the ride to feel for her?",right:"Smooth and gentle",wrong:["Fast and exciting","Bumpy and slow","Cold and dark"]},{depth:"inferential",q:"Why does the poem keep repeating 'lightly' and 'softly'?",right:"It keeps the steady beat of their steps",wrong:["The bearers cannot think of other words","The poet ran out of rhymes","It is meant to send her to sleep"]}],evaluate:"Read the poem aloud as if you were walking with a load. How does its sound help the bearers?",wordBank:["sways","skims","glide","pearl"]},{id:"holmes-observe",work:"holmes",title:"You see, but you do not observe",band:3,kind:"prose",abridged:!1,hook:"A detective reads a friend's whole week from the scratches on his shoe.",text:`"Then, how do you know?"
+
+"I see it, I deduce it. How do I know that you have been getting yourself very wet lately, and that you have a most clumsy and careless servant girl?"
+
+"My dear Holmes," said I, "this is too much. You would certainly have been burned, had you lived a few centuries ago. It is true that I had a country walk on Thursday and came home in a dreadful mess, but as I have changed my clothes I can't imagine how you deduce it. As to Mary Jane, she is incorrigible, and my wife has given her notice, but there, again, I fail to see how you work it out."
+
+He chuckled to himself and rubbed his long, nervous hands together.
+
+"It is simplicity itself," said he; "my eyes tell me that on the inside of your left shoe, just where the firelight strikes it, the leather is scored by six almost parallel cuts. Obviously they have been caused by someone who has very carelessly scraped round the edges of the sole in order to remove crusted mud from it. Hence, you see, my double deduction that you had been out in vile weather, and that you had a particularly malignant boot-slitting specimen of the London slavey. As to your practice, if a gentleman walks into my rooms smelling of iodoform, with a black mark of nitrate of silver upon his right forefinger, and a bulge on the right side of his top-hat to show where he has secreted his stethoscope, I must be dull, indeed, if I do not pronounce him to be an active member of the medical profession."
+
+I could not help laughing at the ease with which he explained his process of deduction. "When I hear you give your reasons," I remarked, "the thing always appears to me to be so ridiculously simple that I could easily do it myself, though at each successive instance of your reasoning I am baffled until you explain your process. And yet I believe that my eyes are as good as yours."
+
+"Quite so," he answered, lighting a cigarette, and throwing himself down into an armchair. "You see, but you do not observe. The distinction is clear. For example, you have frequently seen the steps which lead up from the hall to this room."
+
+"Frequently."
+
+"How often?"
+
+"Well, some hundreds of times."
+
+"Then how many are there?"
+
+"How many? I don't know."
+
+"Quite so! You have not observed. And yet you have seen. That is just my point. Now, I know that there are seventeen steps, because I have both seen and observed.`,scenes:[`"Then, how do you know?"
+
+"I see it, I deduce it. How do I know that you have been getting yourself very wet lately, and that you have a most clumsy and careless servant girl?"
+
+"My dear Holmes," said I, "this is too much. You would certainly have been burned, had you lived a few centuries ago. It is true that I had a country walk on Thursday and came home in a dreadful mess, but as I have changed my clothes I can't imagine how you deduce it. As to Mary Jane, she is incorrigible, and my wife has given her notice, but there, again, I fail to see how you work it out."
+
+He chuckled to himself and rubbed his long, nervous hands together.`,'"It is simplicity itself," said he; "my eyes tell me that on the inside of your left shoe, just where the firelight strikes it, the leather is scored by six almost parallel cuts. Obviously they have been caused by someone who has very carelessly scraped round the edges of the sole in order to remove crusted mud from it. Hence, you see, my double deduction that you had been out in vile weather, and that you had a particularly malignant boot-slitting specimen of the London slavey.','As to your practice, if a gentleman walks into my rooms smelling of iodoform, with a black mark of nitrate of silver upon his right forefinger, and a bulge on the right side of his top-hat to show where he has secreted his stethoscope, I must be dull, indeed, if I do not pronounce him to be an active member of the medical profession."','I could not help laughing at the ease with which he explained his process of deduction. "When I hear you give your reasons," I remarked, "the thing always appears to me to be so ridiculously simple that I could easily do it myself, though at each successive instance of your reasoning I am baffled until you explain your process. And yet I believe that my eyes are as good as yours."',`"Quite so," he answered, lighting a cigarette, and throwing himself down into an armchair. "You see, but you do not observe. The distinction is clear. For example, you have frequently seen the steps which lead up from the hall to this room."
+
+"Frequently."
+
+"How often?"
+
+"Well, some hundreds of times."
+
+"Then how many are there?"
+
+"How many? I don't know."
+
+"Quite so! You have not observed. And yet you have seen. That is just my point. Now, I know that there are seventeen steps, because I have both seen and observed.`],fk:6,level:6,words:438,sentences:30,syllables:590,questions:[{depth:"literal",q:"How did Holmes know Watson had been out in bad weather?",right:"Scraped mud had left cuts on his shoe",wrong:["Watson's coat was still dripping","Watson kept sneezing all evening","Watson told him so in a letter"]},{depth:"literal",q:"Which clue showed Watson was working as a doctor again?",right:"A smell of iodoform and a stained finger",wrong:["A doctor's bag by the front door","A letter from a London hospital","A white coat over his armchair"]},{depth:"literal",q:"How many steps lead up to Holmes's room?",right:"Seventeen",wrong:["Twelve","Thirteen","Twenty-one"]},{depth:"inferential",q:"What does Holmes mean by 'You see, but you do not observe'?",right:"Watson looks without noticing details",wrong:["Watson needs new spectacles","Watson never looks at anything","Watson sees things that are not there"]},{depth:"inferential",q:"Why did Watson laugh when Holmes explained?",right:"The reasoning seemed so simple once told",wrong:["Holmes had made a silly mistake","The story of the servant was funny","Holmes was wearing a strange hat"]}],evaluate:"Holmes counts the steps. Think of a place you go every day: what have you seen there but never observed?",wordBank:["deduce","incorrigible","malignant","distinction","stethoscope"],needsReview:!0,reviewNote:"Holmes calls Watson's maid 'a particularly malignant boot-slitting specimen of the London slavey': Victorian contempt for servants, played as a joke. He also lights a cigarette. A reviewer should approve the grown-up note."},{id:"carol-scrooge",work:"carol",title:"Scrooge",band:3,kind:"prose",abridged:!1,hook:"Meet the coldest man in London: even the weather cannot beat him.",text:`Scrooge never painted out Old Marley's name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.
+
+Oh! But he was a tight-fisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and spoke out shrewdly in his grating voice. A frosty rime was on his head, and on his eyebrows, and his wiry chin. He carried his own low temperature always about with him; he iced his office in the dog-days; and didn't thaw it one degree at Christmas.
+
+External heat and cold had little influence on Scrooge. No warmth could warm, no wintry weather chill him. No wind that blew was bitterer than he, no falling snow was more intent upon its purpose, no pelting rain less open to entreaty. Foul weather didn't know where to have him. The heaviest rain, and snow, and hail, and sleet, could boast of the advantage over him in only one respect. They often "came down" handsomely, and Scrooge never did.
+
+Nobody ever stopped him in the street to say, with gladsome looks, "My dear Scrooge, how are you? When will you come to see me?" No beggars implored him to bestow a trifle, no children asked him what it was o'clock, no man or woman ever once in all his life inquired the way to such and such a place, of Scrooge. Even the blind men's dogs appeared to know him; and when they saw him coming on, would tug their owners into doorways and up courts; and then would wag their tails as though they said, "No eye at all is better than an evil eye, dark master!"
+
+But what did Scrooge care! It was the very thing he liked. To edge his way along the crowded paths of life, warning all human sympathy to keep its distance, was what the knowing ones call "nuts" to Scrooge.`,scenes:["Scrooge never painted out Old Marley's name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.","Oh! But he was a tight-fisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and spoke out shrewdly in his grating voice. A frosty rime was on his head, and on his eyebrows, and his wiry chin. He carried his own low temperature always about with him; he iced his office in the dog-days; and didn't thaw it one degree at Christmas.",`External heat and cold had little influence on Scrooge. No warmth could warm, no wintry weather chill him. No wind that blew was bitterer than he, no falling snow was more intent upon its purpose, no pelting rain less open to entreaty. Foul weather didn't know where to have him. The heaviest rain, and snow, and hail, and sleet, could boast of the advantage over him in only one respect. They often "came down" handsomely, and Scrooge never did.`,`Nobody ever stopped him in the street to say, with gladsome looks, "My dear Scrooge, how are you? When will you come to see me?" No beggars implored him to bestow a trifle, no children asked him what it was o'clock, no man or woman ever once in all his life inquired the way to such and such a place, of Scrooge. Even the blind men's dogs appeared to know him; and when they saw him coming on, would tug their owners into doorways and up courts; and then would wag their tails as though they said, "No eye at all is better than an evil eye, dark master!"`,'But what did Scrooge care! It was the very thing he liked. To edge his way along the crowded paths of life, warning all human sympathy to keep its distance, was what the knowing ones call "nuts" to Scrooge.'],fk:6,level:6,words:396,sentences:25,syllables:516,questions:[{depth:"literal",q:"What words stood above the warehouse door?",right:"Scrooge and Marley",wrong:["Scrooge and Son","Marley and Company","Scrooge's Counting-House"]},{depth:"literal",q:"What is Scrooge said to be as solitary as?",right:"An oyster",wrong:["A lighthouse","A crow","A mountain"]},{depth:"inferential",q:"What does 'didn't thaw it one degree at Christmas' mean?",right:"He was no kinder at Christmas",wrong:["He kept a fire lit all winter","He disliked hot weather","He never closed his office"]},{depth:"literal",q:"What did the blind men's dogs do when they saw Scrooge coming?",right:"Pulled their owners out of his way",wrong:["Barked and chased after him","Ran up to him to be stroked","Lay down and refused to move"]},{depth:"inferential",q:"How did Scrooge feel about people keeping away from him?",right:"He liked it",wrong:["It made him lonely","It made him angry","He never noticed"]}],evaluate:"Dickens piles up words: 'squeezing, wrenching, grasping, scraping, clutching'. Why use so many? Which one is strongest?",wordBank:["covetous","solitary","entreaty","implored","sympathy"]},{id:"blake-tiger",work:"blake",title:"The Tiger",band:3,kind:"verse",abridged:!1,hook:"A tiger blazing in the dark, and a question about who could have made it.",text:`Tiger, tiger, burning bright
+In the forests of the night,
+What immortal hand or eye
+Could frame thy fearful symmetry?
+
+In what distant deeps or skies
+Burnt the fire of thine eyes?
+On what wings dare he aspire?
+What the hand dare seize the fire?
+
+And what shoulder and what art
+Could twist the sinews of thy heart?
+And, when thy heart began to beat,
+What dread hand and what dread feet?
+
+What the hammer? what the chain?
+In what furnace was thy brain?
+What the anvil? what dread grasp
+Dare its deadly terrors clasp?
+
+When the stars threw down their spears,
+And watered heaven with their tears,
+Did He smile His work to see?
+Did He who made the lamb make thee?
+
+Tiger, tiger, burning bright
+In the forests of the night,
+What immortal hand or eye
+Dare frame thy fearful symmetry?`,scenes:[`Tiger, tiger, burning bright
+In the forests of the night,
+What immortal hand or eye
+Could frame thy fearful symmetry?
+
+In what distant deeps or skies
+Burnt the fire of thine eyes?
+On what wings dare he aspire?
+What the hand dare seize the fire?`,`And what shoulder and what art
+Could twist the sinews of thy heart?
+And, when thy heart began to beat,
+What dread hand and what dread feet?
+
+What the hammer? what the chain?
+In what furnace was thy brain?
+What the anvil? what dread grasp
+Dare its deadly terrors clasp?`,`When the stars threw down their spears,
+And watered heaven with their tears,
+Did He smile His work to see?
+Did He who made the lamb make thee?
+
+Tiger, tiger, burning bright
+In the forests of the night,
+What immortal hand or eye
+Dare frame thy fearful symmetry?`],fk:2.8,fkOverride:7,level:7,words:143,sentences:14,syllables:175,questions:[{depth:"literal",q:"Where does the poem say the tiger burns bright?",right:"In the forests of the night",wrong:["In the desert sun","On a snowy mountain","In a cage at the fair"]},{depth:"literal",q:"Which of these tools does the poem name?",right:"Hammer, chain and anvil",wrong:["Saw, nail and chisel","Spade, rake and hoe","Needle, thread and pin"]},{depth:"inferential",q:"What question does the poem keep asking?",right:"Who could make such a creature",wrong:["Where the tiger goes at night","Why the tiger is so hungry","How fast the tiger can run"]},{depth:"inferential",q:"What changes between the first verse and the last?",right:"'Could frame' becomes 'Dare frame'",wrong:["The tiger becomes a lamb","The night becomes the day","Nothing at all changes"]}],evaluate:"Is the tiger in the poem beautiful, frightening, or both? Which words make you think so?",wordBank:["immortal","symmetry","sinews","anvil","aspire"]},{id:"gitanjali-35",work:"gitanjali",title:"Where the mind is without fear",band:3,kind:"verse",abridged:!1,hook:"A prayer for a country where minds are free and heads are held high.",text:`Where the mind is without fear and the head is held high;
+
+Where knowledge is free;
+
+Where the world has not been broken up into fragments by narrow
+domestic walls;
+
+Where words come out from the depth of truth;
+
+Where tireless striving stretches its arms towards perfection;
+
+Where the clear stream of reason has not lost its way into the
+dreary desert sand of dead habit;
+
+Where the mind is led forward by thee into ever-widening thought
+and action--
+
+Into that heaven of freedom, my Father, let my country awake.`,scenes:[`Where the mind is without fear and the head is held high;
+
+Where knowledge is free;
+
+Where the world has not been broken up into fragments by narrow
+domestic walls;`,`Where words come out from the depth of truth;
+
+Where tireless striving stretches its arms towards perfection;
+
+Where the clear stream of reason has not lost its way into the
+dreary desert sand of dead habit;`,`Where the mind is led forward by thee into ever-widening thought
+and action--
+
+Into that heaven of freedom, my Father, let my country awake.`],fk:35.5,fkOverride:8,level:8,words:90,sentences:1,syllables:122,questions:[{depth:"literal",q:"Which of these does the poet hope for?",right:"That knowledge is free",wrong:["That every house has high walls","That old habits never change","That people speak only softly"]},{depth:"inferential",q:"What are the 'narrow domestic walls' that break the world into fragments?",right:"Things that keep people apart",wrong:["The walls of an old castle","Fences around farmers' fields","The rooms inside a house"]},{depth:"literal",q:"What can lose its way in 'the dreary desert sand of dead habit'?",right:"The clear stream of reason",wrong:["The river of time","A caravan of travellers","The light of the stars"]},{depth:"inferential",q:"What does the poet want for his country?",right:"To wake up free, fearless and truthful",wrong:["To become the richest in the world","To win every war it fights","To stay just as it is now"]},{depth:"inferential",q:"Who is the poet speaking to?",right:"God, whom he calls 'my Father'",wrong:["His own father at home","The king of his country","A teacher at his school"]}],evaluate:"Which 'Where…' line would you most like to be true of your school or your country? Why?",wordBank:["fragments","domestic","striving","perfection","dreary"]},{id:"sonnet-18",work:"sonnets",title:"Sonnet 18: Shall I compare thee to a summer's day?",band:3,kind:"verse",abridged:!1,hook:"A summer's day ends. This poem promises that someone never will.",text:`Shall I compare thee to a summer's day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer's lease hath all too short a date:
+Sometime too hot the eye of heaven shines,
+And often is his gold complexion dimm'd,
+And every fair from fair sometime declines,
+By chance, or nature's changing course untrimm'd:
+But thy eternal summer shall not fade,
+Nor lose possession of that fair thou ow'st,
+Nor shall death brag thou wander'st in his shade,
+When in eternal lines to time thou grow'st,
+  So long as men can breathe, or eyes can see,
+  So long lives this, and this gives life to thee.`,scenes:[`Shall I compare thee to a summer's day?
+Thou art more lovely and more temperate:
+Rough winds do shake the darling buds of May,
+And summer's lease hath all too short a date:`,`Sometime too hot the eye of heaven shines,
+And often is his gold complexion dimm'd,
+And every fair from fair sometime declines,
+By chance, or nature's changing course untrimm'd:`,`But thy eternal summer shall not fade,
+Nor lose possession of that fair thou ow'st,
+Nor shall death brag thou wander'st in his shade,
+When in eternal lines to time thou grow'st,`,`So long as men can breathe, or eyes can see,
+  So long lives this, and this gives life to thee.`],fk:21.6,fkOverride:9,level:9,words:114,sentences:2,syllables:145,questions:[{depth:"literal",q:"What do rough winds shake?",right:"The darling buds of May",wrong:["The tall trees of autumn","The roses of June","The doors of the house"]},{depth:"inferential",q:"What is 'the eye of heaven'?",right:"The sun",wrong:["The moon","A star","A cloud"]},{depth:"inferential",q:"Why does the poet say the person is better than a summer's day?",right:"Summer fades, but they will not",wrong:["Summer is always too cold","The person likes winter best","Summer days are far too long"]},{depth:"inferential",q:"What does 'this' mean in 'So long lives this'?",right:"The poem itself",wrong:["The summer day","The poet's life","A painted portrait"]}],evaluate:"The poet promises the poem will keep the person alive 'so long as men can breathe'. Four hundred years later, has he kept his promise?",wordBank:["temperate","lease","complexion","eternal"]},{id:"midsummer-puck",work:"midsummer",title:"Puck meets a fairy (Act 2, Scene 1)",band:3,kind:"verse",abridged:!1,hook:"A fairy meets the merriest, most mischievous sprite in the wood.",text:`[Enter a FAIRY at One door, and PUCK at another.]
+
+PUCK
+How now, spirit! whither wander you?
+
+FAIRY
+    Over hill, over dale,
+      Thorough bush, thorough brier,
+    Over park, over pale,
+      Thorough flood, thorough fire,
+    I do wander everywhere,
+    Swifter than the moon's sphere;
+    And I serve the fairy queen,
+    To dew her orbs upon the green.
+    The cowslips tall her pensioners be:
+    In their gold coats spots you see;
+    Those be rubies, fairy favours,
+    In those freckles live their savours;
+I must go seek some dew-drops here,
+And hang a pearl in every cowslip's ear.
+Farewell, thou lob of spirits; I'll be gone:
+Our queen and all her elves come here anon.
+
+PUCK
+The king doth keep his revels here to-night;
+Take heed the Queen come not within his sight.
+For Oberon is passing fell and wrath,
+Because that she, as her attendant, hath
+A lovely boy, stol'n from an Indian king;
+She never had so sweet a changeling:
+And jealous Oberon would have the child
+Knight of his train, to trace the forests wild:
+But she perforce withholds the loved boy,
+Crowns him with flowers, and makes him all her joy:
+And now they never meet in grove or green,
+By fountain clear, or spangled starlight sheen,
+But they do square; that all their elves for fear
+Creep into acorn cups, and hide them there.
+
+FAIRY
+Either I mistake your shape and making quite,
+Or else you are that shrewd and knavish sprite
+Call'd Robin Goodfellow: are not you he
+That frights the maidens of the villagery;
+Skim milk, and sometimes labour in the quern,
+And bootless make the breathless housewife churn;
+And sometime make the drink to bear no barm;
+Mislead night-wanderers, laughing at their harm?
+Those that Hobgoblin call you, and sweet Puck,
+You do their work, and they shall have good luck:
+Are not you he?
+
+PUCK
+                Thou speak'st aright;
+I am that merry wanderer of the night.
+I jest to Oberon, and make him smile,
+When I a fat and bean-fed horse beguile,
+Neighing in likeness of a filly foal;
+And sometime lurk I in a gossip's bowl,
+In very likeness of a roasted crab;
+And, when she drinks, against her lips I bob,
+And on her withered dewlap pour the ale.
+The wisest aunt, telling the saddest tale,
+Sometime for three-foot stool mistaketh me;
+Then slip I from her bum, down topples she,
+And 'tailor' cries, and falls into a cough;
+And then the whole quire hold their hips and loffe,
+And waxen in their mirth, and neeze, and swear
+A merrier hour was never wasted there.`,scenes:[`[Enter a FAIRY at One door, and PUCK at another.]
+
+PUCK
+How now, spirit! whither wander you?
+
+FAIRY
+    Over hill, over dale,
+      Thorough bush, thorough brier,
+    Over park, over pale,
+      Thorough flood, thorough fire,
+    I do wander everywhere,
+    Swifter than the moon's sphere;
+    And I serve the fairy queen,
+    To dew her orbs upon the green.
+    The cowslips tall her pensioners be:
+    In their gold coats spots you see;
+    Those be rubies, fairy favours,
+    In those freckles live their savours;
+I must go seek some dew-drops here,
+And hang a pearl in every cowslip's ear.
+Farewell, thou lob of spirits; I'll be gone:
+Our queen and all her elves come here anon.`,`PUCK
+The king doth keep his revels here to-night;
+Take heed the Queen come not within his sight.
+For Oberon is passing fell and wrath,
+Because that she, as her attendant, hath
+A lovely boy, stol'n from an Indian king;
+She never had so sweet a changeling:
+And jealous Oberon would have the child
+Knight of his train, to trace the forests wild:
+But she perforce withholds the loved boy,
+Crowns him with flowers, and makes him all her joy:
+And now they never meet in grove or green,
+By fountain clear, or spangled starlight sheen,
+But they do square; that all their elves for fear
+Creep into acorn cups, and hide them there.`,`FAIRY
+Either I mistake your shape and making quite,
+Or else you are that shrewd and knavish sprite
+Call'd Robin Goodfellow: are not you he
+That frights the maidens of the villagery;
+Skim milk, and sometimes labour in the quern,
+And bootless make the breathless housewife churn;
+And sometime make the drink to bear no barm;
+Mislead night-wanderers, laughing at their harm?
+Those that Hobgoblin call you, and sweet Puck,
+You do their work, and they shall have good luck:
+Are not you he?`,`PUCK
+                Thou speak'st aright;
+I am that merry wanderer of the night.
+I jest to Oberon, and make him smile,
+When I a fat and bean-fed horse beguile,
+Neighing in likeness of a filly foal;
+And sometime lurk I in a gossip's bowl,
+In very likeness of a roasted crab;
+And, when she drinks, against her lips I bob,
+And on her withered dewlap pour the ale.
+The wisest aunt, telling the saddest tale,
+Sometime for three-foot stool mistaketh me;
+Then slip I from her bum, down topples she,
+And 'tailor' cries, and falls into a cough;
+And then the whole quire hold their hips and loffe,
+And waxen in their mirth, and neeze, and swear
+A merrier hour was never wasted there.`],fk:13,fkOverride:10,level:10,words:433,sentences:13,syllables:572,questions:[{depth:"literal",q:"Whom does the Fairy serve?",right:"The fairy queen",wrong:["Oberon, the king","Puck himself","The Duke of Athens"]},{depth:"literal",q:"Why are Oberon and the Queen quarrelling?",right:"They both want the same boy",wrong:["She has stolen his crown","He has broken her mirror","They both want the same forest"]},{depth:"literal",q:"What other names does the Fairy give Puck?",right:"Robin Goodfellow and Hobgoblin",wrong:["Peaseblossom and Cobweb","Oberon and Titania","Bottom and Quince"]},{depth:"inferential",q:"What sort of spirit is Puck?",right:"A mischievous joker",wrong:["A wise, serious adviser","A shy and gentle helper","A fearsome warrior"]},{depth:"literal",q:"What does Puck pretend to be to trick the wise aunt?",right:"A three-foot stool",wrong:["A roasted crab","A filly foal","A cowslip"]}],evaluate:"Puck's tricks make people laugh, but someone always ends up on the floor. Are his jokes funny, unkind, or both?",wordBank:["knavish","beguile","changeling","perforce","quern"],needsReview:!0,reviewNote:"The fairy king and queen quarrel over 'a lovely boy, stol'n from an Indian king': a child treated as a possession and India as an exotic source. A grown-up note should name this; reviewer to approve. Also contains the mild comic word 'bum'."},{id:"midsummer-epilogue",work:"midsummer",title:"Puck's goodnight",band:3,kind:"verse",abridged:!1,hook:"The play is over. The mischief-maker steps forward to say goodnight.",text:`If we shadows have offended,
+Think but this,--and all is mended,--
+That you have but slumber'd here
+While these visions did appear.
+And this weak and idle theme,
+No more yielding but a dream,
+Gentles, do not reprehend;
+If you pardon, we will mend.
+And, as I am an honest Puck,
+If we have unearned luck
+Now to 'scape the serpent's tongue,
+We will make amends ere long;
+Else the Puck a liar call:
+So, good night unto you all.
+Give me your hands, if we be friends,
+And Robin shall restore amends.`,scenes:[`If we shadows have offended,
+Think but this,--and all is mended,--
+That you have but slumber'd here
+While these visions did appear.`,`And this weak and idle theme,
+No more yielding but a dream,
+Gentles, do not reprehend;
+If you pardon, we will mend.`,`And, as I am an honest Puck,
+If we have unearned luck
+Now to 'scape the serpent's tongue,
+We will make amends ere long;
+Else the Puck a liar call:
+So, good night unto you all.
+Give me your hands, if we be friends,
+And Robin shall restore amends.`],fk:8,fkOverride:9,level:9,words:94,sentences:4,syllables:115,questions:[{depth:"inferential",q:"Who is Puck speaking to?",right:"The audience watching the play",wrong:["Oberon and Titania","The lovers in the forest","The other fairies"]},{depth:"literal",q:"What does Puck say the audience can tell themselves?",right:"That it was all a dream they had",wrong:["That the play was very long","That they were in the forest","That Puck was really a king"]},{depth:"inferential",q:"What does 'Give me your hands' ask for?",right:"Applause",wrong:["A handshake","Help to climb down","Money for actors"]},{depth:"inferential",q:"What does ''scape the serpent's tongue' mean?",right:"Avoid being hissed at",wrong:["Run from a snake","Stop telling lies","Learn a new language"]}],evaluate:"Why might a playwright end with an apology? Does it make you like the play more, or less?",wordBank:["reprehend","amends","slumber","visions"]},{id:"bacon-studies",work:"essays-bacon",title:"Of Studies",band:3,kind:"prose",abridged:!1,hook:"Some books are to be tasted, some swallowed, and a few chewed slowly.",text:"STUDIES serve for delight, for ornament, and for ability. Their chief use for delight, is in privateness and retiring; for ornament, is in discourse; and for ability, is in the judgment, and disposition of business. For expert men can execute, and perhaps judge of particulars, one by one; but the general counsels, and the plots and marshalling of affairs, come best, from those that are learned. To spend too much time in studies is sloth; to use them too much for ornament, is affectation; to make judgment wholly by their rules, is the humor of a scholar. They perfect nature, and are perfected by experience: for natural abilities are like natural plants, that need proyning, by study; and studies themselves, do give forth directions too much at large, except they be bounded in by experience. Crafty men contemn studies, simple men admire them, and wise men use them; for they teach not their own use; but that is a wisdom without them, and above them, won by observation. Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider. Some books are to be tasted, others to be swallowed, and some few to be chewed and digested; that is, some books are to be read only in parts; others to be read, but not curiously; and some few to be read wholly, and with diligence and attention. Some books also may be read by deputy, and extracts made of them by others; but that would be only in the less important arguments, and the meaner sort of books, else distilled books are like common distilled waters, flashy things. Reading maketh a full man; conference a ready man; and writing an exact man.",scenes:["STUDIES serve for delight, for ornament, and for ability. Their chief use for delight, is in privateness and retiring; for ornament, is in discourse; and for ability, is in the judgment, and disposition of business. For expert men can execute, and perhaps judge of particulars, one by one; but the general counsels, and the plots and marshalling of affairs, come best, from those that are learned.","To spend too much time in studies is sloth; to use them too much for ornament, is affectation; to make judgment wholly by their rules, is the humor of a scholar. They perfect nature, and are perfected by experience: for natural abilities are like natural plants, that need proyning, by study; and studies themselves, do give forth directions too much at large, except they be bounded in by experience. Crafty men contemn studies, simple men admire them, and wise men use them; for they teach not their own use; but that is a wisdom without them, and above them, won by observation.","Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider. Some books are to be tasted, others to be swallowed, and some few to be chewed and digested; that is, some books are to be read only in parts; others to be read, but not curiously; and some few to be read wholly, and with diligence and attention.","Some books also may be read by deputy, and extracts made of them by others; but that would be only in the less important arguments, and the meaner sort of books, else distilled books are like common distilled waters, flashy things. Reading maketh a full man; conference a ready man; and writing an exact man."],fk:12.8,fkOverride:13,level:13,words:295,sentences:10,syllables:421,questions:[{depth:"literal",q:"What three things does Bacon say studies are for?",right:"Delight, ornament and ability",wrong:["Money, fame and power","Health, sleep and food","Games, songs and stories"]},{depth:"literal",q:"What does Bacon call spending too much time in studies?",right:"Sloth",wrong:["Wisdom","Courage","Kindness"]},{depth:"inferential",q:"What does 'some few to be chewed and digested' mean?",right:"A few books deserve slow, careful reading",wrong:["Some books are good enough to eat","A few books should be thrown away","Some books are written for cooks"]},{depth:"literal",q:"What does Bacon say writing makes a person?",right:"Exact",wrong:["Ready","Full","Witty"]},{depth:"inferential",q:"What does Bacon say we should read for?",right:"To think carefully about what we read",wrong:["To prove other people wrong","To find things to talk about","To believe whatever we are told"]}],evaluate:"Bacon says some books are to be tasted and others chewed and digested. Which book have you only tasted, and which have you chewed and digested?",wordBank:["ornament","affectation","contemn","diligence","conference"]},{id:"kipling-if",work:"kipling-rewards",title:"If—",band:3,kind:"verse",abridged:!1,hook:"A father's list of what it takes to keep your head when others lose theirs.",text:`If you can keep your head when all about you
+Are losing theirs and blaming it on you;
+If you can trust yourself when all men doubt you,
+But make allowance for their doubting too;
+If you can wait and not be tired by waiting,
+Or being lied about, don't deal in lies,
+Or being hated, don't give way to hating,
+And yet don't look too good, nor talk too wise;
+
+If you can dream--and not make dreams your master;
+If you can think--and not make thoughts your aim,
+If you can meet with Triumph and Disaster
+And treat those two impostors just the same;
+If you can bear to hear the truth you've spoken
+Twisted by knaves to make a trap for fools,
+Or watch the things you gave your life to, broken,
+And stoop and build 'em up with worn-out tools;
+
+If you can make one heap of all your winnings
+And risk it on one turn of pitch-and-toss,
+And lose, and start again at your beginnings
+And never breathe a word about your loss;
+If you can force your heart and nerve and sinew
+To serve your turn long after they are gone,
+And so hold on when there is nothing in you
+Except the Will which says to them: 'Hold on!'
+
+If you can talk with crowds and keep your virtue,
+Or walk with Kings--nor lose the common touch,
+If neither foes nor loving friends can hurt you,
+If all men count with you, but none too much;
+If you can fill the unforgiving minute
+With sixty seconds' worth of distance run,
+Yours is the Earth and everything that's in it,
+And--which is more--you'll be a Man, my son!`,scenes:[`If you can keep your head when all about you
+Are losing theirs and blaming it on you;
+If you can trust yourself when all men doubt you,
+But make allowance for their doubting too;
+If you can wait and not be tired by waiting,
+Or being lied about, don't deal in lies,
+Or being hated, don't give way to hating,
+And yet don't look too good, nor talk too wise;`,`If you can dream--and not make dreams your master;
+If you can think--and not make thoughts your aim,
+If you can meet with Triumph and Disaster
+And treat those two impostors just the same;
+If you can bear to hear the truth you've spoken
+Twisted by knaves to make a trap for fools,
+Or watch the things you gave your life to, broken,
+And stoop and build 'em up with worn-out tools;`,`If you can make one heap of all your winnings
+And risk it on one turn of pitch-and-toss,
+And lose, and start again at your beginnings
+And never breathe a word about your loss;
+If you can force your heart and nerve and sinew
+To serve your turn long after they are gone,
+And so hold on when there is nothing in you
+Except the Will which says to them: 'Hold on!'`,`If you can talk with crowds and keep your virtue,
+Or walk with Kings--nor lose the common touch,
+If neither foes nor loving friends can hurt you,
+If all men count with you, but none too much;
+If you can fill the unforgiving minute
+With sixty seconds' worth of distance run,
+Yours is the Earth and everything that's in it,
+And--which is more--you'll be a Man, my son!`],fk:53.4,fkOverride:7,level:7,words:283,sentences:2,syllables:332,questions:[{depth:"literal",q:"Which two things does the poem call 'impostors'?",right:"Triumph and Disaster",wrong:["Truth and Lies","Kings and Crowds","Foes and Friends"]},{depth:"inferential",q:"What does 'keep your head when all about you are losing theirs' mean?",right:"Stay calm when others panic",wrong:["Never take off your hat","Stand still in a crowd","Remember people's names"]},{depth:"literal",q:"What should you do if the things you gave your life to are broken?",right:"Build them up again with worn-out tools",wrong:["Walk away and never look back","Ask a king to mend them for you","Blame the knaves who broke them"]},{depth:"inferential",q:"Who is the speaker talking to?",right:"His son",wrong:["A king","A crowd","A teacher"]},{depth:"inferential",q:"What does 'fill the unforgiving minute with sixty seconds' worth of distance run' mean?",right:"Make good use of every moment",wrong:["Run as fast as you possibly can","Never be late for anything","Count the seconds in a minute"]}],evaluate:"The poem was written to a son. Is its advice just as true for a daughter? Which line would you keep for yourself?",wordBank:["impostors","knaves","sinew","virtue","unforgiving"],needsReview:!0,reviewNote:"Addressed to a son ('you'll be a Man, my son'). The evaluative question invites every child in; a reviewer should approve that framing."},{id:"pride-opening",work:"pride",title:"A truth universally acknowledged",band:3,kind:"prose",abridged:!1,hook:"A rich young man has moved in nearby, and one mother has plans.",text:`It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+
+However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
+
+"My dear Mr. Bennet," said his lady to him one day, "have you heard that Netherfield Park is let at last?"
+
+Mr. Bennet replied that he had not.
+
+"But it is," returned she; "for Mrs. Long has just been here, and she told me all about it."
+
+Mr. Bennet made no answer.
+
+"Do you not want to know who has taken it?" cried his wife impatiently.
+
+"_You_ want to tell me, and I have no objection to hearing it."
+
+This was invitation enough.
+
+"Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week."
+
+"What is his name?"
+
+"Bingley."
+
+"Is he married or single?"
+
+"Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!"
+
+"How so? How can it affect them?"
+
+"My dear Mr. Bennet," replied his wife, "how can you be so tiresome! You must know that I am thinking of his marrying one of them."
+
+"Is that his design in settling here?"
+
+"Design! Nonsense, how can you talk so! But it is very likely that he _may_ fall in love with one of them, and therefore you must visit him as soon as he comes."`,scenes:[`It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+
+However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.`,`"My dear Mr. Bennet," said his lady to him one day, "have you heard that Netherfield Park is let at last?"
+
+Mr. Bennet replied that he had not.
+
+"But it is," returned she; "for Mrs. Long has just been here, and she told me all about it."
+
+Mr. Bennet made no answer.
+
+"Do you not want to know who has taken it?" cried his wife impatiently.
+
+"_You_ want to tell me, and I have no objection to hearing it."
+
+This was invitation enough.`,`"Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week."
+
+"What is his name?"
+
+"Bingley."
+
+"Is he married or single?"`,`"Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!"
+
+"How so? How can it affect them?"
+
+"My dear Mr. Bennet," replied his wife, "how can you be so tiresome! You must know that I am thinking of his marrying one of them."
+
+"Is that his design in settling here?"
+
+"Design! Nonsense, how can you talk so! But it is very likely that he _may_ fall in love with one of them, and therefore you must visit him as soon as he comes."`],fk:3.5,level:3.5,words:341,sentences:33,syllables:434,questions:[{depth:"literal",q:"What news does Mrs. Bennet bring?",right:"Netherfield Park has been let at last",wrong:["Mr. Bennet's sister is coming","The Longs are moving away","Her eldest daughter is engaged"]},{depth:"literal",q:"Who has taken Netherfield?",right:"Mr. Bingley",wrong:["Mr. Morris","Mr. Long","Mr. Collins"]},{depth:"inferential",q:"Why is Mrs. Bennet so excited about the newcomer?",right:"She hopes he'll wed a daughter",wrong:["She wants to buy his house","He is her long-lost cousin","He has promised her a gift"]},{depth:"inferential",q:"How does Mr. Bennet treat his wife's news?",right:"He teases her by seeming uninterested",wrong:["He is just as thrilled as she is","He refuses to let her speak","He calls the servants to listen"]},{depth:"inferential",q:"Is the first sentence meant to be taken at face value?",right:"No, it is gently mocking",wrong:["Yes, it is a law of nature","Yes, every rich man said so","No, it is a printer's error"]}],evaluate:"Austen says this 'truth' is 'universally acknowledged'. Is it really true? Why do you think she begins this way?",wordBank:["universally","acknowledged","neighbourhood","possession","tiresome"],needsReview:!0,reviewNote:"Marriage as the family's money plan, and a single man as 'the rightful property' of the neighbours' daughters: period attitudes to women and marriage, which Austen is satirising. The grown-up note should explain the irony."},{id:"gettysburg-address",work:"gettysburg",title:"The Gettysburg Address",band:3,kind:"prose",abridged:!1,hook:"Fewer than three hundred words, spoken on a battlefield, that a nation never forgot.",text:`Four score and seven years ago, our fathers brought forth upon this continent a new nation: conceived in liberty, and dedicated to the proposition that all men are created equal.
+
+Now we are engaged in a great civil war. . .testing whether that nation, or any nation so conceived and so dedicated. . . can long endure. We are met on a great battlefield of that war.
+
+We have come to dedicate a portion of that field as a final resting place for those who here gave their lives that this nation might live. It is altogether fitting and proper that we should do this.
+
+But, in a larger sense, we cannot dedicate. . .we cannot consecrate. . . we cannot hallow this ground. The brave men, living and dead, who struggled here have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember, what we say here, but it can never forget what they did here.
+
+It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us. . .that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion. . . that we here highly resolve that these dead shall not have died in vain. . . that this nation, under God, shall have a new birth of freedom. . . and that government of the people. . .by the people. . .for the people. . . shall not perish from this earth.`,scenes:[`Four score and seven years ago, our fathers brought forth upon this continent a new nation: conceived in liberty, and dedicated to the proposition that all men are created equal.
+
+Now we are engaged in a great civil war. . .testing whether that nation, or any nation so conceived and so dedicated. . . can long endure. We are met on a great battlefield of that war.`,`We have come to dedicate a portion of that field as a final resting place for those who here gave their lives that this nation might live. It is altogether fitting and proper that we should do this.
+
+But, in a larger sense, we cannot dedicate. . .we cannot consecrate. . . we cannot hallow this ground. The brave men, living and dead, who struggled here have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember, what we say here, but it can never forget what they did here.`,"It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us. . .that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion. . . that we here highly resolve that these dead shall not have died in vain. . . that this nation, under God, shall have a new birth of freedom. . . and that government of the people. . .by the people. . .for the people. . . shall not perish from this earth."],fk:10.7,level:10.7,words:268,sentences:10,syllables:359,questions:[{depth:"inferential",q:"How long before the speech was the nation founded, if a 'score' is twenty?",right:"Eighty-seven years",wrong:["Forty-seven years","Seventy years","One hundred years"]},{depth:"literal",q:"Why had the people come to the battlefield?",right:"To set aside part of it as a resting place",wrong:["To fight one more battle there","To sign a peace treaty","To plan a brand-new city"]},{depth:"inferential",q:"Why does Lincoln say 'we cannot dedicate' the ground?",right:"The soldiers already made it holy",wrong:["It belongs to someone else","It is raining far too hard","There is not enough money"]},{depth:"literal",q:"What does Lincoln say the world will not long remember?",right:"What is said here",wrong:["What the soldiers did","The name of the battle","The day of the year"]},{depth:"inferential",q:"What task does Lincoln ask the living to take up?",right:"To finish the work the dead began",wrong:["To build a great monument","To go home in peace","To choose a new president"]}],evaluate:"Lincoln's speech is under 300 words. Why might a short speech be remembered longer than a long one?",wordBank:["conceived","proposition","consecrate","hallow","devotion"]},{id:"douglass-bread",work:"douglass",title:"The bread of knowledge",band:3,kind:"prose",abridged:!1,hook:"A boy who is forbidden to learn to read finds teachers in the street.",text:`The plan which I adopted, and the one by which I was most successful, was that of making friends of all the little white boys whom I met in the street. As many of these as I could, I converted into teachers. With their kindly aid, obtained at different times and in different places, I finally succeeded in learning to read. When I was sent of errands, I always took my book with me, and by going one part of my errand quickly, I found time to get a lesson before my return. I used also to carry bread with me, enough of which was always in the house, and to which I was always welcome; for I was much better off in this regard than many of the poor white children in our neighborhood. This bread I used to bestow upon the hungry little urchins, who, in return, would give me that more valuable bread of knowledge. I am strongly tempted to give the names of two or three of those little boys, as a testimonial of the gratitude and affection I bear them; but prudence forbids;--not that it would injure me, but it might embarrass them; for it is almost an unpardonable offence to teach slaves to read in this Christian country. It is enough to say of the dear little fellows, that they lived on Philpot Street, very near Durgin and Bailey's ship-yard. I used to talk this matter of slavery over with them. I would sometimes say to them, I wished I could be as free as they would be when they got to be men. "You will be free as soon as you are twenty-one, _but I am a slave for life!_ Have not I as good a right to be free as you have?" These words used to trouble them; they would express for me the liveliest sympathy, and console me with the hope that something would occur by which I might be free.`,scenes:["The plan which I adopted, and the one by which I was most successful, was that of making friends of all the little white boys whom I met in the street. As many of these as I could, I converted into teachers. With their kindly aid, obtained at different times and in different places, I finally succeeded in learning to read.","When I was sent of errands, I always took my book with me, and by going one part of my errand quickly, I found time to get a lesson before my return. I used also to carry bread with me, enough of which was always in the house, and to which I was always welcome; for I was much better off in this regard than many of the poor white children in our neighborhood. This bread I used to bestow upon the hungry little urchins, who, in return, would give me that more valuable bread of knowledge.","I am strongly tempted to give the names of two or three of those little boys, as a testimonial of the gratitude and affection I bear them; but prudence forbids;--not that it would injure me, but it might embarrass them; for it is almost an unpardonable offence to teach slaves to read in this Christian country. It is enough to say of the dear little fellows, that they lived on Philpot Street, very near Durgin and Bailey's ship-yard.",'I used to talk this matter of slavery over with them. I would sometimes say to them, I wished I could be as free as they would be when they got to be men. "You will be free as soon as you are twenty-one, _but I am a slave for life!_ Have not I as good a right to be free as you have?" These words used to trouble them; they would express for me the liveliest sympathy, and console me with the hope that something would occur by which I might be free.'],fk:10.4,level:10.4,words:331,sentences:12,syllables:427,questions:[{depth:"literal",q:"Whom did Douglass turn into his teachers?",right:"White boys he met in the street",wrong:["His master and mistress","The workers at the ship-yard","A teacher at the town school"]},{depth:"literal",q:"What did Douglass give the boys in return?",right:"Bread",wrong:["Money","Marbles","Books"]},{depth:"inferential",q:"What does Douglass mean by 'that more valuable bread of knowledge'?",right:"Learning was worth more than food",wrong:["The boys baked better bread","Knowledge can be eaten","He was paid for his reading"]},{depth:"inferential",q:"Why did Douglass not name the boys?",right:"It could have brought them trouble",wrong:["He had forgotten their names","They asked him not to","Their names were too long"]},{depth:"literal",q:"What difference between himself and the boys troubled Douglass?",right:"They would be free at twenty-one; he never would",wrong:["They could go to school and he could not","They had more bread than he had","They lived on a different street"]}],evaluate:"Douglass risked a great deal to learn to read. What does his story tell you about why reading matters?",wordBank:["adopted","bestow","testimonial","gratitude","prudence"],needsReview:!0,reviewNote:"A formerly enslaved man's own account of slavery in Maryland. The extract avoids the slurs that appear a page earlier, but slavery is the subject; it needs a grown-up note and a named reviewer, 11–14 only."},{id:"keats-grasshopper",work:"keats",title:"On the Grasshopper and Cricket",band:3,kind:"verse",abridged:!1,hook:"One small singer for summer, another for winter: the earth is never silent.",text:`The poetry of earth is never dead:
+  When all the birds are faint with the hot sun,
+  And hide in cooling trees, a voice will run
+From hedge to hedge about the new-mown mead;
+That is the Grasshopper's--he takes the lead
+  In summer luxury,--he has never done
+  With his delights; for when tired out with fun
+He rests at ease beneath some pleasant weed.
+The poetry of earth is ceasing never:
+  On a lone winter evening, when the frost
+    Has wrought a silence, from the stove there shrills
+The Cricket's song, in warmth increasing ever,
+  And seems to one in drowsiness half lost,
+    The Grasshopper's among some grassy hills.`,scenes:[`The poetry of earth is never dead:
+  When all the birds are faint with the hot sun,
+  And hide in cooling trees, a voice will run
+From hedge to hedge about the new-mown mead;
+That is the Grasshopper's--he takes the lead
+  In summer luxury,--he has never done
+  With his delights; for when tired out with fun
+He rests at ease beneath some pleasant weed.`,`The poetry of earth is ceasing never:
+  On a lone winter evening, when the frost
+    Has wrought a silence, from the stove there shrills
+The Cricket's song, in warmth increasing ever,
+  And seems to one in drowsiness half lost,
+    The Grasshopper's among some grassy hills.`],fk:21.1,fkOverride:8,level:8,words:110,sentences:2,syllables:142,questions:[{depth:"literal",q:"When does the Grasshopper's voice run from hedge to hedge?",right:"When the birds hide from the hot sun",wrong:["When the snow is falling","When the farmers are asleep","When the moon is full"]},{depth:"literal",q:"Where does the Cricket sing?",right:"By the stove on a winter evening",wrong:["In the hedge at midsummer","Among the grassy hills","In the cool trees at noon"]},{depth:"literal",q:"What does the Grasshopper do when he is tired out?",right:"Rests under a pleasant weed",wrong:["Flies off to the hills","Sings to the birds","Hides in the new hay"]},{depth:"inferential",q:"What does 'the poetry of earth is never dead' mean?",right:"Nature always has some song in it",wrong:["Poems about the earth never end","Insects write their own poems","Summer lasts all year round"]},{depth:"inferential",q:"Why does the Cricket's song sound like the Grasshopper's to the drowsy listener?",right:"It brings back the summer",wrong:["The two insects are friends","The stove is near the hills","The Grasshopper is in the room"]}],evaluate:"Keats hears poetry in two insects. What everyday sound do you think is a kind of poetry?",wordBank:["luxury","wrought","drowsiness","shrills"]},{id:"magi-della",work:"magi",title:"Della's one dollar and eighty-seven cents",band:3,kind:"prose",abridged:!1,hook:"One dollar and eighty-seven cents, and tomorrow is Christmas.",text:`Della finished her cry and attended to her cheeks with the powder rag. She stood by the window and looked out dully at a gray cat walking a gray fence in a gray backyard. Tomorrow would be Christmas Day, and she had only $1.87 with which to buy Jim a present. She had been saving every penny she could for months, with this result. Twenty dollars a week doesn't go far. Expenses had been greater than she had calculated. They always are. Only $1.87 to buy a present for Jim. Her Jim. Many a happy hour she had spent planning for something nice for him. Something fine and rare and sterling--something just a little bit near to being worthy of the honor of being owned by Jim.
+
+There was a pier-glass between the windows of the room. Perhaps you have seen a pierglass in an $8 flat. A very thin and very agile person may, by observing his reflection in a rapid sequence of longitudinal strips, obtain a fairly accurate conception of his looks. Della, being slender, had mastered the art.
+
+Suddenly she whirled from the window and stood before the glass. Her eyes were shining brilliantly, but her face had lost its color within twenty seconds. Rapidly she pulled down her hair and let it fall to its full length.
+
+Now, there were two possessions of the James Dillingham Youngs in which they both took a mighty pride. One was Jim's gold watch that had been his father's and his grandfather's. The other was Della's hair. Had the queen of Sheba lived in the flat across the airshaft, Della would have let her hair hang out the window some day to dry just to depreciate Her Majesty's jewels and gifts. Had King Solomon been the janitor, with all his treasures piled up in the basement, Jim would have pulled out his watch every time he passed, just to see him pluck at his beard from envy.
+
+So now Della's beautiful hair fell about her rippling and shining like a cascade of brown waters. It reached below her knee and made itself almost a garment for her. And then she did it up again nervously and quickly. Once she faltered for a minute and stood still while a tear or two splashed on the worn red carpet.
+
+On went her old brown jacket; on went her old brown hat. With a whirl of skirts and with the brilliant sparkle still in her eyes, she fluttered out the door and down the stairs to the street.`,scenes:["Della finished her cry and attended to her cheeks with the powder rag. She stood by the window and looked out dully at a gray cat walking a gray fence in a gray backyard. Tomorrow would be Christmas Day, and she had only $1.87 with which to buy Jim a present. She had been saving every penny she could for months, with this result. Twenty dollars a week doesn't go far. Expenses had been greater than she had calculated. They always are. Only $1.87 to buy a present for Jim. Her Jim. Many a happy hour she had spent planning for something nice for him. Something fine and rare and sterling--something just a little bit near to being worthy of the honor of being owned by Jim.",`There was a pier-glass between the windows of the room. Perhaps you have seen a pierglass in an $8 flat. A very thin and very agile person may, by observing his reflection in a rapid sequence of longitudinal strips, obtain a fairly accurate conception of his looks. Della, being slender, had mastered the art.
+
+Suddenly she whirled from the window and stood before the glass. Her eyes were shining brilliantly, but her face had lost its color within twenty seconds. Rapidly she pulled down her hair and let it fall to its full length.`,"Now, there were two possessions of the James Dillingham Youngs in which they both took a mighty pride. One was Jim's gold watch that had been his father's and his grandfather's. The other was Della's hair. Had the queen of Sheba lived in the flat across the airshaft, Della would have let her hair hang out the window some day to dry just to depreciate Her Majesty's jewels and gifts. Had King Solomon been the janitor, with all his treasures piled up in the basement, Jim would have pulled out his watch every time he passed, just to see him pluck at his beard from envy.",`So now Della's beautiful hair fell about her rippling and shining like a cascade of brown waters. It reached below her knee and made itself almost a garment for her. And then she did it up again nervously and quickly. Once she faltered for a minute and stood still while a tear or two splashed on the worn red carpet.
+
+On went her old brown jacket; on went her old brown hat. With a whirl of skirts and with the brilliant sparkle still in her eyes, she fluttered out the door and down the stairs to the street.`],fk:5.9,level:5.9,words:422,sentences:29,syllables:567,questions:[{depth:"literal",q:"How much money did Della have for Jim's present?",right:"$1.87",wrong:["$8.00","$20.00","$30.00"]},{depth:"literal",q:"What two things were the couple proudest of?",right:"Jim's gold watch and Della's hair",wrong:["Della's ring and Jim's coat","Their flat and their letter-box","Jim's job and Della's cooking"]},{depth:"literal",q:"How long was Della's hair when she let it down?",right:"Below her knee",wrong:["To her shoulders","To her waist","Just past her ears"]},{depth:"inferential",q:"Why did Della suddenly turn pale at the glass?",right:"She had just had a bold, hard idea",wrong:["She was ill from crying so long","She had seen Jim in the street","The room had suddenly gone cold"]},{depth:"inferential",q:"Why did a tear or two fall before she went out?",right:"Her plan meant losing something dear",wrong:["She had dropped her last few pennies","Jim had forgotten to write to her","The cat outside looked so lonely"]}],evaluate:"Della is ready to give up something she loves to buy Jim a present. Is that the best kind of gift? Why?",wordBank:["calculated","sterling","agile","cascade","faltered"]},{id:"saki-window",work:"saki",title:"The Open Window",band:3,kind:"prose",abridged:!1,hook:"A nervous visitor, a calm girl, and a window that is always left open.",text:`“Do you know many of the people round here?” asked the niece, when she judged that they had had sufficient silent communion.
+
+“Hardly a soul,” said Framton. “My sister was staying here, at the rectory, you know, some four years ago, and she gave me letters of introduction to some of the people here.”
+
+He made the last statement in a tone of distinct regret.
+
+“Then you know practically nothing about my aunt?” pursued the self-possessed young lady.
+
+“Only her name and address,” admitted the caller. He was wondering whether Mrs. Sappleton was in the married or widowed state. An undefinable something about the room seemed to suggest masculine habitation.
+
+“Her great tragedy happened just three years ago,” said the child; “that would be since your sister’s time.”
+
+“Her tragedy?” asked Framton; somehow in this restful country spot tragedies seemed out of place.
+
+“You may wonder why we keep that window wide open on an October afternoon,” said the niece, indicating a large French window that opened on to a lawn.
+
+“It is quite warm for the time of the year,” said Framton; “but has that window got anything to do with the tragedy?”
+
+“Out through that window, three years ago to a day, her husband and her two young brothers went off for their day’s shooting. They never came back. In crossing the moor to their favourite snipe-shooting ground they were all three engulfed in a treacherous piece of bog. It had been that dreadful wet summer, you know, and places that were safe in other years gave way suddenly without warning. Their bodies were never recovered. That was the dreadful part of it.” Here the child’s voice lost its self-possessed note and became falteringly human. “Poor aunt always thinks that they will come back some day, they and the little brown spaniel that was lost with them, and walk in at that window just as they used to do. That is why the window is kept open every evening till it is quite dusk. Poor dear aunt, she has often told me how they went out, her husband with his white waterproof coat over his arm, and Ronnie, her youngest brother, singing ‘Bertie, why do you bound?’ as he always did to tease her, because she said it got on her nerves. Do you know, sometimes on still, quiet evenings like this, I almost get a creepy feeling that they will all walk in through that window—”
+
+She broke off with a little shudder.`,scenes:[`“Do you know many of the people round here?” asked the niece, when she judged that they had had sufficient silent communion.
+
+“Hardly a soul,” said Framton. “My sister was staying here, at the rectory, you know, some four years ago, and she gave me letters of introduction to some of the people here.”
+
+He made the last statement in a tone of distinct regret.
+
+“Then you know practically nothing about my aunt?” pursued the self-possessed young lady.`,`“Only her name and address,” admitted the caller. He was wondering whether Mrs. Sappleton was in the married or widowed state. An undefinable something about the room seemed to suggest masculine habitation.
+
+“Her great tragedy happened just three years ago,” said the child; “that would be since your sister’s time.”
+
+“Her tragedy?” asked Framton; somehow in this restful country spot tragedies seemed out of place.
+
+“You may wonder why we keep that window wide open on an October afternoon,” said the niece, indicating a large French window that opened on to a lawn.
+
+“It is quite warm for the time of the year,” said Framton; “but has that window got anything to do with the tragedy?”`,"“Out through that window, three years ago to a day, her husband and her two young brothers went off for their day’s shooting. They never came back. In crossing the moor to their favourite snipe-shooting ground they were all three engulfed in a treacherous piece of bog. It had been that dreadful wet summer, you know, and places that were safe in other years gave way suddenly without warning. Their bodies were never recovered. That was the dreadful part of it.”","Here the child’s voice lost its self-possessed note and became falteringly human. “Poor aunt always thinks that they will come back some day, they and the little brown spaniel that was lost with them, and walk in at that window just as they used to do. That is why the window is kept open every evening till it is quite dusk.",`Poor dear aunt, she has often told me how they went out, her husband with his white waterproof coat over his arm, and Ronnie, her youngest brother, singing ‘Bertie, why do you bound?’ as he always did to tease her, because she said it got on her nerves. Do you know, sometimes on still, quiet evenings like this, I almost get a creepy feeling that they will all walk in through that window—”
+
+She broke off with a little shudder.`],fk:6.3,level:6.3,words:416,sentences:28,syllables:567,questions:[{depth:"literal",q:"How does Framton come to be visiting these people?",right:"His sister gave him letters to them",wrong:["He read about them in a newspaper","He grew up in the next village","The rector sent him a list"]},{depth:"literal",q:"Why, the niece says, is the French window kept open?",right:"Her aunt hopes the lost men will come back",wrong:["The room gets too hot in October","The dog likes to go in and out","Her aunt likes to hear the birds"]},{depth:"literal",q:"What does the niece say happened to the three men?",right:"They were lost in a bog on the moor",wrong:["They sailed away and never wrote","They moved to a town in the north","They fell ill in that wet summer"]},{depth:"inferential",q:"What is the niece like, from the way she talks?",right:"Cool, calm and sure of herself",wrong:["Shy and nervous with strangers","Bored and rude to visitors","Silly and full of giggles"]}],evaluate:"Did you believe the niece's story? Which details made it feel true, and which might make you wonder?",wordBank:["tragedy","engulfed","treacherous","falteringly","self-possessed"]},{id:"mariner-calm",work:"mariner",title:"Water, water, every where",band:3,kind:"verse",abridged:!1,hook:"A ship sails into a silent sea, and the wind simply stops.",text:`The fair breeze blew, the white foam flew,
+The furrow followed free:
+We were the first that ever burst
+Into that silent sea.
+
+Down dropt the breeze, the sails dropt down,
+'Twas sad as sad could be;
+And we did speak only to break
+The silence of the sea!
+
+All in a hot and copper sky,
+The bloody Sun, at noon,
+Right up above the mast did stand,
+No bigger than the Moon.
+
+Day after day, day after day,
+We stuck, nor breath nor motion;
+As idle as a painted ship
+Upon a painted ocean.
+
+Water, water, every where,
+And all the boards did shrink;
+Water, water, every where,
+Nor any drop to drink.`,scenes:[`The fair breeze blew, the white foam flew,
+The furrow followed free:
+We were the first that ever burst
+Into that silent sea.`,`Down dropt the breeze, the sails dropt down,
+'Twas sad as sad could be;
+And we did speak only to break
+The silence of the sea!`,`All in a hot and copper sky,
+The bloody Sun, at noon,
+Right up above the mast did stand,
+No bigger than the Moon.`,`Day after day, day after day,
+We stuck, nor breath nor motion;
+As idle as a painted ship
+Upon a painted ocean.`,`Water, water, every where,
+And all the boards did shrink;
+Water, water, every where,
+Nor any drop to drink.`],fk:7.7,fkOverride:7,level:7,words:114,sentences:5,syllables:139,questions:[{depth:"literal",q:"What happened when the breeze dropped?",right:"The ship stuck, with no motion",wrong:["The sails were torn away","The ship sank at once","The sailors rowed for land"]},{depth:"literal",q:"How big did the Sun look at noon?",right:"No bigger than the Moon",wrong:["As big as the ship","As small as a star","Larger than the sea"]},{depth:"literal",q:"What kind of sea did the ship burst into?",right:"A silent one",wrong:["A frozen one","A stormy one","A shallow one"]},{depth:"inferential",q:"Why could the sailors not drink the water all around them?",right:"It was salt sea water",wrong:["It was frozen solid","The captain forbade it","It was full of fish"]},{depth:"inferential",q:"What does 'As idle as a painted ship upon a painted ocean' mean?",right:"Nothing moved, as if in a picture",wrong:["The ship had just been painted","The sea was very colourful","The sailors were busy painting"]}],evaluate:'The poem says "Water, water, every where" twice. Why repeat it? How does it make you feel?',wordBank:["furrow","idle","motion","copper"]},{id:"walden-woods",work:"walden",title:"Why I went to the woods",band:3,kind:"prose",abridged:!1,hook:"Why would anyone leave town to live alone in a hut by a pond?",text:`We must learn to reawaken and keep ourselves awake, not by mechanical aids, but by an infinite expectation of the dawn, which does not forsake us in our soundest sleep. I know of no more encouraging fact than the unquestionable ability of man to elevate his life by a conscious endeavor. It is something to be able to paint a particular picture, or to carve a statue, and so to make a few objects beautiful; but it is far more glorious to carve and paint the very atmosphere and medium through which we look, which morally we can do. To affect the quality of the day, that is the highest of arts. Every man is tasked to make his life, even in its details, worthy of the contemplation of his most elevated and critical hour. If we refused, or rather used up, such paltry information as we get, the oracles would distinctly inform us how this might be done.
+
+I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived. I did not wish to live what was not life, living is so dear; nor did I wish to practise resignation, unless it was quite necessary. I wanted to live deep and suck out all the marrow of life, to live so sturdily and Spartan-like as to put to rout all that was not life, to cut a broad swath and shave close, to drive life into a corner, and reduce it to its lowest terms, and, if it proved to be mean, why then to get the whole and genuine meanness of it, and publish its meanness to the world; or if it were sublime, to know it by experience, and be able to give a true account of it in my next excursion. For most men, it appears to me, are in a strange uncertainty about it, whether it is of the devil or of God, and have _somewhat hastily_ concluded that it is the chief end of man here to "glorify God and enjoy him forever."`,scenes:["We must learn to reawaken and keep ourselves awake, not by mechanical aids, but by an infinite expectation of the dawn, which does not forsake us in our soundest sleep. I know of no more encouraging fact than the unquestionable ability of man to elevate his life by a conscious endeavor. It is something to be able to paint a particular picture, or to carve a statue, and so to make a few objects beautiful; but it is far more glorious to carve and paint the very atmosphere and medium through which we look, which morally we can do.","To affect the quality of the day, that is the highest of arts. Every man is tasked to make his life, even in its details, worthy of the contemplation of his most elevated and critical hour. If we refused, or rather used up, such paltry information as we get, the oracles would distinctly inform us how this might be done.","I went to the woods because I wished to live deliberately, to front only the essential facts of life, and see if I could not learn what it had to teach, and not, when I came to die, discover that I had not lived. I did not wish to live what was not life, living is so dear; nor did I wish to practise resignation, unless it was quite necessary.","I wanted to live deep and suck out all the marrow of life, to live so sturdily and Spartan-like as to put to rout all that was not life, to cut a broad swath and shave close, to drive life into a corner, and reduce it to its lowest terms, and, if it proved to be mean, why then to get the whole and genuine meanness of it, and publish its meanness to the world; or if it were sublime, to know it by experience, and be able to give a true account of it in my next excursion.",'For most men, it appears to me, are in a strange uncertainty about it, whether it is of the devil or of God, and have _somewhat hastily_ concluded that it is the chief end of man here to "glorify God and enjoy him forever."'],fk:15,level:15,words:372,sentences:10,syllables:507,questions:[{depth:"literal",q:"Why did Thoreau go to the woods?",right:"To live on purpose and learn from life",wrong:["To hide from his debts in town","To write a book about trees","To find gold in the hills"]},{depth:"literal",q:"What does he call the highest of arts?",right:"To affect the quality of the day",wrong:["To carve a beautiful statue","To paint a particular picture","To write a perfect poem"]},{depth:"literal",q:"What did he fear finding out when he came to die?",right:"That he had not really lived",wrong:["That he had no money left","That his friends had forgotten him","That his book was unfinished"]},{depth:"inferential",q:"What does 'suck out all the marrow of life' mean?",right:"Get every bit of good out of living",wrong:["Eat plenty of soup and bones","Live for as long as possible","Take only what you need"]},{depth:"inferential",q:"How, in his view, should we keep ourselves awake?",right:"By always expecting a new dawn",wrong:["By using loud alarm clocks","By sleeping less each night","By working harder in the fields"]}],evaluate:'Thoreau wanted to "live deliberately". What would living deliberately look like in one ordinary day of yours?',wordBank:["deliberately","essential","marrow","sublime","endeavor"]},{id:"wonderbook-midas",work:"wonderbook",title:"The Golden Touch",band:2,kind:"prose",abridged:!1,hook:"A king wished that everything he touched would turn to gold. Then morning came.",text:`All this while, it was only the gray of the morning, with but a streak of brightness along the edge of the sky, where Midas could not see it. He lay in a very disconsolate mood, regretting the downfall of his hopes, and kept growing sadder and sadder, until the earliest sunbeam shone through the window, and gilded the ceiling over his head. It seemed to Midas that this bright yellow sunbeam was reflected in rather a singular way on the white covering of the bed. Looking more closely, what was his astonishment and delight, when he found that this linen fabric had been transmuted to what seemed a woven texture of the purest and brightest gold! The Golden Touch had come to him with the first sunbeam!
+
+Midas started up, in a kind of joyful frenzy, and ran about the room, grasping at everything that happened to be in his way. He seized one of the bed-posts, and it became immediately a fluted golden pillar. He pulled aside a window-curtain, in order to admit a clear spectacle of the wonders which he was performing; and the tassel grew heavy in his hand,--a mass of gold. He took up a book from the table. At his first touch, it assumed the appearance of such a splendidly bound and gilt-edged volume as one often meets with, nowadays; but, on running his fingers through the leaves, behold! it was a bundle of thin golden plates, in which all the wisdom of the book had grown illegible. He hurriedly put on his clothes, and was enraptured to see himself in a magnificent suit of gold cloth, which retained its flexibility and softness, although it burdened him a little with its weight. He drew out his handkerchief, which little Marygold had hemmed for him. That was likewise gold, with the dear child's neat and pretty stitches running all along the border, in gold thread!
+
+Somehow or other, this last transformation did not quite please King Midas. He would rather that his little daughter's handiwork should have remained just the same as when she climbed his knee and put it into his hand.`,scenes:["All this while, it was only the gray of the morning, with but a streak of brightness along the edge of the sky, where Midas could not see it. He lay in a very disconsolate mood, regretting the downfall of his hopes, and kept growing sadder and sadder, until the earliest sunbeam shone through the window, and gilded the ceiling over his head. It seemed to Midas that this bright yellow sunbeam was reflected in rather a singular way on the white covering of the bed. Looking more closely, what was his astonishment and delight, when he found that this linen fabric had been transmuted to what seemed a woven texture of the purest and brightest gold! The Golden Touch had come to him with the first sunbeam!","Midas started up, in a kind of joyful frenzy, and ran about the room, grasping at everything that happened to be in his way. He seized one of the bed-posts, and it became immediately a fluted golden pillar. He pulled aside a window-curtain, in order to admit a clear spectacle of the wonders which he was performing; and the tassel grew heavy in his hand,--a mass of gold. He took up a book from the table. At his first touch, it assumed the appearance of such a splendidly bound and gilt-edged volume as one often meets with, nowadays; but, on running his fingers through the leaves, behold! it was a bundle of thin golden plates, in which all the wisdom of the book had grown illegible.","He hurriedly put on his clothes, and was enraptured to see himself in a magnificent suit of gold cloth, which retained its flexibility and softness, although it burdened him a little with its weight. He drew out his handkerchief, which little Marygold had hemmed for him. That was likewise gold, with the dear child's neat and pretty stitches running all along the border, in gold thread!","Somehow or other, this last transformation did not quite please King Midas. He would rather that his little daughter's handiwork should have remained just the same as when she climbed his knee and put it into his hand."],fk:9.6,level:9.6,words:359,sentences:16,syllables:499,questions:[{depth:"literal",q:"What did Midas first see turned to gold when the sunbeam came?",right:"The linen covering of his bed",wrong:["The crown upon his head","The bread on his table","The stones of his garden"]},{depth:"literal",q:"What happened to the book when Midas touched it?",right:"Its pages became thin gold plates",wrong:["It burst into bright flames","Its words began to glow red","It flew out of the window"]},{depth:"literal",q:"Who had hemmed the handkerchief for Midas?",right:"Little Marygold",wrong:["The queen","A royal tailor","The stranger"]},{depth:"inferential",q:"Why could Midas no longer read the golden book?",right:"The words had become unreadable",wrong:["He had lost his spectacles","The room was still too dark","It was written in a strange tongue"]},{depth:"inferential",q:"Why did the golden handkerchief not quite please Midas?",right:"He loved it as his daughter made it",wrong:["It was too heavy to carry","Gold handkerchiefs were common","It no longer had a border"]}],evaluate:"Midas is delighted at first. Would you want the Golden Touch? What would you be afraid of touching?",wordBank:["frenzy","linen","woven","curtain","assumed"]},{id:"wonderbook-pandora",work:"wonderbook",title:"Pandora opens the box",band:2,kind:"prose",abridged:!1,hook:"A box that must never be opened. A lid lifted. Something buzzes out.",text:`"Oh, I am stung!" cried he. "I am stung! Naughty Pandora! why have you opened this wicked box?"
+
+Pandora let fall the lid, and, starting up, looked about her, to see what had befallen Epimetheus. The thunder-cloud had so darkened the room that she could not very clearly discern what was in it. But she heard a disagreeable buzzing, as if a great many huge flies, or gigantic mosquitoes, or those insects which we call dor-bugs, and pinching-dogs, were darting about. And, as her eyes grew more accustomed to the imperfect light, she saw a crowd of ugly little shapes, with bats' wings, looking abominably spiteful, and armed with terribly long stings in their tails. It was one of these that had stung Epimetheus. Nor was it a great while before Pandora herself began to scream, in no less pain and affright than her playfellow, and making a vast deal more hubbub about it. An odious little monster had settled on her forehead, and would have stung her I know not how deeply, if Epimetheus had not run and brushed it away.
+
+Now, if you wish to know what these ugly things might be, which had made their escape out of the box, I must tell you that they were the whole family of earthly Troubles. There were evil Passions; there were a great many species of Cares; there were more than a hundred and fifty Sorrows; there were Diseases, in a vast number of miserable and painful shapes; there were more kinds of Naughtiness than it would be of any use to talk about. In short, everything that has since afflicted the souls and bodies of mankind had been shut up in the mysterious box, and given to Epimetheus and Pandora to be kept safely, in order that the happy children of the world might never be molested by them. Had they been faithful to their trust, all would have gone well. No grown person would ever have been sad, nor any child have had cause to shed a single tear, from that hour until this moment.`,scenes:[`"Oh, I am stung!" cried he. "I am stung! Naughty Pandora! why have you opened this wicked box?"
+
+Pandora let fall the lid, and, starting up, looked about her, to see what had befallen Epimetheus. The thunder-cloud had so darkened the room that she could not very clearly discern what was in it. But she heard a disagreeable buzzing, as if a great many huge flies, or gigantic mosquitoes, or those insects which we call dor-bugs, and pinching-dogs, were darting about.`,"And, as her eyes grew more accustomed to the imperfect light, she saw a crowd of ugly little shapes, with bats' wings, looking abominably spiteful, and armed with terribly long stings in their tails. It was one of these that had stung Epimetheus. Nor was it a great while before Pandora herself began to scream, in no less pain and affright than her playfellow, and making a vast deal more hubbub about it. An odious little monster had settled on her forehead, and would have stung her I know not how deeply, if Epimetheus had not run and brushed it away.","Now, if you wish to know what these ugly things might be, which had made their escape out of the box, I must tell you that they were the whole family of earthly Troubles. There were evil Passions; there were a great many species of Cares; there were more than a hundred and fifty Sorrows; there were Diseases, in a vast number of miserable and painful shapes; there were more kinds of Naughtiness than it would be of any use to talk about.","In short, everything that has since afflicted the souls and bodies of mankind had been shut up in the mysterious box, and given to Epimetheus and Pandora to be kept safely, in order that the happy children of the world might never be molested by them. Had they been faithful to their trust, all would have gone well. No grown person would ever have been sad, nor any child have had cause to shed a single tear, from that hour until this moment."],fk:8.5,level:8.5,words:348,sentences:17,syllables:476,questions:[{depth:"literal",q:"What stung Epimetheus?",right:"An ugly little winged creature",wrong:["A wasp hiding in the flowers","A thorn from a rose bush","A spark from the kitchen fire"]},{depth:"literal",q:"What did the creatures from the box have in their tails?",right:"Terribly long stings",wrong:["Bright rainbow feathers","Tiny silver bells","Curly golden hooks"]},{depth:"literal",q:"Who brushed the monster off Pandora's forehead?",right:"Epimetheus",wrong:["Hope","Her mother","A kind neighbour"]},{depth:"inferential",q:"What were the ugly things that escaped from the box?",right:"All the troubles of the world",wrong:["Goblins from under the hills","Flies from a rotten apple","Toys that had come to life"]},{depth:"inferential",q:"Why had the box been given to Epimetheus and Pandora to keep shut?",right:"So the troubles could never harm anyone",wrong:["So they could sell it at market","So it would be safe from robbers","So they had a toy to play with"]}],evaluate:"Pandora and Epimetheus were both trusted with the box. Who do you think was more to blame, and why?",wordBank:["accustomed","imperfect","mysterious","mankind","forehead"]},{id:"wonderbook-atlas",work:"wonderbook",title:"Hercules and Atlas",band:2,kind:"prose",abridged:!1,hook:"A giant holds up the sky. A hero wants three golden apples. Someone must swap.",text:`"I am Atlas, the mightiest giant in the world! And I hold the sky upon my head!"
+
+"So I see," answered Hercules. "But, can you show me the way to the garden of the Hesperides?"
+
+"What do you want there?" asked the giant.
+
+"I want three of the golden apples," shouted Hercules, "for my cousin, the king."
+
+"There is nobody but myself," quoth the giant, "that can go to the garden of the Hesperides, and gather the golden apples. If it were not for this little business of holding up the sky, I would make half a dozen steps across the sea, and get them for you."
+
+"You are very kind," replied Hercules. "And cannot you rest the sky upon a mountain?"
+
+"None of them are quite high enough," said Atlas, shaking his head. "But, if you were to take your stand on the summit of that nearest one, your head would be pretty nearly on a level with mine. You seem to be a fellow of some strength. What if you should take my burden on your shoulders, while I do your errand for you?"
+
+Hercules, as you must be careful to remember, was a remarkably strong man; and though it certainly requires a great deal of muscular power to uphold the sky, yet, if any mortal could be supposed capable of such an exploit, he was the one. Nevertheless, it seemed so difficult an undertaking, that, for the first time in his life, he hesitated.
+
+"Is the sky very heavy?" he inquired.
+
+"Why, not particularly so, at first," answered the giant, shrugging his shoulders. "But it gets to be a little burdensome, after a thousand years!"
+
+"And how long a time," asked the hero, "will it take you to get the golden apples?"
+
+"Oh, that will be done in a few moments," cried Atlas. "I shall take ten or fifteen miles at a stride, and be at the garden and back again before your shoulders begin to ache."
+
+"Well, then," answered Hercules, "I will climb the mountain behind you there, and relieve you of your burden."
+
+The truth is, Hercules had a kind heart of his own, and considered that he should be doing the giant a favor, by allowing him this opportunity for a ramble. And, besides, he thought that it would be still more for his own glory, if he could boast of upholding the sky, than merely to do so ordinary a thing as to conquer a dragon with a hundred heads. Accordingly, without more words, the sky was shifted from the shoulders of Atlas, and placed upon those of Hercules.`,scenes:[`"I am Atlas, the mightiest giant in the world! And I hold the sky upon my head!"
+
+"So I see," answered Hercules. "But, can you show me the way to the garden of the Hesperides?"
+
+"What do you want there?" asked the giant.
+
+"I want three of the golden apples," shouted Hercules, "for my cousin, the king."
+
+"There is nobody but myself," quoth the giant, "that can go to the garden of the Hesperides, and gather the golden apples. If it were not for this little business of holding up the sky, I would make half a dozen steps across the sea, and get them for you."
+
+"You are very kind," replied Hercules. "And cannot you rest the sky upon a mountain?"`,`"None of them are quite high enough," said Atlas, shaking his head. "But, if you were to take your stand on the summit of that nearest one, your head would be pretty nearly on a level with mine. You seem to be a fellow of some strength. What if you should take my burden on your shoulders, while I do your errand for you?"
+
+Hercules, as you must be careful to remember, was a remarkably strong man; and though it certainly requires a great deal of muscular power to uphold the sky, yet, if any mortal could be supposed capable of such an exploit, he was the one. Nevertheless, it seemed so difficult an undertaking, that, for the first time in his life, he hesitated.`,`"Is the sky very heavy?" he inquired.
+
+"Why, not particularly so, at first," answered the giant, shrugging his shoulders. "But it gets to be a little burdensome, after a thousand years!"
+
+"And how long a time," asked the hero, "will it take you to get the golden apples?"
+
+"Oh, that will be done in a few moments," cried Atlas. "I shall take ten or fifteen miles at a stride, and be at the garden and back again before your shoulders begin to ache."
+
+"Well, then," answered Hercules, "I will climb the mountain behind you there, and relieve you of your burden."`,"The truth is, Hercules had a kind heart of his own, and considered that he should be doing the giant a favor, by allowing him this opportunity for a ramble. And, besides, he thought that it would be still more for his own glory, if he could boast of upholding the sky, than merely to do so ordinary a thing as to conquer a dragon with a hundred heads. Accordingly, without more words, the sky was shifted from the shoulders of Atlas, and placed upon those of Hercules."],fk:6.2,level:6.2,words:436,sentences:28,syllables:582,questions:[{depth:"literal",q:"Where does Atlas hold the sky?",right:"Upon his head",wrong:["In his two hands","On a tall pillar","Between two mountains"]},{depth:"literal",q:"What does Hercules want from the garden of the Hesperides?",right:"Three golden apples",wrong:["A flying horse","Water from a spring","A dragon's egg"]},{depth:"literal",q:"Why can the sky not rest on a mountain?",right:"No mountain is high enough",wrong:["The mountains would crumble","The gods have forbidden it","The sky is far too wide"]},{depth:"literal",q:"What does Atlas say happens to the sky after a thousand years?",right:"It starts to feel heavy",wrong:["It begins to float away","It turns from blue to grey","It needs to be polished"]},{depth:"inferential",q:"Why did Hercules agree to hold up the sky?",right:"He was kind, and wanted the glory",wrong:["Atlas threatened to crush him","He was too tired to walk on","He wanted to steal the apples"]}],evaluate:"Atlas promises he will be back in a few moments. Do you trust him? Why or why not?",wordBank:["errand","muscular","uphold","summit","boast"]},{id:"tanglewood-labyrinth",work:"tanglewood",title:"Theseus in the labyrinth",band:2,kind:"prose",abridged:!1,hook:"A maze with no way out, a monster roaring somewhere inside, and one silk thread.",text:`So the young man took the end of the silken string in his left hand, and his gold-hilted sword, ready drawn from its scabbard, in the other, and trod boldly into the inscrutable labyrinth. How this labyrinth was built is more than I can tell you. But so cunningly contrived a mizmaze was never seen in the world, before nor since. There can be nothing else so intricate, unless it were the brain of a man like Daedalus, who planned it, or the heart of any ordinary man; which last, to be sure, is ten times as great a mystery as the labyrinth of Crete. Theseus had not taken five steps before he lost sight of Ariadne; and in five more his head was growing dizzy. But still he went on, now creeping through a low arch, now ascending a flight of steps, now in one crooked passage and now in another, with here a door opening before him, and there one banging behind, until it really seemed as if the walls spun round, and whirled him round along with them. And all the while, through these hollow avenues, now nearer, now farther off again, resounded the cry of the Minotaur; and the sound was so fierce, so cruel, so ugly, so like a bull's roar, and withal so like a human voice, and yet like neither of them, that the brave heart of Theseus grew sterner and angrier at every step; for he felt it an insult to the moon and sky, and to our affectionate and simple Mother Earth, that such a monster should have the audacity to exist.
+
+As he passed onward, the clouds gathered over the moon, and the labyrinth grew so dusky that Theseus could no longer discern the bewilderment through which he was passing. He would have left quite lost, and utterly hopeless of ever again walking in a straight path, if, every little while, he had not been conscious of a gentle twitch at the silken cord. Then he knew that the tender-hearted Ariadne was still holding the other end, and that she was fearing for him, and hoping for him, and giving him just as much of her sympathy as if she were close by his side. O, indeed, I can assure you, there was a vast deal of human sympathy running along that slender thread of silk. But still he followed the dreadful roar of the Minotaur, which now grew louder and louder, and finally so very loud that Theseus fully expected to come close upon him, at every new zizgag and wriggle of the path.`,scenes:["So the young man took the end of the silken string in his left hand, and his gold-hilted sword, ready drawn from its scabbard, in the other, and trod boldly into the inscrutable labyrinth. How this labyrinth was built is more than I can tell you. But so cunningly contrived a mizmaze was never seen in the world, before nor since. There can be nothing else so intricate, unless it were the brain of a man like Daedalus, who planned it, or the heart of any ordinary man; which last, to be sure, is ten times as great a mystery as the labyrinth of Crete.","Theseus had not taken five steps before he lost sight of Ariadne; and in five more his head was growing dizzy. But still he went on, now creeping through a low arch, now ascending a flight of steps, now in one crooked passage and now in another, with here a door opening before him, and there one banging behind, until it really seemed as if the walls spun round, and whirled him round along with them.","And all the while, through these hollow avenues, now nearer, now farther off again, resounded the cry of the Minotaur; and the sound was so fierce, so cruel, so ugly, so like a bull's roar, and withal so like a human voice, and yet like neither of them, that the brave heart of Theseus grew sterner and angrier at every step; for he felt it an insult to the moon and sky, and to our affectionate and simple Mother Earth, that such a monster should have the audacity to exist.","As he passed onward, the clouds gathered over the moon, and the labyrinth grew so dusky that Theseus could no longer discern the bewilderment through which he was passing. He would have left quite lost, and utterly hopeless of ever again walking in a straight path, if, every little while, he had not been conscious of a gentle twitch at the silken cord. Then he knew that the tender-hearted Ariadne was still holding the other end, and that she was fearing for him, and hoping for him, and giving him just as much of her sympathy as if she were close by his side. O, indeed, I can assure you, there was a vast deal of human sympathy running along that slender thread of silk.","But still he followed the dreadful roar of the Minotaur, which now grew louder and louder, and finally so very loud that Theseus fully expected to come close upon him, at every new zizgag and wriggle of the path."],fk:14.3,level:14.3,words:435,sentences:12,syllables:582,questions:[{depth:"literal",q:"What did Theseus hold in his left hand?",right:"The end of a silken string",wrong:["A lantern full of fireflies","A shield of polished bronze","A map of the winding paths"]},{depth:"literal",q:"Who planned the labyrinth?",right:"Daedalus",wrong:["Ariadne","Theseus","The Minotaur"]},{depth:"literal",q:"What did the Minotaur's cry sound like?",right:"A bull and a man at once",wrong:["A wolf howling at the moon","Thunder rolling in the hills","A bird singing in a cage"]},{depth:"literal",q:"What happened when the clouds covered the moon?",right:"The labyrinth grew too dark to see",wrong:["The Minotaur fell fast asleep","The walls stopped spinning round","Ariadne let go of the string"]},{depth:"inferential",q:"How did Theseus know that Ariadne was still with him?",right:"He felt gentle twitches on the cord",wrong:["He could hear her singing softly","She called his name at every turn","He saw her lamp behind him"]}],evaluate:"Hawthorne says an ordinary human heart is a greater mystery than any labyrinth. What do you think he means?",wordBank:["conscious","sympathy","crooked","slender","whirled"]},{id:"tanglewood-ceres",work:"tanglewood",title:"Mother Ceres and the barren earth",band:2,kind:"prose",abridged:!1,hook:"A mother has lost her daughter. Until she comes back, nothing on earth will grow.",text:`While she dwelt in the king's palace, Mother Ceres had been so continually occupied with taking care of the young prince, that her heart was a little lightened of its grief for Proserpina. But now, having nothing else to busy herself about, she became just as wretched as before. At length, in her despair, she came to the dreadful resolution that not a stalk of grain, nor a blade of grass, not a potato, nor a turnip, nor any other vegetable that was good for man or beast to eat, should be suffered to grow until her daughter were restored. She even forbade the flowers to bloom, lest somebody's heart should be cheered by their beauty.
+
+Now, as not so much as a head of asparagus ever presumed to poke itself out of the ground, without the especial permission of Ceres, you may conceive what a terrible calamity had here fallen upon the earth. The husbandmen plowed and planted as usual; but there lay the rich black furrows, all as barren as a desert of sand. The pastures looked as brown in the sweet month of June as ever they did in chill November. The rich man's broad acres and the cottager's small garden patch were equally blighted. Every little girl's flower bed showed nothing but dry stalks. The old people shook their white heads, and said that the earth had grown aged like themselves, and was no longer capable of wearing the warm smile of summer on its face. It was really piteous to see the poor, starving cattle and sheep, how they followed behind Ceres, lowing and bleating, as if their instinct taught them to expect help from her; and everybody that was acquainted with her power besought her to have mercy on the human race, and, at all events, to let the grass grow. But Mother Ceres, though naturally of an affectionate disposition, was now inexorable.
+
+"Never," said she. "If the earth is ever again to see any verdure, it must first grow along the path which my daughter will tread in coming back to me."`,scenes:["While she dwelt in the king's palace, Mother Ceres had been so continually occupied with taking care of the young prince, that her heart was a little lightened of its grief for Proserpina. But now, having nothing else to busy herself about, she became just as wretched as before. At length, in her despair, she came to the dreadful resolution that not a stalk of grain, nor a blade of grass, not a potato, nor a turnip, nor any other vegetable that was good for man or beast to eat, should be suffered to grow until her daughter were restored. She even forbade the flowers to bloom, lest somebody's heart should be cheered by their beauty.","Now, as not so much as a head of asparagus ever presumed to poke itself out of the ground, without the especial permission of Ceres, you may conceive what a terrible calamity had here fallen upon the earth. The husbandmen plowed and planted as usual; but there lay the rich black furrows, all as barren as a desert of sand. The pastures looked as brown in the sweet month of June as ever they did in chill November. The rich man's broad acres and the cottager's small garden patch were equally blighted. Every little girl's flower bed showed nothing but dry stalks.","The old people shook their white heads, and said that the earth had grown aged like themselves, and was no longer capable of wearing the warm smile of summer on its face. It was really piteous to see the poor, starving cattle and sheep, how they followed behind Ceres, lowing and bleating, as if their instinct taught them to expect help from her; and everybody that was acquainted with her power besought her to have mercy on the human race, and, at all events, to let the grass grow. But Mother Ceres, though naturally of an affectionate disposition, was now inexorable.",'"Never," said she. "If the earth is ever again to see any verdure, it must first grow along the path which my daughter will tread in coming back to me."'],fk:10.5,level:10.5,words:349,sentences:14,syllables:484,questions:[{depth:"literal",q:"What did Ceres decide must not grow until her daughter came back?",right:"Any grain, grass or vegetable",wrong:["Only the roses in her garden","The trees in the king's orchard","The weeds beside the river"]},{depth:"literal",q:"Whom had Ceres been caring for in the king's palace?",right:"The young prince",wrong:["The queen's cat","A sick shepherd","The palace gardens"]},{depth:"literal",q:"What did the hungry cattle and sheep do?",right:"Followed Ceres, lowing and bleating",wrong:["Ran off into the mountains","Lay down in the dry fields","Broke into the king's barns"]},{depth:"inferential",q:"Why did Ceres even forbid the flowers to bloom?",right:"So no one would feel cheered",wrong:["Flowers made her sneeze","She needed them for a crown","The bees had all flown away"]},{depth:"inferential",q:"What does 'inexorable' mean in the story?",right:"Impossible to persuade",wrong:["Very tired and weak","Kind and generous","Quietly forgetful"]}],evaluate:"Ceres stops all food from growing because she is so sad. Was that fair to everyone else? What would you have said to her?",wordBank:["disposition","resolution","instinct","stalk","plowed"]},{id:"bulfinch-echo",work:"bulfinch",title:"Echo",band:2,kind:"prose",abridged:!1,hook:"A nymph who loved to talk is punished: now she can only repeat what others say.",text:`Echo was a beautiful nymph, fond of the woods and hills, where she devoted herself to woodland sports. She was a favorite of Diana, and attended her in the chase. But Echo had one failing; she was fond of talking, and whether in chat or argument, would have the last word. One day Juno was seeking her husband, who, she had reason to fear, was amusing himself among the nymphs. Echo by her talk contrived to detain the goddess till the nymphs made their escape. When Juno discovered it, she passed sentence upon Echo in these words: "You shall forfeit the use of that tongue with which you have cheated me, except for that one purpose you are so fond of--reply. You shall still have the last word, but no power to speak first."
+
+This nymph saw Narcissus, a beautiful youth, as he pursued the chase upon the mountains. She loved him, and followed his footsteps. O how she longed to address him in the softest accents, and win him to converse! but it was not in her power. She waited with impatience for him to speak first, and had her answer ready. One day the youth, being separated from his companions, shouted aloud, "Who's here?" Echo replied, "Here." Narcissus looked around, but seeing no one called out, "Come." Echo answered, "Come." As no one came, Narcissus called again, "Why do you shun me?" Echo asked the same question. "Let us join one another," said the youth. The maid answered with all her heart in the same words, and hastened to the spot, ready to throw her arms about his neck. He started back, exclaiming, "Hands off! I would rather die than you should have me!" "Have me," said she; but it was all in vain. He left her, and she went to hide her blushes in the recesses of the woods. From that time forth she lived in caves and among mountain cliffs. Her form faded with grief, till at last all her flesh shrank away. Her bones were changed into rocks and there was nothing left of her but her voice. With that she is still ready to reply to any one who calls her, and keeps up her old habit of having the last word.`,scenes:['Echo was a beautiful nymph, fond of the woods and hills, where she devoted herself to woodland sports. She was a favorite of Diana, and attended her in the chase. But Echo had one failing; she was fond of talking, and whether in chat or argument, would have the last word. One day Juno was seeking her husband, who, she had reason to fear, was amusing himself among the nymphs. Echo by her talk contrived to detain the goddess till the nymphs made their escape. When Juno discovered it, she passed sentence upon Echo in these words: "You shall forfeit the use of that tongue with which you have cheated me, except for that one purpose you are so fond of--reply. You shall still have the last word, but no power to speak first."',"This nymph saw Narcissus, a beautiful youth, as he pursued the chase upon the mountains. She loved him, and followed his footsteps. O how she longed to address him in the softest accents, and win him to converse! but it was not in her power. She waited with impatience for him to speak first, and had her answer ready.",`One day the youth, being separated from his companions, shouted aloud, "Who's here?" Echo replied, "Here." Narcissus looked around, but seeing no one called out, "Come." Echo answered, "Come." As no one came, Narcissus called again, "Why do you shun me?" Echo asked the same question. "Let us join one another," said the youth. The maid answered with all her heart in the same words, and hastened to the spot, ready to throw her arms about his neck. He started back, exclaiming, "Hands off! I would rather die than you should have me!" "Have me," said she; but it was all in vain.`,"He left her, and she went to hide her blushes in the recesses of the woods. From that time forth she lived in caves and among mountain cliffs. Her form faded with grief, till at last all her flesh shrank away. Her bones were changed into rocks and there was nothing left of her but her voice. With that she is still ready to reply to any one who calls her, and keeps up her old habit of having the last word."],fk:4.6,level:4.6,words:378,sentences:28,syllables:479,questions:[{depth:"literal",q:"What was Echo's one failing?",right:"She always wanted the last word",wrong:["She never told the truth","She was afraid of the dark","She slept late every day"]},{depth:"literal",q:"Who took away her power to speak first?",right:"Juno",wrong:["Diana","Narcissus","Minerva"]},{depth:"literal",q:"Where did she live after Narcissus left her?",right:"In caves and among cliffs",wrong:["In a palace by the sea","In a hollow oak tree","On an island far away"]},{depth:"inferential",q:"Why did she wait for Narcissus to speak first?",right:"She could only repeat his words",wrong:["She was too shy to talk","She did not know his name","She wanted to trick him"]},{depth:"literal",q:"What is left of her at the end of the story?",right:"Only her voice",wrong:["Only her shadow","Only her footprints","Only her shoes"]}],evaluate:"Was Juno's punishment fair? Have you ever heard an echo — and what did it say back?",wordBank:["converse","detain","argument","woodland","devoted"]},{id:"heroes-perseus",work:"heroes",title:"Perseus and the goddess on the cliff",band:2,kind:"prose",abridged:!1,hook:"A young man has made a rash promise. Then a shining cloud comes over the sea.",text:`Then he saw afar off above the sea a small white cloud, as bright as silver. And it came on, nearer and nearer, till its brightness dazzled his eyes.
+
+Perseus wondered at that strange cloud, for there was no other cloud all round the sky; and he trembled as it touched the cliff below. And as it touched, it broke, and parted, and within it appeared Pallas Athené, as he had seen her at Samos in his dream, and beside her a young man more light-limbed than the stag, whose eyes were like sparks of fire. By his side was a scimitar of diamond, all of one clear precious stone, and on his feet were golden sandals, from the heels of which grew living wings.
+
+They looked upon Perseus keenly, and yet they never moved their eyes; and they came up the cliffs towards him more swiftly than the sea-gull, and yet they never moved their feet, nor did the breeze stir the robes about their limbs; only the wings of the youth’s sandals quivered, like a hawk’s when he hangs above the cliff. And Perseus fell down and worshipped, for he knew that they were more than man.
+
+But Athené stood before him and spoke gently, and bid him have no fear. Then—
+
+‘Perseus,’ she said, ‘he who overcomes in one trial merits thereby a sharper trial still. You have braved Polydectes, and done manfully. Dare you brave Medusa the Gorgon?’
+
+And Perseus said, ‘Try me; for since you spoke to me in Samos a new soul has come into my breast, and I should be ashamed not to dare anything which I can do. Show me, then, how I can do this!’`,scenes:[`Then he saw afar off above the sea a small white cloud, as bright as silver. And it came on, nearer and nearer, till its brightness dazzled his eyes.
+
+Perseus wondered at that strange cloud, for there was no other cloud all round the sky; and he trembled as it touched the cliff below. And as it touched, it broke, and parted, and within it appeared Pallas Athené, as he had seen her at Samos in his dream, and beside her a young man more light-limbed than the stag, whose eyes were like sparks of fire. By his side was a scimitar of diamond, all of one clear precious stone, and on his feet were golden sandals, from the heels of which grew living wings.`,"They looked upon Perseus keenly, and yet they never moved their eyes; and they came up the cliffs towards him more swiftly than the sea-gull, and yet they never moved their feet, nor did the breeze stir the robes about their limbs; only the wings of the youth’s sandals quivered, like a hawk’s when he hangs above the cliff. And Perseus fell down and worshipped, for he knew that they were more than man.",`But Athené stood before him and spoke gently, and bid him have no fear. Then—
+
+‘Perseus,’ she said, ‘he who overcomes in one trial merits thereby a sharper trial still. You have braved Polydectes, and done manfully. Dare you brave Medusa the Gorgon?’
+
+And Perseus said, ‘Try me; for since you spoke to me in Samos a new soul has come into my breast, and I should be ashamed not to dare anything which I can do. Show me, then, how I can do this!’`],fk:7.6,level:7.6,words:284,sentences:13,syllables:352,questions:[{depth:"literal",q:"What did Perseus first see coming over the sea?",right:"A small white cloud",wrong:["A ship with black sails","A flock of white gulls","A great green wave"]},{depth:"literal",q:"What grew from the heels of the young man's sandals?",right:"Living wings",wrong:["Golden spurs","Silver bells","Little flames"]},{depth:"literal",q:"What was the young man's scimitar made of?",right:"One clear diamond",wrong:["Polished bronze","Shining silver","Sharpened bone"]},{depth:"inferential",q:"Why did Perseus fall down and worship?",right:"He knew they were more than human",wrong:["He had tripped on the rocks","He was too frightened to stand","The goddess ordered him to kneel"]},{depth:"inferential",q:"What does Athené mean: 'he who overcomes in one trial merits thereby a sharper trial still'?",right:"Passing one test earns a harder one",wrong:["A brave man may rest at last","Every trial gets easier in time","Only the gods may set a test"]}],evaluate:"Perseus says he would be ashamed not to dare anything he can do. Is that brave, or foolish? Why?",wordBank:["merits","precious","ashamed","breeze","robes"]},{id:"bulfinch-narcissus",work:"bulfinch",title:"Narcissus at the fountain",band:3,kind:"prose",abridged:!1,hook:"A proud young hunter stoops to drink, and falls in love with a face in the water.",text:'There was a clear fountain, with water like silver, to which the shepherds never drove their flocks, nor the mountain goats resorted, nor any of the beasts of the forest; neither was it defaced with fallen leaves or branches; but the grass grew fresh around it, and the rocks sheltered it from the sun. Hither came one day the youth, fatigued with hunting, heated and thirsty. He stooped down to drink, and saw his own image in the water; he thought it was some beautiful water-spirit living in the fountain. He stood gazing with admiration at those bright eyes, those locks curled like the locks of Bacchus or Apollo, the rounded cheeks, the ivory neck, the parted lips, and the glow of health and exercise over all. He fell in love with himself. He brought his lips near to take a kiss; he plunged his arms in to embrace the beloved object. It fled at the touch, but returned again after a moment and renewed the fascination. He could not tear himself away; he lost all thought of food or rest, while he hovered over the brink of the fountain gazing upon his own image. He talked with the supposed spirit: "Why, beautiful being, do you shun me? Surely my face is not one to repel you. The nymphs love me, and you yourself look not indifferent upon me. When I stretch forth my arms you do the same; and you smile upon me and answer my beckonings with the like." His tears fell into the water and disturbed the image. As he saw it depart, he exclaimed, "Stay, I entreat you! Let me at least gaze upon you, if I may not touch you." With this, and much more of the same kind, he cherished the flame that consumed him, so that by degrees he lost his color, his vigor, and the beauty which formerly had so charmed the nymph Echo. She kept near him, however, and when he exclaimed, "Alas! alas!" she answered him with the same words. He pined away and died; and when his shade passed the Stygian river, it leaned over the boat to catch a look of itself in the waters. The nymphs mourned for him, especially the water-nymphs; and when they smote their breasts Echo smote hers also. They prepared a funeral pile and would have burned the body, but it was nowhere to be found; but in its place a flower, purple within, and surrounded with white leaves, which bears the name and preserves the memory of Narcissus.',scenes:["There was a clear fountain, with water like silver, to which the shepherds never drove their flocks, nor the mountain goats resorted, nor any of the beasts of the forest; neither was it defaced with fallen leaves or branches; but the grass grew fresh around it, and the rocks sheltered it from the sun. Hither came one day the youth, fatigued with hunting, heated and thirsty. He stooped down to drink, and saw his own image in the water; he thought it was some beautiful water-spirit living in the fountain. He stood gazing with admiration at those bright eyes, those locks curled like the locks of Bacchus or Apollo, the rounded cheeks, the ivory neck, the parted lips, and the glow of health and exercise over all.","He fell in love with himself. He brought his lips near to take a kiss; he plunged his arms in to embrace the beloved object. It fled at the touch, but returned again after a moment and renewed the fascination. He could not tear himself away; he lost all thought of food or rest, while he hovered over the brink of the fountain gazing upon his own image.",'He talked with the supposed spirit: "Why, beautiful being, do you shun me? Surely my face is not one to repel you. The nymphs love me, and you yourself look not indifferent upon me. When I stretch forth my arms you do the same; and you smile upon me and answer my beckonings with the like." His tears fell into the water and disturbed the image. As he saw it depart, he exclaimed, "Stay, I entreat you! Let me at least gaze upon you, if I may not touch you."','With this, and much more of the same kind, he cherished the flame that consumed him, so that by degrees he lost his color, his vigor, and the beauty which formerly had so charmed the nymph Echo. She kept near him, however, and when he exclaimed, "Alas! alas!" she answered him with the same words.',"He pined away and died; and when his shade passed the Stygian river, it leaned over the boat to catch a look of itself in the waters. The nymphs mourned for him, especially the water-nymphs; and when they smote their breasts Echo smote hers also. They prepared a funeral pile and would have burned the body, but it was nowhere to be found; but in its place a flower, purple within, and surrounded with white leaves, which bears the name and preserves the memory of Narcissus."],fk:7.4,level:7.4,words:426,sentences:22,syllables:559,questions:[{depth:"literal",q:"What did Narcissus think he saw in the water?",right:"A beautiful water-spirit",wrong:["A golden fish swimming","A treasure on the bottom","A nymph hiding underneath"]},{depth:"literal",q:"What happened whenever he tried to touch the image?",right:"It fled, then came back",wrong:["It pulled him under","It turned into a fish","It laughed out loud"]},{depth:"literal",q:"What did Echo do when he cried 'Alas! alas!'?",right:"Answered with the same words",wrong:["Ran to fetch the water-nymphs","Hid her face in her hands","Called out his name"]},{depth:"literal",q:"What was found in place of his body?",right:"A purple and white flower",wrong:["A small silver mirror","A pool of clear water","A young laurel tree"]},{depth:"inferential",q:"Why did Narcissus waste away?",right:"He could not leave his reflection",wrong:["The fountain water was poisoned","A nymph had cast a spell on him","He was lost in the deep forest"]}],evaluate:"Poets have retold this story again and again. What do you think it is warning us about?",wordBank:["fatigued","stooped","repel","brink","consumed"]},{id:"bulfinch-arachne",work:"bulfinch",title:"Arachne challenges Minerva",band:3,kind:"prose",abridged:!1,hook:"The finest weaver in the land says she could beat a goddess. The goddess hears her.",text:'There was another contest, in which a mortal dared to come in competition with Minerva. That mortal was Arachne, a maiden who had attained such skill in the arts of weaving and embroidery that the nymphs themselves would leave their groves and fountains to come and gaze upon her work. It was not only beautiful when it was done, but beautiful also in the doing. To watch her, as she took the wool in its rude state and formed it into rolls, or separated it with her fingers and carded it till it looked as light and soft as a cloud, or twirled the spindle with skilful touch, or wove the web, or, after it was woven, adorned it with her needle, one would have said that Minerva herself had taught her. But this she denied, and could not bear to be thought a pupil even of a goddess. "Let Minerva try her skill with mine," said she; "if beaten I will pay the penalty." Minerva heard this and was displeased. She assumed the form of an old woman and went and gave Arachne some friendly advice "I have had much experience," said she, "and I hope you will not despise my counsel. Challenge your fellow-mortals as you will, but do not compete with a goddess. On the contrary, I advise you to ask her forgiveness for what you have said, and as she is merciful perhaps she will pardon you." Arachne stopped her spinning and looked at the old dame with anger in her countenance. "Keep your counsel," said she, "for your daughters or handmaids; for my part I know what I say, and I stand to it. I am not afraid of the goddess; let her try her skill, if she dare venture." "She comes," said Minerva; and dropping her disguise stood confessed. The nymphs bent low in homage, and all the bystanders paid reverence. Arachne alone was unterrified. She blushed, indeed; a sudden color dyed her cheek, and then she grew pale. But she stood to her resolve, and with a foolish conceit of her own skill rushed on her fate. Minerva forbore no longer nor interposed any further advice. They proceed to the contest. Each takes her station and attaches the web to the beam. Then the slender shuttle is passed in and out among the threads. The reed with its fine teeth strikes up the woof into its place and compacts the web. Both work with speed; their skilful hands move rapidly, and the excitement of the contest makes the labor light.',scenes:["There was another contest, in which a mortal dared to come in competition with Minerva. That mortal was Arachne, a maiden who had attained such skill in the arts of weaving and embroidery that the nymphs themselves would leave their groves and fountains to come and gaze upon her work. It was not only beautiful when it was done, but beautiful also in the doing.","To watch her, as she took the wool in its rude state and formed it into rolls, or separated it with her fingers and carded it till it looked as light and soft as a cloud, or twirled the spindle with skilful touch, or wove the web, or, after it was woven, adorned it with her needle, one would have said that Minerva herself had taught her. But this she denied, and could not bear to be thought a pupil even of a goddess.",'"Let Minerva try her skill with mine," said she; "if beaten I will pay the penalty." Minerva heard this and was displeased. She assumed the form of an old woman and went and gave Arachne some friendly advice "I have had much experience," said she, "and I hope you will not despise my counsel. Challenge your fellow-mortals as you will, but do not compete with a goddess. On the contrary, I advise you to ask her forgiveness for what you have said, and as she is merciful perhaps she will pardon you."','Arachne stopped her spinning and looked at the old dame with anger in her countenance. "Keep your counsel," said she, "for your daughters or handmaids; for my part I know what I say, and I stand to it. I am not afraid of the goddess; let her try her skill, if she dare venture."','"She comes," said Minerva; and dropping her disguise stood confessed. The nymphs bent low in homage, and all the bystanders paid reverence. Arachne alone was unterrified. She blushed, indeed; a sudden color dyed her cheek, and then she grew pale. But she stood to her resolve, and with a foolish conceit of her own skill rushed on her fate. Minerva forbore no longer nor interposed any further advice.',"They proceed to the contest. Each takes her station and attaches the web to the beam. Then the slender shuttle is passed in and out among the threads. The reed with its fine teeth strikes up the woof into its place and compacts the web. Both work with speed; their skilful hands move rapidly, and the excitement of the contest makes the labor light."],fk:6.9,level:6.9,words:427,sentences:24,syllables:564,questions:[{depth:"literal",q:"Why did the nymphs leave their groves and fountains?",right:"To watch Arachne weave",wrong:["To bathe in the river","To hunt with Diana","To hear Minerva sing"]},{depth:"literal",q:"What disguise did Minerva put on?",right:"An old woman",wrong:["A young shepherd","A grey owl","A rich merchant"]},{depth:"literal",q:"What did the old woman advise Arachne to do?",right:"Ask the goddess to forgive her",wrong:["Leave the town before night","Weave a gift for the goddess","Teach the nymphs to spin"]},{depth:"inferential",q:"How did Arachne behave when Minerva showed who she was?",right:"She would not give up",wrong:["She bowed low in homage","She ran away in terror","She begged for mercy"]},{depth:"inferential",q:"What does 'a foolish conceit of her own skill' mean?",right:"She thought too highly of herself",wrong:["She was ashamed of her weaving","She had forgotten how to spin","She liked to tell funny stories"]}],evaluate:"Arachne really was a wonderful weaver. Was it wrong of her to say so? Where is the line between pride and confidence?",wordBank:["adorned","compete","pupil","resolve","contrary"]},{id:"bulfinch-icarus",work:"bulfinch",title:"Daedalus and Icarus",band:3,kind:"prose",abridged:!1,hook:"A father makes wings of feathers and wax, and warns his son not to fly too high.",text:`So he set to work to fabricate wings for himself and his young son Icarus. He wrought feathers together, beginning with the smallest and adding larger, so as to form an increasing surface. The larger ones he secured with thread and the smaller with wax, and gave the whole a gentle curvature like the wings of a bird. Icarus, the boy, stood and looked on, sometimes running to gather up the feathers which the wind had blown away, and then handling the wax and working it over with his fingers, by his play impeding his father in his labors. When at last the work was done, the artist, waving his wings, found himself buoyed upward, and hung suspended, poising himself on the beaten air. He next equipped his son in the same manner, and taught him how to fly, as a bird tempts her young ones from the lofty nest into the air. When all was prepared for flight he said, "Icarus, my son, I charge you to keep at a moderate height, for if you fly too low the damp will clog your wings, and if too high the heat will melt them. Keep near me and you will be safe." While he gave him these instructions and fitted the wings to his shoulders, the face of the father was wet with tears, and his hands trembled. He kissed the boy, not knowing that it was for the last time. Then rising on his wings, he flew off, encouraging him to follow, and looked back from his own flight to see how his son managed his wings. As they flew the ploughman stopped his work to gaze, and the shepherd leaned on his staff and watched them, astonished at the sight, and thinking they were gods who could thus cleave the air.
+
+They passed Samos and Delos on the left and Lebynthos on the right, when the boy, exulting in his career, began to leave the guidance of his companion and soar upward as if to reach heaven. The nearness of the blazing sun softened the wax which held the feathers together, and they came off. He fluttered with his arms, but no feathers remained to hold the air. While his mouth uttered cries to his father it was submerged in the blue waters of the sea, which thenceforth was called by his name. His father cried, "Icarus, Icarus, where are you?" At last he saw the feathers floating on the water, and bitterly lamenting his own arts, he buried the body and called the land Icaria in memory of his child.`,scenes:["So he set to work to fabricate wings for himself and his young son Icarus. He wrought feathers together, beginning with the smallest and adding larger, so as to form an increasing surface. The larger ones he secured with thread and the smaller with wax, and gave the whole a gentle curvature like the wings of a bird. Icarus, the boy, stood and looked on, sometimes running to gather up the feathers which the wind had blown away, and then handling the wax and working it over with his fingers, by his play impeding his father in his labors.",'When at last the work was done, the artist, waving his wings, found himself buoyed upward, and hung suspended, poising himself on the beaten air. He next equipped his son in the same manner, and taught him how to fly, as a bird tempts her young ones from the lofty nest into the air. When all was prepared for flight he said, "Icarus, my son, I charge you to keep at a moderate height, for if you fly too low the damp will clog your wings, and if too high the heat will melt them. Keep near me and you will be safe."',"While he gave him these instructions and fitted the wings to his shoulders, the face of the father was wet with tears, and his hands trembled. He kissed the boy, not knowing that it was for the last time. Then rising on his wings, he flew off, encouraging him to follow, and looked back from his own flight to see how his son managed his wings. As they flew the ploughman stopped his work to gaze, and the shepherd leaned on his staff and watched them, astonished at the sight, and thinking they were gods who could thus cleave the air.",'They passed Samos and Delos on the left and Lebynthos on the right, when the boy, exulting in his career, began to leave the guidance of his companion and soar upward as if to reach heaven. The nearness of the blazing sun softened the wax which held the feathers together, and they came off. He fluttered with his arms, but no feathers remained to hold the air. While his mouth uttered cries to his father it was submerged in the blue waters of the sea, which thenceforth was called by his name. His father cried, "Icarus, Icarus, where are you?" At last he saw the feathers floating on the water, and bitterly lamenting his own arts, he buried the body and called the land Icaria in memory of his child.'],fk:9,level:9,words:433,sentences:18,syllables:557,questions:[{depth:"literal",q:"How did Daedalus hold the smaller feathers together?",right:"With wax",wrong:["With glue","With honey","With nails"]},{depth:"literal",q:"What did Daedalus warn would happen if Icarus flew too high?",right:"The heat would melt the wings",wrong:["The wind would blow him away","The birds would attack him","He would lose sight of land"]},{depth:"literal",q:"What did the ploughman and the shepherd think?",right:"That they were gods",wrong:["That they were birds","That they were ghosts","That they were thieves"]},{depth:"inferential",q:"Why did Icarus fall?",right:"He flew too near the sun",wrong:["A storm tore his wings","He grew too tired to fly","His father let go of him"]},{depth:"inferential",q:"What does 'exulting in his career' mean here?",right:"Thrilled by his swift flight",wrong:["Proud of his new job","Bored with the long journey","Afraid of the deep water"]}],evaluate:"Daedalus warned Icarus not to fly too low as well as too high. What does the story say about choosing a middle way?",wordBank:["wrought","lofty","fluttered","encouraging","feathers"]},{id:"bulfinch-pan",work:"bulfinch",title:"Pan, the god of the woods",band:3,kind:"prose",abridged:!1,hook:"A god of woods and flocks, a shepherd's pipe, and a fear with no cause at all.",text:`Pan, the god of woods and fields, of flocks and shepherds, dwelt in grottos, wandered on the mountains and in valleys, and amused himself with the chase or in leading the dances of the nymphs. He was fond of music, and as we have seen, the inventor of the syrinx, or shepherd's pipe, which he himself played in a masterly manner. Pan, like other gods who dwelt in forests, was dreaded by those whose occupations caused them to pass through the woods by night, for the gloom and loneliness of such scenes dispose the mind to superstitious fears. Hence sudden fright without any visible cause was ascribed to Pan, and called a Panic terror.
+
+As the name of the god signifies ALL, Pan came to be considered a symbol of the universe and personification of Nature; and later still to be regarded as a representative of all the gods and of heathenism itself.
+
+Sylvanus and Faunus were Latin divinities, whose characteristics are so nearly the same as those of Pan that we may safely consider them as the same personage under different names.`,scenes:["Pan, the god of woods and fields, of flocks and shepherds, dwelt in grottos, wandered on the mountains and in valleys, and amused himself with the chase or in leading the dances of the nymphs. He was fond of music, and as we have seen, the inventor of the syrinx, or shepherd's pipe, which he himself played in a masterly manner.","Pan, like other gods who dwelt in forests, was dreaded by those whose occupations caused them to pass through the woods by night, for the gloom and loneliness of such scenes dispose the mind to superstitious fears. Hence sudden fright without any visible cause was ascribed to Pan, and called a Panic terror.",`As the name of the god signifies ALL, Pan came to be considered a symbol of the universe and personification of Nature; and later still to be regarded as a representative of all the gods and of heathenism itself.
+
+Sylvanus and Faunus were Latin divinities, whose characteristics are so nearly the same as those of Pan that we may safely consider them as the same personage under different names.`],fk:13.4,level:13.4,words:183,sentences:6,syllables:265,questions:[{depth:"literal",q:"What musical instrument had Pan invented?",right:"The shepherd's pipe",wrong:["The silver harp","The bronze trumpet","The tambourine"]},{depth:"literal",q:"Who dreaded Pan?",right:"Those in the woods by night",wrong:["Sailors on the open sea","Kings in their palaces","Children in the cities"]},{depth:"literal",q:"What was a sudden fright without any visible cause called?",right:"A panic terror",wrong:["A lunar fright","A forest gloom","A shepherd's chill"]},{depth:"literal",q:"What does Bulfinch say the name Pan signifies?",right:"All",wrong:["Goat","Wood","Song"]},{depth:"inferential",q:"Why did the woods at night make people afraid?",right:"Gloom and loneliness stir fears",wrong:["Wild bears hunted there","The paths were all flooded","Robbers hid behind trees"]}],evaluate:"Have you ever felt a sudden fright for no reason at all? Why do you think the Greeks blamed it on a god?",wordBank:["gloom","visible","terror","universe","loneliness"],needsReview:!0,reviewNote:`Bulfinch (1855) calls the old Greek religion "heathenism" — a word from a Christian point of view. A grown-up might explain that here the Greek gods are stories, told as the Greeks told them. Bulfinch's "the name of the god signifies ALL" is an ancient guess that modern scholars doubt; the app does not teach panorama or pandemonium as coming from Pan.`},{id:"bulfinch-iris",work:"bulfinch",title:"Iris in the cave of Sleep",band:3,kind:"prose",abridged:!1,hook:"The rainbow goddess flies to a cave where no rooster crows and no dog barks.",text:`Near the Cimmerian country, a mountain cave is the abode of the dull god Somnus. Here Phoebus dares not come, either rising, at midday, or setting. Clouds and shadows are exhaled from the ground, and the light glimmers faintly. The bird of dawning, with crested head, never there calls aloud to Aurora, nor watchful dog, nor more sagacious goose disturbs the silence. No wild beast, nor cattle, nor branch moved with the wind, nor sound of human conversation, breaks the stillness. Silence reigns there; but from the bottom of the rock the River Lethe flows, and by its murmur invites to sleep. Poppies grow abundantly before the door of the cave, and other herbs, from whose juices Night collects slumbers, which she scatters over the darkened earth. There is no gate to the mansion, to creak on its hinges, nor any watchman; but in the midst a couch of black ebony, adorned with black plumes and black curtains. There the god reclines, his limbs relaxed with sleep. Around him lie dreams, resembling all various forms, as many as the harvest bears stalks, or the forest leaves, or the seashore sand grains.
+
+As soon as the goddess entered and brushed away the dreams that hovered around her, her brightness lit up all the cave. The god, scarce opening his eyes, and ever and anon dropping his beard upon his breast, at last shook himself free from himself, and leaning on his arm, inquired her errand,--for he knew who she was. She answered, "Somnus, gentlest of the gods, tranquillizer of minds and soother of care-worn hearts, Juno sends you her commands that you despatch a dream to Halcyone, in the city of Trachine, representing her lost husband and all the events of the wreck."
+
+Having delivered her message, Iris hasted away, for she could not longer endure the stagnant air, and as she felt drowsiness creeping over her, she made her escape, and returned by her bow the way she came. Then Somnus called one of his numerous sons,-- Morpheus,--the most expert in counterfeiting forms, and in imitating the walk, the countenance, and mode of speaking, even the clothes and attitudes most characteristic of each. But he only imitates men, leaving it to another to personate birds, beasts, and serpents. Him they call Icelos; and Phantasos is a third, who turns himself into rocks, waters, woods, and other things without life. These wait upon kings and great personages in their sleeping hours, while others move among the common people. Somnus chose, from all the brothers, Morpheus, to perform the command of Iris; then laid his head on his pillow and yielded himself to grateful repose.`,scenes:["Near the Cimmerian country, a mountain cave is the abode of the dull god Somnus. Here Phoebus dares not come, either rising, at midday, or setting. Clouds and shadows are exhaled from the ground, and the light glimmers faintly. The bird of dawning, with crested head, never there calls aloud to Aurora, nor watchful dog, nor more sagacious goose disturbs the silence. No wild beast, nor cattle, nor branch moved with the wind, nor sound of human conversation, breaks the stillness. Silence reigns there; but from the bottom of the rock the River Lethe flows, and by its murmur invites to sleep. Poppies grow abundantly before the door of the cave, and other herbs, from whose juices Night collects slumbers, which she scatters over the darkened earth.","There is no gate to the mansion, to creak on its hinges, nor any watchman; but in the midst a couch of black ebony, adorned with black plumes and black curtains. There the god reclines, his limbs relaxed with sleep. Around him lie dreams, resembling all various forms, as many as the harvest bears stalks, or the forest leaves, or the seashore sand grains.",'As soon as the goddess entered and brushed away the dreams that hovered around her, her brightness lit up all the cave. The god, scarce opening his eyes, and ever and anon dropping his beard upon his breast, at last shook himself free from himself, and leaning on his arm, inquired her errand,--for he knew who she was. She answered, "Somnus, gentlest of the gods, tranquillizer of minds and soother of care-worn hearts, Juno sends you her commands that you despatch a dream to Halcyone, in the city of Trachine, representing her lost husband and all the events of the wreck."',"Having delivered her message, Iris hasted away, for she could not longer endure the stagnant air, and as she felt drowsiness creeping over her, she made her escape, and returned by her bow the way she came.","Then Somnus called one of his numerous sons,-- Morpheus,--the most expert in counterfeiting forms, and in imitating the walk, the countenance, and mode of speaking, even the clothes and attitudes most characteristic of each. But he only imitates men, leaving it to another to personate birds, beasts, and serpents. Him they call Icelos; and Phantasos is a third, who turns himself into rocks, waters, woods, and other things without life. These wait upon kings and great personages in their sleeping hours, while others move among the common people. Somnus chose, from all the brothers, Morpheus, to perform the command of Iris; then laid his head on his pillow and yielded himself to grateful repose."],fk:10.1,level:10.1,words:445,sentences:19,syllables:623,questions:[{depth:"literal",q:"Which river flows from the bottom of the rock?",right:"The River Lethe",wrong:["The River Styx","The River Nile","The River Tiber"]},{depth:"literal",q:"What grows before the door of the cave?",right:"Poppies",wrong:["Roses","Thistles","Lilies"]},{depth:"literal",q:"How did Iris leave the cave?",right:"By her bow, the way she came",wrong:["On the back of a great owl","Through a door in the roof","In a chariot pulled by doves"]},{depth:"literal",q:"Why did Somnus choose Morpheus?",right:"He could best imitate people",wrong:["He was the eldest son","He flew faster than the rest","He was awake at the time"]},{depth:"inferential",q:"Why did Iris hurry away?",right:"She was growing drowsy too",wrong:["She was afraid of the dark","Juno called her back home","The dreams frightened her"]}],evaluate:"Bulfinch fills the cave with silence: no rooster, no dog, no wind. Which detail makes you feel sleepiest, and why?",wordBank:["drowsiness","ebony","mansion","numerous","yielded"]},{id:"bulfinch-sirens",work:"bulfinch",title:"Ulysses and the Sirens",band:3,kind:"prose",abridged:!1,hook:"A song so lovely that sailors leap to their doom. One captain wants to hear it.",text:"At length his companions recalled him to nobler sentiments, and he received their admonition gratefully. Circe aided their departure, and instructed them how to pass safely by the coast of the Sirens. The Sirens were sea-nymphs who had the power of charming by their song all who heard them, so that the unhappy mariners were irresistibly impelled to cast themselves into the sea to their destruction. Circe directed Ulysses to fill the ears of his seamen with wax, so that they should not hear the strain; and to cause himself to be bound to the mast, and his people to be strictly enjoined, whatever he might say or do, by no means to release him till they should have passed the Sirens' island. Ulysses obeyed these directions. He filled the ears of his people with wax, and suffered them to bind him with cords firmly to the mast. As they approached the Sirens' island, the sea was calm, and over the waters came the notes of music so ravishing and attractive that Ulysses struggled to get loose, and by cries and signs to his people begged to be released; but they, obedient to his previous orders, sprang forward and bound him still faster. They held on their course, and the music grew fainter till it ceased to be heard, when with joy Ulysses gave his companions the signal to unseal their ears, and they relieved him from his bonds.",scenes:["At length his companions recalled him to nobler sentiments, and he received their admonition gratefully. Circe aided their departure, and instructed them how to pass safely by the coast of the Sirens. The Sirens were sea-nymphs who had the power of charming by their song all who heard them, so that the unhappy mariners were irresistibly impelled to cast themselves into the sea to their destruction.","Circe directed Ulysses to fill the ears of his seamen with wax, so that they should not hear the strain; and to cause himself to be bound to the mast, and his people to be strictly enjoined, whatever he might say or do, by no means to release him till they should have passed the Sirens' island. Ulysses obeyed these directions. He filled the ears of his people with wax, and suffered them to bind him with cords firmly to the mast.","As they approached the Sirens' island, the sea was calm, and over the waters came the notes of music so ravishing and attractive that Ulysses struggled to get loose, and by cries and signs to his people begged to be released; but they, obedient to his previous orders, sprang forward and bound him still faster. They held on their course, and the music grew fainter till it ceased to be heard, when with joy Ulysses gave his companions the signal to unseal their ears, and they relieved him from his bonds."],fk:12.2,level:12.2,words:239,sentences:8,syllables:327,questions:[{depth:"literal",q:"Who told Ulysses how to pass the Sirens safely?",right:"Circe",wrong:["Minerva","Juno","Calypso"]},{depth:"literal",q:"How were the seamen kept from hearing the song?",right:"Their ears were filled with wax",wrong:["They sang loudly as they rowed","They sailed past at midnight","They hid below the deck"]},{depth:"literal",q:"What did Ulysses do when he heard the music?",right:"Struggled and begged to be freed",wrong:["Fell into a deep sleep","Steered the ship to the island","Sang along with the singers"]},{depth:"inferential",q:"Why did the sailors tie Ulysses even tighter?",right:"He had ordered them to, beforehand",wrong:["They were angry with him","They feared he would fall","Circe had cast a spell"]},{depth:"inferential",q:"What does 'obedient to his previous orders' mean here?",right:"Doing what he had told them earlier",wrong:["Doing whatever he shouted now","Ignoring every word he said","Asking Circe what to do next"]}],evaluate:"Ulysses chose to hear the song, but made sure he could not obey it. When might it be wise to plan ahead against your own wishes?",wordBank:["obedient","destruction","cords","struggled","sirens"]},{id:"bulfinch-tantalus",work:"bulfinch",title:"Tantalus in the underworld",band:3,kind:"prose",abridged:!1,hook:"In the land of the dead, a king stands in water he can never drink.",text:`Aeneas saw groups seated at tables loaded with dainties, while near by stood a Fury who snatched away the viands from their lips as fast as they prepared to taste them. Others beheld suspended over their heads huge rocks, threatening to fall, keeping them in a state of constant alarm. These were they who had hated their brothers, or struck their parents, or defrauded the friends who trusted them, or who, having grown rich, kept their money to themselves, and gave no share to others; the last being the most numerous class. Here also were those who had violated the marriage vow, or fought in a bad cause, or failed in fidelity to their employers. Here was one who had sold his country for gold, another who perverted the laws, making them say one thing to-day and another to-morrow.
+
+Ixion was there, fastened to the circumference of a wheel ceaselessly revolving; and Sisyphus, whose task was to roll a huge stone up to a hill-top, but when the steep was well-nigh gained, the rock, repulsed by some sudden force, rushed again headlong down to the plain. Again he toiled at it, while the sweat bathed all his weary limbs, but all to no effect. There was Tantalus, who stood in a pool, his chin level with the water, yet he was parched with thirst, and found nothing to assuage it; for when he bowed his hoary head, eager to quaff, the water fled away, leaving the ground at his feet all dry. Tall trees laden with fruit stooped their heads to him, pears, pomegranates, apples, and luscious figs; but when with a sudden grasp he tried to seize them winds whirled them high above his reach.`,scenes:["Aeneas saw groups seated at tables loaded with dainties, while near by stood a Fury who snatched away the viands from their lips as fast as they prepared to taste them. Others beheld suspended over their heads huge rocks, threatening to fall, keeping them in a state of constant alarm. These were they who had hated their brothers, or struck their parents, or defrauded the friends who trusted them, or who, having grown rich, kept their money to themselves, and gave no share to others; the last being the most numerous class. Here also were those who had violated the marriage vow, or fought in a bad cause, or failed in fidelity to their employers. Here was one who had sold his country for gold, another who perverted the laws, making them say one thing to-day and another to-morrow.","Ixion was there, fastened to the circumference of a wheel ceaselessly revolving; and Sisyphus, whose task was to roll a huge stone up to a hill-top, but when the steep was well-nigh gained, the rock, repulsed by some sudden force, rushed again headlong down to the plain. Again he toiled at it, while the sweat bathed all his weary limbs, but all to no effect.","There was Tantalus, who stood in a pool, his chin level with the water, yet he was parched with thirst, and found nothing to assuage it; for when he bowed his hoary head, eager to quaff, the water fled away, leaving the ground at his feet all dry. Tall trees laden with fruit stooped their heads to him, pears, pomegranates, apples, and luscious figs; but when with a sudden grasp he tried to seize them winds whirled them high above his reach."],fk:12.2,level:12.2,words:286,sentences:9,syllables:374,questions:[{depth:"literal",q:"What did the Fury do to the people at the tables?",right:"Snatched the food from their lips",wrong:["Poured them cups of sweet wine","Sang them songs while they ate","Cleared away their empty plates"]},{depth:"literal",q:"What was Sisyphus's task?",right:"Rolling a stone up a hill",wrong:["Turning a great wheel","Carrying water in a sieve","Counting the grains of sand"]},{depth:"literal",q:"What happened when Tantalus bowed his head to drink?",right:"The water fled away",wrong:["The water turned to ice","A Fury pushed him back","The pool filled with mud"]},{depth:"literal",q:"Which of these fruits hung over Tantalus?",right:"Pears and figs",wrong:["Plums and cherries","Grapes and lemons","Oranges and dates"]},{depth:"inferential",q:"Which group of wrongdoers does the passage say was the largest?",right:"The rich who would not share",wrong:["Those who broke the laws","Those who sold their country","Those who fought in bad causes"]}],evaluate:"Tantalus can see what he wants but never reach it. Why might that be one of the cruellest punishments of all?",wordBank:["fidelity","laden","thirst","fastened","seize"],needsReview:!0,reviewNote:"Aeneas sees the punishments of the underworld as the Romans imagined them (from Virgil): wrongdoers, a man bound to a turning wheel, a stone rolled for ever. Told plainly and without gore, but it is about punishment that never ends; the passage before it (not shown) is harsher."},{id:"bulfinch-pegasus",work:"bulfinch",title:"Bellerophon, Pegasus and the Chimaera",band:3,kind:"prose",abridged:!1,hook:"A winged horse, a golden bridle, and a fire-breathing monster made of three beasts.",text:`When Perseus cut off Medusa's head, the blood sinking into the earth produced the winged horse Pegasus. Minerva caught him and tamed him and presented him to the Muses. The fountain Hippocrene, on the Muses' mountain Helicon, was opened by a kick from his hoof.
+
+The Chimaera was a fearful monster, breathing fire. The fore part of its body was a compound of the lion and the goat, and the hind part a dragon's. It made great havoc in Lycia, so that the king, Iobates, sought for some hero to destroy it. At that time there arrived at his court a gallant young warrior, whose name was Bellerophon. He brought letters from Proetus, the son-in-law of Iobates, recommending Bellerophon in the warmest terms as an unconquerable hero, but added at the close a request to his father-in-law to put him to death. The reason was that Proetus was jealous of him, suspecting that his wife Antea looked with too much admiration on the young warrior. From this instance of Bellerophon being unconsciously the bearer of his own death warrant, the expression "Bellerophontic letters" arose, to describe any species of communication which a person is made the bearer of, containing matter prejudicial to himself.
+
+Iobates, on perusing the letters, was puzzled what to do, not willing to violate the claims of hospitality, yet wishing to oblige his son-in-law. A lucky thought occurred to him, to send Bellerophon to combat with the Chimaera. Bellerophon accepted the proposal, but before proceeding to the combat consulted the soothsayer Polyidus, who advised him to procure if possible the horse Pegasus for the conflict. For this purpose he directed him to pass the night in the temple of Minerva. He did so, and as he slept Minerva came to him and gave him a golden bridle. When he awoke the bridle remained in his hand. Minerva also showed him Pegasus drinking at the well of Pirene, and at sight of the bridle the winged steed came willingly and suffered himself to be taken. Bellerophon mounted him, rose with him into the air, soon found the Chimaera, and gained an easy victory over the monster.`,scenes:["When Perseus cut off Medusa's head, the blood sinking into the earth produced the winged horse Pegasus. Minerva caught him and tamed him and presented him to the Muses. The fountain Hippocrene, on the Muses' mountain Helicon, was opened by a kick from his hoof.","The Chimaera was a fearful monster, breathing fire. The fore part of its body was a compound of the lion and the goat, and the hind part a dragon's. It made great havoc in Lycia, so that the king, Iobates, sought for some hero to destroy it. At that time there arrived at his court a gallant young warrior, whose name was Bellerophon.",'He brought letters from Proetus, the son-in-law of Iobates, recommending Bellerophon in the warmest terms as an unconquerable hero, but added at the close a request to his father-in-law to put him to death. The reason was that Proetus was jealous of him, suspecting that his wife Antea looked with too much admiration on the young warrior. From this instance of Bellerophon being unconsciously the bearer of his own death warrant, the expression "Bellerophontic letters" arose, to describe any species of communication which a person is made the bearer of, containing matter prejudicial to himself.',"Iobates, on perusing the letters, was puzzled what to do, not willing to violate the claims of hospitality, yet wishing to oblige his son-in-law. A lucky thought occurred to him, to send Bellerophon to combat with the Chimaera. Bellerophon accepted the proposal, but before proceeding to the combat consulted the soothsayer Polyidus, who advised him to procure if possible the horse Pegasus for the conflict. For this purpose he directed him to pass the night in the temple of Minerva.","He did so, and as he slept Minerva came to him and gave him a golden bridle. When he awoke the bridle remained in his hand. Minerva also showed him Pegasus drinking at the well of Pirene, and at sight of the bridle the winged steed came willingly and suffered himself to be taken. Bellerophon mounted him, rose with him into the air, soon found the Chimaera, and gained an easy victory over the monster."],fk:10,level:10,words:358,sentences:18,syllables:540,questions:[{depth:"literal",q:"Who tamed Pegasus and gave him to the Muses?",right:"Minerva",wrong:["Juno","Neptune","Diana"]},{depth:"literal",q:"Which three creatures made up the Chimaera?",right:"A lion, a goat and a dragon",wrong:["A bull, an eagle and a snake","A wolf, a bear and a serpent","A horse, a lion and a scorpion"]},{depth:"literal",q:"What did Minerva give Bellerophon as he slept?",right:"A golden bridle",wrong:["A silver spear","A magic shield","A winged helmet"]},{depth:"inferential",q:"What are 'Bellerophontic letters'?",right:"Messages that harm their own bearer",wrong:["Letters carried by a winged horse","Notes written in a secret code","Letters that praise a brave hero"]},{depth:"inferential",q:"Why did Iobates send Bellerophon to fight the Chimaera?",right:"To be rid of him without killing a guest",wrong:["To test whether he was truly brave","Because the Muses had told him to","To win back his stolen golden bridle"]}],evaluate:"Bellerophon could not have won without Pegasus and Minerva's gift. Does that make his victory any less his own? Why?",wordBank:["havoc","warrant","jealous","bearer","warrior"],needsReview:!0,reviewNote:"Opens with Perseus cutting off Medusa's head (one plain sentence), and a letter asking a king to put his guest to death out of jealousy. Told plainly, not graphically; the monster is beaten in a line."},{id:"grimm-frog-prince",work:"grimm",title:"The Frog-Prince",band:2,kind:"prose",abridged:!1,hook:"A golden ball falls into a deep spring, and a frog offers a bargain.",text:`One fine evening a young princess put on her bonnet and clogs, and went out to take a walk by herself in a wood; and when she came to a cool spring of water, that rose in the midst of it, she sat herself down to rest a while. Now she had a golden ball in her hand, which was her favourite plaything; and she was always tossing it up into the air, and catching it again as it fell. After a time she threw it up so high that she missed catching it as it fell; and the ball bounded away, and rolled along upon the ground, till at last it fell down into the spring. The princess looked into the spring after her ball, but it was very deep, so deep that she could not see the bottom of it. Then she began to bewail her loss, and said, 'Alas! if I could only get my ball again, I would give all my fine clothes and jewels, and everything that I have in the world.'
+
+Whilst she was speaking, a frog put its head out of the water, and said, 'Princess, why do you weep so bitterly?' 'Alas!' said she, 'what can you do for me, you nasty frog? My golden ball has fallen into the spring.' The frog said, 'I want not your pearls, and jewels, and fine clothes; but if you will love me, and let me live with you and eat from off your golden plate, and sleep upon your bed, I will bring you your ball again.' 'What nonsense,' thought the princess, 'this silly frog is talking! He can never even get out of the spring to visit me, though he may be able to get my ball for me, and therefore I will tell him he shall have what he asks.' So she said to the frog, 'Well, if you will bring me my ball, I will do all you ask.' Then the frog put his head down, and dived deep under the water; and after a little while he came up again, with the ball in his mouth, and threw it on the edge of the spring. As soon as the young princess saw her ball, she ran to pick it up; and she was so overjoyed to have it in her hand again, that she never thought of the frog, but ran home with it as fast as she could. The frog called after her, 'Stay, princess, and take me with you as you said,' But she did not stop to hear a word.`,scenes:["One fine evening a young princess put on her bonnet and clogs, and went out to take a walk by herself in a wood; and when she came to a cool spring of water, that rose in the midst of it, she sat herself down to rest a while. Now she had a golden ball in her hand, which was her favourite plaything; and she was always tossing it up into the air, and catching it again as it fell.","After a time she threw it up so high that she missed catching it as it fell; and the ball bounded away, and rolled along upon the ground, till at last it fell down into the spring. The princess looked into the spring after her ball, but it was very deep, so deep that she could not see the bottom of it. Then she began to bewail her loss, and said, 'Alas! if I could only get my ball again, I would give all my fine clothes and jewels, and everything that I have in the world.'","Whilst she was speaking, a frog put its head out of the water, and said, 'Princess, why do you weep so bitterly?' 'Alas!' said she, 'what can you do for me, you nasty frog? My golden ball has fallen into the spring.' The frog said, 'I want not your pearls, and jewels, and fine clothes; but if you will love me, and let me live with you and eat from off your golden plate, and sleep upon your bed, I will bring you your ball again.'","'What nonsense,' thought the princess, 'this silly frog is talking! He can never even get out of the spring to visit me, though he may be able to get my ball for me, and therefore I will tell him he shall have what he asks.' So she said to the frog, 'Well, if you will bring me my ball, I will do all you ask.'","Then the frog put his head down, and dived deep under the water; and after a little while he came up again, with the ball in his mouth, and threw it on the edge of the spring. As soon as the young princess saw her ball, she ran to pick it up; and she was so overjoyed to have it in her hand again, that she never thought of the frog, but ran home with it as fast as she could. The frog called after her, 'Stay, princess, and take me with you as you said,' But she did not stop to hear a word."],fk:8.2,level:8.2,words:433,sentences:17,syllables:510,questions:[{depth:"literal",q:"What was the princess's favourite plaything?",right:"A golden ball",wrong:["A silver bell","A wooden doll","A glass marble"]},{depth:"literal",q:"Where did her plaything end up?",right:"At the bottom of a deep spring",wrong:["Inside a hollow tree","Down a rabbit hole","On the roof of the palace"]},{depth:"literal",q:"What did the frog ask for in return?",right:"To eat from her plate and sleep on her bed",wrong:["Her pearls, jewels and fine clothes","A crown and a seat on the throne","A dish of flies and a new lily pad"]},{depth:"inferential",q:"Why did the princess agree to the bargain so easily?",right:"She thought he could never leave the spring",wrong:["She had fallen in love with him","Her father told her to agree","She had always wanted a pet frog"]},{depth:"literal",q:"What did the princess do once she had her ball again?",right:"Ran home and forgot her promise",wrong:["Thanked the frog and kissed him","Took the frog home in her pocket","Threw the ball back into the water"]}],evaluate:"The princess made a promise she never meant to keep. Should she have to keep it anyway? Why?",wordBank:["favourite","bounded","jewels","nonsense"]},{id:"grimm-rumpelstiltskin",work:"grimm",title:"Rumpelstiltskin: straw into gold",band:2,kind:"prose",abridged:!1,hook:"A miller's boast lands his daughter in a room full of straw, with one night to spin it.",text:`By the side of a wood, in a country a long way off, ran a fine stream of water; and upon the stream there stood a mill. The miller's house was close by, and the miller, you must know, had a very beautiful daughter. She was, moreover, very shrewd and clever; and the miller was so proud of her, that he one day told the king of the land, who used to come and hunt in the wood, that his daughter could spin gold out of straw. Now this king was very fond of money; and when he heard the miller's boast his greediness was raised, and he sent for the girl to be brought before him. Then he led her to a chamber in his palace where there was a great heap of straw, and gave her a spinning-wheel, and said, 'All this must be spun into gold before morning, as you love your life.' It was in vain that the poor maiden said that it was only a silly boast of her father, for that she could do no such thing as spin straw into gold: the chamber door was locked, and she was left alone.
+
+She sat down in one corner of the room, and began to bewail her hard fate; when on a sudden the door opened, and a droll-looking little man hobbled in, and said, 'Good morrow to you, my good lass; what are you weeping for?' 'Alas!' said she, 'I must spin this straw into gold, and I know not how.' 'What will you give me,' said the hobgoblin, 'to do it for you?' 'My necklace,' replied the maiden. He took her at her word, and sat himself down to the wheel, and whistled and sang:
+
+'Round about, round about, Lo and behold! Reel away, reel away, Straw into gold!'
+
+And round about the wheel went merrily; the work was quickly done, and the straw was all spun into gold.`,scenes:["By the side of a wood, in a country a long way off, ran a fine stream of water; and upon the stream there stood a mill. The miller's house was close by, and the miller, you must know, had a very beautiful daughter. She was, moreover, very shrewd and clever; and the miller was so proud of her, that he one day told the king of the land, who used to come and hunt in the wood, that his daughter could spin gold out of straw. Now this king was very fond of money; and when he heard the miller's boast his greediness was raised, and he sent for the girl to be brought before him.","Then he led her to a chamber in his palace where there was a great heap of straw, and gave her a spinning-wheel, and said, 'All this must be spun into gold before morning, as you love your life.' It was in vain that the poor maiden said that it was only a silly boast of her father, for that she could do no such thing as spin straw into gold: the chamber door was locked, and she was left alone.","She sat down in one corner of the room, and began to bewail her hard fate; when on a sudden the door opened, and a droll-looking little man hobbled in, and said, 'Good morrow to you, my good lass; what are you weeping for?' 'Alas!' said she, 'I must spin this straw into gold, and I know not how.' 'What will you give me,' said the hobgoblin, 'to do it for you?' 'My necklace,' replied the maiden.",`He took her at her word, and sat himself down to the wheel, and whistled and sang:
+
+'Round about, round about, Lo and behold! Reel away, reel away, Straw into gold!'
+
+And round about the wheel went merrily; the work was quickly done, and the straw was all spun into gold.`],fk:7.7,level:7.7,words:326,sentences:14,syllables:393,questions:[{depth:"literal",q:"What did the miller boast that his daughter could do?",right:"Spin straw into gold",wrong:["Sing birds out of the trees","Bake bread that never goes stale","Weave cloth out of moonbeams"]},{depth:"literal",q:"What did the king give her to work with?",right:"A spinning-wheel",wrong:["A golden needle","A pair of shears","A bag of coins"]},{depth:"inferential",q:"Why did the king send for the girl?",right:"He was greedy for gold",wrong:["He needed a new miller","He wanted a wife for his son","He had lost his way in the wood"]},{depth:"inferential",q:"Why was the maiden weeping when the little man came in?",right:"She was set an impossible task",wrong:["She had pricked her finger","She missed her father's mill","She had lost her necklace"]},{depth:"literal",q:"What did she give the little man for his help?",right:"Her necklace",wrong:["Her bonnet","Her shoes","Her shawl"]}],evaluate:"The trouble begins with a father's boast. Whose fault is the maiden's danger: the miller's, the king's, or both?",wordBank:["shrewd","clever","chamber","hobgoblin","weeping"]},{id:"grimm-golden-goose",work:"grimm",title:"The Golden Goose",band:2,kind:"prose",abridged:!1,hook:"The son everyone laughs at has only a burnt cake to share. He shares it.",text:`Then Dummling said: 'Father, do let me go and cut wood.' The father answered: 'Your brothers have hurt themselves with it, leave it alone, you do not understand anything about it.' But Dummling begged so long that at last he said: 'Just go then, you will get wiser by hurting yourself.' His mother gave him a cake made with water and baked in the cinders, and with it a bottle of sour beer.
+
+When he came to the forest the little old grey man met him likewise, and greeting him, said: 'Give me a piece of your cake and a drink out of your bottle; I am so hungry and thirsty.' Dummling answered: 'I have only cinder-cake and sour beer; if that pleases you, we will sit down and eat.' So they sat down, and when Dummling pulled out his cinder-cake, it was a fine sweet cake, and the sour beer had become good wine. So they ate and drank, and after that the little man said: 'Since you have a good heart, and are willing to divide what you have, I will give you good luck. There stands an old tree, cut it down, and you will find something at the roots.' Then the little man took leave of him.
+
+Dummling went and cut down the tree, and when it fell there was a goose sitting in the roots with feathers of pure gold. He lifted her up, and taking her with him, went to an inn where he thought he would stay the night. Now the host had three daughters, who saw the goose and were curious to know what such a wonderful bird might be, and would have liked to have one of its golden feathers.
+
+The eldest thought: 'I shall soon find an opportunity of pulling out a feather,' and as soon as Dummling had gone out she seized the goose by the wing, but her finger and hand remained sticking fast to it.
+
+The second came soon afterwards, thinking only of how she might get a feather for herself, but she had scarcely touched her sister than she was held fast.
+
+At last the third also came with the like intent, and the others screamed out: 'Keep away; for goodness' sake keep away!' But she did not understand why she was to keep away. 'The others are there,' she thought, 'I may as well be there too,' and ran to them; but as soon as she had touched her sister, she remained sticking fast to her. So they had to spend the night with the goose.`,scenes:["Then Dummling said: 'Father, do let me go and cut wood.' The father answered: 'Your brothers have hurt themselves with it, leave it alone, you do not understand anything about it.' But Dummling begged so long that at last he said: 'Just go then, you will get wiser by hurting yourself.' His mother gave him a cake made with water and baked in the cinders, and with it a bottle of sour beer.","When he came to the forest the little old grey man met him likewise, and greeting him, said: 'Give me a piece of your cake and a drink out of your bottle; I am so hungry and thirsty.' Dummling answered: 'I have only cinder-cake and sour beer; if that pleases you, we will sit down and eat.' So they sat down, and when Dummling pulled out his cinder-cake, it was a fine sweet cake, and the sour beer had become good wine. So they ate and drank, and after that the little man said: 'Since you have a good heart, and are willing to divide what you have, I will give you good luck. There stands an old tree, cut it down, and you will find something at the roots.' Then the little man took leave of him.",`Dummling went and cut down the tree, and when it fell there was a goose sitting in the roots with feathers of pure gold. He lifted her up, and taking her with him, went to an inn where he thought he would stay the night. Now the host had three daughters, who saw the goose and were curious to know what such a wonderful bird might be, and would have liked to have one of its golden feathers.
+
+The eldest thought: 'I shall soon find an opportunity of pulling out a feather,' and as soon as Dummling had gone out she seized the goose by the wing, but her finger and hand remained sticking fast to it.`,`The second came soon afterwards, thinking only of how she might get a feather for herself, but she had scarcely touched her sister than she was held fast.
+
+At last the third also came with the like intent, and the others screamed out: 'Keep away; for goodness' sake keep away!' But she did not understand why she was to keep away. 'The others are there,' she thought, 'I may as well be there too,' and ran to them; but as soon as she had touched her sister, she remained sticking fast to her. So they had to spend the night with the goose.`],fk:7.5,level:7.5,words:431,sentences:19,syllables:521,questions:[{depth:"literal",q:"What did Dummling's mother give him to take into the forest?",right:"A cinder-cake and sour beer",wrong:["A sweet cake and fine wine","Bread, cheese and an apple","A pie and a jug of milk"]},{depth:"literal",q:"What happened to his food when he shared it?",right:"It became sweet cake and good wine",wrong:["It vanished before he could eat","It was stolen by a hungry fox","It turned to stone in his hands"]},{depth:"inferential",q:"Why did the little man give Dummling good luck?",right:"He shared what little he had",wrong:["He was the strongest of the sons","He promised to pay him later","He guessed the little man's name"]},{depth:"literal",q:"Where did Dummling find the goose?",right:"In the roots of a tree he cut down",wrong:["On the roof of the inn","Swimming on a forest pond","In a cage at the market"]},{depth:"inferential",q:"Why did the innkeeper's daughters end up stuck?",right:"They each wanted a golden feather",wrong:["They wanted to help Dummling","The goose was covered in honey","Their father told them to hold it"]}],evaluate:"Dummling had the poorest food, yet he was the only one who shared it. Why do you think the story makes him the hero?",wordBank:["thirsty","willing","feathers","wonderful","seized"]},{id:"grimm-musicians",work:"grimm",title:"The Travelling Musicians",band:2,kind:"prose",abridged:!1,hook:"A donkey, a dog, a cat and a cock find a lit house in the woods, and a plan.",text:`They could not, however, reach the great city the first day; so when night came on, they went into a wood to sleep. The ass and the dog laid themselves down under a great tree, and the cat climbed up into the branches; while the cock, thinking that the higher he sat the safer he should be, flew up to the very top of the tree, and then, according to his custom, before he went to sleep, looked out on all sides of him to see that everything was well. In doing this, he saw afar off something bright and shining and calling to his companions said, 'There must be a house no great way off, for I see a light.' 'If that be the case,' said the ass, 'we had better change our quarters, for our lodging is not the best in the world!' 'Besides,' added the dog, 'I should not be the worse for a bone or two, or a bit of meat.' So they walked off together towards the spot where Chanticleer had seen the light, and as they drew near it became larger and brighter, till they at last came close to a house in which a gang of robbers lived.
+
+The ass, being the tallest of the company, marched up to the window and peeped in. 'Well, Donkey,' said Chanticleer, 'what do you see?' 'What do I see?' replied the ass. 'Why, I see a table spread with all kinds of good things, and robbers sitting round it making merry.' 'That would be a noble lodging for us,' said the cock. 'Yes,' said the ass, 'if we could only get in'; so they consulted together how they should contrive to get the robbers out; and at last they hit upon a plan. The ass placed himself upright on his hind legs, with his forefeet resting against the window; the dog got upon his back; the cat scrambled up to the dog's shoulders, and the cock flew up and sat upon the cat's head. When all was ready a signal was given, and they began their music. The ass brayed, the dog barked, the cat mewed, and the cock screamed; and then they all broke through the window at once, and came tumbling into the room, amongst the broken glass, with a most hideous clatter! The robbers, who had been not a little frightened by the opening concert, had now no doubt that some frightful hobgoblin had broken in upon them, and scampered away as fast as they could.`,scenes:["They could not, however, reach the great city the first day; so when night came on, they went into a wood to sleep. The ass and the dog laid themselves down under a great tree, and the cat climbed up into the branches; while the cock, thinking that the higher he sat the safer he should be, flew up to the very top of the tree, and then, according to his custom, before he went to sleep, looked out on all sides of him to see that everything was well.","In doing this, he saw afar off something bright and shining and calling to his companions said, 'There must be a house no great way off, for I see a light.' 'If that be the case,' said the ass, 'we had better change our quarters, for our lodging is not the best in the world!' 'Besides,' added the dog, 'I should not be the worse for a bone or two, or a bit of meat.' So they walked off together towards the spot where Chanticleer had seen the light, and as they drew near it became larger and brighter, till they at last came close to a house in which a gang of robbers lived.","The ass, being the tallest of the company, marched up to the window and peeped in. 'Well, Donkey,' said Chanticleer, 'what do you see?' 'What do I see?' replied the ass. 'Why, I see a table spread with all kinds of good things, and robbers sitting round it making merry.' 'That would be a noble lodging for us,' said the cock. 'Yes,' said the ass, 'if we could only get in'; so they consulted together how they should contrive to get the robbers out; and at last they hit upon a plan.","The ass placed himself upright on his hind legs, with his forefeet resting against the window; the dog got upon his back; the cat scrambled up to the dog's shoulders, and the cock flew up and sat upon the cat's head. When all was ready a signal was given, and they began their music. The ass brayed, the dog barked, the cat mewed, and the cock screamed; and then they all broke through the window at once, and came tumbling into the room, amongst the broken glass, with a most hideous clatter! The robbers, who had been not a little frightened by the opening concert, had now no doubt that some frightful hobgoblin had broken in upon them, and scampered away as fast as they could."],fk:8.7,level:8.7,words:423,sentences:17,syllables:522,questions:[{depth:"literal",q:"Where did the four animals try to sleep on the first night?",right:"Under and in a tree in a wood",wrong:["In a barn full of hay","Inside the city gates","By a farmhouse fire"]},{depth:"literal",q:"Who first saw the light far away?",right:"The cock",wrong:["The ass","The dog","The cat"]},{depth:"literal",q:"Who lived in the house?",right:"A gang of robbers",wrong:["An old miller and his wife","A family of giants","A kindly huntsman"]},{depth:"literal",q:"How did the animals stand at the window?",right:"Dog on ass, cat on dog, cock on cat",wrong:["Ass on dog, dog on cat, cat on cock","All in a row, side by side","Each one at a different window"]},{depth:"inferential",q:"Why did the robbers run away?",right:"They thought a hobgoblin had come",wrong:["They heard soldiers coming","Their dinner had burnt","The house had caught fire"]}],evaluate:"The animals win by working together. Could any one of them have scared the robbers away alone? Why or why not?",wordBank:["companions","lodging","upright","signal","concert","hobgoblin"]},{id:"grimm-old-man",work:"grimm",title:"The Old Man and his Grandson",band:1,kind:"prose",abridged:!1,hook:"A grandfather eats alone in the corner, until a little boy starts building something.",text:`There was once a very old man, whose eyes had become dim, his ears dull of hearing, his knees trembled, and when he sat at table he could hardly hold the spoon, and spilt the broth upon the table-cloth or let it run out of his mouth. His son and his son's wife were disgusted at this, so the old grandfather at last had to sit in the corner behind the stove, and they gave him his food in an earthenware bowl, and not even enough of it. And he used to look towards the table with his eyes full of tears. Once, too, his trembling hands could not hold the bowl, and it fell to the ground and broke. The young wife scolded him, but he said nothing and only sighed. Then they brought him a wooden bowl for a few half-pence, out of which he had to eat.
+
+They were once sitting thus when the little grandson of four years old began to gather together some bits of wood upon the ground. 'What are you doing there?' asked the father. 'I am making a little trough,' answered the child, 'for father and mother to eat out of when I am big.'
+
+The man and his wife looked at each other for a while, and presently began to cry. Then they took the old grandfather to the table, and henceforth always let him eat with them, and likewise said nothing if he did spill a little of anything.`,scenes:["There was once a very old man, whose eyes had become dim, his ears dull of hearing, his knees trembled, and when he sat at table he could hardly hold the spoon, and spilt the broth upon the table-cloth or let it run out of his mouth. His son and his son's wife were disgusted at this, so the old grandfather at last had to sit in the corner behind the stove, and they gave him his food in an earthenware bowl, and not even enough of it. And he used to look towards the table with his eyes full of tears.","Once, too, his trembling hands could not hold the bowl, and it fell to the ground and broke. The young wife scolded him, but he said nothing and only sighed. Then they brought him a wooden bowl for a few half-pence, out of which he had to eat.","They were once sitting thus when the little grandson of four years old began to gather together some bits of wood upon the ground. 'What are you doing there?' asked the father. 'I am making a little trough,' answered the child, 'for father and mother to eat out of when I am big.'","The man and his wife looked at each other for a while, and presently began to cry. Then they took the old grandfather to the table, and henceforth always let him eat with them, and likewise said nothing if he did spill a little of anything."],fk:7.1,level:7.1,words:249,sentences:12,syllables:307,questions:[{depth:"literal",q:"Where did the old grandfather have to sit to eat?",right:"In the corner behind the stove",wrong:["At the head of the table","Out in the garden","On the stairs by the door"]},{depth:"literal",q:"What did they give him to eat from after the bowl broke?",right:"A wooden bowl",wrong:["A silver cup","A china plate","A golden dish"]},{depth:"literal",q:"What was the little grandson making?",right:"A little trough",wrong:["A toy boat","A bird-house","A little stool"]},{depth:"inferential",q:"Why did the man and his wife begin to cry?",right:"They saw their son would copy them",wrong:["The boy had cut his finger on the wood","They had no money left for bowls","The old man had become very ill"]},{depth:"inferential",q:"What did the parents learn?",right:"To treat the old man kindly",wrong:["To buy stronger bowls","To keep the boy busy","To eat in the kitchen"]}],evaluate:"A four-year-old changed his parents' minds without scolding them. How did he do it?",wordBank:["grandfather","grandson","sighed","presently"]},{id:"justso-camel",work:"justso",title:"How the Camel got his Hump",band:1,kind:"prose",abridged:!1,hook:"A lazy camel says one word too often, and a desert Djinn gives him something to carry.",text:`The Djinn rolled himself up in his dust-cloak, and took a bearing across the desert, and found the Camel most 'scruciatingly idle, looking at his own reflection in a pool of water.
+
+'My long and bubbling friend,' said the Djinn, 'what's this I hear of your doing no work, with the world so new-and-all?'
+
+'Humph!' said the Camel.
+
+The Djinn sat down, with his chin in his hand, and began to think a Great Magic, while the Camel looked at his own reflection in the pool of water.
+
+'You've given the Three extra work ever since Monday morning, all on account of your 'scruciating idleness,' said the Djinn; and he went on thinking Magics, with his chin in his hand.
+
+'Humph!' said the Camel.
+
+'I shouldn't say that again if I were you,' said the Djinn; you might say it once too often. Bubbles, I want you to work.'
+
+And the Camel said 'Humph!' again; but no sooner had he said it than he saw his back, that he was so proud of, puffing up and puffing up into a great big lolloping humph.
+
+'Do you see that?' said the Djinn. 'That's your very own humph that you've brought upon your very own self by not working. To-day is Thursday, and you've done no work since Monday, when the work began. Now you are going to work.'
+
+'How can I,' said the Camel, 'with this humph on my back?'
+
+'That's made a-purpose,' said the Djinn, 'all because you missed those three days. You will be able to work now for three days without eating, because you can live on your humph; and don't you ever say I never did anything for you. Come out of the Desert and go to the Three, and behave. Humph yourself!'
+
+And the Camel humphed himself, humph and all, and went away to join the Three. And from that day to this the Camel always wears a humph (we call it 'hump' now, not to hurt his feelings); but he has never yet caught up with the three days that he missed at the beginning of the world, and he has never yet learned how to behave.`,scenes:[`The Djinn rolled himself up in his dust-cloak, and took a bearing across the desert, and found the Camel most 'scruciatingly idle, looking at his own reflection in a pool of water.
+
+'My long and bubbling friend,' said the Djinn, 'what's this I hear of your doing no work, with the world so new-and-all?'
+
+'Humph!' said the Camel.
+
+The Djinn sat down, with his chin in his hand, and began to think a Great Magic, while the Camel looked at his own reflection in the pool of water.`,`'You've given the Three extra work ever since Monday morning, all on account of your 'scruciating idleness,' said the Djinn; and he went on thinking Magics, with his chin in his hand.
+
+'Humph!' said the Camel.
+
+'I shouldn't say that again if I were you,' said the Djinn; you might say it once too often. Bubbles, I want you to work.'`,`And the Camel said 'Humph!' again; but no sooner had he said it than he saw his back, that he was so proud of, puffing up and puffing up into a great big lolloping humph.
+
+'Do you see that?' said the Djinn. 'That's your very own humph that you've brought upon your very own self by not working. To-day is Thursday, and you've done no work since Monday, when the work began. Now you are going to work.'`,`'How can I,' said the Camel, 'with this humph on my back?'
+
+'That's made a-purpose,' said the Djinn, 'all because you missed those three days. You will be able to work now for three days without eating, because you can live on your humph; and don't you ever say I never did anything for you. Come out of the Desert and go to the Three, and behave. Humph yourself!'`,"And the Camel humphed himself, humph and all, and went away to join the Three. And from that day to this the Camel always wears a humph (we call it 'hump' now, not to hurt his feelings); but he has never yet caught up with the three days that he missed at the beginning of the world, and he has never yet learned how to behave."],fk:4.8,fkOverride:5,level:5,words:362,sentences:24,syllables:446,questions:[{depth:"literal",q:"What was the Camel looking at when the Djinn found him?",right:"His own reflection in a pool",wrong:["A herd of horses at work","The sun setting over the dunes","A map of all the deserts"]},{depth:"literal",q:"What happened to the Camel's back when he said it once more?",right:"It puffed up into a big humph",wrong:["It grew a pair of wings","It turned bright blue","It became as flat as a board"]},{depth:"literal",q:"How long can the Camel now work without eating?",right:"Three days",wrong:["One day","A whole week","Ten days"]},{depth:"inferential",q:"Why did the Djinn give the Camel his humph?",right:"He had done no work since Monday",wrong:["He wanted to look like the Horse","He asked the Djinn for one","The other animals were jealous"]},{depth:"inferential",q:"Why do we now say 'hump' instead of 'humph'?",right:"So as not to hurt the Camel's feelings",wrong:["Because it is easier to spell","Because the Djinn changed the word","Because the Horse said so"]}],evaluate:"The Djinn says the hump is a help as well as a punishment. Do you agree? Why?",wordBank:["reflection","desert","behave","feelings"]},{id:"dragons-book-beasts",work:"dragons",title:"The Book of Beasts",band:2,kind:"prose",abridged:!1,hook:"A boy who has just been made King opens the one book he was told not to touch.",text:`But when Lionel was in bed he could not sleep for thinking of the book, and when the full moon was shining with all her might and light he got up and crept down to the library and climbed up and got _The Book of Beasts_.
+
+He took it outside to the terrace, where the moonlight was as bright as day, and he opened the book, and saw the empty pages with "Butterfly" and "Blue Bird of Paradise" underneath, and then he turned the next page. There was some sort of red thing sitting under a palm tree, and under it was written "Dragon." The Dragon did not move, and the King shut up the book rather quickly and went back to bed.
+
+But the next day he wanted another look, so he took the book out into the garden, and when he undid the clasps with the rubies and turquoises, the book opened all by itself at the picture with "Dragon" underneath, and the sun shone full on the page. And then, quite suddenly, a great Red Dragon came out of the book and spread vast scarlet wings and flew away across the garden to the far hills, and Lionel was left with the empty page before him, for the page was quite empty except for the green palm tree and the yellow desert, and the little streaks of red where the paintbrush had gone outside the pencil outline of the Red Dragon.
+
+And then Lionel felt that he had indeed done it. He had not been King twenty-four hours, and already he had let loose a Red Dragon to worry his faithful subjects' lives out. And they had been saving up so long to buy him a crown, and everything!
+
+Lionel began to cry.`,scenes:["But when Lionel was in bed he could not sleep for thinking of the book, and when the full moon was shining with all her might and light he got up and crept down to the library and climbed up and got _The Book of Beasts_.",'He took it outside to the terrace, where the moonlight was as bright as day, and he opened the book, and saw the empty pages with "Butterfly" and "Blue Bird of Paradise" underneath, and then he turned the next page. There was some sort of red thing sitting under a palm tree, and under it was written "Dragon." The Dragon did not move, and the King shut up the book rather quickly and went back to bed.','But the next day he wanted another look, so he took the book out into the garden, and when he undid the clasps with the rubies and turquoises, the book opened all by itself at the picture with "Dragon" underneath, and the sun shone full on the page. And then, quite suddenly, a great Red Dragon came out of the book and spread vast scarlet wings and flew away across the garden to the far hills, and Lionel was left with the empty page before him, for the page was quite empty except for the green palm tree and the yellow desert, and the little streaks of red where the paintbrush had gone outside the pencil outline of the Red Dragon.',`And then Lionel felt that he had indeed done it. He had not been King twenty-four hours, and already he had let loose a Red Dragon to worry his faithful subjects' lives out. And they had been saving up so long to buy him a crown, and everything!
+
+Lionel began to cry.`],fk:10.7,level:10.7,words:296,sentences:10,syllables:370,questions:[{depth:"literal",q:"Why could Lionel not sleep?",right:"He kept thinking of the book",wrong:["The moon was too bright","His new crown was too heavy","The Nurse was snoring"]},{depth:"literal",q:"What was in the picture on the next page?",right:"A red thing under a palm tree",wrong:["A white horse by a river","A green snake in the grass","A golden fish in a pond"]},{depth:"literal",q:"What happened when the sun shone on the dragon's page?",right:"It came out and flew to the hills",wrong:["The page caught fire and burned","The picture faded to nothing","The book snapped itself shut"]},{depth:"literal",q:"What was left on the page afterwards?",right:"A palm tree, a desert and streaks of red",wrong:["A tiny drawing of a butterfly","A message from the old wizard","A golden key and a ruby"]},{depth:"inferential",q:"Why did Lionel begin to cry?",right:"He had let a danger loose on his people",wrong:["The Chancellor had shaken him again","He had lost his favourite book","He did not want to be King at all"]}],evaluate:"Lionel had been told not to touch the book, but he opened it anyway. Would you have opened it? Why?",wordBank:["library","moonlight","scarlet","rubies","subjects"]},{id:"holmes-carbuncle",work:"holmes",title:"A battered hat and a Christmas goose",band:3,kind:"prose",abridged:!1,hook:"A lost hat, a lost goose, and no name to return them to. Holmes picks up his lens.",text:`"My dear fellow, there lies the problem. It is true that 'For Mrs. Henry Baker' was printed upon a small card which was tied to the bird's left leg, and it is also true that the initials 'H. B.' are legible upon the lining of this hat, but as there are some thousands of Bakers, and some hundreds of Henry Bakers in this city of ours, it is not easy to restore lost property to any one of them."
+
+"What, then, did Peterson do?"
+
+"He brought round both hat and goose to me on Christmas morning, knowing that even the smallest problems are of interest to me. The goose we retained until this morning, when there were signs that, in spite of the slight frost, it would be well that it should be eaten without unnecessary delay. Its finder has carried it off, therefore, to fulfil the ultimate destiny of a goose, while I continue to retain the hat of the unknown gentleman who lost his Christmas dinner."
+
+"Did he not advertise?"
+
+"No."
+
+"Then, what clue could you have as to his identity?"
+
+"Only as much as we can deduce."
+
+"From his hat?"
+
+"Precisely."
+
+"But you are joking. What can you gather from this old battered felt?"
+
+"Here is my lens. You know my methods. What can you gather yourself as to the individuality of the man who has worn this article?"
+
+I took the tattered object in my hands and turned it over rather ruefully. It was a very ordinary black hat of the usual round shape, hard and much the worse for wear. The lining had been of red silk, but was a good deal discoloured. There was no maker's name; but, as Holmes had remarked, the initials "H. B." were scrawled upon one side. It was pierced in the brim for a hat-securer, but the elastic was missing. For the rest, it was cracked, exceedingly dusty, and spotted in several places, although there seemed to have been some attempt to hide the discoloured patches by smearing them with ink.
+
+"I can see nothing," said I, handing it back to my friend.
+
+"On the contrary, Watson, you can see everything. You fail, however, to reason from what you see. You are too timid in drawing your inferences."`,scenes:[`"My dear fellow, there lies the problem. It is true that 'For Mrs. Henry Baker' was printed upon a small card which was tied to the bird's left leg, and it is also true that the initials 'H. B.' are legible upon the lining of this hat, but as there are some thousands of Bakers, and some hundreds of Henry Bakers in this city of ours, it is not easy to restore lost property to any one of them."`,`"What, then, did Peterson do?"
+
+"He brought round both hat and goose to me on Christmas morning, knowing that even the smallest problems are of interest to me. The goose we retained until this morning, when there were signs that, in spite of the slight frost, it would be well that it should be eaten without unnecessary delay. Its finder has carried it off, therefore, to fulfil the ultimate destiny of a goose, while I continue to retain the hat of the unknown gentleman who lost his Christmas dinner."
+
+"Did he not advertise?"
+
+"No."
+
+"Then, what clue could you have as to his identity?"
+
+"Only as much as we can deduce."
+
+"From his hat?"
+
+"Precisely."`,`"But you are joking. What can you gather from this old battered felt?"
+
+"Here is my lens. You know my methods. What can you gather yourself as to the individuality of the man who has worn this article?"`,`I took the tattered object in my hands and turned it over rather ruefully. It was a very ordinary black hat of the usual round shape, hard and much the worse for wear. The lining had been of red silk, but was a good deal discoloured. There was no maker's name; but, as Holmes had remarked, the initials "H. B." were scrawled upon one side. It was pierced in the brim for a hat-securer, but the elastic was missing. For the rest, it was cracked, exceedingly dusty, and spotted in several places, although there seemed to have been some attempt to hide the discoloured patches by smearing them with ink.`,`"I can see nothing," said I, handing it back to my friend.
+
+"On the contrary, Watson, you can see everything. You fail, however, to reason from what you see. You are too timid in drawing your inferences."`],fk:5,level:5,words:379,sentences:32,syllables:514,questions:[{depth:"literal",q:"What was written on the card tied to the goose?",right:"For Mrs. Henry Baker",wrong:["For Mr. Peterson","For Dr. Watson","For Mrs. Hudson"]},{depth:"inferential",q:"Why is it hard to return the hat and the goose?",right:"There are hundreds of Henry Bakers",wrong:["Peterson forgot where he found them","The owner has left London for good","The police will not let Holmes keep them"]},{depth:"literal",q:"Why was the goose eaten?",right:"It would not keep much longer",wrong:["Holmes was very hungry","It was a Christmas present","The owner asked them to"]},{depth:"literal",q:"How had the owner tried to hide the stains on the hat?",right:"By smearing them with ink",wrong:["By brushing them with soap","By sewing on a ribbon","By covering them with wax"]},{depth:"inferential",q:"What does Holmes say Watson does wrong?",right:"He fails to reason from what he sees",wrong:["He does not look closely enough","He talks too much while he looks","He guesses far too boldly"]}],evaluate:"Watson sees a battered old hat; Holmes sees a puzzle. Pick an ordinary object near you: what could it tell a detective about its owner?",wordBank:["deduce","identity","ultimate","destiny","elastic","methods"]},{id:"wilde-selfish-giant",work:"happyprince",title:"The Selfish Giant",band:2,kind:"prose",abridged:!1,hook:"A giant walls the children out of his garden, and Spring stays out too.",text:`One day the Giant came back. He had been to visit his friend the Cornish ogre, and had stayed with him for seven years. After the seven years were over he had said all that he had to say, for his conversation was limited, and he determined to return to his own castle. When he arrived he saw the children playing in the garden.
+
+“What are you doing here?” he cried in a very gruff voice, and the children ran away.
+
+“My own garden is my own garden,” said the Giant; “any one can understand that, and I will allow nobody to play in it but myself.” So he built a high wall all round it, and put up a notice-board.
+
+TRESPASSERS
+
+WILL BE
+
+PROSECUTED
+
+He was a very selfish Giant.
+
+The poor children had now nowhere to play. They tried to play on the road, but the road was very dusty and full of hard stones, and they did not like it. They used to wander round the high wall when their lessons were over, and talk about the beautiful garden inside. “How happy we were there,” they said to each other.
+
+Then the Spring came, and all over the country there were little blossoms and little birds. Only in the garden of the Selfish Giant it was still winter. The birds did not care to sing in it as there were no children, and the trees forgot to blossom. Once a beautiful flower put its head out from the grass, but when it saw the notice-board it was so sorry for the children that it slipped back into the ground again, and went off to sleep. The only people who were pleased were the Snow and the Frost. “Spring has forgotten this garden,” they cried, “so we will live here all the year round.” The Snow covered up the grass with her great white cloak, and the Frost painted all the trees silver. Then they invited the North Wind to stay with them, and he came. He was wrapped in furs, and he roared all day about the garden, and blew the chimney-pots down. “This is a delightful spot,” he said, “we must ask the Hail on a visit.” So the Hail came. Every day for three hours he rattled on the roof of the castle till he broke most of the slates, and then he ran round and round the garden as fast as he could go. He was dressed in grey, and his breath was like ice.`,scenes:[`One day the Giant came back. He had been to visit his friend the Cornish ogre, and had stayed with him for seven years. After the seven years were over he had said all that he had to say, for his conversation was limited, and he determined to return to his own castle. When he arrived he saw the children playing in the garden.
+
+“What are you doing here?” he cried in a very gruff voice, and the children ran away.
+
+“My own garden is my own garden,” said the Giant; “any one can understand that, and I will allow nobody to play in it but myself.” So he built a high wall all round it, and put up a notice-board.
+
+TRESPASSERS
+
+WILL BE
+
+PROSECUTED`,`He was a very selfish Giant.
+
+The poor children had now nowhere to play. They tried to play on the road, but the road was very dusty and full of hard stones, and they did not like it. They used to wander round the high wall when their lessons were over, and talk about the beautiful garden inside. “How happy we were there,” they said to each other.`,"Then the Spring came, and all over the country there were little blossoms and little birds. Only in the garden of the Selfish Giant it was still winter. The birds did not care to sing in it as there were no children, and the trees forgot to blossom. Once a beautiful flower put its head out from the grass, but when it saw the notice-board it was so sorry for the children that it slipped back into the ground again, and went off to sleep.","The only people who were pleased were the Snow and the Frost. “Spring has forgotten this garden,” they cried, “so we will live here all the year round.” The Snow covered up the grass with her great white cloak, and the Frost painted all the trees silver.","Then they invited the North Wind to stay with them, and he came. He was wrapped in furs, and he roared all day about the garden, and blew the chimney-pots down. “This is a delightful spot,” he said, “we must ask the Hail on a visit.” So the Hail came. Every day for three hours he rattled on the roof of the castle till he broke most of the slates, and then he ran round and round the garden as fast as he could go. He was dressed in grey, and his breath was like ice."],fk:5.2,level:5.2,words:421,sentences:26,syllables:516,questions:[{depth:"literal",q:"How long had the Giant been away?",right:"Seven years",wrong:["Seven days","Three months","Twelve years"]},{depth:"literal",q:"What did the Giant build round his garden?",right:"A high wall",wrong:["A deep moat","A wooden fence","A hedge of thorns"]},{depth:"inferential",q:"Why did the flower slip back into the ground?",right:"It felt sorry for the children",wrong:["The ground was too dry","The Giant stepped on it","It was afraid of the birds"]},{depth:"literal",q:"Who was pleased that Spring had forgotten the garden?",right:"The Snow and the Frost",wrong:["The children","The birds and the trees","The Giant and the ogre"]},{depth:"inferential",q:"Why did Spring never come to the Giant's garden?",right:"He had shut the children out",wrong:["The garden faced north","He forgot to water it","The ogre had cursed it"]}],evaluate:"The Giant says 'My own garden is my own garden.' Is he right? What did keeping it to himself cost him?",wordBank:["conversation","limited","determined","invited","silver"]},{id:"caesar-antony",work:"caesar",title:"Friends, Romans, countrymen (Act 3, Scene 2)",band:3,kind:"verse",abridged:!1,hook:"Caesar is dead. His friend is allowed to speak, if he says nothing against the killers.",text:`ANTONY. Friends, Romans, countrymen, lend me your ears!
+  I come to bury Caesar, not to praise him.
+  The evil that men do lives after them,
+  The good is oft interred with their bones;
+  So let it be with Caesar. The noble Brutus
+  Hath told you Caesar was ambitious;
+  If it were so, it was a grievous fault,
+  And grievously hath Caesar answer'd it.
+  Here, under leave of Brutus and the rest-
+  For Brutus is an honorable man;
+  So are they all, all honorable men-
+  Come I to speak in Caesar's funeral.
+  He was my friend, faithful and just to me;
+  But Brutus says he was ambitious,
+  And Brutus is an honorable man.
+  He hath brought many captives home to Rome,
+  Whose ransoms did the general coffers fill.
+  Did this in Caesar seem ambitious?
+  When that the poor have cried, Caesar hath wept;
+  Ambition should be made of sterner stuff:
+  Yet Brutus says he was ambitious,
+  And Brutus is an honorable man.
+  You all did see that on the Lupercal
+  I thrice presented him a kingly crown,
+  Which he did thrice refuse. Was this ambition?
+  Yet Brutus says he was ambitious,
+  And sure he is an honorable man.
+  I speak not to disprove what Brutus spoke,
+  But here I am to speak what I do know.
+  You all did love him once, not without cause;
+  What cause withholds you then to mourn for him?
+  O judgement, thou art fled to brutish beasts,
+  And men have lost their reason. Bear with me;
+  My heart is in the coffin there with Caesar,
+  And I must pause till it come back to me.`,scenes:[`ANTONY. Friends, Romans, countrymen, lend me your ears!
+  I come to bury Caesar, not to praise him.
+  The evil that men do lives after them,
+  The good is oft interred with their bones;
+  So let it be with Caesar. The noble Brutus
+  Hath told you Caesar was ambitious;
+  If it were so, it was a grievous fault,
+  And grievously hath Caesar answer'd it.
+  Here, under leave of Brutus and the rest-
+  For Brutus is an honorable man;
+  So are they all, all honorable men-
+  Come I to speak in Caesar's funeral.
+  He was my friend, faithful and just to me;
+  But Brutus says he was ambitious,
+  And Brutus is an honorable man.`,`He hath brought many captives home to Rome,
+  Whose ransoms did the general coffers fill.
+  Did this in Caesar seem ambitious?
+  When that the poor have cried, Caesar hath wept;
+  Ambition should be made of sterner stuff:
+  Yet Brutus says he was ambitious,
+  And Brutus is an honorable man.
+  You all did see that on the Lupercal
+  I thrice presented him a kingly crown,
+  Which he did thrice refuse. Was this ambition?
+  Yet Brutus says he was ambitious,
+  And sure he is an honorable man.`,`I speak not to disprove what Brutus spoke,
+  But here I am to speak what I do know.
+  You all did love him once, not without cause;
+  What cause withholds you then to mourn for him?
+  O judgement, thou art fled to brutish beasts,
+  And men have lost their reason. Bear with me;
+  My heart is in the coffin there with Caesar,
+  And I must pause till it come back to me.`],fk:6.3,fkOverride:9,level:9,words:269,sentences:17,syllables:358,questions:[{depth:"literal",q:"What does Antony say he has come to do?",right:"Bury Caesar, not praise him",wrong:["Crown Brutus king of Rome","Read out Caesar's will","Call the people to war"]},{depth:"literal",q:"What did Caesar refuse three times?",right:"A kingly crown",wrong:["A seat in the Senate","A golden chariot","A share of the ransoms"]},{depth:"inferential",q:"What is Antony really doing by calling Brutus 'an honorable man' again and again?",right:"Making the crowd doubt it",wrong:["Thanking Brutus for his help","Asking Brutus to forgive him","Praising Brutus to calm the crowd"]},{depth:"inferential",q:"Why does Antony mention the ransoms and the weeping poor?",right:"To show Caesar served Rome, not himself",wrong:["To show how rich Caesar had become","To ask the crowd for money","To blame the poor for the war"]},{depth:"inferential",q:"Why does Antony stop speaking at the end?",right:"To let his grief move the crowd",wrong:["He has forgotten his words","Brutus orders him to stop","The crowd shouts him down"]}],evaluate:"Antony never says that Brutus is lying. How does he make the crowd think so anyway?",wordBank:["ambition","funeral","judgement","coffin","refuse"]},{id:"macbeth-witches",work:"macbeth",title:"All hail, Macbeth! (Act 1, Scene 3)",band:3,kind:"verse",abridged:!1,hook:"Two soldiers crossing a heath meet three strange figures who know their future.",text:`[Enter Macbeth and Banquo.]
+
+MACBETH.
+So foul and fair a day I have not seen.
+
+BANQUO.
+How far is't call'd to Forres?--What are these
+So wither'd, and so wild in their attire,
+That look not like the inhabitants o' the earth,
+And yet are on't?--Live you? or are you aught
+That man may question? You seem to understand me,
+By each at once her chappy finger laying
+Upon her skinny lips:--you should be women,
+And yet your beards forbid me to interpret
+That you are so.
+
+MACBETH.
+Speak, if you can;--what are you?
+
+FIRST WITCH.
+All hail, Macbeth! hail to thee, Thane of Glamis!
+
+SECOND WITCH.
+All hail, Macbeth! hail to thee, Thane of Cawdor!
+
+THIRD WITCH.
+All hail, Macbeth! that shalt be king hereafter!
+
+BANQUO.
+Good sir, why do you start; and seem to fear
+Things that do sound so fair?-- I' the name of truth,
+Are ye fantastical, or that indeed
+Which outwardly ye show? My noble partner
+You greet with present grace and great prediction
+Of noble having and of royal hope,
+That he seems rapt withal:--to me you speak not:
+If you can look into the seeds of time,
+And say which grain will grow, and which will not,
+Speak then to me, who neither beg nor fear
+Your favors nor your hate.
+
+FIRST WITCH.
+Hail!
+
+SECOND WITCH.
+Hail!
+
+THIRD WITCH.
+Hail!
+
+FIRST WITCH.
+Lesser than Macbeth, and greater.
+
+SECOND WITCH.
+Not so happy, yet much happier.
+
+THIRD WITCH.
+Thou shalt get kings, though thou be none:
+So all hail, Macbeth and Banquo!
+
+FIRST WITCH.
+Banquo and Macbeth, all hail!
+
+MACBETH.
+Stay, you imperfect speakers, tell me more:
+By Sinel's death I know I am Thane of Glamis;
+But how of Cawdor? The Thane of Cawdor lives,
+A prosperous gentleman; and to be king
+Stands not within the prospect of belief,
+No more than to be Cawdor. Say from whence
+You owe this strange intelligence? or why
+Upon this blasted heath you stop our way
+With such prophetic greeting?--Speak, I charge you.
+
+[Witches vanish.]
+
+BANQUO.
+The earth hath bubbles, as the water has,
+And these are of them:--whither are they vanish'd?`,scenes:[`[Enter Macbeth and Banquo.]
+
+MACBETH.
+So foul and fair a day I have not seen.
+
+BANQUO.
+How far is't call'd to Forres?--What are these
+So wither'd, and so wild in their attire,
+That look not like the inhabitants o' the earth,
+And yet are on't?--Live you? or are you aught
+That man may question? You seem to understand me,
+By each at once her chappy finger laying
+Upon her skinny lips:--you should be women,
+And yet your beards forbid me to interpret
+That you are so.
+
+MACBETH.
+Speak, if you can;--what are you?`,`FIRST WITCH.
+All hail, Macbeth! hail to thee, Thane of Glamis!
+
+SECOND WITCH.
+All hail, Macbeth! hail to thee, Thane of Cawdor!
+
+THIRD WITCH.
+All hail, Macbeth! that shalt be king hereafter!`,`BANQUO.
+Good sir, why do you start; and seem to fear
+Things that do sound so fair?-- I' the name of truth,
+Are ye fantastical, or that indeed
+Which outwardly ye show? My noble partner
+You greet with present grace and great prediction
+Of noble having and of royal hope,
+That he seems rapt withal:--to me you speak not:
+If you can look into the seeds of time,
+And say which grain will grow, and which will not,
+Speak then to me, who neither beg nor fear
+Your favors nor your hate.
+
+FIRST WITCH.
+Hail!
+
+SECOND WITCH.
+Hail!
+
+THIRD WITCH.
+Hail!
+
+FIRST WITCH.
+Lesser than Macbeth, and greater.
+
+SECOND WITCH.
+Not so happy, yet much happier.
+
+THIRD WITCH.
+Thou shalt get kings, though thou be none:
+So all hail, Macbeth and Banquo!
+
+FIRST WITCH.
+Banquo and Macbeth, all hail!`,`MACBETH.
+Stay, you imperfect speakers, tell me more:
+By Sinel's death I know I am Thane of Glamis;
+But how of Cawdor? The Thane of Cawdor lives,
+A prosperous gentleman; and to be king
+Stands not within the prospect of belief,
+No more than to be Cawdor. Say from whence
+You owe this strange intelligence? or why
+Upon this blasted heath you stop our way
+With such prophetic greeting?--Speak, I charge you.
+
+[Witches vanish.]
+
+BANQUO.
+The earth hath bubbles, as the water has,
+And these are of them:--whither are they vanish'd?`],fk:2.4,fkOverride:9,level:9,words:362,sentences:43,syllables:452,questions:[{depth:"literal",q:"What does the Third Witch say Macbeth will be?",right:"King hereafter",wrong:["Thane of Fife","Banquo's servant","A great general"]},{depth:"literal",q:"What does Banquo find strange about the witches' looks?",right:"They have beards",wrong:["They have no shadows","They glow in the dark","They have wings"]},{depth:"inferential",q:"What do the witches mean by 'Thou shalt get kings, though thou be none'?",right:"Banquo's children will be kings",wrong:["Banquo will be crowned tomorrow","Banquo will capture a king","Banquo will never have children"]},{depth:"literal",q:"Which title does Macbeth already know he holds?",right:"Thane of Glamis",wrong:["Thane of Cawdor","King of Scotland","Lord of Forres"]},{depth:"inferential",q:"Why does Banquo ask Macbeth why he seems to fear the greeting?",right:"Macbeth looks startled by good news",wrong:["Macbeth is shivering on the heath","The witches have threatened him","Macbeth cannot hear the witches"]}],evaluate:"The witches only tell Macbeth what will happen. Do they make him do anything? What do you think he will do next?",wordBank:["interpret","prediction","imperfect","prospect","vanish"]},{id:"macbeth-tomorrow",work:"macbeth",title:"To-morrow, and to-morrow (Act 5, Scene 5)",band:3,kind:"verse",abridged:!1,hook:"A king at the end of his road hears a cry in the castle, and the news it brings.",text:`[A cry of women within.]
+
+What is that noise?
+
+SEYTON.
+It is the cry of women, my good lord.
+
+[Exit.]
+
+MACBETH.
+I have almost forgot the taste of fears:
+The time has been, my senses would have cool'd
+To hear a night-shriek; and my fell of hair
+Would at a dismal treatise rouse and stir
+As life were in't: I have supp'd full with horrors;
+Direness, familiar to my slaught'rous thoughts,
+Cannot once start me.
+
+[Re-enter Seyton.]
+
+Wherefore was that cry?
+
+SEYTON.
+The queen, my lord, is dead.
+
+MACBETH.
+She should have died hereafter;
+There would have been a time for such a word.--
+To-morrow, and to-morrow, and to-morrow,
+Creeps in this petty pace from day to day,
+To the last syllable of recorded time;
+And all our yesterdays have lighted fools
+The way to dusty death. Out, out, brief candle!
+Life's but a walking shadow; a poor player,
+That struts and frets his hour upon the stage,
+And then is heard no more: it is a tale
+Told by an idiot, full of sound and fury,
+Signifying nothing.`,scenes:[`[A cry of women within.]
+
+What is that noise?
+
+SEYTON.
+It is the cry of women, my good lord.
+
+[Exit.]
+
+MACBETH.
+I have almost forgot the taste of fears:
+The time has been, my senses would have cool'd
+To hear a night-shriek; and my fell of hair
+Would at a dismal treatise rouse and stir
+As life were in't: I have supp'd full with horrors;
+Direness, familiar to my slaught'rous thoughts,
+Cannot once start me.`,`[Re-enter Seyton.]
+
+Wherefore was that cry?
+
+SEYTON.
+The queen, my lord, is dead.
+
+MACBETH.
+She should have died hereafter;
+There would have been a time for such a word.--`,`To-morrow, and to-morrow, and to-morrow,
+Creeps in this petty pace from day to day,
+To the last syllable of recorded time;
+And all our yesterdays have lighted fools
+The way to dusty death. Out, out, brief candle!
+Life's but a walking shadow; a poor player,
+That struts and frets his hour upon the stage,
+And then is heard no more: it is a tale
+Told by an idiot, full of sound and fury,
+Signifying nothing.`],fk:4.3,fkOverride:10,level:10,words:179,sentences:15,syllables:231,questions:[{depth:"literal",q:"What news does Seyton bring?",right:"The queen is dead",wrong:["The army has fled","The king has returned","The wood is moving"]},{depth:"inferential",q:"What does Macbeth mean by 'I have supp'd full with horrors'?",right:"Horror no longer frightens him",wrong:["He has eaten a dreadful supper","He wants to see more horrors","He is too tired to eat"]},{depth:"inferential",q:"In 'Out, out, brief candle!', what does the candle stand for?",right:"A human life",wrong:["The light in the hall","The setting sun","A lamp in the window"]},{depth:"inferential",q:"Why does Macbeth call life 'a poor player'?",right:"Its hour on stage soon ends",wrong:["It plays games all day","It has no money at all","It always loses at cards"]},{depth:"inferential",q:"How does Macbeth feel about life by the end of the speech?",right:"That it means nothing",wrong:["That it is full of hope","That it is a great adventure","That it is fair and just"]}],evaluate:"The word 'to-morrow' comes three times in one line. How does the repetition make the days feel?",wordBank:["familiar","recorded","shadow","player","creeps"],needsReview:!0,reviewNote:"Macbeth hears that his wife is dead and answers with despair: life is 'a tale told by an idiot… signifying nothing'. He also speaks of his 'slaught'rous thoughts'. Fine for 11–14 with a grown-up note that this is a murderer's despair at the end of a tragedy, not the play's last word on life; reviewer to approve."},{id:"midsummer-casting",work:"midsummer",title:"Bottom wants every part (Act 1, Scene 2)",band:2,kind:"verse",abridged:!1,hook:"A company of workmen hand out the parts in a play. One of them wants all of them.",text:`QUINCE
+Francis Flute, the bellows-mender.
+
+FLUTE
+Here, Peter Quince.
+
+QUINCE
+Flute, you must take Thisby on you.
+
+FLUTE
+What is Thisby? a wandering knight?
+
+QUINCE
+It is the lady that Pyramus must love.
+
+FLUTE
+Nay, faith, let not me play a woman; I have a beard coming.
+
+QUINCE
+That's all one; you shall play it in a mask, and you may speak as
+small as you will.
+
+BOTTOM
+An I may hide my face, let me play Thisby too:
+I'll speak in a monstrous little voice;--'Thisne, Thisne!'--
+'Ah, Pyramus, my lover dear; thy Thisby dear! and lady dear!'
+
+QUINCE
+No, no, you must play Pyramus; and, Flute, you Thisby.
+
+BOTTOM
+Well, proceed.
+
+QUINCE
+Robin Starveling, the tailor.
+
+STARVELING
+Here, Peter Quince.
+
+QUINCE
+Robin Starveling, you must play Thisby's mother.--
+Tom Snout, the tinker.
+
+SNOUT
+Here, Peter Quince.
+
+QUINCE
+You, Pyramus' father; myself, Thisby's father;--Snug,
+the joiner, you, the lion's part:--and, I hope, here is a play
+fitted.
+
+SNUG
+Have you the lion's part written? pray you, if it be, give it
+me, for I am slow of study.
+
+QUINCE
+You may do it extempore, for it is nothing but roaring.
+
+BOTTOM
+Let me play the lion too: I will roar that I will do
+any man's heart good to hear me; I will roar that I will make the
+duke say 'Let him roar again, let him roar again.'
+
+QUINCE
+An you should do it too terribly, you would fright the
+duchess and the ladies, that they would shriek; and that were
+enough to hang us all.
+
+ALL
+That would hang us every mother's son.
+
+BOTTOM
+I grant you, friends, if you should fright the ladies
+out of their wits, they would have no more discretion but to hang
+us: but I will aggravate my voice so, that I will roar you as
+gently as any sucking dove; I will roar you an 'twere any
+nightingale.
+
+QUINCE
+You can play no part but Pyramus; for Pyramus is a
+sweet-faced man; a proper man, as one shall see in a summer's
+day; a most lovely gentleman-like man; therefore you must
+needs play Pyramus.`,scenes:[`QUINCE
+Francis Flute, the bellows-mender.
+
+FLUTE
+Here, Peter Quince.
+
+QUINCE
+Flute, you must take Thisby on you.
+
+FLUTE
+What is Thisby? a wandering knight?
+
+QUINCE
+It is the lady that Pyramus must love.
+
+FLUTE
+Nay, faith, let not me play a woman; I have a beard coming.
+
+QUINCE
+That's all one; you shall play it in a mask, and you may speak as
+small as you will.`,`BOTTOM
+An I may hide my face, let me play Thisby too:
+I'll speak in a monstrous little voice;--'Thisne, Thisne!'--
+'Ah, Pyramus, my lover dear; thy Thisby dear! and lady dear!'
+
+QUINCE
+No, no, you must play Pyramus; and, Flute, you Thisby.
+
+BOTTOM
+Well, proceed.
+
+QUINCE
+Robin Starveling, the tailor.
+
+STARVELING
+Here, Peter Quince.
+
+QUINCE
+Robin Starveling, you must play Thisby's mother.--
+Tom Snout, the tinker.
+
+SNOUT
+Here, Peter Quince.
+
+QUINCE
+You, Pyramus' father; myself, Thisby's father;--Snug,
+the joiner, you, the lion's part:--and, I hope, here is a play
+fitted.`,`SNUG
+Have you the lion's part written? pray you, if it be, give it
+me, for I am slow of study.
+
+QUINCE
+You may do it extempore, for it is nothing but roaring.
+
+BOTTOM
+Let me play the lion too: I will roar that I will do
+any man's heart good to hear me; I will roar that I will make the
+duke say 'Let him roar again, let him roar again.'
+
+QUINCE
+An you should do it too terribly, you would fright the
+duchess and the ladies, that they would shriek; and that were
+enough to hang us all.
+
+ALL
+That would hang us every mother's son.
+
+BOTTOM
+I grant you, friends, if you should fright the ladies
+out of their wits, they would have no more discretion but to hang
+us: but I will aggravate my voice so, that I will roar you as
+gently as any sucking dove; I will roar you an 'twere any
+nightingale.`,`QUINCE
+You can play no part but Pyramus; for Pyramus is a
+sweet-faced man; a proper man, as one shall see in a summer's
+day; a most lovely gentleman-like man; therefore you must
+needs play Pyramus.`],fk:4.8,fkOverride:7,level:7,words:355,sentences:25,syllables:448,questions:[{depth:"literal",q:"Why does Flute not want to play Thisby?",right:"He has a beard coming",wrong:["He cannot remember lines","He is afraid of lions","He wants to play the duke"]},{depth:"literal",q:"How does Quince say Flute can hide his face?",right:"By playing it in a mask",wrong:["By standing behind a wall","By wearing a big hat","By playing it in the dark"]},{depth:"literal",q:"Why does Snug want his part written out early?",right:"He is slow to learn",wrong:["He cannot read at all","He wants to change it","He has lost his copy"]},{depth:"inferential",q:"Why does Quince worry about Bottom's roaring?",right:"It might frighten the ladies",wrong:["He might lose his voice","The duke dislikes music","It might wake the fairies"]},{depth:"inferential",q:"How does Quince get Bottom to play Pyramus after all?",right:"He flatters him",wrong:["He orders him to","He pays him extra","He threatens to leave"]}],evaluate:"Bottom wants to play every part. Is he a good friend to the other actors, or a nuisance? What would you say to him?",wordBank:["knight","proceed","duchess","roaring","shriek"]},{id:"midsummer-titania",work:"midsummer",title:"Titania wakes (Act 3, Scene 1)",band:2,kind:"verse",abridged:!1,hook:"A weaver with a donkey's head sings to keep his courage up, and wakes the fairy queen.",text:`BOTTOM
+Why do they run away? This is a knavery of them to make
+me afeard.
+
+[Re-enter SNOUT.]
+
+SNOUT
+O Bottom, thou art changed! What do I see on thee?
+
+BOTTOM
+What do you see? you see an ass-head of your own, do you?
+
+[Re-enter QUINCE.]
+
+QUINCE
+Bless thee, Bottom! bless thee! thou art translated.
+
+[Exit.]
+
+BOTTOM
+I see their knavery: this is to make an ass of me; to
+fright me, if they could. But I will not stir from this
+place, do what they can: I will walk up and down here,
+and I will sing, that they shall hear I am not afraid.
+
+[Sings.]
+
+   The ousel cock, so black of hue,
+     With orange-tawny bill,
+   The throstle with his note so true,
+     The wren with little quill.
+
+TITANIA
+[Waking.]
+What angel wakes me from my flowery bed?
+
+BOTTOM
+[Sings.]
+   The finch, the sparrow, and the lark,
+     The plain-song cuckoo gray,
+   Whose note full many a man doth mark,
+     And dares not answer nay;--
+for, indeed, who would set his wit to so foolish a bird?
+Who would give a bird the lie, though he cry 'cuckoo' never so?
+
+TITANIA
+I pray thee, gentle mortal, sing again;
+Mine ear is much enamour'd of thy note.
+So is mine eye enthralled to thy shape;
+And thy fair virtue's force perforce doth move me,
+On the first view, to say, to swear, I love thee.
+
+BOTTOM
+Methinks, mistress, you should have little reason for
+that: and yet, to say the truth, reason and love keep little
+company together now-a-days: the more the pity that some honest
+neighbours will not make them friends. Nay, I can gleek upon
+occasion.
+
+TITANIA
+Thou art as wise as thou art beautiful.
+
+BOTTOM
+Not so, neither: but if I had wit enough to get out of
+this wood, I have enough to serve mine own turn.
+
+TITANIA
+Out of this wood do not desire to go;
+Thou shalt remain here whether thou wilt or no.
+I am a spirit of no common rate,--
+The summer still doth tend upon my state;
+And I do love thee: therefore, go with me,
+I'll give thee fairies to attend on thee;
+And they shall fetch thee jewels from the deep,
+And sing, while thou on pressed flowers dost sleep:
+And I will purge thy mortal grossness so
+That thou shalt like an airy spirit go.--
+Peasblossom! Cobweb! Moth! and Mustardseed!
+
+[Enter Four Fairies.]
+
+FIRST FAIRY
+Ready.
+
+SECOND FAIRY
+     And I.
+
+THIRD FAIRY
+          And I.
+
+FOURTH FAIRY
+               Where shall we go?
+
+TITANIA
+Be kind and courteous to this gentleman;
+Hop in his walks and gambol in his eyes;
+Feed him with apricocks and dewberries,
+With purple grapes, green figs, and mulberries;
+The honey bags steal from the humble-bees,
+And, for night-tapers, crop their waxen thighs,
+And light them at the fiery glow-worm's eyes,
+To have my love to bed and to arise;
+And pluck the wings from painted butterflies,
+To fan the moonbeams from his sleeping eyes:
+Nod to him, elves, and do him courtesies.`,scenes:[`BOTTOM
+Why do they run away? This is a knavery of them to make
+me afeard.
+
+[Re-enter SNOUT.]
+
+SNOUT
+O Bottom, thou art changed! What do I see on thee?
+
+BOTTOM
+What do you see? you see an ass-head of your own, do you?
+
+[Re-enter QUINCE.]
+
+QUINCE
+Bless thee, Bottom! bless thee! thou art translated.
+
+[Exit.]`,`BOTTOM
+I see their knavery: this is to make an ass of me; to
+fright me, if they could. But I will not stir from this
+place, do what they can: I will walk up and down here,
+and I will sing, that they shall hear I am not afraid.
+
+[Sings.]
+
+   The ousel cock, so black of hue,
+     With orange-tawny bill,
+   The throstle with his note so true,
+     The wren with little quill.
+
+TITANIA
+[Waking.]
+What angel wakes me from my flowery bed?
+
+BOTTOM
+[Sings.]
+   The finch, the sparrow, and the lark,
+     The plain-song cuckoo gray,
+   Whose note full many a man doth mark,
+     And dares not answer nay;--
+for, indeed, who would set his wit to so foolish a bird?
+Who would give a bird the lie, though he cry 'cuckoo' never so?`,`TITANIA
+I pray thee, gentle mortal, sing again;
+Mine ear is much enamour'd of thy note.
+So is mine eye enthralled to thy shape;
+And thy fair virtue's force perforce doth move me,
+On the first view, to say, to swear, I love thee.
+
+BOTTOM
+Methinks, mistress, you should have little reason for
+that: and yet, to say the truth, reason and love keep little
+company together now-a-days: the more the pity that some honest
+neighbours will not make them friends. Nay, I can gleek upon
+occasion.
+
+TITANIA
+Thou art as wise as thou art beautiful.
+
+BOTTOM
+Not so, neither: but if I had wit enough to get out of
+this wood, I have enough to serve mine own turn.`,`TITANIA
+Out of this wood do not desire to go;
+Thou shalt remain here whether thou wilt or no.
+I am a spirit of no common rate,--
+The summer still doth tend upon my state;
+And I do love thee: therefore, go with me,
+I'll give thee fairies to attend on thee;
+And they shall fetch thee jewels from the deep,
+And sing, while thou on pressed flowers dost sleep:
+And I will purge thy mortal grossness so
+That thou shalt like an airy spirit go.--
+Peasblossom! Cobweb! Moth! and Mustardseed!
+
+[Enter Four Fairies.]
+
+FIRST FAIRY
+Ready.
+
+SECOND FAIRY
+     And I.
+
+THIRD FAIRY
+          And I.
+
+FOURTH FAIRY
+               Where shall we go?
+
+TITANIA
+Be kind and courteous to this gentleman;
+Hop in his walks and gambol in his eyes;
+Feed him with apricocks and dewberries,
+With purple grapes, green figs, and mulberries;
+The honey bags steal from the humble-bees,
+And, for night-tapers, crop their waxen thighs,
+And light them at the fiery glow-worm's eyes,
+To have my love to bed and to arise;
+And pluck the wings from painted butterflies,
+To fan the moonbeams from his sleeping eyes:
+Nod to him, elves, and do him courtesies.`],fk:4.8,fkOverride:8,level:8,words:505,sentences:38,syllables:650,questions:[{depth:"literal",q:"Why does Bottom walk up and down singing?",right:"To show he is not afraid",wrong:["To wake the fairy queen","To call his friends back","To practise for the play"]},{depth:"literal",q:"What wakes Titania?",right:"Bottom's singing",wrong:["A crowing cock","Puck's laughter","The morning sun"]},{depth:"inferential",q:"What does Quince mean by 'thou art translated'?",right:"Bottom has been changed",wrong:["Bottom speaks a new language","Bottom has learned his lines","Bottom has moved house"]},{depth:"literal",q:"What does Titania promise the fairies will fetch for Bottom?",right:"Jewels from the deep",wrong:["Gold from the mountains","A crown of flowers","Wine from the duke"]},{depth:"inferential",q:"Bottom says reason and love 'keep little company together'. What does he mean?",right:"People in love are often not sensible",wrong:["Clever people never fall in love","Love and reason are old friends","Lovers should stay far apart"]}],evaluate:"The fairy queen calls a man with a donkey's head wise and beautiful. Why is that funny? Who is the real fool in this scene?",wordBank:["translated","mortal","virtue","perforce","jewels"]},{id:"sonnet-116",work:"sonnets",title:"Sonnet 116: Let me not to the marriage of true minds",band:3,kind:"verse",abridged:!1,hook:"Fourteen lines that try to say what real love is, and stake everything on it.",text:`Let me not to the marriage of true minds
+Admit impediments. Love is not love
+Which alters when it alteration finds,
+Or bends with the remover to remove:
+O, no! it is an ever-fixed mark,
+That looks on tempests and is never shaken;
+It is the star to every wandering bark,
+Whose worth's unknown, although his height be taken.
+Love's not Time's fool, though rosy lips and cheeks
+Within his bending sickle's compass come;
+Love alters not with his brief hours and weeks,
+But bears it out even to the edge of doom.
+  If this be error and upon me prov'd,
+  I never writ, nor no man ever lov'd.`,scenes:[`Let me not to the marriage of true minds
+Admit impediments. Love is not love
+Which alters when it alteration finds,
+Or bends with the remover to remove:
+O, no! it is an ever-fixed mark,
+That looks on tempests and is never shaken;
+It is the star to every wandering bark,
+Whose worth's unknown, although his height be taken.`,`Love's not Time's fool, though rosy lips and cheeks
+Within his bending sickle's compass come;
+Love alters not with his brief hours and weeks,
+But bears it out even to the edge of doom.`,`If this be error and upon me prov'd,
+  I never writ, nor no man ever lov'd.`],fk:8.5,fkOverride:10,level:10,words:109,sentences:5,syllables:144,questions:[{depth:"inferential",q:"'Love is not love / Which alters when it alteration finds.' What does this mean?",right:"True love stays when the loved one changes",wrong:["Love should change to suit the seasons","Love is real only when it is brand new","Love is best when it is kept a secret"]},{depth:"inferential",q:"Love is 'an ever-fixed mark, That looks on tempests and is never shaken'. What picture does this give?",right:"A beacon that storms cannot move",wrong:["A ship tossed about by the waves","A target hit by many arrows","A stain that will not wash out"]},{depth:"inferential",q:"In 'the star to every wandering bark', what is a 'bark'?",right:"A ship",wrong:["A dog's cry","A tree's skin","A shepherd's hut"]},{depth:"inferential",q:"Whose is the 'bending sickle' that cuts down rosy lips and cheeks?",right:"Time's",wrong:["Love's","The poet's","A farmer's"]},{depth:"inferential",q:"How does the closing couplet try to prove the poem right?",right:"If he is wrong, no one has ever loved",wrong:["It quotes a famous judge's ruling","It lists every lover in history","It says the poem may well be wrong"]}],evaluate:"The poet says love 'alters not with his brief hours and weeks'. Is that true of the things and people you love? Choose one line and argue with it, or for it.",wordBank:["shaken","wandering","bending","cheeks"]},{id:"wordsworth-reaper",work:"wordsworth",title:"The Solitary Reaper",band:3,kind:"verse",abridged:!1,hook:"A girl sings alone in a field. A traveller never learns the words, and never forgets them.",text:`Behold her, single in the field,
+Yon solitary Highland Lass!
+Reaping and singing by herself;
+Stop here, or gently pass!
+Alone she cuts, and binds the grain,
+And sings a melancholy strain;
+O listen! for the Vale profound
+Is overflowing with the sound.
+
+No Nightingale did ever chaunt
+So sweetly to reposing bands
+Of Travellers in some shady haunt,
+Among Arabian Sands:
+No sweeter voice was ever heard
+In spring-time from the Cuckoo-bird,
+Breaking the silence of the seas
+Among the farthest Hebrides.
+
+Will no one tell me what she sings?
+Perhaps the plaintive numbers flow
+For old, unhappy, far-off things,
+And battles long ago:
+Or is it some more humble lay,
+Familiar matter of today?
+Some natural sorrow, loss, or pain,
+That has been, and may be again!
+
+Whate'er the theme, the Maiden sung
+As if her song could have no ending;
+I saw her singing at her work,
+And o'er the sickle bending;
+I listen'd till I had my fill;
+And, as I mounted up the hill,
+The music in my heart I bore,
+Long after it was heard no more.`,scenes:[`Behold her, single in the field,
+Yon solitary Highland Lass!
+Reaping and singing by herself;
+Stop here, or gently pass!
+Alone she cuts, and binds the grain,
+And sings a melancholy strain;
+O listen! for the Vale profound
+Is overflowing with the sound.`,`No Nightingale did ever chaunt
+So sweetly to reposing bands
+Of Travellers in some shady haunt,
+Among Arabian Sands:
+No sweeter voice was ever heard
+In spring-time from the Cuckoo-bird,
+Breaking the silence of the seas
+Among the farthest Hebrides.`,`Will no one tell me what she sings?
+Perhaps the plaintive numbers flow
+For old, unhappy, far-off things,
+And battles long ago:
+Or is it some more humble lay,
+Familiar matter of today?
+Some natural sorrow, loss, or pain,
+That has been, and may be again!`,`Whate'er the theme, the Maiden sung
+As if her song could have no ending;
+I saw her singing at her work,
+And o'er the sickle bending;
+I listen'd till I had my fill;
+And, as I mounted up the hill,
+The music in my heart I bore,
+Long after it was heard no more.`],fk:8.5,fkOverride:9,level:9,words:183,sentences:9,syllables:251,questions:[{depth:"literal",q:"What is the girl doing as she sings?",right:"Cutting and binding grain",wrong:["Picking ripe apples","Herding sheep home","Spinning fine wool"]},{depth:"inferential",q:"'The Vale profound / Is overflowing with the sound.' What does 'overflowing' suggest?",right:"The song fills the whole valley",wrong:["The river is in flood","The song is far too loud","Rain is pouring down the hill"]},{depth:"inferential",q:"What do the lines about the nightingale and the cuckoo tell us?",right:"Even those birds sang no sweeter",wrong:["Her song sounds like chirping","Her voice is too faint to hear","Her song frightens travellers"]},{depth:"inferential",q:"What does the poet do, since no one can tell him what she sings?",right:"He imagines what it might be about",wrong:["He asks her to sing it more slowly","He writes down every word","He finds a book of her songs"]},{depth:"inferential",q:"'The music in my heart I bore, / Long after it was heard no more.' What has the poet kept?",right:"The memory of the song",wrong:["A copy of the words","The girl's sickle","A sheaf of her grain"]}],evaluate:"The poet never learns the words, yet the song stays with him. Why might a song we cannot understand move us so much? Which word in the poem best catches that feeling?",wordBank:["solitary","highland","sorrow","silence","familiar"]},{id:"keats-chapman",work:"keats",title:"On first looking into Chapman's Homer",band:3,kind:"verse",abridged:!1,hook:"A young poet reads an old story in a new translation, and the world grows larger.",text:`Much have I traveled in the realms of gold,
+  And many goodly states and kingdoms seen;
+  Round many western islands have I been
+Which bards in fealty to Apollo hold.
+Oft of one wide expanse had I been told
+  That deep-brow'd Homer ruled as his demesne;
+  Yet did I never breathe its pure serene
+Till I heard Chapman speak out loud and bold:
+Then felt I like some watcher of the skies
+  When a new planet swims into his ken;
+Or like stout Cortez when with eagle eyes
+  He star'd at the Pacific--and all his men
+Look'd at each other with a wild surmise--
+  Silent, upon a peak in Darien.`,scenes:[`Much have I traveled in the realms of gold,
+  And many goodly states and kingdoms seen;
+  Round many western islands have I been
+Which bards in fealty to Apollo hold.
+Oft of one wide expanse had I been told
+  That deep-brow'd Homer ruled as his demesne;
+  Yet did I never breathe its pure serene
+Till I heard Chapman speak out loud and bold:`,`Then felt I like some watcher of the skies
+  When a new planet swims into his ken;
+Or like stout Cortez when with eagle eyes
+  He star'd at the Pacific--and all his men
+Look'd at each other with a wild surmise--
+  Silent, upon a peak in Darien.`],fk:21.2,fkOverride:10,level:10,words:110,sentences:2,syllables:143,questions:[{depth:"inferential",q:"What are the 'realms of gold' the poet has travelled in?",right:"The world of great books",wrong:["Rich countries overseas","Gold mines in the hills","The palaces of kings"]},{depth:"inferential",q:"Before he read Chapman, how did the poet know of Homer?",right:"He had only been told of him",wrong:["He had read Homer in Greek","He had met Homer once","He had never heard of him"]},{depth:"inferential",q:"Why does he compare himself to 'some watcher of the skies' who sees a new planet?",right:"The book felt like a new discovery",wrong:["He read the book under the stars","He wanted to become an astronomer","Chapman wrote about the planets"]},{depth:"inferential",q:"In 'swims into his ken', what does 'ken' mean?",right:"Range of sight",wrong:["His family","His notebook","His garden"]},{depth:"inferential",q:"Why are the men on the peak silent?",right:"They are struck dumb with wonder",wrong:["They are too tired to speak","They were told to keep quiet","They are angry with their leader"]}],evaluate:"Keats needs a planet and an ocean to describe reading one book. What would you compare the feeling of a great book to? Is his comparison too big, or just right?",wordBank:["realms","planet","islands","silent","breathe"]},{id:"blake-holy-thursday",work:"blake",title:"Holy Thursday (Songs of Experience)",band:3,kind:"verse",abridged:!1,hook:"Hungry children in a rich country, and a poet who will not stop asking why.",text:`Is this a holy thing to see
+   In a rich and fruitful land,--
+Babes reduced to misery,
+   Fed with cold and usurous hand?
+
+Is that trembling cry a song?
+   Can it be a song of joy?
+And so many children poor?
+   It is a land of poverty!
+
+And their sun does never shine,
+   And their fields are bleak and bare,
+And their ways are filled with thorns,
+   It is eternal winter there.
+
+For where'er the sun does shine,
+   And where'er the rain does fall,
+Babe can never hunger there,
+   Nor poverty the mind appal.`,scenes:[`Is this a holy thing to see
+   In a rich and fruitful land,--
+Babes reduced to misery,
+   Fed with cold and usurous hand?
+
+Is that trembling cry a song?
+   Can it be a song of joy?
+And so many children poor?
+   It is a land of poverty!`,`And their sun does never shine,
+   And their fields are bleak and bare,
+And their ways are filled with thorns,
+   It is eternal winter there.
+
+For where'er the sun does shine,
+   And where'er the rain does fall,
+Babe can never hunger there,
+   Nor poverty the mind appal.`],fk:4.5,fkOverride:7,level:7,words:94,sentences:7,syllables:118,questions:[{depth:"inferential",q:"What is wrong with 'Babes reduced to misery' in 'a rich and fruitful land'?",right:"Children starve in a land of plenty",wrong:["The land has had a bad harvest","The babies are crying for toys","Rich children are unhappy too"]},{depth:"inferential",q:"'Is that trembling cry a song?' What is the poet suggesting?",right:"The children's singing sounds like crying",wrong:["The children sing perfectly in tune","The choir is singing a sad hymn","A bird is singing in the trees"]},{depth:"inferential",q:"What does 'Fed with cold and usurous hand' say about those who feed the children?",right:"They give without kindness, for profit",wrong:["Their hands are cold from the winter","They cook the food far too little","They give the children too much"]},{depth:"inferential",q:"In the third verse, what does 'eternal winter' stand for?",right:"Endless hardship for the poor",wrong:["A cold climate all year","A long Christmas holiday","A real snowstorm in the city"]},{depth:"inferential",q:"What does the last verse say is true wherever the sun shines and the rain falls?",right:"No child should ever go hungry",wrong:["The crops will all be ruined","The children will sing louder","The poor will leave the land"]}],evaluate:"Blake asks questions instead of giving answers. Why might a question make a reader think harder than a statement would?",wordBank:["misery","poverty","eternal","hunger","reduced"]},{id:"douglass-sails",work:"douglass",title:"The sails on the Chesapeake",band:3,kind:"prose",abridged:!1,hook:"A young man held in slavery watches free ships sail away, and talks to them.",text:`Our house stood within a few rods of the Chesapeake Bay, whose broad bosom was ever white with sails from every quarter of the habitable globe. Those beautiful vessels, robed in purest white, so delightful to the eye of freemen, were to me so many shrouded ghosts, to terrify and torment me with thoughts of my wretched condition. I have often, in the deep stillness of a summer's Sabbath, stood all alone upon the lofty banks of that noble bay, and traced, with saddened heart and tearful eye, the countless number of sails moving off to the mighty ocean. The sight of these always affected me powerfully. My thoughts would compel utterance; and there, with no audience but the Almighty, I would pour out my soul's complaint, in my rude way, with an apostrophe to the moving multitude of ships:--
+
+"You are loosed from your moorings, and are free; I am fast in my chains, and am a slave! You move merrily before the gentle gale, and I sadly before the bloody whip! You are freedom's swift-winged angels, that fly round the world; I am confined in bands of iron! O that I were free! O, that I were on one of your gallant decks, and under your protecting wing! Alas! betwixt me and you, the turbid waters roll. Go on, go on. O that I could also go! Could I but swim! If I could fly! O, why was I born a man, of whom to make a brute! The glad ship is gone; she hides in the dim distance. I am left in the hottest hell of unending slavery. O God, save me! God, deliver me! Let me be free! Is there any God? Why am I a slave? I will run away. I will not stand it. Get caught, or get clear, I'll try it. I had as well die with ague as the fever. I have only one life to lose. I had as well be killed running as die standing.`,scenes:["Our house stood within a few rods of the Chesapeake Bay, whose broad bosom was ever white with sails from every quarter of the habitable globe. Those beautiful vessels, robed in purest white, so delightful to the eye of freemen, were to me so many shrouded ghosts, to terrify and torment me with thoughts of my wretched condition. I have often, in the deep stillness of a summer's Sabbath, stood all alone upon the lofty banks of that noble bay, and traced, with saddened heart and tearful eye, the countless number of sails moving off to the mighty ocean.","The sight of these always affected me powerfully. My thoughts would compel utterance; and there, with no audience but the Almighty, I would pour out my soul's complaint, in my rude way, with an apostrophe to the moving multitude of ships:--",`"You are loosed from your moorings, and are free; I am fast in my chains, and am a slave! You move merrily before the gentle gale, and I sadly before the bloody whip! You are freedom's swift-winged angels, that fly round the world; I am confined in bands of iron! O that I were free! O, that I were on one of your gallant decks, and under your protecting wing! Alas! betwixt me and you, the turbid waters roll. Go on, go on. O that I could also go! Could I but swim! If I could fly!`,"O, why was I born a man, of whom to make a brute! The glad ship is gone; she hides in the dim distance. I am left in the hottest hell of unending slavery. O God, save me! God, deliver me! Let me be free! Is there any God? Why am I a slave?","I will run away. I will not stand it. Get caught, or get clear, I'll try it. I had as well die with ague as the fever. I have only one life to lose. I had as well be killed running as die standing."],fk:4.1,level:4.1,words:335,sentences:29,syllables:430,questions:[{depth:"literal",q:"What did the white sails seem like to Douglass?",right:"Shrouded ghosts that tormented him",wrong:["Birds flying south for winter","Clouds drifting over the bay","Flags of a friendly navy"]},{depth:"inferential",q:"Who is Douglass speaking to in his 'apostrophe'?",right:"The ships on the bay",wrong:["His master, Covey","The readers of his book","A friend on the shore"]},{depth:"inferential",q:"Why set 'You are loosed from your moorings, and are free' beside 'I am fast in my chains'?",right:"The contrast makes his slavery sharper",wrong:["To show ships and men are alike","To describe how ships are tied up","To explain how sailors work"]},{depth:"inferential",q:"How does his mood change as he speaks?",right:"From despair to determination",wrong:["From joy to deep sadness","From anger to sleepy calm","From fear to forgetfulness"]},{depth:"inferential",q:"What does 'I had as well be killed running as die standing' mean?",right:"Better to die escaping than stay a slave",wrong:["He would rather run than walk anywhere","Soldiers are coming to fight him","He is too weak and ill to stand up"]}],evaluate:"Douglass speaks to ships that cannot hear him. Why might saying it aloud have helped him? Which sentence of his is the strongest, and why?",wordBank:["vessels","audience","confined","freedom","protecting"],needsReview:!0,reviewNote:"A formerly enslaved man's own account: 'the bloody whip', 'the hottest hell of unending slavery', and his cry 'Is there any God?'. The paragraph just before the extract (not shown) speaks of thoughts of taking his own life. 11–14 only, with a grown-up note and a named reviewer."},{id:"faraday-made",work:"faraday-candle",title:"What candles are made of",band:2,kind:"prose",abridged:!1,hook:"A famous scientist holds up a piece of Irish wood and tells children it is a candle.",text:`And now, my boys and girls, I must first tell you of what candles are made. Some are great curiosities. I have here some bits of timber, branches of trees particularly famous for their burning. And here you see a piece of that very curious substance taken out of some of the bogs in Ireland, called _candle-wood_,--a hard, strong, excellent wood, evidently fitted for good work as a resister of force, and yet withal burning so well that where it is found they make splinters of it, and torches, since it burns like a candle, and gives a very good light indeed. And in this wood we have one of the most beautiful illustrations of the general nature of a candle that I can possibly give. The fuel provided, the means of bringing that fuel to the place of chemical action, the regular and gradual supply of air to that place of action--heat and light--all produced by a little piece of wood of this kind, forming, in fact, a natural candle.
+
+But we must speak of candles as they are in commerce. Here are a couple of candles commonly called dips. They are made of lengths of cotton cut off, hung up by a loop, dipped into melted tallow, taken out again and cooled, then re-dipped until there is an accumulation of tallow round the cotton.`,scenes:["And now, my boys and girls, I must first tell you of what candles are made. Some are great curiosities. I have here some bits of timber, branches of trees particularly famous for their burning.","And here you see a piece of that very curious substance taken out of some of the bogs in Ireland, called _candle-wood_,--a hard, strong, excellent wood, evidently fitted for good work as a resister of force, and yet withal burning so well that where it is found they make splinters of it, and torches, since it burns like a candle, and gives a very good light indeed.","And in this wood we have one of the most beautiful illustrations of the general nature of a candle that I can possibly give. The fuel provided, the means of bringing that fuel to the place of chemical action, the regular and gradual supply of air to that place of action--heat and light--all produced by a little piece of wood of this kind, forming, in fact, a natural candle.","But we must speak of candles as they are in commerce. Here are a couple of candles commonly called dips. They are made of lengths of cotton cut off, hung up by a loop, dipped into melted tallow, taken out again and cooled, then re-dipped until there is an accumulation of tallow round the cotton."],fk:10.5,level:10.5,words:227,sentences:9,syllables:312,questions:[{depth:"literal",q:"Who is Faraday speaking to in this lecture?",right:"Boys and girls",wrong:["Coal miners","Candle makers","Old scientists"]},{depth:"literal",q:"Where does the candle-wood come from?",right:"Bogs in Ireland",wrong:["Forests in France","Mines in Wales","Beaches in Spain"]},{depth:"literal",q:"What do people make from candle-wood?",right:"Splinters and torches",wrong:["Chairs and tables","Boats and oars","Paper and ink"]},{depth:"inferential",q:"Why does Faraday call the piece of wood a natural candle?",right:"It brings fuel, air, heat and light together",wrong:["It was cut from a famous old tree","It smells sweet when it is burned","It was found at the bottom of the sea"]},{depth:"literal",q:"How are the candles called dips made?",right:"Cotton dipped again and again in tallow",wrong:["Wax poured into a metal mould","Wood carved into a thin stick","Oil soaked into a ball of moss"]}],evaluate:"Faraday chose a candle to begin teaching children about science. Was that a good choice? Why?",wordBank:["curiosities","timber","excellent","evidently","dipped"]},{id:"faraday-cup",work:"faraday-candle",title:"Why a candle makes a cup",band:3,kind:"prose",abridged:!1,hook:"Why does a burning candle not just melt into a puddle? Faraday shows the children.",text:"You see, then, in the first instance, that a beautiful cup is formed. As the air comes to the candle it moves upwards by the force of the current which the heat of the candle produces, and it so cools all the sides of the wax, tallow, or fuel, as to keep the edge much cooler than the part within; the part within melts by the flame that runs down the wick as far as it can go before it is extinguished, but the part on the outside does not melt. If I made a current in one direction, my cup would be lop-sided, and the fluid would consequently run over,--for the same force of gravity which holds worlds together holds this fluid in a horizontal position, and if the cup be not horizontal, of course the fluid will run away in guttering. You see, therefore, that the cup is formed by this beautifully regular ascending current of air playing upon all sides, which keeps the exterior of the candle cool.",scenes:["You see, then, in the first instance, that a beautiful cup is formed. As the air comes to the candle it moves upwards by the force of the current which the heat of the candle produces, and it so cools all the sides of the wax, tallow, or fuel, as to keep the edge much cooler than the part within;","the part within melts by the flame that runs down the wick as far as it can go before it is extinguished, but the part on the outside does not melt.","If I made a current in one direction, my cup would be lop-sided, and the fluid would consequently run over,--for the same force of gravity which holds worlds together holds this fluid in a horizontal position, and if the cup be not horizontal, of course the fluid will run away in guttering.","You see, therefore, that the cup is formed by this beautifully regular ascending current of air playing upon all sides, which keeps the exterior of the candle cool."],fk:16.8,level:16.8,words:172,sentences:4,syllables:228,questions:[{depth:"literal",q:"What forms at the top of a burning candle?",right:"A cup",wrong:["A spout","A ring","A star"]},{depth:"literal",q:"What moves upwards all round the candle?",right:"The air",wrong:["The wick","The tallow","The glass"]},{depth:"literal",q:"Why does the edge of the cup not melt?",right:"The rising air keeps it cool",wrong:["It is made of harder wax","It is painted with varnish","It is wet with water"]},{depth:"inferential",q:"What would happen if the air blew from one side only?",right:"The cup would tip and spill",wrong:["The flame would grow taller","The candle would stop melting","The wick would turn to wax"]},{depth:"literal",q:"Faraday says gravity holds worlds together. What does it do to the melted fuel?",right:"Keeps it level in the cup",wrong:["Makes it boil and bubble","Pulls it up the wick","Turns it back into a solid"]}],evaluate:"Faraday turns an everyday thing into a puzzle. What everyday thing would you like explained like this, and why?",wordBank:["gravity","exterior","ascending","fluid","wick"]},{id:"darwin-tortoises",work:"darwin-beagle",title:"The giant tortoises go to drink",band:3,kind:"prose",abridged:!1,hook:"Darwin finds wide, beaten paths on a far island, and wonders who made them.",text:"The tortoise is very fond of water, drinking large quantities, and wallowing in the mud. The larger islands alone possess springs, and these are always situated towards the central parts, and at a considerable height. The tortoises, therefore, which frequent the lower districts, when thirsty, are obliged to travel from a long distance. Hence broad and well-beaten paths branch off in every direction from the wells down to the sea-coast; and the Spaniards by following them up, first discovered the watering-places. When I landed at Chatham Island, I could not imagine what animal travelled so methodically along well-chosen tracks. Near the springs it was a curious spectacle to behold many of these huge creatures, one set eagerly travelling onwards with outstretched necks, and another set returning, after having drunk their fill. When the tortoise arrives at the spring, quite regardless of any spectator, he buries his head in the water above his eyes, and greedily swallows great mouthfuls, at the rate of about ten in a minute. The inhabitants say each animal stays three or four days in the neighbourhood of the water, and then returns to the lower country; but they differed respecting the frequency of these visits. The animal probably regulates them according to the nature of the food on which it has lived. It is, however, certain, that tortoises can subsist even on these islands where there is no other water than what falls during a few rainy days in the year.",scenes:["The tortoise is very fond of water, drinking large quantities, and wallowing in the mud. The larger islands alone possess springs, and these are always situated towards the central parts, and at a considerable height. The tortoises, therefore, which frequent the lower districts, when thirsty, are obliged to travel from a long distance.","Hence broad and well-beaten paths branch off in every direction from the wells down to the sea-coast; and the Spaniards by following them up, first discovered the watering-places. When I landed at Chatham Island, I could not imagine what animal travelled so methodically along well-chosen tracks.","Near the springs it was a curious spectacle to behold many of these huge creatures, one set eagerly travelling onwards with outstretched necks, and another set returning, after having drunk their fill. When the tortoise arrives at the spring, quite regardless of any spectator, he buries his head in the water above his eyes, and greedily swallows great mouthfuls, at the rate of about ten in a minute.","The inhabitants say each animal stays three or four days in the neighbourhood of the water, and then returns to the lower country; but they differed respecting the frequency of these visits. The animal probably regulates them according to the nature of the food on which it has lived. It is, however, certain, that tortoises can subsist even on these islands where there is no other water than what falls during a few rainy days in the year."],fk:12.1,level:12.1,words:245,sentences:10,syllables:377,questions:[{depth:"literal",q:"Where are the springs on the larger islands?",right:"Towards the middle, high up",wrong:["Along the sandy beaches","In deep caves by the sea","On the smaller islands only"]},{depth:"literal",q:"Who first found the watering-places by following the paths?",right:"The Spaniards",wrong:["Darwin's crew","The island children","Captain FitzRoy"]},{depth:"inferential",q:"Why are there broad paths running across the islands?",right:"Tortoises walk them to reach water",wrong:["Soldiers built them as roads","Rivers once flowed along them","Sailors cut them for exploring"]},{depth:"literal",q:"How does a tortoise drink at the spring?",right:"It buries its head and gulps greedily",wrong:["It laps slowly like a dog","It waits for rain to fall into its mouth","It licks the dew from the leaves"]},{depth:"inferential",q:"How can tortoises live on islands with no springs at all?",right:"They manage on a few days' rain",wrong:["They drink the salty sea water","They dig deep wells of their own","They are carried there by people"]}],evaluate:"Darwin learned about the tortoises by watching them closely. What animal near you could you learn about by watching, and what would you look for?",wordBank:["tortoise","obliged","eagerly","spectator","regardless"]},{id:"fabre-bad-name",work:"fabre-spider",title:"The Spider has a bad name",band:2,kind:"prose",abridged:!1,hook:"Everyone wants to squash the spider. Fabre stands up for her.",text:"The Spider has a bad name: to most of us, she represents an odious, noxious animal, which every one hastens to crush under foot. Against this summary verdict the observer sets the beast's industry, its talent as a weaver, its wiliness in the chase, its tragic nuptials and other characteristics of great interest. Yes, the Spider is well worth studying, apart from any scientific reasons; but she is said to be poisonous and that is her crime and the primary cause of the repugnance wherewith she inspires us. Poisonous, I agree, if by that we understand that the animal is armed with two fangs which cause the immediate death of the little victims which it catches; but there is a wide difference between killing a Midge and harming a man. However immediate in its effects upon the insect entangled in the fatal web, the Spider's poison is not serious for us and causes less inconvenience than a Gnat-bite. That, at least, is what we can safely say as regards the great majority of the Spiders of our regions.",scenes:["The Spider has a bad name: to most of us, she represents an odious, noxious animal, which every one hastens to crush under foot. Against this summary verdict the observer sets the beast's industry, its talent as a weaver, its wiliness in the chase, its tragic nuptials and other characteristics of great interest.","Yes, the Spider is well worth studying, apart from any scientific reasons; but she is said to be poisonous and that is her crime and the primary cause of the repugnance wherewith she inspires us.","Poisonous, I agree, if by that we understand that the animal is armed with two fangs which cause the immediate death of the little victims which it catches; but there is a wide difference between killing a Midge and harming a man.","However immediate in its effects upon the insect entangled in the fatal web, the Spider's poison is not serious for us and causes less inconvenience than a Gnat-bite. That, at least, is what we can safely say as regards the great majority of the Spiders of our regions."],fk:13.8,level:13.8,words:178,sentences:6,syllables:269,questions:[{depth:"literal",q:"What do most people want to do to a spider?",right:"Crush it under foot",wrong:["Keep it as a pet","Paint its picture","Feed it some flies"]},{depth:"literal",q:"Which of these does Fabre praise the spider for?",right:"Its talent as a weaver",wrong:["Its beautiful singing","Its bright colours","Its gentle nature"]},{depth:"literal",q:"What is the main reason people dislike spiders, says Fabre?",right:"They are said to be poisonous",wrong:["They have eight hairy legs","They spin messy webs indoors","They move far too quickly"]},{depth:"inferential",q:"What is the wide difference Fabre points out?",right:"Killing a midge is not harming a man",wrong:["Big spiders bite but small ones do not","Webs catch flies but never bees","Spiders hunt by day, not by night"]},{depth:"literal",q:"How does Fabre say a spider's poison compares, for us?",right:"Less bother than a gnat-bite",wrong:["As deadly as a snake's bite","Worse than a wasp sting","As painful as a burn"]}],evaluate:"Fabre wants us to give the spider a fair hearing. Has he changed your mind about spiders? Why or why not?",wordBank:["verdict","industry","poisonous","victims","majority","observer"]}];export{e as default};
