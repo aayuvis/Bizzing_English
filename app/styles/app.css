@@ -551,7 +551,40 @@ span.rv.you svg { width: 18px; height: 18px; }
 .gb-next span { display: grid; flex: 1; min-width: 0; } .gb-next small { color: var(--muted); font-size: 12.5px; } .gb-next b { font: 700 16px var(--bz-display); } .gb-next svg { width: 22px; height: 22px; color: var(--bz-accent); flex: none; }
 .titlecard .plate { position: relative; } .titlecard .plate .gb-ava { position: absolute; left: 14px; bottom: 12px; width: 52px; height: 52px; }
 .titlecard .tc-quill { position: absolute; right: 12px; bottom: 6px; width: 84px; height: 84px; object-fit: contain; filter: drop-shadow(0 3px 4px rgba(0,0,0,.35)); }
-@media (max-width: 560px) { .gboard { padding: 8px; border-radius: 16px; } .gb-frame { padding: 14px; } .gb-quill { width: 48px; height: 48px; } .gb-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gb-ava { width: 34px; height: 34px; } }
+/* the run: round label, the level map with stars, what is new, the final's frame */
+.gb-round { font: 800 12.5px var(--bz-display); white-space: nowrap; padding: 3px 9px; border-radius: 999px; background: var(--bz-chip); color: var(--ink); flex: none; }
+.gb-final .gb-frame { border-color: var(--bz-accent); box-shadow: inset 0 0 0 4px color-mix(in srgb, var(--bz-accent) 18%, var(--card)), 0 6px 18px rgba(0,0,0,.22); }
+.gb-final .gb-round { background: color-mix(in srgb, var(--bz-accent) 22%, var(--card)); color: var(--ink); box-shadow: inset 0 0 0 2px var(--bz-accent); }
+.gb-stars { display: inline-flex; gap: 2px; vertical-align: middle; } .gb-stars i { display: inline-flex; color: color-mix(in srgb, var(--ink) 22%, transparent); } .gb-stars i.on { color: var(--fox, var(--bz-accent)); }
+.gb-stars svg { width: 16px; height: 16px; } .gb-done .gb-stars svg { width: 34px; height: 34px; }
+.gb-done .gb-stars i.on { animation: gbpop .5s cubic-bezier(.3,1.6,.5,1) backwards; } .gb-done .gb-stars i:nth-child(2) { animation-delay: .15s; } .gb-done .gb-stars i:nth-child(3) { animation-delay: .3s; }
+.gb-map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; width: 100%; max-width: 520px; }
+.gb-lv { display: grid; justify-items: center; gap: 2px; padding: 8px 2px; border-radius: 14px; border: 2px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; min-width: 0; min-height: 44px; }
+.gb-lv b { font: 800 18px var(--mono); display: inline-flex; } .gb-lv b svg { width: 16px; height: 16px; } .gb-lv .gb-stars svg { width: 12px; height: 12px; }
+.gb-lv.on { border-color: var(--bz-accent); background: color-mix(in srgb, var(--bz-accent) 12%, var(--card)); } .gb-lv.locked { opacity: .55; cursor: default; }
+.gb-mem { font-size: 14px; } .gb-mem b { font-family: var(--mono); }
+.gb-between .gb-frame { justify-items: center; text-align: center; }
+/* Who Said It? — the detective's case: what the answer is worth, the clues opened */
+.gb-case { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.gb-worth { display: inline-flex; align-items: center; gap: 6px; font: 800 14px var(--bz-display); padding: 4px 10px; border-radius: 999px; background: var(--bz-chip); } .gb-worth svg { width: 16px; height: 16px; }
+.gb-clues { margin: 0; padding-left: 22px; display: grid; gap: 4px; font-size: 15px; } .gb-clues li::marker { font-weight: 800; color: var(--bz-accent); }
+/* Figure Hunt — a passage of tappable sentences */
+.gb-passage { display: grid; gap: 6px; }
+.gb-sent { display: flex; gap: 10px; align-items: flex-start; text-align: left; padding: 10px 12px; border-radius: 12px; border: 2px solid var(--line); background: var(--card); color: var(--ink); font: 500 16px/1.5 var(--read); cursor: pointer; min-width: 0; }
+.gb-sent kbd { font: 700 12px var(--mono); opacity: .6; flex: none; padding-top: 4px; } .gb-sent span { min-width: 0; overflow-wrap: anywhere; }
+.gb-sent.right { border-color: var(--good); background: var(--good-bg); } .gb-sent.wrong { border-color: var(--bad); background: var(--bad-bg); }
+/* Root Forge — a family on the anvil */
+.gb-family { display: grid; justify-items: center; gap: 4px; text-align: center; } .gb-family b { font: 800 20px var(--read); }
+.gb-famwords { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; } .gb-famwords i { font-style: normal; font: 700 14px var(--read); padding: 3px 10px; border-radius: 999px; background: var(--bz-chip); }
+/* Plot Line — a slot to drop on, a card being dragged */
+.gb-slot.cursor { border-color: var(--bz-accent); } .gb-slot.gb-over { border-color: var(--bz-accent); border-style: solid; background: color-mix(in srgb, var(--bz-accent) 12%, var(--card)); }
+.gb-slot[data-act] { cursor: pointer; } .gb-gap { border-style: dashed; border-color: var(--bz-accent); }
+.gb-card { touch-action: none; cursor: grab; } .gb-card.gb-drag { position: relative; z-index: 5; cursor: grabbing; box-shadow: 0 12px 26px rgba(0,0,0,.28); transition: none; }
+/* Rhetoric Duel — the rival across the table */
+.gb-rival { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 8px 10px; border-radius: 14px; background: var(--bz-chip); min-width: 0; }
+.gb-rival img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex: none; } .gb-rival span { display: grid; flex: 1 1 200px; min-width: 0; } .gb-rival small { color: var(--muted); font-size: 12.5px; }
+.gb-rvline { font-style: normal; font-weight: 650; font-size: 13.5px; }
+@media (max-width: 560px) { .gb-bar { flex-wrap: wrap; } .gb-map { gap: 4px; } .gboard { padding: 8px; border-radius: 16px; } .gb-frame { padding: 14px; } .gb-quill { width: 48px; height: 48px; } .gb-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gb-ava { width: 34px; height: 34px; } }
 html.calm .gb-quill, html.calm .gb-combo.gb-bump { animation: none; }
 html.still .gboard *, html.still .titlecard * { animation: none !important; transition: none !important; } html.still .gb-fly { display: none; }
 @media (prefers-reduced-motion: reduce) { .gboard *, .titlecard * { animation: none !important; transition: none !important; } .gb-fly { display: none; } }

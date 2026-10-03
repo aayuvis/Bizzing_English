@@ -248,10 +248,17 @@ export function rushPool(band = 3, extra = []) {
 }
 const rushHard = (x) => x.commas.length * 1000 + x.words.length;
 const byRush = (a, b) => rushHard(a) - rushHard(b) || (a.key < b.key ? -1 : 1);
+/* one comma first; the levels above lean on the sentences with two or more (the lists and asides), which are
+   fewer, so a level is built from both kinds rather than cut from one sorted list */
 export function rushLevelPool(level = 1, extra = [], final = false) {
-  const L = clampLevel(level), all = rushPool(3, extra).sort(byRush);
-  if (L === 1) { const one = all.filter((x) => x.commas.length === 1 && x.band <= 2); return final ? one.slice(Math.floor(one.length * 0.5)) : one; }
-  return rampWindow(all, L, final);
+  const L = clampLevel(level), all = rushPool(3, extra).sort(byRush), one = all.filter((x) => x.commas.length === 1), multi = all.filter((x) => x.commas.length > 1);
+  const longest = (k) => one.slice(Math.max(0, one.length - k));
+  if (L === 1) { const easy = one.filter((x) => x.band <= 2); return final ? easy.slice(Math.floor(easy.length * 0.5)) : easy.slice(0, Math.max(12, Math.ceil(easy.length * 0.8))); }
+  if (final) return [...longest(Math.max(6, Math.round(multi.length * 0.35))), ...multi];
+  if (L === 2) return [...one.slice(Math.floor(one.length * 0.1)), ...multi.filter((x) => x.band <= 2)];
+  if (L === 3) return [...one.slice(Math.floor(one.length * 0.4)), ...multi];
+  if (L === 4) return [...longest(Math.max(8, Math.round(multi.length * 0.7))), ...multi];
+  return [...longest(Math.max(6, Math.round(multi.length * 0.5))), ...multi];
 }
 export function rushRoad(level = 1, o = {}) {
   const order = memDraw(rushLevelPool(level, o.extra, o.final), (x) => x.key, o.mem, 'r:' + (o.seed ?? ''), undefined, o.now);
@@ -393,18 +400,21 @@ export function figureRound(figures, works, seed, level = 3, n = 10, o = {}) {
   const pool = figurePool(figures), R = rng('fig:' + seed + ':' + ML), title = (id) => works.find((w) => w.id === id)?.title || '';
   /* the hunts: from level 3, half the round, the kinds taken in turn so the naming slot cannot lean */
   const hunts = [];
+  const place = Math.floor(R() * 4);
   if (ML >= 3 && o.hunts?.length) {
-    const want = Math.floor(n / 2), rot = Math.floor(R() * HUNT_KINDS.length), used = new Set();
-    for (let j = 0, tries = 0; hunts.length < want && tries < want * HUNT_KINDS.length; tries++) {
-      const k = HUNT_KINDS[(rot + j) % HUNT_KINDS.length]; j++;
-      const [h] = memDraw(o.hunts.filter((x) => x.figure === k && !used.has(x.key)), (x) => x.key, o.mem, 'hunt:' + seed + ':' + tries, 1, o.now);
-      if (h) { used.add(h.key); hunts.push(h); }
+    const kinds = HUNT_KINDS.filter((k) => o.hunts.some((x) => x.figure === k)), want = Math.floor(n / 2), rot = Math.floor(R() * kinds.length), used = new Set(), at = (h, a) => (h.windows || [h]).some((w) => w.at === a);
+    for (let j = 0; hunts.length < want && j < want * 3; j++) {
+      const k = kinds[(rot + hunts.length) % kinds.length], a = (place + hunts.length) % 4, free = o.hunts.filter((x) => !used.has(x.key));
+      /* the kind the naming slot wants and the place the spot slot wants, as near as the pool allows */
+      const tiers = [free.filter((x) => x.figure === k && at(x, a)), free.filter((x) => x.figure === k), free.filter((x) => at(x, a)), free];
+      const [h] = memDraw(tiers.find((t) => t.length) || [], (x) => x.key, o.mem, 'hunt:' + seed + ':' + j, 1, o.now);
+      if (!h) break; used.add(h.key); hunts.push(h);
     }
   }
   const huntKeys = new Set(hunts.map((h) => h.key)), want = figureWant(ML, n - hunts.length, R), out = [];
   for (const [k] of kinds) out.push(...memDraw(pool.filter((f) => f.figure === k && !huntKeys.has(figKey(f))), figKey, o.mem, 'fk:' + seed + k, want[k] || 0, o.now));
   const lines = out.map((f) => ({ text: f.text, work: title(f.work), workId: f.work, kinds: kinds.map(([k]) => k), options: kinds.map(([, name]) => name), answer: kinds.findIndex(([k]) => k === f.figure), cat: f.figure, key: figKey(f) }));
-  const hunted = hunts.map((h) => ({ hunt: true, text: h.text, sentences: h.sentences, at: h.at, work: title(h.work), workId: h.work, kinds: HUNT_KINDS, options: HUNT_KINDS.map((k) => FIGURE_KINDS.find(([x]) => x === k)[1]), answer: HUNT_KINDS.indexOf(h.figure), cat: h.figure, key: h.key }));
+  const hunted = hunts.map((h, j) => ({ hunt: true, text: h.text, ...(({ sentences, at }) => ({ sentences, at }))(huntWindow(h, (place + j) % 4)), work: title(h.work), workId: h.work, kinds: HUNT_KINDS, options: HUNT_KINDS.map((k) => FIGURE_KINDS.find(([x]) => x === k)[1]), answer: HUNT_KINDS.indexOf(h.figure), cat: h.figure, key: h.key }));
   return [...lines, ...hunted].sort((a, b) => FIG_HARD[a.cat] - FIG_HARD[b.cat] || hash(seed + a.text) - hash(seed + b.text)).slice(0, n);
 }
 /* The passage hunt's passages: a figure found inside a held prose passage (data/passages.json or a whole
@@ -425,19 +435,25 @@ export function huntOf(fig, text, others = []) {
   let ss = sentencesOf(region).map(([a, b]) => [a + lo, b + lo]);
   if (lo > 0) ss = ss.slice(1); if (idx + f.length + 1500 < t.length) ss = ss.slice(0, -1);
   const j = ss.findIndex(([a, b]) => a <= idx && idx + f.length <= b); if (j < 0) return null;
-  const key = figKey(fig), clean = (s) => s.length >= 12 && s.length <= 260 && /[a-z]/.test(s) && !/CHAPTER|\[Illustration|_/.test(s);
-  for (const size of [4, 3]) for (let d = 0; d < size; d++) {
-    const p = (hash(key) + d) % size, a = j - p; if (a < 0 || a + size > ss.length) continue;
+  const key = figKey(fig), clean = (s) => s.length >= 12 && s.length <= 260 && /[a-z]/.test(s) && !/CHAPTER|\[Illustration|_/.test(s), windows = [];
+  for (const size of [4, 3]) for (let p = 0; p < size; p++) {
+    const a = j - p; if (a < 0 || a + size > ss.length) continue;
     const sentences = ss.slice(a, a + size).map(([x, y]) => t.slice(x, y));
     if (!sentences.every(clean) || sentences.join(' ').length > 720) continue;
     if (sentences.some((s, i) => i !== p && (SIMILE_RE.test(s) || s.includes(f) || others.some((o) => o !== f && s.includes(o))))) continue;
-    return { key, figure: fig.figure, work: fig.work, text: fig.text, sentences, at: p };
+    windows.push({ sentences, at: p });
   }
-  return null;
+  if (!windows.length) return null;
+  const w0 = windows[hash(key) % windows.length];
+  return { key, figure: fig.figure, work: fig.work, text: fig.text, sentences: w0.sentences, at: w0.at, windows };
 }
+/* the window a round shows: the figure's sentence in the place the round wants (so no place leans) */
+const huntWindow = (h, at) => (h.windows || [h]).find((w) => w.at === at && w.sentences.length === 4) || (h.windows || [h]).find((w) => w.at === at) || (h.windows || [h]).slice().sort((a, b) => Math.abs(a.at - at) - Math.abs(b.at - at))[0];
 /* sources: [{ work, text }] — the held prose the app already has (passages, chapters) */
-export function huntsFrom(figures, sources) {
-  const pool = figurePool(figures).filter((f) => f.figure !== 'none'), others = pool.map((f) => sp(f.text)), out = [], flat = sources.map((s) => ({ work: s.work, text: sp(s.text) }));
+const VERSE = new Set(['poetry', 'drama']);
+export const huntable = (f, works = []) => HUNT_KINDS.includes(f.figure) && !VERSE.has(works.find((w) => w.id === f.work)?.shelf);
+export function huntsFrom(figures, sources, works = []) {
+  const pool = figurePool(figures).filter((f) => huntable(f, works)), others = pool.map((f) => sp(f.text)), out = [], flat = sources.map((s) => ({ work: s.work, text: sp(s.text) }));
   for (const f of pool) { const src = flat.find((s) => s.work === f.work && s.text.includes(sp(f.text))); const h = src && huntOf(f, src.text, others); if (h) out.push(h); }
   return out;
 }
@@ -478,7 +494,13 @@ const NOT_STORY = new Set(['essay', 'speech', 'poetry']);
 export const plotSize = (level) => { const L = clampLevel(level); return L <= 2 ? 4 : L <= 4 ? 5 : 6; };
 /* Every story the game can deal at a size: each shippable prose passage with ≥ 4 scenes, and each whole
    book's chapter cut into runs of `size` scenes in a row. chapters: [{ book, n, short, band, scenes }]. */
+const STORIES = new WeakMap();
 export function plotStories(passages, works = [], chapters = [], size = 4) {
+  let memo = STORIES.get(passages); if (!memo) STORIES.set(passages, (memo = []));
+  const hit = memo.find((m) => m.works === works && m.chapters === chapters && m.size === size); if (hit) return hit.out;
+  const out = storiesOf(passages, works, chapters, size); memo.push({ works, chapters, size, out }); return out;
+}
+function storiesOf(passages, works, chapters, size) {
   const mk = (id, cat, title, work, band, scenes) => { const cards = scenes.map((sc, at) => ({ text: opening(sc), at })); return new Set(cards.map((c) => c.text)).size === cards.length && cards.every((c) => c.text.length >= 12) ? { id, cat, key: 'p:' + id + '@' + cards.length, title, work, band, cards } : null; };
   const out = passages.filter((p) => p.kind === 'prose' && (p.scenes || []).length >= 4 && !NOT_STORY.has(works.find((w) => w.id === p.work)?.shelf))
     .map((p) => mk(p.id, p.id, p.title, p.work, p.band || 1, p.scenes.slice(0, Math.min(size, p.scenes.length))));
@@ -549,7 +571,7 @@ export function plotStep(s, a) {
   if (s.state) return s;
   if (a.type === 'undo') { if (!s.stack.length) return s; const last = s.stack[s.stack.length - 1], at = s.line.indexOf(last), line = s.line.slice(); line[at] = null; return { ...s, line, stack: s.stack.slice(0, -1), cursor: last, slot: at }; }
   if (a.type === 'move') { if (!free.length) return s; const k = free.indexOf(s.cursor); return { ...s, cursor: free[((k < 0 ? 0 : k + (a.d || 0)) % free.length + free.length) % free.length] }; }
-  if (a.type === 'slot') { const e = empties(s.line); if (!e.length) return s; const k = e.indexOf(s.slot); return { ...s, slot: e[((k < 0 ? 0 : k + (a.d || 0)) % e.length + e.length) % e.length] }; }
+  if (a.type === 'slot') { const e = empties(s.line); if (!e.length) return s; if (a.at != null) return e.includes(a.at) && a.at !== s.slot ? { ...s, slot: a.at } : s; const k = e.indexOf(s.slot); return { ...s, slot: e[((k < 0 ? 0 : k + (a.d || 0)) % e.length + e.length) % e.length] }; }
   return s;
 }
 

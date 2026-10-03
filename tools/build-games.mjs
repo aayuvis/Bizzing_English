@@ -65,7 +65,7 @@ const ARCHAIC = W(`thee thou thy thine ye hath doth dost hast hadst art shalt wi
 const UNSAFE = W(`kill kills killed killing murder murdered murderer murderers blood bloody bleed bleeding corpse corpses coffin gun guns pistol pistols rifle shot shoot shooting stab stabbed knife knives hanged hang hanging gallows whip whipped whipping flog flogged beat beating beaten drunk drunken drink drank wine beer gin rum brandy whisky ale tobacco cigar opium devil devils hell damn damned satan demon slave slaves slavery savage savages negro negroes nigger niggers indian indians gipsy gipsies gypsy gypsies jew jews cripple idiot stupid cruel cruelty torture tortured scream screamed screaming horror horrible terror blind deaf lunatic madman poison poisoned suicide execution executed thief thieves rob robbed robber robbers agony sin sins evil gore naked bible priest priests sob sobbed`);
 /* fine for the oldest band (11–14), never for the first two */
 const OLDER = W(`war wars battle battles sword swords soldier soldiers enemy enemies prisoner prisoners prison fight fights fought fighting wicked witch witches ghost ghosts god gods lord lords mass pipe smoke smoked smoking hunting hunt hunted hunter hunters fool fools mad ugly fat hate hated hates kiss kissed kissing lover dead died die dies dying death deaths wound wounded pain buried bury grave graves weep wept`);
-export const UNSN = new Map();
+export const UNSN = new Map(), CAPN = new Map();
 const tokens = (s) => s.split(/\s+/);
 const bare = (t) => t.toLowerCase().replace(/^[^a-z]+|[^a-z']+$/g, '');
 
@@ -112,6 +112,8 @@ function refuse(s) {
   if (/["“”‘’]/.test(s) || /(^|\s)'|'(\s|[.,!?]|$)/.test(s)) return 'quotation marks';
   if (/[;:()[\]{}_*\d&/\\]/.test(s) || /--|—|–| - /.test(s)) return 'semicolon, colon, dash, bracket or digit';
   if (/\b[A-Z]{2,}\b/.test(s)) return 'capitals for emphasis';
+  if (/\w- |\s-\w/.test(s)) return 'a broken word';
+  { const T = tokens(s); if (T.some((t, i) => i > 0 && /^[A-Z][a-z]/.test(t) && !/^I('|$)/.test(t) && (capMid.get(bare(t).replace(/'s$/, '')) || 0) < 3 && !/^[A-Z]/.test(T[i + 1] || '') && !(i > 1 && /^[A-Z]/.test(T[i - 1])) && !/[.!?]$/.test(T[i - 1]))) return 'a capital that is not a name'; }
   if (/(^|\s)[A-Z]\./.test(s) || /\b(St|Mt)\b/.test(s)) return 'initials';
   const ws = tokens(s).map(bare);
   if (ws.some((w) => ARCHAIC.has(w) || /^[a-z]{3,}eth$/.test(w) && !/^(teeth|beneath|elizabeth|macbeth)$|ieth$/.test(w) || /^[a-z]+'st$|^(canst|couldst|wouldst|shouldst|didst|art|doest|knowest)$/.test(w))) return 'archaic';
@@ -150,17 +152,26 @@ function clause(ws, raw, lead = false) {
 }
 const words = (s) => tokens(s).map(bare);
 const len = (s) => tokens(s).length;
-/* Band by length and the rarest word (corpus frequency rank; names count as common). */
+/* Difficulty: length, the rarest word (corpus frequency rank; names count as common) and the average
+   word length. `floor` is the lowest band a sentence may sit in: band 1 is short, plain and from a story
+   (never an essay or a speech); a word kept for the oldest band (OLDER) puts it in band 3. The bands are
+   then cut as equal thirds of each pool by difficulty (spread), each item no lower than its floor. */
 function bandOf(s, w) {
   const ws = words(s).filter(Boolean), n = ws.length;
-  const older = ws.some((x) => OLDER.has(x.replace(/'s$/, '')));
-  const b = bandRaw(ws, n, w); return b && older ? 3 : b;
-}
-function bandRaw(ws, n, w) {
   const rare = Math.max(...ws.map(rankOf)), avg = ws.reduce((a, x) => a + x.length, 0) / n;
-  if (w.shelf !== 'essay' && w.shelf !== 'speech' && n <= 13 && rare <= 3500 && avg <= 4.8 && ws.every((x) => x.length <= 9)) return 1;
-  if (n <= 17 && rare <= 9000 && avg <= 5.2) return 2;
-  return 3;
+  const score = n + (rare > 2500 ? 2 : 0) + (rare > 6000 ? 3 : 0) + (rare > 15000 ? 3 : 0) + Math.max(0, avg - 4) * 4;
+  let floor = 1;
+  if (w.shelf === 'essay' || w.shelf === 'speech' || n > 15 || rare > 8000 || ws.some((x) => x.length > 10)) floor = 2;
+  if (ws.some((x) => OLDER.has(x.replace(/'s$/, '')))) floor = 3;
+  return { score, floor };
+}
+function spread(pool) {
+  const by = pool.slice().sort((a, b) => a.d.score - b.d.score || (a.s < b.s ? -1 : 1)), third = Math.ceil(pool.length / 3);
+  let n1 = 0, n2 = 0;
+  for (const x of by) {
+    if (x.d.floor <= 1 && n1 < third) { x.band = 1; n1++; } else if (x.d.floor <= 2 && n2 < third) { x.band = 2; n2++; } else x.band = 3;
+  }
+  for (const x of pool) delete x.d;
 }
 
 /* ---------------------------------------------------------------- Sentence Builder */
@@ -214,12 +225,16 @@ function builder(s, w) {
     if (clause(words(main.join(' ')), main) < 0) return ['main part is not a clause'];
     if (/^[A-Z]/.test(main[0]) && !isName(bare(main[0])) && main[0] !== 'I') return ['main clause capital'];
     if (sub === 'as' && words(main.join(' ')).some((x) => COMPARE.has(x))) return ['a comparison, not a clause'];
+    const ml = words(main.join(' ')).filter(Boolean).pop();
+    if (AUX.has(ml) || /^(not|so|as|too|very|be|been|being)$/.test(ml)) return ['the main clause is not finished'];
     const depS = dep.join(' ').replace(/,$/, ''), mainS = main.join(' ').replace(/[.!]$/, '');
     return [null, `${toks[0]} ${depS}, [${mainS}]${s.slice(-1)}`];
   }
   // end: main sub dep. — no comma, or one just before the joining word (games.js drops it; the rest is exact)
   if (BEFORE_SUB.has(ws[k - 1])) return ['not a clause boundary'];
   const main = toks.slice(0, k), dep = toks.slice(k + 1), mw = ws.slice(0, k);
+  if (dep.some((t) => t.includes(','))) return ['end: a comma in the dependent clause'];
+  if (sub === 'as' && main[main.length - 1].endsWith(',') && dep.length <= 4) return ['an aside, not a clause'];
   if (!oneClause(dep)) return ['end: more than one clause after the joining word'];
   if (!oneClause(main[main.length - 1].endsWith(',') ? [...main.slice(0, -1), main[main.length - 1].slice(0, -1)] : main)) return ['end: more than one clause before the joining word'];
   if (main.length < 3 || dep.length < 2) return ['too short a clause'];
@@ -230,6 +245,7 @@ function builder(s, w) {
   if (/^(Grandma|Grandpa|Mum|Dad)$/.test(main[0])) return ['main clause opener'];
   if ((sub === 'if' || sub === 'when' || sub === 'whenever' || sub === 'once') && mw.some((x) => ASKING.has(x))) return ['an object clause, not an adverb clause'];
   if (THINK.has(mw[mw.length - 1])) return ['the main clause wants an object'];
+  if (AUX.has(mw[mw.length - 1]) || ADV1.has(mw[mw.length - 1]) || /^(not|so|as|too|very|is|be|been|being|seem|seemed|looked|became|become|felt)$/.test(mw[mw.length - 1])) return ['the main clause is not finished'];
   if (mw.some((x) => x === 'that' || x === 'which' || x === 'who' || x === 'what' || x === 'how' || x === 'where')) return ['a clause inside the main clause'];
   if (sub === 'as' && mw.some((x) => COMPARE.has(x))) return ['a comparison, not a clause'];
   if (mw[0] === 'it' && (mw[1] === 'was' || mw[1] === 'is') && (sub === 'when' || sub === 'since' || sub === 'before' || sub === 'after')) return ['a cleft'];
@@ -240,10 +256,12 @@ function builder(s, w) {
 const COORD = W('and but so yet or');
 const PREP = W('in at on after before during with without under over across through behind beside near by from into upon along among around beyond inside outside towards toward against above below beneath between since until');
 const TRANSITION = W('suddenly finally meanwhile however unfortunately fortunately luckily afterwards instead naturally gradually slowly quickly quietly soon');
+const RELATION = W('friend friends brother sister master mistress servant man woman boy girl son daughter father mother uncle aunt cousin doctor captain name husband wife king queen lord lady companion neighbour neighbor child children guest host partner fellow colleague nephew niece grandfather grandmother sir madam');
 const VOC = W('mother father children boys girls grandmother grandfather uncle aunt sister brother captain doctor teacher friends');
-function itemOK(seg) {   // one list item: 1–4 words, no verb, no pronoun subject, no joining word
-  const ws = words(seg); if (!ws.length || ws.length > 4) return false;
-  return !ws.some((x) => isVerb(x) || PRON.has(x) || SUBSET.has(x) || COORD.has(x) || ['who', 'which', 'that', 'then', 'there', 'to', 'not'].includes(x) || /ly$/.test(x) || /ing$/.test(x));
+function itemOK(seg) {   // one list item: 1–3 words, no verb, no pronoun, no joining word, no preposition first
+  const ws = words(seg); if (!ws.length || ws.length > 3) return false;
+  if (PREP.has(ws[0]) || ['of', 'for', 'to', 'as', 'than', 'like', 'very', 'so', 'too', 'both', 'either', 'neither', 'all', 'save', 'except'].includes(ws[0])) return false;
+  return !ws.some((x) => isVerb(x) || PRON.has(x) || SUBSET.has(x) || COORD.has(x) || ['who', 'which', 'that', 'then', 'there', 'to', 'not', 'no', 'doubt', 'nor'].includes(x) || /ly$/.test(x) || /ing$/.test(x));
 }
 function rush(s, w, inner = false) {
   const n = len(s); if (n < 5 || n > 24) return ['length'];
@@ -252,6 +270,8 @@ function rush(s, w, inner = false) {
   if (ws.some((x) => ['oh', 'well', 'yes', 'no', 'why', 'now', 'indeed', 'perhaps', 'however', 'besides', 'still', 'then', 'there', 'here', 'say', 'please', 'sir', 'madam', 'dear'].includes(x) && toks[ws.indexOf(x)].endsWith(','))) {
     if (!(TRANSITION.has(ws[0]) && commas.length === 1 && commas[0] === 0)) return ['an interjection or a doubtful comma'];
   }
+  /* no comma is missing: no two clauses joined by a coordinator without one */
+  if (ws.some((x, j) => j > 0 && COORD.has(x) && !toks[j - 1].endsWith(',') && clause(ws.slice(j + 1), toks.slice(j + 1)) >= 0)) return ['a comma is missing before a joined clause'];
   const segs = []; let a = 0; for (const c of commas) { segs.push(toks.slice(a, c + 1).join(' ').replace(/,$/, '')); a = c + 1; } segs.push(toks.slice(a).join(' '));
   const last = segs[segs.length - 1].replace(/[.!?]$/, '');
   // address: a name at the start or the end, set off by its one comma (the words inside a quotation)
@@ -263,7 +283,8 @@ function rush(s, w, inner = false) {
       return [null, 'address'];
     }
     if (isVoc(tail) && tokens(head).length >= 3 && !isVoc(head)) {
-      const rest = words(head); if (!(clause(rest, tokens(head), true) >= 0 || /^(come|go|look|run|stop|wait|help|tell|give|take|let|be|do|don't|sit|stand|listen|hurry|bring|show|get|put|keep|try|see|make|what|where|how|why|who|can|will|would|could|are|is|did|do|have|thank)$/.test(rest[0]))) return ['address: rest is not a clause'];
+      const rest = words(head);
+      if (RELATION.has(rest[rest.length - 1]) || !(rest.some((x) => /^(you|your|yourself|you're|you'll|you've|you'd)$/.test(x)) || /[?!]$/.test(s) || /^(come|go|look|let|tell|give|take|wait|stop|listen)$/.test(rest[0]))) return ['address: the name may be an apposition']; if (!(clause(rest, tokens(head), true) >= 0 || /^(come|go|look|run|stop|wait|help|tell|give|take|let|be|do|don't|sit|stand|listen|hurry|bring|show|get|put|keep|try|see|make|what|where|how|why|who|can|will|would|could|are|is|did|do|have|thank)$/.test(rest[0]))) return ['address: rest is not a clause'];
       return [null, 'address'];
     }
     return ['address: no name set off'];
@@ -285,7 +306,7 @@ function rush(s, w, inner = false) {
     const ok = (SUBSET.has(w0) && clause(op.slice(1), tokens(segs[0]).slice(1)) >= 0)
       || (PREP.has(w0) && op.length >= 4 && !op.some(isVerb) && !op.some((x) => PRON.has(x)))
       || (op.length === 1 && TRANSITION.has(w0))
-      || (/ing$/.test(w0) && op.length >= 2 && op.length <= 6 && !op.slice(1).some(isVerb) && !['nothing', 'something', 'everything', 'anything', 'morning', 'evening', 'king', 'thing', 'spring', 'ring', 'sing', 'bring', 'wing', 'string'].includes(w0));
+      || (/ing$/.test(w0) && op.length >= 2 && op.length <= 6 && !op.slice(1).some(isVerb) && !op.some((x) => PRON.has(x) && x !== 'it' && x !== 'you') && !['nothing', 'something', 'everything', 'anything', 'morning', 'evening', 'king', 'thing', 'spring', 'ring', 'sing', 'bring', 'wing', 'string'].includes(w0));
     if (ok) {
       if (clause(main, tokens(segs[1])) < 0) return ['fronted: main part is not a clause'];
       if (main.slice(1).some((x) => SUBSET.has(x)) || main.some((x) => COORD.has(x) && x !== 'and')) return ['fronted: more inside'];
@@ -298,22 +319,21 @@ function rush(s, w, inner = false) {
     const subj = words(segs[0]), mid = words(segs[1]), rest = words(segs[2]);
     const subjOK = subj.length <= 5 && !subj.some(isVerb) && !subj.some((x) => SUBSET.has(x) || COORD.has(x)) && (DET.has(subj[0]) || isName(subj[0]) || PRON.has(subj[0]) && subj.length === 1);
     const midOK = (['who', 'which'].includes(mid[0]) && mid.slice(1).some(isVerb) && mid.length <= 10)
-      || (['however', 'therefore', 'perhaps', 'indeed', 'too'].includes(mid[0]) && mid.length === 1)
+      || (['however', 'therefore', 'perhaps', 'indeed'].includes(mid[0]) && mid.length === 1)
       || (['a', 'an', 'the'].includes(mid[0]) && mid.length <= 6 && !mid.some(isVerb) && isName(subj[0]) && subj.length <= 2);
     if (subjOK && midOK && isVerb(rest[0]) && !rest.some((x) => SUBSET.has(x))) return [null, 'aside'];
   }
-  // list: … A, B and C. at the end of a sentence whose clause comes first
+  // list: … A, B, C and D. — four or more short, alike items at the end of a sentence whose clause comes first
   {
-    const andAt = last.split(' ').findIndex((x) => x === 'and');
-    if (andAt > 0 && segs.length >= 2) {
-      const lastItems = last.split(' '), xn = lastItems.slice(0, andAt).join(' '), y = lastItems.slice(andAt + 1).join(' ');
-      const mids = segs.slice(1, -1);
-      if (last.split(' ').filter((x) => x === 'and' || x === 'or').length === 1 && itemOK(xn) && itemOK(y) && mids.every(itemOK)) {
-        const first = words(segs[0]);
-        if (clause(first, tokens(segs[0]), true) >= 0 && !first.some((x) => SUBSET.has(x) || COORD.has(x)) && !PREP.has(first[first.length - 1])) {
-          const lastFirst = first.slice(-1)[0];
-          if (!isVerb(lastFirst)) return [null, 'list'];
-        }
+    const lw = last.split(' '), andAt = lw.findIndex((x) => x === 'and');
+    if (andAt > 0 && segs.length >= 3 && lw.filter((x) => x === 'and' || x === 'or').length === 1) {
+      const xn = lw.slice(0, andAt).join(' '), y = lw.slice(andAt + 1).join(' '), mids = segs.slice(1, -1), items = [...mids, xn, y];
+      const detd = (seg) => DET.has(words(seg)[0]);
+      const short = segs.length === 2 ? items.every((x) => words(x).length <= 2) && !words(segs[0]).some((x) => /^(two|three|four|five|six|both|pair|couple|namely|several)$/.test(x)) : true;
+      if (short && items.every(itemOK) && (items.every(detd) || items.every((x) => !detd(x)))) {
+        const first = words(segs[0]), lastFirst = first[first.length - 1];
+        if (clause(first, tokens(segs[0]), true) >= 0 && !first.some((x) => SUBSET.has(x) || COORD.has(x)) && !PREP.has(lastFirst) && !isVerb(lastFirst) && !PRON.has(lastFirst) && !/ly$/.test(lastFirst)
+          && (items.every(detd) ? DET.has(first[first.length - 2]) || DET.has(first[first.length - 3]) : !DET.has(first[first.length - 2]) || first.length >= 3)) return [null, 'list'];
       }
     }
     return ['no rule fits every comma'];
@@ -341,10 +361,10 @@ for (const w of works) {
     for (const s of sentences(p)) {
       const key = collapse(s).toLowerCase(); if (seen.has(key)) continue;
       const r = refuse(s); if (r) { tally(r); if (process.env.SHOW && r === process.env.SHOW && Math.random() < 0.002) console.log("  ~", w.id, s.slice(0, 140)); continue; }
-      const band = bandOf(s, w); if (!band) { tally('rare word'); if (process.env.RARE && Math.random() < 0.01) console.log('  ~', words(s).filter(Boolean).sort((a, b) => rankOf(b) - rankOf(a))[0], '|', s.slice(0, 100)); continue; }
+      const band = 0, d = bandOf(s, w); if (false) { tally('rare word'); if (process.env.RARE && Math.random() < 0.01) console.log('  ~', words(s).filter(Boolean).sort((a, b) => rankOf(b) - rankOf(a))[0], '|', s.slice(0, 100)); continue; }
       const [rb, out] = builder(s, w), [rr, rule] = rush(s, w);
-      if (!rb) B.push({ s: out, band, work: w.id, src: srcOf(w) });
-      if (!rr) R.push({ s, rule, band, work: w.id, src: srcOf(w) });
+      if (!rb) B.push({ s: out, band, d, work: w.id, src: srcOf(w) });
+      if (!rr) R.push({ s, rule, band, d, work: w.id, src: srcOf(w) });
       if (rb) tally('builder: ' + rb); if (rr) tally('rush: ' + rr);
       if (!rb || !rr) { seen.add(key); continue; }
       if (process.env.SHOWB && rb === process.env.SHOWB && Math.random() < 0.02) console.log('  ~', w.id, s.slice(0, 150));
@@ -352,10 +372,10 @@ for (const w of works) {
     for (const q of quoted(p)) {
       const key = collapse(q).toLowerCase(); if (seen.has(key)) continue;
       const r = refuse(q); if (r) continue;
-      const band = bandOf(q, w); if (!band) continue;
+      const band = 0, d = bandOf(q, w);
       const [rr, rule] = rush(q, w, true), [rb, out] = builder(q, w);
-      if (!rr) R.push({ s: q, rule, band, work: w.id, src: srcOf(w) });
-      if (!rb) B.push({ s: out, band, work: w.id, src: srcOf(w) });
+      if (!rr) R.push({ s: q, rule, band, d, work: w.id, src: srcOf(w) });
+      if (!rb) B.push({ s: out, band, d, work: w.id, src: srcOf(w) });
       if (!rr || !rb) seen.add(key);
     }
   }
@@ -366,6 +386,7 @@ const exact = (x) => flat[x.work].includes(plain(x.s));
 const lost = [...B, ...R].filter((x) => !exact(x));
 if (lost.length) { console.error('build-games: not exact in its text:', lost.slice(0, 5)); process.exit(1); }
 
+spread(B); spread(R);
 const order = (a, b) => a.band - b.band || (a.work < b.work ? -1 : a.work > b.work ? 1 : 0) || (a.s < b.s ? -1 : 1);
 B.sort(order); R.sort(order);
 const files = { 'builder.json': JSON.stringify(B, null, 0).replace(/},{/g, '},\n{') + '\n', 'rush.json': JSON.stringify(R, null, 0).replace(/},{/g, '},\n{') + '\n' };
@@ -385,3 +406,5 @@ if (process.env.PARA) { let a = 0, b = 0; for (const w of works) { const t = raw
 
 if (process.env.UNS) console.log([...UNSN.entries()].sort((a,b)=>b[1]-a[1]).slice(0,60).map(x=>x.join(':')).join(' '));
 if (process.env.T) for (const t of process.env.T.split('|')) console.log(t, '→', rush(t, { shelf: 'children' }), builder(t, {}));
+
+if (process.env.CAPS) console.log([...CAPN.entries()].sort((a,b)=>b[1]-a[1]).slice(0,120).map(x=>x.join(':')).join(' '));
