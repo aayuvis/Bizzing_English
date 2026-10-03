@@ -154,6 +154,9 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('the menu sits under the avatar, on the screen', await page.evaluate(() => { const b = document.querySelector('.bz-kid').getBoundingClientRect(), m = document.querySelector('.kidmenu').getBoundingClientRect(); return m.top >= b.bottom && m.right <= innerWidth && m.left >= 0; }));
   await page.keyboard.press('ArrowDown'); ok('arrows move through the menu', await page.evaluate(() => document.activeElement?.classList.contains('km-item')));
   await page.keyboard.press('Escape'); await page.waitForTimeout(150); ok('Esc closes the menu', !(await page.locator('.kidmenu').count()));
+  await page.click('.bz-kid'); await page.click('.kidmenu .km-add'); await page.waitForTimeout(300);
+  if (await page.$('#nk')) { await page.fill('#nk', 'Zia'); await page.click('[data-act=nk-band][data-arg="3"]'); ok('choosing an age band keeps the typed first name', (await page.inputValue('#nk')) === 'Zia' && (await page.getAttribute('[data-act=nk-band][data-arg="3"]', 'aria-pressed')) === 'true'); await page.keyboard.press('Escape'); await page.waitForTimeout(150); }
+  await go(page, '#/home');
   await page.click('.bz-kid'); await page.click('.kidmenu [data-arg="#/me"]'); await page.waitForTimeout(300); ok('My page opens from the menu', /#\/me$/.test(page.url()));
   /* settings: the family's five sections, in order */
   await go(page, '#/settings'); await page.waitForTimeout(300);
@@ -300,6 +303,23 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await go(page, '#/stop/s4-conj'); await page.click('[data-act=run-phase][data-arg=learn]'); await page.click('[data-act=run-phase][data-arg=turn]');
   const a = await page.evaluate(() => window.__bz.S.run.items[0].answer); await page.keyboard.press(String(a + 1)); await page.waitForTimeout(1200);
   ok('the demo writes nothing to storage', await page.evaluate(() => Object.keys(localStorage).length === 0), await page.evaluate(() => Object.keys(localStorage).join()));
+  /* the reviewer's list, each held by a check */
+  await go(page, '#/shop/avatars');
+  ok('the demo shop’s coin history matches its balance and names what each coin was for', await page.evaluate(() => document.querySelectorAll('.ledger li').length > 0 && /—/.test(document.querySelector('.ledger li').textContent)));
+  await go(page, '#/home');
+  ok('the greeting never doubles a question mark', !/\?”?\?/.test(await page.textContent('.bz-greet')));
+  ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
+  ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));
+  await go(page, '#/atlas/word');
+  ok('Atlas stars are drawn shapes, never ★ glyphs', !/[★☆]/.test(await page.textContent('main')) && (await page.$$('.starmark, .starrow svg')).length > 0);
+  await go(page, '#/search/rab');
+  ok('search word chips are separate words', await page.evaluate(() => !document.querySelector('main').innerText.includes('rabbitrabbits')));
+  await go(page, '#/me'); ok('My page lists the certificates earned', (await page.$$('.cert')).length > 0);
+  await go(page, '#/certificate/word-1'); ok('a certificate is drawn with the child’s name and the level', /Kavya/.test(await page.textContent('.certview')) && /Word level 1/.test(await page.textContent('.certview')));
+  const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }).catch(() => null), page.click('[data-act=cert-save]')]);
+  ok('Save as a picture gives the family a PNG, made on the device', !!dl && /\.png$/.test(dl.suggestedFilename()));
+  for (const h of ['#/desk/wr7-persuade', '#/stage/contest']) { await go(page, h);
+    ok(`no icon in running text is larger than its text (${h})`, await page.evaluate(() => [...document.querySelectorAll('main .note svg, main p svg')].every((x) => x.getBoundingClientRect().width <= 32))); }
   await ctx.close();
 }
 

@@ -14,7 +14,7 @@ import { libraryView, bookView, wordView } from './views/library.js';
 import { stageView, openAloud, aloudView, STAGE_ACTIONS, aloudPick, isLive, micStop } from './views/stage.js';
 import { playView, openGame, gameView, PLAY_ACTIONS, playKey, leaveGame } from './views/play.js';
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
-  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf } from './views/pages.js';
+  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
 import { loadBook, chapterKey } from './book.js';
@@ -29,7 +29,7 @@ import { balance, startActivity } from './family.js';
 import { world, scene } from './worlds.js';
 import { loadLexicon } from './lexicon.js';
 import { stop as stopVoice } from './voice.js';
-import { stopMusic } from './sound.js';
+import { stopMusic, syncMusic, musicFor } from './sound.js';
 import { demoHousehold } from './demo.js';
 import { readingStop } from './reading.js';
 import { isDemo } from './store.js';
@@ -113,6 +113,7 @@ function screen() {
     case 'play': return p[1] ? gameView() : playView();
     case 'me': return meView();
     case 'medals': return medalsView();
+    case 'certificate': return certificateView(p.slice(1).join('/'));
     case 'collection': return collectionView();
     case 'shop': return shopView(p[1] || 'avatars');
     case 'log': return logView();
@@ -136,6 +137,7 @@ function paintScene() {
 
 function doRender() {
   applyDevice(); paintScene(); applyExtras(kid());
+  syncMusic(musicFor(S.route, kid() ? world(kid().world || 1).id : null, S.run), S.route.parts.join('/'));   // music: the screen's loop (sound.js decides; silent on the Stage)
   const k = kid(), app = document.getElementById('app');
   const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : '';
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';

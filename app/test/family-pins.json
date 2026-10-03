@@ -5,5 +5,7 @@
  "bizzing-activity.js": "7346ca49544d138d6aa81778fcaeca37c51eb027b44bef04b42ebc332cea9d99",
  "bizzing-avatars.js": "8d522580801c76b186092c5b762356c4e935d42a877a2ce60dde8aa506ab0ed6",
  "bizzing-avatars.css": "cd3f4c325dced245f8aeba93980f5081e77e73b67b427bf4bbfb37b6ee973ad6",
- "shell-check.mjs": "c50bf9aea5c2417628fdbf06962233794dfb32c862d16d056fc4f290b480b8aa"
+ "shell-check.mjs": "c50bf9aea5c2417628fdbf06962233794dfb32c862d16d056fc4f290b480b8aa",
+ "bizzing-feed.js": "e18e3aaa832876cc8f73a83bf7317f2ffd47ae1977a8a5017b8665c3f67a657e",
+ "bizzing-feed.css": "a14be9e338a495da85e2a389820b2350be14b007f9264f65d5ff6696f7610892"
 }
