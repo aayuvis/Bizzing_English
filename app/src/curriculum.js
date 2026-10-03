@@ -11,6 +11,7 @@
 import { LANG_STOPS } from './data/language.js';
 import { LIT_STOPS, CASE_DESK } from './data/literature.js';
 import { WORD_STOPS } from './data/word-stops.js';
+import { SENTENCE_STOPS } from './data/sentence-stops.js';
 
 export const BANDS = [
   { id: 1, label: '6–7', age: 'ages 6–7' },
@@ -312,6 +313,10 @@ export const STRANDS = [
 /* Word levels 6–10: written stops (data/word-stops.js; level 7, the words from the myths, in data/myth-words.js) */
 const wordLevels = STRANDS.find((x) => x.id === 'word').levels;
 for (const x of WORD_STOPS) wordLevels.find((l) => l.n === x.level).stops.push({ ...x, kind: 'authored' });
+
+/* Sentence levels 6–10: written stops (data/sentence-stops.js) */
+const sentenceLevels = STRANDS.find((x) => x.id === 'sentence').levels;
+for (const x of SENTENCE_STOPS) sentenceLevels.find((l) => l.n === x.level).stops.push({ ...x, kind: 'authored' });
 
 /* Literature levels 1–9: written stops (data/literature.js); level 10 is a writing desk — the child's case for a book */
 for (const l of STRANDS.find((x) => x.id === 'literature').levels) {
