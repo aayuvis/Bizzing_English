@@ -6,7 +6,8 @@ import { S, kid, save, render, go, toast, pay, isDark, setDevice, applyDevice, c
 import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '../ui.js';
 import { AVATARS, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
-import { balance, ledger } from '../family.js';
+import { balance, ledger, spend } from '../family.js';
+import { EXTRAS, KINDS, extra, owns, wearing, wear, buyExtra } from '../extras.js';
 import { MEDALS } from '../medals.js';
 import { WORLDS, plate } from '../worlds.js';
 import { STRANDS, strand, BANDS, stopById } from '../curriculum.js';
@@ -33,7 +34,7 @@ export function meView() {
   return pageHead({ title: 'My page', sub: 'your level, your week and your medals', back: { label: 'Home', href: '#/home' } }) + `<div class="grid2">
     <div class="card pin stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:84px;height:84px"><div><h2 style="margin:0">${esc(k.name)}</h2><p class="muted" style="margin:0">${esc(headline(k))}</p></div></div>
       <div class="stats"><div class="stat"><b>${goodDays(k, 7)}</b><small>good days in the last 7</small></div><div class="stat"><b>${learnedCount(k)}</b><small>things learned (proved on a later day)</small></div><div class="stat"><b>${Object.keys(k.bank).length}</b><small>words in your bank</small></div><div class="stat"><b>${Object.keys(k.medals).length}</b><small>medals</small></div></div>
-      <div class="row">${link('Medals', '#/medals', { cls: 'out', ic: 'medal' })}${link('Collection', '#/collection', { cls: 'out', ic: 'star' })}${link('Reading log', '#/log', { cls: 'out', ic: 'book' })}</div></div>
+      ${bookplate(k)}<div class="row">${link('Medals', '#/medals', { cls: 'out', ic: 'medal' })}${link('Collection', '#/collection', { cls: 'out', ic: 'star' })}${link('Reading log', '#/log', { cls: 'out', ic: 'book' })}</div></div>
     <div class="card"><h3>The seven strands</h3><div class="stoplist">${rows}</div></div></div>`;
 }
 
@@ -43,6 +44,13 @@ export function medalsView() {
 }
 
 /* ---------- Collection and Shop ---------- */
+export const bookplate = (k, style) => `<div class="bookplate" data-plate="${(style || wearing(k, 'plate')).slice(6)}"><small>From the library of</small><b>${esc(k.name)}</b><span>${Object.values(k.reading).filter((r) => r.read).length} stories read · ${Object.keys(k.bank).length} words in the bank</span></div>`;
+function extraCard(e, k, bal) {
+  const own = owns(k, e.id), on = wearing(k, e.kind) === e.id;
+  const look = e.kind === 'paper' ? `<div class="paper-swatch" data-p="${e.id.slice(6)}">It was the best of times, it was the worst of times…</div>` : e.kind === 'plate' ? bookplate(k, e.id) : `<div class="curtain mini" data-c="${e.id.slice(8)}" aria-hidden="true"></div>`;
+  const act = on ? `<span class="tag ok">${icon('check')}Wearing</span>` : own ? btn('Use it', 'wear-extra', { arg: e.id, cls: 'out small', ic: 'check' }) : btn(`${e.price} coins`, 'buy-extra', { arg: e.id, cls: 'small', ic: 'coin', dis: bal < e.price });
+  return `<div class="card">${look}<b>${esc(e.name)}</b><small class="muted">${esc(e.what)}</small>${act}${!own && bal < e.price ? `<p class="note" style="margin:0">${e.price - bal} more to go.</p>` : ''}</div>`;
+}
 function avCard(a, k, buyable) {
   const st = stateOf(a, ctx(k)), cur = k.avatar === a.id;
   return `<figure class="bz-av${cur ? ' cur' : ''}" data-tier="${a.tier}" data-state="${st.state}"><button data-act="${st.state === 'owned' ? 'wear' : buyable && st.state === 'buy' && !st.short ? 'buy-av' : 'noop'}" data-arg="${a.id}" aria-label="${esc(a.name)}, ${esc(st.label)}: ${esc(st.say)}">
@@ -62,17 +70,17 @@ export function shopView(tab = 'avatars') {
   if (tab === 'worlds') body = `<div class="grid3">${WORLDS.map((w) => { const open = worldOpen(w.n, ctx(k));
     return `<div class="card" style="padding:0;overflow:hidden"><img src="${plate(w, isDark(), true)}" alt="" style="width:100%;height:120px;object-fit:cover;display:block${open ? '' : ';filter:grayscale(.6)'}"><div style="padding:12px 14px"><h3>${esc(w.name)}</h3><p class="muted" style="margin:0 0 8px">${esc(w.what)}</p>
       ${open ? (k.world === w.n ? `<span class="tag ok">${icon('check')}You are here</span>` : btn('Go there', 'wear-world', { arg: w.n, cls: 'out small', ic: 'map' })) : `${btn(`${WORLD_PRICE} coins`, 'buy-world', { arg: w.n, cls: 'small', ic: 'coin', dis: bal < WORLD_PRICE })}<p class="note">${bal < WORLD_PRICE ? `${WORLD_PRICE - bal} more to go — or it opens with the family plan.` : 'Or it opens with the family plan.'}</p>`}</div></div>`; }).join('')}</div>`;
-  else if (tab === 'extras') body = empty('sleep', 'Extras — bookplates, reading lamps and stage curtains — arrive with the next update. Avatars and worlds are here now.', link('Avatars', '#/shop/avatars', { ic: 'star' }));
+  else if (tab === 'extras') body = `<p class="note" style="margin:0 20px 10px">A look for your reading and your Stage — never content, never chance. The first of each is free.</p>` + KINDS.map(([kind, title]) => `<section class="card" style="margin-bottom:13px"><h3>${esc(title)}</h3><div class="extragrid">${EXTRAS.filter((e) => e.kind === kind).map((e) => extraCard(e, k, bal)).join('')}</div></section>`).join('');
   else body = `<p class="note" style="margin:0 20px 10px">Commons are free for everyone. Rares cost 120, Epics 250, Legendaries 500 — and a Legendary first needs its learning milestone.</p>`
     + PACK_NAMES.map((n, i) => { const w = Math.ceil((i + 1) / 2); return `<section class="card" style="margin-bottom:13px"><h3>${esc(n)}</h3><div class="avgrid">${AVATARS.filter((a) => a.pack === i + 1).map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
   const L = ledger(k.name).slice(-30).reverse();
   return head + body + `<section class="card" style="margin-top:13px"><h3>Your coin history</h3>${historyList(L)}</section>`;
 }
 const APPNAME = { english: 'English', bee: 'Bee', maths: 'Maths', geography: 'Geography', india: 'India', finance: 'Finance' };
-const WHY = { answer: 'a right answer', stop: 'a stop finished', contest: 'a contest', mastery: 'something proved on a later day', migrated: 'coins brought over' };
+const WHY = { answer: 'a right answer', stop: 'a stop finished', contest: 'the Elocution Contest', mastery: 'something proved on a later day', migrated: 'coins brought over' };
 function historyList(L) {
   if (!L.length) return '<p class="muted">No coins yet. Every right answer in a check earns one.</p>';
-  return `<ul class="ledger">${L.map((x) => `<li><span>${esc(x.n > 0 ? WHY[x.why] || x.why : x.why.startsWith('avatar:') ? 'avatar: ' + (byId(x.why.slice(7))?.name || x.why.slice(7)) : x.why.startsWith('world:') ? 'world ' + x.why.slice(6) : x.why)} · ${esc(APPNAME[x.a] || x.a)}</span><b class="${x.n > 0 ? 'plus' : 'minus'}">${x.n > 0 ? '+' : ''}${x.n}</b></li>`).join('')}</ul>`;
+  return `<ul class="ledger">${L.map((x) => `<li><span>${esc(x.n > 0 ? WHY[x.why] || x.why : x.why.startsWith('avatar:') ? 'avatar: ' + (byId(x.why.slice(7))?.name || x.why.slice(7)) : x.why.startsWith('world:') ? 'world ' + x.why.slice(6) : x.why.startsWith('extra:') ? 'extra: ' + (extra(x.why.slice(6))?.name || x.why.slice(6)) : x.why)} · ${esc(APPNAME[x.a] || x.a)}</span><b class="${x.n > 0 ? 'plus' : 'minus'}">${x.n > 0 ? '+' : ''}${x.n}</b></li>`).join('')}</ul>`;
 }
 
 /* ---------- Practice: spaced checks and the mistakes deck ---------- */
@@ -240,6 +248,8 @@ export const PAGE_ACTIONS = {
   'buy-av': (a) => { const k = kid(), av = byId(a); if (buy('english', k.name, av, ctx(k))) { k.owned.push(a); k.avatar = a; save(); sfx('unlock'); confetti(); toast(`${av.name} is yours`); } render(); },
   'buy-world': (a) => { const k = kid(); if (buyWorld('english', k.name, +a, ctx(k))) { k.worlds.push(+a); k.world = +a; save(); sfx('unlock'); confetti(); } render(); },
   'wear-world': (a) => { const k = kid(); k.world = +a; save(); render(); },
+  'buy-extra': (a) => { const k = kid(); if (buyExtra(k, a, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); toast(`${extra(a).name} is yours`); } render(); },
+  'wear-extra': (a) => { const k = kid(); if (wear(k, a)) { save(); sfx('tap'); } render(); },
   noop: () => {},
   'practice-check': () => go('#/practice/check'),
   rename: () => {},

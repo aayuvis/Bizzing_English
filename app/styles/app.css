@@ -375,3 +375,52 @@ html.calm .confetti { display: none; }
 details.piece { border-top: 1px solid var(--line); padding: 8px 0; } details.piece summary { cursor: pointer; min-height: 32px; font-size: 14px; }
 @media (max-width: 720px) { .deskgrid { grid-template-columns: 1fr; } }
 .opt > svg { width: 22px; height: 22px; flex: 0 0 22px; color: var(--bz-accent); } .opt[aria-pressed="true"] { border-color: var(--good); background: var(--good-bg); } .opt[aria-pressed="true"] > svg { color: var(--good); }
+
+/* the Elocution Contest */
+.rivalrow { display: flex; }
+.rivalrow img { width: 40px; height: 40px; border-radius: 50%; background: var(--bz-chip); border: 2px solid var(--card); margin-left: -10px; object-fit: cover; }
+.rivalrow img:first-child { margin-left: 0; }
+.rivals { display: grid; gap: 8px; }
+.rival { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; }
+.rival small { display: block; color: var(--bz-muted); }
+img.rv, span.rv { border-radius: 50%; background: var(--bz-chip); object-fit: cover; }
+span.rv.you { width: 32px; height: 32px; display: grid; place-items: center; }
+span.rv.you svg { width: 18px; height: 18px; }
+.standings { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; text-align: left; }
+.standings li { display: grid; grid-template-columns: 28px 32px 1fr auto; gap: 10px; align-items: center; padding: 6px 10px; border-radius: 12px; background: var(--bz-chip); }
+.standings li.you { outline: 2px solid var(--bz-accent, currentColor); font-weight: 700; }
+.standings .pl { font: 700 16px var(--bz-display, inherit); text-align: center; }
+
+/* Extras (extras.js): reading paper, bookplates, stage curtains — a look, drawn in CSS */
+.card.passage, .paper-swatch { background: var(--paper-bg, var(--card)); color: var(--paper-ink, inherit); box-shadow: var(--paper-edge, none); }
+:root[data-paper=cream], .paper-swatch[data-p=cream] { --paper-bg: #FBF4E2; --paper-ink: #2A2418; }
+:root[data-paper=parchment], .paper-swatch[data-p=parchment] { --paper-bg: #F3E6C8; --paper-ink: #2B2214; --paper-edge: inset 0 0 28px rgba(120, 84, 30, .22); }
+:root[data-paper=sea], .paper-swatch[data-p=sea] { --paper-bg: #E5F2EF; --paper-ink: #1B2A28; }
+:root[data-paper=rose], .paper-swatch[data-p=rose] { --paper-bg: #FBECEF; --paper-ink: #2E1F24; }
+:root[data-bz-dark][data-paper=cream], [data-bz-dark] .paper-swatch[data-p=cream] { --paper-bg: #2B261C; --paper-ink: #F3EAD6; }
+:root[data-bz-dark][data-paper=parchment], [data-bz-dark] .paper-swatch[data-p=parchment] { --paper-bg: #33291A; --paper-ink: #F1E4C6; --paper-edge: inset 0 0 28px rgba(0, 0, 0, .35); }
+:root[data-bz-dark][data-paper=sea], [data-bz-dark] .paper-swatch[data-p=sea] { --paper-bg: #1B2B29; --paper-ink: #DDF0EC; }
+:root[data-bz-dark][data-paper=rose], [data-bz-dark] .paper-swatch[data-p=rose] { --paper-bg: #2F2226; --paper-ink: #F6E3E7; }
+.paper-swatch[data-p=plain] { --paper-bg: var(--card); --paper-ink: inherit; --paper-edge: none; }
+.paper-swatch { border-radius: 10px; padding: 10px 12px; font: 400 15px/1.5 var(--read); border: 1px solid var(--line); }
+
+.bookplate { --pl-bg: var(--card); --pl-ink: var(--bz-ink, inherit); --pl-line: currentColor; position: relative; text-align: center; padding: 16px 18px; border-radius: 6px; background: var(--pl-bg); color: var(--pl-ink); border: 2px solid var(--pl-line); outline: 1px solid var(--pl-line); outline-offset: -7px; }
+.bookplate small { display: block; font: italic 500 13px var(--read); opacity: .85; }
+.bookplate b { display: block; font: 700 22px/1.2 var(--bz-display); margin: 2px 0 4px; overflow-wrap: anywhere; }
+.bookplate span { font-size: 13px; opacity: .85; }
+.bookplate[data-plate=laurel] { --pl-line: #4E7A3A; outline-width: 3px; outline-style: double; outline-offset: -9px; }
+.bookplate[data-plate=laurel]::before, .bookplate[data-plate=laurel]::after { content: ''; position: absolute; top: 10px; width: 22px; height: 22px; border-radius: 0 100% 0 100%; background: #4E7A3A; opacity: .8; }
+.bookplate[data-plate=laurel]::before { left: 10px; } .bookplate[data-plate=laurel]::after { right: 10px; transform: scaleX(-1); }
+.bookplate[data-plate=stars] { --pl-bg: #16204A; --pl-ink: #F4F1FF; --pl-line: #B9C3FF; background-image: radial-gradient(1.5px 1.5px at 12% 22%, #fff 99%, transparent), radial-gradient(1px 1px at 30% 70%, #fff 99%, transparent), radial-gradient(1.5px 1.5px at 78% 30%, #fff 99%, transparent), radial-gradient(1px 1px at 88% 78%, #fff 99%, transparent), radial-gradient(1px 1px at 55% 15%, #fff 99%, transparent); }
+.bookplate[data-plate=deco] { --pl-bg: #15130F; --pl-ink: #F6E7B8; --pl-line: #C9A445; border-radius: 0; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px); }
+
+.curtain { --cur: #9E1B26; --cur2: #6E0F18; --fringe: #D9A93A; height: 46px; margin: 0 20px 12px; border-radius: 14px 14px 0 0; position: relative; overflow: hidden;
+  background: radial-gradient(circle at 50% -60%, transparent 62%, var(--fringe) 63%, var(--fringe) 68%, transparent 69%) 0 18px / 48px 36px repeat-x, repeating-linear-gradient(90deg, var(--cur) 0 14px, var(--cur2) 14px 24px); }
+.curtain::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--fringe) 0 3px, transparent 3px 6px); }
+:root[data-curtain=blue] .curtain, .curtain[data-c=blue] { --cur: #1F3B8C; --cur2: #13265E; --fringe: #E2B64A; }
+:root[data-curtain=green] .curtain, .curtain[data-c=green] { --cur: #17704A; --cur2: #0D4A30; --fringe: #E2B64A; }
+:root[data-curtain=gold] .curtain, .curtain[data-c=gold] { --cur: #C99A2E; --cur2: #9C7418; --fringe: #FFF0B8; }
+.curtain[data-c=red] { --cur: #9E1B26; --cur2: #6E0F18; --fringe: #D9A93A; }
+.curtain.mini { margin: 0; height: 40px; border-radius: 10px; }
+.extragrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 12px; }
+.extragrid .card { display: grid; gap: 8px; align-content: start; }

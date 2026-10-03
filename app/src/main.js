@@ -20,6 +20,8 @@ import { openStory, storyView, openExercises, exercisesView, openExercise, talkV
 import { loadBook } from './book.js';
 import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './views/desk.js';
 import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.js';
+import { applyExtras } from './extras.js';
+import { openContest, contestView, CONTEST_ACTIONS } from './views/contest.js';
 import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
@@ -63,6 +65,7 @@ async function route() {
   if (sk && sk.kind === 'speak') { location.replace(`#/stage/${sk.id}`); return; }
   if (sk && sk.kind === 'readAloud') { location.replace('#/stage/aloud'); return; }
   if (r.name === 'desk') { if (r.parts[2] !== 'done') openDesk(r.parts[1]); else S.run = null; }
+  else if (r.name === 'stage' && r.parts[1] === 'contest') await openContest();
   else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1]);
   else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/alice/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
   else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
@@ -104,7 +107,7 @@ function screen() {
     case 'book': return bookView(p[1]);
     case 'word': return wordView(p[1] || '');
     case 'bank': return libraryView('words');
-    case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] ? speakView() : stageView();
+    case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] === 'contest' ? contestView() : p[1] ? speakView() : stageView();
     case 'desk': return p[2] === 'done' ? deskDoneView(p[1]) : deskView();
     case 'recordings': return recordingsView();
     case 'play': return p[1] ? gameView() : playView();
@@ -132,7 +135,7 @@ function paintScene() {
 }
 
 function doRender() {
-  applyDevice(); paintScene();
+  applyDevice(); paintScene(); applyExtras(kid());
   const k = kid(), app = document.getElementById('app');
   const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : '';
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';
@@ -154,7 +157,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
+const ACTIONS = { ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
   'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {

@@ -30,6 +30,8 @@ export function newKid(name, band, avatar) {
     seen: {},                                                // celebrated once
     games: {},                                               // game id → { best, plays }
     stage: {},                                               // speaking: stopId → [{ at, secs, wpm, pauses }] (numbers only)
+    contests: [],                                            // Elocution Contest: [{ at, n, band, rounds, total, place, of }] (numbers only)
+    extras: { owned: [], wear: {} },                         // the Shop's Extras: bought ids, and what is worn per kind
     copy: {},                                                // copywork: line id → { at, ok }
     days: {},                                                // date → { answers, right, stops } — counts, never minutes
     last: null,                                              // the last thing done, for the greeting and Continue

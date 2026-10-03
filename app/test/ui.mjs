@@ -70,7 +70,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     ok(`${tag}: ${h} is a ${kind} head`, (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === kind);
   }
   /* no sideways scroll, measured against the width we set */
-  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story']) {
+  for (const h of ['#/home', '#/atlas', '#/atlas/sentence', '#/library', '#/library/books', '#/library/words', '#/book/jungle', '#/story/aesop-town-mouse', '#/story/aesop-town-mouse/do', '#/whole/alice', '#/whole/alice/1', '#/stage', '#/stage/aloud', '#/play', '#/play/rush', '#/me', '#/medals', '#/collection', '#/shop/worlds', '#/practice', '#/grownups', '#/privacy', '#/help', '#/stop/s5-comma', '#/desk/wr7-persuade', '#/stage/sp2-recite', '#/stage/sp6-minute', '#/stage/sp4-story', '#/stage/contest', '#/shop/extras']) {
     await go(page, h);
     const w = await page.evaluate(() => document.documentElement.scrollWidth);
     ok(`${tag}: ${h} does not scroll sideways (${w}px)`, w <= (phone ? 390 : 1280));
@@ -232,6 +232,30 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   /* the grown-up's rubric is the only judge of quality */
   await go(page, '#/grownups'); for (const d of '1357') await page.keyboard.press(d); await page.waitForTimeout(300);
   ok('the grown-up can read the piece and judge it', (await page.textContent('main')).includes('Zebrafish') && (await page.$$('[data-act=wrubric]')).length >= 4);
+  /* the Elocution Contest: three rounds, the microphone on a tap, points only from what is measured */
+  await page.evaluate(() => { const k = window.__bz.S.h.kids[0]; k.stops['sp1-aloud'] = { passed: true, tries: 1 }; });
+  await go(page, '#/stage'); ok('the Stage offers the contest with Bee’s rivals', (await page.textContent('main')).includes('Elocution Contest') && (await page.$$('.rivalrow img')).length === 5);
+  const n0 = (await page.evaluate(() => window.__tracks.length));
+  await go(page, '#/stage/contest'); ok('entering the contest does not open the microphone', await page.evaluate((n) => window.__tracks.length === n, n0));
+  await page.click('[data-act=ct-begin]');
+  for (let round = 0; round < 3; round++) {
+    await page.click('[data-act=ct-start]'); await page.waitForTimeout(900);
+    if (!round) ok('the contest opens the microphone on Start', await page.evaluate(() => window.__tracks.at(-1).readyState === 'live'));
+    await page.click('[data-act=ct-stop]'); await page.waitForTimeout(250);
+    ok(`contest round ${round + 1}: Stop ends every track`, await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
+    if (round < 2) { ok(`contest round ${round + 1}: every point names what measured it`, /Timing — inside the window/.test(await page.textContent('main')) && (await page.$$('.standings li')).length === 6); await page.click('[data-act=ct-next]'); }
+  }
+  ok('the contest ends with places and says what it never scores', (await page.$$('.standings li')).length === 6 && /never scored/.test(await page.textContent('main')));
+  ok('a finished contest keeps numbers only', await page.evaluate(() => { const c = window.__bz.S.h.kids[0].contests; return c.length === 1 && Object.values(c[0]).every((v) => typeof v === 'number' || Array.isArray(v)); }));
+  await go(page, '#/stage/contest'); await page.click('[data-act=ct-begin]'); await page.click('[data-act=ct-start]'); await page.waitForTimeout(600); await go(page, '#/home');
+  ok('leaving the contest mid-round switches the microphone off', await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
+  /* the Shop's Extras: a look at a printed price; the paper is worn at once */
+  await go(page, '#/shop/extras');
+  ok('Extras: three kinds, the first of each free and worn', (await page.$$('.extragrid')).length === 3 && (await page.$$('.extragrid .tag.ok')).length === 3);
+  const can = await page.$('[data-act=buy-extra][data-arg=paper-cream]:not([disabled])');
+  if (can) { await can.click(); await page.waitForTimeout(300); ok('buying a paper wears it at once', await page.evaluate(() => document.documentElement.dataset.paper === 'cream')); }
+  else ok('an Extra you cannot afford cannot be bought', !!(await page.$('[data-act=buy-extra][data-arg=paper-cream][disabled]')));
+  await page.click('[data-act=wear-extra][data-arg=paper-plain]').catch(() => {}); 
   ok('PRIVACY: nothing was posted anywhere', posts.length === 0, posts.join(' '));
   ok('PRIVACY: nothing typed left the device in any request', page.reqs.every((u) => !/Zebrafish|violet/i.test(decodeURIComponent(u))) && bodies.every((b) => !/Zebrafish/.test(b)));
   ok('PRIVACY: no request left the site but Bee’s word clips', page.reqs.every((u) => ALLOWED(u) || u.startsWith(BEE_AUDIO)));
