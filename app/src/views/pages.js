@@ -318,7 +318,7 @@ PAGE_ACTIONS['cert-save'] = (id) => {
   const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
   const img = new Image(), url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
   img.onload = () => { const cv = document.createElement('canvas'); cv.width = 1200; cv.height = 850; cv.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(url);
-    cv.toBlob((b) => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `Bizzing English certificate - ${c.title.replace(/[^\w ·-]+/g, '')}.png`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); toast('Saved to this device'); }, 'image/png'); };
+    cv.toBlob((b) => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `bizzing-english-certificate-${c.id}.png`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); toast('Saved to this device'); }, 'image/png'); };
   img.src = url;
 };
 PAGE_ACTIONS['cert-print'] = () => window.print();

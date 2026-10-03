@@ -18,7 +18,7 @@ ok('standard amounts: stop 5, mastery 20', W.earn('english', 'Ana', 'stop', T) =
 for (let i = 0; i < 50; i++) W.earn('english', 'Ana', 'mastery', T);
 ok('100 a day at most', W.ledger('Ana').filter((x) => x.a === 'english').reduce((a, x) => a + x.n, 0) === 100);
 /* every coin the app pays goes through app.js pay() → family.js earn(), with a standard event name */
-const src = ['app.js', 'views/runner.js', 'views/reader.js', 'views/stage.js', 'views/play.js'].map((f) => readFileSync(new URL('../src/' + f, import.meta.url), 'utf8')).join('\n');
+const src = ['app.js', 'views/runner.js', 'views/reader.js', 'views/stage.js', 'views/play.js', 'views/feed-view.js'].map((f) => readFileSync(new URL('../src/' + f, import.meta.url), 'utf8')).join('\n');
 const evs = [...src.matchAll(/pay\('([a-z]+)'\)/g)].map((m) => m[1]);
 ok(`coins are paid only for standard events (${[...new Set(evs)].join(', ')})`, evs.length > 0 && evs.every((e) => ['answer', 'stop', 'contest', 'mastery'].includes(e)));
 ok('no app code writes the shared keys directly', !/localStorage\.setItem\(['"]bizzing\./.test(src + readFileSync(new URL('../src/main.js', import.meta.url), 'utf8')));

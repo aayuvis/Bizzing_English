@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node test/family.mjs && node test/items.mjs && node test/model.mjs && node test/avatars.mjs && node test/bee.mjs && node test/banks.mjs && node test/texts.mjs && node test/literature.mjs && node test/book.mjs && node test/games.mjs && node test/language.mjs && node test/myths.mjs && node test/sentence-stops.mjs && node test/gap-stops.mjs && node test/words.mjs && node test/contest.mjs && node test/report.mjs && node test/music.mjs && node ../tools/texts/writing.mjs --check",
+    "test": "node test/family.mjs && node test/items.mjs && node test/model.mjs && node test/avatars.mjs && node test/bee.mjs && node test/banks.mjs && node test/texts.mjs && node test/literature.mjs && node test/book.mjs && node test/games.mjs && node test/language.mjs && node test/myths.mjs && node test/sentence-stops.mjs && node test/gap-stops.mjs && node test/words.mjs && node test/contest.mjs && node test/report.mjs && node test/music.mjs && node test/feed.mjs && node ../tools/texts/writing.mjs --check",
     "check": "node test/ui.mjs",
     "deploy": "./deploy.sh",
     "verify": "npm test && npm run build && npm run check && ./tree-state.sh > .verified"

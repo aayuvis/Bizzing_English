@@ -30,7 +30,9 @@ import { levelOf } from '../app/src/reading.js';
 import { BOOKS } from '../app/src/book.js';
 import { FIGURES } from '../app/src/data/literature.js';
 import { RHETORIC } from '../app/src/data/language.js';
-import { MYTH_WORDS, MYTH_WORD_STOPS } from '../app/src/data/myth-words.js';
+import { MYTH_WORDS } from '../app/src/data/myth-words.js';
+import { GAMES } from '../app/src/games.js';
+import { readText } from './texts/levels.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url)), APP = join(HERE, '..', 'app');
 const json = (p) => JSON.parse(readFileSync(join(APP, p), 'utf8'));
@@ -60,6 +62,7 @@ export const placeName = (sid, n) => `${strandOf(sid).title} ${n} · ${levelOfSt
 const bandsFrom = (b) => (b ? [1, 2, 3].filter((x) => x >= b) : [1, 2, 3]);
 export const stopRoute = (st) => (st.kind === 'desk' ? `#/desk/${st.id}` : st.kind === 'speak' ? `#/stage/${st.id}` : st.kind === 'readAloud' ? '#/stage/aloud' : `#/stop/${st.id}`);
 const SHELF = { fable: 'Fables and fairy tales', children: 'Children’s classics', novel: 'Novels and stories', poetry: 'Poetry', drama: 'Drama', speech: 'Speeches', essay: 'Essays' };
+const HELD = {}, held = (wid) => (HELD[wid] ??= String(readText(wid) || '').replace(/\s+/g, ' '));
 const sentences = (t) => String(t).replace(/\s+/g, ' ').split(/(?<=[.!?][’”"']?)\s+(?=[A-Z“"‘'])/).filter(Boolean);
 /* the opening of a held text, cut at a sentence end: 120–320 characters, exact */
 export function opening(text) {
@@ -67,6 +70,11 @@ export function opening(text) {
   for (const s of sentences(text)) { if (out && (out + ' ' + s).length > 320) break; out = out ? out + ' ' + s : s; if (out.length >= 120) break; }
   return out.length <= 360 ? out : '';
 }
+/* A generated item's line under the question is kept only when it is the stop's own instruction
+   ("Which is the complete subject?"); a line that is a Bee dictionary definition (Language 1's origin
+   items show the word's meaning) is not a lesson, so the card says the stop's "I can…" instead. */
+const DEFS = new Set(Object.values(LEX.words).map((e) => norm(e[0] || '')).filter(Boolean));
+export const genBody = (it, st) => (it.sub && !DEFS.has(norm(it.sub)) ? it.sub : st.iCan);
 /* stops that TEACH a word (figure, device): the stop's own "why" names it */
 const teaches = (pre, word) => allStops().filter((s) => s.id.startsWith(pre) && !s.needsReview && new RegExp(`\\b${esc(word)}`, 'i').test(s.learn?.why || ''));
 
@@ -112,7 +120,9 @@ export function cut() {
           let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
           if (!it || it.type !== 'mc' || it.say || it.fixed) continue;
           const right = it.options[it.answer], c = { ...base, bands: [b], id: `${st.id}~g${b}~${String(key).replace(/[^\w-]+/g, '_').slice(0, 40)}`, kind: 'question',
-            src: `gen:${st.kind}#${b}#${key}`, title: st.title, body: it.sub || '', play: play(it.prompt, right, it.options.filter((_, j) => j !== it.answer), it.explain || ''), more: taught };
+            src: `gen:${st.kind}#${b}#${key}`, title: st.title, body: genBody(it, st), play: play(it.prompt, right, it.options.filter((_, j) => j !== it.answer), it.explain || ''), more: taught };
+          const twin = cards.find((x) => x.key === c.key && x.src.startsWith('gen:') && x.play.q === c.play.q && x.play.opts.join('|') === c.play.opts.join('|') && (x.body || '') === (c.body || ''));
+          if (twin) { if (!twin.bands.includes(b)) twin.bands.push(b); n++; continue; }   // the same item in two bands is one card for both
           if (leaks(c) || cards.some((x) => x.id === c.id)) continue;
           add(c); n++;
         }
@@ -146,7 +156,7 @@ export function cut() {
     const sents = sentences(T.text);
     for (const wd of (T.wordBank || p.words || []).slice(0, 6)) {
       const lw = String(wd).toLowerCase(), e = LEX.words[lw]; if (!e || !e[0]) continue;
-      const line = sents.find((x) => x.length <= 300 && new RegExp(`\\b${esc(wd)}\\b`, 'i').test(x)); if (!line) continue;
+      const line = sents.find((x) => x.length <= 300 && held(p.work).includes(x) && new RegExp(`\\b${esc(wd)}\\b`, 'i').test(x)); if (!line) continue;
       add({ ...base, id: `rd~${p.id}~w~${lw}`, kind: 'inline', src: `pword:${p.id}#${lw}`, title: `“${lw}” in ${p.title}`, body: line, cite: p.work, quote: line,
         more: stop(`Bee’s meaning: ${e[0]}`), route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
     }
@@ -207,7 +217,7 @@ export function cut() {
     if (!LEX.words[wd]) continue;
     add({ id: `hw~${wd}`, kind: 'word', src: `hour:${wd}`, bands: [1, 2, 3], topics: [`word:${wd}`], where: 'A word from the books', title: wd, body: def, source: 'Bizzing Bee’s word list', route: `#/word/${encodeURIComponent(wd)}`, cta: `“${wd}” in the word list` });
   }
-  /* 10. the games (their own names and what they practise, read from views/play.js) */
+  /* 10. the games: their own names and what they practise (games.js) */
   for (const g of games()) add({ id: `game~${g.id}`, kind: 'game', src: `game:${g.id}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: 'Play', title: g.name, body: g.how, more: stop(`Practises ${g.practises}`), route: `#/play/${g.id}`, cta: `Play ${g.name}` });
 
   /* no favourite slot: a card whose right option lands where too many already sit is still kept — the
@@ -215,13 +225,8 @@ export function cut() {
   return cards.map((c) => Object.fromEntries(Object.entries(c).filter(([, v]) => v !== undefined && v !== '')));
 }
 
-/* the games, as views/play.js names them (that file belongs to the games; only its words are read) */
-export function games() {
-  const src = readFileSync(join(APP, 'src', 'views', 'play.js'), 'utf8');
-  const out = [];
-  for (const m of src.matchAll(/^\s+([a-z]+): \{ name: '([^']+)', world: '[^']*', practises: '([^']+)', how: '((?:[^'\\]|\\.)+)'/gm)) out.push({ id: m[1], name: m[2], practises: m[3], how: m[4].replace(/\\'/g, "'") });
-  return out;
-}
+/* the games, as games.js names them (that file belongs to the games; only its words are read) */
+export const games = () => Object.entries(GAMES).map(([id, g]) => ({ id, name: g.name, practises: g.practises, how: g.how }));
 
 export function manifest(cards) {
   const byLevel = {}; let agnostic = 0, plays = 0;

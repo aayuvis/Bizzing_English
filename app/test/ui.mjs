@@ -314,6 +314,51 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   if (can) { await can.click(); await page.waitForTimeout(300); ok('buying a paper wears it at once', await page.evaluate(() => document.documentElement.dataset.paper === 'cream')); }
   else ok('an Extra you cannot afford cannot be bought', !!(await page.$('[data-act=buy-extra][data-arg=paper-cream][disabled]')));
   await page.click('[data-act=wear-extra][data-arg=paper-plain]').catch(() => {}); 
+  /* My Feed */
+  {
+    const reqs0 = page.reqs.length;
+    await go(page, '#/feed'); await page.waitForTimeout(600);
+    ok('My Feed: the tab is in the top bar, last', (await page.$$eval('[data-bz=tab]', (t) => t.at(-1)?.getAttribute('href') === '#/feed' && /My Feed/.test(t.at(-1).textContent))));
+    ok('My Feed: the page head matches Bee (a tab root)', (await checkPageHead(page)).length === 0 && (await page.$eval('[data-bz=pagehead]', (e) => e.dataset.bzKind)) === 'root');
+    ok('My Feed: the head names the child’s level', /Picked for you from across the app, for [A-Z][a-z]+ \d+ · .+ — about twenty, and then it ends\./.test(await page.textContent('[data-bz=pagehead]')));
+    const cards = await page.$$eval('.bzf-card', (c) => c.map((e) => (e.matches('.bzf-end') ? 'END' : e.dataset.id)));
+    ok(`My Feed: twenty cards, then the finished card (${cards.length})`, cards.length === 21 && cards.at(-1) === 'END' && cards.slice(0, 20).every((x) => x !== 'END'));
+    ok('My Feed: the end points at Continue', !!(await page.$('[data-bz=feed-end] a[href="#/continue"]')));
+    ok('My Feed: every card says why it is there and where it is taught or what it is', await page.$$eval('.bzf-card:not(.bzf-end)', (c) => c.every((e) => e.querySelector('.bzf-why')?.textContent.trim() && e.querySelector('.bzf-where'))));
+    const plays = await page.$$eval('.bzf-card:not(.bzf-end)', (c) => c.filter((e) => e.querySelector('.bzf-opt')).map((e) => e.dataset.id));
+    ok(`My Feed: questions are answered on the card (${plays.length})`, plays.length >= 2 && plays.length <= 5);
+    const coins0 = await page.evaluate(() => window.__bz.S.h.kids[0].feed?.paid ? Object.keys(window.__bz.S.h.kids[0].feed.paid).length : 0);
+    const sel = (id) => `.bzf-card[data-id="${id}"]`;
+    /* by touch (a tap on the right option) */
+    await page.click(`${sel(plays[0])} .bzf-opt[data-o="0"]`); await page.waitForTimeout(250);
+    ok('My Feed: a right answer by tap says so and pays once', !!(await page.$(`${sel(plays[0])} .bzf-after.ok`)) && (await page.evaluate(() => Object.keys(window.__bz.S.h.kids[0].feed.paid).length)) === coins0 + 1);
+    /* by key: focus the card, press the number of the right option */
+    const n = await page.$$eval(`${sel(plays[1])} .bzf-opt`, (b) => b.findIndex((x) => x.dataset.o === '0') + 1);
+    await page.focus(sel(plays[1])); await page.keyboard.press(String(n)); await page.waitForTimeout(250);
+    ok('My Feed: a right answer by key 1–4 on the focused card', !!(await page.$(`${sel(plays[1])} .bzf-after.ok`)));
+    if (plays[2]) {
+      await page.focus(sel(plays[2])); const w = await page.$$eval(`${sel(plays[2])} .bzf-opt`, (b) => b.findIndex((x) => x.dataset.o !== '0') + 1);
+      await page.keyboard.press(String(w)); await page.waitForTimeout(250);
+      ok('My Feed: a wrong answer holds, names the right one, and waits for Continue', !!(await page.$(`${sel(plays[2])} [data-bzf=cont]`)) && /Not this time/.test(await page.textContent(sel(plays[2]))));
+      await page.keyboard.press('Enter'); await page.waitForTimeout(250);
+      ok('My Feed: Enter goes on after a wrong answer', !(await page.$(`${sel(plays[2])} [data-bzf=cont]`)));
+    }
+    /* a card's button opens the specific place */
+    const want = await page.$eval('.bzf-card:not(.bzf-end) .bzf-row a.bz-btn', (a) => a.getAttribute('href'));
+    await page.click('.bzf-card:not(.bzf-end) .bzf-row a.bz-btn'); await page.waitForTimeout(500);
+    const at = new URL(page.url()).hash;
+    ok(`My Feed: a card’s button opens its own topic (${at})`, at === want && !/^#\/(library|stage|play|atlas|home)?\/?$/.test(at));
+    ok('My Feed: no request left the site', page.reqs.slice(reqs0).every(ALLOWED), page.reqs.slice(reqs0).filter((u) => !ALLOWED(u)).slice(0, 3).join(' '));
+    /* on a phone: six tabs fit, the shell still matches Bee, nothing scrolls sideways, and a tap answers */
+    const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Noor', '6–7'); await go(P.page, '#/feed'); await P.page.waitForTimeout(600);
+    const sh = await checkShell(P.page, { phone: true });
+    ok('My Feed (phone): checkShell matches Bee with six tabs', sh.length === 0 && (await P.page.$$('[data-bz=tabbar] a')).length === 6, sh.join('; '));
+    ok('My Feed (phone): no sideways scroll', (await P.page.evaluate(() => document.documentElement.scrollWidth)) <= 390);
+    const pp = await P.page.$('.bzf-card:not(.bzf-end) .bzf-opt[data-o="0"]');
+    if (pp) { await pp.tap(); await P.page.waitForTimeout(250); ok('My Feed (phone): a tap answers on the card', !!(await P.page.$('.bzf-after.ok'))); }
+    ok('My Feed (phone): only Bizzing English was asked for anything', P.page.reqs.every(ALLOWED) && P.page.errs.length === 0, P.page.errs.slice(0, 2).join(' | '));
+    await P.ctx.close();
+  }
   ok('PRIVACY: nothing was posted anywhere', posts.length === 0, posts.join(' '));
   ok('PRIVACY: nothing typed left the device in any request', page.reqs.every((u) => !/Zebrafish|violet/i.test(decodeURIComponent(u))) && bodies.every((b) => !/Zebrafish/.test(b)));
   ok('PRIVACY: no request left the site but Bee’s word clips', page.reqs.every((u) => ALLOWED(u) || u.startsWith(BEE_AUDIO)));
