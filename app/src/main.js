@@ -6,7 +6,7 @@ import '../styles/app.css';
 import { shell, bindShell } from './integration/bizzing-shell.js';
 import { S, kid, render, onRender, save, go, applyDevice, isDark, setDevice } from './app.js';
 import { esc, icon, empty, link, mascot } from './ui.js';
-import { homeView } from './views/home.js';
+import { homeView, HOME_ACTIONS } from './views/home.js';
 import { atlasView, strandView } from './views/atlas.js';
 import { openStop, openCheck, runnerView, RUN_ACTIONS, runKey } from './views/runner.js';
 import { openRead, readerView, READ_ACTIONS, readKey, wordCard, showWord } from './views/reader.js';
@@ -160,7 +160,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
+const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS,
   'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {

@@ -14,6 +14,14 @@ import { shippedLines, shippable } from '../reading.js';
 const PASSAGES = ALLP.filter(shippable);
 const LINES = shippedLines().filter((l) => !/^["'“‘]/.test(l.text));   // the card adds its own quotation marks
 import HOUR from '../data/hour-words.json';
+import { MYTH_WORDS } from '../data/myth-words.js';
+import { FIGURES } from '../data/literature.js';
+import { FIGURE_KINDS } from '../games.js';
+import { cleared } from '../data/rights.js';
+import { MEDALS } from '../medals.js';
+import { icon } from '../ui.js';
+import { save, render, pay } from '../app.js';
+import { sfx } from '../sound.js';
 import { storyCard } from './stories.js';
 
 /* each tip opens the exact place that practises it, and says so */
@@ -86,7 +94,7 @@ export function homeView() {
   const parts = [{ n: d.right || 0, of: t.words, col: '#C2410C', label: 'right answers' }, { n: d.pages || 0, of: t.pages, col: '#0E6F6A', label: 'passages read' },
     { n: d.made || 0, of: t.made ?? 1, col: '#6C4FE0', label: 'said aloud or written' }];
   const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span><b>${x.n}</b> / ${x.of} ${esc(x.label)}</span></li>`).join('')}</ul></div>`;
-  return home({
+  const page = home({
     greet: { mascot: mascot(k.last ? 'point' : 'wave'), hello: greetHello(), name: k.name, line: greetLine(k, nx) },
     ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },
     hour: { kicker: 'Word of the hour', title: hw || '—', sub: `${HOUR[hw] || ''}${p && (p.words || []).includes(hw) ? ` — from “${p.title}”, in ${w?.title || 'your book'}.` : ''} Tap for its origin and how to say it.`, icon: 'key', href: `#/word/${encodeURIComponent(hw || '')}` },
@@ -95,4 +103,43 @@ export function homeView() {
     quote: line && { kicker: 'Line of the hour', text: line.text, who: `${/ in /.test(line.who) || !lw || line.who.includes(lw.title) ? line.who : `${line.who}, ${lw.title}`}${lw ? (line.who.includes(lw.author) ? `, ${lw.year}` : ` · ${lw.author}, ${lw.year}`) : ''}${lineStory ? ' — hear the story' : ' — about the book'}`, href: lineStory ? `#/story/${lineStory.id}` : `#/book/${line.work}` },
     foot: `<a href="#/privacy">Privacy</a> · Nothing leaves this device · Bizzing™ is a trademark of its owner`,
   });
+  return page.replace('<div class="bz-foot">', `<div class="fd">${feed(k)}</div><div class="bz-foot">`);
 }
+
+/* ---------- the feed under the journey cards (the family's: Maths' and Geography's Today's three, India's
+   Keep going, Maths' Your progress). Every tile opens its OWN topic; the challenge is answered on the card. ---------- */
+const dayIdx = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 6e4) / 864e5);
+const FIGS = FIGURES.filter((f) => cleared(WORKS.find((w) => w.id === f.work)));
+const figOfDay = () => FIGS[(dayIdx() * 7) % FIGS.length];
+const pick = (arr, salt) => arr[(dayIdx() * 31 + salt) % Math.max(1, arr.length)];
+
+function feed(k) {
+  const mine = PASSAGES.filter((p) => p.band <= k.band);
+  /* a story in five minutes: today's, one the child has not heard if there is one */
+  const fresh = mine.filter((p) => !k.reading[p.id]?.heard && p.kind !== 'verse'), st5 = pick(fresh.length ? fresh : mine, 3), w5 = st5 && WORKS.find((w) => w.id === st5.work);
+  /* the myth of the day and the word it gave English */
+  const myths = MYTH_WORDS.filter((m) => PASSAGES.some((p) => p.id === m.passage && p.band <= Math.max(2, k.band))), my = pick(myths, 11), mp = my && PASSAGES.find((p) => p.id === my.passage);
+  /* the figure of the day: the same line in every house, answered here */
+  const f = figOfDay(), fw = f && WORKS.find((w) => w.id === f.work), done = k.games.figday?.d === today() ? k.games.figday : null, right = FIGURE_KINDS.findIndex(([x]) => x === f?.figure);
+  const challenge = f ? `<div class="bz-card fd-tile fd-fig"><span class="bz-kicker">Today’s challenge · the same line in every house</span><blockquote>“${esc(f.text)}”</blockquote><small>${esc(fw?.title || '')}${fw ? `, ${esc(fw.author)}` : ''}</small>
+    <div class="fd-opts">${FIGURE_KINDS.map(([, name], i) => `<button data-act="fig-day" data-arg="${i}" ${done ? 'disabled' : ''} class="${done ? (i === right ? 'right' : i === done.pick ? 'wrong' : '') : ''}">${esc(name)}</button>`).join('')}</div>
+    ${done ? `<p class="fd-say">${done.ok ? 'Right!' : `It is ${esc(FIGURE_KINDS[right][1].toLowerCase())}.`} ${esc(FIGURE_KINDS[right][1])}: it ${esc(FIGURE_KINDS[right][2])}. <a href="#/play/figure">Ten more in Figure Hunt</a></p>` : '<p class="fd-say">Which figure of speech is it — or none?</p>'}</div>` : '';
+  const story = st5 ? `<a class="bz-card fd-tile fd-pic" href="#/story/${st5.id}"><span class="fd-art" style="background-image:url('${storyCard(st5.id)}')"></span><span class="fd-body"><span class="bz-kicker">A story in five minutes</span><b>${esc(st5.title)}</b><small>${esc(st5.hook || '')}</small><small class="fd-meta">${esc(w5?.title || '')} · ${esc(w5?.author || '')} · read aloud to you</small></span></a>` : '';
+  const myth = my && mp ? `<a class="bz-card fd-tile fd-pic" href="#/story/${mp.id}"><span class="fd-art" style="background-image:url('${storyCard(mp.id)}')"></span><span class="fd-body"><span class="bz-kicker">Myth of the day · a word it gave English</span><b>${esc(my.from.charAt(0).toUpperCase() + my.from.slice(1))} → <i>${esc(my.word)}</i></b><small>${esc(my.meaning)}.</small><small class="fd-meta">Hear the myth: ${esc(mp.title)}</small></span></a>` : '';
+  /* keep going: stories heard with exercises still to do — each opens its own exercises */
+  const going = PASSAGES.filter((p) => k.reading[p.id]?.heard && Object.keys(k.reading[p.id]?.ex || {}).length < 7).slice(0, 3);
+  const keep = going.length ? `<section class="fd-row"><h3 class="fd-h">Keep going</h3><div class="fd-keep">${going.map((p) => `<a class="bz-card fd-mini" href="#/story/${p.id}/do"><span class="fd-thumb" style="background-image:url('${storyCard(p.id)}')"></span><span><b>${esc(p.title)}</b><small>${Object.keys(k.reading[p.id]?.ex || {}).length} of 7 exercises done</small></span></a>`).join('')}</div></section>` : '';
+  /* your progress: counts, each opening its own place */
+  const read = PASSAGES.filter((p) => k.stops['rd-' + p.id]?.passed).length, bank = Object.keys(k.bank).length, medals = Object.keys(k.medals).length;
+  const pieces = Object.entries(k.writing || {}).filter(([key, v]) => Array.isArray(v) && key !== 'talk').reduce((a, [, v]) => a + v.length, 0);
+  const best = Math.max(0, ...(k.contests || []).map((c) => c.total));
+  const prog = [['book', `${read} of ${PASSAGES.length}`, 'passages read', '#/log'], ['bank', String(bank), 'words in your bank', '#/library/words'], ['pen', String(pieces), 'pieces written', '#/atlas/writing'],
+    ['lectern', best ? `${best} of 30` : '—', 'best contest', '#/stage/contest'], ['medal', `${medals} of ${MEDALS.length}`, 'medals', '#/medals']];
+  return `<section class="fd-row"><h3 class="fd-h">Today’s three</h3><div class="fd-three">${story}${challenge}${myth}</div></section>${keep}
+    <section class="fd-row"><h3 class="fd-h">Your progress</h3><div class="fd-prog">${prog.map(([ic, n, label, href]) => `<a class="bz-card fd-stat" href="${href}">${icon(ic)}<b>${n}</b><small>${label}</small></a>`).join('')}</div></section><p class="fd-gap"></p>`;
+}
+
+export const HOME_ACTIONS = {
+  'fig-day': (a) => { const k = kid(), f = figOfDay(); if (!f || k.games.figday?.d === today()) return; const ok = FIGURE_KINDS[+a]?.[0] === f.figure;
+    k.games.figday = { d: today(), pick: +a, ok }; if (ok) { pay('answer'); sfx('right'); } else sfx('wrong'); save(); render(); },
+};

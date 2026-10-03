@@ -439,3 +439,38 @@ span.rv.you svg { width: 18px; height: 18px; }
 .kidmenu .km-add span { flex: 1; }
 .kidmenu .km-add small { color: var(--bz-muted); font-weight: 700; font-size: 13px; }
 @media (prefers-reduced-motion: reduce) { .kidmenu { animation: none; } }
+
+/* the Home feed (home.js feed): Today's three, Keep going, Your progress — inside the family home's grid */
+.fd-row { display: grid; gap: 10px; text-align: left; margin-top: 6px; }
+.fd-h { margin: 0; font: 800 19px var(--bz-display); color: var(--bz-ink); }
+.fd-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.fd-tile { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; min-height: 0; text-decoration: none; color: inherit; min-width: 0; }
+.fd-tile .bz-kicker { display: block; }
+.fd-pic { padding: 0; overflow: hidden; }
+.fd-art { display: block; aspect-ratio: 16 / 8; background: var(--bz-chip) center / cover; }
+.fd-body { display: grid; gap: 4px; padding: 12px 16px 16px; }
+.fd-body b { font: 700 17px/1.25 var(--bz-display); }
+.fd-body small { color: var(--bz-muted); font-size: 13.5px; line-height: 1.4; }
+.fd-body .fd-meta { font-size: 12.5px; }
+.fd-fig blockquote { margin: 2px 0 0; font: italic 600 16px/1.45 var(--bz-display); }
+.fd-fig > small { color: var(--bz-muted); font-size: 12.5px; }
+.fd-opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.fd-opts button { border: 1px solid var(--line); background: var(--bz-chip); color: var(--bz-ink); border-radius: 999px; padding: 6px 11px; min-height: 36px; font: 650 13px var(--bz-body); cursor: pointer; }
+.fd-opts button:hover:not([disabled]) { background: color-mix(in srgb, var(--bz-accent) 14%, var(--bz-chip)); }
+.fd-opts button.right { background: #1f7a45; color: #fff; border-color: #1f7a45; }
+.fd-opts button.wrong { background: #b3402f; color: #fff; border-color: #b3402f; }
+.fd-opts button[disabled]:not(.right):not(.wrong) { opacity: .55; }
+.fd-say { margin: 4px 0 0; font-size: 13.5px; color: var(--bz-ink); }
+.fd-keep { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+.fd-mini { display: flex; gap: 12px; align-items: center; padding: 10px 12px; min-height: 0; text-decoration: none; color: inherit; min-width: 0; }
+.fd-thumb { flex: none; width: 72px; height: 48px; border-radius: 10px; background: var(--bz-chip) center / cover; }
+.fd-mini b { display: block; font-size: 14.5px; } .fd-mini small { color: var(--bz-muted); font-size: 12.5px; }
+.fd-prog { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 13px; }
+.fd-stat { display: grid; justify-items: start; align-content: start; gap: 2px; padding: 14px 16px; min-height: 0; text-decoration: none; color: inherit; }
+.fd-stat svg { width: 22px; height: 22px; color: var(--bz-accent); }
+.fd-stat b { font: 800 22px var(--bz-display); font-variant-numeric: tabular-nums; }
+.fd-stat small { color: var(--bz-muted); font-size: 12.5px; }
+.fd-gap { margin: 0; }
+@media (max-width: 900px) { .fd-three, .fd-keep { grid-template-columns: minmax(0, 1fr); } .fd-prog { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fd-prog > :last-child:nth-child(odd) { grid-column: 1 / -1; } }
+.fd { display: grid; gap: 16px; }
+@media (max-width: 720px) { .fd { order: 8; } }

@@ -144,6 +144,9 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), My page, Settings, Add a child */
   await go(page, '#/home');
   ok('every Home card opens its own topic, never a bare collection or the help page', await page.evaluate(() => [...document.querySelectorAll('.bz-home a[href^="#/"]')].map((x) => x.getAttribute('href')).every((h) => !/^#\/(help|me|library|stage|play|shop)$/.test(h))));
+  ok('Home has Today’s three (a story, the challenge, a myth), and Your progress', (await page.$$('.fd-three > *')).length === 3 && (await page.$$('.fd-stat')).length === 5);
+  await page.click('[data-act=fig-day] >> nth=0'); await page.waitForTimeout(200);
+  ok('Today’s challenge is answered on the card, once a day, and explains', (await page.$$('[data-act=fig-day][disabled]')).length === 5 && /: it /.test(await page.textContent('.fd-fig .fd-say')));
   ok('Home shows three rings: right answers, passages read, said aloud or written', (await page.$$('.rings svg circle')).length === 6 && /right answers[\s\S]*passages read[\s\S]*said aloud or written/.test(await page.textContent('.rings')));
   await page.click('.bz-kid'); await page.waitForTimeout(250);
   ok('the avatar opens its menu, not a page', await page.locator('.kidmenu').isVisible());
