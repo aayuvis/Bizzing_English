@@ -19,7 +19,7 @@ The promise: *a child who reads the great books, writes a sentence worth reading
 
 **The Library is a story room** (owner, 3 Oct: "like the Stories section of Bizzing India, with narration
 and then exercises linked to it"). Every passage is told scene by scene over its painting in the family
-narrator's voice (`en-IN-Chirp3-HD-Laomedeia` 1.02 — recorded narration approved by the owner), words lit
+narrator's voice (`en-US-Chirp3-HD-Laomedeia` 1.02, +8 dB — **US English**, the owner, 3 Oct: "the voice in the English app has to be US English, not Indian English"; the device fallback prefers en-US too), words lit
 as she reads; then seven exercises built FROM that story: understand it (passes the Reading stop), its
 words (Bee's meanings), the author's commas, rebuild the author's sentence, copy a line, say it aloud on
 the Stage, talk about it (never marked). Two whole books — Alice and The Wind in the Willows — are told

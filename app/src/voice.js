@@ -1,7 +1,7 @@
 /* voice.js — "read it to me", in the DEVICE's own voice (the owner's default for v1: no new
    recorded narration). Only voices that run ON the device are used (localService): some browsers
    offer network voices that send the text away, and a child's reading never leaves this device.
-   An Indian English voice is preferred first, as in Bizzing Maths and Geography. */
+   A US English voice is preferred first (the owner, 3 Oct 2026: the English app speaks US English). */
 
 import { loadDevice } from './store.js';
 import { clipUrl } from './lexicon.js';
@@ -9,7 +9,7 @@ import { clipUrl } from './lexicon.js';
 let voice = null;
 function pickVoice() {
   const vs = (globalThis.speechSynthesis?.getVoices() || []).filter((v) => v.localService && /^en/i.test(v.lang));
-  return vs.find((v) => /en-IN/i.test(v.lang)) || vs.find((v) => /en-GB/i.test(v.lang)) || vs[0] || null;
+  return vs.find((v) => /en-US/i.test(v.lang)) || vs.find((v) => /^en/i.test(v.lang)) || vs[0] || null;
 }
 export const canSpeak = () => !!globalThis.speechSynthesis && !!(voice ||= pickVoice());
 globalThis.speechSynthesis?.addEventListener?.('voiceschanged', () => { voice = pickVoice(); });

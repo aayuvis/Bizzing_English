@@ -4,7 +4,8 @@
     node tools/voice/clips.mjs            # what to record, asked of the data
     python3 tools/voice/tts.py [--force] [--only st/aesop-] [--prune]
 
-The family narrator (FAMILY-STANDARD §11): en-IN-Chirp3-HD-Laomedeia at 1.02. The owner approved
+The narrator: en-US-Chirp3-HD-Laomedeia at 1.02 — US English (the owner, 3 Oct 2026: "the voice in the English app
+has to be US English, not Indian English"; the same narrator as the family's, in her US voice). The owner approved
 recorded narration for English on 2 Oct 2026 ("with narration"), so the device-voice fallback is
 only for a clip that is missing.
 
@@ -12,7 +13,7 @@ Every clip is LINTED before it lands (Bee's lesson): rejected if its mean loudne
 or it is shorter than 0.35 s. A clip is written to a temp file and renamed only once it passes, so a
 failed batch never leaves a half-written file; --prune removes clips no longer in clips.json (a
 failed batch once left stale clips that sounded right and said the wrong thing). A clip is
-re-recorded when its text changes: the manifest stores a hash of the text it was made from.
+re-recorded when its text or the voice changes: the manifest stores a hash of both.
 
 The key is read from $GTTS_FILE or /root/.gttskey — never from the repo, never printed.
 Output: app/public/voice/<key>.mp3 and app/src/data/voice-manifest.json {key: [ms, texthash]}.
@@ -22,12 +23,13 @@ import base64, hashlib, json, os, re, subprocess, sys, time, urllib.request, con
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, 'app', 'public', 'voice')
 MAN = os.path.join(ROOT, 'app', 'src', 'data', 'voice-manifest.json')
-VOICE, LANG, RATE = 'en-IN-Chirp3-HD-Laomedeia', 'en-IN', 1.02
+VOICE, LANG, RATE = 'en-US-Chirp3-HD-Laomedeia', 'en-US', 1.02
+GAIN = 8.0   # her US voice comes out ~5 dB quieter than the en-IN one; lift it so every clip clears the -20 dB lint
 KEY = open(os.environ.get('GTTS_FILE', '/root/.gttskey')).read().strip()
 
 
 def synth(text):
-    body = {"input": {"text": text}, "voice": {"languageCode": LANG, "name": VOICE}, "audioConfig": {"audioEncoding": "MP3", "speakingRate": RATE}}
+    body = {"input": {"text": text}, "voice": {"languageCode": LANG, "name": VOICE}, "audioConfig": {"audioEncoding": "MP3", "speakingRate": RATE, "volumeGainDb": GAIN}}
     req = urllib.request.Request("https://texttospeech.googleapis.com/v1/text:synthesize", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json", "x-goog-api-key": KEY})
     with urllib.request.urlopen(req, timeout=180) as r:
@@ -57,7 +59,7 @@ def lint(path):
     return ms >= 350 and db >= -20, ms, db
 
 
-def h(text): return hashlib.sha1(text.encode()).hexdigest()[:10]
+def h(text): return hashlib.sha1((VOICE + '|' + text).encode()).hexdigest()[:10]   # the voice is part of the clip: change it and every clip is re-recorded
 
 
 def run(c, man, force):

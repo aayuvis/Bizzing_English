@@ -23,6 +23,17 @@ export const PLACES = {
   '@bee': ['Bizzing Bee', 'spelling contests live in Bee; English borrows its words and links there'],
   '@practice': ['Practice', 'spaced checks on a later day; the mistakes deck'],
   '@grownups': ['Grown-ups’ page', 'a grown-up’s 1–4 rubric on every piece of writing and every speech'],
+  '@vocab': ['Tools · Vocabulary', 'Bee’s decks — Meaning Masters, the Mighty 500, by difficulty and by origin — study, check, the next set at 80%'],
+  '@idioms': ['Tools · Idioms & Similes', '2,368 phrases from Bee’s list with meaning, example and a quiz; origin stories labelled and awaiting a reviewer'],
+  '@typing': ['Tools · Typing Trainer', 'Bee’s 15 finger-by-finger lessons, then the sixty-second test'],
+  '@quotes': ['Tools · Quotes & Poems', '331 lines checked in the books, and Bee’s quotations; “learn it by heart” opens the fading recitation'],
+  '@myths': ['Library · Greek myths', '15 myths as a journey, the words each gave English, and Who’s who quoted from the stories'],
+  '@authors': ['Library · Authors', '14 deep dives: Shakespeare deepest — every scene, the sonnets, his words, how to read him, a quiz'],
+  '@plot': ['Play · Plot Line', 'drag a story’s scenes onto a timeline; finals ask which scene is missing'],
+  '@forge': ['Play · Root Forge', 'prefixes, endings and roots that make real words; the final forges a family'],
+  '@duel': ['Play · Rhetoric Duel', 'the stronger line, and why — best of five against a rival'],
+  '@feed': ['My Feed', 'about twenty of 5,996 cards picked for the child’s level, each with a question, then it ends'],
+  '@certs': ['Certificates', 'one for every level and whole book finished, drawn on the device'],
 };
 
 export const CONCEPTS = [
@@ -30,6 +41,7 @@ export const CONCEPTS = [
     ['Rhyme and rime families', '5–7', ['w1-rhyme', 'w1-odd']],
     ['Onset and rime: building words', '5–7', ['w1-build']],
     ['Spelling patterns and rules', '6–14', ['@bee', 'wr2-dict'], 'part'],
+    ['Typing: touch-typing for writing on a keyboard', '7–14', ['@typing']],
   ] },
   { n: 'Vocabulary', ic: 'word', rows: [
     ['What a word means; choosing the word for a meaning', '6–10', ['w2-']],
@@ -45,6 +57,8 @@ export const CONCEPTS = [
     ['Homophones and their meanings', '7–11', ['w10-clues'], 'part'],
     ['Hard words in depth: meaning, origin, root clues', '11–14', ['w10-']],
     ['Keeping a personal word bank', '6–14', ['@bank']],
+    ['Vocabulary study in decks, vocabulary-bee style', '8–14', ['@vocab']],
+    ['Building words from parts, against the clock', '8–13', ['@forge', 'w6-']],
   ] },
   { n: 'Grammar', ic: 'sentence', rows: [
     ['Nouns, verbs and adjectives', '6–8', ['s1-']],
@@ -98,6 +112,10 @@ export const CONCEPTS = [
     ['Comparing two works', '12–14', ['li9-']],
     ['Making the case for a book', '10–14', ['li10-case']],
     ['Who said it: lines and their speakers', '8–14', ['@who']],
+    ['Greek and Roman myths, and the words they gave English', '8–14', ['@myths', 'w7-']],
+    ['Author study: a writer’s works, words and world', '9–14', ['@authors']],
+    ['Sequencing a story’s events', '6–11', ['@plot', 'li1-']],
+    ['Knowing great lines by heart', '8–14', ['@quotes', 'sp2-recite']],
   ] },
   { n: 'Writing', ic: 'writing', rows: [
     ['Copywork: every capital and comma', '6–9', ['wr1-copy', '@storycommas']],
@@ -126,6 +144,7 @@ export const CONCEPTS = [
     ['Impromptu speaking', '11–14', ['sp9-impromptu']],
     ['Debate: both sides', '12–14', ['sp10-debate']],
     ['Speaking in front of others, under a little pressure', '9–14', ['@contest']],
+    ['Judging which wording is stronger, and why', '10–14', ['@duel', 'la7-']],
     ['Discussion: talking about a text', '6–14', ['@talk']],
   ] },
   { n: 'Language and its history', ic: 'language', rows: [
@@ -134,6 +153,7 @@ export const CONCEPTS = [
     ['The story of English: Old English to the dictionaries', '9–14', ['la3-']],
     ['Shakespeare’s words', '11–14', ['la4-']],
     ['Idioms from the fables and myths', '9–13', ['la5-']],
+    ['Idioms and similes in everyday English', '8–14', ['@idioms']],
     ['Register and dialect', '10–14', ['la6-']],
     ['Rhetoric: anaphora, tricolon, antithesis', '11–14', ['la7-']],
     ['The rhythm of great prose and verse', '12–14', ['la9-']],
