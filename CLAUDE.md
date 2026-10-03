@@ -96,7 +96,9 @@ Inherited from the family, and it holds here:
    Andersen (translator unknown), Peter Pan (GOSH's UK royalty, CDPA s.301), Pinocchio (no
    translation chosen) and The Hungry Stones (a translator's death date) still wait.
 2. **Never invent a quotation.** Every line of the hour is an exact substring of its held text;
-   `test/texts.mjs` is the check-quotes lint. Bee's quotes are never imported (unsourced).
+   `test/texts.mjs` is the check-quotes lint. **Bee's quotes** (owner, 3 Oct: "add bee quotes nonlabelled")
+   are shown in Tools → Quotes & Poems exactly as Bee has them, in their own file — they never enter the
+   lines of the hour, the feed or any question, which stay held-text only.
 3. **Modern works are cards, never quotes:** our own summary and why it matters.
 4. **Retellings are labelled** "Retold for younger readers — the original is in the Library".
    Today every passage is an original.
