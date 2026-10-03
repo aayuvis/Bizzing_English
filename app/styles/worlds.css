@@ -20,7 +20,9 @@ html[data-bz-dark] .scn-near { background: linear-gradient(180deg, color-mix(in 
 html[data-bz-dark] .p-petal i { background: #f6c27a; box-shadow: 0 0 6px #f6c27a; width: 4px; height: 4px; border-radius: 50%; }   /* fireflies by night */
 html[data-bz-dark] .p-mist i { background: radial-gradient(rgba(170, 190, 255, .25), transparent 70%); }
 .scn-idle b { position: absolute; top: 18%; left: -60px; width: 26px; height: 18px; animation: fly 26s linear infinite; }
-.i-butterfly b { background: radial-gradient(circle at 30% 50%, #f59e0b 40%, transparent 42%), radial-gradient(circle at 70% 50%, #f97316 40%, transparent 42%); }
+.i-butterfly b { top: 78%; width: 30px; height: 24px; opacity: .8; background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 32'%3E%3Cpath d='M20 16C14 2 2 2 3 10s9 7 17 6C13 19 5 24 9 29s10-5 11-13z' fill='%23f59e0b' stroke='%237c3a10' stroke-width='1.2'/%3E%3Cpath d='M20 16C26 2 38 2 37 10s-9 7-17 6c7 3 15 8 11 13s-10-5-11-13z' fill='%23f97316' stroke='%237c3a10' stroke-width='1.2'/%3E%3Cpath d='M20 9v15' stroke='%233b1d0a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  animation: fly 32s linear infinite, flap .5s ease-in-out infinite alternate; }
+@keyframes flap { to { scale: .55 1; } }
 .i-moth b { width: 16px; height: 12px; background: radial-gradient(#f4e7c8 45%, transparent 50%); top: 30%; }
 .i-pennant b { width: 30px; height: 12px; clip-path: polygon(0 0, 100% 50%, 0 100%); background: #b91c1c; left: 70%; top: 8%; animation: flutter 1.4s ease-in-out infinite alternate; }
 .i-dove b, .i-swallow b { width: 22px; height: 10px; clip-path: polygon(0 50%, 40% 0, 50% 45%, 60% 0, 100% 50%, 50% 70%); background: #fff; }

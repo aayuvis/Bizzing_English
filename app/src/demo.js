@@ -6,7 +6,9 @@
 import { setDemo } from './store.js';
 import { newHousehold, newKid, addKid, bumpDay, addToBank } from './model.js';
 import { taught, spacedCheck } from './mastery.js';
-import { setDemoCoins } from './family.js';
+import { setDemoCoins, setDemoLedger } from './family.js';
+import { stopById } from './curriculum.js';
+import { readingStop } from './reading.js';
 
 const DAY = 864e5;
 export function demoHousehold(now = Date.now()) {
@@ -32,6 +34,14 @@ export function demoHousehold(now = Date.now()) {
   k.book = { work: 'jungle', passage: 'jungle-mowgli' };
   k.last = { what: 'stop', title: 'Make the word', right: 7, n: 8, at: now - 2 * DAY };
   k.owned = ['hare'];
-  setDemo(h); setDemoCoins(186);
+  /* the sample's wallet is made from what it did: seven right answers and a stop for each passed stop, a
+     mastery for each one proved on a later day — so the balance and the history always agree */
+  const L = [], notes = (k.coinNotes = {}), name = (id) => stopById(id)?.title || readingStop(id)?.title || id;
+  for (const [id, ago] of plan) { const t = now - ago * DAY;
+    for (let i = 0; i < 7; i++) { L.push({ a: 'english', t: t + i * 1000, n: 1, why: 'answer' }); notes[t + i * 1000] = name(id); }
+    L.push({ a: 'english', t: t + 9000, n: 5, why: 'stop' }); notes[t + 9000] = name(id); }
+  for (const [id, ago] of plan.filter(([, a]) => a >= 9)) { const t = now - (ago - 2) * DAY + 5000; L.push({ a: 'english', t, n: 20, why: 'mastery' }); notes[t] = `Learned: ${name(id)}`; }
+  L.sort((a, b) => a.t - b.t);
+  setDemo(h); setDemoLedger(L); setDemoCoins(L.reduce((a, x) => a + x.n, 0));
   return h;
 }

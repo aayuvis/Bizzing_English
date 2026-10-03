@@ -49,7 +49,13 @@ export function confetti() {
 }
 
 /* Coins for a learning event (the family's standard amounts; the wallet enforces the daily lid). */
-export function pay(ev) { const k = kid(); if (!k) return 0; const n = earn(k.name, ev); if (n) sfx('coin'); return n; }
+/* `what` names the thing that earned it — "Commas (Sentence 5)" — kept beside the wallet's own line (k.coinNotes, keyed
+   by the coin's moment), so a coin history can say what each coin was for. The wallet is the family's and has no note. */
+export function pay(ev, what) {
+  const k = kid(); if (!k) return 0; const t = Date.now(), n = earn(k.name, ev, t);
+  if (n) { sfx('coin'); if (what) { const notes = (k.coinNotes ||= {}); notes[t] = String(what).slice(0, 80); const ks = Object.keys(notes); if (ks.length > 400) for (const x of ks.slice(0, ks.length - 400)) delete notes[x]; } }
+  return n;
+}
 
 /* After any learning event: medals deserved are recorded and celebrated once. */
 export function checkMedals() {

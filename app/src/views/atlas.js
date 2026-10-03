@@ -16,6 +16,11 @@ import { strandOpen, planOpen, levelOpen, levelDone } from '../model.js';
 import { stepOf, STEP } from '../mastery.js';
 import { STRAND_WORLD, plate } from '../worlds.js';
 import { avatarOf } from './pages.js';
+/* stars as drawn shapes, never text glyphs (a ★ is a font's, and differs on every device) */
+const STAR = 'M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z';
+function starMarks(x, y, n, phone) { const s = phone ? 9 : 7.5, w = s * n + (n - 1) * 1; let out = '';
+  for (let i = 0; i < n; i++) out += `<path class="starmark" d="${STAR}" transform="translate(${(x - w / 2 + i * (s + 1)).toFixed(1)} ${(y - s / 2).toFixed(1)}) scale(${(s / 24).toFixed(3)})"/>`;
+  return out; }
 
 /* [x %, y %] on atlas.webp, at the foot of each place */
 export const ATLAS_PINS = { word: [21, 70], sentence: [55, 82], reading: [27, 41], writing: [79, 58], speaking: [50, 50], literature: [72, 31], language: [46, 19] };
@@ -72,7 +77,7 @@ function board(k, s, phone) {
       const t = t0 + ((i + 1) / (ls.length + 1)) / (N - 1), [sx, sy] = f(t), r = k.stops[st.id], cur = nx.stop?.id === st.id;
       const sc = stars(k, st), op = open || r?.passed;
       g += `<a href="${op ? `#/stop/${st.id}` : `#/atlas/${s.id}`}" class="stone${r?.passed ? ' done' : ''}${cur ? ' cur' : ''}${op ? '' : ' shut'}" aria-label="${esc(st.title)}${r?.passed ? `, ${sc} star${sc > 1 ? 's' : ''}` : op ? '' : ', not open yet'}">
-        <circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="${phone ? 15 : 12}"/>${r?.passed ? `<text x="${sx.toFixed(1)}" y="${(sy + (phone ? 5 : 4)).toFixed(1)}" text-anchor="middle">${'★'.repeat(sc)}</text>` : ''}
+        <circle cx="${sx.toFixed(1)}" cy="${sy.toFixed(1)}" r="${phone ? 15 : 12}"/>${r?.passed ? starMarks(sx, sy, sc, phone) : ''}
         ${cur ? `<image href="${avatarOf(k)}" x="${(sx - 26).toFixed(1)}" y="${(sy - (phone ? 70 : 62)).toFixed(1)}" width="52" height="52"/>` : ''}<title>${esc(st.title)}</title></a>`;
     });
     g += `<a href="#lv-${L}" class="station${d ? ' done' : has ? (open ? ' open' : ' shut') : ' soon'}" aria-label="Level ${L}: ${esc(lv.title)}${d ? ', finished' : has ? '' : ', being written'}">
@@ -92,9 +97,9 @@ export function strandView(sid) {
     const ls = stops.filter((x) => x.level === l.n), open = !lock && levelOpen(k, sid, l.n), d = levelDone(k, sid, l.n);
     const rows = ls.map((st) => {
       const r = k.stops[st.id], sc = stars(k, st);
-      const say = r?.passed ? `${'★'.repeat(sc)}${'☆'.repeat(3 - sc)} · ${STEP[stepOf(k, st.id)]}` : r?.step ? 'Started — come back to it' : open ? 'Ready' : 'Opens when the level before is done';
+      const say = r?.passed ? `${sc} of 3 stars · ${STEP[stepOf(k, st.id)]}` : r?.step ? 'Started — come back to it' : open ? 'Ready' : 'Opens when the level before is done';
       return `<a class="stoprow${r?.passed ? ' passed' : ''}" href="${open || r?.passed ? `#/stop/${st.id}` : `#/atlas/${sid}`}">
-        <span class="st">${icon(r?.passed ? 'check' : st.kind === 'passage' ? 'book' : open ? 'next' : 'lock')}</span><span><b>${esc(st.title)}</b><small>${esc(say)}</small></span>${st.band ? `<span class="tag">ages ${['', '6–7', '8–10', '11–14'][st.band]}</span>` : '<span></span>'}</a>`;
+        <span class="st">${icon(r?.passed ? 'check' : st.kind === 'passage' ? 'book' : open ? 'next' : 'lock')}</span><span><b>${esc(st.title)}</b><small>${r?.passed ? `<span class="starrow" aria-hidden="true">${[0, 1, 2].map((i) => `<svg viewBox="0 0 24 24" class="${i < sc ? 'on' : ''}"><path d="${STAR}"/></svg>`).join('')}</span> ` : ''}${esc(say)}</small></span>${st.band ? `<span class="tag">ages ${['', '6–7', '8–10', '11–14'][st.band]}</span>` : '<span></span>'}</a>`;
     }).join('');
     const body = ls.length ? `<div class="stoplist">${rows}</div>` : `<p class="note">The stops for this level are being written. The levels before it are ready.</p>`;
     return `<details class="card lvcard" id="lv-${l.n}"${(open && !d && ls.length) || (l.n === 1 && !lock) ? ' open' : ''}><summary><h3><span class="num${d ? ' done' : ''}">${l.n}</span>${esc(l.title)}<small class="muted">${ls.length ? `${ls.filter((x) => k.stops[x.id]?.passed).length}/${ls.length}` : 'soon'}</small></h3></summary><p class="muted" style="margin:0">${esc(l.iCan)}</p>${body}</details>`;

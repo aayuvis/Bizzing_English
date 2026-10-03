@@ -61,7 +61,7 @@ export function score(round, m, { target, words = 0, places = 1 } = {}) {
     parts.push(['Volume — some lines louder, some softer', m.range >= 12 ? 3 : m.range >= 7 ? 2 : 1, 3]);
   } else {
     const wpm = words ? Math.round(words / (s / 60)) : m.wpm;
-    parts.push(['Pace — a steady speaking pace', wpm >= 100 && wpm <= 160 ? 3 : wpm >= 80 && wpm <= 185 ? 2 : 1, 3]);
+    parts.push(wpm > 230 ? ['Pace — too quick for the whole piece: it looks unfinished', 0, 3] : ['Pace — a steady speaking pace', wpm >= 100 && wpm <= 160 ? 3 : wpm >= 80 && wpm <= 185 ? 2 : 1, 3]);
     const ratio = m.pauses / places;
     parts.push(['Pauses — about one at each full stop or line end', ratio >= 0.6 && ratio <= 1.7 ? 3 : ratio >= 0.3 && ratio <= 2.5 ? 2 : 1, 3]);
   }

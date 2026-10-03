@@ -86,7 +86,7 @@ export const DESK_ACTIONS = {
     (W(k)[r.id] ||= []).push({ at: Date.now(), prompt: d.prompt, story: d.story, parts: d.parts, ticks: d.ticks });
     delete W(k).drafts[r.id];
     const rec = (k.stops[r.id] ||= { passed: false, tries: 0 }); rec.tries++; rec.at = Date.now();
-    if (!rec.passed) { rec.passed = true; taught(k, r.id, Date.now(), { judged: true }); pay('stop'); mark('stop', `Wrote: ${st.title}`); }
+    if (!rec.passed) { rec.passed = true; taught(k, r.id, Date.now(), { judged: true }); pay('stop', `Wrote: ${st.title}`); mark('stop', `Wrote: ${st.title}`); }
     bumpDay(k, 'stops'); bumpDay(k, 'made'); k.last = { what: 'write', title: st.title, at: Date.now() };
     sfx('finish'); save(); S.run.finished = true; checkMedals(); location.hash = `#/desk/${r.id}/done`;
   },

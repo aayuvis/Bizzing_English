@@ -42,4 +42,10 @@ const k2 = { name: 'Ben' }; ok(!owns(k2, 'curtain-gold') && extrasOf(k2).owned.l
 const { figureRound, FIGURE_KINDS } = await import('../src/games.js'); const { FIGURES } = await import('../src/data/literature.js');
 for (let sd = 0; sd < 60; sd++) { const r = figureRound(FIGURES, [], 's' + sd); ok(r.length === 10 && r.every((q) => q.answer >= 0 && q.answer < 5 && FIGURES.some((f) => f.text === q.text)) && new Set(r.map((q) => q.text)).size === 10, 'figure round: ten different real lines'); }
 ok(FIGURE_KINDS.every(([k]) => FIGURES.filter((f) => f.figure === k).length >= 12), 'at least 12 lines of each figure');
+// a reading stopped after 3.5 s is partial: no pace is claimed (it once claimed 4,950 words a minute)
+const { measure } = await import('../src/mic.js');
+const fr = []; for (let t = 0; t < 3500; t += 50) fr.push([t, t > 700 && t < 2900 ? -20 - (t % 300) / 60 : -60]);
+const pm = measure(fr, 290); ok(pm.partial && pm.wpm === 0, 'a 3.5 s reading of 290 words is partial, with no pace: ' + JSON.stringify(pm));
+const full = []; for (let t = 0; t < 120000; t += 50) full.push([t, (t > 200 && t < 119800 && t % 4000 > 400) ? -20 : -60]);
+ok(!measure(full, 290).partial && measure(full, 290).wpm > 100, 'a two-minute reading of 290 words has a pace');
 console.log(`contest: ${n - fails}/${n}`); if (fails) process.exit(1);

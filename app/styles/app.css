@@ -474,3 +474,18 @@ span.rv.you svg { width: 18px; height: 18px; }
 @media (max-width: 900px) { .fd-three, .fd-keep { grid-template-columns: minmax(0, 1fr); } .fd-prog { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fd-prog > :last-child:nth-child(odd) { grid-column: 1 / -1; } }
 .fd { display: grid; gap: 16px; }
 @media (max-width: 720px) { .fd { order: 8; } }
+
+/* an icon set inline in running text is the size of the text (a shield in a note grew to 520px once) */
+.note > svg, p > svg, small > svg, li > svg, .feedback svg { width: 1.15em; height: 1.15em; flex: none; vertical-align: -0.2em; }
+.chips-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.starmark { fill: #f5b301; stroke: #8a5a00; stroke-width: 1.5; }
+.starrow { display: inline-flex; gap: 2px; vertical-align: -0.15em; } .starrow svg { width: 13px; height: 13px; fill: none; stroke: #b58000; stroke-width: 2; } .starrow svg.on { fill: #f5b301; }
+
+/* report and certificates */
+.helplist { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 6px; }
+.helplist a { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--bz-accent) 45%, transparent); text-underline-offset: 3px; }
+.certs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 10px; }
+.cert { display: flex; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 14px; background: var(--bz-chip); text-decoration: none; color: inherit; border-left: 5px solid var(--cc); }
+.cert svg { width: 22px; height: 22px; color: var(--cc); flex: none; } .cert b { display: block; font-size: 14px; } .cert small { color: var(--bz-muted); }
+.certview { padding: 8px; } .certview svg { width: 100%; height: auto; display: block; }
+@media print { body * { visibility: hidden; } .certview, .certview * { visibility: visible; } .certview { position: absolute; inset: 0; border: 0; box-shadow: none; } }

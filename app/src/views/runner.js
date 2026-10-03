@@ -161,7 +161,7 @@ function answer(resp) {
   bumpDay(k, 'answers');
   if (ok) {
     r.right++; bumpDay(k, 'right'); sfx('right');
-    if (r.phase === 'check') pay('answer');
+    if (r.phase === 'check') pay('answer', r.st?.title || stopById(it.stop)?.title || readingStop(it.stop)?.title);
     if (r.byStop && it.stop) (r.byStop[it.stop] ||= [0, 0])[0]++;
     setTimeout(() => { if (S.run === r && r.state?.done && r.state.ok) advance(); }, 950);
   } else {
@@ -189,7 +189,7 @@ function finishStop() {
   if (passed) {
     const first = !rec.passed;
     rec.passed = true; rec.step = 0; taught(k, r.id); bumpDay(k, 'stops');
-    if (first) { pay('stop'); mark('stop', `${st.title} (${strand(st.strand).title} ${st.level})`); sfx('finish'); }
+    if (first) { pay('stop', `${st.title} (${strand(st.strand).title} ${st.level})`); mark('stop', `${st.title} (${strand(st.strand).title} ${st.level})`); sfx('finish'); }
     if (first && levelDone(k, st.strand, st.level)) {
       const ms = `${st.strand}-${st.level}`; if (!k.milestones.includes(ms)) k.milestones.push(ms);
       mark('band', `Finished ${strand(st.strand).title} level ${st.level}: ${level(st.strand, st.level).title}`);
@@ -204,7 +204,7 @@ function finishCheck() {
     const scaled = Math.round((right / n) * 10);
     const out = spacedCheck(k, id, scaled, 10);
     r.result[id] = { learned: 'Learned — it stuck', mastered: 'Mastered', lapse: 'Slipped a step — it will come back soon', practice: 'Practised', held: 'Held where it was' }[out];
-    if (out === 'learned' || out === 'mastered') { pay('mastery'); mark('mastery', `${out === 'mastered' ? 'Mastered' : 'Learned'}: ${stopById(id)?.title || readingStop(id)?.title || id}`); }
+    if (out === 'learned' || out === 'mastered') { pay('mastery', `${out === 'mastered' ? 'Mastered' : 'Learned'}: ${stopById(id)?.title || readingStop(id)?.title || id}`); mark('mastery', `${out === 'mastered' ? 'Mastered' : 'Learned'}: ${stopById(id)?.title || readingStop(id)?.title || id}`); }
   }
   k.last = { what: 'stop', title: 'a check of what you know', right: r.right, n: r.items.length, at: Date.now() };
   sfx('finish'); save(); render(); checkMedals(); render();

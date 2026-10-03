@@ -35,6 +35,7 @@ export function stop(words = 0) {
   return measure(m.frames, words);
 }
 
+export const PARTIAL_WPM = 230;
 export function measure(frames, words) {
   if (!frames.length) return { secs: 0, wpm: 0, pauses: 0, range: 0 };
   const dbs = frames.map((f) => f[1]).sort((a, b) => a - b);
@@ -46,5 +47,8 @@ export function measure(frames, words) {
   let pauses = 0, run = 0;
   for (const [t, db] of frames) { if (t < first || t > last) continue; if (db <= thr) run += 50; else { if (run >= 350) pauses++; run = 0; } }
   const sp = speech.map((f) => f[1]).sort((a, b) => a - b);
-  return { secs: +secs.toFixed(1), wpm: words ? Math.round(words / (secs / 60)) : 0, pauses, range: Math.round(sp[Math.floor(sp.length * 0.95)] - sp[Math.floor(sp.length * 0.05)]) };
+  /* pace assumes the whole text was read; faster than anyone reads aloud (230 words a minute) means it was not,
+     so no pace is claimed — the reading is marked partial (a 3-second stop once claimed 4,950 words a minute) */
+  const raw = words ? words / (secs / 60) : 0, partial = !!words && raw > PARTIAL_WPM;
+  return { secs: +secs.toFixed(1), wpm: partial ? 0 : Math.round(raw), partial, pauses, range: Math.round(sp[Math.floor(sp.length * 0.95)] - sp[Math.floor(sp.length * 0.05)]) };
 }

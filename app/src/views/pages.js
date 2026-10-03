@@ -7,6 +7,8 @@ import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '..
 import { AVATARS, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
 import { balance, ledger, spend } from '../family.js';
+import { helpNext } from '../report.js';
+import { certificates, certSVG } from '../certificates.js';
 import { EXTRAS, KINDS, extra, owns, wearing, wear, buyExtra } from '../extras.js';
 import { MEDALS } from '../medals.js';
 import { WORLDS, plate } from '../worlds.js';
@@ -36,7 +38,8 @@ export function meView() {
     <div class="card pin stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:84px;height:84px"><div><h2 style="margin:0">${esc(k.name)}</h2><p class="muted" style="margin:0">${esc(headline(k))}</p></div></div>
       <div class="stats"><div class="stat"><b>${goodDays(k, 7)}</b><small>good days in the last 7</small></div><div class="stat"><b>${learnedCount(k)}</b><small>things learned (proved on a later day)</small></div><div class="stat"><b>${Object.keys(k.bank).length}</b><small>words in your bank</small></div><div class="stat"><b>${Object.keys(k.medals).length}</b><small>medals</small></div></div>
       ${bookplate(k)}<div class="row">${link('Medals', '#/medals', { cls: 'out', ic: 'medal' })}${link('Collection', '#/collection', { cls: 'out', ic: 'star' })}${link('Reading log', '#/log', { cls: 'out', ic: 'book' })}</div></div>
-    <div class="card"><h3>The seven strands</h3><div class="stoplist">${rows}</div></div></div>`;
+    <div class="card"><h3>The seven strands</h3><div class="stoplist">${rows}</div></div></div>
+    ${(() => { const cs = certificates(k); return `<section class="card" style="margin:13px 0"><h3>Certificates</h3>${cs.length ? `<div class="certs">${cs.map((c) => `<a class="cert" href="#/certificate/${c.id}" style="--cc:${c.colour}">${icon(c.kind === 'book' ? 'book' : 'medal')}<span><b>${esc(c.title)}</b><small>${new Date(c.at).toLocaleDateString()}</small></span></a>`).join('')}</div>` : '<p class="muted" style="margin:0">Finish every stop in a level and its certificate appears here, ready to save or print.</p>'}</section>`; })()}`;
 }
 
 /* each medal opens the place that earns it */
@@ -84,7 +87,8 @@ const APPNAME = { english: 'English', bee: 'Bee', maths: 'Maths', geography: 'Ge
 const WHY = { answer: 'a right answer', stop: 'a stop finished', contest: 'the Elocution Contest', mastery: 'something proved on a later day', migrated: 'coins brought over' };
 function historyList(L) {
   if (!L.length) return '<p class="muted">No coins yet. Every right answer in a check earns one.</p>';
-  return `<ul class="ledger">${L.map((x) => `<li><span>${esc(x.n > 0 ? WHY[x.why] || x.why : x.why.startsWith('avatar:') ? 'avatar: ' + (byId(x.why.slice(7))?.name || x.why.slice(7)) : x.why.startsWith('world:') ? 'world ' + x.why.slice(6) : x.why.startsWith('extra:') ? 'extra: ' + (extra(x.why.slice(6))?.name || x.why.slice(6)) : x.why)} · ${esc(APPNAME[x.a] || x.a)}</span><b class="${x.n > 0 ? 'plus' : 'minus'}">${x.n > 0 ? '+' : ''}${x.n}</b></li>`).join('')}</ul>`;
+  const notes = kid()?.coinNotes || {};
+  return `<ul class="ledger">${L.map((x) => `<li><span>${x.n > 0 && x.a === 'english' && notes[x.t] ? `<b>${esc(notes[x.t])}</b> — ` : ''}${new Date(x.t).toLocaleDateString(undefined, { day: 'numeric', month: 'short' })} · ${esc(x.n > 0 ? WHY[x.why] || x.why : x.why.startsWith('avatar:') ? 'avatar: ' + (byId(x.why.slice(7))?.name || x.why.slice(7)) : x.why.startsWith('world:') ? 'world ' + x.why.slice(6) : x.why.startsWith('extra:') ? 'extra: ' + (extra(x.why.slice(6))?.name || x.why.slice(6)) : x.why)} · ${esc(APPNAME[x.a] || x.a)}</span><b class="${x.n > 0 ? 'plus' : 'minus'}">${x.n > 0 ? '+' : ''}${x.n}</b></li>`).join('')}</ul>`;
 }
 
 /* ---------- Practice: spaced checks and the mistakes deck ---------- */
@@ -145,7 +149,7 @@ export function searchView(q) {
   return pageHead({ title: `Search: ${q}`, sub: 'stops, books and words', back: { label: 'Home', href: '#/home' } }) + `<div class="grid3">
     <div class="card"><h3>Stops</h3>${stops.length ? stops.map((st) => `<a href="#/stop/${st.id}" style="display:block;padding:7px 0">${esc(st.title)} <small class="muted">${esc(strand(st.strand).title)} ${st.level}</small></a>`).join('') : '<p class="muted">None.</p>'}</div>
     <div class="card"><h3>Books</h3>${works.length ? works.map((w) => `<a href="#/book/${w.id}" style="display:block;padding:7px 0">${esc(w.title)} <small class="muted">${esc(w.author)}</small></a>`).join('') : '<p class="muted">None.</p>'}</div>
-    <div class="card"><h3>Words</h3>${words.length ? words.map((w) => `<a href="#/word/${encodeURIComponent(w)}" style="display:inline-block;padding:6px 10px 6px 0">${esc(w)}</a>`).join('') : '<p class="muted">None in our list.</p>'}</div></div>`;
+    <div class="card"><h3>Words</h3>${words.length ? `<div class="chips-row">${words.map((w) => `<a class="bz-chip" href="#/word/${encodeURIComponent(w)}">${esc(w)}</a>`).join(' ')}</div>` : '<p class="muted">None in our list.</p>'}</div></div>`;
 }
 
 /* ---------- Grown-ups ---------- */
@@ -160,14 +164,15 @@ export function grownupsView() {
   const cards = h.kids.map((k) => {
     const stops = STRANDS.map((s) => [s, stopsOf(s.id).filter((x) => k.stops[x.id]?.passed).length]);
     const lapses = Object.entries(k.mastery).filter(([, r]) => r.lapses).sort((a, b) => b[1].lapses - a[1].lapses).slice(0, 3);
-    const help = lapses.length ? `${they(k)} slipped on ${lapses.map(([id]) => `“${stopById(id)?.title || readingStop(id)?.title || id}”`).join(', ')} — a spaced check will bring ${lapses.length > 1 ? 'them' : 'it'} back.` : due(k).length ? `${due(k).length} stops are ready for ${they(k)} to prove on a later day (Practice).` : `Nothing needs help yet. ${they(k)}’s next stop is on Home.`;
+    const help = helpNext(h, k), certs = certificates(k);
     const tries = Object.entries(k.stage).flatMap(([id, a]) => a.map((t) => ({ ...t, id }))).sort((a, b) => b.at - a.at).slice(0, 5);
     const pieces = Object.entries(k.writing || {}).filter(([id, v]) => Array.isArray(v)).flatMap(([id, a]) => a.map((p, i) => ({ ...p, id, i }))).sort((a, b) => b.at - a.at).slice(0, 4);
     return `<section class="card stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:56px;height:56px"><div><h3 style="margin:0">${esc(k.name)}</h3><small class="muted">${BANDS[k.band - 1].age}</small></div></div>
       <div class="stats"><div class="stat"><b>${minutes(k)}</b><small>active minutes, last 7 days</small></div><div class="stat"><b>${Object.values(k.stops).filter((x) => x.passed).length}</b><small>stops passed</small></div><div class="stat"><b>${learnedCount(k)}</b><small>learned (later-day check)</small></div><div class="stat"><b>${masteredCount(k)}</b><small>mastered</small></div></div>
       <p class="note" style="margin:0"><b>Time</b> is active minutes from the family feed — it never counts as learning. <b>Progress</b> and <b>mastery</b> count only right answers, and mastery only on a later day.</p>
       <div class="stoplist">${stops.map(([s, n]) => `<div class="stoprow"><span class="st" style="color:${s.colour}">${icon(s.icon)}</span><span><b>${esc(s.title)}</b><small>${n} of ${stopsOf(s.id).length} stops · ${s.levels.filter((l) => levelDone(k, s.id, l.n)).length} levels</small></span><span></span></div>`).join('')}</div>
-      <p style="margin:0"><b>What to help with next:</b> ${esc(help)}</p>
+      <div><b>What to help with next</b><ul class="helplist">${help.map((x) => `<li><a href="${x.href}">${esc(x.text)}</a></li>`).join('')}</ul></div>
+      ${certs.length ? `<div><b>Certificates</b> — ${certs.length} earned: ${certs.slice(0, 4).map((c) => `<a href="#/certificate/${c.id}">${esc(c.title)}</a>`).join(' · ')}${certs.length > 4 ? ` · <a href="#/me">all ${certs.length}</a>` : ''}</div>` : ''}
       ${tries.length ? `<div><b>Speaking</b> — the app measured time, pace and pauses; how well it was said is yours to judge (1 not yet · 2 getting there · 3 good · 4 excellent):<ul class="ledger">${tries.map((t) => `<li><span>${new Date(t.at).toLocaleDateString()} · ${esc(stopById(t.id)?.title || t.id)}${t.side ? ` (${t.side})` : ''} · ${Math.round(t.secs)}s${t.wpm ? ` · ${t.wpm} wpm` : ''} · ${t.pauses} pauses</span><span class="row">${[1, 2, 3, 4].map((v) => `<button class="bz-chip" data-act="rubric" data-arg="${k.id}:${t.id}:${t.at}:${v}" aria-pressed="${t.rubric === v}"${t.rubric === v ? ' aria-current="page"' : ''}>${v}</button>`).join('')}</span></li>`).join('')}</ul></div>` : ''}
       ${pieces.length ? `<div><b>Writing</b> — read it, then judge it (1–4). The app only counted sentences and words; it never marks writing.${pieces.map((p) => `<details class="piece"><summary>${new Date(p.at).toLocaleDateString()} · ${esc(stopById(p.id)?.title || p.id)}${p.prompt ? ` · ${esc(p.prompt)}` : ''}${p.rubric ? ` · judged ${p.rubric}` : ''}</summary><div class="passage" style="font-size:16px">${p.parts.map((x) => `<p>${esc(x)}</p>`).join('')}</div><div class="row">${[1, 2, 3, 4].map((v) => `<button class="bz-chip" data-act="wrubric" data-arg="${k.id}:${p.id}:${p.i}:${v}" aria-pressed="${p.rubric === v}"${p.rubric === v ? ' aria-current="page"' : ''}>${v}</button>`).join('')}</div></details>`).join('')}</div>` : ''}
       <div class="setrow"><label>Age band</label><div class="seg">${BANDS.map((b) => `<button data-act="kid-band" data-arg="${k.id}:${b.id}" aria-pressed="${k.band === b.id}">${b.label}</button>`).join('')}</div></div>
@@ -264,7 +269,7 @@ export const PAGE_ACTIONS = {
   'km-go': (a) => { S.sheet = null; go(a); },
   'switch-kid': (a) => { S.h.active = a; save(); S.sheet = null; go('#/home'); },
   'add-kid': () => { if (!isUnlocked() && S.h.kids.length) { S.sheet = null; go('#/grownups'); return; } S.sheet = { kind: 'addkid' }; render(); },
-  'nk-band': (a) => { S.nkBand = +a; render(); },
+  'nk-band': (a) => { S.nkBand = +a; document.querySelectorAll('[data-act=nk-band]').forEach((b) => b.setAttribute('aria-pressed', String(+b.dataset.arg === +a))); },  // never re-render: that would wipe the typed name
   'add-kid-go': () => { const n = document.querySelector('#nk')?.value.trim(); if (!n) return; addKid(S.h, newKid(n, S.nkBand || 2, STARTERS[S.h.kids.length % STARTERS.length])); save(); S.sheet = null; go('#/home'); },
   'kid-band': (a) => { const [id, b] = a.split(':'); const k = S.h.kids.find((x) => x.id === id); k.band = +b; save(); render(); },
   'kid-readaloud': (a) => { const k = S.h.kids.find((x) => x.id === a); k.prefs.readAloud = !k.prefs.readAloud; save(); render(); },
@@ -296,3 +301,24 @@ export async function onChange(t) {
   }
 }
 export { isDemo };
+
+/* ---------- a certificate, made on this device ---------- */
+export function certificateView(id) {
+  const k = kid(), c = certificates(k).find((x) => x.id === id);
+  if (!c) return empty('oops', 'That certificate is not earned yet — finish every stop in the level first.', link('My page', '#/me', { ic: 'user' }));
+  const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
+  return pageHead({ title: 'Certificate', sub: c.title, back: { label: 'My page', href: '#/me' } }) + `<div class="stack" style="max-width:900px;margin:0 auto">
+    <div class="card certview">${svg}</div>
+    <div class="row" style="justify-content:center">${btn('Save as a picture', 'cert-save', { arg: id, ic: 'check' })}${btn('Print', 'cert-print', { cls: 'out', ic: 'pen' })}</div>
+    <p class="note" style="text-align:center;margin:0">Made on this device. The picture is saved to this device only — nothing is sent anywhere.</p>
+    ${c.stops.length ? `<div class="card"><b>Every stop passed on its check:</b> ${c.stops.map(esc).join(' · ')}</div>` : ''}</div>`;
+}
+PAGE_ACTIONS['cert-save'] = (id) => {
+  const k = kid(), c = certificates(k).find((x) => x.id === id); if (!c) return;
+  const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
+  const img = new Image(), url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+  img.onload = () => { const cv = document.createElement('canvas'); cv.width = 1200; cv.height = 850; cv.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(url);
+    cv.toBlob((b) => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `Bizzing English certificate - ${c.title.replace(/[^\w ·-]+/g, '')}.png`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); toast('Saved to this device'); }, 'image/png'); };
+  img.src = url;
+};
+PAGE_ACTIONS['cert-print'] = () => window.print();

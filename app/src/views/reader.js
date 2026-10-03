@@ -67,7 +67,7 @@ function questionView(r) {
 function rAnswer(i) {
   const r = S.run, it = r.items[r.i], k = kid(); if (r.state?.done) return;
   const ok = check(it, i); r.state = { done: true, ok, pick: i }; bumpDay(k, 'answers');
-  if (ok) { r.right++; bumpDay(k, 'right'); sfx('right'); pay('answer'); setTimeout(() => { if (S.run === r && r.state?.ok) rNext(); }, 950); } else sfx('wrong');
+  if (ok) { r.right++; bumpDay(k, 'right'); sfx('right'); pay('answer', passage(r.id)?.title); setTimeout(() => { if (S.run === r && r.state?.ok) rNext(); }, 950); } else sfx('wrong');
   save(); render();
 }
 function rNext() {
@@ -77,7 +77,7 @@ function rNext() {
   r.phase = 'done'; rec.tries++; rec.best = Math.max(rec.best, r.right); rec.at = Date.now();
   k.reading[p.id] = { ...(k.reading[p.id] || {}), read: true, at: Date.now() };
   bumpDay(k, 'pages'); k.last = { what: 'read', title: p.title, at: Date.now() };
-  if (r.right >= Math.ceil(r.items.length * 0.75) && !rec.passed) { rec.passed = true; taught(k, id); pay('stop'); mark('stop', `Read “${p.title}”`); sfx('finish'); }
+  if (r.right >= Math.ceil(r.items.length * 0.75) && !rec.passed) { rec.passed = true; taught(k, id); pay('stop', `Read “${p.title}”`); mark('stop', `Read “${p.title}”`); sfx('finish'); }
   save(); render(); checkMedals(); render();
 }
 

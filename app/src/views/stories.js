@@ -171,7 +171,7 @@ export function finishExercise() {
   rec.ex[r.ex] = { right: r.right, n: r.items.length, at: Date.now() };
   if (r.ex === 'understand') {
     const id = 'rd-' + r.pid, st = (k.stops[id] ||= { passed: false, best: 0, tries: 0 }); st.tries++; st.best = Math.max(st.best || 0, r.right); st.at = Date.now();
-    if (r.right >= Math.ceil(r.items.length * 0.75) && !st.passed) { st.passed = true; taught(k, id); pay('stop'); mark('stop', `Understood “${r.title}”`); }
+    if (r.right >= Math.ceil(r.items.length * 0.75) && !st.passed) { st.passed = true; taught(k, id); pay('stop', `Understood “${r.title}”`); mark('stop', `Understood “${r.title}”`); }
   }
   sfx('finish'); save(); checkMedals();
   S.run = { mode: 'exlist', pid: r.pid, sets: r.sets, title: r.title };
@@ -233,7 +233,7 @@ export function finishChapterExercise() {
   if (r.ex === 'understand' && r.right >= Math.ceil(r.items.length * 0.75)) {
     const id = `bk-${r.book}-${r.chapter}`, st = (k.stops[id] ||= { passed: false, best: 0, tries: 0 }); st.tries++; st.best = Math.max(st.best, r.right);
     const b = (k.reading[`book:${r.book}`] ||= { at: r.chapter, done: [] });
-    if (!st.passed) { st.passed = true; taught(k, id); pay('stop'); mark('stop', `${m.short}, chapter ${r.chapter}`); b.done = [...new Set([...(b.done || []), r.chapter])]; if (r.chapter < m.chapters.length) b.at = r.chapter + 1; }
+    if (!st.passed) { st.passed = true; taught(k, id); pay('stop', `${m.short}, chapter ${r.chapter}`); mark('stop', `${m.short}, chapter ${r.chapter}`); b.done = [...new Set([...(b.done || []), r.chapter])]; if (r.chapter < m.chapters.length) b.at = r.chapter + 1; }
   }
   sfx('finish'); save(); checkMedals();
   location.hash = `#/whole/${r.book}/${r.chapter}/do`;

@@ -54,8 +54,8 @@ export function aloudView() {
   }
   const m = r.result, steady = m.wpm >= 90 && m.wpm <= 170;
   return head + `<div class="reader"><div class="card stack"><span class="kick">Measured on this device</span>
-    <div class="stats"><div class="stat"><b>${Math.floor(m.secs / 60)}:${String(Math.round(m.secs % 60)).padStart(2, '0')}</b><small>time</small></div><div class="stat"><b>${m.wpm}</b><small>words a minute</small></div><div class="stat"><b>${m.pauses}</b><small>pauses</small></div><div class="stat"><b>${m.range} dB</b><small>loud-to-soft range</small></div></div>
-    <p style="margin:0">${m.quiet ? 'It was very quiet — try again a little closer to the device.' : `You read ${t.words} words in ${m.secs} seconds — ${m.wpm} words a minute, with ${m.pauses} pauses. ${steady ? 'That is a steady reading pace.' : m.wpm > 170 ? 'That is quick — try breathing at each full stop.' : 'That is unhurried — good for a story told slowly.'}`}</p>
+    <div class="stats"><div class="stat"><b>${Math.floor(m.secs / 60)}:${String(Math.round(m.secs % 60)).padStart(2, '0')}</b><small>time</small></div><div class="stat"><b>${m.partial ? '—' : m.wpm}</b><small>words a minute</small></div><div class="stat"><b>${m.pauses}</b><small>pauses</small></div><div class="stat"><b>${m.range} dB</b><small>loud-to-soft range</small></div></div>
+    <p style="margin:0">${m.quiet ? 'It was very quiet — try again a little closer to the device.' : m.partial ? `You read for ${m.secs} seconds — too short for all ${t.words} words, so it looks like part of the passage. No pace is shown; read it to the end, then tap Stop.` : `You read ${t.words} words in ${m.secs} seconds — ${m.wpm} words a minute, with ${m.pauses} pauses. ${steady ? 'That is a steady reading pace.' : m.wpm > 170 ? 'That is quick — try breathing at each full stop.' : 'That is unhurried — good for a story told slowly.'}`}</p>
     <p class="note">The app cannot hear expression, so it does not say anything about it. You judge that — and so can a grown-up, on the grown-ups’ page.</p></div>
     <div class="card stack"><span class="kick">You judge</span>${SELF.map((x, i) => `<button class="opt" data-act="aloud-self" data-arg="${i}" aria-pressed="${r.self.includes(i)}">${icon(r.self.includes(i) ? 'check' : 'star')}<span>${esc(x)}</span></button>`).join('')}
     <div class="row">${btn('Save', 'aloud-save', { ic: 'check' })}${btn('Try again', 'aloud-again', { cls: 'out', ic: 'undo' })}</div></div></div>`;
@@ -77,7 +77,7 @@ export const STAGE_ACTIONS = {
     bumpDay(k, 'speak', Math.round(m.secs)); bumpDay(k, 'made');
     k.last = { what: 'stage', right: m.wpm, at: Date.now() };
     const rec = (k.stops['sp1-aloud'] ||= { passed: false, tries: 0 }); rec.tries++;
-    if (!rec.passed && !m.quiet && m.secs >= 20) { rec.passed = true; taught(k, 'sp1-aloud'); pay('stop'); mark('stop', 'Read a passage aloud on the Stage'); }
+    if (!rec.passed && !m.quiet && !m.partial && m.secs >= 20) { rec.passed = true; taught(k, 'sp1-aloud'); pay('stop', 'Read a passage aloud on the Stage'); mark('stop', 'Read a passage aloud on the Stage'); }
     if (r.from) { (k.reading[r.from] ||= {}); (k.reading[r.from].ex ||= {}).aloud = { right: m.wpm, n: 0, at: Date.now() }; }
     save(); location.hash = r.from ? `#/story/${r.from}/do` : '#/stage'; checkMedals();
   },

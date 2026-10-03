@@ -9,10 +9,12 @@ import { isDemo } from './store.js';
 
 export const APP = 'english';
 let demoCoins = 0;
-export const earn = (who, ev) => (isDemo() ? 0 : wEarn(APP, who, ev));
+export const earn = (who, ev, now = Date.now()) => (isDemo() ? 0 : wEarn(APP, who, ev, now));
 export const spend = (who, price, why) => (isDemo() ? false : wSpend(APP, who, price, why));
 export const balance = (who) => (isDemo() ? demoCoins : wBalance(who));
-export const ledger = (who) => (isDemo() ? [] : wLedger(who));
+export const ledger = (who) => (isDemo() ? demoLedger : wLedger(who));
+let demoLedger = [];
+export const setDemoLedger = (L) => { demoLedger = L; };
 export const setDemoCoins = (n) => { demoCoins = n; };
 export const milestone = (who, ev, label) => { if (!isDemo()) trackMilestone(APP, who, ev, label); };
 export function startActivity(getName) { if (!isDemo()) trackActivity(APP, getName); }

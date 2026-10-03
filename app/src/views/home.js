@@ -56,7 +56,7 @@ export function bookOf(k) {
 export function greetLine(k, nx) {
   const L = k.last;
   const nextT = nx.stop?.title ? `“${nx.stop.title}”` : 'your next stop';
-  if (!L) return `Hello! Shall we start with ${nextT}?`;
+  if (!L) return `Hello! Shall we start? First: ${nextT}.`;
   if (L.what === 'stop') return `Last time: ${L.title}, ${L.right} of ${L.n} right. ${nx.resume ? 'Shall we finish it?' : nextT + ' is next.'}`;
   if (L.what === 'read') return `You read “${L.title}” last time. ${nextT} is next.`;
   if (L.what === 'game') return `You built ${L.right} in ${L.title}. Ready for ${nextT}?`;
@@ -93,7 +93,7 @@ export function homeView() {
      the desk. Counts of work, never minutes (today only: nothing carries over, so it is not a streak). */
   const parts = [{ n: d.right || 0, of: t.words, col: '#C2410C', label: 'right answers' }, { n: d.pages || 0, of: t.pages, col: '#0E6F6A', label: 'passages read' },
     { n: d.made || 0, of: t.made ?? 1, col: '#6C4FE0', label: 'said aloud or written' }];
-  const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span><b>${x.n}</b> / ${x.of} ${esc(x.label)}</span></li>`).join('')}</ul></div>`;
+  const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span>${x.of && x.n >= x.of ? `<b>${x.n}</b> ${esc(x.label)} — today’s ${x.of} done` : `<b>${x.n}</b> / ${x.of} ${esc(x.label)}`}</span></li>`).join('')}</ul></div>`;
   const page = home({
     greet: { mascot: mascot(k.last ? 'point' : 'wave'), hello: greetHello(), name: k.name, line: greetLine(k, nx) },
     ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },
@@ -141,5 +141,5 @@ function feed(k) {
 
 export const HOME_ACTIONS = {
   'fig-day': (a) => { const k = kid(), f = figOfDay(); if (!f || k.games.figday?.d === today()) return; const ok = FIGURE_KINDS[+a]?.[0] === f.figure;
-    k.games.figday = { d: today(), pick: +a, ok }; if (ok) { pay('answer'); sfx('right'); } else sfx('wrong'); save(); render(); },
+    k.games.figday = { d: today(), pick: +a, ok }; if (ok) { pay('answer', 'Today’s challenge: a figure of speech'); sfx('right'); } else sfx('wrong'); save(); render(); },
 };
