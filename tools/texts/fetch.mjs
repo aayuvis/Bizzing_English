@@ -111,6 +111,10 @@ export const TEXTS = [
   ['wonderbook', 'A-Wonder-Book-for-Girls--amp--Boys_32242', '32242.txt', 32242],
   ['tanglewood', 'Tanglewood-Tales_976', '976.txt', 976],
   ['heroes', 'The-Heroes--Or-Greek-Fairy-Tales-for-My-Children_677', '677-0.txt', 677],
+  // Non-fiction for Reading 9 (library-more.js).
+  ['faraday-candle', 'The-Chemical-History-of-a-Candle_14474', '14474.txt', 14474],
+  ['darwin-beagle', 'The-Voyage-of-the-Beagle_944', '944.txt', 944],
+  ['fabre-spider', 'The-Life-of-the-Spider_1887', '1887.txt', 1887],
 ];
 
 export const urlOf = ([, repo, file]) => `${GIT}/${repo}/master/${file}`;

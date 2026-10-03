@@ -1283,6 +1283,18 @@
 3980,
 "2467921744"
 ],
+"dict/darwin-tortoises-0": [
+4820,
+"6a253f14a1"
+],
+"dict/darwin-tortoises-1": [
+6260,
+"143c85c109"
+],
+"dict/darwin-tortoises-2": [
+6260,
+"2adfa4c893"
+],
 "dict/dragons-book-beasts-0": [
 5020,
 "5dcccc5cb6"
@@ -1298,6 +1310,34 @@
 "dict/dragons-book-beasts-3": [
 1510,
 "8deed0779f"
+],
+"dict/fabre-bad-name-0": [
+5300,
+"7921366e92"
+],
+"dict/faraday-cup-0": [
+3430,
+"5380d49672"
+],
+"dict/faraday-made-0": [
+4320,
+"1f9a21a081"
+],
+"dict/faraday-made-1": [
+1920,
+"5434485e77"
+],
+"dict/faraday-made-2": [
+4870,
+"ae913e6907"
+],
+"dict/faraday-made-3": [
+3430,
+"b8b8b826a3"
+],
+"dict/faraday-made-4": [
+2880,
+"a7a1f1bf8f"
 ],
 "dict/gettysburg-address-0": [
 2540,
@@ -1743,6 +1783,10 @@
 4390,
 "68e425dc68"
 ],
+"dict/wonderbook-midas-2": [
+1780,
+"d0cb698103"
+],
 "dict/wonderbook-midas-3": [
 6260,
 "5a66d2de6e"
@@ -2107,6 +2151,22 @@
 11640,
 "7c25480f49"
 ],
+"st/darwin-tortoises-0": [
+18000,
+"00c435bd91"
+],
+"st/darwin-tortoises-1": [
+14880,
+"348642c745"
+],
+"st/darwin-tortoises-2": [
+19510,
+"494b46494a"
+],
+"st/darwin-tortoises-3": [
+21170,
+"114dde1a40"
+],
 "st/dickinson-hope-0": [
 5780,
 "b3514779d1"
@@ -2170,6 +2230,54 @@
 "st/dragons-book-beasts-3": [
 14210,
 "967bf8caba"
+],
+"st/fabre-bad-name-0": [
+17160,
+"17e7a8dd72"
+],
+"st/fabre-bad-name-1": [
+9430,
+"5a73ae7257"
+],
+"st/fabre-bad-name-2": [
+10200,
+"557f817124"
+],
+"st/fabre-bad-name-3": [
+13440,
+"791226d26e"
+],
+"st/faraday-cup-0": [
+14950,
+"525db28fca"
+],
+"st/faraday-cup-1": [
+8260,
+"6b4c411568"
+],
+"st/faraday-cup-2": [
+15910,
+"e148638663"
+],
+"st/faraday-cup-3": [
+7850,
+"c6d790e595"
+],
+"st/faraday-made-0": [
+11570,
+"4d3ae759fc"
+],
+"st/faraday-made-1": [
+19180,
+"bce4639246"
+],
+"st/faraday-made-2": [
+20280,
+"2b5283ba25"
+],
+"st/faraday-made-3": [
+15430,
+"84160a80e4"
 ],
 "st/gettysburg-address-0": [
 18550,
@@ -3359,6 +3467,14 @@
 5570,
 "3bc0bd7250"
 ],
+"stop/s1-more-learn": [
+19030,
+"f2cf47da5c"
+],
+"stop/s1-more-story": [
+9100,
+"e982d43914"
+],
 "stop/s1-noun-learn": [
 10900,
 "3956bda27d"
@@ -3391,6 +3507,14 @@
 11020,
 "3a5388a3e3"
 ],
+"stop/s2-agree-learn": [
+27460,
+"10977be359"
+],
+"stop/s2-agree-story": [
+9240,
+"2daab7e642"
+],
 "stop/s2-split-learn": [
 8880,
 "b5aca77cb9"
@@ -3406,6 +3530,14 @@
 "stop/s2-subject-story": [
 4270,
 "f3c3c37aaa"
+],
+"stop/s2-tense-learn": [
+23090,
+"886dcfe811"
+],
+"stop/s2-tense-story": [
+10270,
+"c83eda5a1c"
 ],
 "stop/s3-main-learn": [
 8330,
@@ -3439,6 +3571,14 @@
 5570,
 "eb85aa800f"
 ],
+"stop/s5-apostrophe-learn": [
+24140,
+"9c6a139874"
+],
+"stop/s5-apostrophe-story": [
+9840,
+"77b0e04add"
+],
 "stop/s5-caps-learn": [
 8470,
 "aa4db981fc"
@@ -3470,6 +3610,14 @@
 "stop/s5-order-story": [
 4460,
 "f5e5187edf"
+],
+"stop/s5-speech-learn": [
+22270,
+"259600de88"
+],
+"stop/s5-speech-story": [
+9650,
+"b840863ef1"
 ],
 "stop/s6-fold-learn": [
 17090,
@@ -3663,6 +3811,14 @@
 5570,
 "e4059fe91e"
 ],
+"stop/w2-opposite-learn": [
+21240,
+"68b23376be"
+],
+"stop/w2-opposite-story": [
+12000,
+"bc1d7e8a40"
+],
 "stop/w2-word-learn": [
 6670,
 "e36e0ff579"
@@ -3846,6 +4002,14 @@
 "stop/wr6-describe-story": [
 4610,
 "ff9d13b9df"
+],
+"stop/wr6-poem-learn": [
+24960,
+"d9594782ba"
+],
+"stop/wr6-poem-story": [
+10900,
+"39f7d7a7e5"
 ],
 "stop/wr7-persuade-learn": [
 9650,

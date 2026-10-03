@@ -104,7 +104,7 @@ export const CONTEST_ACTIONS = {
   'ct-next': () => { const r = S.run; if (r.round < 2) { r.round++; r.phase = 'prep'; r.think = 0; r.thought = false; render(); } },
   'ct-finish': () => {
     const r = S.run, k = kid(), rows = standings(r.n, k.band, r.mine), me = rows.find((x) => x.you);
-    (k.contests ||= []).push({ at: Date.now(), n: r.n, band: k.band, rounds: r.mine.slice(), total: me.total, place: me.place, of: rows.length });
+    bumpDay(k, 'made'); (k.contests ||= []).push({ at: Date.now(), n: r.n, band: k.band, rounds: r.mine.slice(), total: me.total, place: me.place, of: rows.length });
     k.last = { what: 'stage', right: me.total, at: Date.now() };
     if (me.total > 0) { pay('contest'); mark('stop', `Elocution Contest ${r.n}: ${me.total} of 30`); }
     save(); r.phase = 'final'; if (me.place <= 3 && me.total > 0) confetti(); render(); checkMedals();

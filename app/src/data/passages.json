@@ -6631,5 +6631,330 @@
     ],
     "needsReview": true,
     "reviewNote": "A formerly enslaved man's own account: 'the bloody whip', 'the hottest hell of unending slavery', and his cry 'Is there any God?'. The paragraph just before the extract (not shown) speaks of thoughts of taking his own life. 11–14 only, with a grown-up note and a named reviewer."
+  },
+  {
+    "id": "faraday-made",
+    "work": "faraday-candle",
+    "title": "What candles are made of",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "A famous scientist holds up a piece of Irish wood and tells children it is a candle.",
+    "text": "And now, my boys and girls, I must first tell you of what candles are made. Some are great curiosities. I have here some bits of timber, branches of trees particularly famous for their burning. And here you see a piece of that very curious substance taken out of some of the bogs in Ireland, called _candle-wood_,--a hard, strong, excellent wood, evidently fitted for good work as a resister of force, and yet withal burning so well that where it is found they make splinters of it, and torches, since it burns like a candle, and gives a very good light indeed. And in this wood we have one of the most beautiful illustrations of the general nature of a candle that I can possibly give. The fuel provided, the means of bringing that fuel to the place of chemical action, the regular and gradual supply of air to that place of action--heat and light--all produced by a little piece of wood of this kind, forming, in fact, a natural candle.\n\nBut we must speak of candles as they are in commerce. Here are a couple of candles commonly called dips. They are made of lengths of cotton cut off, hung up by a loop, dipped into melted tallow, taken out again and cooled, then re-dipped until there is an accumulation of tallow round the cotton.",
+    "scenes": [
+      "And now, my boys and girls, I must first tell you of what candles are made. Some are great curiosities. I have here some bits of timber, branches of trees particularly famous for their burning.",
+      "And here you see a piece of that very curious substance taken out of some of the bogs in Ireland, called _candle-wood_,--a hard, strong, excellent wood, evidently fitted for good work as a resister of force, and yet withal burning so well that where it is found they make splinters of it, and torches, since it burns like a candle, and gives a very good light indeed.",
+      "And in this wood we have one of the most beautiful illustrations of the general nature of a candle that I can possibly give. The fuel provided, the means of bringing that fuel to the place of chemical action, the regular and gradual supply of air to that place of action--heat and light--all produced by a little piece of wood of this kind, forming, in fact, a natural candle.",
+      "But we must speak of candles as they are in commerce. Here are a couple of candles commonly called dips. They are made of lengths of cotton cut off, hung up by a loop, dipped into melted tallow, taken out again and cooled, then re-dipped until there is an accumulation of tallow round the cotton."
+    ],
+    "fk": 10.5,
+    "level": 10.5,
+    "words": 227,
+    "sentences": 9,
+    "syllables": 312,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Who is Faraday speaking to in this lecture?",
+        "right": "Boys and girls",
+        "wrong": [
+          "Coal miners",
+          "Candle makers",
+          "Old scientists"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Where does the candle-wood come from?",
+        "right": "Bogs in Ireland",
+        "wrong": [
+          "Forests in France",
+          "Mines in Wales",
+          "Beaches in Spain"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What do people make from candle-wood?",
+        "right": "Splinters and torches",
+        "wrong": [
+          "Chairs and tables",
+          "Boats and oars",
+          "Paper and ink"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why does Faraday call the piece of wood a natural candle?",
+        "right": "It brings fuel, air, heat and light together",
+        "wrong": [
+          "It was cut from a famous old tree",
+          "It smells sweet when it is burned",
+          "It was found at the bottom of the sea"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How are the candles called dips made?",
+        "right": "Cotton dipped again and again in tallow",
+        "wrong": [
+          "Wax poured into a metal mould",
+          "Wood carved into a thin stick",
+          "Oil soaked into a ball of moss"
+        ]
+      }
+    ],
+    "evaluate": "Faraday chose a candle to begin teaching children about science. Was that a good choice? Why?",
+    "wordBank": [
+      "curiosities",
+      "timber",
+      "excellent",
+      "evidently",
+      "dipped"
+    ]
+  },
+  {
+    "id": "faraday-cup",
+    "work": "faraday-candle",
+    "title": "Why a candle makes a cup",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "Why does a burning candle not just melt into a puddle? Faraday shows the children.",
+    "text": "You see, then, in the first instance, that a beautiful cup is formed. As the air comes to the candle it moves upwards by the force of the current which the heat of the candle produces, and it so cools all the sides of the wax, tallow, or fuel, as to keep the edge much cooler than the part within; the part within melts by the flame that runs down the wick as far as it can go before it is extinguished, but the part on the outside does not melt. If I made a current in one direction, my cup would be lop-sided, and the fluid would consequently run over,--for the same force of gravity which holds worlds together holds this fluid in a horizontal position, and if the cup be not horizontal, of course the fluid will run away in guttering. You see, therefore, that the cup is formed by this beautifully regular ascending current of air playing upon all sides, which keeps the exterior of the candle cool.",
+    "scenes": [
+      "You see, then, in the first instance, that a beautiful cup is formed. As the air comes to the candle it moves upwards by the force of the current which the heat of the candle produces, and it so cools all the sides of the wax, tallow, or fuel, as to keep the edge much cooler than the part within;",
+      "the part within melts by the flame that runs down the wick as far as it can go before it is extinguished, but the part on the outside does not melt.",
+      "If I made a current in one direction, my cup would be lop-sided, and the fluid would consequently run over,--for the same force of gravity which holds worlds together holds this fluid in a horizontal position, and if the cup be not horizontal, of course the fluid will run away in guttering.",
+      "You see, therefore, that the cup is formed by this beautifully regular ascending current of air playing upon all sides, which keeps the exterior of the candle cool."
+    ],
+    "fk": 16.8,
+    "level": 16.8,
+    "words": 172,
+    "sentences": 4,
+    "syllables": 228,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What forms at the top of a burning candle?",
+        "right": "A cup",
+        "wrong": [
+          "A spout",
+          "A ring",
+          "A star"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What moves upwards all round the candle?",
+        "right": "The air",
+        "wrong": [
+          "The wick",
+          "The tallow",
+          "The glass"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Why does the edge of the cup not melt?",
+        "right": "The rising air keeps it cool",
+        "wrong": [
+          "It is made of harder wax",
+          "It is painted with varnish",
+          "It is wet with water"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What would happen if the air blew from one side only?",
+        "right": "The cup would tip and spill",
+        "wrong": [
+          "The flame would grow taller",
+          "The candle would stop melting",
+          "The wick would turn to wax"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Faraday says gravity holds worlds together. What does it do to the melted fuel?",
+        "right": "Keeps it level in the cup",
+        "wrong": [
+          "Makes it boil and bubble",
+          "Pulls it up the wick",
+          "Turns it back into a solid"
+        ]
+      }
+    ],
+    "evaluate": "Faraday turns an everyday thing into a puzzle. What everyday thing would you like explained like this, and why?",
+    "wordBank": [
+      "gravity",
+      "exterior",
+      "ascending",
+      "fluid",
+      "wick"
+    ]
+  },
+  {
+    "id": "darwin-tortoises",
+    "work": "darwin-beagle",
+    "title": "The giant tortoises go to drink",
+    "band": 3,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "Darwin finds wide, beaten paths on a far island, and wonders who made them.",
+    "text": "The tortoise is very fond of water, drinking large quantities, and wallowing in the mud. The larger islands alone possess springs, and these are always situated towards the central parts, and at a considerable height. The tortoises, therefore, which frequent the lower districts, when thirsty, are obliged to travel from a long distance. Hence broad and well-beaten paths branch off in every direction from the wells down to the sea-coast; and the Spaniards by following them up, first discovered the watering-places. When I landed at Chatham Island, I could not imagine what animal travelled so methodically along well-chosen tracks. Near the springs it was a curious spectacle to behold many of these huge creatures, one set eagerly travelling onwards with outstretched necks, and another set returning, after having drunk their fill. When the tortoise arrives at the spring, quite regardless of any spectator, he buries his head in the water above his eyes, and greedily swallows great mouthfuls, at the rate of about ten in a minute. The inhabitants say each animal stays three or four days in the neighbourhood of the water, and then returns to the lower country; but they differed respecting the frequency of these visits. The animal probably regulates them according to the nature of the food on which it has lived. It is, however, certain, that tortoises can subsist even on these islands where there is no other water than what falls during a few rainy days in the year.",
+    "scenes": [
+      "The tortoise is very fond of water, drinking large quantities, and wallowing in the mud. The larger islands alone possess springs, and these are always situated towards the central parts, and at a considerable height. The tortoises, therefore, which frequent the lower districts, when thirsty, are obliged to travel from a long distance.",
+      "Hence broad and well-beaten paths branch off in every direction from the wells down to the sea-coast; and the Spaniards by following them up, first discovered the watering-places. When I landed at Chatham Island, I could not imagine what animal travelled so methodically along well-chosen tracks.",
+      "Near the springs it was a curious spectacle to behold many of these huge creatures, one set eagerly travelling onwards with outstretched necks, and another set returning, after having drunk their fill. When the tortoise arrives at the spring, quite regardless of any spectator, he buries his head in the water above his eyes, and greedily swallows great mouthfuls, at the rate of about ten in a minute.",
+      "The inhabitants say each animal stays three or four days in the neighbourhood of the water, and then returns to the lower country; but they differed respecting the frequency of these visits. The animal probably regulates them according to the nature of the food on which it has lived. It is, however, certain, that tortoises can subsist even on these islands where there is no other water than what falls during a few rainy days in the year."
+    ],
+    "fk": 12.1,
+    "level": 12.1,
+    "words": 245,
+    "sentences": 10,
+    "syllables": 377,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "Where are the springs on the larger islands?",
+        "right": "Towards the middle, high up",
+        "wrong": [
+          "Along the sandy beaches",
+          "In deep caves by the sea",
+          "On the smaller islands only"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Who first found the watering-places by following the paths?",
+        "right": "The Spaniards",
+        "wrong": [
+          "Darwin's crew",
+          "The island children",
+          "Captain FitzRoy"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "Why are there broad paths running across the islands?",
+        "right": "Tortoises walk them to reach water",
+        "wrong": [
+          "Soldiers built them as roads",
+          "Rivers once flowed along them",
+          "Sailors cut them for exploring"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How does a tortoise drink at the spring?",
+        "right": "It buries its head and gulps greedily",
+        "wrong": [
+          "It laps slowly like a dog",
+          "It waits for rain to fall into its mouth",
+          "It licks the dew from the leaves"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "How can tortoises live on islands with no springs at all?",
+        "right": "They manage on a few days' rain",
+        "wrong": [
+          "They drink the salty sea water",
+          "They dig deep wells of their own",
+          "They are carried there by people"
+        ]
+      }
+    ],
+    "evaluate": "Darwin learned about the tortoises by watching them closely. What animal near you could you learn about by watching, and what would you look for?",
+    "wordBank": [
+      "tortoise",
+      "obliged",
+      "eagerly",
+      "spectator",
+      "regardless"
+    ]
+  },
+  {
+    "id": "fabre-bad-name",
+    "work": "fabre-spider",
+    "title": "The Spider has a bad name",
+    "band": 2,
+    "kind": "prose",
+    "abridged": false,
+    "hook": "Everyone wants to squash the spider. Fabre stands up for her.",
+    "text": "The Spider has a bad name: to most of us, she represents an odious, noxious animal, which every one hastens to crush under foot. Against this summary verdict the observer sets the beast's industry, its talent as a weaver, its wiliness in the chase, its tragic nuptials and other characteristics of great interest. Yes, the Spider is well worth studying, apart from any scientific reasons; but she is said to be poisonous and that is her crime and the primary cause of the repugnance wherewith she inspires us. Poisonous, I agree, if by that we understand that the animal is armed with two fangs which cause the immediate death of the little victims which it catches; but there is a wide difference between killing a Midge and harming a man. However immediate in its effects upon the insect entangled in the fatal web, the Spider's poison is not serious for us and causes less inconvenience than a Gnat-bite. That, at least, is what we can safely say as regards the great majority of the Spiders of our regions.",
+    "scenes": [
+      "The Spider has a bad name: to most of us, she represents an odious, noxious animal, which every one hastens to crush under foot. Against this summary verdict the observer sets the beast's industry, its talent as a weaver, its wiliness in the chase, its tragic nuptials and other characteristics of great interest.",
+      "Yes, the Spider is well worth studying, apart from any scientific reasons; but she is said to be poisonous and that is her crime and the primary cause of the repugnance wherewith she inspires us.",
+      "Poisonous, I agree, if by that we understand that the animal is armed with two fangs which cause the immediate death of the little victims which it catches; but there is a wide difference between killing a Midge and harming a man.",
+      "However immediate in its effects upon the insect entangled in the fatal web, the Spider's poison is not serious for us and causes less inconvenience than a Gnat-bite. That, at least, is what we can safely say as regards the great majority of the Spiders of our regions."
+    ],
+    "fk": 13.8,
+    "level": 13.8,
+    "words": 178,
+    "sentences": 6,
+    "syllables": 269,
+    "questions": [
+      {
+        "depth": "literal",
+        "q": "What do most people want to do to a spider?",
+        "right": "Crush it under foot",
+        "wrong": [
+          "Keep it as a pet",
+          "Paint its picture",
+          "Feed it some flies"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "Which of these does Fabre praise the spider for?",
+        "right": "Its talent as a weaver",
+        "wrong": [
+          "Its beautiful singing",
+          "Its bright colours",
+          "Its gentle nature"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "What is the main reason people dislike spiders, says Fabre?",
+        "right": "They are said to be poisonous",
+        "wrong": [
+          "They have eight hairy legs",
+          "They spin messy webs indoors",
+          "They move far too quickly"
+        ]
+      },
+      {
+        "depth": "inferential",
+        "q": "What is the wide difference Fabre points out?",
+        "right": "Killing a midge is not harming a man",
+        "wrong": [
+          "Big spiders bite but small ones do not",
+          "Webs catch flies but never bees",
+          "Spiders hunt by day, not by night"
+        ]
+      },
+      {
+        "depth": "literal",
+        "q": "How does Fabre say a spider's poison compares, for us?",
+        "right": "Less bother than a gnat-bite",
+        "wrong": [
+          "As deadly as a snake's bite",
+          "Worse than a wasp sting",
+          "As painful as a burn"
+        ]
+      }
+    ],
+    "evaluate": "Fabre wants us to give the spider a fair hearing. Has he changed your mind about spiders? Why or why not?",
+    "wordBank": [
+      "verdict",
+      "industry",
+      "poisonous",
+      "victims",
+      "majority",
+      "observer"
+    ]
   }
 ]

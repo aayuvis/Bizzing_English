@@ -74,7 +74,7 @@ export const STAGE_ACTIONS = {
   'aloud-save': () => {
     const r = S.run, k = kid(), m = r.result;
     (k.stage['sp1-aloud'] ||= []).push({ at: Date.now(), passage: r.pid, secs: m.secs, wpm: m.wpm, pauses: m.pauses, range: m.range, self: r.self.length });
-    bumpDay(k, 'speak', Math.round(m.secs));
+    bumpDay(k, 'speak', Math.round(m.secs)); bumpDay(k, 'made');
     k.last = { what: 'stage', right: m.wpm, at: Date.now() };
     const rec = (k.stops['sp1-aloud'] ||= { passed: false, tries: 0 }); rec.tries++;
     if (!rec.passed && !m.quiet && m.secs >= 20) { rec.passed = true; taught(k, 'sp1-aloud'); pay('stop'); mark('stop', 'Read a passage aloud on the Stage'); }

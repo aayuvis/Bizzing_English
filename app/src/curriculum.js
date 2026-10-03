@@ -143,7 +143,7 @@ export const STRANDS = [
       L(6, 'Novels in extracts', 'I can read an extract and infer what a character feels.', [], { band: 3 }),
       L(7, 'Drama', 'I can read a scene and say what each speaker wants.', [], { band: 3 }),
       L(8, 'Whole novels', 'I can read a whole novel, chapter by chapter.'),
-      L(9, 'Essays', 'I can follow an essay\'s argument.', [], { band: 3 }),
+      L(9, 'Essays and non-fiction', 'I can follow an essay\'s argument or a scientist\'s explanation.', [], { band: 3 }),
       L(10, 'Close reading', 'I can read a poem closely and defend what I find.'),
     ] },
   { id: 'writing', n: 4, title: 'Writing', sub: 'copywork to composition', icon: 'pen', colour: '#7C3AED', opens: { after: ['sentence', 1] },

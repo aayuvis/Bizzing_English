@@ -1,9 +1,37 @@
-// Drama, close reading, more fairy tales and short stories. Same rules and shapes as library.js;
+// Drama, close reading, more fairy tales and short stories, and non-fiction (Reading 9). Same rules and shapes as library.js;
 // merged into WORKS and PASSAGES there.
 // eslint-disable-next-line no-unused-vars
 import { CHECKED, PG, pd, r, held } from './library-kit.js';
 
-export const MORE_WORKS = [];
+export const MORE_WORKS = [
+  // ── Reading 9: non-fiction (essays and a scientist's explanation) ─────────
+  {
+    id: 'faraday-candle', title: 'The Chemical History of a Candle', author: 'Michael Faraday', year: 1861,
+    era: 'Victorian', shelf: 'essay', ...held('faraday-candle'),
+    why: 'A great scientist explains a whole world of science to children, starting from one candle.',
+    summary: 'Michael Faraday gave these six lectures to young people at the Royal Institution in London over Christmas 1860–61. With candles and simple experiments he shows how a flame works, what a candle turns into as it burns, and how our breathing is like a candle burning inside us.',
+    rights: pd('Lectures given 1860–61 and first published 1861; this text is the 1908 Chatto & Windus impression, edited by William Crookes. Faraday died 1867; Crookes died 1919.', '2026-10-03'),
+    sources: [PG(14474)], liked: ['darwin-beagle', 'fabre-spider', 'walden'],
+  },
+  {
+    id: 'darwin-beagle', title: 'The Voyage of the Beagle', author: 'Charles Darwin', year: 1839,
+    era: 'Victorian', shelf: 'essay', ...held('darwin-beagle'),
+    why: 'A young naturalist sails round the world for five years and writes down everything he sees.',
+    summary: 'As a young man Charles Darwin sailed on the survey ship HMS Beagle, from 1831 to 1836. His journal follows the voyage round South America, to the Galapagos Islands and on across the world, full of rocks, fossils, earthquakes, animals and the people he met. This is the revised second edition of 1845.',
+    rights: pd('First published 1839; this text is the revised second edition of 1845. Darwin died 1882.', '2026-10-03'),
+    sources: [PG(944)], liked: ['faraday-candle', 'fabre-spider', 'crusoe'],
+    needsReview: true,
+    reviewNote: 'Darwin describes some of the peoples he met (the Fuegians, for example) in the attitudes of his time, and animals are hunted and eaten. Every extract needs a named reviewer, and a grown-up note where an attitude appears.',
+  },
+  {
+    id: 'fabre-spider', title: 'The Life of the Spider', author: 'J. Henri Fabre, translated by Alexander Teixeira de Mattos', year: 1912,
+    era: 'Edwardian', shelf: 'essay', ...held('fabre-spider'),
+    why: 'A French naturalist watches the spiders in his own garden, patiently and with delight.',
+    summary: 'Jean-Henri Fabre spent his long life watching insects and spiders near his home in the south of France. In these chapters he watches spiders dig burrows, build their webs, hunt and care for their young, and he writes about them like a storyteller. The English translation came out in 1912.',
+    rights: pd('Chapters from Fabre\'s French Souvenirs entomologiques (1879–1907); this English translation published 1912 (Hodder & Stoughton). Fabre died 1915; the translator, Alexander Teixeira de Mattos, died 1921. The Project Gutenberg text leaves out Maurice Maeterlinck\'s preface.', '2026-10-03'),
+    sources: [PG(1887)], liked: ['darwin-beagle', 'faraday-candle', 'walden'],
+  },
+];
 
 // band: 1 = ages 6–7, 2 = 8–10, 3 = 11–14. `level` (when set) names the Reading level outright
 // (reading.js levelOf): 5 = short stories, 10 = close reading.
@@ -369,5 +397,82 @@ export const MORE_PASSAGES = [
     words: ['vessels', 'audience', 'confined', 'freedom', 'protecting'],
     needsReview: true,
     reviewNote: "A formerly enslaved man's own account: 'the bloody whip', 'the hottest hell of unending slavery', and his cry 'Is there any God?'. The paragraph just before the extract (not shown) speaks of thoughts of taking his own life. 11–14 only, with a grown-up note and a named reviewer.",
+  },
+  // ── Reading 9: non-fiction ────────────────────────────────────────────────
+  {
+    id: 'faraday-made', work: 'faraday-candle', title: 'What candles are made of', band: 2, level: 9,
+    kind: 'prose', abridged: false,
+    start: 'And now, my boys and girls, I must first tell you of what candles are made.',
+    end: 'until there is an accumulation of tallow round the cotton.',
+    hook: 'A famous scientist holds up a piece of Irish wood and tells children it is a candle.',
+    scenes: ['And here you see a piece of that very curious substance', 'And in this wood we have one of the most beautiful illustrations', 'But we must speak of candles as they are in commerce.'],
+    paint: 'A grand lecture theatre of the 1860s with curved rows of wooden benches full of children in Victorian clothes. At a long demonstration table below, a white-haired scientist in a dark coat holds up a piece of dark wood beside a row of candles. Warm gaslight, painted in the style of a Victorian engraving coloured with watercolour.',
+    paint2: 'A Victorian candle workshop, with lengths of white cotton wick hanging in loops from a wooden frame above a vat of melted tallow, some already thick with creamy layers. Soft light falls through a dusty window onto the drying candles. Painted in warm watercolour like an old book illustration.',
+    questions: [
+      { depth: 'literal', q: 'Who is Faraday speaking to in this lecture?', right: 'Boys and girls', wrong: ['Coal miners', 'Candle makers', 'Old scientists'] },
+      { depth: 'literal', q: 'Where does the candle-wood come from?', right: 'Bogs in Ireland', wrong: ['Forests in France', 'Mines in Wales', 'Beaches in Spain'] },
+      { depth: 'literal', q: 'What do people make from candle-wood?', right: 'Splinters and torches', wrong: ['Chairs and tables', 'Boats and oars', 'Paper and ink'] },
+      { depth: 'inferential', q: 'Why does Faraday call the piece of wood a natural candle?', right: 'It brings fuel, air, heat and light together', wrong: ['It was cut from a famous old tree', 'It smells sweet when it is burned', 'It was found at the bottom of the sea'] },
+      { depth: 'literal', q: 'How are the candles called dips made?', right: 'Cotton dipped again and again in tallow', wrong: ['Wax poured into a metal mould', 'Wood carved into a thin stick', 'Oil soaked into a ball of moss'] },
+    ],
+    evaluate: 'Faraday chose a candle to begin teaching children about science. Was that a good choice? Why?',
+    words: ['curiosities', 'timber', 'excellent', 'evidently', 'dipped'],
+  },
+  {
+    id: 'faraday-cup', work: 'faraday-candle', title: 'Why a candle makes a cup', band: 3, level: 9,
+    kind: 'prose', abridged: false,
+    start: 'You see, then, in the first instance, that a beautiful cup is formed.',
+    end: 'which keeps the exterior of the candle cool.',
+    hook: 'Why does a burning candle not just melt into a puddle? Faraday shows the children.',
+    scenes: ['the part within melts by the flame', 'If I made a current in one direction,', 'You see, therefore, that the cup is formed'],
+    paint: 'A single tall white candle burns steadily inside a clear glass lamp-chimney on a dark wooden table, a shallow bright cup of melted wax shining around its wick. Behind it, blurred, rise the curved benches of a Victorian lecture theatre. Warm, glowing light in the style of a fine Victorian watercolour.',
+    paint2: 'A candle on a lecture table bends in a draught from one side, its little cup of wax tipping so that a drip of melted wax runs down its side. A scientist cups a hand to shield it from the moving air. Soft Victorian watercolour, glowing candlelight against a shadowy room.',
+    questions: [
+      { depth: 'literal', q: 'What forms at the top of a burning candle?', right: 'A cup', wrong: ['A spout', 'A ring', 'A star'] },
+      { depth: 'literal', q: 'What moves upwards all round the candle?', right: 'The air', wrong: ['The wick', 'The tallow', 'The glass'] },
+      { depth: 'literal', q: 'Why does the edge of the cup not melt?', right: 'The rising air keeps it cool', wrong: ['It is made of harder wax', 'It is painted with varnish', 'It is wet with water'] },
+      { depth: 'inferential', q: 'What would happen if the air blew from one side only?', right: 'The cup would tip and spill', wrong: ['The flame would grow taller', 'The candle would stop melting', 'The wick would turn to wax'] },
+      { depth: 'literal', q: 'Faraday says gravity holds worlds together. What does it do to the melted fuel?', right: 'Keeps it level in the cup', wrong: ['Makes it boil and bubble', 'Pulls it up the wick', 'Turns it back into a solid'] },
+    ],
+    evaluate: 'Faraday turns an everyday thing into a puzzle. What everyday thing would you like explained like this, and why?',
+    words: ['gravity', 'exterior', 'ascending', 'fluid', 'wick'],
+  },
+  {
+    id: 'darwin-tortoises', work: 'darwin-beagle', title: 'The giant tortoises go to drink', band: 3, level: 9,
+    kind: 'prose', abridged: false,
+    start: 'The tortoise is very fond of water, drinking large quantities, and wallowing in the mud.',
+    end: 'other water than what falls during a few rainy days in the year.',
+    hook: 'Darwin finds wide, beaten paths on a far island, and wonders who made them.',
+    scenes: ['Hence broad and well-beaten paths branch off', 'Near the springs it was a curious spectacle', 'The inhabitants say each animal stays'],
+    paint: 'Rocky volcanic slopes of a Pacific island under a hot sky, with broad, beaten paths winding down towards the sea between cactus and dry scrub. Along the paths, several enormous domed tortoises plod slowly with their necks stretched out. Painted as a naturalist\'s watercolour from a nineteenth-century voyage.',
+    paint2: 'A small freshwater spring among green ferns and mossy rocks high on a volcanic island, where giant tortoises crowd to the water\'s edge. One has its whole head buried in the pool, drinking deeply. A nineteenth-century naturalist\'s watercolour, fresh greens against grey stone.',
+    questions: [
+      { depth: 'literal', q: 'Where are the springs on the larger islands?', right: 'Towards the middle, high up', wrong: ['Along the sandy beaches', 'In deep caves by the sea', 'On the smaller islands only'] },
+      { depth: 'literal', q: 'Who first found the watering-places by following the paths?', right: 'The Spaniards', wrong: ["Darwin's crew", 'The island children', 'Captain FitzRoy'] },
+      { depth: 'inferential', q: 'Why are there broad paths running across the islands?', right: 'Tortoises walk them to reach water', wrong: ['Soldiers built them as roads', 'Rivers once flowed along them', 'Sailors cut them for exploring'] },
+      { depth: 'literal', q: 'How does a tortoise drink at the spring?', right: 'It buries its head and gulps greedily', wrong: ['It laps slowly like a dog', 'It waits for rain to fall into its mouth', 'It licks the dew from the leaves'] },
+      { depth: 'inferential', q: 'How can tortoises live on islands with no springs at all?', right: "They manage on a few days' rain", wrong: ['They drink the salty sea water', 'They dig deep wells of their own', 'They are carried there by people'] },
+    ],
+    evaluate: 'Darwin learned about the tortoises by watching them closely. What animal near you could you learn about by watching, and what would you look for?',
+    words: ['tortoise', 'obliged', 'eagerly', 'spectator', 'regardless'],
+  },
+  {
+    id: 'fabre-bad-name', work: 'fabre-spider', title: 'The Spider has a bad name', band: 2, level: 9,
+    kind: 'prose', abridged: false,
+    start: 'The Spider has a bad name:',
+    end: 'the great majority of the Spiders of our regions.',
+    hook: 'Everyone wants to squash the spider. Fabre stands up for her.',
+    scenes: ['Yes, the Spider is well worth studying,', 'Poisonous, I agree,', 'However immediate in its effects'],
+    paint: 'A dewy garden corner in the south of France at dawn, with a large round spider web stretched between lavender stems, every thread beaded with light. A plump spider waits at its centre. Painted in delicate watercolour like a nineteenth-century natural history plate.',
+    paint2: 'A close view of a spider web glittering in the sun, a tiny midge caught in its threads while the spider steps carefully towards it. Behind, out of focus, stand an old stone wall and a sunny wild garden. A delicate natural history watercolour in soft greens and golds.',
+    questions: [
+      { depth: 'literal', q: 'What do most people want to do to a spider?', right: 'Crush it under foot', wrong: ['Keep it as a pet', 'Paint its picture', 'Feed it some flies'] },
+      { depth: 'literal', q: 'Which of these does Fabre praise the spider for?', right: 'Its talent as a weaver', wrong: ['Its beautiful singing', 'Its bright colours', 'Its gentle nature'] },
+      { depth: 'literal', q: 'What is the main reason people dislike spiders, says Fabre?', right: 'They are said to be poisonous', wrong: ['They have eight hairy legs', 'They spin messy webs indoors', 'They move far too quickly'] },
+      { depth: 'inferential', q: 'What is the wide difference Fabre points out?', right: 'Killing a midge is not harming a man', wrong: ['Big spiders bite but small ones do not', 'Webs catch flies but never bees', 'Spiders hunt by day, not by night'] },
+      { depth: 'literal', q: "How does Fabre say a spider's poison compares, for us?", right: 'Less bother than a gnat-bite', wrong: ["As deadly as a snake's bite", 'Worse than a wasp sting', 'As painful as a burn'] },
+    ],
+    evaluate: 'Fabre wants us to give the spider a fair hearing. Has he changed your mind about spiders? Why or why not?',
+    words: ['verdict', 'industry', 'poisonous', 'victims', 'majority', 'observer'],
   },
 ];

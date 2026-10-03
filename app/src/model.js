@@ -35,7 +35,7 @@ export function newKid(name, band, avatar) {
     copy: {},                                                // copywork: line id → { at, ok }
     days: {},                                                // date → { answers, right, stops } — counts, never minutes
     last: null,                                              // the last thing done, for the greeting and Continue
-    targets: { words: 10, pages: 1, speak: 0 },              // daily ring targets, set by the grown-up
+    targets: { words: 10, pages: 1, made: 1 },               // daily ring targets, set by the grown-up: right answers, passages, things said or written
     prefs: { readAloud: band === 1 },
     milestones: [],                                          // named learning milestones reached (legendary avatars)
     writing: {},                                             // free writing: desk pieces, talk-about-it thoughts — on this device only, never in a backup

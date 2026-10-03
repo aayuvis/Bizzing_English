@@ -142,7 +142,9 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('a reload asks for the PIN again', await page.locator('.pinpad').isVisible());
 
   /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), My page, Settings, Add a child */
-  await go(page, '#/home'); await page.click('.bz-kid'); await page.waitForTimeout(250);
+  await go(page, '#/home');
+  ok('Home shows three rings: right answers, passages read, said aloud or written', (await page.$$('.rings svg circle')).length === 6 && /right answers[\s\S]*passages read[\s\S]*said aloud or written/.test(await page.textContent('.rings')));
+  await page.click('.bz-kid'); await page.waitForTimeout(250);
   ok('the avatar opens its menu, not a page', await page.locator('.kidmenu').isVisible());
   ok('the menu lists the children, My page, Settings and Add a child (grown-ups)', await page.evaluate(() => { const t = document.querySelector('.kidmenu').textContent; return document.querySelectorAll('.kidmenu .km-kid').length >= 1 && !!document.querySelector('.kidmenu .km-kid[aria-current] svg') && /My page — avatar, badges, collection/.test(t) && /Settings/.test(t) && /\+ Add a child\s*grown-ups/.test(t); }));
   ok('the menu sits under the avatar, on the screen', await page.evaluate(() => { const b = document.querySelector('.bz-kid').getBoundingClientRect(), m = document.querySelector('.kidmenu').getBoundingClientRect(); return m.top >= b.bottom && m.right <= innerWidth && m.left >= 0; }));

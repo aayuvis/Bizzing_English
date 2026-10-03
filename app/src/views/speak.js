@@ -140,7 +140,7 @@ export const SPEAK_ACTIONS = {
   'sp-save': () => {
     const r = S.run, k = kid(), [lo] = r.cfg.target;
     for (const [i, m] of r.results.entries()) (k.stage[r.id] ||= []).push({ at: Date.now() + i, prompt: r.prompt || null, passage: r.pid || null, side: r.cfg.mode === 'debate' ? (i ? 'against' : 'for') : null, secs: m.secs, wpm: m.wpm, pauses: m.pauses, range: m.range, self: r.self.length });
-    const secs = r.results.reduce((a, m) => a + m.secs, 0); bumpDay(k, 'speak', Math.round(secs));
+    const secs = r.results.reduce((a, m) => a + m.secs, 0); bumpDay(k, 'speak', Math.round(secs)); bumpDay(k, 'made');
     k.last = { what: 'stage', right: r.results[0]?.wpm || Math.round(secs), at: Date.now() };
     const valid = r.results.length && r.results.every((m) => !m.quiet && m.secs >= Math.min(lo, 20)) && (r.cfg.mode !== 'debate' || r.results.length === 2);
     const rec = (k.stops[r.id] ||= { passed: false, tries: 0 }); rec.tries++; rec.at = Date.now();

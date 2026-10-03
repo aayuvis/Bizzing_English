@@ -75,8 +75,10 @@ export function homeView() {
   const line = LINES[hourIdx(LINES.length)];
   const lw = line && WORKS.find((x) => x.id === line.work);
   const t = k.targets;
-  const parts = [{ n: d.right || 0, of: t.words, col: '#C2410C', label: 'right answers' }, { n: d.pages || 0, of: t.pages, col: '#0E6F6A', label: 'passages read' }];
-  if (t.speak) parts.push({ n: Math.round((d.speak || 0) / 60), of: t.speak, col: '#6C4FE0', label: 'minutes spoken' });
+  /* three rings, every day: right answers, passages read, and one thing made — said on the Stage or written at
+     the desk. Counts of work, never minutes (today only: nothing carries over, so it is not a streak). */
+  const parts = [{ n: d.right || 0, of: t.words, col: '#C2410C', label: 'right answers' }, { n: d.pages || 0, of: t.pages, col: '#0E6F6A', label: 'passages read' },
+    { n: d.made || 0, of: t.made ?? 1, col: '#6C4FE0', label: 'said aloud or written' }];
   const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span><b>${x.n}</b> / ${x.of} ${esc(x.label)}</span></li>`).join('')}</ul></div>`;
   return home({
     greet: { mascot: mascot(k.last ? 'point' : 'wave'), hello: greetHello(), name: k.name, line: greetLine(k, nx) },

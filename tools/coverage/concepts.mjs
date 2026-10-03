@@ -83,7 +83,7 @@ export const CONCEPTS = [
     ['Close reading: word choice under the microscope', '12–14', ['reading:10']],
     ['Literal, inference and evaluation questions', '6–14', ['reading:']],
     ['Listening to a text read well', '5–14', ['@story']],
-    ['Information texts: non-fiction, charts, instructions', '8–14', [], 'part'],
+    ['Information texts: science and nature writing', '8–14', ['rd-faraday-made', 'rd-faraday-cup', 'rd-darwin-tortoises', 'rd-fabre-bad-name']],
   ] },
   { n: 'Literature', ic: 'literature', rows: [
     ['Story elements: who, where, what goes wrong', '6–9', ['li1-']],

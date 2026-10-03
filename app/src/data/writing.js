@@ -1099,6 +1099,76 @@ export default {
    "work": "happyprince",
    "band": 3,
    "text": "They used to wander round the high wall when their lessons were over, and talk about the beautiful garden inside."
+  },
+  {
+   "id": "faraday-made-0",
+   "passage": "faraday-made",
+   "work": "faraday-candle",
+   "band": 3,
+   "text": "And now, my boys and girls, I must first tell you of what candles are made."
+  },
+  {
+   "id": "faraday-made-1",
+   "passage": "faraday-made",
+   "work": "faraday-candle",
+   "band": 1,
+   "text": "Some are great curiosities."
+  },
+  {
+   "id": "faraday-made-2",
+   "passage": "faraday-made",
+   "work": "faraday-candle",
+   "band": 2,
+   "text": "I have here some bits of timber, branches of trees particularly famous for their burning."
+  },
+  {
+   "id": "faraday-made-3",
+   "passage": "faraday-made",
+   "work": "faraday-candle",
+   "band": 2,
+   "text": "But we must speak of candles as they are in commerce."
+  },
+  {
+   "id": "faraday-made-4",
+   "passage": "faraday-made",
+   "work": "faraday-candle",
+   "band": 1,
+   "text": "Here are a couple of candles commonly called dips."
+  },
+  {
+   "id": "faraday-cup-0",
+   "passage": "faraday-cup",
+   "work": "faraday-candle",
+   "band": 2,
+   "text": "You see, then, in the first instance, that a beautiful cup is formed."
+  },
+  {
+   "id": "darwin-tortoises-0",
+   "passage": "darwin-tortoises",
+   "work": "darwin-beagle",
+   "band": 2,
+   "text": "The tortoise is very fond of water, drinking large quantities, and wallowing in the mud."
+  },
+  {
+   "id": "darwin-tortoises-1",
+   "passage": "darwin-tortoises",
+   "work": "darwin-beagle",
+   "band": 3,
+   "text": "The larger islands alone possess springs, and these are always situated towards the central parts, and at a considerable height."
+  },
+  {
+   "id": "darwin-tortoises-2",
+   "passage": "darwin-tortoises",
+   "work": "darwin-beagle",
+   "band": 3,
+   "text": "The tortoises, therefore, which frequent the lower districts, when thirsty, are obliged to travel from a long distance."
+  },
+  {
+   "id": "fabre-bad-name-0",
+   "passage": "fabre-bad-name",
+   "work": "fabre-spider",
+   "band": 3,
+   "text": "That, at least, is what we can safely say as regards the great majority of the Spiders of our regions."
   }
  ],
  "models": {
@@ -1146,13 +1216,21 @@ export default {
    {
     "id": "opener-5",
     "shape": "opener",
+    "passage": "darwin-tortoises",
+    "work": "darwin-beagle",
+    "band": 2,
+    "text": "When I landed at Chatham Island, I could not imagine what animal travelled so methodically along well-chosen tracks."
+   },
+   {
+    "id": "opener-6",
+    "shape": "opener",
     "passage": null,
     "work": "aesop",
     "band": 2,
     "text": "As soon as they saw a single animal approach them, off they used to run."
    },
    {
-    "id": "opener-6",
+    "id": "opener-7",
     "shape": "opener",
     "passage": null,
     "work": "aesop",
@@ -1160,7 +1238,7 @@ export default {
     "text": "When he came near them they soon discovered the cheat, and striding up to him pecked at him and plucked away his borrowed plumes."
    },
    {
-    "id": "opener-7",
+    "id": "opener-8",
     "shape": "opener",
     "passage": null,
     "work": "justso",
@@ -1168,7 +1246,7 @@ export default {
     "text": "When he wanted fruit to eat he pulled fruit down from a tree, instead of waiting for it to fall as he used to do."
    },
    {
-    "id": "opener-8",
+    "id": "opener-9",
     "shape": "opener",
     "passage": null,
     "work": "justso",
@@ -1176,7 +1254,7 @@ export default {
     "text": "When he wanted grass he plucked grass up from the ground, instead of going on his knees as he used to do."
    },
    {
-    "id": "opener-9",
+    "id": "opener-10",
     "shape": "opener",
     "passage": null,
     "work": "alice",
@@ -1184,7 +1262,7 @@ export default {
     "text": "After a time she heard a little pattering of feet in the distance, and she hastily dried her eyes to see what was coming."
    },
    {
-    "id": "opener-10",
+    "id": "opener-11",
     "shape": "opener",
     "passage": null,
     "work": "alice",
@@ -1192,7 +1270,7 @@ export default {
     "text": "When I used to read fairy-tales, I fancied that kind of thing never happened, and now here I am in the middle of one!"
    },
    {
-    "id": "opener-11",
+    "id": "opener-12",
     "shape": "opener",
     "passage": null,
     "work": "lookingglass",
@@ -1200,7 +1278,7 @@ export default {
     "text": "After this, Alice was silent for a minute or two, pondering."
    },
    {
-    "id": "opener-12",
+    "id": "opener-13",
     "shape": "opener",
     "passage": null,
     "work": "lookingglass",
@@ -1208,7 +1286,7 @@ export default {
     "text": "When he DID speak again, it was in a deep growl."
    },
    {
-    "id": "opener-13",
+    "id": "opener-14",
     "shape": "opener",
     "passage": null,
     "work": "secretgarden",
@@ -1216,7 +1294,7 @@ export default {
     "text": "When she had passed through the shrubbery gate she found herself in great gardens, with wide lawns and winding walks with clipped borders."
    },
    {
-    "id": "opener-14",
+    "id": "opener-15",
     "shape": "opener",
     "passage": null,
     "work": "secretgarden",
@@ -1224,7 +1302,7 @@ export default {
     "text": "If it were a quite alive garden, how wonderful it would be, and what thousands of roses would grow on every side!"
    },
    {
-    "id": "opener-15",
+    "id": "opener-16",
     "shape": "opener",
     "passage": null,
     "work": "blackbeauty",
@@ -1232,20 +1310,12 @@ export default {
     "text": "When we came to a hill, instead of slackening her pace, she would throw her weight right into the collar, and pull away straight up."
    },
    {
-    "id": "opener-16",
+    "id": "opener-17",
     "shape": "opener",
     "passage": null,
     "work": "blackbeauty",
     "band": 3,
     "text": "After we had been out two or three times together we grew quite friendly and sociable, which made me feel very much at home."
-   },
-   {
-    "id": "opener-17",
-    "shape": "opener",
-    "passage": null,
-    "work": "treasure",
-    "band": 3,
-    "text": "When I got back with the basin, the doctor had already ripped up the captain's sleeve and exposed his great sinewy arm."
    }
   ],
   "list3": [
