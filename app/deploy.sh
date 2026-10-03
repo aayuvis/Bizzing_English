@@ -5,8 +5,13 @@
 # goes there unwrapped, exactly as bizzingindia.com and bizzingfinance do it. .nojekyll stops
 # Jekyll eating the assets/ directory.
 #
-#   ./deploy.sh            build and deploy
+#   ./deploy.sh            deploy; runs the tests and the browser check only if THIS tree has not passed them
+#   ./deploy.sh --fast     deploy without the tests (the owner, 3 Oct: every push comes from one chat — no slow gate)
 #   ./deploy.sh --dry      build only, show what would be published
+#
+# `npm run verify` (tests + build + browser check) stamps the tree it passed on (.verified, gitignored);
+# a deploy of the same tree skips straight to publishing. The staged-file count below always runs: it is
+# instant, and it is what catches a publish that silently drops files.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
@@ -15,9 +20,9 @@ WORK="$(mktemp -d)"
 trap 'git -C "$ROOT" worktree remove --force "$WORK" 2>/dev/null || true; rm -rf "$WORK"' EXIT
 
 cd "$HERE"
-npm test                                # a question with two right answers never ships
-npm run build
-npm run check                           # the built app in Chromium: shell, heads, privacy, mic, games, contrast
+if [ "${1:-}" = "--fast" ]; then npm run build
+elif [ -f .verified ] && [ "$(cat .verified)" = "$(./tree-state.sh)" ]; then echo "this tree already passed the tests and the browser check"; npm run build
+else npm run verify; fi                 # tests, build, the built app in Chromium — then the stamp
 touch build/.nojekyll
 
 if [ "${1:-}" = "--dry" ]; then
