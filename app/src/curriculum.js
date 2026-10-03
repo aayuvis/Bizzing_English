@@ -10,6 +10,7 @@
    `kind` names the item generator in items.js; `plan` marks what the family plan opens. */
 import { LANG_STOPS } from './data/language.js';
 import { LIT_STOPS, CASE_DESK } from './data/literature.js';
+import { WORD_STOPS } from './data/word-stops.js';
 
 export const BANDS = [
   { id: 1, label: '6–7', age: 'ages 6–7' },
@@ -307,6 +308,10 @@ export const STRANDS = [
       L(10, 'World Englishes', 'I can describe Indian English and other Englishes.'),
     ] },
 ];
+
+/* Word levels 6–10: written stops (data/word-stops.js; level 7, the words from the myths, in data/myth-words.js) */
+const wordLevels = STRANDS.find((x) => x.id === 'word').levels;
+for (const x of WORD_STOPS) wordLevels.find((l) => l.n === x.level).stops.push({ ...x, kind: 'authored' });
 
 /* Literature levels 1–9: written stops (data/literature.js); level 10 is a writing desk — the child's case for a book */
 for (const l of STRANDS.find((x) => x.id === 'literature').levels) {
