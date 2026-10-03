@@ -86,8 +86,10 @@ export function goodDays(k, n = 7, t = Date.now()) {
 export function addToBank(k, w, from) { const key = String(w).toLowerCase(); if (!k.bank[key]) k.bank[key] = { at: Date.now(), from: from || '' }; }
 
 /* The level shown in the ring foot: the highest finished level across strands, named. */
-export function headline(k) {
+/* the highest level finished, in any strand: { s, l } or null */
+export function bestLevel(k) {
   let best = null;
   for (const s of STRANDS) for (const l of s.levels) if (levelDone(k, s.id, l.n)) if (!best || l.n > best.l.n) best = { s, l };
-  return best ? `${best.s.title} ${best.l.n} · ${best.l.title}` : 'Just starting';
+  return best;
 }
+export function headline(k) { const best = bestLevel(k); return best ? `${best.s.title} ${best.l.n} · ${best.l.title}` : 'Just starting'; }

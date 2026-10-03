@@ -30,7 +30,8 @@ export const avatarOf = (k) => avImg(k?.avatar);
 export function meView() {
   const k = kid();
   const rows = STRANDS.map((s) => { const st = stopsOf(s.id), d = st.filter((x) => k.stops[x.id]?.passed).length; const top = s.levels.filter((l) => levelDone(k, s.id, l.n)).length;
-    return `<div class="stoprow"><span class="st" style="background:${s.colour};border-color:${s.colour};color:#fff">${icon(s.icon)}</span><span><b>${esc(s.title)}</b><small>${top} of 10 levels finished · ${d} of ${st.length} stops</small></span><span></span></div>`; }).join('');
+    const nxt = st.find((x) => !k.stops[x.id]?.passed);
+    return `<a class="stoprow" href="#/atlas/${s.id}"><span class="st" style="background:${s.colour};border-color:${s.colour};color:#fff">${icon(s.icon)}</span><span><b>${esc(s.title)}</b><small>${top} of 10 levels finished · ${d} of ${st.length} stops${nxt ? ` · next: ${esc(nxt.title)}` : ''}</small></span><span>${icon('next')}</span></a>`; }).join('');
   return pageHead({ title: 'My page', sub: 'your level, your week and your medals', back: { label: 'Home', href: '#/home' } }) + `<div class="grid2">
     <div class="card pin stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:84px;height:84px"><div><h2 style="margin:0">${esc(k.name)}</h2><p class="muted" style="margin:0">${esc(headline(k))}</p></div></div>
       <div class="stats"><div class="stat"><b>${goodDays(k, 7)}</b><small>good days in the last 7</small></div><div class="stat"><b>${learnedCount(k)}</b><small>things learned (proved on a later day)</small></div><div class="stat"><b>${Object.keys(k.bank).length}</b><small>words in your bank</small></div><div class="stat"><b>${Object.keys(k.medals).length}</b><small>medals</small></div></div>
@@ -38,9 +39,12 @@ export function meView() {
     <div class="card"><h3>The seven strands</h3><div class="stoplist">${rows}</div></div></div>`;
 }
 
+/* each medal opens the place that earns it */
+const MEDAL_GO = { 'first-stop': '#/continue', wordsmith: '#/atlas/word', roots: '#/stop/w5-root', sentence: '#/atlas/sentence', comma: '#/stop/s5-comma', reader: '#/library',
+  bookworm: '#/library/words', week: '#/continue', mastery: '#/practice', game: '#/play/builder', stage: '#/stage/aloud', world: '#/atlas' };
 export function medalsView() {
   const k = kid();
-  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My page', href: '#/me' } }) + `<div class="medals">${MEDALS.map((m) => `<div class="card medal${k.medals[m.id] ? '' : ' no'}"><img src="art/${m.art}.webp" alt=""><h3 style="font-size:15.5px">${esc(m.name)}</h3><p class="note" style="margin:0">${esc(m.how)}</p>${k.medals[m.id] ? `<span class="tag ok" style="margin-top:6px">${icon('check')}Earned</span>` : ''}</div>`).join('')}</div>`;
+  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My page', href: '#/me' } }) + `<div class="medals">${MEDALS.map((m) => `<a class="card medal${k.medals[m.id] ? '' : ' no'}" href="${MEDAL_GO[m.id] || '#/continue'}" style="text-decoration:none;color:inherit"><img src="art/${m.art}.webp" alt=""><h3 style="font-size:15.5px">${esc(m.name)}</h3><p class="note" style="margin:0">${esc(m.how)}</p>${k.medals[m.id] ? `<span class="tag ok" style="margin-top:6px">${icon('check')}Earned ${new Date(k.medals[m.id]).toLocaleDateString()}</span>` : `<span class="tag" style="margin-top:6px">${icon('next')}Go there</span>`}</a>`).join('')}</div>`;
 }
 
 /* ---------- Collection and Shop ---------- */
@@ -106,7 +110,7 @@ export function logView() {
 export function recordingsView() {
   const k = kid(), a = (k.stage['sp1-aloud'] || []).slice().reverse();
   return pageHead({ title: 'My recordings', sub: 'numbers only — no sound is ever kept', back: { label: 'Stage', href: '#/stage' } }) + (a.length
-    ? `<div class="card"><ul class="ledger">${a.map((x) => `<li><span>${new Date(x.at).toLocaleDateString()} · ${esc(PASSAGES.find((p) => p.id === x.passage)?.title || '')}</span><b>${x.wpm} wpm · ${x.pauses} pauses · ${x.secs}s</b></li>`).join('')}</ul></div><p class="note">The app never records your voice. It keeps only these numbers, measured while you read.</p>`
+    ? `<div class="card"><div class="stoplist">${a.map((x) => `<a class="stoprow" href="#/stage/aloud/${esc(x.passage)}"><span class="st">${icon('mic')}</span><span><b>${esc(PASSAGES.find((p) => p.id === x.passage)?.title || '')}</b><small>${new Date(x.at).toLocaleDateString()} · ${x.wpm} words a minute · ${x.pauses} pauses · ${x.secs}s — read it again</small></span><span>${icon('next')}</span></a>`).join('')}</div></div><p class="note">The app never records your voice. It keeps only these numbers, measured while you read.</p>`
     : empty('sleep', 'No readings yet. The Stage is waiting.', link('The Stage', '#/stage', { ic: 'mic' })));
 }
 

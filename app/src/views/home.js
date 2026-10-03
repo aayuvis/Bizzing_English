@@ -7,7 +7,7 @@ import { S, kid } from '../app.js';
 import { esc, mascot } from '../ui.js';
 import { nextStep, stopsOf } from '../next.js';
 import { strand, level } from '../curriculum.js';
-import { headline, today } from '../model.js';
+import { headline, today, bestLevel } from '../model.js';
 import { STRAND_WORLD, plate } from '../worlds.js';
 import { PASSAGES as ALLP, WORKS } from '../data/library.js';
 import { shippedLines, shippable } from '../reading.js';
@@ -16,14 +16,17 @@ const LINES = shippedLines().filter((l) => !/^["'“‘]/.test(l.text));   // th
 import HOUR from '../data/hour-words.json';
 import { storyCard } from './stories.js';
 
+/* each tip opens the exact place that practises it, and says so */
 const TIPS = [
-  'Read it aloud once — your ear catches what your eye skips.',
-  'Stuck on a word? Tap it. It goes into your word bank.',
-  'Copy a great sentence slowly, and you will see how it is built.',
-  'When you read, picture it. When you write, help your reader picture it.',
-  'A comma is a small breath. A full stop is a full breath.',
-  'Before you answer, read the question twice.',
-  'Say a new word in a sentence of your own. Then it is yours.',
+  ['Read it aloud once — your ear catches what your eye skips.', '#/stage/aloud', 'Read it aloud, on the Stage'],
+  ['Stuck on a word? Tap it. It goes into your word bank.', '#/library/words', 'your word bank'],
+  ['Copy a great sentence slowly, and you will see how it is built.', '#/stop/wr1-copy', 'Copy it exactly'],
+  ['When you read, picture it. When you write, help your reader picture it.', '#/stop/wr6-describe', 'Paint it in words'],
+  ['A comma is a small breath. A full stop is a full breath.', '#/stop/s5-comma', 'Commas'],
+  ['Before you answer, read the question twice.', '#/practice', 'your spaced checks'],
+  ['Say a new word in a sentence of your own. Then it is yours.', '#/stop/w2-word', 'What does it mean?'],
+  ['A simile says “like”; a metaphor says “is”. Spot them in real books.', '#/play/figure', 'Figure Hunt'],
+  ['Many English words began as Greek myths — panic, echo, atlas.', '#/stop/w7-myth-names', 'Words from the myths'],
 ];
 
 const hourIdx = (n) => Math.floor(Date.now() / 36e5) % Math.max(1, n);
@@ -74,6 +77,9 @@ export function homeView() {
   const hw = hourWords[hourIdx(hourWords.length)] || Object.keys(HOUR)[hourIdx(Object.keys(HOUR).length)];
   const line = LINES[hourIdx(LINES.length)];
   const lw = line && WORKS.find((x) => x.id === line.work);
+  const tip = TIPS[hourIdx(TIPS.length)];
+  /* the line's own story, when a passage of that book is on the shelf for this child: open it, not the shelf */
+  const lineStory = line && PASSAGES.find((x) => x.work === line.work && shippable(x) && x.band <= k.band);
   const t = k.targets;
   /* three rings, every day: right answers, passages read, and one thing made — said on the Stage or written at
      the desk. Counts of work, never minutes (today only: nothing carries over, so it is not a streak). */
@@ -82,11 +88,11 @@ export function homeView() {
   const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span><b>${x.n}</b> / ${x.of} ${esc(x.label)}</span></li>`).join('')}</ul></div>`;
   return home({
     greet: { mascot: mascot(k.last ? 'point' : 'wave'), hello: greetHello(), name: k.name, line: greetLine(k, nx) },
-    ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: '#/me' } },
-    hour: { kicker: 'Word of the hour', title: hw || '—', sub: HOUR[hw] || '', icon: 'key', href: `#/word/${encodeURIComponent(hw || '')}` },
+    ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },
+    hour: { kicker: 'Word of the hour', title: hw || '—', sub: `${HOUR[hw] || ''}${p && (p.words || []).includes(hw) ? ` — from “${p.title}”, in ${w?.title || 'your book'}.` : ''} Tap for its origin and how to say it.`, icon: 'key', href: `#/word/${encodeURIComponent(hw || '')}` },
     next, second,
-    tip: { kicker: 'Tip', text: TIPS[hourIdx(TIPS.length)], href: '#/help' },
-    quote: line && { kicker: 'Line of the hour', text: line.text, who: / in /.test(line.who) || !lw ? line.who : `${line.who}, ${lw.title}`, href: `#/book/${line.work}` },
+    tip: { kicker: 'Tip', text: `${tip[0]} Try it: ${tip[2]}.`, href: tip[1] },
+    quote: line && { kicker: 'Line of the hour', text: line.text, who: `${/ in /.test(line.who) || !lw || line.who.includes(lw.title) ? line.who : `${line.who}, ${lw.title}`}${lw ? (line.who.includes(lw.author) ? `, ${lw.year}` : ` · ${lw.author}, ${lw.year}`) : ''}${lineStory ? ' — hear the story' : ' — about the book'}`, href: lineStory ? `#/story/${lineStory.id}` : `#/book/${line.work}` },
     foot: `<a href="#/privacy">Privacy</a> · Nothing leaves this device · Bizzing™ is a trademark of its owner`,
   });
 }

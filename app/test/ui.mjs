@@ -143,6 +143,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 
   /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), My page, Settings, Add a child */
   await go(page, '#/home');
+  ok('every Home card opens its own topic, never a bare collection or the help page', await page.evaluate(() => [...document.querySelectorAll('.bz-home a[href^="#/"]')].map((x) => x.getAttribute('href')).every((h) => !/^#\/(help|me|library|stage|play|shop)$/.test(h))));
   ok('Home shows three rings: right answers, passages read, said aloud or written', (await page.$$('.rings svg circle')).length === 6 && /right answers[\s\S]*passages read[\s\S]*said aloud or written/.test(await page.textContent('.rings')));
   await page.click('.bz-kid'); await page.waitForTimeout(250);
   ok('the avatar opens its menu, not a page', await page.locator('.kidmenu').isVisible());
