@@ -6,8 +6,9 @@
    builder.json — the MAIN_CLAUSE shape of src/data/sentences.js:
      { s: 'When the bell rang, [we went out to play].', band, work, src }
      one main clause in [brackets] and exactly one subordinate clause opened by a SUBORDINATOR, either
-     first (then a comma) or after the main clause (no comma), so games.js builderSentence rebuilds the
-     book's own sentence exactly.
+     first (then a comma) or after the main clause, so games.js builderSentence rebuilds the book's own
+     sentence exactly (a comma the book put before a trailing clause is the one thing it drops). The
+     main clause is a full clause — its subject first, then a verb — and holds no second clause.
    rush.json — the COMMAS shape:
      { s, rule: 'list' | 'fronted' | 'address' | 'aside' | 'compound', band, work, src }
      (the rule names play.js already maps: an introductory opener is 'fronted', two clauses joined by
@@ -18,7 +19,9 @@
    quotation marks (except an address line, which is the words INSIDE a quotation), semicolons, colons,
    dashes, brackets, digits, italics, capitals for emphasis, archaic words (thee, hath, ere, -eth…),
    anything unkind or frightening for a six-year-old, and any shape the rules below cannot prove.
-   Band: 1 short and plain (children's and fable shelves only), 2 middling, 3 long or rare-worded.
+   Band: each pool is cut into equal thirds by difficulty (length, the rarest word, the average word
+   length). Band 1 holds only short, plain sentences from stories (never an essay or a speech); a word
+   kept for the oldest readers (war, ghost, died…) puts a sentence in band 3 whatever its length.
 
      node tools/build-games.mjs           → app/src/data/games/builder.json, rush.json
      node tools/build-games.mjs --check   → exits 1 if those files are not today's cut
@@ -37,7 +40,6 @@ export const collapse = (s) => s.replace(/\s+/g, ' ').trim();
 const PROSE = new Set(['children', 'fable', 'novel', 'essay', 'speech']);
 export const eligible = (w) => !!w && w.held && cleared(w) && !w.needsReview && existsSync(join(APP, 'public', 'texts', `${w.id}.txt`));
 const works = WORKS.filter((w) => eligible(w) && PROSE.has(w.shelf));
-const YOUNG = new Set(['children', 'fable']);
 const srcOf = (w) => `${String(w.author).split(', told by')[0]}, ${w.title}`;
 
 /* ---------------------------------------------------------------- words */
@@ -51,6 +53,7 @@ const IRREG = W(`ate awoke began beheld bent bit bled blew bore bought bound bro
   becomes begins brings calls comes falls feels finds gets gives goes grows has hears helps holds keeps knows leaves likes lives looks loves makes means needs runs says sees seems shows sits stands takes tells thinks turns walks wants works`);
 /* -ed words that are not past-tense verbs */
 const NOT_ED = W('bed red fed shed sled wed bred fled led sped shred hundred sacred naked wicked kindred ragged rugged crooked beloved aged blessed wretched learned dogged jagged hatred need speed seed feed deed weed breed greed indeed steed bleed creed freed reed heed proceed exceed succeed sheltered gifted talented interested tired frightened excited pleased surprised ashamed delighted scared worried bored amazed astonished contented crowded wooded skilled loaded beaded striped spotted coloured colored');
+const BEE = new Set(Object.keys(JSON.parse(readFileSync(join(APP, 'public', 'data', 'bee-words.json'), 'utf8')).words));
 const LEXV = new Set(Object.entries(JSON.parse(readFileSync(join(APP, 'public', 'data', 'bee-words.json'), 'utf8')).words).filter(([w, r]) => r[2] === 'verb' && /[a-z]ed$/.test(w) && !NOT_ED.has(w)).map(([w]) => w));
 const NEG = /^(don't|doesn't|didn't|can't|couldn't|won't|wouldn't|shan't|shouldn't|isn't|wasn't|aren't|weren't|hasn't|haven't|hadn't|mustn't|cannot)$/;
 const isVerb = (w) => AUX.has(w) || IRREG.has(w) || NEG.test(w) || LEXV.has(w) || (/^[a-z]{3,}ed$/.test(w) && !NOT_ED.has(w) && !/eed$/.test(w));
@@ -60,12 +63,12 @@ const SUBJ_WORD = W('there nobody everyone everybody someone somebody something 
 const SING = W('he she it');
 const ADV1 = W('never always often soon still only just also quite almost hardly nearly suddenly quickly slowly really soon presently immediately instantly gently quietly');
 const ADV0 = W('suddenly presently soon then now immediately');
-/* a word is a NAME when the corpus capitalises it mid-sentence nearly always */
 const ARCHAIC = W(`thee thou thy thine ye hath doth dost hast hadst art shalt wilt wast wert 'tis 'twas ere nay yea whence thither hither whither wherefore methinks verily forsooth unto o oh ah alas lo prithee anon aught naught nought betwixt oft fain mayhap perchance quoth`);
-const UNSAFE = W(`kill kills killed killing murder murdered murderer murderers blood bloody bleed bleeding corpse corpses coffin gun guns pistol pistols rifle shot shoot shooting stab stabbed knife knives hanged hang hanging gallows whip whipped whipping flog flogged beat beating beaten drunk drunken drink drank wine beer gin rum brandy whisky ale tobacco cigar opium devil devils hell damn damned satan demon slave slaves slavery savage savages negro negroes nigger niggers indian indians gipsy gipsies gypsy gypsies jew jews cripple idiot stupid cruel cruelty torture tortured scream screamed screaming horror horrible terror blind deaf lunatic madman poison poisoned suicide execution executed thief thieves rob robbed robber robbers agony sin sins evil gore naked bible priest priests sob sobbed`);
+const UNSAFE = W(`pierce pierced pierces piercing kill kills killed killing murder murdered murderer murderers blood bloody bleed bleeding corpse corpses coffin gun guns pistol pistols rifle shot shoot shooting stab stabbed knife knives hanged hang hanging gallows whip whipped whipping flog flogged beat beating beaten drunk drunken drink drank wine beer gin rum brandy whisky ale tobacco cigar opium devil devils hell damn damned satan demon slave slaves slavery savage savages negro negroes nigger niggers indian indians gipsy gipsies gypsy gypsies jew jews cripple idiot stupid cruel cruelty torture tortured scream screamed screaming horror horrible terror blind deaf lunatic madman poison poisoned suicide execution executed thief thieves rob robbed robber robbers agony sin sins evil gore naked bible priest priests sob sobbed`);
+/* spellings of speech (Joe Gargery's, Silver's, Alan Breck's): a child should not learn them as English */
+const DIALECT = W(`nows thens yer gal wot nae ken dinna canna summat doo sich agin afeard onst arter sartin wery wos ses sez meantersay ain't 'em o' ha' wi' bein goin doin nothin somethin mebbe mayhap aye shipmates matey ye'll y'are hisself theirselves them's thar wal shan't'st oncommon partickler conwict wittles`);
 /* fine for the oldest band (11–14), never for the first two */
-const OLDER = W(`war wars battle battles sword swords soldier soldiers enemy enemies prisoner prisoners prison fight fights fought fighting wicked witch witches ghost ghosts god gods lord lords mass pipe smoke smoked smoking hunting hunt hunted hunter hunters fool fools mad ugly fat hate hated hates kiss kissed kissing lover dead died die dies dying death deaths wound wounded pain buried bury grave graves weep wept`);
-export const UNSN = new Map(), CAPN = new Map();
+const OLDER = W(`bosom arrow arrows war wars battle battles sword swords soldier soldiers enemy enemies prisoner prisoners prison fight fights fought fighting wicked witch witches ghost ghosts god gods lord lords mass pipe smoke smoked smoking hunting hunt hunted hunter hunters fool fools mad ugly fat hate hated hates kiss kissed kissing lover dead died die dies dying death deaths wound wounded pain buried bury grave graves weep wept`);
 const tokens = (s) => s.split(/\s+/);
 const bare = (t) => t.toLowerCase().replace(/^[^a-z]+|[^a-z']+$/g, '');
 
@@ -101,6 +104,7 @@ for (const t of Object.values(flat)) {
   }
 }
 export const isName = (b0) => { const b = b0.replace(/'s$/, ''); return isName1(b); };
+/* a word is a NAME when the corpus capitalises it mid-sentence nearly always */
 const isName1 = (b) => (capMid.get(b) || 0) >= 3 && (capMid.get(b) || 0) > 9 * (lowMid.get(b) || 0) && !PRON.has(b) && !DET.has(b) && b !== 'i';
 const rank = new Map([...freq.entries()].sort((a, b) => b[1] - a[1]).map(([w], i) => [w, i + 1]));
 const rankOf = (b) => (isName(b) ? 1 : b.includes('-') ? Math.max(...b.split('-').filter(Boolean).map(rankOf)) : rank.get(b.replace(/'s$/, '')) || rank.get(b) || 1e9);
@@ -117,10 +121,11 @@ function refuse(s) {
   if (/(^|\s)[A-Z]\./.test(s) || /\b(St|Mt)\b/.test(s)) return 'initials';
   const ws = tokens(s).map(bare);
   if (ws.some((w) => ARCHAIC.has(w) || /^[a-z]{3,}eth$/.test(w) && !/^(teeth|beneath|elizabeth|macbeth)$|ieth$/.test(w) || /^[a-z]+'st$|^(canst|couldst|wouldst|shouldst|didst|art|doest|knowest)$/.test(w))) return 'archaic';
-  const bad = ws.find((w) => UNSAFE.has(w.replace(/'s$/, ''))); if (bad) { if (process.env.UNS) UNSN.set(bad, (UNSN.get(bad) || 0) + 1); return 'not for a young child'; }
+  const parts = ws.flatMap((w) => w.replace(/'s$/, '').split('-'));
+  if (parts.some((w) => UNSAFE.has(w))) return 'not for a young child';
   if (ws.some((w) => w.replace(/'s$/, '').length > 13)) return 'a very long word';
   if (ws.some((w) => /'/.test(w) && !/^[a-z]+'(s|ll|re|ve|d|m)$/.test(w) && !/^(do|does|did|ca|could|wo|would|sha|should|is|was|are|were|has|have|had|must|need|might)n't$/.test(w))) return 'dialect';
-  if (ws.some((w) => /^a-[a-z]+ing$/.test(w))) return 'dialect';
+  if (ws.some((w) => /^a-[a-z]+ing$/.test(w) || DIALECT.has(w))) return 'dialect';
   return null;
 }
 /* A full clause: a subject at its start (pronoun, a determiner phrase, or a name), then a verb within
@@ -142,6 +147,7 @@ function clause(ws, raw, lead = false) {
   } else if (DET.has(w0) || isName(w0) && /^[A-Z]/.test(r0)) {
     if (isName(w0) && !DET.has(w0) && !lead && i === 0 && !/^[A-Z]/.test(raw[0])) return -1;
     const s0 = i; i++;
+    if (/^(a|an|the|his|her|my|our|their|its|your|every|another)$/.test(w0)) i++;   // an article needs its noun: "a bit" is no clause
     while (i < ws.length && i - s0 < 7 && !isVerb(ws[i]) && !SUBSET.has(ws[i]) && !PRON.has(ws[i]) && !NOT_SUBJ.has(ws[i]) && !/ly$/.test(ws[i]) || i < ws.length && ['of', 'in', 'on', 'at', 'with', 'from'].includes(ws[i]) && i - s0 < 5 && i + 1 < ws.length && !isVerb(ws[i + 1])) i++;
     if (i < ws.length && ADV1.has(ws[i])) i++;
   } else if (/^[a-z]+s$/.test(w0) && !NOT_SUBJ.has(w0) && i + 1 < ws.length && isVerb(ws[i + 1]) && !isVerb(w0) && /^[a-z]/.test(r0)) {
@@ -162,7 +168,7 @@ function bandOf(s, w) {
   const score = n + (rare > 2500 ? 2 : 0) + (rare > 6000 ? 3 : 0) + (rare > 15000 ? 3 : 0) + Math.max(0, avg - 4) * 4;
   let floor = 1;
   if (w.shelf === 'essay' || w.shelf === 'speech' || n > 15 || rare > 8000 || ws.some((x) => x.length > 10)) floor = 2;
-  if (ws.some((x) => OLDER.has(x.replace(/'s$/, '')))) floor = 3;
+  if (ws.some((x) => x.replace(/'s$/, '').split('-').some((y) => OLDER.has(y)))) floor = 3;
   return { score, floor };
 }
 function spread(pool) {
@@ -210,6 +216,7 @@ function builder(s, w) {
   if (ws.some((x, i) => x === 'as' && (ws[i + 1] === 'if' || ws[i + 1] === 'though' || ws[i + 1] === 'soon' || ws[i + 1] === 'long'))) return ['a joining phrase'];
   if (subIdx.length !== 1) return [subIdx.length ? 'more than one subordinator' : 'no subordinator'];
   const k = subIdx[0], sub = ws[k];
+  if (!/^[A-Za-z]+$/.test(toks[k])) return ['punctuation on the joining word'];
   if (ws.includes('whether') || ws.includes('so') && ws[ws.indexOf('so') + 1] === 'that') return ['another joining word'];
   if ((AFTER_SUB[sub] || new Set()).has(ws[k + 1])) return ['not a clause boundary'];
   const commas = (s.match(/,/g) || []).length;
@@ -360,18 +367,18 @@ for (const w of works) {
   for (const p of paras) {
     for (const s of sentences(p)) {
       const key = collapse(s).toLowerCase(); if (seen.has(key)) continue;
-      const r = refuse(s); if (r) { tally(r); if (process.env.SHOW && r === process.env.SHOW && Math.random() < 0.002) console.log("  ~", w.id, s.slice(0, 140)); continue; }
-      const band = 0, d = bandOf(s, w); if (false) { tally('rare word'); if (process.env.RARE && Math.random() < 0.01) console.log('  ~', words(s).filter(Boolean).sort((a, b) => rankOf(b) - rankOf(a))[0], '|', s.slice(0, 100)); continue; }
+      const r = refuse(s); if (r) { tally(r); continue; }
+      const band = 0, d = bandOf(s, w);
       const [rb, out] = builder(s, w), [rr, rule] = rush(s, w);
       if (!rb) B.push({ s: out, band, d, work: w.id, src: srcOf(w) });
       if (!rr) R.push({ s, rule, band, d, work: w.id, src: srcOf(w) });
       if (rb) tally('builder: ' + rb); if (rr) tally('rush: ' + rr);
       if (!rb || !rr) { seen.add(key); continue; }
-      if (process.env.SHOWB && rb === process.env.SHOWB && Math.random() < 0.02) console.log('  ~', w.id, s.slice(0, 150));
     }
     for (const q of quoted(p)) {
       const key = collapse(q).toLowerCase(); if (seen.has(key)) continue;
       const r = refuse(q); if (r) continue;
+      if (words(q).some((x) => x && !isName(x) && (freq.get(x) || 0) <= 3 && !BEE.has(x.replace(/'s$/, '')))) continue;
       const band = 0, d = bandOf(q, w);
       const [rr, rule] = rush(q, w, true), [rb, out] = builder(q, w);
       if (!rr) R.push({ s: q, rule, band, d, work: w.id, src: srcOf(w) });
@@ -402,9 +409,5 @@ if (CHECK) {
   console.log(`build-games: builder ${B.length} (bands ${count(B)}), rush ${R.length} (bands ${count(R)}; ${rules}) from ${works.length} works`);
 }
 if (WHY) for (const [r, c] of [...why.entries()].sort((a, b) => b[1] - a[1])) console.log(String(c).padStart(7), r);
-if (process.env.PARA) { let a = 0, b = 0; for (const w of works) { const t = raw[w.id]; a += t.length; b += paragraphs(t).join(' ').length; console.log(w.id, t.length, paragraphs(t).join(' ').length); } console.log(a, b); }
 
-if (process.env.UNS) console.log([...UNSN.entries()].sort((a,b)=>b[1]-a[1]).slice(0,60).map(x=>x.join(':')).join(' '));
-if (process.env.T) for (const t of process.env.T.split('|')) console.log(t, '→', rush(t, { shelf: 'children' }), builder(t, {}));
 
-if (process.env.CAPS) console.log([...CAPN.entries()].sort((a,b)=>b[1]-a[1]).slice(0,120).map(x=>x.join(':')).join(' '));
