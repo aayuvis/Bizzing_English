@@ -314,7 +314,7 @@ ok('broken: a favourite slot is caught', (() => { const s = [0, 0, 0, 0]; for (l
 const voc = one((c) => c.kind === 'vocab'), idi = one((c) => c.kind === 'idiom'), idx = IDIOMS[+idi.src.slice(6)];
 const originLeak = idx.os.split(/(?<=[.;])\s/)[0];
 ok('broken: an idiom’s origin story slipped onto a card is caught', scan([{ ...idi, more: `${idi.more} ${originLeak}` }], ORIGINS, false).length === 1);
-ok('broken: a Bee quote slipped onto a card is caught', scan([{ ...lesson, body: `${lesson.body} ${BEE_QUOTES[7]}` }], BEE_QUOTES, true).length === 1);
+ok('broken: a Bee quote slipped onto a card is caught', scan([{ ...lesson, body: `${lesson.body} ${BEE_QUOTES.find((q) => q.split(' ').length > 8 && !heldAnywhere(q))}` }], BEE_QUOTES, true).length === 1);
 ok('broken: a vocabulary card whose right answer is another word’s meaning is caught', resolve({ ...voc, play: { ...voc.play, opts: [voc.play.opts[1], voc.play.opts[0], ...voc.play.opts.slice(2)] } }) !== '');
 ok('broken: a saying the tool does not hold is caught', routeOk({ ...idi, route: '#/tools/idioms/p/no%20such%20saying' }) !== '' && routeOk({ ...voc, route: '#/tools/vocab/no-such-deck' }) !== '');
 done();
