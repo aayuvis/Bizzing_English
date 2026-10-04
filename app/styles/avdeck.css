@@ -1,8 +1,8 @@
 /* the avatar deck (views/pages.js avDeckSheet): Bizzing Bee's trading cards, in English's colours */
-.bz-greet .greet-av { all: unset; cursor: pointer; display: block; border-radius: 50%; line-height: 0; }
-.bz-greet .greet-av:focus-visible { outline: 3px solid var(--bz-accent); outline-offset: 3px; }
-.bz-greet .greet-av:hover img { transform: scale(1.05) rotate(-3deg); }
-.bz-greet .greet-av img { transition: transform .2s ease; }
+.bz-greet > img.greet-av { cursor: pointer; border-radius: 16px; transition: transform .2s ease; }
+.bz-greet > img.greet-av:focus-visible { outline: 3px solid var(--bz-accent); outline-offset: 3px; }
+.bz-greet > img.greet-av:hover { transform: scale(1.04) rotate(-3deg); }
+@media (prefers-reduced-motion: reduce) { .bz-greet > img.greet-av { transition: none; } }
 .avdeck { display: grid; gap: 12px; justify-items: center; }
 .avd-stage { display: flex; align-items: center; gap: 8px; width: 100%; justify-content: center; }
 .avd-nav { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--bz-line); background: var(--bz-card); color: var(--bz-ink); display: grid; place-items: center; cursor: pointer; }

@@ -217,6 +217,7 @@ document.addEventListener('keydown', (e) => {
   if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
   if (S.sheet?.kind === 'kids' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { const items = [...document.querySelectorAll('.kidmenu button')], i = items.indexOf(document.activeElement);
     items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length]?.focus(); e.preventDefault(); return; }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches?.('[role=button][data-act]')) { e.target.click(); e.preventDefault(); return; }   // a picture that is a button (the hello card's avatar)
   if (S.sheet?.kind === 'avdeck' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { ACTIONS['deck-go'](e.key === 'ArrowLeft' ? -1 : 1); e.preventDefault(); return; }
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }

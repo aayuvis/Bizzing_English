@@ -449,6 +449,9 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     const sh = await checkShell(P.page, { phone: true });   // the shell is measured on Home, where it carries the home grid
     await go(P.page, '#/feed'); await P.page.waitForTimeout(600);
     ok('My Feed (phone): checkShell matches Bee with six tabs', sh.length === 0 && (await P.page.$$('[data-bz=tabbar] a')).length === 6, sh.join('; '));
+    await go(P.page, '#/home'); await P.page.tap('.bz-greet .greet-av'); await P.page.waitForTimeout(300);
+    ok('the avatar deck opens by a tap on a phone and fits it', await P.page.evaluate(() => { const c = document.querySelector('.avdeck .avcard'); return !!c && c.getBoundingClientRect().right <= innerWidth && document.documentElement.scrollWidth <= innerWidth; }));
+    await P.page.keyboard.press('Escape'); await P.page.waitForTimeout(150); await go(P.page, '#/feed'); await P.page.waitForTimeout(600);
     ok('My Feed (phone): no sideways scroll', (await P.page.evaluate(() => document.documentElement.scrollWidth)) <= 390);
     const pp = await P.page.$('.bzf-card:not(.bzf-end) .bzf-opt[data-o="0"]');
     if (pp) { await pp.tap(); await P.page.waitForTimeout(250); ok('My Feed (phone): a tap answers on the card', !!(await P.page.$('.bzf-after.ok'))); }
@@ -625,8 +628,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
   ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));
   /* the hello card shows the child's own avatar; a tap opens the deck of avatar cards (Bizzing Bee's) */
-  ok('the hello card shows the child’s avatar, as a button', await page.evaluate(() => { const b = document.querySelector('.bz-greet .greet-av img'); const k = window.__bz.S.h.kids[0]; return !!b && b.getAttribute('src').includes(k.avatar); }));
-  await page.click('.bz-greet .greet-av'); await page.waitForTimeout(250);
+  ok('the hello card shows the child’s avatar, as a button', await page.evaluate(() => { const b = document.querySelector('.bz-greet > img.greet-av[role=button][tabindex="0"]'); const k = window.__bz.S.h.kids[0]; return !!b && b.getAttribute('src').includes(k.avatar); }));
+  await page.focus('.bz-greet .greet-av'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);   // by keyboard here; the phone check below taps it
   const card1 = await page.evaluate(() => { const c = document.querySelector('.avdeck .avcard'); return c && { id: c.dataset.card, stats: c.querySelectorAll('.avc-stats > div').length, title: c.querySelector('.avc-title')?.textContent, hist: c.querySelector('.avc-hist')?.textContent, lore: !!c.querySelector('.avc-lore'), fact: !!c.querySelector('.avc-fact') }; });
   ok(`a tap on the avatar opens its card: rank, four stats, lore, a real fact and its history (${JSON.stringify(card1)})`, !!card1 && card1.stats === 4 && /^(Reader|Storyteller|Orator|Laureate) of /.test(card1.title) && /wearing it now/.test(card1.hist) && card1.lore && card1.fact);
   await page.keyboard.press('ArrowRight'); await page.waitForTimeout(200);

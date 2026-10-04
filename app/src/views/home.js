@@ -109,7 +109,7 @@ export function homeView() {
   });
   const av = avatarOf(k);
   return page.replace('<div class="bz-foot">', `<div class="fd">${feed(k)}</div><div class="bz-foot">`)
-    .replace(`<section class="bz-card bz-greet" data-bz="greet"><img src="${esc(av)}" alt="">`, `<section class="bz-card bz-greet" data-bz="greet"><button class="greet-av" data-act="av-deck" aria-label="Your avatar cards"><img src="${esc(av)}" alt=""></button>`);
+    .replace(`<section class="bz-card bz-greet" data-bz="greet"><img src="${esc(av)}" alt="">`, `<section class="bz-card bz-greet" data-bz="greet"><img src="${esc(av)}" alt="Your avatar cards" class="greet-av" data-act="av-deck" role="button" tabindex="0">`);   // the image stays the shell's own child, so its geometry holds
 }
 
 /* ---------- the feed under the journey cards (the family's: Maths' and Geography's Today's three, India's
