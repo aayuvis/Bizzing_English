@@ -40,6 +40,7 @@ export function meView() {
       <div class="stats"><div class="stat"><b>${goodDays(k, 7)}</b><small>good days in the last 7</small></div><div class="stat"><b>${learnedCount(k)}</b><small>things learned (proved on a later day)</small></div><div class="stat"><b>${Object.keys(k.bank).length}</b><small>words in your bank</small></div><div class="stat"><b>${Object.keys(k.medals).length}</b><small>medals</small></div></div>
       ${bookplate(k)}<div class="row">${link('Medals', '#/medals', { cls: 'out', ic: 'medal' })}${link('Collection', '#/collection', { cls: 'out', ic: 'star' })}${link('Reading log', '#/log', { cls: 'out', ic: 'book' })}</div></div>
     <div class="card"><h3>The seven strands</h3><div class="stoplist">${rows}</div></div></div>
+    <div class="row" style="margin:13px 0">${link('Find my starting place again', '#/place', { ic: 'compass', cls: 'out' })}<small class="note">Three minutes; it only ever moves a start forward.</small></div>
     ${(() => { const cs = certificates(k); return `<section class="card" style="margin:13px 0"><h3>Certificates</h3>${cs.length ? `<div class="certs">${cs.map((c) => `<a class="cert" href="#/certificate/${c.id}" style="--cc:${c.colour}">${icon(c.kind === 'book' ? 'book' : 'medal')}<span><b>${esc(c.title)}</b><small>${new Date(c.at).toLocaleDateString()}</small></span></a>`).join('')}</div>` : '<p class="muted" style="margin:0">Finish every stop in a level and its certificate appears here, ready to save or print.</p>'}</section>`; })()}`;
 }
 

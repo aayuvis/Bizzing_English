@@ -59,7 +59,7 @@ ok('a 3 from a grown-up on a later day makes it learned', judge(j, 'wr4-para', 3
 /* store v1 → v2: free writing leaves the reading record (which backups carry) for k.writing (which they never do) */
 const old = { v: 1, parent: { plan: 'free' }, kids: [{ id: 'a', name: 'Old', band: 2, avatar: 'x', reading: { p1: { heard: true, thoughts: 'my secret thoughts' } } }], active: 'a' };
 const m2 = migrate(JSON.parse(JSON.stringify(old)));
-ok('v1 households migrate to v2', m2.v === 2 && m2.kids[0].writing.talk.p1 === 'my secret thoughts' && !('thoughts' in m2.kids[0].reading.p1));
+ok('v1 households migrate through v2 to the current version', m2.v === VERSION && m2.kids[0].place === null && m2.kids[0].writing.talk.p1 === 'my secret thoughts' && !('thoughts' in m2.kids[0].reading.p1));
 const wk = addKid(newHousehold(), newKid('W', 2, 'x')); wk.writing = { 'wr4-para': [{ parts: ['My private paragraph.'] }], talk: { p1: 'private' } };
 const hw = newHousehold(); hw.kids.push(wk);
 ok('a backup never carries free writing', !JSON.stringify(makeBackup(hw)).includes('private'));

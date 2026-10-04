@@ -398,7 +398,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('leaving the contest mid-round switches the microphone off', await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
   /* the Shop's Extras: a look at a printed price; the paper is worn at once */
   await go(page, '#/shop/extras');
-  ok('Extras: three kinds, the first of each free and worn', (await page.$$('.extragrid')).length === 3 && (await page.$$('.extragrid .tag.ok')).length === 3);
+  ok('Extras: three kinds of look, the first of each free and worn — and a Challenge for each of the seven games', (await page.$$('.extragrid')).length === 4 && (await page.$$('.extragrid .tag.ok')).length === 3 && (await page.$$('[data-act=buy-mode]')).length === 7);
   const can = await page.$('[data-act=buy-extra][data-arg=paper-cream]:not([disabled])');
   if (can) { await can.click(); await page.waitForTimeout(300); ok('buying a paper wears it at once', await page.evaluate(() => document.documentElement.dataset.paper === 'cream')); }
   else ok('an Extra you cannot afford cannot be bought', !!(await page.$('[data-act=buy-extra][data-arg=paper-cream][disabled]')));
