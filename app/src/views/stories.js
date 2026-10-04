@@ -21,6 +21,7 @@ import { showWord } from './reader.js';
 import { loadBook, book, chapterText, BOOKS, bookMeta, chapterKey } from '../book.js';
 import ART from '../data/story-art.json';
 import { mythStops, mythPassage, mythWords } from '../data/deep.js';
+import { fullAttrs, turnKey } from '../panel.js';
 
 const SHIPPED = () => PASSAGES.filter(shippable);
 const BANDS = ['', '6–7', '8–10', '11–14'];
@@ -108,27 +109,30 @@ export function storyView() {
   const r = S.run, k = kid();
   if (!r || r.error) return empty('oops', 'That story is not on the shelf.', link('Stories', '#/library'));
   if (r.i >= r.scenes.length) return storyEnd();
-  const N = r.scenes.length, text = r.scenes[r.i];
-  return `<div class="story-player">
-    <div class="sp-head"><a class="bz-back" href="${r.back.href}">${icon('back')}<span>${esc(r.back.label)}</span></a><div class="dots" aria-label="scene ${r.i + 1} of ${N}">${r.scenes.map((_, i) => `<i class="${i <= r.i ? 'on' : ''}"></i>`).join('')}</div><span class="tag">${esc(r.kind === 'chapter' ? 'Chapter ' + r.n : 'Scene ' + (r.i + 1))}</span></div>
-    <div class="sp-stage" style="${bg(r.art(r.i, N))}"><div class="sp-title"><h1>${esc(r.title)}</h1><small>${esc(r.sub)}</small></div></div>
-    <article class="sp-text passage${r.verse ? ' verse' : ''}" aria-live="off">${words(text, k)}</article>
-    <div class="sp-foot row">${btn(playing() ? 'Pause' : r.i === 0 && !r.started ? 'Read it to me' : 'Again', 'sp-play', { ic: playing() ? 'close' : 'speaker', cls: 'out' })}
-      ${r.i > 0 ? btn('Back', 'sp-prev', { ic: 'back', cls: 'ghost' }) : ''}
-      ${btn(r.i === N - 1 ? (r.kind === 'chapter' ? 'End of the chapter' : 'The end') : 'Then what happened?', 'sp-next', { ic: 'next', cls: 'grow' })}</div>
-    <p class="note" style="text-align:center">Tap any word to see what it means. ${r.auto ? 'She reads each scene as it opens.' : ''}</p></div>`;
+  const N = r.scenes.length, text = r.scenes[r.i], art = r.art(r.i, N);
+  /* the story panel (docs/story-panel-layout.md, styles/panel.css): head, the painting (nothing drawn
+     over it — the title sits above the words), the words, and the page-turn a swipe or an arrow presses */
+  return `<div class="storypanel${r.verse ? ' verse' : ''}">
+    <div class="sp-head spn-head"><a class="bz-back" href="${r.back.href}">${icon('back')}<span>${esc(r.back.label)}</span></a><div class="dots" aria-label="scene ${r.i + 1} of ${N}">${r.scenes.map((_, i) => `<i class="${i <= r.i ? 'on' : ''}"></i>`).join('')}</div><span class="tag">${esc(r.kind === 'chapter' ? 'Chapter ' + r.n : 'Scene ' + (r.i + 1))}</span></div>
+    <div class="spn-pic"${fullAttrs(art)} style="${bg(art)}"></div>
+    <div class="spn-col"><div class="spn-words"><div class="spn-cap"><h1>${esc(r.title)}</h1><small>${esc(r.sub)}</small></div>
+      <article class="sp-text passage${r.verse ? ' verse' : ''}" aria-live="off">${words(text, k)}</article>
+      <p class="note spn-note">Tap any word to see what it means. ${r.auto ? 'She reads each scene as it opens.' : ''}</p></div>
+    <div class="spn-act">${btn(playing() ? 'Pause' : r.i === 0 && !r.started ? 'Read it to me' : 'Again', 'sp-play', { ic: playing() ? 'close' : 'speaker', cls: 'out' })}
+      ${r.i > 0 ? btn('Back', 'sp-prev', { ic: 'back', cls: 'ghost', attrs: 'data-swipe="back"' }) : ''}
+      ${btn(r.i === N - 1 ? (r.kind === 'chapter' ? 'End of the chapter' : 'The end') : 'Then what happened?', 'sp-next', { ic: 'next', cls: 'grow', attrs: 'data-swipe="next"' })}</div></div></div>`;
 }
 
 function storyEnd() {
   const r = S.run, k = kid();
   if (r.kind === 'chapter') {
     const c = book(r.book).chapters.find((x) => x.n === r.n), last = book(r.book).chapters.length;
-    return `<div class="story-player"><div class="sp-stage end" style="${bg(r.art())}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>End of chapter ${r.n}</h2>
+    return `<div class="story-player"><div class="sp-stage end"${fullAttrs(r.art())} style="${bg(r.art())}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>End of chapter ${r.n}</h2>
       ${c.line ? `<blockquote class="lines" style="margin:0"><blockquote>${esc(c.line)}</blockquote></blockquote>` : ''}
       <div class="row" style="justify-content:center">${link('Now the exercises', `#/whole/${r.book}/${r.n}/do`, { ic: 'check' })}${btn('Hear it again', 'sp-again', { ic: 'undo', cls: 'out' })}${r.n < last ? link('Next chapter', `#/whole/${r.book}/${r.n + 1}`, { cls: 'out', ic: 'next' }) : ''}</div></div></div>`;
   }
   const p = PASSAGES.find((x) => x.id === r.id), w = work(p.work), loved = k.reading[p.id]?.loved;
-  return `<div class="story-player"><div class="sp-stage end" style="${bg(r.art(0, 1))}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>${esc(p.title)}</h2>
+  return `<div class="story-player"><div class="sp-stage end"${fullAttrs(r.art(0, 1))} style="${bg(r.art(0, 1))}"></div><div class="card finish stack pop"><img src="${mascot('cheer')}" alt=""><h2>${esc(p.title)}</h2>
     <p style="margin:0">From <b>${esc(w.title)}</b> by ${esc(w.author)}, ${w.year}.</p>
     <div class="row" style="justify-content:center">${link('Now the exercises', `#/story/${p.id}/do`, { ic: 'check' })}${btn('Hear it again', 'sp-again', { ic: 'undo', cls: 'out' })}${btn(loved ? 'Loved' : 'I loved this', 'sp-love', { ic: 'star', cls: 'out' })}${link('Another one', '#/story/random', { cls: 'ghost', ic: 'play' })}</div>
     <p class="note" style="margin:0">Hearing it again is not going backwards. That is how you end up knowing it by heart.</p></div>
@@ -263,8 +267,9 @@ export const STORY_ACTIONS = {
 };
 export function storyKey(e) {
   const r = S.run; if (!r || r.mode !== 'story' || r.error || r.i >= (r.scenes?.length || 0)) return false;
-  if (e.key === 'ArrowRight' || e.key === 'Enter') { STORY_ACTIONS['sp-next'](); return true; }
-  if (e.key === 'ArrowLeft') { STORY_ACTIONS['sp-prev'](); return true; }
+  if (turnKey(e)) return true;                       // ← → press the page's own [data-swipe] buttons (panel.js)
+  if (e.target?.closest?.('button, a, [role=button]')) return false;   // Enter or Space on a control presses that control
+  if (e.key === 'Enter') { document.querySelector('#main [data-swipe="next"]')?.click(); return true; }
   if (e.key === ' ') { STORY_ACTIONS['sp-play'](); return true; }
   return false;
 }

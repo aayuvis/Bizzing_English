@@ -1,0 +1,93 @@
+/* panel.css — THE STORY PANEL (docs/story-panel-layout.md, the family standard; Bizzing India's reading spread).
+   One layout for every "picture + words, one page at a time" screen: a Library passage told scene by
+   scene and a whole-book chapter (views/stories.js storyView). Chosen by the SHAPE of the screen, not
+   its width — the problem was height: on a 1280×720 laptop the painting took the whole first screen
+   and not one word of the story showed.
+     landscape (desktop, laptop, iPad sideways, a phone on its side): a picture-book spread, the
+       painting on the left in its own 16:9 shape, the words and the page-turn on the right.
+     an upright tablet: the painting on top, capped at 38% of the screen, the words a size larger.
+     a phone: the painting a band (26% of the screen) that never collapses, the words whole under it
+       (the page scrolls; nothing is clipped inside a box), the page-turn pinned above the tab bar.
+   Nothing is drawn over a painting: the title sits above the words. The family shell's header and tab
+   bar are never touched — the room comes from the content area. test/story-panel.mjs holds all of it,
+   at six screen sizes. The wrapper's name (storypanel / spn-*) is used nowhere else. */
+
+#main > .storypanel { display: grid; gap: 13px; max-width: 860px; margin: 0 auto; touch-action: pan-y pinch-zoom; }
+.spn-pic { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; background: center / cover no-repeat; cursor: zoom-in;
+  box-shadow: 0 10px 30px rgba(26, 21, 35, .2); animation: kenburns 30s ease-in-out infinite alternate; }
+.spn-pic:focus-visible { outline: 3px solid var(--bz-accent); outline-offset: 3px; }
+.spn-col { display: contents; }   /* only the spread gives the right-hand page a box of its own */
+.spn-words { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.spn-cap h1 { margin: 0; font: 800 calc(24px * var(--text-scale)) / 1.15 var(--bz-display); color: var(--ink); }
+.spn-cap small { display: block; margin-top: 2px; color: var(--muted); font-size: 14px; }
+.spn-words .sp-text { margin: 0; }
+.spn-words .sp-text p:last-child { margin-bottom: 0; }
+.spn-note { margin: 0; text-align: center; }
+.spn-act { display: flex; gap: 8px; align-items: center; justify-content: center; }
+.spn-act .grow { flex: 1; max-width: 360px; }
+.spn-act .btn { white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .spn-pic { animation: none; } }
+
+/* LANDSCAPE: the spread — the page fills the screen under the header; the words scroll in their column
+   while the painting and the page-turn stay where they are */
+@media (min-width: 640px) and (min-aspect-ratio: 6/5) {
+  #main > .storypanel {
+    max-width: 1240px; height: max(440px, calc(100dvh - 146px));   /* 146 = the family header (110) + the content's top (20) + a margin */
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    column-gap: clamp(18px, 2.4vw, 32px); row-gap: 12px;
+  }
+  .spn-head { grid-column: 1 / -1; }
+  .spn-pic { grid-column: 1; grid-row: 2; align-self: start; max-height: 100%; }
+  /* the right-hand page: the words scroll in their column when they are long; a short page keeps its
+     page-turn right under its words */
+  .spn-col { grid-column: 2; grid-row: 2; min-height: 0; display: flex; flex-direction: column; gap: 12px; }
+  .spn-words { flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-right: 2px; }
+  .spn-words .passage { font-size: calc(clamp(17.5px, .5vw + 11px, 21px) * var(--text-scale)); line-height: 1.7; padding: 18px 20px; }
+  .spn-act { flex: none; }
+  .spn-act .grow { max-width: none; }
+  .spn-act .btn:not(.grow) { padding: 0 14px; }
+}
+
+/* UPRIGHT TABLET: the painting capped, the words larger, the page-turn kept on the screen */
+@media (min-width: 721px) and (max-aspect-ratio: 6/5) {
+  .spn-pic { max-height: 38vh; }
+  .spn-words .passage { font-size: calc(19.5px * var(--text-scale)); line-height: 1.7; }
+  .spn-act { position: sticky; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 6; padding: 6px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--line); box-shadow: 0 6px 22px rgba(30, 20, 70, .16); }
+}
+
+/* PHONE, upright: a band that does not give way, the words whole, the page-turn under the thumb */
+@media (max-width: 720px) and (max-aspect-ratio: 6/5) {
+  #main > .storypanel { gap: 10px; }
+  .spn-pic { aspect-ratio: auto; height: min(26vh, calc((100vw - 30px) / 1.78)); border-radius: 16px; }
+  .spn-words { overflow: visible; }
+  .spn-cap h1 { font-size: calc(20px * var(--text-scale)); }
+  .spn-words .passage { padding: 16px; }
+  .spn-act {
+    position: sticky; bottom: calc(69px + 6px + env(safe-area-inset-bottom)); z-index: 6;   /* 69 = the family tab bar */
+    padding: 6px; border-radius: 999px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 6px 22px rgba(30, 20, 70, .16);
+  }
+  .spn-act .btn { min-height: 46px; }
+  .spn-act .btn:not(.grow) { padding: 0 14px; }
+  .spn-act .btn:not(.grow) span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }   /* icon buttons; the label stays for a screen reader */
+}
+
+/* swipes on a story page are the page's, not the browser's history gesture */
+html { overscroll-behavior-x: none; }
+
+/* the painting, full screen (panel.js openFull) — an overlay on <body>, not the Fullscreen API */
+.bzfull { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 200; display: grid; place-items: center; overflow: hidden;
+  background: rgba(12, 8, 26, .94); padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)); }
+.bzfull-img { max-width: 100%; max-height: calc(100dvh - 90px); object-fit: contain; border-radius: 10px; cursor: zoom-in;
+  transition: transform .25s ease; touch-action: none; user-select: none; -webkit-user-select: none; }
+.bzfull.zoomed .bzfull-img { transform: scale(2.2); cursor: zoom-out; }
+.bzfull-x { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: 12px; width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .3); background: rgba(255, 255, 255, .12); color: #fff; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.bzfull-x svg { width: 22px; height: 22px; }
+.bzfull-x:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.bzfull-hint { position: absolute; bottom: calc(10px + env(safe-area-inset-bottom)); left: 0; right: 0; margin: 0; text-align: center;
+  color: rgba(255, 255, 255, .8); font-size: 13.5px; }
+html.bzfull-open, html.bzfull-open body { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) { .bzfull-img { transition: none; } }
+.sp-stage[data-full] { cursor: zoom-in; } .sp-stage[data-full]:focus-visible { outline: 3px solid var(--bz-accent); outline-offset: 3px; }
