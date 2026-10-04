@@ -10,6 +10,7 @@ import { balance, ledger, spend, activityLog } from '../family.js';
 import { helpNext } from '../report.js';
 import { certificates, certSVG, certFontCss } from '../certificates.js';
 import { EXTRAS, KINDS, extra, owns, wearing, wear, buyExtra } from '../extras.js';
+import { MODE_GAMES, MODE_PRICE, modeWhat, ownsMode, buyMode } from '../modes.js';
 import { MEDALS } from '../medals.js';
 import { WORLDS, plate } from '../worlds.js';
 import { STRANDS, strand, BANDS, stopById } from '../curriculum.js';
@@ -58,6 +59,12 @@ function extraCard(e, k, bal) {
   const act = on ? `<span class="tag ok">${icon('check')}Wearing</span>` : own ? btn('Use it', 'wear-extra', { arg: e.id, cls: 'out small', ic: 'check' }) : btn(`${e.price} coins`, 'buy-extra', { arg: e.id, cls: 'small', ic: 'coin', dis: bal < e.price });
   return `<div class="card">${look}<b>${esc(e.name)}</b><small class="muted">${esc(e.what)}</small>${act}${!own && bal < e.price ? `<p class="note" style="margin:0">${e.price - bal} more to go.</p>` : ''}</div>`;
 }
+/* game modes (modes.js): a way to play, never what is taught — every level and item stays free */
+function modesSection(k, bal) {
+  return `<section class="card" style="margin-bottom:13px"><h3>Game challenges</h3><p class="note" style="margin:0 0 10px">One for each game: ${esc(modeWhat)}. It moves no level and earns no coins.</p><div class="extragrid">${Object.entries(MODE_GAMES).map(([g, name]) => {
+    const own = ownsMode(k, g);
+    return `<div class="card"><b>${esc(name)}: Challenge</b>${own ? `<a class="btn out small" href="#/play/${g}">${icon('play')}<span>Play it</span></a>` : btn(`${MODE_PRICE} coins`, 'buy-mode', { arg: g, cls: 'small', ic: 'coin', dis: bal < MODE_PRICE })}${!own && bal < MODE_PRICE ? `<p class="note" style="margin:0">${MODE_PRICE - bal} more to go.</p>` : ''}</div>`; }).join('')}</div></section>`;
+}
 function avCard(a, k, buyable) {
   const st = stateOf(a, ctx(k)), cur = k.avatar === a.id;
   return `<figure class="bz-av${cur ? ' cur' : ''}" data-tier="${a.tier}" data-state="${st.state}"><button data-act="${st.state === 'owned' ? 'wear' : buyable && st.state === 'buy' && !st.short ? 'buy-av' : 'noop'}" data-arg="${a.id}" aria-label="${esc(a.name)}, ${esc(st.label)}: ${esc(st.say)}">
@@ -77,7 +84,7 @@ export function shopView(tab = 'avatars') {
   if (tab === 'worlds') body = `<div class="grid3">${WORLDS.map((w) => { const open = worldOpen(w.n, ctx(k));
     return `<div class="card" style="padding:0;overflow:hidden"><img src="${plate(w, isDark(), true)}" alt="" style="width:100%;height:120px;object-fit:cover;display:block${open ? '' : ';filter:grayscale(.6)'}"><div style="padding:12px 14px"><h3>${esc(w.name)}</h3><p class="muted" style="margin:0 0 8px">${esc(w.what)}</p>
       ${open ? (k.world === w.n ? `<span class="tag ok">${icon('check')}You are here</span>` : btn('Go there', 'wear-world', { arg: w.n, cls: 'out small', ic: 'map' })) : `${btn(`${WORLD_PRICE} coins`, 'buy-world', { arg: w.n, cls: 'small', ic: 'coin', dis: bal < WORLD_PRICE })}<p class="note">${bal < WORLD_PRICE ? `${WORLD_PRICE - bal} more to go — or it opens with the family plan.` : 'Or it opens with the family plan.'}</p>`}</div></div>`; }).join('')}</div>`;
-  else if (tab === 'extras') body = `<p class="note" style="margin:0 20px 10px">A look for your reading and your Stage — never content, never chance. The first of each is free.</p>` + KINDS.map(([kind, title]) => `<section class="card" style="margin-bottom:13px"><h3>${esc(title)}</h3><div class="extragrid">${EXTRAS.filter((e) => e.kind === kind).map((e) => extraCard(e, k, bal)).join('')}</div></section>`).join('');
+  else if (tab === 'extras') body = `<p class="note" style="margin:0 20px 10px">A look for your reading and your Stage, and a challenge for each game — never content, never chance. The first look of each kind is free.</p>` + KINDS.map(([kind, title]) => `<section class="card" style="margin-bottom:13px"><h3>${esc(title)}</h3><div class="extragrid">${EXTRAS.filter((e) => e.kind === kind).map((e) => extraCard(e, k, bal)).join('')}</div></section>`).join('') + modesSection(k, bal);
   else body = `<p class="note" style="margin:0 20px 10px">Commons are free for everyone. Rares cost 120, Epics 250, Legendaries 500 — and a Legendary first needs its learning milestone.</p>`
     + PACK_NAMES.map((n, i) => { const w = Math.ceil((i + 1) / 2); return `<section class="card" style="margin-bottom:13px"><h3>${esc(n)}</h3><div class="avgrid">${AVATARS.filter((a) => a.pack === i + 1).map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
   const L = ledger(k.name).slice(-30).reverse();
@@ -263,6 +270,7 @@ export const PAGE_ACTIONS = {
   'buy-world': (a) => { const k = kid(); if (buyWorld('english', k.name, +a, ctx(k))) { k.worlds.push(+a); k.world = +a; save(); sfx('unlock'); confetti(); } render(); },
   'wear-world': (a) => { const k = kid(); k.world = +a; save(); render(); },
   'buy-extra': (a) => { const k = kid(); if (buyExtra(k, a, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); toast(`${extra(a).name} is yours`); } render(); },
+  'buy-mode': (a) => { const k = kid(); if (buyMode(k, a, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); toast(`${MODE_GAMES[a]}: Challenge is yours`); } render(); },
   'wear-extra': (a) => { const k = kid(); if (wear(k, a)) { save(); sfx('tap'); } render(); },
   noop: () => {},
   'practice-check': () => go('#/practice/check'),

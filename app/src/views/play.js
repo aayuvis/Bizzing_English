@@ -28,6 +28,8 @@ import { plate } from '../worlds.js';
 import { sfx, music, stopMusic } from '../sound.js';
 import { bumpDay } from '../model.js';
 import { avatarOf } from './pages.js';
+import { ownsMode, buyMode, MODE_PRICE, modeWhat } from '../modes.js';
+import { balance, spend } from '../family.js';
 /* A url() inside a custom property resolves against the stylesheet that USES it (assets/…css), not the
    page — so a relative 'art/w-…webp' 404'd on every board (brief v4, G5). Resolve it against the page. */
 const boardPlate = (world) => new URL(plate({ id: world }, isDark()), document.baseURI).href;
@@ -127,10 +129,21 @@ export function openGame(id) {
 }
 export function leaveGame() { stopTimer(); stopMusic(); }
 
-function startRun() {
+function startRun(challenge = false) {
   const r = S.run; if (!r) return;
-  r.run = runNew(r.pick || levelOf(r.id)); r.result = null; r.err = null;
+  if (challenge && !ownsMode(kid(), r.id)) return;
+  r.run = runNew(r.pick || levelOf(r.id)); r.result = null; r.err = null; r.challenge = !!challenge;
+  if (challenge) r.run.round = RUN_ROUNDS;          // the final, straight away
   return startRound();
+}
+/* a challenge's finish: its own best only — no level moves, no star, no coin (modes.js) */
+function finishChallenge() {
+  stopTimer(); stopMusic();
+  const r = S.run, k = kid(), id = r.id, run = r.run, rec = recOf(id), score = runScore(run), pct = runPct(run);
+  rec.chRuns = (rec.chRuns || 0) + 1; const newBest = score > (rec.chBest || 0); rec.chBest = Math.max(rec.chBest || 0, score);
+  r.result = { challenge: true, score, pct, newBest, best: rec.chBest, played: run.level, bestCombo: run.bestCombo, next: nextStepFor(id, { misses: run.misses }) };
+  k.last = { what: 'game', title: `${GAMES[id].name} challenge`, right: `${run.right} ${UNIT[id]}`, at: Date.now() };
+  r.phase = 'done'; sfx('finish'); save(); render(); if (newBest) confetti();
 }
 async function startRound() {
   stopTimer();
@@ -220,6 +233,7 @@ function endRound() {
 }
 
 function finishRun() {
+  if (S.run?.challenge) return finishChallenge();
   stopTimer(); stopMusic();
   const r = S.run, k = kid(), id = r.id, gm = GAMES[id], run = r.run, rec = recOf(id), L = run.level;
   const score = runScore(run), pct = runPct(run), stars = starsFor(pct), enough = run.total >= (gm.timed ? 4 : 1);
@@ -272,10 +286,10 @@ export function gameView() {
     <p class="gb-level" style="margin:0"><b>Level ${L}</b> · ${esc(gm.levels[L])}${rec.best ? ` · your best ${rec.best}` : ''}</p>
     <p class="gb-mem" data-mem style="margin:0">${c ? `<b>${c.fresh}</b> new to you · <b>${c.back}</b> to win back · pool ${c.pool}` : 'Getting the cards ready…'}</p>
     <p class="note" style="margin:0">A run is ${RUN_ROUNDS} rounds and a final — ${esc(gm.final.charAt(0).toLowerCase() + gm.final.slice(1))}. Stars come from how many you get right.</p>
-    ${r.err ? `<p class="note" role="alert">${esc(r.err)}</p>` : ''}${btn('Start', 'game-start', { ic: 'next' })}</div></div>`;
+    ${r.err ? `<p class="note" role="alert">${esc(r.err)}</p>` : ''}<div class="row" style="justify-content:center">${btn('Start', 'game-start', { ic: 'next' })}${challengeButton(id, k, rec)}</div></div></div>`;
   }
   const g = r.g;
-  if (r.phase === 'done') return head + doneView(id, g, r);
+  if (r.phase === 'done') return head + (r.result?.challenge ? challengeDoneView(id, r) : doneView(id, g, r));
   if (r.phase === 'between') return head + betweenView(id, r);
   return head + `<div class="game">${board(id, g, bodyOf(id, g))}</div>`;
 }
@@ -291,6 +305,21 @@ function betweenView(id, r) {
     <div class="row" style="justify-content:center">${btn(nextFinal ? 'Play the final' : 'Next round', 'game-round', { ic: 'next' })}</div></div></div></div>`;
 }
 
+/* Challenge mode on the title card: play it if owned, else its printed price (the wallet decides; never below zero) */
+function challengeButton(id, k, rec) {
+  if (ownsMode(k, id)) return btn(`Challenge${rec.chBest ? ` · best ${rec.chBest}` : ''}`, 'game-challenge', { cls: 'out', ic: 'star' });
+  const bal = balance(k.name);
+  return `<span class="gb-mode">${btn(`Unlock Challenge · ${MODE_PRICE} coins`, 'game-mode-buy', { cls: 'out', ic: 'lock', dis: bal < MODE_PRICE })}<small class="note">${esc(modeWhat)}${bal < MODE_PRICE ? ` — you have ${bal}` : ''}</small></span>`;
+}
+function challengeDoneView(id, r) {
+  const gm = GAMES[id], res = r.result, pct = res.pct == null ? '—' : `${Math.round(res.pct * 100)}%`;
+  return `<div class="game"><div class="gboard gb-done" data-game="${id}" style="--plate:url('${boardPlate(gm.world)}')"><div class="gb-frame finish stack">
+    <img src="${mascot(res.pct >= 0.4 ? 'cheer' : 'think')}" alt=""><div class="score">${res.score}</div>
+    <p style="margin:0">Challenge at level ${res.played}: ${res.newBest ? 'a new best!' : `your best is ${res.best}`}. A challenge moves no level and earns no coins — it is for the fun of beating yourself.</p>
+    <div class="gb-stats"><span><b>${res.score}</b><small>score</small></span><span><b>${res.best}</b><small>challenge best</small></span><span><b>${pct}</b><small>accuracy</small></span><span><b>${res.bestCombo}</b><small>most in a row</small></span></div>
+    <a class="gb-next card" href="${esc(res.next.href)}" data-next>${icon('path')}<span><small>Your next step — ${esc(res.next.why)}</small><b>${esc(res.next.label)}</b></span>${icon('next')}</a>
+    <div class="row" style="justify-content:center">${btn('Again', 'game-challenge', { ic: 'undo' })}${btn('A normal run', 'game-start', { cls: 'out', ic: 'play' })}${link('All games', '#/play', { cls: 'out', ic: 'play' })}</div></div></div></div>`;
+}
 function doneView(id, g, r) {
   const gm = GAMES[id], res = r.result, pct = res.pct == null ? '—' : `${Math.round(res.pct * 100)}%`;
   const lv = res.played !== res.before ? `You played level ${res.played}; your level stays ${res.after} — ${gm.levels[res.after]}.`
@@ -386,6 +415,8 @@ function bodyOf(id, g) {
 
 export const PLAY_ACTIONS = {
   'game-start': () => startRun(),
+  'game-challenge': () => startRun(true),
+  'game-mode-buy': () => { const r = S.run, k = kid(); if (!r) return; if (buyMode(k, r.id, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); } render(); },
   'game-round': () => { const r = S.run; if (r?.phase === 'between') startRound(); },
   'game-level': (a) => { const r = S.run; if (!r || r.phase !== 'title') return; const L = +a; if (L >= 1 && L <= topOf(r.id)) { r.pick = L; sfx('tap'); render(); } },
   'b-pick': (a) => { sfx('tap'); step({ type: 'pick', i: +a }); },

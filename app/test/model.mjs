@@ -70,4 +70,14 @@ ok('a backup never holds a name', !JSON.stringify(bk).includes('Asha') && bk.kid
 ok('a backup is an allow-list: an unknown field is left out', !('coins' in bk.kids[0]) && Object.keys(bk.kids[0]).every((f) => KID_FIELDS.includes(f)));
 const h2 = newHousehold(); restoreBackup(h2, bk, ['Asha', 'Kabir']);
 ok('restore asks for the names and brings the progress back', h2.kids[0].name === 'Asha' && h2.kids[0].stops['w1-rhyme']?.passed);
+/* Reading: a level opens what follows after three of its passages; its certificate waits for all of them (owner, 4 Oct) */
+{ const { levelStops, levelComplete } = await import('../src/model.js'); const hr = newHousehold(), kr = addKid(hr, newKid('Rae', 1, 'hare')), r2 = levelStops('reading', 2);
+  r2.slice(0, 2).forEach((s) => { kr.stops[s.id] = { passed: true }; });
+  ok('Reading 2 is not done after two passages', !levelDone(kr, 'reading', 2));
+  kr.stops[r2[2].id] = { passed: true };
+  ok(`Reading 2 is done after three of its ${r2.length} passages, and Literature opens`, levelDone(kr, 'reading', 2) && strandOpen(kr, 'literature'));
+  ok('…but Reading 2 is not complete (no certificate) until every passage is passed', r2.length > 3 && !levelComplete(kr, 'reading', 2));
+  const r1 = levelStops('reading', 1); r1.forEach((s) => { kr.stops[s.id] = { passed: true }; });
+  ok('a Reading level of three or fewer needs all of them', levelDone(kr, 'reading', 1) && levelComplete(kr, 'reading', 1));
+}
 done();

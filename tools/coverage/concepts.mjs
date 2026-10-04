@@ -32,7 +32,7 @@ export const PLACES = {
   '@plot': ['Play · Plot Line', 'drag a story’s scenes onto a timeline; finals ask which scene is missing'],
   '@forge': ['Play · Root Forge', 'prefixes, endings and roots that make real words; the final forges a family'],
   '@duel': ['Play · Rhetoric Duel', 'the stronger line, and why — best of five against a rival'],
-  '@feed': ['My Feed', 'about twenty of 5,996 cards picked for the child’s level, each with a question, then it ends'],
+  '@feed': ['My Feed', 'about twenty of 5,988 cards picked for the child’s level, kept for the day, then it ends'],
   '@certs': ['Certificates', 'one for every level and whole book finished, drawn on the device'],
 };
 

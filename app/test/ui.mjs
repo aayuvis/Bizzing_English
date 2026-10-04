@@ -183,6 +183,11 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const phase = async (want, ms = 4000) => { for (let t = 0; t < ms; t += 100) { if ((await G()).phase === want) return true; await page.waitForTimeout(100); } return false; };
   const titleReady = () => page.waitForFunction(() => /new to you/.test(document.querySelector('[data-mem]')?.textContent || ''), null, { timeout: 15000 });
   await go(page, '#/play/builder'); await titleReady();
+  ok('a game with no Challenge bought shows its printed price, held back when the wallet is short', await page.evaluate(() => { const b = document.querySelector('[data-act=game-mode-buy]'); return !!b && /150 coins/.test(b.textContent) && b.disabled; }));
+  await page.evaluate(() => { const h = window.__bz.S.h, k = h.kids.find((x) => x.id === h.active); k.modes = ['challenge-builder']; window.__bz.render(); });
+  await page.click('[data-act=game-challenge]'); await phase('play');
+  ok('a bought Challenge starts at the final straight away, and is marked a challenge', await page.evaluate(() => { const r = window.__bz.S.run; return r.challenge === true && r.run.round === 3 && r.phase === 'play'; }));
+  await go(page, '#/play'); await go(page, '#/play/builder'); await titleReady();
   ok('the title card shows the level map: five levels with stars, the ones not reached locked', await page.evaluate(() => { const l = [...document.querySelectorAll('.gb-map .gb-lv')]; return l.length === 5 && l[0].classList.contains('on') && l.slice(1).every((b) => b.disabled) && l.every((b) => b.querySelectorAll('.gb-stars i').length === 3); }));
   ok('the title card says what is new: "N new to you · M to win back · pool P"', /\d+ new to you · \d+ to win back · pool \d+/.test(await page.$eval('[data-mem]', (e) => e.textContent)));
   await page.click('[data-act=game-start]');

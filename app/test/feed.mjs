@@ -63,8 +63,9 @@ ok(`more than 5,000 cards (${m.total})`, m.total > 5000);
 ok(`level-agnostic cards are at most a quarter (${Math.round((100 * m.agnostic) / m.total)}%)`, m.agnostic <= 0.25 * m.total);
 ok(`no level holds more than its budget (${BUDGET})`, Object.values(m.byLevel).every((n) => n <= BUDGET));
 ok(`every group file stays small (≤ 400 KB: ${GROUPS.map((g) => Math.round(readFileSync(`${DIR}/g-${g}.json`).length / 1024)).join(' ')})`, GROUPS.every((g) => readFileSync(`${DIR}/g-${g}.json`).length <= 400 * 1024));
-const NEW = ['vocab', 'idiom', 'mline', 'who', 'mythroom', 'author', 'why', 'typing', 'contest', 'cert', 'builder', 'rush', 'figmore', 'rhmore'];
+const NEW = ['vocab', 'idiom', 'mline', 'who', 'mythroom', 'author', 'why', 'typing', 'contest', 'builder', 'rush', 'figmore', 'rhmore'];
 ok('every card from a new source is marked by level (1–10)', ITEMS.filter((c) => NEW.includes(c.src.split(':')[0])).every((c) => Number.isInteger(c.level) && c.level >= 1 && c.level <= 10));
+ok('no certificate cards: a card teaches something, it does not advertise a reward (owner, 4 Oct)', !ITEMS.some((c) => c.kind === 'certificate' || c.src.startsWith('cert:')));
 const perSrc = new Map(); for (const c of ITEMS) if (NEW.includes(c.src.split(':')[0])) { const o = c.src.startsWith('vocab:') ? c.src : c.src.split('#')[0]; perSrc.set(o, (perSrc.get(o) || 0) + 1); }
 ok('a new source object gives at most a few cards (≤ 6), one per card type', [...perSrc.values()].every((n) => n <= 6) && new Set(ITEMS.map((c) => c.src)).size === ITEMS.length);
 const vocWords = ITEMS.filter((c) => c.kind === 'vocab').map((c) => c.title);

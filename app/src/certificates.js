@@ -1,14 +1,14 @@
 /* certificates.js — a certificate for every level finished in a strand and every whole book finished, made on this
    device as a picture the family can save or print. The first name is drawn into the picture locally; nothing is
    sent anywhere (a download is the family's own act). Evidence only: a level is finished when every stop in it is
-   passed (model.levelDone), a book when every chapter's questions are. */
+   passed (model.levelComplete), a book when every chapter's questions are. */
 import { STRANDS } from './curriculum.js';
-import { levelDone, levelStops } from './model.js';
+import { levelComplete, levelStops } from './model.js';
 import { BOOKS } from './book.js';
 
 export function certificates(k) {
   const out = [];
-  for (const s of STRANDS) for (const l of s.levels) if (levelDone(k, s.id, l.n)) {
+  for (const s of STRANDS) for (const l of s.levels) if (levelComplete(k, s.id, l.n)) {
     const ss = levelStops(s.id, l.n), at = Math.max(...ss.map((st) => k.stops[st.id]?.at || 0));
     out.push({ id: `${s.id}-${l.n}`, kind: 'level', title: `${s.title} level ${l.n} · ${l.title}`, can: l.iCan, colour: s.colour, at, stops: ss.map((st) => st.title) });
   }

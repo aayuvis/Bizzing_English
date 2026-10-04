@@ -193,6 +193,15 @@ for (const [id, deal] of Object.entries(DEALS)) {
   ok(`${id}: the same seed and seen deal the same round`, LV.every((L) => JSON.stringify(deal('same', L, { mem, now: NOW })) === JSON.stringify(deal('same', L, { mem, now: NOW }))));
   ok(`${id}: the round after uses the memory (no item from the last play while the pool has more)`, (() => { const a = deal('m1', 2, { mem: EMPTYM(), now: NOW }), m2 = memRecord(EMPTYM(), a.map((key) => ({ key, ok: true })), NOW), b = deal('m2', 2, { mem: m2, now: NOW + 1 }); return POOLS[id](2) < a.length * 2 || b.every((k) => !a.includes(k)); })());
 }
+/* Challenge mode (modes.js): one per game, a printed price through the wallet, never below zero */
+{ const M = await import('../src/modes.js');
+  ok('modes: one Challenge for every game, named as the game is', Object.keys(M.MODE_GAMES).sort().join() === Object.keys(G.GAMES).sort().join() && Object.entries(M.MODE_GAMES).every(([g, n]) => G.GAMES[g].name === n));
+  ok('modes: a round printed price', Number.isInteger(M.MODE_PRICE) && M.MODE_PRICE > 0 && M.MODE_PRICE % 10 === 0);
+  const kx = {}, spent = []; const pay = (n, why) => { spent.push([n, why]); return true; };
+  ok('modes: buying spends the printed price once and owns it', M.buyMode(kx, 'rush', pay) && M.ownsMode(kx, 'rush') && spent.length === 1 && spent[0][0] === M.MODE_PRICE && !M.buyMode(kx, 'rush', pay) && spent.length === 1);
+  ok('modes: a wallet that says no buys nothing', !M.buyMode(kx, 'duel', () => false) && !M.ownsMode(kx, 'duel'));
+  ok('modes: no mode for a game that does not exist', !M.buyMode(kx, 'nope', pay));
+}
 console.log('games: ten plays at level 1 —', Object.entries(measured).map(([k, v]) => `${k} ${v}`).join(' · '));
 
 /* ---------- Who Said It? — the Detective ---------- */

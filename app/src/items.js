@@ -91,7 +91,7 @@ const GEN = {
     keys: (ctx) => byBand(WP.ROOTS, ctx.band).map((r) => r.root),
     make(key) {
       const r = WP.ROOTS.find((x) => x.root === key), R = rng(key), ex = pick(R, r.words);
-      const wr = sample(R, uniq(WP.ROOTS.filter((x) => x.root !== key && norm(x.meaning) !== norm(r.meaning)).map((x) => x.meaning)), 3);
+      const wr = sample(R, uniq(WP.ROOTS.filter((x) => x.root !== key && !sameSense(x.meaning, r.meaning)).map((x) => x.meaning)), 3);
       return mc('rootMeaning:' + key, 'rootMeaning', `The root ${q(r.root)}, as in ${q(ex)}, means…`, r.meaning, wr,
         { hint: ['Think of other words with the same root.', 'What do they have in common?'], explain: `${q(r.root)} comes from ${r.from} and means “${r.meaning}”.`, source: r.source });
     },
@@ -236,6 +236,17 @@ const GEN = {
 };
 
 function uniq(a) { return [...new Set(a)]; }
+/* Two meanings of a part could BOTH be right when they share a word ("full of" and "full of; like", "not" and
+   "not; the opposite of", "carry" and "carry; bear") or say the same thing in other words ("see" and "look"):
+   such a meaning is never offered as the wrong option for the other. */
+const SENSE_STOP = new Set(['the', 'of', 'a', 'an', 'to', 'at', 'in', 'be', 'being', 'way', 'or', 'who', 'is']);
+const SENSE_GROUPS = [['see', 'look'], ['say', 'speak', 'call', 'voice'], ['believe', 'trust', 'faith'], ['hear', 'sound'], ['wrongly', 'bad', 'badly'], ['under', 'below', 'beneath']];
+const senseWords = (m) => norm(m).split(' ').filter((w) => w && !SENSE_STOP.has(w));
+function sameSense(a, b) {
+  const A = senseWords(a), B = new Set(senseWords(b));
+  if (norm(a) === norm(b) || A.some((w) => B.has(w))) return true;
+  return SENSE_GROUPS.some((g) => A.some((w) => g.includes(w)) && [...B].some((w) => g.includes(w)));
+}
 function keysOf(list, ctx) { return byBand(list.map((x, i) => ({ ...x, i })), ctx.band).map((x) => String(x.i)); }
 
 function tapPos(kind, tags, prompt, why) {
@@ -255,7 +266,7 @@ function affixMeaning(kind, list, aff, label) {
     keys: () => list().flatMap((a) => a.words.map((_, i) => `${aff(a)}:${i}`)),
     make(key) {
       const [p, i] = key.split(':'); const a = list().find((x) => aff(x) === p), [word] = a.words[+i];
-      const wr = sample(rng(key), uniq(list().filter((x) => norm(x.meaning) !== norm(a.meaning)).map((x) => x.meaning)), 3);
+      const wr = sample(rng(key), uniq(list().filter((x) => !sameSense(x.meaning, a.meaning)).map((x) => x.meaning)), 3);
       return mc(kind + ':' + key, kind, `In ${q(word)}, what does ${q(label(a))} mean?`, a.meaning, wr,
         { hint: ['Take the affix off. What is left?', 'How has the meaning changed?'], explain: `${q(label(a))} means “${a.meaning}”: ${word}.`, source: a.source });
     },
@@ -354,7 +365,7 @@ export function copyDiff(want, got) {
   return { ok: errors.length === 0, errors };
 }
 
-export const _test = { norm, hash };
+export const _test = { norm, hash, sameSense };
 
 /* ---------------- a story's own exercises (the Stories library) ----------------
    Built from the passage itself, so the practice is linked to what was just heard: its words (Bee's

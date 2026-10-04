@@ -9,7 +9,7 @@
    Versioned: a change of shape adds a vN_to_vN+1 step to STEPS; an old step is never edited.
    ?demo holds a sample household in memory: nothing is read from or written to storage. */
 
-export const VERSION = 2;
+export const VERSION = 3;
 const KEY = 'bizzing-english.household';
 const DEV = 'bizzing-english.device';
 
@@ -24,6 +24,9 @@ const STEPS = {
     }
     h.v = 2; return h;
   },
+  /* v3: "Find my starting place" — k.place { word, reading, at }, where a road starts; null until the
+     check is taken (the band's head start holds until then) */
+  2: (h) => { for (const k of h.kids || []) if (k.place === undefined) k.place = null; h.v = 3; return h; },
 };
 
 export function migrate(h) {

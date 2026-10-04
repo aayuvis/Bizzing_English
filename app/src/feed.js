@@ -35,7 +35,7 @@ export function feedPlace(h, k) {
   if (st && st.strand && st.level) return { strand: st.strand, level: st.level };
   const b = bestLevel(k);
   if (b) return { strand: b.s.id, level: Math.min(10, b.l.n + (nx.kind === 'library' ? 0 : 1)) };
-  return { strand: 'word', level: headStart(k) };
+  return { strand: 'word', level: headStart(k, 'word') };
 }
 export const feedLevel = (h, k) => feedPlace(h, k).level;
 export const namer = (sid) => (n) => { const l = levelOf(sid, n); return `${strand(sid)?.title || 'Level'} ${n}${l ? ` · ${l.title}` : ''}`; };

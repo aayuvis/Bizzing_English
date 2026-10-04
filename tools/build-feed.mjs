@@ -359,15 +359,7 @@ function grow(cards, add, play) {
   for (const r of ROUNDS) { const L = CONTEST_LEVEL[r.id]; if (!L) continue;
     A.push({ id: `contest~${r.id}`, kind: 'contest', src: `contest:${r.id}`, level: L, bands: [1, 2, 3], topics: ['strand:speaking', 'contest'], where: `${placeName('speaking', L)} · The Elocution Contest`,
       title: `The Elocution Contest: ${r.title}`, body: r.say, more: taughtAt('speaking', L), route: '#/stage/contest', cta: 'The Elocution Contest' }); }
-  for (const s of STRANDS) for (const l of s.levels) {
-    if (!l.stops.length || l.stops.some((st) => st.needsReview)) continue;
-    A.push({ id: `cert~${s.id}-${l.n}`, kind: 'certificate', src: `cert:${s.id}-${l.n}`, level: l.n, bands: bandsFrom(Math.min(...l.stops.map((st) => st.band || 1))), topics: [`strand:${s.id}`, `cert:${s.id}-${l.n}`],
-      where: placeName(s.id, l.n), title: `The certificate for ${s.title} level ${l.n} · ${l.title}`, body: `Pass every stop: ${l.stops.map((st) => st.title).join(' · ')}.`,
-      more: l.iCan ? `It says you can: “${l.iCan}”` : '', route: `#/atlas/${s.id}`, cta: `The ${s.title} road` });
-  }
-  for (const b of BOOKS) if (quotable(work(b.id)) && b.chapters.every((c) => !c.needsReview))
-    A.push({ id: `cert~book-${b.id}`, kind: 'certificate', src: `cert:book-${b.id}`, level: 8, bands: bandsFrom(b.band), topics: ['strand:reading', `work:${b.id}`], where: `${placeName('reading', 8)} · ${b.title}`,
-      title: `The certificate for ${b.title}`, body: `Read every chapter of ${b.title} by ${b.author} and answer its questions.`, more: '', route: `#/whole/${b.id}/1`, cta: `Chapter 1: ${b.chapters[0].title}` });
+  // no certificate cards: they advertised a reward rather than taught anything (owner, 4 Oct — audit V3)
   for (const r of MYTH_JOURNEY) {
     const ps = r.stops.map((id) => PASSAGES.find((p) => p.id === id)).filter(shippedP); if (!ps.length) continue;
     const L = Math.min(...ps.map(levelOf));

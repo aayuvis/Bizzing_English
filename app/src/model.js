@@ -40,6 +40,7 @@ export function newKid(name, band, avatar) {
     prefs: { readAloud: band === 1 },
     milestones: [],                                          // named learning milestones reached (legendary avatars)
     writing: {},                                             // free writing: desk pieces, talk-about-it thoughts — on this device only, never in a backup
+    place: null,                                             // "Find my starting place": { word, reading, at } — where each road starts (placement.js)
   };
 }
 
@@ -57,7 +58,15 @@ export const they = (k) => (k?.name ? k.name : 'they');
    not list — reading them from the table left every Reading level "not done", so Speaking (after Reading 1)
    and Literature (after Reading 2) never opened below band 3 (brief v4, the demo's locked strands) */
 export const levelStops = (sid, n) => (sid === 'reading' ? [...readingStops(), ...bookStops()].filter((s) => s.level === n) : level(sid, n)?.stops || []);
-export const levelDone = (k, sid, n) => { const ss = levelStops(sid, n); return ss.length > 0 && ss.every((s) => k.stops[s.id]?.passed); };
+/* A level is DONE (it opens what follows it) when every stop is passed — except Reading, where a level holds up to
+   24 passages or chapters: there it is done after READING_ENOUGH of them, or all if it holds fewer (owner, 4 Oct).
+   A level is COMPLETE (its certificate: "every stop passed") only when every one is. */
+export const READING_ENOUGH = 3;
+export const levelComplete = (k, sid, n) => { const ss = levelStops(sid, n); return ss.length > 0 && ss.every((s) => k.stops[s.id]?.passed); };
+export const levelDone = (k, sid, n) => {
+  if (sid !== 'reading') return levelComplete(k, sid, n);
+  const ss = levelStops(sid, n); return ss.length > 0 && ss.filter((s) => k.stops[s.id]?.passed).length >= Math.min(READING_ENOUGH, ss.length);
+};
 
 /* A strand opens by band or by the strand before it; a free child sees every strand, and a
    family-plan strand says so plainly rather than hiding. */
@@ -70,10 +79,14 @@ export function strandOpen(k, sid) {
 }
 export const planOpen = (h, sid) => strand(sid)?.free || h.parent.plan === 'family' || h.parent.tester;
 
-/* Levels open in order; the age band gives a head start (a twelve-year-old does not start on rhymes). */
-export const headStart = (k) => (k.band === 3 ? 3 : k.band === 2 ? 2 : 1);
+/* Levels open in order; the age band gives a head start (a twelve-year-old does not start on rhymes), and
+   "Find my starting place" (placement.js) can set a strand's own start in k.place — Word and Reading — held
+   to 1–5. A start only opens levels: nothing below it is marked passed. */
+export const bandStart = (k) => (k.band === 3 ? 3 : k.band === 2 ? 2 : 1);
+export const headStart = (k, sid) => { const p = k?.place?.[sid]; return Number.isFinite(p) ? Math.max(1, Math.min(5, Math.round(p))) : bandStart(k); };
+export const placed = (k, sid) => Number.isFinite(k?.place?.[sid]);
 export function levelOpen(k, sid, n) {
-  if (n <= headStart(k)) return true;
+  if (n <= headStart(k, sid)) return true;
   return levelDone(k, sid, n - 1);
 }
 
