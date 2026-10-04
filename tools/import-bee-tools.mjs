@@ -29,6 +29,7 @@ import { createHash } from 'node:crypto';
 import { writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import vm from 'node:vm';
+import { lineSafe } from '../app/src/safe.js';
 
 const HERE = dirname(new URL(import.meta.url).pathname);
 const ROOT = resolve(HERE, '..');
@@ -45,6 +46,7 @@ const KEEP = ['p', 't', 'm', 'os', 'oc', 'ol', 'ex', 'th', 'diff', 'lit', 'patte
 const seen = new Set(), items = [];
 for (const x of [...win.SB_FIG.idioms, ...win.SB_FIG.similes]) {
   if (x.kid !== true) continue;
+  if (!lineSafe([x.p, x.m, x.ex].join(' '))) continue;            // Bee's kid flag missed "three sheets to the wind" (very drunk)
   const key = x.p.toLowerCase().trim(); if (seen.has(key)) continue; seen.add(key);
   const o = {}; for (const k of KEEP) { const v = x[k]; if (v == null || v === '' || (Array.isArray(v) && !v.length) || (k === 'region' && v === 'global')) continue; o[k] = v; }
   items.push(o);

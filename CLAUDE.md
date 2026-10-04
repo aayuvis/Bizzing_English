@@ -44,7 +44,8 @@ holds them to the same rules (a which-word-in-this-line question must have every
 Literature 10 is a writing desk: the child's case for a book. Figure Hunt (Play) is built on the
 figures bank. Every Language stop with a date waits on a named reviewer (`needsReview`).
 
-**Every level is filled** (70 of 70; `node tools/coverage/build.mjs` → `docs/coverage.html`, published as the
+**Reading's levels are its passages** (`model.levelStops`): the curriculum table lists none, and reading it left
+every Reading level "not done", so Speaking and Literature never opened below band 3 — fixed 4 Oct. **Every level is filled** (70 of 70; `node tools/coverage/build.mjs` → `docs/coverage.html`, published as the
 owner's coverage map): Word 6–10 (`data/word-stops.js`; level 7 is words from the Greek myths, `data/myth-words.js`,
 each tied to the Reading 2 myth that tells it — Hawthorne, Kingsley, Bulfinch in `data/library-myths.js`),
 Sentence 6–10 (`data/sentence-stops.js`), concept gaps (`data/gap-stops.js`: word classes, tense, apostrophes,
@@ -120,6 +121,11 @@ Inherited from the family, and it holds here:
    writing in v1 (needs the family server, consent and a privacy-page change first).
 10. **Bee owns spelling competition.** English borrows Bee's words (definitions, sounds, origins) and
     links to Bee for contests; it never runs one.
+11. **Anything drawn from Bee's list passes `src/safe.js`** (brief v4: the Typing Trainer asked a band-1 child to
+    type "porn"; Bee defines "come" sexually; "crap" and "wank" were offered as made-up words). Typing, vocabulary
+    decks, the definition and origin pools, Root Forge, the onset rivals (`nonWordSafe`), the sentences cut for the
+    games and the idioms (`lineSafe`) all filter; a word the child TAPS in a classic still gets its meaning.
+    `test/safe.mjs` scans every pool. Add to the lists; never loosen them.
 
 ### Product & code (inherited from the family, non-negotiable)
 

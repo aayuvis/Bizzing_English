@@ -14,6 +14,7 @@
    Quotes & Poems is English's own: held, checked lines only (Bee's quotes are unsourced and never imported). */
 
 import { permute, rng, shuffle } from './rand.js';
+import { kidSafe, lineSafe } from './safe.js';
 
 export const BEE_COMMIT = '2f74e99d76723aca80040ccf549c933c38a2cd47';
 
@@ -60,8 +61,8 @@ export const MIN_DECK = 12;                                    // Bee: below 8 a
 /* vocab: public/data/vocab.json ({ lists: { vocab26, nsf500 } }); lex: public/data/bee-words.json. */
 export function vocDecks(vocab, lex) {
   const lists = vocab?.lists || {};
-  const fromList = (id) => (lists[id] || []).map((r) => entry(...r)).filter((e) => okWord(e.w) && plainDef(e.w, e.d));
-  const lexWords = Object.entries(lex?.words || {}).map(([w, r]) => entry(w, r[0], r[1], r[4], r[3], r[2], r[5], r[6])).filter((e) => /^[a-z]+$/.test(e.w) && plainDef(e.w, e.d));
+  const fromList = (id) => (lists[id] || []).map((r) => entry(...r)).filter((e) => okWord(e.w) && plainDef(e.w, e.d) && kidSafe(e.w, e.d));
+  const lexWords = Object.entries(lex?.words || {}).map(([w, r]) => entry(w, r[0], r[1], r[4], r[3], r[2], r[5], r[6])).filter((e) => /^[a-z]+$/.test(e.w) && plainDef(e.w, e.d) && kidSafe(e.w, e.d));
   const order = (ws) => ws.slice().sort((a, b) => a.y - b.y || a.w.localeCompare(b.w));
   const D = [
     { id: 'vocab26', group: 'Bee’s lists', label: 'Meaning Masters', sub: 'Bee’s practice list for the junior vocabulary final', words: order(fromList('vocab26')) },
@@ -204,12 +205,12 @@ export const TEST_SECS = 60;
 export const tyClean = (t) => String(t || '').replace(/[‘’]/g, "'").replace(/[“”"]/g, '').replace(/[^a-zA-Z ,.;']/g, ' ').replace(/\s+/g, ' ').trim();
 /* the words a drill may use: Bee's lexicon at the child's band, plain letters, nine or fewer */
 const BAND_Y = { 1: [1, 1], 2: [1, 2], 3: [2, 4] };
-export function tyWords(lex, band) { const [lo, hi] = BAND_Y[band] || BAND_Y[2]; return Object.entries(lex?.words || {}).filter(([w, r]) => /^[a-z]+$/.test(w) && w.length <= 9 && r[3] >= lo && r[3] <= hi).map(([w, r]) => ({ w, d: r[0] })); }
+export function tyWords(lex, band) { const [lo, hi] = BAND_Y[band] || BAND_Y[2]; return Object.entries(lex?.words || {}).filter(([w, r]) => /^[a-z]+$/.test(w) && w.length <= 9 && r[3] >= lo && r[3] <= hi && kidSafe(w, r[0])).map(([w, r]) => ({ w, d: r[0] })); }
 /* Bee's tySeqFor, with English's held sentences for the sentence drill. */
 export function tySeqFor(l, { lex, band = 2, sentences = [], seed = 'x' } = {}) {
   if (!l.dyn) return l.seq;
   const r = rng(`ty:${l.id}:${seed}`);
-  if (l.dyn === 'sent') { const picked = shuffle(r, sentences.map(tyClean).filter((x) => x.length >= 25 && x.length <= 130)).slice(0, 2); if (picked.length) return picked.join(' '); }
+  if (l.dyn === 'sent') { const picked = shuffle(r, sentences.map(tyClean).filter((x) => x.length >= 25 && x.length <= 130 && lineSafe(x))).slice(0, 2); if (picked.length) return picked.join(' '); }
   const ws = tyWords(lex, band);
   if (l.dyn === 'mean') { const picked = shuffle(r, ws.filter((w) => w.d.length >= 20 && w.d.length <= 110 && plainDef(w.w, w.d))).slice(0, 2).map((w) => tyClean(w.w + ', ' + w.d)); if (picked.length) return picked.join('. ') + '.'; }
   return shuffle(r, ws).slice(0, 8).map((w) => w.w).join(' ') || 'bee hive honey spell word queen';

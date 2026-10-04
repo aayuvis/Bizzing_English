@@ -5,6 +5,7 @@ import { loadHousehold, saveHousehold, loadDevice, saveDevice, isDemo } from './
 import { newHousehold, activeKid } from './model.js';
 import { sfx } from './sound.js';
 import { award } from './medals.js';
+import { certificates } from './certificates.js';
 import { earn, milestone } from './family.js';
 import { esc } from './ui.js';
 
@@ -62,6 +63,17 @@ export function checkMedals() {
   const k = kid(); if (!k) return;
   const fresh = award(k);
   if (fresh.length) { save(); S.sheet = { kind: 'medal', medals: fresh.map((m) => m.id) }; sfx('medal'); confetti(); }
+  checkCerts(k);
+}
+/* A level or book just finished opens its certificate as a ceremony, once (k.certsSeen). Certificates earned
+   before this existed are recorded quietly the first time it runs. After a medal sheet, it waits its turn. */
+export function checkCerts(k = kid()) {
+  if (!k) return;
+  const ids = certificates(k).map((c) => c.id);
+  if (!k.certsSeen) { k.certsSeen = ids; save(); return; }
+  const fresh = ids.filter((id) => !k.certsSeen.includes(id)); if (!fresh.length) return;
+  k.certsSeen.push(...fresh); save();
+  if (S.sheet) S.certNext = fresh[0]; else { S.sheet = { kind: 'cert', id: fresh[0] }; sfx('medal'); confetti(); }
 }
 export function mark(ev, label) { const k = kid(); if (k) milestone(k.name, ev, label); }
 export { isDemo, esc };

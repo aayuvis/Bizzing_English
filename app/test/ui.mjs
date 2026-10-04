@@ -26,6 +26,7 @@ async function ctxFor({ phone = false, dark = false } = {}) {
   const page = await ctx.newPage(); page.reqs = []; page.errs = [];
   page.on('request', (r) => page.reqs.push(r.url()));
   page.on('pageerror', (e) => page.errs.push(e.message)); page.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) page.errs.push(m.text()); });
+  page.on('response', (res) => { if (res.status() >= 400) page.errs.push(`${res.status()} ${res.url()}`); });
   await page.route((u) => u.href.startsWith(BEE_AUDIO), (r) => r.fulfill({ status: 200, contentType: 'audio/mpeg', body: Buffer.alloc(0) }));
   await page.addInitScript(() => {   // record every microphone track, so the check can see it was stopped
     window.__tracks = []; const md = navigator.mediaDevices; if (!md) return; const g = md.getUserMedia.bind(md);
@@ -426,6 +427,12 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
       await page.keyboard.press('Enter'); await page.waitForTimeout(250);
       ok('My Feed: Enter goes on after a wrong answer', !(await page.$(`${sel(plays[2])} [data-bzf=cont]`)));
     }
+    /* today's feed is kept: a reload shows the same cards, answered ones answered — it ends for the day (brief v4, V6) */
+    const ids0 = await page.$$eval('.bzf-card[data-id]', (c) => c.map((x) => x.dataset.id).join());
+    await page.reload(); await page.waitForTimeout(1200);
+    const ids1 = await page.$$eval('.bzf-card[data-id]', (c) => c.map((x) => x.dataset.id).join());
+    ok('My Feed: a reload shows the same cards — it does not refill', ids0.length > 0 && ids0 === ids1, `${ids0.slice(0, 60)} | ${ids1.slice(0, 60)}`);
+    ok('My Feed: a card answered before the reload stays answered', !(await page.$(`${sel(plays[0])} .bzf-opt`)));
     /* a card's button opens the specific place */
     const want = await page.$eval('.bzf-card:not(.bzf-end) .bzf-row a.bz-btn', (a) => a.getAttribute('href'));
     await page.click('.bzf-card:not(.bzf-end) .bzf-row a.bz-btn'); await page.waitForTimeout(500);
@@ -554,6 +561,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
     ok('Tools: the result shows words a minute and accuracy', /words a minute/.test(await page.textContent('main')) && /accuracy/.test(await page.textContent('main')));
     await go(page, '#/tools/typing/test'); await page.waitForTimeout(300); await page.click('[data-act=ty-tap] >> nth=0'); await page.waitForTimeout(400);
     ok('Tools: the sixty-second test starts its clock on the first key (tapped on screen)', await page.evaluate(() => window.__bz.S.run.ty.startT > 0 && window.__bz.S.run.ty.typed === 1));
+    ok('Tools: the typing test never splits a word across two lines', await page.evaluate(() => { const ws = [...document.querySelectorAll('.ty-text .ty-w')]; return ws.length > 20 && ws.every((w) => new Set([...w.getClientRects()].map((r) => Math.round(r.top))).size === 1); }));
+    ok('Tools: no typing word is one a drill does not use', await page.evaluate(() => !/\b(porn|sexy|naked|nudes|rape|drunken|moron)\b/.test(window.__bz.S.run.ty.seq)));
     /* Quotes & Poems: held lines, by author, linked; learn a poem by heart on the Stage; Bee's quotations */
     await go(page, '#/tools/quotes'); await page.waitForTimeout(300);
     ok('Tools: Quotes & Poems shows held lines with their book', (await page.$$('.tl-quote')).length >= 300 && !!(await page.$('.tl-quote a[href^="#/book/"]')));
@@ -610,6 +619,15 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('the greeting never doubles a question mark', !/\?”?\?/.test(await page.textContent('.bz-greet')));
   ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
   ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));
+  ok('the greeting never says “your next stop is next”', !/next stop is next/i.test(await page.textContent('.bz-greet')));
+  await go(page, '#/atlas');
+  ok('the demo opens the strands she has passed stops in (Writing, Speaking)', await page.evaluate(() => ['writing', 'speaking'].every((s) => { const a = document.querySelector(`.apin[href="#/atlas/${s}"]`); return a && !a.classList.contains('locked'); })));
+  /* the level-up ceremony: a level just finished opens its certificate, in the app's own faces */
+  await page.evaluate(() => { const k = window.__bz.S.h.kids[0]; k.certsSeen = (k.certsSeen || []).filter((id) => id !== 'sentence-1'); window.__bz.checkMedals(); window.__bz.render(); }); await page.waitForTimeout(300);
+  ok('a finished level opens its certificate as a ceremony', !!(await page.$('.sheet .cert-ceremony svg')) && /Save as a picture/.test(await page.textContent('.sheet')));
+  ok('the certificate is set in the app’s faces, not a system serif', await page.evaluate(() => /Fraunces/.test(document.querySelector('.sheet .cert-ceremony svg text[font-size="76"]')?.getAttribute('font-family') || '')));
+  await page.keyboard.press('Escape'); await page.waitForTimeout(200);
+  ok('the ceremony closes with Escape, and comes once', !(await page.$('.sheet')) && await page.evaluate(() => { window.__bz.checkMedals(); return !window.__bz.S.sheet; }));
   await go(page, '#/atlas/word');
   ok('Atlas stars are drawn shapes, never ★ glyphs', !/[★☆]/.test(await page.textContent('main')) && (await page.$$('.starmark, .starrow svg')).length > 0);
   await go(page, '#/search/rab');

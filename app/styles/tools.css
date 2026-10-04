@@ -56,7 +56,8 @@
 .tl-qacts .btn { min-height: 40px; }
 .tl-result h2 { margin: 0; }
 /* the Typing Trainer */
-.ty-text { font: 500 clamp(18px, 3.4vw, 25px)/2 var(--mono); letter-spacing: .04em; overflow-wrap: anywhere; }
+.ty-text { font: 500 clamp(18px, 3.4vw, 25px)/2 var(--mono); letter-spacing: .04em; white-space: pre-wrap; overflow-wrap: normal; }
+.ty-text .ty-w { white-space: nowrap; border: 0; color: inherit; }   /* a word never splits across lines */
 .ty-text span { border-bottom: 2px solid transparent; color: var(--muted); }
 .ty-text span.ok { color: var(--good); }
 .ty-text span.err { color: #fff; background: var(--bad); border-radius: 3px; }

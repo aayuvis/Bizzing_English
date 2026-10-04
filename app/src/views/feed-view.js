@@ -11,7 +11,7 @@ import '../../styles/feed.css';
 import { S, kid, save, render, pay } from '../app.js';
 import { pageHead, esc } from '../ui.js';
 import { feedCard, feedEnd, bindFeedKeys } from '../integration/bizzing-feed.js';
-import { session, markSeen, dayNo, levelName, payOnce } from '../feed.js';
+import { session, markSeen, dayNo, levelName, payOnce, rec } from '../feed.js';
 import { nextStep } from '../next.js';
 import { sfx } from '../sound.js';
 import { bumpDay } from '../model.js';
@@ -22,17 +22,22 @@ const GROUP_OF = (x) => (x.level == null ? 'any' : 'L' + x.level);
 const LOAD = (g) => import(`../data/feed/g-${g}.json`).then((m) => m.default || m);
 export const feedReady = () => !!INDEX;
 
-/* today's session, drawn again only when the child has done something new */
-const stampOf = (k) => [dayNo(), k.id, k.band, Object.keys(k.stops || {}).length, Object.values(k.stops || {}).filter((r) => r.passed).length, k.last?.at || 0,
-  Object.keys(k.reading || {}).length, Object.keys(k.bank || {}).length].join('|');
+/* today's session is drawn ONCE a day and kept in the Store (k.feed.today): a reload, a new stop or a new
+   tapped word shows the same cards, answered ones answered, and the feed still ends — it never refills
+   (brief v4, V6: a reload drew a fresh twenty) */
 function todays(h, k) {
-  const st = stampOf(k), F = S.feed;
-  if (F && F.stamp === st && F.kid === k.id) return F.list;
-  const list = session(h, k, INDEX);
-  S.feed = { stamp: st, kid: k.id, list, play: {} };
-  markSeen(k, list.map((x) => x.id)); save();
+  const f = rec(k), day = dayNo();
+  if (S.feed && S.feed.kid === k.id && S.feed.day === day) return S.feed.list;
+  let list = f.today?.day === day ? (f.today.list || []).filter((x) => BY[x.id]) : null;
+  if (!list?.length) {
+    list = session(h, k, INDEX).map(({ id, kind, why, tier }) => ({ id, kind, why, tier }));
+    f.today = { day, list, done: {} };
+    markSeen(k, list.map((x) => x.id)); save();
+  }
+  S.feed = { day, kid: k.id, list, play: Object.fromEntries(Object.keys(f.today.done || {}).map((id) => [id, { st: 'done' }])) };
   return list;
 }
+const doneToday = (k, id) => { const t = rec(k).today; if (t && t.day === dayNo()) { (t.done ||= {})[id] = 1; save(); } };
 
 /* the route opens here: the index, today's session, and the groups it needs — then render */
 export async function openFeed() {
@@ -80,11 +85,11 @@ export function feedView() {
 function answer(id, o) {
   const it = BODY[id], P = S.feed?.play; if (!it || !it.play || !P || (P[id] && P[id].st)) return;
   const k = kid();
-  if (+o === 0) { P[id] = { st: 'right', o: 0 }; sfx('right'); bumpDay(k, 'right'); bumpDay(k, 'answers'); if (payOnce(k, id)) pay('answer', 'My Feed'); save(); }
+  if (+o === 0) { P[id] = { st: 'right', o: 0 }; sfx('right'); bumpDay(k, 'right'); bumpDay(k, 'answers'); if (payOnce(k, id)) pay('answer', 'My Feed'); doneToday(k, id); save(); }
   else { P[id] = { st: 'wrong', o: +o }; sfx('wrong'); }
   refocus(id);
 }
-function cont(id) { const P = S.feed?.play; if (P && P[id]) { P[id].st = 'done'; refocus(id); } }
+function cont(id) { const P = S.feed?.play; if (P && P[id]) { P[id].st = 'done'; doneToday(kid(), id); refocus(id); } }
 function refocus(id) {
   render();
   requestAnimationFrame(() => { const c = document.querySelector(`.bzf-card[data-id="${CSS.escape(id)}"]`); if (c) c.focus({ preventScroll: true }); });

@@ -16,7 +16,7 @@ const LINES = shippedLines().filter((l) => !/^["'“‘]/.test(l.text));   // th
 import HOUR from '../data/hour-words.json';
 import { MYTH_WORDS } from '../data/myth-words.js';
 import { FIGURES } from '../data/literature.js';
-import { FIGURE_KINDS } from '../games.js';
+import { FIGURE_KINDS } from '../data/figure-kinds.js';
 import { cleared } from '../data/rights.js';
 import { MEDALS } from '../medals.js';
 import { icon } from '../ui.js';
@@ -55,13 +55,16 @@ export function bookOf(k) {
 
 export function greetLine(k, nx) {
   const L = k.last;
-  const nextT = nx.stop?.title ? `“${nx.stop.title}”` : 'your next stop';
+  /* the next step said as a whole clause, so a check or the Library never reads "your next stop is next." */
+  const nextT = nx.stop?.title ? `“${nx.stop.title}”` : nx.kind === 'check' ? 'a quick check of what you learned' : nx.kind === 'library' ? 'a story in the Library' : 'the next stop';
+  const isNext = nx.stop?.title ? `${nextT} is next.` : `Next: ${nextT}.`;
   if (!L) return `Hello! Shall we start? First: ${nextT}.`;
-  if (L.what === 'stop') return `Last time: ${L.title}, ${L.right} of ${L.n} right. ${nx.resume ? 'Shall we finish it?' : nextT + ' is next.'}`;
-  if (L.what === 'read') return `You read “${L.title}” last time. ${nextT} is next.`;
+  if (L.what === 'stop') return `Last time: ${L.title}, ${L.right} of ${L.n} right. ${nx.resume ? 'Shall we finish it?' : isNext}`;
+  if (L.what === 'read') return `You read “${L.title}” last time. ${isNext}`;
   if (L.what === 'game') return `You built ${L.right} in ${L.title}. Ready for ${nextT}?`;
-  if (L.what === 'stage') return `You read aloud at ${L.right} words a minute. ${nextT} is next.`;
-  return `Welcome back. ${nextT} is next.`;
+  if (L.what === 'stage') return L.wpm ? `You read aloud at ${L.wpm} words a minute. ${isNext}` : L.secs ? `You spoke on the Stage for ${L.secs} seconds. ${isNext}` : `You spoke on the Stage last time. ${isNext}`;
+  if (L.what === 'contest') return `You scored ${L.right} points in the Elocution Contest. ${isNext}`;
+  return `Welcome back. ${isNext}`;
 }
 
 export function homeView() {

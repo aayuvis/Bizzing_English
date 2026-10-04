@@ -11,6 +11,7 @@
 //
 //   node app/test/tools.mjs
 
+import { lineSafe } from '../src/safe.js';
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -53,7 +54,9 @@ if (existsSync(join(BEE, '.git'))) {   // kid-safe only, checked against Bee its
   const win = {}; vm.runInNewContext(execFileSync('git', ['-C', BEE, 'show', `${BEE_COMMIT}:spellbound-app/figurative-data.js`], { maxBuffer: 1 << 28 }).toString(), { window: win });
   const kid = new Set([...win.SB_FIG.idioms, ...win.SB_FIG.similes].filter((x) => x.kid === true).map((x) => x.p.toLowerCase().trim()));
   ok(P.every((x) => kid.has(x.p.toLowerCase().trim())), 'idioms: a phrase Bee does not mark kid: true was imported');
-  ok(P.length === kid.size, `idioms: Bee has ${kid.size} kid-safe phrases, English took ${P.length}`);
+  // every kid-safe phrase is taken, except those English's own sentence list refuses (safe.js: "three sheets to the wind" is "very drunk")
+  const refused = [...win.SB_FIG.idioms, ...win.SB_FIG.similes].filter((x) => x.kid === true && !lineSafe([x.p, x.m, x.ex].join(' '))).map((x) => x.p.toLowerCase().trim());
+  ok(P.length === new Set([...kid].filter((p) => !refused.includes(p))).size, `idioms: Bee has ${kid.size} kid-safe phrases, ${new Set(refused).size} refused by safe.js, English took ${P.length}`);
 } else console.log('tools: Bee checkout not found — the kid-safe check against Bee was skipped');
 const D = figDecks(P);
 ok(D.length >= 10 && D.every((d) => d.items.length >= 8 && d.items.length <= 30), 'idioms: a learning deck is under 8 or over 30 cards');
@@ -123,7 +126,7 @@ ok(importers.length === 1 && importers[0] === 'src/views/tools.js', `Bee quotes:
 // ── the tab, the routes, the paintings ────────────────────────────────────
 const main = readFileSync(join(APP, 'src/main.js'), 'utf8');
 ok(/id: 'tools', label: 'Tools'/.test(main) && !/id: 'stage', label: 'Stage'/.test(main), 'main.js: the Tools tab is missing, or the Stage is still a tab');
-ok(/case 'tools': return toolsView\(\)/.test(main) && /case 'stage':/.test(main), 'main.js: #/tools or #/stage is not routed');
+ok(/case 'tools': return (TOOLS \? TOOLS\.)?toolsView\(\)/.test(main) && /case 'stage':/.test(main), 'main.js: #/tools or #/stage is not routed');
 for (const t of TOOLS) {
   ok(t.href === '#/stage' || TOOL_ROUTES.includes(t.href.replace('#/tools/', '')), `tool ${t.id}: ${t.href} is not a route`);
   for (const f of [`art/tool-${t.id}-card.webp`, `art/tool-${t.id}.webp`]) ok(existsSync(join(APP, 'public', f)), `tool ${t.id}: ${f} is missing (tools/art/gen.py --group tools, then process.py --tools)`);

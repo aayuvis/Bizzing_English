@@ -105,7 +105,7 @@ export const CONTEST_ACTIONS = {
   'ct-finish': () => {
     const r = S.run, k = kid(), rows = standings(r.n, k.band, r.mine), me = rows.find((x) => x.you);
     bumpDay(k, 'made'); (k.contests ||= []).push({ at: Date.now(), n: r.n, band: k.band, rounds: r.mine.slice(), total: me.total, place: me.place, of: rows.length });
-    k.last = { what: 'stage', right: me.total, at: Date.now() };
+    k.last = { what: 'contest', right: me.total, at: Date.now() };
     if (me.total > 0) { pay('contest', `Elocution Contest ${r.n}: ${me.total} of 30`); mark('stop', `Elocution Contest ${r.n}: ${me.total} of 30`); }
     save(); r.phase = 'final'; if (me.place <= 3 && me.total > 0) confetti(); render(); checkMedals();
   },

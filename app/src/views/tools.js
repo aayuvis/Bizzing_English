@@ -229,7 +229,11 @@ function typingRun(r) {
     <div class="stats"><div class="stat"><b>${t.wpm}</b><small>words a minute</small></div><div class="stat"><b>${t.acc}%</b><small>accuracy</small></div></div>
     <p style="margin:0">${t.mode === 'test' ? (t.best ? 'A new best for you.' : `Your best is ${st.bestWpm} words a minute.`) : t.paid ? 'Lesson finished for the first time — coins in your wallet.' : 'Accuracy first; speed follows.'}</p>
     <div class="row">${t.mode === 'test' ? link('Test again', '#/tools/typing/test', { ic: 'undo' }) : btn('Once more', 'ty-again', { ic: 'undo' })}${link('All lessons', '#/tools/typing', { cls: 'out' })}</div></div></div>`;
-  const chars = t.seq.split('').map((ch, i) => `<span id="ty-c${i}" class="${i < t.pos ? (t.marks[i] ? 'ok' : 'err') : i === t.pos ? 'cur' : ''}">${ch === ' ' ? '&nbsp;' : esc(ch)}</span>`).join('');
+  // each word is one unbreakable group and each space a real space, so a line breaks BETWEEN words, never
+  // inside one ('chec / ked' — brief v4)
+  const cell = (ch, i) => `<span id="ty-c${i}" class="${i < t.pos ? (t.marks[i] ? 'ok' : 'err') : i === t.pos ? 'cur' : ''}">${ch === ' ' ? ' ' : esc(ch)}</span>`;
+  let chars = '', at = 0;
+  for (const part of t.seq.split(/( )/)) { if (!part) continue; const cells = part.split('').map((ch, j) => cell(ch, at + j)).join(''); chars += part === ' ' ? cells : `<span class="ty-w">${cells}</span>`; at += part.length; }
   const want = (t.seq[t.pos] || '').toLowerCase();
   const key = (ch) => { const f = TY_FINGER[ch]; return `<button class="ty-key${ch === want ? ' next' : ''}" id="ty-k-${ch === ';' ? 'semi' : ch === ',' ? 'comma' : ch === '.' ? 'dot' : ch}" data-act="ty-tap" data-arg="${esc(ch)}" style="border-bottom-color:${f ? TY_FCOLOR[f] : '#9A93AB'}">${ch === ';' ? ';' : esc(t.shift ? ch.toUpperCase() : ch.toUpperCase())}</button>`; };
   return head + `<div class="tl-wrap stack ty">

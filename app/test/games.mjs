@@ -118,7 +118,7 @@ ok('a level holds between 40% and 80%', nextLevel(3, 0.79) === 3 && nextLevel(3,
 ok('a level falls one step below 40%', nextLevel(3, 0.39) === 2 && nextLevel(4, 0) === 3);
 ok('never below 1, never above the top', nextLevel(1, 0) === 1 && nextLevel(MAX_LEVEL, 1) === MAX_LEVEL);
 ok('a run with no attempts moves nothing', nextLevel(3, null) === 3);
-ok('stars: 1 for a finished run, 2 at 70%, 3 at 90%', starsFor(0) === 1 && starsFor(0.69) === 1 && starsFor(0.7) === 2 && starsFor(0.89) === 2 && starsFor(0.9) === 3 && starsFor(null) === 0);
+ok('stars: none below 40%, 1 from 40%, 2 at 70%, 3 at 90%', starsFor(0) === 0 && starsFor(0.39) === 0 && starsFor(0.4) === 1 && starsFor(0.69) === 1 && starsFor(0.7) === 2 && starsFor(0.89) === 2 && starsFor(0.9) === 3 && starsFor(null) === 0);
 let run = runNew(2); for (let i = 0; i < RUN_ROUNDS; i++) { ok(`round ${i + 1} is not the final`, !isFinal(run)); run = runAdd(run, { kind: 'who', score: 3, right: 1, answered: 2, rounds: [], misses: { a: 1 }, bestCombo: 1 }, 2); }
 ok('after three rounds comes the final', isFinal(run));
 run = runAdd(run, { kind: 'who', score: 5, right: 2, answered: 2, rounds: [], misses: { b: 2 }, bestCombo: 2 }, 1);

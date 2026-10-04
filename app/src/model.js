@@ -8,6 +8,7 @@
 
 import { VERSION } from './store.js';
 import { STRANDS, strand, level } from './curriculum.js';
+import { readingStops, bookStops } from './reading.js';
 
 export const uid = () => Math.random().toString(36).slice(2, 10);
 export const today = (t = Date.now()) => { const d = new Date(t); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
@@ -52,7 +53,11 @@ export const they = (k) => (k?.name ? k.name : 'they');
 
 /* ---------- gates (Maths' worldOpen pattern) ---------- */
 
-export const levelDone = (k, sid, n) => { const l = level(sid, n); return !!l && l.stops.length > 0 && l.stops.every((s) => k.stops[s.id]?.passed); };
+/* a level's stops: Reading's are its passages and book chapters (reading.js), which the curriculum table does
+   not list — reading them from the table left every Reading level "not done", so Speaking (after Reading 1)
+   and Literature (after Reading 2) never opened below band 3 (brief v4, the demo's locked strands) */
+export const levelStops = (sid, n) => (sid === 'reading' ? [...readingStops(), ...bookStops()].filter((s) => s.level === n) : level(sid, n)?.stops || []);
+export const levelDone = (k, sid, n) => { const ss = levelStops(sid, n); return ss.length > 0 && ss.every((s) => k.stops[s.id]?.passed); };
 
 /* A strand opens by band or by the strand before it; a free child sees every strand, and a
    family-plan strand says so plainly rather than hiding. */

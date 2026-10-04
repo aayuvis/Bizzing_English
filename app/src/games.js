@@ -35,6 +35,7 @@
      then say WHY (the reason scores). The rival's points are the app's own, seeded, and say so. */
 
 import { rng, shuffle, sample, permute, hash } from './rand.js';
+import { kidSafe } from './safe.js';
 import { MAIN_CLAUSE, COMMAS } from './data/sentences.js';
 
 /* The games as the Play page lists them: a world (whose painting is the board), what each practises,
@@ -130,8 +131,9 @@ export function nextLevel(level, pct) {
   if (pct < 0.4) return Math.max(1, l - 1);
   return l;
 }
-/* A finished run earns 1 star; 70% earns 2; 90% earns 3. */
-export const starsFor = (pct) => (pct == null ? 0 : pct >= 0.9 ? 3 : pct >= 0.7 ? 2 : 1);
+/* A finished run at 40% or better earns 1 star (the line the level falls below); 70% earns 2; 90% earns 3.
+   Nothing right earns nothing — a run once gave '1 star, your most yet' with 0 right (brief v4). */
+export const starsFor = (pct) => (pct == null || pct < 0.4 ? 0 : pct >= 0.9 ? 3 : pct >= 0.7 ? 2 : 1);
 /* What a finished round got right, out of how many decisions it asked for. */
 export function accuracy(g) {
   let right = 0, total = 0;
@@ -375,8 +377,8 @@ export function whoRound(lines, works, seed, level = 1, n = 5, o = {}) {
 /* A line from a held text (data/literature.js FIGURES + data/figures-more.js, each checked word for word):
    which figure of speech is it? The answers keep one fixed order, so no slot can lean; a round is
    balanced across the kinds its level offers. */
-export const FIGURE_KINDS = [['simile', 'Simile', 'compares two things using “like” or “as”'], ['metaphor', 'Metaphor', 'says one thing IS another'],
-  ['personification', 'Personification', 'gives a thing or an idea a person’s actions or feelings'], ['alliteration', 'Alliteration', 'repeats the first sound of words close together'], ['none', 'None of these', 'says it plainly — no figure at all']];
+export { FIGURE_KINDS } from './data/figure-kinds.js';
+import { FIGURE_KINDS } from './data/figure-kinds.js';
 const FIG_HARD = { simile: 1, alliteration: 1, metaphor: 2, personification: 3, none: 3 };
 export const HUNT_KINDS = ['simile', 'metaphor', 'personification', 'alliteration'];
 /* the kinds a level offers, and how many of each in a round of ten */
@@ -592,8 +594,9 @@ export function forgePools(lex, wp) {
     const non = P.filter((q) => q !== p && !keys.some((k) => k.startsWith(q + rt)));
     if (non.length >= 3) out.push({ kind: 'root', aff: p, base: rt, word, non, band: 4, meaning: r.meaning });
   }
-  POOLS.set(lex, { wp, out });
-  return out;
+  const safe = out.filter((x) => kidSafe(x.word, lex.words[x.word]?.[0]));
+  POOLS.set(lex, { wp, out: safe });
+  return safe;
 }
 const affLabel = (kind, x) => (kind === 'suffix' ? '-' + x : x + '-');
 export const FORGE_LEVELS = { 1: { cap: 1, roots: 0 }, 2: { cap: 2, roots: 0 }, 3: { cap: 3, roots: 0 }, 4: { cap: 3, roots: 4 }, 5: { cap: 3, roots: 6, min: 2 } };

@@ -48,4 +48,6 @@ const fr = []; for (let t = 0; t < 3500; t += 50) fr.push([t, t > 700 && t < 290
 const pm = measure(fr, 290); ok(pm.partial && pm.wpm === 0, 'a 3.5 s reading of 290 words is partial, with no pace: ' + JSON.stringify(pm));
 const full = []; for (let t = 0; t < 120000; t += 50) full.push([t, (t > 200 && t < 119800 && t % 4000 > 400) ? -20 : -60]);
 ok(!measure(full, 290).partial && measure(full, 290).wpm > 100, 'a two-minute reading of 290 words has a pace');
+// noise suppression returns digital silence (−180 dB) between words: the range must stay a voice's, not "109 dB"
+{ const fz = []; for (let i = 0; i < 400; i++) fz.push([i * 50, i % 5 < 2 ? -180 : i % 5 === 2 ? -110 : -24 - (i % 4) * 4]); const z = measure(fz, 0); ok(z.range > 0 && z.range <= 40, 'a range with digital silence between the words stays plausible: ' + z.range + ' dB'); }
 console.log(`contest: ${n - fails}/${n}`); if (fails) process.exit(1);

@@ -24,7 +24,7 @@ export const PLACES = {
   '@practice': ['Practice', 'spaced checks on a later day; the mistakes deck'],
   '@grownups': ['Grown-ups’ page', 'a grown-up’s 1–4 rubric on every piece of writing and every speech'],
   '@vocab': ['Tools · Vocabulary', 'Bee’s decks — Meaning Masters, the Mighty 500, by difficulty and by origin — study, check, the next set at 80%'],
-  '@idioms': ['Tools · Idioms & Similes', '2,368 phrases from Bee’s list with meaning, example and a quiz; origin stories labelled and awaiting a reviewer'],
+  '@idioms': ['Tools · Idioms & Similes', '2,363 phrases from Bee’s list with meaning, example and a quiz; origin stories labelled and awaiting a reviewer'],
   '@typing': ['Tools · Typing Trainer', 'Bee’s 15 finger-by-finger lessons, then the sixty-second test'],
   '@quotes': ['Tools · Quotes & Poems', '331 lines checked in the books, and Bee’s quotations; “learn it by heart” opens the fading recitation'],
   '@myths': ['Library · Greek myths', '15 myths as a journey, the words each gave English, and Who’s who quoted from the stories'],

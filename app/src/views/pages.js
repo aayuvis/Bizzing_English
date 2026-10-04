@@ -6,9 +6,9 @@ import { S, kid, save, render, go, toast, pay, isDark, setDevice, applyDevice, c
 import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '../ui.js';
 import { AVATARS, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
-import { balance, ledger, spend } from '../family.js';
+import { balance, ledger, spend, activityLog } from '../family.js';
 import { helpNext } from '../report.js';
-import { certificates, certSVG } from '../certificates.js';
+import { certificates, certSVG, certFontCss } from '../certificates.js';
 import { EXTRAS, KINDS, extra, owns, wearing, wear, buyExtra } from '../extras.js';
 import { MEDALS } from '../medals.js';
 import { WORLDS, plate } from '../worlds.js';
@@ -154,8 +154,8 @@ export function searchView(q) {
 
 /* ---------- Grown-ups ---------- */
 function minutes(k, days = 7) {
-  let tot = 0; try { const o = JSON.parse(localStorage.getItem('bizzing.activity') || '{}'); const from = today(Date.now() - (days - 1) * 864e5);
-    for (const x of o.s || []) if (x.a === 'english' && x.d >= from && (x.who || '').toLowerCase() === k.name.toLowerCase()) tot += x.m || 0; } catch {}
+  let tot = 0; try { const from = today(Date.now() - (days - 1) * 864e5);
+    for (const x of activityLog()) if (x.a === 'english' && x.d >= from && (x.who || '').toLowerCase() === k.name.toLowerCase()) tot += x.m || 0; } catch {}
   return tot;
 }
 export function grownupsView() {
@@ -305,6 +305,16 @@ export async function onChange(t) {
 export { isDemo };
 
 /* ---------- a certificate, made on this device ---------- */
+/* the ceremony: the moment a level or a book is finished, its certificate opens over the page */
+export function certSheet(id) {
+  const k = kid(), c = certificates(k).find((x) => x.id === id); if (!c) return '';
+  const svg = certSVG(c, k.name, new Date(c.at || Date.now()).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
+  return sheet(c.kind === 'book' ? 'A whole book, finished' : `${c.title.split(' · ')[0]}, finished`, 'medal', `<div class="finish stack" style="text-align:center;justify-items:center">
+    <div class="certview cert-ceremony" style="width:min(520px,100%)">${svg}</div>
+    <p style="margin:0">${esc(c.kind === 'book' ? `You ${c.can}.` : `Every stop passed on its check. You can say: “${c.can}”`)}</p>
+    <div class="row" style="justify-content:center">${link('See it big', `#/certificate/${c.id}`, { ic: 'medal' })}${btn('Save as a picture', 'cert-save', { arg: c.id, cls: 'out', ic: 'check' })}${typeof navigator !== 'undefined' && navigator.canShare ? btn('Show the family', 'cert-share', { arg: c.id, cls: 'out', ic: 'user' }) : ''}</div>
+    <p class="note" style="margin:0">Made on this device. Saving or showing it is the family’s own act — nothing is sent anywhere by the app.</p></div>`);
+}
 export function certificateView(id) {
   const k = kid(), c = certificates(k).find((x) => x.id === id);
   if (!c) return empty('oops', 'That certificate is not earned yet — finish every stop in the level first.', link('My page', '#/me', { ic: 'user' }));
@@ -315,12 +325,26 @@ export function certificateView(id) {
     <p class="note" style="text-align:center;margin:0">Made on this device. The picture is saved to this device only — nothing is sent anywhere.</p>
     ${c.stops.length ? `<div class="card"><b>Every stop passed on its check:</b> ${c.stops.map(esc).join(' · ')}</div>` : ''}</div>`;
 }
-PAGE_ACTIONS['cert-save'] = (id) => {
+PAGE_ACTIONS['cert-save'] = async (id) => {
   const k = kid(), c = certificates(k).find((x) => x.id === id); if (!c) return;
-  const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
+  let fonts = ''; try { fonts = await certFontCss(); } catch { /* offline without the fonts cached: the picture falls back to Georgia */ }
+  const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }), fonts);
   const img = new Image(), url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
   img.onload = () => { const cv = document.createElement('canvas'); cv.width = 1200; cv.height = 850; cv.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(url);
     cv.toBlob((b) => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `bizzing-english-certificate-${c.id}.png`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000); toast('Saved to this device'); }, 'image/png'); };
   img.src = url;
 };
 PAGE_ACTIONS['cert-print'] = () => window.print();
+
+/* "Show the family": the device's own share sheet with the picture — the family chooses where it goes */
+PAGE_ACTIONS['cert-share'] = async (id) => {
+  const k = kid(), c = certificates(k).find((x) => x.id === id); if (!c || !navigator.canShare) return;
+  let fonts = ''; try { fonts = await certFontCss(); } catch { /* falls back to Georgia */ }
+  const svg = certSVG(c, k.name, new Date(c.at || Date.now()).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }), fonts);
+  const img = new Image(), url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
+  img.onload = () => { const cv = document.createElement('canvas'); cv.width = 1200; cv.height = 850; cv.getContext('2d').drawImage(img, 0, 0); URL.revokeObjectURL(url);
+    cv.toBlob(async (b) => { const file = new File([b], `bizzing-english-certificate-${c.id}.png`, { type: 'image/png' });
+      if (navigator.canShare({ files: [file] })) { try { await navigator.share({ files: [file], title: 'A Bizzing English certificate' }); } catch { /* the family closed the share sheet */ } }
+      else toast('This device cannot share a picture — use Save as a picture'); }, 'image/png'); };
+  img.src = url;
+};

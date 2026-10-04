@@ -31,6 +31,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { WORKS } from '../app/src/data/library.js';
 import { cleared } from '../app/src/data/rights.js';
+import { lineSafe } from '../app/src/safe.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url)), APP = join(HERE, '..', 'app'), OUT = join(APP, 'src', 'data', 'games');
 const CHECK = process.argv.includes('--check'), WHY = process.argv.includes('--why');
@@ -111,6 +112,7 @@ const rankOf = (b) => (isName(b) ? 1 : b.includes('-') ? Math.max(...b.split('-'
 
 /* ---------------------------------------------------------------- shared refusals */
 function refuse(s) {
+  if (!lineSafe(s)) return 'a word a drill does not need (safe.js)';
   if (!/^[A-Z]/.test(s)) return 'not a capital start';
   if (!/[a-z][.!?]$/.test(s)) return 'odd ending';
   if (/["“”‘’]/.test(s) || /(^|\s)'|'(\s|[.,!?]|$)/.test(s)) return 'quotation marks';

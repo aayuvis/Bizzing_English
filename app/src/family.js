@@ -16,5 +16,9 @@ export const ledger = (who) => (isDemo() ? demoLedger : wLedger(who));
 let demoLedger = [];
 export const setDemoLedger = (L) => { demoLedger = L; };
 export const setDemoCoins = (n) => { demoCoins = n; };
+/* the family feed's sessions, read-only ({a, d, t, m, who}); the demo carries its own, made from the days it played */
+let demoActivity = [];
+export const setDemoActivity = (L) => { demoActivity = L; };
+export function activityLog() { if (isDemo()) return demoActivity; try { return JSON.parse(localStorage.getItem('bizzing.activity') || '{}').s || []; } catch { return []; } }
 export const milestone = (who, ev, label) => { if (!isDemo()) trackMilestone(APP, who, ev, label); };
 export function startActivity(getName) { if (!isDemo()) trackActivity(APP, getName); }

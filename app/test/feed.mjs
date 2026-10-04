@@ -312,7 +312,7 @@ ok('broken: a generic route is caught', routeOk({ ...lesson, route: '#/library' 
 ok('broken: a route to something that does not exist is caught', routeOk({ ...lesson, route: '#/stop/no-such-stop' }) !== '');
 ok('broken: a favourite slot is caught', (() => { const s = [0, 0, 0, 0]; for (let i = 0; i < 200; i++) s[i % 3 ? 0 : 1]++; return s.some((n) => n / 200 > 0.35); })());
 const voc = one((c) => c.kind === 'vocab'), idi = one((c) => c.kind === 'idiom'), idx = IDIOMS[+idi.src.slice(6)];
-const originLeak = idx.os.split(/(?<=[.;])\s/)[0];
+const originLeak = idx.os;   // the scan looks for a whole origin story; the first card's idiom once had a one-sentence story, so its first sentence stood in for it
 ok('broken: an idiom’s origin story slipped onto a card is caught', scan([{ ...idi, more: `${idi.more} ${originLeak}` }], ORIGINS, false).length === 1);
 ok('broken: a Bee quote slipped onto a card is caught', scan([{ ...lesson, body: `${lesson.body} ${BEE_QUOTES.find((q) => q.split(' ').length > 8 && !heldAnywhere(q))}` }], BEE_QUOTES, true).length === 1);
 ok('broken: a vocabulary card whose right answer is another word’s meaning is caught', resolve({ ...voc, play: { ...voc.play, opts: [voc.play.opts[1], voc.play.opts[0], ...voc.play.opts.slice(2)] } }) !== '');

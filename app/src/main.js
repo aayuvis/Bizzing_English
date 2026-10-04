@@ -12,9 +12,13 @@ import { openStop, openCheck, runnerView, RUN_ACTIONS, runKey } from './views/ru
 import { openRead, readerView, READ_ACTIONS, readKey, wordCard, showWord } from './views/reader.js';
 import { libraryView, bookView, wordView } from './views/library.js';
 import { stageView, openAloud, aloudView, STAGE_ACTIONS, aloudPick, isLive, micStop } from './views/stage.js';
-import { playView, openGame, gameView, PLAY_ACTIONS, playKey, leaveGame } from './views/play.js';
+/* Play and Tools load on their own routes (their pools, boards and Bee's tools kept initial JS under budget —
+   brief v4, R2); their actions join ACTIONS when they arrive */
+let PLAY = null, TOOLS = null;
+const loadPlay = async () => PLAY || (PLAY = await import('./views/play.js').then((m) => (Object.assign(ACTIONS, m.PLAY_ACTIONS), m)));
+const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js').then((m) => (Object.assign(ACTIONS, m.TOOL_ACTIONS), m)));
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
-  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView } from './views/pages.js';
+  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
 import { loadBook, chapterKey } from './book.js';
@@ -23,7 +27,6 @@ import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.j
 import { applyExtras } from './extras.js';
 import { openContest, contestView, CONTEST_ACTIONS } from './views/contest.js';
 import { openFeed, feedView } from './views/feed-view.js';
-import { openTool, toolsView, TOOL_ACTIONS, toolsKey, toolsInput, toolsChange, leaveTools } from './views/tools.js';
 import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
 import { headline } from './model.js';
@@ -58,9 +61,9 @@ function parse() {
 async function route() {
   const r = parse(); const prev = S.route.name;
   if (isLive()) micStop(0);                              // any Stage room: leaving switches the microphone off                              // leaving the Stage mid-reading: the microphone goes off at once
-  stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' ? S.sheet : null;
-  if (prev === 'play' && S.run?.mode === 'game') leaveGame();
-  if (prev === 'tools') leaveTools();
+  stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' || S.sheet?.kind === 'cert' ? S.sheet : null;
+  if (prev === 'play' && S.run?.mode === 'game') PLAY?.leaveGame();
+  if (prev === 'tools') TOOLS?.leaveTools();
   if (r.name === 'myths' || r.name === 'author') { location.replace(`#/library/${r.parts.map(encodeURIComponent).join('/')}`); return; }   // the Library's deep dives (views/deep.js)
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
@@ -90,9 +93,9 @@ async function route() {
   else if (r.name === 'practice' && r.parts[1] === 'check') { const nx = nextStep(S.h, kid()); await openCheck(nx.kind === 'check' ? nx.ids : due(kid())); }
   else if (r.name === 'read') await openRead(r.parts[1]);
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
-  else if (r.name === 'play' && r.parts[1]) openGame(r.parts[1]);
+  else if (r.name === 'play') { await loadPlay(); if (r.parts[1]) PLAY.openGame(r.parts[1]); else S.run = null; }
   else if (r.name === 'feed') { S.run = null; await openFeed(); }
-  else if (r.name === 'tools') await openTool(r.parts);
+  else if (r.name === 'tools') { S.run = null; await loadTools(); await TOOLS.openTool(r.parts); }
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
   render(); window.scrollTo(0, 0);
@@ -117,9 +120,9 @@ function screen() {
     case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] === 'contest' ? contestView() : p[1] ? speakView() : stageView();
     case 'desk': return p[2] === 'done' ? deskDoneView(p[1]) : deskView();
     case 'recordings': return recordingsView();
-    case 'play': return p[1] ? gameView() : playView();
+    case 'play': return !PLAY ? '' : p[1] ? PLAY.gameView() : PLAY.playView();
     case 'feed': return feedView();
-    case 'tools': return toolsView();
+    case 'tools': return TOOLS ? TOOLS.toolsView() : '';
     case 'me': return meView();
     case 'medals': return medalsView();
     case 'certificate': return certificateView(p.slice(1).join('/'));
@@ -148,7 +151,7 @@ function doRender() {
   applyDevice(); paintScene(); applyExtras(kid());
   syncMusic(musicFor(S.route, kid() ? world(kid().world || 1).id : null, S.run), S.route.parts.join('/'));   // music: the screen's loop (sound.js decides; silent on the Stage)
   const k = kid(), app = document.getElementById('app');
-  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : '';
+  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : S.sheet?.kind === 'cert' ? certSheet(S.sheet.id) : '';
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';
   if (!k) { app.innerHTML = demoBand + `<main class="bz-content" id="main" tabindex="-1">${screen()}</main>${sheetHTML}`; return; }
   const hive = S.fromHive ? `<a class="bz-chip fromhive" href="https://aayuvis.github.io/Bizzing_Schedule/">${icon('back')}<span>back to my day</span></a>` : '';
@@ -171,8 +174,8 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PLAY_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...TOOL_ACTIONS,
-  'sheet-close': () => { S.sheet = null; if (S.route.name === 'settings') return go('#/home'); render(); },
+const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, 
+  'sheet-close': () => { S.sheet = S.certNext ? { kind: 'cert', id: S.certNext } : null; S.certNext = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
   const t = e.target.closest('[data-act]'); if (!t || t.closest('[data-bz-act]') && !t.dataset.act) return;
@@ -194,12 +197,12 @@ document.addEventListener('input', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   if (t.dataset.act === 'desk-type') deskInput(t);
   else if (t.dataset.act === 'sp-plan') speakInput(t);
-  else if (t.dataset.act === 'tl-q') toolsInput(t);
+  else if (t.dataset.act === 'tl-q') TOOLS?.toolsInput(t);
 });
 document.addEventListener('change', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
   if (t.dataset.act === 'aloud-pick') return aloudPick(t.value);
-  if (t.dataset.act === 'tl-theme') return toolsChange(t);
+  if (t.dataset.act === 'tl-theme') return TOOLS?.toolsChange(t);
   onChange(t);
 });
 document.addEventListener('keydown', (e) => {
@@ -209,7 +212,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (toolsKey(e) || runKey(e) || readKey(e) || playKey(e) || storyKey(e)) e.preventDefault();
+  if (TOOLS?.toolsKey(e) || runKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 
@@ -229,4 +232,5 @@ route().then(() => { if (parse().name === 'settings') { S.sheet = { kind: 'setti
 if ('serviceWorker' in navigator && !DEMO && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 /* idle: warm the lexicon so the first tapped word is instant */
 setTimeout(() => { if (kid()) loadLexicon(); }, 3000);
-window.__bz = { S, render };   // the browser check reads state through this; nothing else does
+setTimeout(() => { if (kid()) { loadPlay(); loadTools(); } }, 6000);   // fetched when idle, so Play and Tools work offline too
+window.__bz = { S, render, checkMedals };   // the browser check reads state (and asks for a ceremony) through this; nothing else does

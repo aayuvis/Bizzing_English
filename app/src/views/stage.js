@@ -75,7 +75,7 @@ export const STAGE_ACTIONS = {
     const r = S.run, k = kid(), m = r.result;
     (k.stage['sp1-aloud'] ||= []).push({ at: Date.now(), passage: r.pid, secs: m.secs, wpm: m.wpm, pauses: m.pauses, range: m.range, self: r.self.length });
     bumpDay(k, 'speak', Math.round(m.secs)); bumpDay(k, 'made');
-    k.last = { what: 'stage', right: m.wpm, at: Date.now() };
+    k.last = { what: 'stage', wpm: m.wpm || 0, secs: Math.round(m.secs || 0), at: Date.now() };
     const rec = (k.stops['sp1-aloud'] ||= { passed: false, tries: 0 }); rec.tries++;
     if (!rec.passed && !m.quiet && !m.partial && m.secs >= 20) { rec.passed = true; taught(k, 'sp1-aloud'); pay('stop', 'Read a passage aloud on the Stage'); mark('stop', 'Read a passage aloud on the Stage'); }
     if (r.from) { (k.reading[r.from] ||= {}); (k.reading[r.from].ex ||= {}).aloud = { right: m.wpm, n: 0, at: Date.now() }; }

@@ -4,11 +4,11 @@
    never typed in, so the sample can only show states the real app can reach. */
 
 import { setDemo } from './store.js';
-import { newHousehold, newKid, addKid, bumpDay, addToBank } from './model.js';
+import { newHousehold, newKid, addKid, bumpDay, addToBank, today } from './model.js';
 import { taught, spacedCheck } from './mastery.js';
-import { setDemoCoins, setDemoLedger } from './family.js';
-import { stopById } from './curriculum.js';
-import { readingStop } from './reading.js';
+import { setDemoCoins, setDemoLedger, setDemoActivity } from './family.js';
+import { stopById, level } from './curriculum.js';
+import { readingStop, readingStops } from './reading.js';
 
 const DAY = 864e5;
 export function demoHousehold(now = Date.now()) {
@@ -16,6 +16,12 @@ export function demoHousehold(now = Date.now()) {
   h.parent.plan = 'family';
   const plan = [['w1-rhyme', 20], ['w1-build', 20], ['s1-noun', 19], ['w1-odd', 18], ['s1-verb', 17], ['rd-aesop-town-mouse', 16], ['w2-meaning', 15], ['s1-adj', 14],
     ['w2-word', 12], ['s2-split', 11], ['rd-justso-elephant', 10], ['s2-subject', 9], ['w3-meaning', 7], ['la1-origin', 6], ['s3-pc', 5], ['wr1-copy', 4], ['w3-make', 2]];
+  /* the whole of Sentence 1 and Reading 1, so the strands they open (Writing, Speaking) are open for the
+     stops she passed in them — the audit found both locked with a passed stop inside (brief v4) */
+  const have = new Set(plan.map(([id]) => id));
+  const fill = [...level('sentence', 1).stops.map((s) => s.id), ...readingStops().filter((s) => s.level === 1).map((s) => s.id)].filter((id) => !have.has(id));
+  fill.forEach((id, i) => plan.push([id, 19 - (i % 12)]));
+  plan.sort((a, b) => b[1] - a[1]);
   for (const [id, ago] of plan) {
     const t = now - ago * DAY;
     k.stops[id] = { passed: true, best: 7, tries: 1, step: 0, at: t };
@@ -42,6 +48,10 @@ export function demoHousehold(now = Date.now()) {
     L.push({ a: 'english', t: t + 9000, n: 5, why: 'stop' }); notes[t + 9000] = name(id); }
   for (const [id, ago] of plan.filter(([, a]) => a >= 9)) { const t = now - (ago - 2) * DAY + 5000; L.push({ a: 'english', t, n: 20, why: 'mastery' }); notes[t] = `Learned: ${name(id)}`; }
   L.sort((a, b) => a.t - b.t);
+  /* the family feed's sessions for the report's Time: one session on each day she played, its minutes from
+     what she did that day (about a minute and a half a stop) */
+  const days = {}; for (const [, ago] of plan) days[ago] = (days[ago] || 0) + 1;
+  setDemoActivity(Object.entries(days).map(([ago, n]) => { const d = new Date(now - ago * DAY); return { a: 'english', d: today(d.getTime()), t: 17 * 60 + 10, m: 6 + n * 4, who: 'Kavya' }; }));
   setDemo(h); setDemoLedger(L); setDemoCoins(L.reduce((a, x) => a + x.n, 0));
   return h;
 }

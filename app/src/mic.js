@@ -35,9 +35,12 @@ export function stop(words = 0) {
   return measure(m.frames, words);
 }
 
-export const PARTIAL_WPM = 230;
+export const PARTIAL_WPM = 230, FLOOR_DB = -70;
 export function measure(frames, words) {
   if (!frames.length) return { secs: 0, wpm: 0, pauses: 0, range: 0 };
+  /* noise suppression hands back DIGITAL silence (−180 dB), which once made a "109 dB loud-to-soft range";
+     nothing quieter than a still room (−70 dB) is counted as itself */
+  frames = frames.map(([t, db]) => [t, Math.max(FLOOR_DB, db)]);
   const dbs = frames.map((f) => f[1]).sort((a, b) => a - b);
   const floor = dbs[Math.floor(dbs.length * 0.1)], loud = dbs[Math.floor(dbs.length * 0.95)];
   const thr = floor + Math.max(6, (loud - floor) * 0.35);
@@ -50,5 +53,5 @@ export function measure(frames, words) {
   /* pace assumes the whole text was read; faster than anyone reads aloud (230 words a minute) means it was not,
      so no pace is claimed — the reading is marked partial (a 3-second stop once claimed 4,950 words a minute) */
   const raw = words ? words / (secs / 60) : 0, partial = !!words && raw > PARTIAL_WPM;
-  return { secs: +secs.toFixed(1), wpm: partial ? 0 : Math.round(raw), partial, pauses, range: Math.round(sp[Math.floor(sp.length * 0.95)] - sp[Math.floor(sp.length * 0.05)]) };
+  return { secs: +secs.toFixed(1), wpm: partial ? 0 : Math.round(raw), partial, pauses, range: Math.round(sp[Math.floor(sp.length * 0.9)] - sp[Math.floor(sp.length * 0.1)]) };   // the loud and soft of the SPEECH, its outer tenths set aside
 }

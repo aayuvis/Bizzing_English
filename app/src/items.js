@@ -13,6 +13,7 @@
 import { rng, pick, shuffle, sample, permute, hash } from './rand.js';
 import WRITING from './data/writing.js';
 import { AUTHORED, AUTHORED_STOPS } from './authored.js';
+import { kidSafe, nonWordSafe } from './safe.js';
 import { imitate as imitateCheck, SHAPES } from './writing.js';
 import * as SB from './data/sentences.js';
 import * as WP from './data/wordparts.js';
@@ -48,10 +49,10 @@ const GEN = {
     },
   },
   onset: {
-    keys: (ctx) => WP.RIMES.filter((r) => (ctx.lex?.rimes?.[r.rime]?.non || []).length >= 3).flatMap((r) => r.words.map((w, i) => (w === r.rime ? null : `${r.rime}:${i}`)).filter(Boolean)),
+    keys: (ctx) => WP.RIMES.filter((r) => (ctx.lex?.rimes?.[r.rime]?.non || []).filter(nonWordSafe).length >= 3).flatMap((r) => r.words.map((w, i) => (w === r.rime ? null : `${r.rime}:${i}`)).filter(Boolean)),
     make(key, ctx) {
       const [rime, i] = key.split(':'); const r = WP.RIMES.find((x) => x.rime === rime);
-      const right = r.words[+i], wr = sample(rng(key), ctx.lex.rimes[rime].non, 3);
+      const right = r.words[+i], wr = sample(rng(key), ctx.lex.rimes[rime].non.filter(nonWordSafe), 3);
       return mc('onset:' + key, 'onset', 'Which one is a real word?', right, wr,
         { sub: `Every one ends in “-${rime}”.`, hint: ['Read each one aloud.', 'Which have you heard someone say?'], explain: `${q(right)} is a real word. The others are not words in our dictionary.` });
     },
@@ -67,7 +68,7 @@ const GEN = {
     },
   },
   def2word: {
-    keys: (ctx) => (ctx.lex?.pools?.def || []).filter((w) => (lexOf(ctx)[w]?.[Y] || 9) <= (ctx.band === 1 ? 2 : 3)),
+    keys: (ctx) => (ctx.lex?.pools?.def || []).filter((w) => (lexOf(ctx)[w]?.[Y] || 9) <= (ctx.band === 1 ? 2 : 3) && kidSafe(w, lexOf(ctx)[w][DEF])),
     make(key, ctx) {
       const L = lexOf(ctx), t = L[key], wr = defDistractors(key, ctx, 3);
       return mc('def2word:' + key, 'def2word', cap1(t[DEF]), key, wr,
@@ -105,7 +106,7 @@ const GEN = {
     },
   },
   origin: {
-    keys: (ctx) => (ctx.lex?.pools?.origin || []).filter((w) => (lexOf(ctx)[w]?.[Y] || 9) <= (ctx.band === 1 ? 3 : 5)),
+    keys: (ctx) => (ctx.lex?.pools?.origin || []).filter((w) => (lexOf(ctx)[w]?.[Y] || 9) <= (ctx.band === 1 ? 3 : 5) && kidSafe(w, lexOf(ctx)[w][DEF])),
     make(key, ctx) {
       const t = lexOf(ctx)[key], R = rng(key), langs = ['French', 'Latin', 'Greek', 'Hindi', 'Arabic', 'Spanish', 'Italian', 'German', 'Dutch', 'Old Norse', 'Japanese', 'Persian'];
       const wr = sample(R, langs.filter((l) => l !== t[ORIGIN]), 3);
@@ -282,7 +283,7 @@ function defIndex(lx) {
   let ix = DIDX.get(lx); if (ix) return ix;
   const content = (d) => new Set(norm(d).split(' ').filter((w) => w.length >= 5));
   ix = { byPs: {}, content: {} };
-  for (const w of lx.pools.def || []) { const r = lx.words[w]; if (!r) continue; (ix.byPs[r[PS]] ||= []).push(w); ix.content[w] = content(r[DEF]); }
+  for (const w of lx.pools.def || []) { const r = lx.words[w]; if (!r || !kidSafe(w, r[DEF])) continue; (ix.byPs[r[PS]] ||= []).push(w); ix.content[w] = content(r[DEF]); }
   DIDX.set(lx, ix); return ix;
 }
 function defDistractors(key, ctx, n) {

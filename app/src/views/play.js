@@ -28,6 +28,9 @@ import { plate } from '../worlds.js';
 import { sfx, music, stopMusic } from '../sound.js';
 import { bumpDay } from '../model.js';
 import { avatarOf } from './pages.js';
+/* A url() inside a custom property resolves against the stylesheet that USES it (assets/…css), not the
+   page — so a relative 'art/w-…webp' 404'd on every board (brief v4, G5). Resolve it against the page. */
+const boardPlate = (world) => new URL(plate({ id: world }, isDark()), document.baseURI).href;
 
 export { GAMES };
 
@@ -242,7 +245,7 @@ function board(id, g, body) {
   const pose = last ? (last.ok ? 'cheer' : 'think') : 'point';
   const track = timed ? `<div class="gb-time"><i style="width:${(100 * (ROUND_MS - g.t)) / ROUND_MS}%"></i></div><span class="time" aria-label="seconds left">${Math.ceil((ROUND_MS - g.t) / 1000)}s</span>`
     : pips(g, g.rounds.length);
-  return `<div class="gboard${r.final ? ' gb-final' : ''}" data-game="${id}" style="--plate:url('${plate({ id: gm.world }, isDark())}')">
+  return `<div class="gboard${r.final ? ' gb-final' : ''}" data-game="${id}" style="--plate:url('${boardPlate(gm.world)}')">
     <div class="gb-bar"><img class="gb-ava" src="${avatarOf(k)}" alt=""><span class="gb-round">${roundName(r.run)}</span>${track}
       <span class="gb-combo${g.combo >= 2 ? ' on' : ''}" aria-live="polite">${g.combo >= 2 ? `${g.combo} in a row` : ''}</span>
       <span class="gb-score"><b>${g.score}</b><small>run ${runScore(r.run) + g.score}</small></span></div>
@@ -280,7 +283,7 @@ export function gameView() {
 function betweenView(id, r) {
   const gm = GAMES[id], run = r.run, x = r.last, pct = x.acc.pct == null ? '—' : `${Math.round(x.acc.pct * 100)}%`, nextFinal = isFinal(run);
   const duel = x.duel?.rival ? `<p class="gb-duelres" style="margin:0">${x.duel.you > x.duel.them ? `You won the duel against ${esc(x.duel.rival.name)}, ${x.duel.you}–${x.duel.them}.` : x.duel.you < x.duel.them ? `${esc(x.duel.rival.name)} won this one, ${x.duel.them}–${x.duel.you}. Your reasons still scored.` : `A draw with ${esc(x.duel.rival.name)}, ${x.duel.you}–${x.duel.them}.`}</p>` : '';
-  return `<div class="game"><div class="gboard gb-between" data-game="${id}" style="--plate:url('${plate({ id: gm.world }, isDark())}')"><div class="gb-frame stack">
+  return `<div class="game"><div class="gboard gb-between" data-game="${id}" style="--plate:url('${boardPlate(gm.world)}')"><div class="gb-frame stack">
     <span class="kick">${run.round} of ${RUN_ROUNDS + 1} done</span><h2 style="margin:0">${nextFinal ? 'Three rounds done — now the final' : `Round ${run.round} done`}</h2>${duel}
     <div class="gb-stats"><span><b>${x.score}</b><small>this round</small></span><span><b>${runScore(run)}</b><small>run so far</small></span><span><b>${pct}</b><small>accuracy</small></span><span><b>${x.met}</b><small>new to you</small></span></div>
     ${x.speed ? `<p class="note" style="margin:0">${x.speed} built fast — +${x.speed} time bonus.</p>` : ''}
@@ -293,9 +296,9 @@ function doneView(id, g, r) {
   const lv = res.played !== res.before ? `You played level ${res.played}; your level stays ${res.after} — ${gm.levels[res.after]}.`
     : res.after > res.before ? `Level ${res.before} → ${res.after}: up a level — ${gm.levels[res.after]}.` : res.after < res.before ? `Level ${res.before} → ${res.after}: one step back to steady it — ${gm.levels[res.after]}.` : `Level ${res.after} stays — ${gm.levels[res.after]}. 80% moves you up.`;
   const nx = res.next;
-  return `<div class="game"><div class="gboard gb-done" data-game="${id}" style="--plate:url('${plate({ id: gm.world }, isDark())}')"><div class="gb-frame finish stack">
-    <img src="${mascot('cheer')}" alt="">${starRow(res.stars)}<div class="score">${res.score}</div>
-    <p style="margin:0">Level ${res.played}: ${res.stars} star${res.stars === 1 ? '' : 's'}${res.newStars ? ' — your most yet on this level' : ''}. Rounds ${res.scores.slice(0, RUN_ROUNDS).join(' · ')} · final ${res.scores[RUN_ROUNDS] ?? 0}${res.bonus ? ` (with +${res.bonus} for speed)` : ''}.</p>
+  return `<div class="game"><div class="gboard gb-done" data-game="${id}" style="--plate:url('${boardPlate(gm.world)}')"><div class="gb-frame finish stack">
+    <img src="${mascot(res.stars ? 'cheer' : 'think')}" alt="">${starRow(res.stars)}<div class="score">${res.score}</div>
+    <p style="margin:0">Level ${res.played}: ${res.stars ? `${res.stars} star${res.stars === 1 ? '' : 's'}${res.newStars ? ' — your most yet on this level' : ''}` : 'no star this time — 40% right earns the first'}. Rounds ${res.scores.slice(0, RUN_ROUNDS).join(' · ')} · final ${res.scores[RUN_ROUNDS] ?? 0}${res.bonus ? ` (with +${res.bonus} for speed)` : ''}.</p>
     <div class="gb-stats"><span><b>${res.score}</b><small>run score</small></span><span><b>${kid().games[id].best}</b><small>${r.newBest ? 'a new best' : 'your best'}</small></span><span><b>${pct}</b><small>accuracy</small></span><span><b>${res.met}</b><small>new items met</small></span></div>
     <p class="note" style="margin:0">You practised ${esc(gm.practises)}. Most in a row: ${res.bestCombo}.</p><p class="gb-lvchange" style="margin:0">${esc(lv)}</p>
     <a class="gb-next card" href="${esc(nx.href)}" data-next>${icon('path')}<span><small>Your next step — ${esc(nx.why)}</small><b>${esc(nx.label)}</b></span>${icon('next')}</a>
