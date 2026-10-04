@@ -135,8 +135,11 @@ if (!MEASURE_ONLY) {
       ok(`${at}: it covers the screen, on <body>`, s.r.width >= w - 1 && s.r.height >= h - 1 && s.parent, JSON.stringify(s.r));
       ok(`${at}: focus moves to ✕`, s.x);
       const i0 = await scene(page);
-      await page.keyboard.press('ArrowRight'); await page.waitForTimeout(150);
+      await page.evaluate(() => { window.__leak = 0; window.__leakFn = () => window.__leak++; document.addEventListener('keydown', window.__leakFn); });
+      await page.keyboard.press('ArrowRight'); await page.keyboard.press('ArrowLeft'); await page.keyboard.press('Enter'); await page.waitForTimeout(150);
       ok(`${at}: → does not turn the page under it`, (await scene(page)) === i0);
+      ok(`${at}: it owns the keyboard — no key reaches the page under it`, await page.evaluate(() => { document.removeEventListener('keydown', window.__leakFn); return window.__leak === 0; }), await page.evaluate(() => window.__leak));
+      if (!(await page.evaluate(() => !!document.querySelector('.bzfull')))) { await page.click('#main [data-full]'); await page.waitForTimeout(200); }
       await page.keyboard.press('Tab'); ok(`${at}: Tab stays inside it`, await page.evaluate(() => !!document.activeElement?.closest('.bzfull')));
       await page.click('.bzfull-img'); await page.waitForTimeout(300);
       ok(`${at}: a tap on the picture zooms 2.2×`, await page.evaluate(() => document.querySelector('.bzfull.zoomed') && /matrix\(2\.2/.test(getComputedStyle(document.querySelector('.bzfull-img')).transform)));
