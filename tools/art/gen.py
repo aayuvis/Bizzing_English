@@ -113,6 +113,11 @@ POSES = {
 }
 for k, v in POSES.items():
     JOBS[f'mascot-{k}'] = (FOX + ' ' + v + (' Draw the SAME fox as the reference image: same face, colours, waistcoat and quill.' if k != 'wave' else ''), '1:1')
+# the browser tab's icon: the face alone, no tile — like Bizzing Bee's bee (owner, 4 Oct: "no background square")
+JOBS['fav'] = ("The SAME fox as the reference image, its HEAD ONLY — no body, no paws, no neck below the chin — large and "
+               "centred, facing the viewer, a big friendly smile, both ears up, the white quill behind one ear. Sticker style: "
+               "a thick dark plum outline around the whole head, bright flat colours, simple shapes that still read at 16 pixels. "
+               "The background is ONE flat solid pure magenta (#FF00FF) colour edge to edge, nothing else. " + NO_TEXT, '1:1')
 JOBS['icon'] = ("App icon art: the SAME fox as the reference image, head and shoulders, large and centred, smiling, "
                 "quill behind its ear, on a rich teal tile with a tone-on-tone pattern of open books and curling "
                 "quill strokes. Thick plum outline on the fox. Square, full-bleed, no rounded corners. " + NO_TEXT, '1:1')
