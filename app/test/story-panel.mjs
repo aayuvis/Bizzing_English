@@ -90,7 +90,7 @@ const open = async (p, hash, scene = 0) => {
 };
 const scene = (p) => p.evaluate(() => window.__bz.S.run?.i);
 
-const ctx = await browser.newContext({ viewport: { width: 1280, height: 720 }, hasTouch: true, deviceScaleFactor: 1 });
+const ctx = await browser.newContext({ viewport: { width: 1280, height: 720 }, hasTouch: true, deviceScaleFactor: 1, colorScheme: process.env.PANEL_DARK ? 'dark' : 'light' });
 const page = await ctx.newPage(); const errs = [];
 page.on('pageerror', (e) => errs.push(e.message));
 await page.addInitScript(() => {   // every narration clip, so the check can see each one stop

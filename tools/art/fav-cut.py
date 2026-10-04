@@ -4,7 +4,7 @@
 # app/public/icons/favicon-32.png and favicon-64.png.
 import sys
 from PIL import Image, ImageDraw, ImageFilter, ImageChops
-SP='/tmp/fav-'   
+SP = '/tmp/fav-'   # previews and face-512.png land here
 im=Image.open('/home/user/Bizzing_English/tools/art/raw/mascot-point.png').convert('RGB')
 W,H=im.size; px=im.load()
 # the ground: flood from the corners over magenta, its pink blends and the white sticker rim, so the fox is
