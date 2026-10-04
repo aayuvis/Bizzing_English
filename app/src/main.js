@@ -18,7 +18,7 @@ let PLAY = null, TOOLS = null;
 const loadPlay = async () => PLAY || (PLAY = await import('./views/play.js').then((m) => (Object.assign(ACTIONS, m.PLAY_ACTIONS), m)));
 const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js').then((m) => (Object.assign(ACTIONS, m.TOOL_ACTIONS), m)));
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
-  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet } from './views/pages.js';
+  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet, avDeckSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openPlace, placeView, PLACE_ACTIONS, placeKey } from './views/placement.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
@@ -154,7 +154,7 @@ function doRender() {
   applyDevice(); paintScene(); applyExtras(kid());
   syncMusic(musicFor(S.route, kid() ? world(kid().world || 1).id : null, S.run), S.route.parts.join('/'));   // music: the screen's loop (sound.js decides; silent on the Stage)
   const k = kid(), app = document.getElementById('app');
-  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : S.sheet?.kind === 'cert' ? certSheet(S.sheet.id) : '';
+  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : S.sheet?.kind === 'cert' ? certSheet(S.sheet.id) : S.sheet?.kind === 'avdeck' ? avDeckSheet() : '';
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';
   if (!k) { app.innerHTML = demoBand + `<main class="bz-content" id="main" tabindex="-1">${screen()}</main>${sheetHTML}`; return; }
   const hive = S.fromHive ? `<a class="bz-chip fromhive" href="https://aayuvis.github.io/Bizzing_Schedule/">${icon('back')}<span>back to my day</span></a>` : '';
@@ -208,10 +208,16 @@ document.addEventListener('change', (e) => {
   if (t.dataset.act === 'tl-theme') return TOOLS?.toolsChange(t);
   onChange(t);
 });
+/* the avatar deck turns by a sideways swipe too (≥ 45 px, more sideways than down) */
+let deckX = null;
+document.addEventListener('touchstart', (e) => { deckX = e.target.closest?.('.avdeck') && e.touches.length === 1 ? [e.touches[0].clientX, e.touches[0].clientY] : null; }, { passive: true });
+document.addEventListener('touchend', (e) => { if (!deckX || S.sheet?.kind !== 'avdeck') return; const t = e.changedTouches[0], dx = t.clientX - deckX[0], dy = t.clientY - deckX[1]; deckX = null;
+  if (Math.abs(dx) >= 45 && Math.abs(dx) > 1.5 * Math.abs(dy)) ACTIONS['deck-go'](dx < 0 ? 1 : -1); }, { passive: true });
 document.addEventListener('keydown', (e) => {
   if (e.defaultPrevented || e.metaKey || e.ctrlKey || e.altKey) return;
   if (S.sheet?.kind === 'kids' && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { const items = [...document.querySelectorAll('.kidmenu button')], i = items.indexOf(document.activeElement);
     items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length]?.focus(); e.preventDefault(); return; }
+  if (S.sheet?.kind === 'avdeck' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { ACTIONS['deck-go'](e.key === 'ArrowLeft' ? -1 : 1); e.preventDefault(); return; }
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;

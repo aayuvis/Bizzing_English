@@ -624,6 +624,18 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('the greeting never doubles a question mark', !/\?”?\?/.test(await page.textContent('.bz-greet')));
   ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
   ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));
+  /* the hello card shows the child's own avatar; a tap opens the deck of avatar cards (Bizzing Bee's) */
+  ok('the hello card shows the child’s avatar, as a button', await page.evaluate(() => { const b = document.querySelector('.bz-greet .greet-av img'); const k = window.__bz.S.h.kids[0]; return !!b && b.getAttribute('src').includes(k.avatar); }));
+  await page.click('.bz-greet .greet-av'); await page.waitForTimeout(250);
+  const card1 = await page.evaluate(() => { const c = document.querySelector('.avdeck .avcard'); return c && { id: c.dataset.card, stats: c.querySelectorAll('.avc-stats > div').length, title: c.querySelector('.avc-title')?.textContent, hist: c.querySelector('.avc-hist')?.textContent, lore: !!c.querySelector('.avc-lore'), fact: !!c.querySelector('.avc-fact') }; });
+  ok(`a tap on the avatar opens its card: rank, four stats, lore, a real fact and its history (${JSON.stringify(card1)})`, !!card1 && card1.stats === 4 && /^(Reader|Storyteller|Orator|Laureate) of /.test(card1.title) && /wearing it now/.test(card1.hist) && card1.lore && card1.fact);
+  await page.keyboard.press('ArrowRight'); await page.waitForTimeout(200);
+  const card2 = await page.evaluate(() => document.querySelector('.avdeck .avcard')?.dataset.card);
+  ok('→ turns to the next card in the deck', card2 && card2 !== card1.id);
+  await page.click('[data-act=deck-wear]'); await page.waitForTimeout(200);
+  ok('Wear this avatar puts it on', await page.evaluate((id) => window.__bz.S.h.kids[0].avatar === id && /Wearing/.test(document.querySelector('.avd-bar').textContent), card2));
+  await page.keyboard.press('Escape'); await page.waitForTimeout(200);
+  ok('Escape closes the deck', !(await page.$('.avdeck')));
   ok('the greeting never says “your next stop is next”', !/next stop is next/i.test(await page.textContent('.bz-greet')));
   await go(page, '#/atlas');
   ok('the demo opens the strands she has passed stops in (Writing, Speaking)', await page.evaluate(() => ['writing', 'speaking'].every((s) => { const a = document.querySelector(`.apin[href="#/atlas/${s}"]`); return a && !a.classList.contains('locked'); })));

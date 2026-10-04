@@ -1,0 +1,35 @@
+/* the avatar deck (views/pages.js avDeckSheet): Bizzing Bee's trading cards, in English's colours */
+.bz-greet .greet-av { all: unset; cursor: pointer; display: block; border-radius: 50%; line-height: 0; }
+.bz-greet .greet-av:focus-visible { outline: 3px solid var(--bz-accent); outline-offset: 3px; }
+.bz-greet .greet-av:hover img { transform: scale(1.05) rotate(-3deg); }
+.bz-greet .greet-av img { transition: transform .2s ease; }
+.avdeck { display: grid; gap: 12px; justify-items: center; }
+.avd-stage { display: flex; align-items: center; gap: 8px; width: 100%; justify-content: center; }
+.avd-nav { flex: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--bz-line); background: var(--bz-card); color: var(--bz-ink); display: grid; place-items: center; cursor: pointer; }
+.avd-pile { position: relative; width: min(320px, 100%); }
+.avd-ghost { position: absolute; inset: 0; border-radius: 18px; background: var(--bz-card); border: 1px solid var(--bz-line); }
+.avd-ghost.g1 { transform: rotate(3deg) translate(6px, 4px); opacity: .7; }
+.avd-ghost.g2 { transform: rotate(-4deg) translate(-6px, 6px); opacity: .45; }
+.avcard { position: relative; display: grid; gap: 6px; padding: 12px 14px 14px; border-radius: 18px; text-align: center;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--tc) 22%, var(--bz-card)), var(--bz-card) 45%); border: 3px solid var(--tc);
+  box-shadow: 0 10px 28px rgba(30, 20, 70, .18); color: var(--bz-ink); animation: avc-in .22s ease-out; }
+@keyframes avc-in { from { transform: translateY(6px) scale(.98); opacity: .4; } }
+@media (prefers-reduced-motion: reduce) { .avcard { animation: none; } }
+.avc-head { display: flex; justify-content: space-between; align-items: center; }
+.avc-tier { font: 700 12px/1 var(--bz-body); letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--tc); padding: 5px 9px; border-radius: 999px; }
+.avc-ovr { font: 800 26px/1 var(--bz-display); color: var(--tc); }
+.avc-art { width: 132px; height: 132px; margin: 0 auto; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .18)); }
+.avc-name { margin: 0; font: 800 22px/1.15 var(--bz-display); }
+.avc-title { margin: 0; font-size: 13px; color: var(--bz-muted); }
+.avc-lore { margin: 2px 0; font-style: italic; font-size: 14px; }
+.avc-stats { display: grid; gap: 4px; text-align: left; }
+.avc-stats div { display: grid; grid-template-columns: 52px 1fr 26px; align-items: center; gap: 8px; font-size: 13px; }
+.avc-stats i { height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--tc) 18%, transparent); overflow: hidden; }
+.avc-stats i b { display: block; height: 100%; background: var(--tc); border-radius: 99px; }
+.avc-stats em { font-style: normal; font-weight: 700; text-align: right; }
+.avc-power, .avc-fact { margin: 0; font-size: 13px; text-align: left; }
+.avc-power b, .avc-fact b { display: inline-block; margin-right: 4px; color: var(--tc); text-transform: uppercase; font-size: 11px; letter-spacing: .06em; }
+.avc-fact small { color: var(--bz-muted); }
+.avc-hist { display: flex; gap: 6px; align-items: center; justify-content: center; margin: 2px 0 0; font-size: 12px; color: var(--bz-muted); }
+.avc-hist svg { width: 14px; height: 14px; flex: none; }
+.avd-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: center; }

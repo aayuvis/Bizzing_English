@@ -2,10 +2,12 @@
    one layout, §5), Grown-ups (PIN, report card), Practice (the mistakes deck and spaced checks), the
    reading log, Help, Privacy, Search, the coin history and the child switcher. */
 
+import '../../styles/avdeck.css';
 import { S, kid, save, render, go, toast, pay, isDark, setDevice, applyDevice, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '../ui.js';
 import { AVATARS, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
+import { card, history, deckIds, STATS } from '../avcards.js';
 import { balance, ledger, spend, activityLog } from '../family.js';
 import { helpNext } from '../report.js';
 import { certificates, certSVG, certFontCss } from '../certificates.js';
@@ -312,6 +314,36 @@ export async function onChange(t) {
   }
 }
 export { isDemo };
+
+/* ---------- the avatar deck: tap your avatar on Home (Bizzing Bee's deck) ---------- */
+export const deckOf = (k) => deckIds((a) => stateOf(a, ctx(k)).state === 'owned');
+export function avCardHTML(c, k) {
+  const t = TIERS[c.tier];
+  return `<article class="avcard" style="--tc:${t.colour}" data-card="${esc(c.id)}">
+    <div class="avc-head"><span class="avc-tier">${esc(t.label)}</span><b class="avc-ovr" aria-label="Overall ${c.overall}">${c.overall}</b></div>
+    <img class="avc-art" src="${esc(c.art)}" alt="">
+    <h3 class="avc-name">${esc(c.name)}</h3><p class="avc-title">${esc(c.title)}</p>
+    ${c.lore ? `<p class="avc-lore">${esc(c.lore)}</p>` : ''}
+    <div class="avc-stats">${STATS.map(([key, label]) => `<div><span>${esc(label)}</span><i><b style="width:${c.stats[key]}%"></b></i><em>${c.stats[key]}</em></div>`).join('')}</div>
+    <p class="avc-power"><b>Power</b> ${esc(c.power)}</p>
+    ${c.fact ? `<p class="avc-fact"><b>Real fact</b> ${esc(c.fact)}${c.from ? ` <small>— ${esc(c.from)}</small>` : ''}</p>` : ''}
+    <p class="avc-hist">${icon('clock')}<span>${esc(history(c.id, k, ledger(k.name)))}</span></p></article>`;
+}
+export function avDeckSheet() {
+  const k = kid(), ids = deckOf(k); if (!ids.length) return '';
+  let i = S.sheet.i ?? ids.indexOf(k.avatar); if (i < 0) i = 0; i = ((i % ids.length) + ids.length) % ids.length; S.sheet.i = i;
+  const c = card(ids[i]), wearing = k.avatar === c.id, multi = ids.length > 1;
+  return sheet('Your avatar cards', 'star', `<div class="avdeck" data-deck="1">
+    <div class="avd-stage">${multi ? `<button class="avd-nav" data-act="deck-go" data-arg="-1" aria-label="Previous card">${icon('back')}</button>` : ''}
+      <div class="avd-pile"><i class="avd-ghost g2"></i><i class="avd-ghost g1"></i>${avCardHTML(c, k)}</div>
+      ${multi ? `<button class="avd-nav" data-act="deck-go" data-arg="1" aria-label="Next card">${icon('next')}</button>` : ''}</div>
+    <div class="avd-bar"><span class="note">${i + 1} of ${ids.length} yours · ← → or swipe</span>
+      ${wearing ? `<span class="tag ok">${icon('check')}Wearing</span>` : btn('Wear this avatar', 'deck-wear', { arg: c.id, ic: 'check' })}
+      ${link('All 96 in the Collection', '#/collection', { cls: 'out', ic: 'star' })}</div></div>`);
+}
+PAGE_ACTIONS['av-deck'] = () => { S.sheet = { kind: 'avdeck' }; render(); };
+PAGE_ACTIONS['deck-go'] = (a) => { if (S.sheet?.kind !== 'avdeck') return; S.sheet.i = (S.sheet.i || 0) + +a; sfx('tap'); render(); };
+PAGE_ACTIONS['deck-wear'] = (a) => { const k = kid(); if (!deckOf(k).includes(a)) return; k.avatar = a; save(); sfx('unlock'); confetti(); render(); };
 
 /* ---------- a certificate, made on this device ---------- */
 /* the ceremony: the moment a level or a book is finished, its certificate opens over the page */

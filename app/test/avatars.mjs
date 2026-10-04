@@ -21,4 +21,15 @@ const sib = ['../../../Bizzing-Bee/spellbound-app/avatars', '../../../Bizzing-Ma
   .map((p) => new URL(p, import.meta.url).pathname).filter(existsSync).flatMap((d) => readdirSync(d).map((f) => f.replace(/\.\w+$/, '')));
 const dup = AVATARS.filter((a) => sib.includes(a.id)).map((a) => a.id);
 ok(`no id is a sibling's face (${dup.join(', ') || 'none'})`, dup.length === 0);
+/* the cards (avcards.js + data/avatar-cards.js): every face has its words, stats in range, the same every time */
+{ const { card, RANKS, STATS } = await import('../src/avcards.js'); const { CARD_TEXT } = await import('../src/data/avatar-cards.js');
+  ok('every avatar has a card text, and no card text is for a face that does not exist', AVATARS.every((a) => CARD_TEXT[a.id]?.lore && CARD_TEXT[a.id]?.fact) && Object.keys(CARD_TEXT).every((id) => AVATARS.some((a) => a.id === id)));
+  ok('card texts are short enough for a card (lore ≤ 120, fact ≤ 170)', Object.values(CARD_TEXT).every((t) => t.lore.length <= 120 && t.fact.length <= 170));
+  ok('no emoji on a card', Object.values(CARD_TEXT).every((t) => !/\p{Extended_Pictographic}/u.test(t.lore + t.fact + (t.from || ''))));
+  const cs = AVATARS.map((a) => card(a.id));
+  ok('every card has four stats from 28 to 99, an overall, a rank from its tier and a power', cs.every((c) => STATS.every(([k]) => c.stats[k] >= 28 && c.stats[k] <= 99) && c.overall >= 28 && c.rank === RANKS[c.tier] && c.power));
+  ok('a card is the same every time it is drawn', JSON.stringify(card('tortoise')) === JSON.stringify(card('tortoise')));
+  const avg = (t) => { const xs = cs.filter((c) => c.tier === t); return xs.reduce((a, c) => a + c.overall, 0) / xs.length; };
+  ok('rarer tiers are stronger on average', avg('common') < avg('rare') && avg('rare') < avg('epic') && avg('epic') < avg('legendary'));
+}
 done();

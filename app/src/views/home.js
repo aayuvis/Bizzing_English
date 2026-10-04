@@ -23,6 +23,7 @@ import { icon } from '../ui.js';
 import { save, render, pay } from '../app.js';
 import { sfx } from '../sound.js';
 import { storyCard } from './stories.js';
+import { avatarOf } from './pages.js';
 
 /* each tip opens the exact place that practises it, and says so */
 const TIPS = [
@@ -98,7 +99,7 @@ export function homeView() {
     { n: d.made || 0, of: t.made ?? 1, col: '#6C4FE0', label: 'said aloud or written' }];
   const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span>${x.of && x.n >= x.of ? `<b>${x.n}</b> ${esc(x.label)} — today’s ${x.of} done` : `<b>${x.n}</b> / ${x.of} ${esc(x.label)}`}</span></li>`).join('')}</ul></div>`;
   const page = home({
-    greet: { mascot: mascot(k.last ? 'point' : 'wave'), hello: greetHello(), name: k.name, line: greetLine(k, nx) },
+    greet: { mascot: avatarOf(k), hello: greetHello(), name: k.name, line: greetLine(k, nx) },   // the child's own avatar, as in Bee; a tap opens the deck
     ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },
     hour: { kicker: 'Word of the hour', title: hw || '—', sub: `${HOUR[hw] || ''}${p && (p.words || []).includes(hw) ? ` — from “${p.title}”, in ${w?.title || 'your book'}.` : ''} Tap for its origin and how to say it.`, icon: 'key', href: `#/word/${encodeURIComponent(hw || '')}` },
     next, second,
@@ -106,7 +107,9 @@ export function homeView() {
     quote: line && { kicker: 'Line of the hour', text: line.text, who: `${/ in /.test(line.who) || !lw || line.who.includes(lw.title) ? line.who : `${line.who}, ${lw.title}`}${lw ? (line.who.includes(lw.author) ? `, ${lw.year}` : ` · ${lw.author}, ${lw.year}`) : ''}${lineStory ? ' — hear the story' : ' — about the book'}`, href: lineStory ? `#/story/${lineStory.id}` : `#/book/${line.work}` },
     foot: `<a href="#/privacy">Privacy</a> · Nothing leaves this device · Bizzing™ is a trademark of its owner`,
   });
-  return page.replace('<div class="bz-foot">', `<div class="fd">${feed(k)}</div><div class="bz-foot">`);
+  const av = avatarOf(k);
+  return page.replace('<div class="bz-foot">', `<div class="fd">${feed(k)}</div><div class="bz-foot">`)
+    .replace(`<section class="bz-card bz-greet" data-bz="greet"><img src="${esc(av)}" alt="">`, `<section class="bz-card bz-greet" data-bz="greet"><button class="greet-av" data-act="av-deck" aria-label="Your avatar cards"><img src="${esc(av)}" alt=""></button>`);
 }
 
 /* ---------- the feed under the journey cards (the family's: Maths' and Geography's Today's three, India's
