@@ -1,8 +1,10 @@
 /* welcome.js — the landing page, then one question a screen with Quill the fox as guide (the family's
-   onboarding, §16): first name, age band, a face — and the first stop within five taps. "Try it
+   onboarding, §16): first name, age band, a face — and the first stop within five taps. After the face, the
+   child chooses "Find my starting place" (the placement check, #/place/first) or skips to the band's start. "Try it
    first" opens the labelled sample (?demo) before any profile exists. */
 
 import { S, save, go, render } from '../app.js';
+import '../../styles/placement.css';
 import { esc, icon, btn, mascot } from '../ui.js';
 import { BANDS } from '../curriculum.js';
 import { STARTERS, byId } from '../data/avatars.js';
@@ -25,7 +27,8 @@ export function onboardView() {
     <input id="obn" class="field" name="name" maxlength="20" autocomplete="off" value="${esc(o.name)}" placeholder="First name" required>${btn('Next', 'ob-name', { ic: 'next' })}<p class="note">Just a first name. No surname, no birthday, no email — ever.</p></form></div>`;
   if (o.step === 'band') return `<div class="ob">${guide(`Lovely to meet you, ${o.name}. How old are you?`, 'think')}<div class="bandpick">${BANDS.map((b) => btn(b.age, 'ob-band', { arg: b.id, cls: 'out wide' })).join('')}</div></div>`;
   return `<div class="ob">${guide('Pick a face. You can collect more as you go.', 'point')}<div class="facepick">${STARTERS.map((id) => `<button data-act="ob-face" data-arg="${id}" aria-pressed="${o.face === id}" aria-label="${esc(byId(id).name)}"><img src="${byId(id).art}" alt=""></button>`).join('')}</div>
-    ${btn('Start my journey', 'ob-go', { ic: 'next', dis: !o.face })}</div>`;
+    <div class="ob-choose">${btn('Find my starting place (3 minutes)', 'ob-place', { ic: 'compass', dis: !o.face })}${btn('Skip — start at my age', 'ob-go', { ic: 'next', cls: 'out', dis: !o.face })}</div>
+    <p class="note">Eight quick questions and one short story, so your road starts in the right place. Nothing is marked, and no coins are won or lost.</p></div>`;
 }
 
 export const OB_ACTIONS = {
@@ -34,4 +37,6 @@ export const OB_ACTIONS = {
   'ob-band': (a) => { S.ob.band = +a; S.ob.step = 'face'; render(); },
   'ob-face': (a) => { S.ob.face = a; render(); },
   'ob-go': () => { const o = S.ob; if (!o.face) return; addKid(S.h, newKid(o.name, o.band || 2, o.face)); save(); S.ob = null; go('#/continue'); },
+  /* the placement check (views/placement.js): the child is made first, so the result has somewhere to live */
+  'ob-place': () => { const o = S.ob; if (!o.face) return; addKid(S.h, newKid(o.name, o.band || 2, o.face)); save(); S.ob = null; go('#/place/first'); },
 };

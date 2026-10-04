@@ -20,6 +20,7 @@ const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js')
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
   settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
+import { openPlace, placeView, PLACE_ACTIONS, placeKey } from './views/placement.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
 import { loadBook, chapterKey } from './book.js';
 import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './views/desk.js';
@@ -95,6 +96,7 @@ async function route() {
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
   else if (r.name === 'play') { await loadPlay(); if (r.parts[1]) PLAY.openGame(r.parts[1]); else S.run = null; }
   else if (r.name === 'feed') { S.run = null; await openFeed(); }
+  else if (r.name === 'place') { S.run = null; await openPlace(r.parts[1] === 'first'); }   // Find my starting place (views/placement.js)
   else if (r.name === 'tools') { S.run = null; await loadTools(); await TOOLS.openTool(r.parts); }
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
@@ -122,6 +124,7 @@ function screen() {
     case 'recordings': return recordingsView();
     case 'play': return !PLAY ? '' : p[1] ? PLAY.gameView() : PLAY.playView();
     case 'feed': return feedView();
+    case 'place': return placeView();
     case 'tools': return TOOLS ? TOOLS.toolsView() : '';
     case 'me': return meView();
     case 'medals': return medalsView();
@@ -155,7 +158,7 @@ function doRender() {
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';
   if (!k) { app.innerHTML = demoBand + `<main class="bz-content" id="main" tabindex="-1">${screen()}</main>${sheetHTML}`; return; }
   const hive = S.fromHive ? `<a class="bz-chip fromhive" href="https://aayuvis.github.io/Bizzing_Schedule/">${icon('back')}<span>back to my day</span></a>` : '';
-  const inRun = (S.run?.mode === 'game' && S.run.phase === 'play') || (S.run?.mode === 'stop' && ['turn', 'check'].includes(S.run.phase));
+  const inRun = (S.run?.mode === 'game' && S.run.phase === 'play') || (S.run?.mode === 'stop' && ['turn', 'check'].includes(S.run.phase)) || (S.route.name === 'place' && S.place && S.place.phase !== 'done');
   app.innerHTML = demoBand + shell({
     app: 'english', name: 'English', mascot: 'mascot/head.webp', tabs: TABS, active: TAB_OF[S.route.name] || '', coins: balance(k.name), dark: isDark(),
     kid: { name: k.name, avatar: avatarOf(k) }, search: 'Search any word, book or stop…', query: S.route.name === 'search' ? S.route.parts.slice(1).join('/') : '', inRun,
@@ -174,7 +177,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, 
+const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...PLACE_ACTIONS, 
   'sheet-close': () => { S.sheet = S.certNext ? { kind: 'cert', id: S.certNext } : null; S.certNext = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -212,7 +215,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (TOOLS?.toolsKey(e) || runKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
+  if (TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 
