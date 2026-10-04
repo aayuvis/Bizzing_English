@@ -623,7 +623,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await go(page, '#/atlas');
   ok('the demo opens the strands she has passed stops in (Writing, Speaking)', await page.evaluate(() => ['writing', 'speaking'].every((s) => { const a = document.querySelector(`.apin[href="#/atlas/${s}"]`); return a && !a.classList.contains('locked'); })));
   /* the level-up ceremony: a level just finished opens its certificate, in the app's own faces */
-  await page.evaluate(() => { const k = window.__bz.S.h.kids[0]; k.certsSeen = (k.certsSeen || []).filter((id) => id !== 'sentence-1'); window.__bz.checkMedals(); window.__bz.render(); }); await page.waitForTimeout(300);
+  await page.evaluate(() => { const S = window.__bz.S; window.__bz.checkMedals(); S.sheet = null; S.certNext = null; window.__bz.render(); });   // settle: medals deserved and certificates earned are recorded first
+  await page.evaluate(() => { const k = window.__bz.S.h.kids[0]; k.certsSeen = k.certsSeen.filter((id) => id !== 'sentence-1'); window.__bz.checkMedals(); window.__bz.render(); }); await page.waitForTimeout(300);
   ok('a finished level opens its certificate as a ceremony', !!(await page.$('.sheet .cert-ceremony svg')) && /Save as a picture/.test(await page.textContent('.sheet')));
   ok('the certificate is set in the app’s faces, not a system serif', await page.evaluate(() => /Fraunces/.test(document.querySelector('.sheet .cert-ceremony svg text[font-size="76"]')?.getAttribute('font-family') || '')));
   await page.keyboard.press('Escape'); await page.waitForTimeout(200);

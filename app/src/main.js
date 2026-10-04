@@ -4,7 +4,7 @@
 
 import '../styles/app.css';
 import { shell, bindShell } from './integration/bizzing-shell.js';
-import { S, kid, render, onRender, save, go, applyDevice, isDark, setDevice } from './app.js';
+import { S, kid, render, onRender, save, go, applyDevice, isDark, setDevice, checkMedals } from './app.js';
 import { esc, icon, empty, link, mascot } from './ui.js';
 import { homeView, HOME_ACTIONS } from './views/home.js';
 import { atlasView, strandView } from './views/atlas.js';
