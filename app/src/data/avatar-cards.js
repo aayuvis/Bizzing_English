@@ -2,6 +2,7 @@
    fact is a real fact, from names the classic only where the creature is really in it. Written 4 Oct 2026;
    test/avatars.mjs holds every id to a card. */
 export const CARD_TEXT = {
+  quill: { lore: 'The fox with a quill behind one ear, who reads every story first and tells it best.', fact: 'Before metal pens, people wrote with quills: feathers from geese or swans, their tips cut to a point and dipped in ink.', from: '' },
   // ---- Fable Friends ----
   tortoise: { lore: 'The tortoise who reads every word before it moves on — and still gets to the end first.', fact: 'A tortoise cannot leave its shell: the shell is part of its skeleton, joined to its backbone and ribs.', from: 'Aesop, The Tortoise and the Hare' },
   fieldmouse: { lore: 'Small, quiet and always listening — the field mouse hears the story behind every rustle.', fact: 'Field mice store seeds and nuts in hidden larders, so they have food to eat through the winter.', from: 'Aesop, The Town Mouse and the Country Mouse' },

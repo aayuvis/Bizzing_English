@@ -3,7 +3,7 @@
 import { tally } from './_mem.mjs';
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { validate, sacredSafe } from '../src/integration/bizzing-avatars.js';
-import { AVATARS, PACK_NAMES, STARTERS } from '../src/data/avatars.js';
+import { AVATARS, ALL_AVATARS, PACK_NAMES, STARTERS } from '../src/data/avatars.js';
 const { ok, done } = tally('avatars');
 const v = validate(AVATARS);
 ok(`validate(avatars) returns [] ${v.slice(0, 3).join('; ')}`, v.length === 0);
@@ -13,7 +13,8 @@ for (const a of AVATARS) ok(`${a.id}: painting exists`, existsSync(new URL('../p
 const py = readFileSync(new URL('../../tools/art/avatars_prompts.py', import.meta.url), 'utf8');
 const pids = [...py.matchAll(/^\s+'([a-z]+)':/gm)].map((m) => m[1]);
 ok('the prompts and the catalogue name the same 96 ids', pids.length === 96 && pids.slice().sort().join() === AVATARS.map((a) => a.id).sort().join());
-ok('the welcome offers five free Commons', STARTERS.length === 5 && STARTERS.every((id) => AVATARS.find((a) => a.id === id)?.tier === 'common'));
+ok('the welcome offers five free Commons', STARTERS.length === 5 && STARTERS.every((id) => ALL_AVATARS.find((a) => a.id === id)?.tier === 'common') && STARTERS[0] === 'quill');
+ok('Quill, the app icon, is a free avatar outside the 96 (the packs keep their shape)', ALL_AVATARS.length === 97 && AVATARS.length === 96 && ALL_AVATARS[0].id === 'quill' && ALL_AVATARS[0].tier === 'common' && existsSync(new URL('../public/' + ALL_AVATARS[0].art, import.meta.url)));
 const DENY = /\b(god|goddess|deity|krishna|shiva|ganesh|zeus|thor|odin|buddha|jesus|allah|prophet|king|queen|prince|princess|man|woman|boy|girl|person|human|child)\b/i;
 ok('creatures only: no person or deity named in a prompt', !DENY.test(py.replace(/no people|No people|human figures|NOT an owl|nothing like an owl/g, '')));
 /* no face in two apps' 96 (FAMILY-STANDARD §8) — compared by id against the siblings in this workspace */
@@ -23,7 +24,7 @@ const dup = AVATARS.filter((a) => sib.includes(a.id)).map((a) => a.id);
 ok(`no id is a sibling's face (${dup.join(', ') || 'none'})`, dup.length === 0);
 /* the cards (avcards.js + data/avatar-cards.js): every face has its words, stats in range, the same every time */
 { const { card, RANKS, STATS } = await import('../src/avcards.js'); const { CARD_TEXT } = await import('../src/data/avatar-cards.js');
-  ok('every avatar has a card text, and no card text is for a face that does not exist', AVATARS.every((a) => CARD_TEXT[a.id]?.lore && CARD_TEXT[a.id]?.fact) && Object.keys(CARD_TEXT).every((id) => AVATARS.some((a) => a.id === id)));
+  ok('every avatar (Quill too) has a card text, and no card text is for a face that does not exist', ALL_AVATARS.every((a) => CARD_TEXT[a.id]?.lore && CARD_TEXT[a.id]?.fact) && Object.keys(CARD_TEXT).every((id) => ALL_AVATARS.some((a) => a.id === id)));
   ok('card texts are short enough for a card (lore ≤ 120, fact ≤ 170)', Object.values(CARD_TEXT).every((t) => t.lore.length <= 120 && t.fact.length <= 170));
   ok('no emoji on a card', Object.values(CARD_TEXT).every((t) => !/\p{Extended_Pictographic}/u.test(t.lore + t.fact + (t.from || ''))));
   const cs = AVATARS.map((a) => card(a.id));

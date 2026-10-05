@@ -49,6 +49,11 @@ export const AVATARS = [
     ['osprey', 'Osprey', 'rare'], ['dragonfly', 'Lace Dragonfly', 'epic'], ['mountainhare', 'Mountain Hare', 'epic'],
     ['miststag', 'Mist Stag', 'legendary', M('sentence-5', 'Finish Sentence level 5')]]),
 ];
-export const byId = (id) => AVATARS.find((a) => a.id === id);
+/* Quill, the app's own fox and its icon, is a free avatar for every child (owner, 5 Oct) — outside the family's
+   96 (the twelve packs of eight keep their shape and validate() its rules), drawn first in the picker and the
+   Collection. Its art is the mascot's waving sticker. */
+export const QUILL = { id: 'quill', name: 'Quill', pack: 0, tier: 'common', art: 'avatars/quill.webp', own: true };
+export const ALL_AVATARS = [QUILL, ...AVATARS];
+export const byId = (id) => ALL_AVATARS.find((a) => a.id === id);
 /* the five a new child is offered in the welcome: Commons from the two free worlds */
-export const STARTERS = ['tortoise', 'crownfrog', 'bookworm', 'terrier', 'fieldmouse'];
+export const STARTERS = ['quill', 'tortoise', 'crownfrog', 'bookworm', 'terrier'];   // Quill first; Field Mouse waits in the Collection, free

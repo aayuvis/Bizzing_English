@@ -639,6 +639,20 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('Wear this avatar puts it on', await page.evaluate((id) => window.__bz.S.h.kids[0].avatar === id && /Wearing/.test(document.querySelector('.avd-bar').textContent), card2));
   await page.keyboard.press('Escape'); await page.waitForTimeout(200);
   ok('Escape closes the deck', !(await page.$('.avdeck')));
+  /* the Collection, Bizzing Bee's shape: tabs with counts, packs with theirs, a tile that opens its card, the action under it */
+  await go(page, '#/collection');
+  const coll = await page.evaluate(() => ({ tabs: [...document.querySelectorAll('[data-bz=subnav] a')].map((a) => a.textContent.trim()), packs: [...document.querySelectorAll('.coll-pack .coll-count')].length,
+    wear: document.querySelectorAll('.bz-av .av-act [data-act=wear]').length, worn: document.querySelectorAll('.bz-av .av-worn').length, prices: [...document.querySelectorAll('.bz-av [data-act=buy-av]')].map((b) => b.textContent.trim()), neg: /-\d+ more to go/.test(document.querySelector('main').textContent) }));
+  ok(`the Collection has Medals · Avatars · Worlds with counts, twelve packs and Quill’s with theirs, Wear buttons, one Wearing, price buttons (${JSON.stringify({ ...coll, prices: coll.prices.slice(0, 3) })})`,
+    coll.tabs.length === 3 && /^Medals · \d+\/\d+$/.test(coll.tabs[0]) && /^Avatars · \d+\/97$/.test(coll.tabs[1]) && /^Worlds · \d+\/\d+$/.test(coll.tabs[2]) && coll.packs === 13 && coll.wear > 0 && coll.worn === 1 && coll.prices.every((p) => /^(120|250|500)$/.test(p)) && !coll.neg);
+  await page.click('.bz-av[data-state=buy] .av-open'); await page.waitForTimeout(250);
+  ok('a tile not yet owned opens its card, saying so', !!(await page.$('.sheet .avcard')) && /Not on your shelf yet/.test(await page.textContent('.sheet .avc-hist')));
+  await page.keyboard.press('Escape'); await page.waitForTimeout(150);
+  await go(page, '#/collection/medals');
+  ok('the Medals tab shows the medals inside the Collection', (await page.$$('.medals .medal')).length > 0 && /Medals/.test(await page.textContent('[data-bz=subnav] [aria-current=page]')));
+  await go(page, '#/collection/print');
+  ok('Print my cards lays out every owned card', (await page.$$('.print-cards .avcard')).length > 20);
+  await go(page, '#/home');
   ok('the greeting never says “your next stop is next”', !/next stop is next/i.test(await page.textContent('.bz-greet')));
   await go(page, '#/atlas');
   ok('the demo opens the strands she has passed stops in (Writing, Speaking)', await page.evaluate(() => ['writing', 'speaking'].every((s) => { const a = document.querySelector(`.apin[href="#/atlas/${s}"]`); return a && !a.classList.contains('locked'); })));

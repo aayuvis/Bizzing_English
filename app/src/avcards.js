@@ -3,7 +3,7 @@
    (data/avatar-cards.js), and the child's own history with it — when it joined the shelf (from the
    wallet's ledger), and whether it is worn. Stats are drawn from the id, so a card is the same on every
    device and every day; they are for fun and never touch learning, rank or coins. */
-import { AVATARS, PACK_NAMES } from './data/avatars.js';
+import { ALL_AVATARS as AVATARS, PACK_NAMES } from './data/avatars.js';
 import { CARD_TEXT } from './data/avatar-cards.js';
 
 const hash = (s) => { let h = 2166136261; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
@@ -21,12 +21,13 @@ export function card(id) {
   const stats = Object.fromEntries(STATS.map(([k]) => { const r = (hash(`${id}:${k}`) % 1000) / 1000; return [k, Math.max(28, Math.min(99, Math.round(b + (r * 2 - 1) * sp)))]; }));
   const overall = Math.round(STATS.reduce((s, [k]) => s + stats[k], 0) / STATS.length);
   const top = STATS.reduce((m, [k]) => (stats[k] > stats[m] ? k : m), 'wit'), pool = POWERS[top];
-  return { id, name: a.name, art: a.art, tier: a.tier, rank: RANKS[a.tier], pack: PACK_NAMES[a.pack - 1], title: `${RANKS[a.tier]} of ${PACK_NAMES[a.pack - 1]}`,
+  return { id, name: a.name, art: a.art, tier: a.tier, rank: RANKS[a.tier], pack: PACK_NAMES[a.pack - 1] || 'Bizzing English', title: a.own ? 'The fox of Bizzing English' : `${RANKS[a.tier]} of ${PACK_NAMES[a.pack - 1]}`,
     stats, overall, power: pool[hash(id + ':power') % pool.length], lore: t.lore || '', fact: t.fact || '', from: t.from || '' };
 }
 /* the child's history with a card: when it joined (the wallet's spend for it), or free from the start */
-export function history(id, k, ledger = []) {
+export function history(id, k, ledger = [], owned = true) {
   const a = AVATARS.find((x) => x.id === id); if (!a) return '';
+  if (!owned) return 'Not on your shelf yet.';
   const buy = ledger.find((x) => x.why === `avatar:${id}`);
   const when = buy ? `Joined your shelf on ${new Date(buy.t).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })} for ${Math.abs(buy.n)} coins` : a.tier === 'common' ? 'Free for every reader from the first day' : 'On your shelf';
   return `${when}${k.avatar === id ? ' · wearing it now' : ''}.`;

@@ -18,7 +18,7 @@ let PLAY = null, TOOLS = null;
 const loadPlay = async () => PLAY || (PLAY = await import('./views/play.js').then((m) => (Object.assign(ACTIONS, m.PLAY_ACTIONS), m)));
 const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js').then((m) => (Object.assign(ACTIONS, m.TOOL_ACTIONS), m)));
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
-  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet, avDeckSheet } from './views/pages.js';
+  settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet, avDeckSheet, avOneSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
 import { openPlace, placeView, PLACE_ACTIONS, placeKey } from './views/placement.js';
 import { openStory, storyView, openExercises, exercisesView, openExercise, talkView, wholeView, openChapter, openChapterExercises, chapterExercisesView, openChapterExercise, STORY_ACTIONS, storyKey, stopNarration } from './views/stories.js';
@@ -129,7 +129,7 @@ function screen() {
     case 'me': return meView();
     case 'medals': return medalsView();
     case 'certificate': return certificateView(p.slice(1).join('/'));
-    case 'collection': return collectionView();
+    case 'collection': return collectionView(p[1] || 'avatars');
     case 'shop': return shopView(p[1] || 'avatars');
     case 'log': return logView();
     case 'help': return helpView();
@@ -154,7 +154,7 @@ function doRender() {
   applyDevice(); paintScene(); applyExtras(kid());
   syncMusic(musicFor(S.route, kid() ? world(kid().world || 1).id : null, S.run), S.route.parts.join('/'));   // music: the screen's loop (sound.js decides; silent on the Stage)
   const k = kid(), app = document.getElementById('app');
-  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : S.sheet?.kind === 'cert' ? certSheet(S.sheet.id) : S.sheet?.kind === 'avdeck' ? avDeckSheet() : '';
+  const sheetHTML = S.sheet?.kind === 'settings' ? settingsSheet() : S.sheet?.kind === 'kids' ? kidSheet() : S.sheet?.kind === 'coins' ? coinSheet() : S.sheet?.kind === 'medal' ? medalSheet(S.sheet.medals) : S.sheet?.kind === 'addkid' ? addKidSheet() : S.sheet?.kind === 'cert' ? certSheet(S.sheet.id) : S.sheet?.kind === 'avdeck' ? avDeckSheet() : S.sheet?.kind === 'avone' ? avOneSheet(S.sheet.id) : '';
   const demoBand = isDemo() ? `<div class="demo-band">A sample: Kavya, three weeks in. Nothing here is saved. <a href="./">Leave the sample</a></div>` : '';
   if (!k) { app.innerHTML = demoBand + `<main class="bz-content" id="main" tabindex="-1">${screen()}</main>${sheetHTML}`; return; }
   const hive = S.fromHive ? `<a class="bz-chip fromhive" href="https://aayuvis.github.io/Bizzing_Schedule/">${icon('back')}<span>back to my day</span></a>` : '';

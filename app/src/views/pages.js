@@ -5,7 +5,7 @@
 import '../../styles/avdeck.css';
 import { S, kid, save, render, go, toast, pay, isDark, setDevice, applyDevice, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '../ui.js';
-import { AVATARS, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
+import { AVATARS, ALL_AVATARS, QUILL, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
 import { card, history, deckIds, STATS } from '../avcards.js';
 import { balance, ledger, spend, activityLog } from '../family.js';
@@ -49,9 +49,10 @@ export function meView() {
 /* each medal opens the place that earns it */
 const MEDAL_GO = { 'first-stop': '#/continue', wordsmith: '#/atlas/word', roots: '#/stop/w5-root', sentence: '#/atlas/sentence', comma: '#/stop/s5-comma', reader: '#/library',
   bookworm: '#/library/words', week: '#/continue', mastery: '#/practice', game: '#/play/builder', stage: '#/stage/aloud', world: '#/atlas' };
+const medalsBody = (k) => `<div class="medals">${MEDALS.map((m) => `<a class="card medal${k.medals[m.id] ? '' : ' no'}" href="${MEDAL_GO[m.id] || '#/continue'}" style="text-decoration:none;color:inherit"><img src="art/${m.art}.webp" alt=""><h3 style="font-size:15.5px">${esc(m.name)}</h3><p class="note" style="margin:0">${esc(m.how)}</p>${k.medals[m.id] ? `<span class="tag ok" style="margin-top:6px">${icon('check')}Earned ${new Date(k.medals[m.id]).toLocaleDateString()}</span>` : `<span class="tag" style="margin-top:6px">${icon('next')}Go there</span>`}</a>`).join('')}</div>`;
 export function medalsView() {
   const k = kid();
-  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My page', href: '#/me' } }) + `<div class="medals">${MEDALS.map((m) => `<a class="card medal${k.medals[m.id] ? '' : ' no'}" href="${MEDAL_GO[m.id] || '#/continue'}" style="text-decoration:none;color:inherit"><img src="art/${m.art}.webp" alt=""><h3 style="font-size:15.5px">${esc(m.name)}</h3><p class="note" style="margin:0">${esc(m.how)}</p>${k.medals[m.id] ? `<span class="tag ok" style="margin-top:6px">${icon('check')}Earned ${new Date(k.medals[m.id]).toLocaleDateString()}</span>` : `<span class="tag" style="margin-top:6px">${icon('next')}Go there</span>`}</a>`).join('')}</div>`;
+  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My page', href: '#/me' } }) + medalsBody(k);
 }
 
 /* ---------- Collection and Shop ---------- */
@@ -68,25 +69,44 @@ function modesSection(k, bal) {
     const own = ownsMode(k, g);
     return `<div class="card"><b>${esc(name)}: Challenge</b>${own ? `<a class="btn out small" href="#/play/${g}">${icon('play')}<span>Play it</span></a>` : btn(`${MODE_PRICE} coins`, 'buy-mode', { arg: g, cls: 'small', ic: 'coin', dis: bal < MODE_PRICE })}${!own && bal < MODE_PRICE ? `<p class="note" style="margin:0">${MODE_PRICE - bal} more to go.</p>` : ''}</div>`; }).join('')}</div></section>`;
 }
+const worldsBody = (k, bal) => `<div class="grid3">${WORLDS.map((w) => { const open = worldOpen(w.n, ctx(k));
+    return `<div class="card" style="padding:0;overflow:hidden"><img src="${plate(w, isDark(), true)}" alt="" style="width:100%;height:120px;object-fit:cover;display:block${open ? '' : ';filter:grayscale(.6)'}"><div style="padding:12px 14px"><h3>${esc(w.name)}</h3><p class="muted" style="margin:0 0 8px">${esc(w.what)}</p>
+      ${open ? (k.world === w.n ? `<span class="tag ok">${icon('check')}You are here</span>` : btn('Go there', 'wear-world', { arg: w.n, cls: 'out small', ic: 'map' })) : `${btn(`${WORLD_PRICE} coins`, 'buy-world', { arg: w.n, cls: 'small', ic: 'coin', dis: bal < WORLD_PRICE })}<p class="note">${bal < WORLD_PRICE ? `${WORLD_PRICE - bal} more to go — or it opens with the family plan.` : 'Or it opens with the family plan.'}</p>`}</div></div>`; }).join('')}</div>`;
 function avCard(a, k, buyable) {
-  const st = stateOf(a, ctx(k)), cur = k.avatar === a.id;
-  return `<figure class="bz-av${cur ? ' cur' : ''}" data-tier="${a.tier}" data-state="${st.state}"><button data-act="${st.state === 'owned' ? 'wear' : buyable && st.state === 'buy' && !st.short ? 'buy-av' : 'noop'}" data-arg="${a.id}" aria-label="${esc(a.name)}, ${esc(st.label)}: ${esc(st.say)}">
-    <img src="${a.art}" alt="" loading="lazy"><figcaption>${esc(a.name)} <b>${st.label}</b><small>${esc(cur ? 'Wearing' : st.say)}</small></figcaption></button></figure>`;
+  const st = stateOf(a, ctx(k)), cur = k.avatar === a.id, bal = balance(k.name), short = Math.max(0, st.price - bal);   // the app's balance (the demo has its own)
+  const say = cur ? 'Wearing' : st.state === 'buy' ? `${st.price} coins${short ? ` · ${short} more to go` : ''}` : st.say;
+  const act = cur ? `<span class="av-worn">${icon('check')}Wearing</span>` : st.state === 'owned' ? btn('Wear', 'wear', { arg: a.id, cls: 'out small' })
+    : buyable && st.state === 'buy' ? btn(String(st.price), 'buy-av', { arg: a.id, cls: 'small av-price', ic: 'coin', dis: short > 0 }) : '';
+  return `<figure class="bz-av${cur ? ' cur' : ''}" data-tier="${a.tier}" data-state="${st.state}"><button class="av-open" data-act="av-card" data-arg="${a.id}" aria-label="${esc(a.name)}, ${esc(st.label)}: ${esc(cur ? 'wearing' : say)} — open its card">
+    <img src="${a.art}" alt="" loading="lazy"><figcaption>${esc(a.name)} <b>${st.label}</b><small>${esc(say)}</small></figcaption></button>${act ? `<div class="av-act">${act}</div>` : ''}</figure>`;
 }
-export function collectionView() {
-  const k = kid();
-  return pageHead({ title: 'Collection', sub: '96 avatars, 12 packs', back: { label: 'My page', href: '#/me' }, actions: [{ icon: 'bag', label: 'Shop', href: '#/shop' }] })
-    + PACK_NAMES.map((n, i) => `<section class="card" style="margin-bottom:13px"><h3>${esc(n)} <small class="muted" style="font:600 13px var(--bz-body)">${esc(WORLDS[Math.ceil((i + 1) / 2) - 1].name)}</small></h3>
-      <div class="avgrid">${AVATARS.filter((a) => a.pack === i + 1).map((a) => avCard(a, k, true)).join('')}</div></section>`).join('');
+export function collectionView(tab = 'avatars') {
+  const k = kid(), bal = balance(k.name), mine = ALL_AVATARS.filter((a) => stateOf(a, ctx(k)).state === 'owned').length;
+  const medals = MEDALS.filter((m) => k.medals[m.id]).length, worlds = WORLDS.filter((w) => worldOpen(w.n, ctx(k))).length;
+  const nav = [['medals', `Medals · ${medals}/${MEDALS.length}`, 'medal'], ['avatars', `Avatars · ${mine}/${ALL_AVATARS.length}`, 'star'], ['worlds', `Worlds · ${worlds}/${WORLDS.length}`, 'globe']]
+    .map(([id, label, ic]) => ({ label, icon: ic, href: id === 'avatars' ? '#/collection' : `#/collection/${id}`, active: id === tab }));
+  const head = pageHead({ title: 'Collection', back: { label: 'Home', href: '#/home' }, nav, actions: [{ icon: 'pen', label: 'Print my cards', href: '#/collection/print' }, { icon: 'coin', label: `${bal}`, href: '#/shop' }] });
+  if (tab === 'medals') return head + medalsBody(k);
+  if (tab === 'worlds') return head + worldsBody(k, bal);
+  if (tab === 'print') return printCards(k);
+  return head + `<p class="note coll-rules">Commons are free for everyone. Rares are 120 Bizzing coins and Epics 250 once their world is open; a Legendary is 500 after its learning milestone. Every price is fixed, and nothing here is left to chance. <a href="#/shop">Open the Shop</a></p>`
+    + `<section class="card coll-pack"><header><h3>Bizzing English <small class="coll-count">1/1</small></h3><span class="coll-world">${icon('star')}The app’s own — free for everyone</span></header><div class="avgrid">${avCard(QUILL, k, true)}</div></section>`
+    + PACK_NAMES.map((n, i) => { const inPack = AVATARS.filter((a) => a.pack === i + 1), have = inPack.filter((a) => stateOf(a, ctx(k)).state === 'owned').length;
+      return `<section class="card coll-pack"><header><h3>${esc(n)} <small class="coll-count">${have}/${inPack.length}</small></h3><span class="coll-world">${icon('globe')}${esc(WORLDS[Math.ceil((i + 1) / 2) - 1].name)}</span></header>
+      <div class="avgrid">${inPack.map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
+}
+/* Print my cards: every card the child owns, as trading cards, on paper */
+function printCards(k) {
+  const ids = deckOf(k);
+  return pageHead({ title: 'My avatar cards', sub: `${ids.length} cards`, back: { label: 'Collection', href: '#/collection' } })
+    + `<div class="row" style="justify-content:center;margin-bottom:12px">${btn('Print', 'cert-print', { ic: 'pen' })}</div><div class="print-cards">${ids.map((id) => avCardHTML(card(id), k)).join('')}</div>`;
 }
 export function shopView(tab = 'avatars') {
   const k = kid(), bal = balance(k.name);
   const nav = [['avatars', 'Avatars', 'star'], ['worlds', 'Worlds', 'globe'], ['extras', 'Extras', 'bag']].map(([id, label, ic]) => ({ label, icon: ic, href: `#/shop/${id}`, active: id === tab }));
   const head = pageHead({ title: 'Shop', sub: 'fixed prices, nothing random', back: { label: 'Home', href: '#/home' }, nav, strip: { chip: `${bal} coins`, pct: Math.min(100, (bal / 500) * 100), label: 'coins come from learning, in every Bizzing app' } });
   let body = '';
-  if (tab === 'worlds') body = `<div class="grid3">${WORLDS.map((w) => { const open = worldOpen(w.n, ctx(k));
-    return `<div class="card" style="padding:0;overflow:hidden"><img src="${plate(w, isDark(), true)}" alt="" style="width:100%;height:120px;object-fit:cover;display:block${open ? '' : ';filter:grayscale(.6)'}"><div style="padding:12px 14px"><h3>${esc(w.name)}</h3><p class="muted" style="margin:0 0 8px">${esc(w.what)}</p>
-      ${open ? (k.world === w.n ? `<span class="tag ok">${icon('check')}You are here</span>` : btn('Go there', 'wear-world', { arg: w.n, cls: 'out small', ic: 'map' })) : `${btn(`${WORLD_PRICE} coins`, 'buy-world', { arg: w.n, cls: 'small', ic: 'coin', dis: bal < WORLD_PRICE })}<p class="note">${bal < WORLD_PRICE ? `${WORLD_PRICE - bal} more to go — or it opens with the family plan.` : 'Or it opens with the family plan.'}</p>`}</div></div>`; }).join('')}</div>`;
+  if (tab === 'worlds') body = worldsBody(k, bal);
   else if (tab === 'extras') body = `<p class="note" style="margin:0 20px 10px">A look for your reading and your Stage, and a challenge for each game — never content, never chance. The first look of each kind is free.</p>` + KINDS.map(([kind, title]) => `<section class="card" style="margin-bottom:13px"><h3>${esc(title)}</h3><div class="extragrid">${EXTRAS.filter((e) => e.kind === kind).map((e) => extraCard(e, k, bal)).join('')}</div></section>`).join('') + modesSection(k, bal);
   else body = `<p class="note" style="margin:0 20px 10px">Commons are free for everyone. Rares cost 120, Epics 250, Legendaries 500 — and a Legendary first needs its learning milestone.</p>`
     + PACK_NAMES.map((n, i) => { const w = Math.ceil((i + 1) / 2); return `<section class="card" style="margin-bottom:13px"><h3>${esc(n)}</h3><div class="avgrid">${AVATARS.filter((a) => a.pack === i + 1).map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
@@ -269,7 +289,7 @@ export const PAGE_ACTIONS = {
   'pin-lock': () => { lock(); render(); },
   'pin-change': () => { S.pinChange = true; lock(); render(); },
   wear: (a) => { const k = kid(); k.avatar = a; save(); sfx('tap'); render(); },
-  'buy-av': (a) => { const k = kid(), av = byId(a); if (buy('english', k.name, av, ctx(k))) { k.owned.push(a); k.avatar = a; save(); sfx('unlock'); confetti(); toast(`${av.name} is yours`); } render(); },
+  'buy-av': (a) => { const k = kid(), av = byId(a); if (buy('english', k.name, av, ctx(k))) { k.owned.push(a); k.avatar = a; save(); sfx('unlock'); confetti(); toast(`${av.name} is yours`); if (S.sheet?.kind === 'avone') S.sheet = { kind: 'avdeck', i: deckOf(k).indexOf(a) }; } render(); },
   'buy-world': (a) => { const k = kid(); if (buyWorld('english', k.name, +a, ctx(k))) { k.worlds.push(+a); k.world = +a; save(); sfx('unlock'); confetti(); } render(); },
   'wear-world': (a) => { const k = kid(); k.world = +a; save(); render(); },
   'buy-extra': (a) => { const k = kid(); if (buyExtra(k, a, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); toast(`${extra(a).name} is yours`); } render(); },
@@ -327,7 +347,7 @@ export function avCardHTML(c, k) {
     <div class="avc-stats">${STATS.map(([key, label]) => `<div><span>${esc(label)}</span><i><b style="width:${c.stats[key]}%"></b></i><em>${c.stats[key]}</em></div>`).join('')}</div>
     <p class="avc-power"><b>Power</b> ${esc(c.power)}</p>
     ${c.fact ? `<p class="avc-fact"><b>Real fact</b> ${esc(c.fact)}${c.from ? ` <small>— ${esc(c.from)}</small>` : ''}</p>` : ''}
-    <p class="avc-hist">${icon('clock')}<span>${esc(history(c.id, k, ledger(k.name)))}</span></p></article>`;
+    <p class="avc-hist">${icon('clock')}<span>${esc(history(c.id, k, ledger(k.name), deckOf(k).includes(c.id)))}</span></p></article>`;
 }
 export function avDeckSheet() {
   const k = kid(), ids = deckOf(k); if (!ids.length) return '';
@@ -339,9 +359,18 @@ export function avDeckSheet() {
       ${multi ? `<button class="avd-nav" data-act="deck-go" data-arg="1" aria-label="Next card">${icon('next')}</button>` : ''}</div>
     <div class="avd-bar"><span class="note">${i + 1} of ${ids.length} yours · ← → or swipe</span>
       ${wearing ? `<span class="tag ok">${icon('check')}Wearing</span>` : btn('Wear this avatar', 'deck-wear', { arg: c.id, ic: 'check' })}
-      ${link('All 96 in the Collection', '#/collection', { cls: 'out', ic: 'star' })}</div></div>`);
+      ${link('Every avatar in the Collection', '#/collection', { cls: 'out', ic: 'star' })}</div></div>`);
 }
 PAGE_ACTIONS['av-deck'] = () => { S.sheet = { kind: 'avdeck' }; render(); };
+PAGE_ACTIONS['av-card'] = (id) => { const k = kid(), ids = deckOf(k), i = ids.indexOf(id); S.sheet = i >= 0 ? { kind: 'avdeck', i } : { kind: 'avone', id }; render(); };
+/* a card not yet on the shelf: the same card, with how it can be had */
+export function avOneSheet(id) {
+  const k = kid(), a = byId(id); if (!a) return '';
+  const st = stateOf(a, ctx(k)), bal = balance(k.name), short = Math.max(0, st.price - bal);
+  const how = st.state === 'buy' ? (short ? `${st.price} coins — ${short} more to go.` : '') : st.say;
+  return sheet('An avatar card', 'star', `<div class="avdeck"><div class="avd-pile">${avCardHTML(card(id), k)}</div>
+    <div class="avd-bar">${st.state === 'buy' && !short ? btn(`Make it yours · ${st.price} coins`, 'buy-av', { arg: id, ic: 'coin' }) : `<span class="note">${esc(how)}</span>`}</div></div>`);
+}
 PAGE_ACTIONS['deck-go'] = (a) => { if (S.sheet?.kind !== 'avdeck') return; S.sheet.i = (S.sheet.i || 0) + +a; sfx('tap'); render(); };
 PAGE_ACTIONS['deck-wear'] = (a) => { const k = kid(); if (!deckOf(k).includes(a)) return; k.avatar = a; save(); sfx('unlock'); confetti(); render(); };
 
