@@ -9,7 +9,7 @@ import { existsSync, mkdirSync, symlinkSync, rmSync, readdirSync, readFileSync, 
 import { gzipSync } from 'node:zlib';
 import { checkShell, checkPageHead } from '../src/integration/shell-check.mjs';
 
-const BUILD = new URL('../build', import.meta.url).pathname, SITE = '/tmp/bz-english-site', PORT = 8790 + Math.floor(Math.random() * 100);
+const BUILD = process.env.BZ_BUILD || new URL('../build', import.meta.url).pathname, SITE = '/tmp/bz-english-site' + (process.env.BZ_BUILD ? '-' + process.pid : ''), PORT = 8790 + Math.floor(Math.random() * 100);
 if (!existsSync(BUILD)) { console.log('ui: run `npm run build` first'); process.exit(1); }
 rmSync(SITE, { recursive: true, force: true }); mkdirSync(SITE); symlinkSync(BUILD, SITE + '/Bizzing_English');
 const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--bind', '127.0.0.1'], { cwd: SITE, stdio: 'ignore' });

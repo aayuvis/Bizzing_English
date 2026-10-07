@@ -1,0 +1,1919 @@
+{
+  "format": 1.1,
+  "id": "case-04",
+  "number": 4,
+  "title": "The Missing Gavel",
+  "label": "A Bizzing mystery",
+  "level": 2,
+  "world": "forum",
+  "setting": "the Forum, the Town Hall council chamber",
+  "skills": [
+    "vocab",
+    "pronoun",
+    "sequence",
+    "inference"
+  ],
+  "vanishedWord": "THAT",
+  "ledgerIndex": 4,
+  "officeObject": {
+    "id": "gavel-handle",
+    "name": "the repaired gavel's old handle",
+    "art": "the old cracked handle of Old Thumper (dark old wood, a pale crack), tied with Ms Marsh's ribbon"
+  },
+  "arc": [
+    {
+      "thread": "A",
+      "beat": "THAT vanishes from the Forum's carved motto (\"Speak so that all may hear\"); the Blot Ledger reads UNDER · THE · CLOCK · THAT, and Dev says it is not random; violets on the motto's grey card, rosin under it",
+      "docs": [
+        "4.arc.motto",
+        "4.arc.card",
+        "4.3"
+      ]
+    },
+    {
+      "thread": "B",
+      "beat": "Act II opens; the vote on the Library's money is postponed; Crane's petition appears for the first time, every signature in the same handwriting (left unexplained until Case 6)",
+      "docs": [
+        "4.6",
+        "4.S3.Q3"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Marlowe Finch is suspected and cleared for the first time",
+      "docs": [
+        "4.3",
+        "4.4",
+        "4.S4.Q6"
+      ]
+    }
+  ],
+  "tutorial": [],
+  "card": {
+    "text": "The vote starts at ten o'clock. The Library's money depends on it.\nBut Old Thumper, the Town Hall's ancient gavel, has vanished from its box.\nThe chamber was locked from Monday until this morning.\nNo gavel, no vote.\nThe minutes say it was \"sent off.\"\nAnd Marlowe was seen leaving with a heavy bag.\nWhere is Old Thumper?",
+    "readAloud": true
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The Forum, twenty past nine.",
+      "picture": "Morning sun, people on the steps, pigeons, a speakers' corner, the Town Hall's big doors, and the clock above them.",
+      "lines": [
+        {
+          "who": "ASHA",
+          "direction": "checking her sleeve",
+          "text": "Nine twenty. Forty minutes to the vote."
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "Inside.",
+      "picture": "Councillor Bright staring into an empty velvet box. Councillor Mbeki tapping her speech cards.",
+      "lines": [
+        {
+          "who": "BRIGHT",
+          "text": "Locked since Monday! Locked! And *empty*! And Grace has been on the steps since seven!"
+        },
+        {
+          "who": "MBEKI",
+          "text": "Hector, I was *outside*."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "The gallery.",
+      "picture": "Professor Penhallow, hands folded tightly. Behind her, Mr Pettigrew clutching a scroll in one hand and his briefcase in the other, like a shield.",
+      "lines": []
+    },
+    {
+      "panel": 4,
+      "place": "The door.",
+      "picture": "Nell, leaning on The Comet.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "An empty box is still a clue."
+        },
+        {
+          "who": "QUILL",
+          "text": "So is a locked door. Forty minutes."
+        }
+      ]
+    }
+  ],
+  "boardIntro": [
+    {
+      "who": "STAGE",
+      "text": "Nell pins Marlowe's portrait in the centre."
+    },
+    {
+      "who": "NELL",
+      "text": "Heavy bag, Monday evening, right outside the door. Hunch-o-meter: nine."
+    }
+  ],
+  "cast": [
+    {
+      "id": "bright",
+      "name": "Councillor Hector Bright",
+      "role": "suspect",
+      "note": "chair of the council, *for* the \"review\"",
+      "look": "tall, a mustard waistcoat, very shiny shoes, a pocket watch he checks far too often.",
+      "manner": "loud and hearty, until he is nervous; then he goes very quiet and polishes the watch.",
+      "expressions": [
+        "calm",
+        "nervous",
+        "offended",
+        "guilty",
+        "relieved",
+        "amused"
+      ],
+      "unlockedBy": null,
+      "motive": "a gavel that vanishes hides what happened to it on Monday",
+      "secret": "he cracked Old Thumper's handle on the third knock, put him back in the box very gently, and told nobody"
+    },
+    {
+      "id": "mbeki",
+      "name": "Councillor Grace Mbeki",
+      "role": "suspect",
+      "note": "*against* the \"review\"",
+      "look": "reading glasses on a beaded chain, a cardigan with deep pockets stuffed with speech cards.",
+      "manner": "crisp, quick and funny. Impatient: she has a speech ready and wants to give it.",
+      "expressions": [
+        "calm",
+        "offended",
+        "amused",
+        "nervous",
+        "relieved",
+        "guilty"
+      ],
+      "unlockedBy": null,
+      "motive": "no gavel, no vote, and the Library keeps its money for now",
+      "secret": "she was on the Town Hall steps at seven this morning, practising her speech on the pigeons, and would rather sink through the floor than say so",
+      "expressionNotes": {
+        "nervous": "briefly",
+        "guilty": "not used"
+      }
+    },
+    {
+      "id": "pettigrew",
+      "name": "Mr S. Pettigrew",
+      "role": "suspect",
+      "note": "assistant to Silas Crane",
+      "look": "short and round, a brown suit one size too big, round spectacles he polishes when anxious, a briefcase he holds like a shield.",
+      "manner": "anxious and polite. He apologises to doors he bumps into. Honest when asked a plain question.",
+      "expressions": [
+        "nervous",
+        "calm",
+        "offended",
+        "guilty",
+        "relieved",
+        "amused"
+      ],
+      "unlockedBy": null,
+      "motive": "Mr Crane wants a quick vote, and with Old Thumper gone, another gavel could start it",
+      "secret": "his briefcase holds a brand-new gavel Mr Crane sent \"in case\", and he is too ashamed to show it"
+    },
+    {
+      "id": "marlowe",
+      "name": "Marlowe Finch",
+      "role": "suspect",
+      "pronouns": "he/him",
+      "note": "16, the Library's youngest assistant archivist",
+      "look": "a long scarf, ink on one thumb, arms always full of books.",
+      "manner": "shy, speaks fast, apologises for things that aren't his fault. Kind without making a fuss of it.",
+      "expressions": [
+        "nervous",
+        "calm",
+        "offended",
+        "guilty",
+        "relieved",
+        "amused"
+      ],
+      "unlockedBy": null,
+      "motive": "he loves the Library, and a vote that never starts cannot cut its money",
+      "secret": "his heavy bag held twelve overdue books from the council's reading room, carried back quietly so that nobody was fined, or embarrassed, before the vote"
+    },
+    {
+      "id": "osei",
+      "name": "Mr Reuben Osei",
+      "role": "answer",
+      "note": "Town Hall clerk. The answer card: \"the clerk\". Not a fifth suspect; he is who moved the gavel.",
+      "look": "Small figure.",
+      "manner": "kind and careful, away at his sister's until Friday. Appears only at the end.",
+      "expressions": [
+        "calm",
+        "amused",
+        "relieved"
+      ],
+      "unlockedBy": "D1"
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": "the tiny deerstalker.",
+      "manner": "the agency's chief. Corrects grammar at the worst moments.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "nell",
+      "name": "Nell Okafor-Hart",
+      "role": "agency",
+      "look": "",
+      "manner": "lead detective. Hunch-o-meter switched on from page one.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha Raman",
+      "role": "agency",
+      "look": "",
+      "manner": "timelines on everything, including the bun she is eating.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "dev",
+      "name": "Dev Raman",
+      "role": "agency",
+      "look": "",
+      "manner": "reads the clerk's blotting pad with a mirror from his biscuit-tin periscope.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix Moreno-Lindqvist",
+      "role": "agency",
+      "look": "",
+      "manner": "footnotes, with footnotes. Delighted by \"minutes\".",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "helper",
+      "look": "",
+      "manner": "ten minutes behind, carrying the keys and the cocoa. Biscuit is missing again.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "role": "witness",
+      "look": "",
+      "manner": "leader of the Lamplighters; writes notes in a hurry.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "penhallow",
+      "name": "Professor Orla Penhallow",
+      "role": "witness",
+      "look": "",
+      "manner": "Keeper of the Great Library. Sitting very straight in the public gallery, very worried.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "marsh",
+      "name": "Ms Juno Marsh",
+      "role": "witness",
+      "look": "Small figure.",
+      "manner": "woodturner of Marsh and Daughter, Harbourside. Arrives with a parcel.",
+      "expressions": [
+        "calm",
+        "amused",
+        "relieved"
+      ],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "4.1",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "Notice of the special vote",
+      "author": "Councillor Bright, for the Town Hall",
+      "when": "posted Tuesday, 2 pm",
+      "where": "the noticeboard by the Town Hall doors",
+      "picture": "a crisp printed notice on green baize, four brass pins, a hand-drawn gavel at the top.",
+      "readAloud": false,
+      "body": "TOWN HALL OF INKWELL · SPECIAL VOTE\nWednesday, 10 am, in the Council Chamber.\nShall the council \"review\" the Great Library's money?\nThis vote was [[c:notice-tuesday|called on Tuesday at two]], by Councillor Bright.\nTown Hall rule: every vote begins with three knocks.\nThe knocks come from [[c:notice-thumper|Old Thumper, the council's gavel]].\nNo knocks, no vote.\nAll are welcome to listen.",
+      "gloss": {
+        "gavel": "a small wooden hammer a chairperson knocks to start or end a meeting.",
+        "review": "to look at again."
+      },
+      "footnote": {
+        "who": "FELIX",
+        "text": "Footnote: when a council says it will *review* your money, it often means *cut* it. Footnote to the footnote: not always. But often."
+      }
+    },
+    {
+      "id": "4.2",
+      "chapter": "scene",
+      "type": "report",
+      "title": "Minutes of Monday's council meeting",
+      "author": "R. Osei, Clerk",
+      "when": "Monday, 4 pm to 5 pm",
+      "where": "the clerk's minute book, open on his desk",
+      "picture": "a tall ruled ledger, neat brown ink, a ribbon bookmark.",
+      "readAloud": false,
+      "body": "MINUTES OF THE COUNCIL · Monday\nPresent: Councillor Bright (chair), Councillor Mbeki.\nGuest: Professor Penhallow, Keeper of the Library.\n4.10 pm: A talk about the Library's money. No vote today.\n4.50 pm: The chair closed the meeting with [[c:min-knocks|three very loud knocks]].\n5.00 pm: The councillors left. The clerk tidied the chamber.\n[[c:min-after|After the meeting]], [[c:min-sentoff|the gavel was sent off]].\nWritten by R. Osei, Clerk",
+      "gloss": {
+        "minutes": "the written record of a meeting."
+      },
+      "footnote": {
+        "who": "FELIX",
+        "text": "Footnote: nothing to do with clocks. Footnote to the footnote: well, a little. They both keep track of things."
+      }
+    },
+    {
+      "id": "4.3",
+      "chapter": "scene",
+      "type": "report",
+      "title": "Constable Tully's report",
+      "author": "Constable Bram Tully",
+      "when": "Wednesday, 9 am",
+      "where": "handed to Quill on the Town Hall steps",
+      "picture": "a constable's notebook page, a cocoa ring on one corner, careful round handwriting.",
+      "readAloud": false,
+      "body": "CONSTABLE'S REPORT · [[c:tully-time|Wednesday, 9 am]]\n[[c:tully-locked|Chamber locked since Monday]]. Gavel box empty.\nMinutes say the gavel was \"sent off\".\nSent off! [[c:tully-footballer|Like a footballer who broke the rules]].\nThrown out, then?\nTam saw [[c:tully-marlowe|Marlowe Finch leave on Monday with a heavy bag]].\n[[c:tully-string|Clerk's desk: brown paper, string and stamps.]]\nIn the box: a card with an ink blot.\nA word covered on the motto.\nP.S. Biscuit is missing again.",
+      "note": "Two lines are bigger than they look. \"Chamber locked since Monday\" is the impossible thing: Mr Osei has the only other key, and he is at his sister's. \"Clerk's desk: brown paper, string and stamps.\" is the clue hidden in plain sight: somebody wrapped a parcel."
+    },
+    {
+      "id": "4.4",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Tam's Lamplighter note",
+      "author": "Tam Bellweather",
+      "when": "Monday evening",
+      "where": "pushed under the agency door Tuesday morning, with a bun",
+      "picture": "a torn page from a bakery order pad, smudged with flour, pencil, crooked lines.",
+      "readAloud": false,
+      "body": "[[c:tam-monday|monday lamp time]]. town hall steps.\nmr osei come out with [[c:tam-parcel|a long parsel under his arm]].\nmarlowe finch held the door for him.\n[[c:tam-he|he said thank you marlowe]] and [[c:tam-post|went to the post offis]].\nmarlowe went home the other way.\n[[c:tam-bag|he had a big bag. heavy.]]\nall lamps lit by 6 oclock.\ntam",
+      "note": "Two \"he\"s. \"He said thank you Marlowe\" cannot be Marlowe: you do not thank yourself, so that \"he\" is Mr Osei. The second \"he\" comes straight after \"marlowe went home the other way\", so the \"he\" with the big bag is Marlowe. Each \"he\" points back to the person just named."
+    },
+    {
+      "id": "4.5",
+      "chapter": "scene",
+      "type": "letter",
+      "title": "The letter on the blotting pad",
+      "author": "R. Osei, Clerk (a letter to Ms Marsh, woodturner)",
+      "when": "\"…nday evening\"",
+      "where": "pressed backwards into the clerk's blotting pad. Dev reads it in the mirror from his biscuit-tin periscope. Some words did not print.",
+      "picture": "a green leather blotter, faint mirror-writing in brown ink, a small hand mirror propped against the inkstand.",
+      "readAloud": false,
+      "body": "…nday evening\n…ear Ms Marsh,\n[[c:blot-thumper|Old Thumper's handle cracked at today's meeting]].\nPoor old fellow.\n[[c:blot-mended|He is sent to be mended]], [[c:blot-tonight|by tonight's post]].\nPlease fit a new handle. Keep the old one for me.\n[[c:blot-away|I am away from tomorrow]], at my sister's.\nThere is no vote until next month, so there is no hurry.\nBack … Friday.\n… Osei, Clerk",
+      "gloss": {
+        "blotting pad": "thick soft paper that soaks up wet ink. It keeps a backwards copy of whatever was pressed on it."
+      },
+      "note": "The second \"He\" is Old Thumper, not Mr Osei. Mr Osei wrote on Monday, before the special vote was called, so he believed there was no vote until next month. \"Back … Friday\" is the day he planned to return, and in the epilogue he does, on the Friday train."
+    },
+    {
+      "id": "4.6",
+      "chapter": "scene",
+      "type": "other",
+      "title": "The petition",
+      "author": "unknown (\"Collected by\" is blank)",
+      "when": "handed in Tuesday, noon",
+      "where": "pinned to the speakers' corner on the Forum steps",
+      "picture": "a long cream scroll, a wax seal with a crane bird, forty-two names down the page. Every name is set in the same curly handwriting font: same loops, same slant, same tail on every \"y\".",
+      "readAloud": false,
+      "body": "SAVE OUR LIBRARY BY SELLING IT!\nWe, the people of Inkwell, ask the council to vote at once.\nSell the Great Library to Crane and Co.\nIt will reopen as \"The Inkwell Experience\", with tickets.\nSigned:\nRuth Annan · Billy Coe · Mira Das · Tom Ferris · Jo Haddad\n… and thirty-seven more.\nCollected by: [[c:pet-blank|________]]\nHanded in by [[c:pet-handed|S. Pettigrew, for Crane and Co]].",
+      "arcThread": "B"
+    },
+    {
+      "id": "4.arc.card",
+      "chapter": "arc",
+      "type": "card",
+      "title": "The Blot's calling card",
+      "author": "B.",
+      "when": "found Wednesday",
+      "where": "in the empty gavel box, found by Tully",
+      "picture": "a small cream card, a perfect round ink blot.",
+      "readAloud": false,
+      "body": "One small word has gone.\nTwo small words can mean two things.\n— B.",
+      "arcThread": "A"
+    },
+    {
+      "id": "4.arc.motto",
+      "chapter": "arc",
+      "type": "plaque",
+      "title": "The carved motto",
+      "author": "carved in stone",
+      "when": "—",
+      "where": "over the council chamber door",
+      "picture": "a carved stone band; one word covered by a neat stone-grey card that matches the stone exactly. The motto text is live type, never painted.",
+      "readAloud": false,
+      "body": "SPEAK SO ____ ALL MAY HEAR",
+      "arcThread": "A"
+    },
+    {
+      "id": "4.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"What happened at Monday's meeting?\"",
+      "author": "Councillor Hector Bright",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "We talked about the Library's money. Long talk. Very long.\nAt ten to five I closed the meeting.\nThree knocks with Old Thumper. Good, firm knocks.\nPerhaps a bit too firm.\nNext question?"
+    },
+    {
+      "id": "4.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"What do you mean, 'a bit too firm'?\"",
+      "author": "Councillor Hector Bright",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "*(He polishes his watch for a long time.)*\nOh, very well.\nOn the third knock, [[c:bright-crack|I heard a crack]].\nI put Old Thumper back in his box very gently.\nI told nobody. I was ashamed.\nThat gavel is two hundred years old!\nThen this morning the box was empty.\nI thought someone had found out and hidden him."
+    },
+    {
+      "id": "4.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Why did you call a special vote on Tuesday?\"",
+      "author": "Councillor Hector Bright",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "A gentleman came to see me on Tuesday.\nMr Crane's assistant. Very polite.\nHe said the whole town wanted a quick vote.\nHe had a petition. Forty-two names!\nSo I called the vote that afternoon.\n[[c:bright-wants|I wanted that vote today]], you see.\nWithout Old Thumper, I cannot start it."
+    },
+    {
+      "id": "4.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"When did you leave the Town Hall on Monday?\"",
+      "author": "Councillor Hector Bright",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "Five o'clock, on the dot. I checked my watch.\nI walked out with Councillor Mbeki.\nWe argued all the way down the steps.\nFriendly arguing. Mostly."
+    },
+    {
+      "id": "4.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Who handles the gavel, apart from you?\"",
+      "author": "Councillor Hector Bright",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "Only the clerk, Mr Osei.\nHe keeps the box, the minute book, and the keys.\nHe is away at his sister's until Friday.\nLucky man."
+    },
+    {
+      "id": "4.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Grace Mbeki: \"Did you want this vote to happen?\"",
+      "author": "Councillor Grace Mbeki",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "Want it? I have nine speech cards in my pocket!\nI would have won it, too.\nThe Library is free for everyone. It should stay that way.\nA missing gavel helps nobody. It only makes us wait."
+    },
+    {
+      "id": "4.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Grace Mbeki: \"When did you leave on Monday?\"",
+      "author": "Councillor Grace Mbeki",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "[[c:mbeki-left|I left with Councillor Bright at five]].\nHe talked about his shoes all the way down the steps.\n[[c:mbeki-osei|Mr Osei was still tidying the table]].\nHe was humming. He always hums when he tidies."
+    },
+    {
+      "id": "4.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Grace Mbeki: \"Did you see the gavel after the meeting?\"",
+      "author": "Councillor Grace Mbeki",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "It was on the table when I stood up.\nMr Osei was looking at it closely.\nHe had his glasses on the end of his nose.\nI thought he was just being careful. He is always careful."
+    },
+    {
+      "id": "4.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Grace Mbeki: \"Who would want the vote stopped?\"",
+      "author": "Councillor Grace Mbeki",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "People will say I would. I am against the review, after all.\nBut I wanted to stand up and win.\nHiding a gavel is not winning.\nAsk whoever wanted the vote in such a hurry."
+    },
+    {
+      "id": "4.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Grace Mbeki: \"Why were you at the Town Hall at seven this morning?\"",
+      "author": "Councillor Grace Mbeki",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "*(She goes a little pink.)*\nI was on the steps. Practising.\nNever you mind what.\nThe doors were locked. I didn't go in.\nAsk the pigeons. On second thoughts, don't."
+    },
+    {
+      "id": "4.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr S. Pettigrew: \"When did you come to Inkwell?\"",
+      "author": "Mr S. Pettigrew",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "[[c:pet-train|I came on Tuesday's noon train]].\nHere is my ticket. It is a little crumpled. Sorry.\nI had never been inside this Town Hall before Tuesday.\nI went straight to Councillor Bright's office."
+    },
+    {
+      "id": "4.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr S. Pettigrew: \"Why did you want a quick vote?\"",
+      "author": "Mr S. Pettigrew",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "Mr Crane said quick votes are kind votes.\nI am not sure that is true.\nI am not sure of a lot of things lately.\n*(He looks at his shoes.)*"
+    },
+    {
+      "id": "4.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr S. Pettigrew: \"Where did the petition come from?\"",
+      "author": "Mr S. Pettigrew",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "[[c:pet-full|Mr Crane gave it to me already full]].\nAll forty-two names were on it.\nI did not see a single person sign it.\nIs that usual? It did not feel usual."
+    },
+    {
+      "id": "4.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr S. Pettigrew: \"Where were you on Monday evening?\"",
+      "author": "Mr S. Pettigrew",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "On a train, two towns away, eating a cold pie.\nI can tell you the pie was cold.\nI cannot prove it, I suppose. Pies do not keep receipts."
+    },
+    {
+      "id": "4.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"What was in your heavy bag on Monday?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "*(He winds his scarf round once more.)*\nJust… things. Library things.\nHeavy things. Things with corners.\nI'd rather not say, if that's all right.\nI didn't take the gavel.\nPeople always think I took things."
+    },
+    {
+      "id": "4.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"What did you see on the Town Hall steps?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "[[c:mar-door|I held the door for Mr Osei]].\nHe had a long parcel in brown paper.\nI didn't ask what was in it. That's private.\nHe thanked me and hurried off.\nHe said the post office shuts at half past six."
+    },
+    {
+      "id": "4.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Where did you go after that?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "The other way. Back to the Library.\nI went in by the side door.\nI didn't want anyone to see me.\n*(He looks at the floor.)* That sounds bad, doesn't it?"
+    },
+    {
+      "id": "4.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Why didn't you tell anyone about the books?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning (Chapter 4)",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "Because the councillors would feel embarrassed.\nAnd embarrassed people vote crossly.\nThe Library doesn't need anyone voting crossly."
+    },
+    {
+      "id": "4.S4.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Who do you think took the gavel?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript.",
+      "readAloud": false,
+      "body": "I don't think anyone *took* it.\nMr Osei is the most careful man in Inkwell.\nIf he had it, it's safe somewhere."
+    },
+    {
+      "id": "4.S4.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"What did you run to fetch?\"",
+      "author": "Marlowe Finch",
+      "when": "Wednesday morning (Chapter 4)",
+      "where": "the Town Hall's side room",
+      "picture": "a typed transcript, with the Library returns slip (twelve stamps) clipped to it.",
+      "readAloud": false,
+      "body": "*(Out of breath, he holds up a slip of paper.)*\nThis. From the Library returns desk.\n[[c:mar-books|Twelve overdue library books]], from the council's reading room.\nOne was three years late.\n[[c:mar-slip|Stamped in at twenty past six on Monday]]. Twelve stamps.\nI didn't want anyone fined before the vote.\nSo I carried them back. Quietly.",
+      "talk": [
+        {
+          "who": "QUILL",
+          "text": "Show me where it says the bag held a gavel."
+        },
+        {
+          "who": "STAGE",
+          "text": "Nell reads the slip. It says books. Twelve of them."
+        },
+        {
+          "who": "NELL",
+          "text": "I'm switching the hunch-o-meter off."
+        },
+        {
+          "who": "QUILL",
+          "text": "Leave it on. Just read before you look at it."
+        },
+        {
+          "who": "NELL",
+          "text": "Me and Asha will do the timeline."
+        },
+        {
+          "who": "QUILL",
+          "text": "Asha and *I*."
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "bright",
+      "questions": [
+        {
+          "id": "bright-q1",
+          "type": "what",
+          "q": "What happened at Monday's meeting?",
+          "answerDoc": "4.S1.Q1",
+          "expression": "calm"
+        },
+        {
+          "id": "bright-q2",
+          "type": "what",
+          "q": "What do you mean, 'a bit too firm'?",
+          "answerDoc": "4.S1.Q2",
+          "expression": "guilty",
+          "appearsAfter": "bright-q1"
+        },
+        {
+          "id": "bright-q3",
+          "type": "why",
+          "q": "Why did you call a special vote on Tuesday?",
+          "answerDoc": "4.S1.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "bright-q4",
+          "type": "when",
+          "q": "When did you leave the Town Hall on Monday?",
+          "answerDoc": "4.S1.Q4",
+          "expression": "amused"
+        },
+        {
+          "id": "bright-q5",
+          "type": "who",
+          "q": "Who handles the gavel, apart from you?",
+          "answerDoc": "4.S1.Q5",
+          "expression": "calm"
+        }
+      ]
+    },
+    {
+      "suspect": "mbeki",
+      "questions": [
+        {
+          "id": "mbeki-q1",
+          "type": "why",
+          "q": "Did you want this vote to happen?",
+          "answerDoc": "4.S2.Q1",
+          "expression": "offended"
+        },
+        {
+          "id": "mbeki-q2",
+          "type": "when",
+          "q": "When did you leave on Monday?",
+          "answerDoc": "4.S2.Q2",
+          "expression": "amused"
+        },
+        {
+          "id": "mbeki-q3",
+          "type": "what",
+          "q": "Did you see the gavel after the meeting?",
+          "answerDoc": "4.S2.Q3",
+          "expression": "calm"
+        },
+        {
+          "id": "mbeki-q4",
+          "type": "who",
+          "q": "Who would want the vote stopped?",
+          "answerDoc": "4.S2.Q4",
+          "expression": "offended"
+        },
+        {
+          "id": "mbeki-q5",
+          "type": "why",
+          "q": "Why were you at the Town Hall at seven this morning?",
+          "answerDoc": "4.S2.Q5",
+          "expression": "nervous",
+          "expressionThen": "amused"
+        }
+      ]
+    },
+    {
+      "suspect": "pettigrew",
+      "questions": [
+        {
+          "id": "pettigrew-q1",
+          "type": "when",
+          "q": "When did you come to Inkwell?",
+          "answerDoc": "4.S3.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "pettigrew-q2",
+          "type": "why",
+          "q": "Why did you want a quick vote?",
+          "answerDoc": "4.S3.Q2",
+          "expression": "guilty"
+        },
+        {
+          "id": "pettigrew-q3",
+          "type": "what",
+          "q": "Where did the petition come from?",
+          "answerDoc": "4.S3.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "pettigrew-q4",
+          "type": "where",
+          "q": "Where were you on Monday evening?",
+          "answerDoc": "4.S3.Q4",
+          "expression": "amused"
+        }
+      ]
+    },
+    {
+      "suspect": "marlowe",
+      "questions": [
+        {
+          "id": "marlowe-q1",
+          "type": "what",
+          "q": "What was in your heavy bag on Monday?",
+          "answerDoc": "4.S4.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "marlowe-q2",
+          "type": "what",
+          "q": "What did you see on the Town Hall steps?",
+          "answerDoc": "4.S4.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "marlowe-q3",
+          "type": "where",
+          "q": "Where did you go after that?",
+          "answerDoc": "4.S4.Q3",
+          "expression": "guilty"
+        },
+        {
+          "id": "marlowe-q5",
+          "type": "who",
+          "q": "Who do you think took the gavel?",
+          "answerDoc": "4.S4.Q5",
+          "expression": "calm"
+        },
+        {
+          "id": "marlowe-q6",
+          "type": "what",
+          "q": "What did you run to fetch?",
+          "answerDoc": "4.S4.Q6",
+          "expression": "nervous",
+          "expressionThen": "relieved",
+          "chapter": 4,
+          "appearsAfter": "chapter-3-false-solution"
+        },
+        {
+          "id": "marlowe-q4",
+          "type": "why",
+          "q": "Why didn't you tell anyone about the books?",
+          "answerDoc": "4.S4.Q4",
+          "expression": "nervous",
+          "chapter": 4,
+          "appearsAfter": "marlowe-q6"
+        }
+      ],
+      "note": "Q4 and Q6 open in Chapter 4."
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "meaning",
+      "skill": "vocab",
+      "statement": "\"Sent off\" in the minutes means *posted away*, not *thrown out*. Old Thumper is the gavel, and he was posted away to be mended.",
+      "spans": [
+        "min-sentoff",
+        "blot-mended",
+        "notice-thumper",
+        "blot-thumper",
+        "tully-footballer"
+      ],
+      "contrastSpans": [
+        "tully-footballer"
+      ],
+      "why": "\"Sent off\" has two meanings. A footballer is *sent off* the pitch for breaking the rules. A parcel is *sent off* in the post. The clerk wrote the second meaning; Tully read the first. Nothing was stolen, and nothing is lost for good. The vanished gavel is a misunderstanding, and the Blot's card (\"two small words can mean two things\") was pointing at it all along.",
+      "unlocks": "osei"
+    },
+    {
+      "id": "D2",
+      "type": "pronoun",
+      "skill": "pronoun",
+      "statement": "In Tam's note, the \"he\" who says thank you is Mr Osei, not Marlowe. Mr Osei carried the long parcel to the post office. Marlowe went the other way with a bag of books.",
+      "spans": [
+        "tam-he",
+        "tam-post",
+        "tam-parcel",
+        "mar-door",
+        "tully-string"
+      ],
+      "why": "you cannot thank yourself, so \"he\" must be the other person on the steps. That puts the long parcel (gavel-shaped) in Mr Osei's hands, heading for the post: the same night his letter says \"by tonight's post\". It also clears Marlowe, whose heavy bag held twelve overdue books.",
+      "alsoAccepted": [
+        "tully-string"
+      ],
+      "alsoAcceptedNote": "the hidden clue; somebody wrapped a parcel at that desk"
+    },
+    {
+      "id": "D3",
+      "type": "timeline",
+      "skill": "sequence",
+      "statement": "The gavel left on Monday evening. The special vote was not called until Tuesday afternoon. So nobody could have hidden the gavel to stop the vote: when it left, there was no vote to stop.",
+      "spans": [
+        "min-after",
+        "tam-monday",
+        "notice-tuesday",
+        "pet-train"
+      ],
+      "why": "order is everything. Mr Osei sent Old Thumper off on Monday, believing the next vote was a month away. He left for his sister's on Tuesday morning. Only *then* did Mr Pettigrew arrive and Councillor Bright call the vote. Every \"someone hid it to stop the vote\" theory needs the vote to come first. It came last. The same order answers the locked door: the gavel left on Monday evening, before the chamber was locked, in the hands of the man who locked it. Nobody needed to get in afterwards."
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "bright",
+      "clearedBy": [
+        "bright-crack",
+        "bright-wants",
+        "mbeki-left"
+      ],
+      "note": "Twitchy, polishing his watch, and hiding something: he goes quiet, he won't meet anyone's eye, and he admits \"I put Old Thumper back very gently\". His secret is that he *cracked* the gavel, not that he took it; he called the vote and needs the gavel to start it; he left with a witness while the gavel was still on the table.",
+      "suspicion": [
+        "bright-crack"
+      ]
+    },
+    {
+      "suspect": "mbeki",
+      "clearedBy": [
+        "mbeki-left",
+        "mbeki-osei"
+      ],
+      "clearedByDeductions": [
+        "D3"
+      ],
+      "note": "She is against the review, so a postponed vote seems to help her; and she was on the steps at seven. D3: on Monday there was no special vote to stop. Her secret, the pigeons, comes out kindly in the reveal."
+    },
+    {
+      "suspect": "pettigrew",
+      "clearedBy": [
+        "pet-train",
+        "min-after"
+      ],
+      "alsoMarks": [
+        "pet-full"
+      ],
+      "note": "Crane's man, pushing for a quick vote, with a spare gavel in his briefcase. He arrived after the gavel had already gone; the gavel left on Monday. He is uneasy about the petition (\"Mr Crane gave it to me already full\"). He is honest about it, and about the shiny gavel. Set up for Cases 6 and 10."
+    },
+    {
+      "suspect": "marlowe",
+      "clearedBy": [
+        "mar-books",
+        "mar-slip",
+        "tam-he"
+      ],
+      "looksGuiltyBy": [
+        "tully-marlowe",
+        "tam-bag"
+      ],
+      "note": "Heavy bag, Monday evening, at the door. A heavy bag, at the right door, at the right time; he won't say what was in it, and he crept back to the Library by the side door. Cleared in Chapter 4 by the returns slip (twelve overdue books, stamped in at twenty past six on Monday), and by Tam's note: the parcel was in Mr Osei's hands, not Marlowe's.",
+      "suspicion": [
+        "tully-marlowe",
+        "tam-bag"
+      ]
+    }
+  ],
+  "arcMarks": [
+    {
+      "span": "pet-blank",
+      "note": "Crane thread: they file under *Crane*, not under this case."
+    },
+    {
+      "span": "pet-handed",
+      "note": "Crane thread: they file under *Crane*, not under this case."
+    }
+  ],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "The meeting ends with three very loud knocks. Old Thumper's handle cracks.",
+        "spans": [
+          "min-knocks"
+        ],
+        "placedByChild": false,
+        "when": "4.50 pm, Monday"
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "The councillors leave together. Mr Osei is still tidying.",
+        "spans": [
+          "mbeki-left"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "Mr Osei wraps the gavel and writes to Ms Marsh.",
+        "spans": [
+          "min-after"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Mr Osei locks the chamber and leaves with the long parcel; Marlowe holds the door, then goes the other way with the books.",
+        "spans": [
+          "tam-monday",
+          "tully-locked"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "The parcel goes in the post.",
+        "spans": [
+          "blot-tonight"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "Mr Osei leaves for his sister's.",
+        "spans": [
+          "blot-away"
+        ],
+        "placedByChild": false,
+        "when": "Tuesday morning"
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Mr Pettigrew arrives with the petition.",
+        "spans": [
+          "pet-train"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Councillor Bright calls the special vote.",
+        "spans": [
+          "notice-tuesday"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "Constable Tully opens the chamber with the spare key and finds the box empty.",
+        "spans": [
+          "tully-time"
+        ],
+        "placedByChild": false
+      }
+    ],
+    "join": {
+      "before": "T3",
+      "after": [
+        "T7",
+        "T8"
+      ],
+      "deduction": "D3",
+      "note": "When the child pegs \"Bright calls the vote\" after \"the parcel goes in the post\", the line tightens and the gold string from D3 lights.",
+      "wrong": {
+        "who": "ASHA",
+        "text": "My timeline says otherwise. And my timeline includes this bun."
+      }
+    },
+    "runningJoke": {
+      "who": "ASHA",
+      "text": "9.20 arrive. 9.21 bun. 9.24 empty box. 9.25 second bun."
+    }
+  },
+  "accusation": {
+    "question": "Who moved Old Thumper, and what really happened?",
+    "culprit": "osei",
+    "place": null,
+    "minimalEvidence": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "acceptableEvidence": [
+      "min-sentoff",
+      "blot-mended",
+      "tam-he",
+      "tam-post",
+      "min-after",
+      "notice-tuesday",
+      "tully-string"
+    ],
+    "wrongSuspect": {
+      "bright": "He broke a gavel. He did not steal one. Read what he *wanted* on Wednesday morning.",
+      "mbeki": "Where was she at five? And who was still at the table?",
+      "pettigrew": "Which came first: the gavel leaving, or his train arriving? Put them in order.",
+      "marlowe": "Who said thank you to whom? You cannot thank yourself."
+    },
+    "wrongSuspectFollowUp": {
+      "marlowe": "Twelve books, one cross librarian. Read the slip."
+    },
+    "wrongSuspectPoints": {
+      "bright": [
+        "bright-wants"
+      ],
+      "mbeki": [
+        "mbeki-left",
+        "mbeki-osei"
+      ],
+      "pettigrew": [
+        "pet-train",
+        "min-after"
+      ],
+      "marlowe": [
+        "tam-he",
+        "mar-slip"
+      ]
+    },
+    "weakEvidence": "You've chosen the right person, but a guess isn't proof. Show me *what* 'sent off' means, *who* 'he' is, and *when* it all happened. Three pins, not one.",
+    "note": "nobody stole the gavel. Mr Osei, the clerk, sent it to be mended by post on Monday evening, before the special vote existed.",
+    "evidenceRule": {
+      "minimalEvidenceRule": "any three, one from each deduction",
+      "evidenceGroups": {
+        "D1": [
+          "min-sentoff",
+          "blot-mended"
+        ],
+        "D2": [
+          "tam-he",
+          "tam-post"
+        ],
+        "D3": [
+          "min-after",
+          "notice-tuesday"
+        ]
+      }
+    }
+  },
+  "reveal": [
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Old Thumper isn't lost. Nobody stole him."
+    },
+    {
+      "who": "BRIGHT",
+      "text": "*(lowering the gavel)* Nobody? From a room locked since Monday?"
+    },
+    {
+      "who": "NELL",
+      "text": "He didn't need to get out. He left before the door was locked, with the man who locked it."
+    },
+    {
+      "who": "FELIX",
+      "text": "The minutes say, \"After the meeting, the gavel was sent off.\" Footnote: \"sent off\" has two meanings."
+    },
+    {
+      "who": "TULLY",
+      "text": "Like a footballer! Thrown out for bad behaviour!"
+    },
+    {
+      "who": "FELIX",
+      "text": "Or like a parcel, in the post. Footnote to the footnote: the gavel did not commit a foul."
+    },
+    {
+      "who": "DEV",
+      "text": "*(holding up his biscuit-tin mirror)* Mr Osei's blotter says which. \"He is sent to be mended, by tonight's post.\" And \"he\" is the gavel."
+    },
+    {
+      "who": "ASHA",
+      "text": "It was on the very first page, too. Constable Tully's own report: \"Clerk's desk: brown paper, string and stamps.\""
+    },
+    {
+      "who": "TULLY",
+      "text": "So it was. I thought it was just a desk."
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "And Tam saw who carried the parcel. \"he said thank you marlowe.\" You can't thank yourself. So \"he\" was Mr Osei."
+    },
+    {
+      "who": "MARLOWE",
+      "text": "*(very quietly)* I only held the door. My bag was books."
+    },
+    {
+      "who": "NELL",
+      "text": "My hunch-o-meter said ten. It should have said nought. I'm sorry, Marlowe."
+    },
+    {
+      "who": "QUILL",
+      "text": "It should have said \"show me\"."
+    },
+    {
+      "who": "ASHA",
+      "text": "And the order settles it. The gavel left on Monday night. Mr Pettigrew's train came on Tuesday at noon. The vote was called at two. Nobody hides a gavel to stop a vote that doesn't exist yet."
+    },
+    {
+      "who": "BRIGHT",
+      "text": "*(sitting down heavily)* I must confess. I cracked him. Third knock. Too ashamed to say."
+    },
+    {
+      "who": "MBEKI",
+      "text": "Hector. It's a hammer. It's *for* knocking. *(She goes pink.)* And since we're confessing: at seven this morning, I was practising my speech. On the pigeons."
+    },
+    {
+      "who": "PETTIGREW",
+      "text": "And this gavel was Mr Crane's idea. \"In case the old one is lost.\" *(He swallows.)* I rather hoped it wasn't."
+    },
+    {
+      "who": "STAGE",
+      "text": "The doors bang open. Tam Bellweather, floury to the elbows, waves a telegram."
+    },
+    {
+      "who": "TAM",
+      "text": "The Constable sent me the minute Dev read the blotter. Answer's come!"
+    },
+    {
+      "who": "TULLY",
+      "text": "*(reading)* \"GAVEL AT MARSH'S. NEW HANDLE FRIDAY. NO VOTE TILL NEXT MONTH, SURELY? SORRY FOR FUSS. OSEI.\""
+    },
+    {
+      "who": "STAGE",
+      "text": "The big clock strikes ten. Nobody knocks."
+    },
+    {
+      "who": "BRIGHT",
+      "text": "Old Thumper isn't lost. He's mending. *(He hands the shiny gavel back.)* The rule says we wait for him."
+    },
+    {
+      "who": "PENHALLOW",
+      "text": "*(letting out a long breath)* Then the vote waits."
+    },
+    {
+      "who": "PETTIGREW",
+      "text": "Mr Crane will be… disappointed. *(He looks at his petition.)* All these names look… rather alike, don't they?"
+    },
+    {
+      "who": "DEV",
+      "text": "*(already looking)* Every \"y\" has the same curly tail."
+    },
+    {
+      "who": "QUILL",
+      "text": "Write it down. Not every question gets answered in one case."
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "STAGE",
+      "beat": "setting",
+      "text": "Friday. The Forum in late sun."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The ending",
+      "text": "Ms Marsh arrives at the Town Hall with a brown-paper parcel. Old Thumper is back, with a handle of honey-coloured ash. She hands Councillor Bright the old cracked handle, wrapped in a ribbon. Mr Osei, back on the Friday train just as his letter said, adds a line to the minutes: *\"Friday: the gavel was sent back (mended).\"* Felix approves of the brackets."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The vote",
+      "text": "Councillor Mbeki proposes that the vote waits a month, \"so that all may hear,\" and that the town is invited to speak first. Councillor Bright, for once, agrees without checking his watch. Mr Pettigrew posts Mr Crane's shiny gavel back to him, second class. Professor Penhallow shakes Marlowe's hand. Marlowe drops four books."
+    },
+    {
+      "who": "STAGE",
+      "beat": "Bright's apology",
+      "text": "he tells the whole council he cracked the gavel. Nobody minds. Marlowe hands him the returns slip: the book that was three years late was Councillor Bright's own, *Keeping Calm in Committees*. Bright pays the fine himself and laughs, for the first time all week. He gives the old handle to the agency \"for the young detective who read it right\"."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The pigeons",
+      "text": "Councillor Mbeki practises her speech on the Forum steps, in broad daylight this time. The pigeons have heard it before. They stay anyway."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The arc beat",
+      "text": "Felix climbs on the chair again and lifts the stone-grey card from the motto: **THAT**. A fine pale dust sifts down onto his sleeve, and the smell of violets comes with it. \"Footnote: rosin,\" he says. \"Violinists rub it on their bows. Footnote to the footnote: nobody on the council plays the violin.\" The child inks the word into the Blot Ledger, which now reads **UNDER · THE · CLOCK · THAT**. Dev writes the four words in a row on his sleeve. \"That's not random,\" he says. \"Nobody is *that* random.\" Asha: \"It's a sentence starting.\" Dev: \"Or a very bad poem.\" The petition, with its forty-two identical hands, is copied into the notebook under a big question mark."
+    },
+    {
+      "who": "STAGE",
+      "beat": "Marlowe",
+      "text": "thanks the agency for believing him. Nell says sorry, properly, without a number."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The running jokes",
+      "text": "Asha and Dev argue, in whispers, about whose turn it is to carry the torch down the Town Hall cellar stairs. There is no reason to go to the cellar. They go anyway."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The running jokes",
+      "text": "**Biscuit** is found asleep in the council's ballot box, \"casting his vote for a nap,\" says Tully, delighted with himself for a whole afternoon."
+    },
+    {
+      "who": "STAGE",
+      "beat": "The office object",
+      "text": "the old cracked handle of Old Thumper, tied with Ms Marsh's ribbon, goes on the shelf. Tap it to replay the case."
+    }
+  ],
+  "drill": {
+    "kind": "other",
+    "skill": "vocab",
+    "title": "Two meanings",
+    "intro": "Six short sentences. For each, the child chooses which meaning of *sent off* it uses: **posted away** or **ordered to leave**.",
+    "items": [
+      {
+        "prompt": "Gran sent off her birthday cards on Monday.",
+        "answer": "posted away",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ]
+      },
+      {
+        "prompt": "The referee sent off the player for pushing.",
+        "answer": "ordered to leave",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ]
+      },
+      {
+        "prompt": "The gavel was sent off to be mended.",
+        "answer": "posted away",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ]
+      },
+      {
+        "prompt": "Rex was sent off the pitch for biting the ball.",
+        "answer": "ordered to leave",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ],
+        "note": "it's a dog's football match"
+      },
+      {
+        "prompt": "The letter was sent off before lunch.",
+        "answer": "posted away",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ]
+      },
+      {
+        "prompt": "The goalkeeper was sent off and had to sit on the bench.",
+        "answer": "ordered to leave",
+        "options": [
+          "posted away",
+          "ordered to leave"
+        ]
+      }
+    ],
+    "bonus": {
+      "skill": "pronoun",
+      "prompt": "Marlowe held the door for Mr Osei. He said thank you and hurried off.",
+      "question": "Who is \"he\"?",
+      "answer": "Mr Osei",
+      "options": [
+        "Mr Osei",
+        "Marlowe"
+      ],
+      "explain": "Mr Osei. Marlowe did the kind thing; the person thanking is the one who was helped.",
+      "quill": "Pronouns point. Follow the finger."
+    }
+  },
+  "art": {
+    "backgrounds": [
+      "The Forum steps: wide stone steps, a speakers' corner with a small wooden platform, market awnings at the edges, pigeons. The Town Hall façade with tall doors and a big round clock above them (hands painted, no numerals). Any signs are blank shapes.",
+      "The council chamber: a long oak table, high-backed chairs, a public gallery with a brass rail, tall windows, dust turning in the sunbeams, a big clock over the door. The velvet-lined gavel box centre-table, with the dent where the gavel lay. A carved stone band over the door; the motto text is live type set on the band, never painted. The Blot's stone-grey card is a separate prop layer that lifts off.",
+      "The clerk's office: a desk with a green leather blotter, an inkstand, a tall ruled minute book, pigeonholes, a kettle, and, in plain view, a roll of brown paper, a ball of string and a sheet of stamps.",
+      "Town Hall side room (interviews): polished floor, a fern, a portrait frame with an abstract painted landscape (no faces, no lettering)."
+    ],
+    "props": [
+      "the empty velvet box",
+      "Old Thumper (dark old wood, a brass band, a pale crack along the handle; later a new honey-coloured ash handle)",
+      "the brown-paper parcel with string",
+      "the Blot's calling card",
+      "Dev's biscuit-tin periscope with a small mirror",
+      "Marlowe's bag of library books and the returns slip with twelve stamps",
+      "the petition scroll with the crane-bird wax seal",
+      "Bright's pocket watch",
+      "Bright's rule book, as thick as a loaf",
+      "Mbeki's speech cards",
+      "Tully's cocoa flask",
+      "Mr Pettigrew's briefcase and, inside it, Mr Crane's brand-new gavel (shiny, a crane bird carved on its head, a price tag on a string)",
+      "Tam's telegram"
+    ],
+    "portraits": [
+      "Bright (six expressions)",
+      "Mbeki (six expressions)",
+      "Pettigrew (six expressions)",
+      "Marlowe (six expressions)",
+      "Osei (small figure: calm, amused, relieved)",
+      "Ms Marsh (small figure: calm, amused, relieved)"
+    ],
+    "documents": "notice on green baize; minutes in a ruled ledger; Tully's notebook; Tam's floury bakery order slip; the mirror-blotter (render the text normally once Dev has \"flipped\" it; the painted blotter beneath shows only faint mirrored scribble shapes); the petition, with all forty-two names in one handwriting font, so the sameness is visible.",
+    "fonts": {
+      "osei": "neat, upright",
+      "tully": "round, careful",
+      "tam": "quick, uneven, lower case",
+      "petition": "a curly, looped hand, chosen so it can be recognised again in Case 6"
+    },
+    "notes": "Day, with a lamplit-evening variant for the epilogue's sunset. Palette: the Forum's world hue; warm stone, civic green, brass. Morning light for Chapter 1; late golden light for the epilogue. No lettering in any painting: the motto, notice and all document text are live text. Diversity: the crowd on the Forum steps is mixed in age and colour, ordinary, nobody a type; the camera stays high enough that faces stay small."
+  },
+  "source": {
+    "script": "case-04.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "extraMarks": [
+    {
+      "span": "tully-marlowe",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "tam-bag",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "pet-full",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "easier",
+      "level": 1,
+      "type": "spelling",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "4.4",
+        "span": "tam-parcel"
+      },
+      "prompt": "Tam wrote \"a long parsel under his arm\". One word is spelt wrong. Which is the right spelling?",
+      "options": [
+        "parsle",
+        "parcel",
+        "parsell"
+      ],
+      "answer": "parcel",
+      "explain": "Parcel is spelt p-a-r-c-e-l. A \"c\" before \"e\" often sounds like \"s\", as in \"cell\" and \"parcel\". Tam is still learning, and Tam's notes are still very useful."
+    },
+    {
+      "id": "x2",
+      "tier": "easier",
+      "level": 1,
+      "type": "punctuation",
+      "skill": "vocab",
+      "strand": "sentence",
+      "objective": "s5-speech",
+      "chapter": 1,
+      "source": {
+        "doc": "4.4",
+        "span": "tam-he"
+      },
+      "prompt": "Tam wrote \"he said thank you marlowe\". Which way is written correctly?",
+      "options": [
+        "He said, \"Thank you, Marlowe.\"",
+        "He said \"thank you Marlowe\".",
+        "he said, \"thank you, marlowe.\""
+      ],
+      "answer": "He said, \"Thank you, Marlowe.\"",
+      "explain": "A sentence starts with a capital letter, and so does a name like Marlowe. The words someone says go inside speech marks. A comma comes before the name of the person being spoken to."
+    },
+    {
+      "id": "x3",
+      "tier": "easier",
+      "level": 1,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "4.2",
+        "span": "min-knocks"
+      },
+      "prompt": "The minutes say:\n\"4.50 pm: The chair closed the meeting …\"\n\"5.00 pm: The councillors left.\"\nWhich happened first?",
+      "options": [
+        "The councillors left.",
+        "The clerk tidied the chamber.",
+        "The chair closed the meeting."
+      ],
+      "answer": "The chair closed the meeting.",
+      "explain": "Times help you put things in order. 4.50 comes before 5.00, so the meeting closed first. Then the councillors went home."
+    },
+    {
+      "id": "x4",
+      "tier": "easier",
+      "level": 1,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "4.1",
+        "span": "notice-thumper"
+      },
+      "prompt": "The notice says:\n\"The knocks come from Old Thumper, the council's gavel.\"\nWhat is a gavel?",
+      "options": [
+        "a large brass bell on the wall",
+        "a kind of hat",
+        "a small wooden hammer"
+      ],
+      "answer": "a small wooden hammer",
+      "explain": "Look for clues around a new word. The gavel makes knocks, and it is called Thumper! A gavel is a small wooden hammer. The chair knocks it to start or end a meeting."
+    },
+    {
+      "id": "x5",
+      "tier": "easier",
+      "level": 1,
+      "type": "fact-opinion",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "4.S2.Q1",
+        "span": null
+      },
+      "prompt": "Councillor Mbeki says two things.\n\"The Library is free for everyone.\"\n\"It should stay that way.\"\nWhich one is an opinion?",
+      "options": [
+        "It should stay that way.",
+        "The Library is free for everyone.",
+        "Both are facts."
+      ],
+      "answer": "It should stay that way.",
+      "explain": "A fact can be checked. You can find out if the Library is free. \"Should\" tells you what someone thinks is right. That makes it an opinion."
+    },
+    {
+      "id": "x6",
+      "tier": "at",
+      "level": 2,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 2,
+      "source": {
+        "doc": "4.3",
+        "span": "tully-footballer"
+      },
+      "prompt": "Constable Tully reads \"the gavel was sent off\" and thinks of football. In a football match, what does \"sent off\" mean?",
+      "options": [
+        "kept safe in a locked box until next month",
+        "made to leave the game for breaking a rule",
+        "posted somewhere by mail"
+      ],
+      "answer": "made to leave the game for breaking a rule",
+      "explain": "Some phrases have two meanings. In football, a player who breaks the rules is sent off the pitch. But \"sent off\" can also mean sent by post, like a letter. A good detective asks which meaning the writer had in mind."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 2,
+      "type": "pronoun",
+      "skill": "pronoun",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "4.4",
+        "span": "tam-bag"
+      },
+      "prompt": "Tam wrote:\n\"marlowe went home the other way.\"\n\"he had a big bag. heavy.\"\nWho is \"he\" in the second line?",
+      "options": [
+        "Marlowe Finch",
+        "Tam",
+        "Councillor Bright"
+      ],
+      "answer": "Marlowe Finch",
+      "explain": "A pronoun like \"he\" usually points back to the last person named. The line just before names Marlowe, so the \"he\" with the big bag is Marlowe. A big bag is not a gavel, though. What was in it is another question."
+    },
+    {
+      "id": "x8",
+      "tier": "at",
+      "level": 2,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "4.S1.Q2",
+        "span": "bright-crack"
+      },
+      "prompt": "Put Councillor Bright's three moments in order, from first to last.",
+      "options": [
+        "Then this morning the box was empty.",
+        "On the third knock, I heard a crack.",
+        "I put Old Thumper back in his box very gently."
+      ],
+      "answer": [
+        "On the third knock, I heard a crack.",
+        "I put Old Thumper back in his box very gently.",
+        "Then this morning the box was empty."
+      ],
+      "explain": "Words like \"then\" and \"this morning\" are time clues. The crack came on the third knock, at the end of Monday's meeting. He put the gavel away straight after. The empty box came last."
+    },
+    {
+      "id": "x9",
+      "tier": "at",
+      "level": 2,
+      "type": "fact-opinion",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "4.S3.Q1",
+        "span": "pet-train"
+      },
+      "prompt": "Which of these things Mr Pettigrew says is a fact you could check?",
+      "options": [
+        "I came on Tuesday's noon train.",
+        "Quick votes are kind votes.",
+        "I am not sure of a lot of things lately."
+      ],
+      "answer": "I came on Tuesday's noon train.",
+      "explain": "A fact can be checked, and Mr Pettigrew even shows his ticket. \"Quick votes are kind votes\" is only what Mr Crane thinks. \"I am not sure\" tells you a feeling."
+    },
+    {
+      "id": "x10",
+      "tier": "at",
+      "level": 2,
+      "type": "figurative",
+      "skill": "inference",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 1,
+      "source": {
+        "doc": "4.3",
+        "span": "tully-footballer"
+      },
+      "prompt": "Tully writes:\n\"Like a footballer who broke the rules.\"\nWhat kind of writing is this?",
+      "options": [
+        "a list of facts",
+        "a simile",
+        "a question"
+      ],
+      "answer": "a simile",
+      "explain": "A simile compares two things using \"like\" or \"as\". Tully compares the gavel to a footballer. It is a fun picture, but a comparison is not evidence."
+    },
+    {
+      "id": "x11",
+      "tier": "harder",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 5,
+      "source": {
+        "doc": "4.5",
+        "span": "blot-mended"
+      },
+      "prompt": "In the minutes, Mr Osei wrote \"the gavel was sent off\".\nIn his letter he wrote:\n\"He is sent to be mended, by tonight's post.\"\nWhat did he mean by \"sent off\"?",
+      "options": [
+        "posted away to be mended",
+        "thrown out for breaking the rules",
+        "hidden so the vote could not start",
+        "locked away in his desk"
+      ],
+      "answer": "posted away to be mended",
+      "explain": "The same writer used both phrases, so his letter explains his minutes. \"Sent off\" here means posted, not thrown out. Tully read it the football way, and the whole town got the wrong idea."
+    },
+    {
+      "id": "x12",
+      "tier": "harder",
+      "level": 3,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "4.S1.Q2",
+        "span": null
+      },
+      "prompt": "Councillor Bright \"polishes his watch for a long time.\"\nThen he says \"Oh, very well.\"\nWhat does this tell you about him?",
+      "options": [
+        "He is bored and would like to go home now.",
+        "He is proud of his shiny watch.",
+        "He is putting off a hard answer."
+      ],
+      "answer": "He is putting off a hard answer.",
+      "explain": "People sometimes keep their hands busy when they do not want to speak. \"Oh, very well\" means he has given in. Then he tells the truth about the crack, and says he was ashamed."
+    },
+    {
+      "id": "x13",
+      "tier": "harder",
+      "level": 3,
+      "type": "sentence-combine",
+      "skill": "sequence",
+      "strand": "writing",
+      "objective": "s6-join",
+      "chapter": 2,
+      "source": {
+        "doc": "4.S1.Q2",
+        "span": null
+      },
+      "prompt": "Councillor Bright says \"I told nobody. I was ashamed.\" Which sentence joins these two ideas and keeps their meaning?",
+      "options": [
+        "I was ashamed, but I told nobody about the crack.",
+        "I was ashamed, so I told nobody.",
+        "I told everybody, so I was ashamed."
+      ],
+      "answer": "I was ashamed, so I told nobody.",
+      "explain": "Being ashamed is the reason he kept quiet. \"So\" joins a reason to what happened because of it. \"But\" would mean the two ideas pull against each other, and they do not."
+    },
+    {
+      "id": "x14",
+      "tier": "harder",
+      "level": 3,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 4,
+      "source": {
+        "doc": "4.S4.Q6",
+        "span": "mar-books"
+      },
+      "prompt": "Marlowe carried back \"Twelve overdue library books\". Think about the two parts of \"overdue\". What does it mean?",
+      "options": [
+        "late back, past the day they were due",
+        "so heavy that they are hard to carry home",
+        "brand new and never read"
+      ],
+      "answer": "late back, past the day they were due",
+      "explain": "\"Over\" can mean past or beyond, and \"due\" is the day something should be back. So \"overdue\" books are past their return day. One of Marlowe's books was three years late!"
+    },
+    {
+      "id": "x15",
+      "tier": "harder",
+      "level": 3,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 4,
+      "source": {
+        "doc": "4.1",
+        "span": "notice-tuesday"
+      },
+      "prompt": "The minutes say that after Monday's meeting, \"the gavel was sent off\". The notice says the vote was \"called on Tuesday at two\". What does the order of these two events tell you?",
+      "options": [
+        "The vote was called before the gavel left.",
+        "The gavel left before anyone had called the vote.",
+        "Both happened on Wednesday morning, just before the vote."
+      ],
+      "answer": "The gavel left before anyone had called the vote.",
+      "explain": "Monday comes before Tuesday. So when the gavel left, there was no vote yet. Nobody could have hidden it to stop a vote that did not exist."
+    },
+    {
+      "id": "x16",
+      "tier": "harder",
+      "level": 3,
+      "type": "punctuation",
+      "skill": "vocab",
+      "strand": "sentence",
+      "objective": "s5-apostrophe",
+      "chapter": 2,
+      "source": {
+        "doc": "4.S3.Q1",
+        "span": "pet-train"
+      },
+      "prompt": "Mr Pettigrew says \"I came on Tuesday's noon train.\" Why does \"Tuesday's\" have an apostrophe?",
+      "options": [
+        "It shows the train belongs to Tuesday.",
+        "It is short for \"Tuesday is\".",
+        "It shows that there was more than one Tuesday."
+      ],
+      "answer": "It shows the train belongs to Tuesday.",
+      "explain": "An apostrophe and \"s\" can show that something belongs to something. Here the noon train is Tuesday's noon train. It is not short for \"Tuesday is\", because \"Tuesday is noon train\" makes no sense."
+    },
+    {
+      "id": "x17",
+      "tier": "at",
+      "level": 2,
+      "type": "pronoun",
+      "skill": "pronoun",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "4.4",
+        "span": "tam-he"
+      },
+      "prompt": "Tam wrote:\n\"marlowe finch held the door for him.\"\n\"he said thank you marlowe\"\nWho is \"he\" in the second line?",
+      "options": [
+        "Marlowe Finch",
+        "Tam",
+        "Mr Osei"
+      ],
+      "answer": "Mr Osei",
+      "explain": "\"He\" thanks Marlowe, so \"he\" cannot be Marlowe. You do not thank yourself. Marlowe held the door for Mr Osei, so Mr Osei said thank you. Tam's note has two \"he\"s, and they point at two different people."
+    }
+  ],
+  "wrongLinks": [
+    {
+      "spans": [
+        "tully-marlowe",
+        "tam-bag"
+      ],
+      "quill": "Two people saw a heavy bag. Did either of them see inside it?"
+    }
+  ],
+  "revealSetting": "The council chamber, two minutes to ten. Everyone stands under the carved motto: Councillor Bright with Mr Crane's shiny gavel raised, Councillor Mbeki with nine speech cards, Mr Pettigrew hugging his briefcase, Marlowe by the door, Professor Penhallow very straight in the gallery, Constable Tully with his cocoa. The big clock ticks. Nell steps up to the speakers' step, then thinks better of it and hands the notebook to the child.",
+  "aside": [
+    {
+      "where": "chapter 1, opening",
+      "text": "Wednesday morning in the Forum. The Town Hall steps are crowded, and the pigeons are cross about it. Inside, the council chamber smells of floor polish and old speeches. Dust turns slowly in the sunbeams. Above the door, under the carved motto, the big clock ticks, louder than a clock should. On the long table sits a velvet-lined box, and the box is empty: there is only the dent where Old Thumper lay for two hundred years, like a shadow with nobody to cast it. The agency arrives at 9.20, ten minutes ahead of Constable Tully's cocoa."
+    },
+    {
+      "where": "chapter 1, end",
+      "text": "Felix climbs on a chair under the motto, for a closer look at the grey card. He sniffs, frowns, and sniffs again. Above his head, the big clock ticks on. Nine thirty-one.",
+      "lines": [
+        {
+          "who": "FELIX",
+          "direction": "whispering",
+          "text": "Footnote: it smells of violets. Footnote to the footnote: stone doesn't smell of anything."
+        }
+      ]
+    },
+    {
+      "where": "chapter 2, opening",
+      "text": "Interviews take place in the Town Hall's side room, which smells of floor polish and old speeches. Through the wall, the big clock ticks. Each answer arrives on the desk as a typed transcript."
+    },
+    {
+      "where": "chapter 2, end",
+      "text": "In the corridor, Mr Pettigrew sets down his briefcase to apologise to a door. The catch slips open a crack. Dev, behind a fern, lifts his biscuit-tin periscope.",
+      "lines": [
+        {
+          "who": "DEV",
+          "direction": "whispering",
+          "text": "There's something in there. Long. Wooden. With a big round head."
+        },
+        {
+          "who": "ASHA",
+          "direction": "whispering",
+          "text": "Nine thirty-eight."
+        }
+      ]
+    },
+    {
+      "where": "chapter 3, halfway (it gets worse)",
+      "text": "Mr Pettigrew, very pink, opens his briefcase on the long table. Inside lies a brand-new gavel, shiny as a conker, with a crane bird carved on its head and the price tag still on its string.",
+      "lines": [
+        {
+          "who": "PETTIGREW",
+          "text": "Mr Crane sent it. In case. I didn't like to show it. It looks so… prepared."
+        },
+        {
+          "who": "BRIGHT",
+          "direction": "opening a rule book as thick as a loaf",
+          "text": "Town Hall rule ninety. \"If Old Thumper is lost for good, another gavel may knock.\""
+        },
+        {
+          "who": "BRIGHT",
+          "text": "Sent off. Thrown out. Lost. If he's gone for good, we vote at ten. With this."
+        },
+        {
+          "who": "MBEKI",
+          "text": "Who says he's *lost*?"
+        },
+        {
+          "who": "QUILL",
+          "text": "Two small words. Everything now turns on them."
+        },
+        {
+          "who": "ASHA",
+          "text": "Nine forty. Twenty minutes."
+        }
+      ]
+    },
+    {
+      "where": "chapter 3, end (the false solution)",
+      "text": "At the chamber door, Marlowe Finch has heard every word. He turns, scarf flying, and runs down the Town Hall steps.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "Think about it. Marlowe loves that Library, and no gavel means no cut."
+        },
+        {
+          "who": "NELL",
+          "text": "He had the bag. He was at the door. He won't say what was in it."
+        },
+        {
+          "who": "NELL",
+          "text": "And he crept into the Library by the side door, so nobody would see. Hunch-o-meter: *ten*."
+        },
+        {
+          "who": "TULLY",
+          "text": "He's running! Is that a ten-and-a-half?"
+        }
+      ]
+    },
+    {
+      "where": "chapter 4, opening",
+      "text": "Six minutes later, Marlowe is back, out of breath, holding a slip of paper the way you hold a ticket for a train that is leaving."
+    },
+    {
+      "where": "chapter 4, end",
+      "text": "Nine fifty-eight. Councillor Bright stands at the head of the long table and lifts Mr Crane's shiny gavel.",
+      "lines": [
+        {
+          "who": "BRIGHT",
+          "text": "Two minutes. Unless somebody can tell me where Old Thumper is."
+        }
+      ]
+    }
+  ]
+}

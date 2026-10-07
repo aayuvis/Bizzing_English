@@ -1,0 +1,15003 @@
+# INKWELL DETECTIVES — Season One: *The Vanishing Words*
+
+*The complete series bible, plotline and twelve case scripts for Bizzing English's flagship reading-mystery game.*
+*About 71,000 words of scripts plus the bible. A Bizzing mystery. Every character, place and line is original.*
+
+**Contents**
+- Part 1–8 · The series bible: rules, world, characters, the season arc, the twelve plotlines, skills, levels, the script format
+- Part 9 · The full scripts:
+  - CASE 0 — The Thirty-Nine Steps of Bellweather's
+  - CASE 1 — The Marrow That Walked Away
+  - CASE 2 — The Lamplighter's Wrong Turn
+  - CASE 3 — The Case of the Upside-Down Fountain
+  - CASE 4 — The Missing Gavel
+  - CASE 5 — The Understudy's Secret
+  - CASE 6 — Forty-Two Signatures
+  - CASE 7 — The Trapdoor Reveal
+  - CASE 8 — The Map That Changed Its Mind
+  - CASE 9 — The Bottle on the Lake
+  - CASE 10 — The Deed Dated Wrong
+  - CASE 11 — The Clock That Never Strikes
+- Part 10 · The interface: best in class, highly graphical
+- Appendices · Supporting cast · Continuity ledger · Checks
+
+---
+
+
+*Bizzing English · the flagship game · series bible and plotline (4 Oct 2026)*
+
+> Read like a detective. Every case in this book is solved by reading closely: noticing a word, linking two lines,
+> putting events in order, and proving it with the text.
+
+**Inspired by three traditions, copying none of them:**
+- **the Hardy Boys:** sibling sleuths, bicycles, codes, a town full of secrets;
+- **Nancy Drew:** a fearless, observant young lead, old houses, hidden staircases, kindness to the wronged;
+- **Sherlock Holmes:** deduction from small details, a mentor at a famous address, a street network of helpers, and a
+  brilliant adversary who plays a long game.
+
+**Every character, place and line here is original.** Cases are clearly labelled **"A Bizzing mystery"**. Where a case is set
+in a world from a Library book, it borrows only the setting's mood, never the author's words or characters.
+
+---
+
+## Part 1. The rules every writer follows
+
+1. **Fair play.**
+   - Every clue needed to solve a case is in the documents the child can read.
+   - No solution depends on information the child never saw.
+   - A careful reader can always solve it; a guesser never can.
+2. **No murder, no violence, nothing frightening.**
+   - Mysteries are about **missing things, mix-ups, pranks, secret messages, sabotage, forgeries and misunderstandings**.
+   - Nobody is hurt.
+   - Every culprit has an understandable reason.
+   - **Every ending is kind:** an apology, a returned thing, a lesson, a new friend.
+   - The adversary is brilliant, never cruel.
+3. **The reading skill is the clue.**
+   - Each case tags 3–5 reading skills (Part 6), and each skill is carried by at least one clue.
+   - The deciding clue is always **in the language:**
+     - a tense ("had already gone");
+     - a pronoun ("she" meant the aunt, not the niece);
+     - a word's meaning ("the window was *ajar*");
+     - a comma;
+     - a fact passed off as an opinion;
+     - a figure of speech taken literally.
+4. **Level discipline** (Part 7): word counts, sentence length, vocabulary band and number of suspects fixed by level. A
+   level 1 case reads easily aloud to a six-year-old; a level 5 case challenges a thirteen-year-old.
+5. **Diverse, ordinary, warm cast.**
+   - Mixed ages, families, names and backgrounds, with **nobody a stereotype**.
+   - Grown-ups are competent and kind, but the young detectives solve the cases.
+6. **Kid-safe language** (the app's blocklist), with no brand names and no real people.
+7. **Every case touches the season arc** (Part 4): a Blot calling card, a vanished word, a Crane document, or a step in a
+   character's own story.
+8. **Humour:** a running joke per character; gentle, never at someone's expense.
+
+---
+
+## Part 2. The world
+
+### 2.1 Inkwell
+**A harbour town built around the Great Library of Inkwell,** a vast old library whose six wings have grown into
+neighbourhoods. Each neighbourhood is one of the app's six painted worlds, so every case is set somewhere the child already
+knows.
+
+| District | App world | Feel | Typical mysteries |
+|---|---|---|---|
+| **The Story Garden** | `garden` | Hedges, a maze, a bandstand, the Fable Fountain, allotments, the annual Flower Show | Missing prize marrows, a talking-statue prank, a garden-gnome swap |
+| **Lamplit Row** | `study` | Gaslit Victorian streets, fog, the Inkwell Clock Tower, bookshops, **No. 9 Lantern Row** (Ada Holloway's house) | Forged letters, a stopped clock, a locked study |
+| **The Playhouse Quarter** | `playhouse` | An open-air theatre, costume stores, trapdoors, a stage-door cat | A vanished script, a swapped prop, an understudy's secret |
+| **The Forum** | `forum` | Steps, a speakers' corner, the Town Hall, the debating society, the market | A rigged election speech, a missing gavel, posters with changed words |
+| **The Scriptorium** | `scriptorium` | The Library's oldest wing: candlelit copying rooms, maps, archives, the Seal Room | The vanishing words, a mis-shelved map, a coded margin note |
+| **Poet's Lakeside** | `lakeside` | A misty lake, a boathouse, swallows, the Regatta, a lighthouse on the island | A boat that moved overnight, a poem left in a bottle, a lighthouse signal |
+
+### 2.2 The Inkwell Detective Agency
+- **Above Bellweather's Bakery** on Quayside, up 39 creaking stairs. The child's first case is learning why there are 39.
+- **The office:**
+  - a round window over the harbour;
+  - **the Casebook Wall** (a cork board where solved cases are pinned with string);
+  - a brass speaking-tube to the bakery (cinnamon buns arrive by dumbwaiter);
+  - a hat stand with one detective hat for every rank;
+  - **Quill's desk**, piled with dictionaries.
+- **The office fills with objects from solved cases:** one per case, displayed on a shelf the child can tap to remember the
+  case.
+
+### 2.3 The Great Library
+- **The heart of town:** free to everyone since its founding three hundred years ago.
+- **Its doors carry the motto:** *"Every word, for everyone."*
+- **The legend:** the Library's **Founding Charter**, the document that guarantees it stays free forever, was hidden by its
+  first Keeper, and nobody alive has seen it. That legend matters this season.
+
+---
+
+## Part 3. The characters
+
+### 3.1 The agency
+
+**Quill**: founder and chief (the app's mascot)
+- **Look:** drawn as the app's mascot, and wears a tiny deerstalker only on cases. Speaks in short, warm, exact sentences.
+- **Approach:** never solves a case for you. Asks the question that makes you look again: "Show me where it says that."
+- **Running joke:** corrects grammar in the middle of tense moments ("*Fewer* suspects, not *less*. Now, run!").
+- **Secret:** Quill was Ada Holloway's first partner, forty years ago.
+
+**Nell Okafor-Hart**, 13: lead detective (the Nancy Drew spirit)
+- **Character:** fearless, quick, kind to people others ignore. Rides a cherry-red bicycle called **The Comet**, with a
+  basket full of torches, string and a magnifying glass.
+- **Skill:** **reading people**. Notices the word someone chose, the thing they didn't say. Asks one more question than is
+  polite.
+- **Flaw:** rushes to conclusions and has to learn to wait for the evidence.
+- **Running joke:** her "hunch-o-meter" (she rates every hunch out of ten and is wrong about the tens).
+- **Personal thread:** wants to be the youngest person ever made Inspector by the Inkwell Constabulary. She keeps the
+  application form in her basket, unsent.
+
+**Asha and Dev Raman**, 12 and 11: sibling sleuths (the Hardy Boys spirit)
+- **Asha:** bold, athletic, captain of the rowing club, good at *where*: maps, routes, who could have been where and when.
+  Keeps a timeline on everything, including breakfast.
+- **Dev:** quiet, inventive, a lover of codes, ciphers and gadgets: a periscope made of biscuit tins, invisible ink from
+  lemon juice. Good at **patterns in words**: anagrams, acrostics, the odd letter out.
+- **Their thread:**
+  - their mother, **Dr Leela Raman**, is a travelling reporter who sends postcards from around the world, each with a tiny
+    puzzle on the back;
+  - this season her postcards start containing **real clues to the arc** (she is investigating Silas Crane's company from
+    abroad);
+  - Dev solves each postcard puzzle; Asha checks the dates.
+- **Running joke:** they argue about whose turn it is to carry the torch, every time, in whispers.
+
+**Felix Moreno-Lindqvist**, 12: the walking library
+- **Character:** knows a fact about everything and the origin of every word, and footnotes his own sentences out loud
+  ("…footnote: *clue* comes from *clew*, a ball of thread"). Allergic to dust, so sneezes in the Scriptorium.
+- **Skill:** **vocabulary and word history**. Knows when a word is being used wrongly, and what that says about the person
+  who used it.
+- **Flaw:** stage fright. Freezes when he has to speak in front of people.
+- **Personal thread:** must give the reveal speech in the Playhouse case (Case 7), and does, beautifully. This ties to the
+  The Podium.
+- **Running joke:** his footnotes have footnotes.
+
+**The new detective:** the child (the player's avatar).
+- Joins in Case 0 as the agency's newest member, with a blank notebook and a borrowed magnifying glass.
+- **Every solve is the child's.** The cast suggest, argue and help, but the child marks, links and accuses.
+
+### 3.2 Lantern Row (the mentor)
+
+**Inspector Ada Holloway (retired)**, 78: the mentor (the Holmes spirit)
+- **Character:** lives at **No. 9 Lantern Row**, among teetering books, a cello she plays when thinking, and a parrot named
+  Semicolon who says only "Elementary; therefore!".
+- **Background:** solved the town's great mysteries for fifty years.
+- **Approach:** teaches by riddles. Never tells you an answer, only which document to read again.
+- **Signature line:** "You have *read* it. Now *see* it."
+- **Running joke:** her tea is always cold because she forgets it while thinking.
+- **Personal thread:** her one unsolved case, **the Founding Charter**. She failed to find it forty years ago with Quill, and
+  her old apprentice, **Odile**, left her over it.
+
+**Mrs Winifred Achterberg**: Ada's housekeeper.
+- Speaks only in proverbs, which are always relevant and never immediately clear.
+- A gentle **figurative-language** coach.
+
+### 3.3 The town
+
+**Constable Bram Tully**: the friendly constable.
+- Big, slow, honest, always ten minutes behind the detectives but never jealous.
+- Brings the paperwork, the keys and the cocoa.
+- **Running joke:** his missing dog Biscuit, who is found at the end of every case somewhere absurd.
+
+**The Lamplighters**: the town's street network (the Baker Street Irregulars spirit).
+- Six children who light the gas lamps of Lamplit Row each evening and see everything.
+- **Leader: Tam Bellweather** (the baker's youngest).
+- They report sightings in **notes written in a hurry**: misspelt, unpunctuated, ambiguous. Reading them carefully is part
+  of every case, and a great place for punctuation and ambiguity clues.
+
+**The Keeper: Professor Orla Penhallow**: Keeper of the Great Library.
+- Strict, fair, sharp-eyed, and secretly terrified the Library will be sold.
+
+**Marlowe Finch**, 16: the Library's youngest assistant archivist.
+- Nervous, brilliant, always holding too many books.
+- **The season's main red herring:** appears suspicious in four cases, and is innocent every time. His kindness is the
+  clue.
+
+### 3.4 The adversaries
+
+**The Blot**
+- **The mystery:** someone who, all season, makes **single words vanish from books in the Great Library**. Each missing word
+  leaves a neat, empty gap, and a small **calling card with a perfect ink blot** on it.
+- **No one is harmed.** The words are not destroyed, only hidden. The cards are puzzles.
+- **The truth (revealed in Case 11):**
+  - the Blot is **Odile Vane**, now 58, a brilliant puzzle-maker and Ada Holloway's former apprentice;
+  - she is **not the villain**: the vanished words, read in order, spell a message: the location of the hidden **Founding
+    Charter**;
+  - Odile found the Keeper's trail years ago but couldn't finish it alone. She staged the hunt so that **someone who reads
+    carefully enough** would follow it before the Library could be sold.
+- **Her ending:** she apologises to Ada, and the two of them play cello and violin together in the last scene.
+
+**Silas Crane**: the real antagonist (the Moriarty spirit, without menace).
+- **Who:** a smooth, smiling property developer who wants to buy the Great Library, close it, and reopen it as "The Inkwell
+  Experience", with tickets.
+- **His weapons are words:**
+  - forged letters;
+  - a survey with a misleading comma;
+  - a "public notice" whose fine print says the opposite of its headline;
+  - a petition with suspicious signatures.
+- **He never harms anyone.** He bends the truth, and the child learns to read his documents closely enough to straighten it.
+- **His ending:** in Case 10, his forged deed of sale is undone by one word: he wrote that the Library "*was* sold" in a
+  letter dated before the sale.
+  - He loses the purchase and must volunteer at the Library for a year.
+  - The epilogue shows him, grudgingly, enjoying a book.
+- **His assistant, Mr Pettigrew:** anxious, honest at heart. Eventually helps the detectives (Case 10).
+
+---
+
+## Part 4. The season arc: *The Vanishing Words*
+
+### 4.1 Three threads, woven through twelve cases
+
+| Thread | What the child follows | How it shows up in cases |
+|---|---|---|
+| **A. The Blot's words** | A word vanishes from a Library book in most cases. The child collects them in the **Blot Ledger** (a page in the notebook). | A calling card in the case; a gap in a book; the vanished word is itself a clue in that case |
+| **B. Crane's scheme** | Silas Crane's documents appear in cases as background: a notice, a letter, a survey. | Each Crane document hides a language trick the child learns to spot |
+| **C. The detectives' own stories** | Nell's application, the Ramans' postcards, Felix's stage fright, Ada and Odile, Quill's past | A letter, a postcard, a diary page among the case documents |
+
+### 4.2 The vanished words (the message)
+- **Across the season, eleven words vanish.** Each case's word is found in that case's documents, and logged in the Blot
+  Ledger in the order of the cases.
+- **Read in order, they say:**
+
+  > **UNDER · THE · CLOCK · THAT · NEVER · STRIKES · LIES · EVERY · WORD · FOR · EVERYONE**
+
+- *"Under the clock that never strikes lies 'Every word, for everyone'."*
+  - **"The clock that never strikes":** the painted clock face on the Scriptorium's Seal Room ceiling, which has no
+    hands.
+  - **"Every word, for everyone":** the Library's motto, and the Charter's first line. The Charter lies hidden under the Seal
+    Room floor, beneath the painted clock.
+- **Case-by-case vanished words:**
+
+  | Case | Vanished word |
+  |---|---|
+  | 1 | UNDER |
+  | 2 | THE |
+  | 3 | CLOCK |
+  | 4 | THAT |
+  | 5 | NEVER |
+  | 6 | STRIKES |
+  | 7 | LIES |
+  | 8 | EVERY |
+  | 9 | WORD |
+  | 10 | FOR |
+  | 11 | EVERYONE |
+
+  Case 0, the tutorial, has the first calling card but no word: the card just says "Read carefully. — B."
+
+### 4.3 The postcards (thread C, Ramans)
+Dr Leela Raman's postcards arrive in Cases 2, 5, 8 and 10:
+
+| Case | Postcard | What it reveals |
+|---|---|---|
+| 2 | From Lisbon. An acrostic (the first letters of the lines spell CRANE). | Crane is buying old buildings |
+| 5 | From Nairobi. A dated list. | Crane bought and closed two libraries elsewhere |
+| 8 | From Singapore. A rebus. | Crane's lawyer is "S. Pettigrew", who has doubts |
+| 10 | From Reykjavík. The date written two ways. | The "sale date" on Crane's deed is impossible |
+
+### 4.4 Season beats
+
+| Act | Cases | Beat |
+|---|---|---|
+| **I: Welcome to Inkwell** | 0–3 | The child joins; the first calling cards; the agency is a happy chaos; Crane arrives smiling |
+| **II: The pattern** | 4–7 | The words form a pattern; Marlowe suspected and cleared; Crane's notice at the Forum; Felix's reveal speech |
+| **III: The long game** | 8–9 | The postcards and the Ledger converge; Ada tells the story of the Charter and Odile |
+| **IV: Every word, for everyone** | 10–11 | Pettigrew turns; the deed is unravelled; the Blot unmasked as Odile; the Charter found; the Library saved |
+
+---
+
+## Part 5. The twelve cases: plotlines
+
+> Each outline gives what a case writer needs. The full scripts follow in Part 9, in the format of Part 8.
+> **Level** sets length and difficulty (Part 7). **Skills** are tagged from Part 6.
+
+### Case 0 — *The Goose That Didn't Honk* (tutorial)
+- **Level:** 1 · **World:** Quayside (agency) · **Skills:** locating details, sequence, inference.
+- **Inspired by** "the curious incident of the dog in the night-time" in Arthur Conan Doyle's *Silver Blaze* (1892): the
+  clue is an animal that did *nothing*. Felix credits it in a footnote; every word of the case is original.
+- **Mystery:** on the child's first morning, Constable Tully is already waiting on step 39. His dog Biscuit has vanished
+  from his kennel on the quay, the night before the Harbour Dog Show. Nobody heard a thing, not even Admiral, the
+  bakery's goose, who honks at every stranger.
+- **Before the first document** the child chooses one of the six detectives (personas); the tutorial teaches the Knack on
+  the note under the door.
+- **Suspects (3):**
+  - **Mrs Delphine Prout:** dog-show rival with a prize poodle, Duchess; came yesterday on the ferry; looks guilty;
+  - **Mr Ned Sully:** the fishmonger; Biscuit loves his fish scraps; his boat log says he sailed at nine;
+  - **Tam Bellweather:** the baker's youngest (out on the bread round, so her mother answers through the bakery hatch).
+- **Truth:** at ten Tully shut the kennel latch; the wind blew cold and Biscuit cried. Tam wrapped him in a flour sack,
+  carried him into the warm bakery kitchen (he fell asleep in the big bun basket by the oven), shut the latch again and
+  pushed an unsigned note under the agency door: "biscuit was crying in the cold / i took him in / then i went up to
+  bed". Admiral knows Tam, so he didn't honk. Nobody stole anything: it was kindness.
+  - **The clues:** the goose that didn't honk (**inference**: "He honks at strangers" + "Not one honk all night" + "He
+    never honks at us. Or at Mr Sully": not Mrs Prout); the **sequence** of times (Mr Sully sailed at nine, Biscuit was
+    seen at ten) and the flour on the straw; the small word *in* (in where?) and Mrs Bellweather's oven that "made a
+    funny new noise. A sort of snore".
+  - **Wrong theory:** Biscuit got out by himself. The latch was shut from outside and still shut at five, and a dog
+    can't shut a latch.
+- **Why 39 steps:** the founder counted them while thinking; every 13th step creaks, a code in itself.
+- **Arc:** the first Blot calling card, "Read carefully. — B.", is pinned inside the empty kennel; Tam says there was no
+  card when she took Biscuit. Quill looks at it a moment too long. Nell has tried the painted door in the office with
+  every key in town (the Reading Door's set-up). Biscuit's running joke begins: "He'll never get lost again." "Hmm."
+- **Office object:** Admiral's white goose feather.
+
+### Case 1 — *The Marrow That Walked Away*
+- **Level:** 1 · **World:** the Story Garden (Flower Show) · **Skills:** pronoun reference, inference, vocabulary in
+  context.
+- **Mystery:** Grandpa Okoro's prize marrow vanished from the Flower Show tent the night before judging.
+- **Suspects:**
+  - **Mrs Pell:** rival grower, grumpy;
+  - **Kip:** a boy who loves pumpkins;
+  - **the Garden Gnome Society:** pranksters.
+- **Truth:** Grandpa's granddaughter Zuri moved it into the cool shed so it wouldn't wilt in the heat.
+  - **The clue:** "*She* moved it in the evening" in the gardener's note means Zuri, not Mrs Pell. The pronoun refers to the
+    last girl named in the note, and the word *wilt* explains the motive.
+- **Arc:** a calling card in the Flower Show catalogue; the word **UNDER** has vanished from a Story Garden book's sign
+  ("Keep off the grass, ___ the oak").
+- **Ending:** the marrow wins second; Mrs Pell gives Grandpa her secret compost recipe.
+- **Office object:** a rosette.
+
+### Case 2 — *The Lamplighter's Wrong Turn*
+- **Level:** 1 · **World:** Lamplit Row · **Skills:** sequence (time words), locating details, punctuation and meaning.
+- **Mystery:** on Lamplit Row, one lamp was left unlit on the darkest night, and a lost tourist walked into the canal
+  (safely, a little wet).
+- **Suspects:** **three Lamplighters** whose round crossed that street.
+- **Truth:** nobody skipped it. Tam's rushed note ("light the lamp by the bridge not the one by the bakery") was read by Ivy
+  without its missing comma, so she went to the wrong lamp.
+  - **The clue:** the note, and the round's timeline.
+- **Arc:**
+  - the first **Raman postcard** (the Lisbon acrostic spells CRANE);
+  - Silas Crane is seen measuring the Library steps with a tape;
+  - the word **THE** vanishes from a street sign in a Lamplit Row bookshop window.
+- **Ending:** the Lamplighters invent a "comma whistle".
+- **Office object:** a lamplighter's pole tip.
+
+### Case 3 — *The Case of the Upside-Down Fountain*
+- **Level:** 2 · **World:** the Story Garden · **Skills:** fact and opinion, inference, figurative and literal.
+- **Mystery:** every morning this week the Fable Fountain has run backwards, water rising into the stone fox's mouth. A
+  "curse"?
+- **Suspects (3):**
+  - **Mr Grail:** the park keeper;
+  - **Juniper:** a girl who wants a pond for her frogs;
+  - **the Fountain Restoration Committee.**
+- **Truth:** Juniper has been switching the pump valve to "fill" at night to save her frogs' pond during the drought.
+  - **The clue:** the committee's report says "the fountain *was cursed*", which is opinion. The engineer's log says "valve
+    found in position B", which is fact.
+  - The child separates the two and follows the facts.
+  - Juniper's diary: "the frogs are *dry as dust*" is figurative, but her worry is real.
+- **Arc:**
+  - the word **CLOCK** vanishes from the inscription on the fountain plaque;
+  - a calling card floats in the basin;
+  - Crane's first **public notice** ("The fountain will be **improved**") hides in its fine print that the park will close.
+- **Ending:** the town builds Juniper's frogs a pond.
+- **Office object:** a stone frog.
+
+### Case 4 — *The Missing Gavel*
+- **Level:** 2 · **World:** the Forum · **Skills:** vocabulary in context, pronoun reference, sequence.
+- **Mystery:** the Town Hall's ancient gavel vanished just before the vote on whether to "review" the Library's funding.
+  Without the gavel, the vote can't be called.
+- **Suspects (4):**
+  - **Councillor Bright:** for the review;
+  - **Councillor Mbeki:** against;
+  - **Mr Pettigrew:** Crane's assistant;
+  - **Marlowe Finch:** seen with a bag.
+- **Truth:** the clerk, Mr Osei, sent the gavel for repair.
+  - **The clue:** his message says it was "*sent to be mended*", but the council minutes record it as "*sent off*". Two
+    meanings of "sent off".
+  - Marlowe's bag held overdue books.
+- **Arc:**
+  - the vote is postponed;
+  - Crane's petition appears, with signatures in identical handwriting (to be explained in Case 6);
+  - the word **THAT** vanishes from the Forum's carved motto;
+  - the first time Marlowe is suspected and cleared.
+- **Office object:** the repaired gavel's old handle.
+
+### Case 5 — *The Understudy's Secret*
+- **Level:** 2 · **World:** the Playhouse Quarter · **Skills:** inference, author's purpose and voice, sequence.
+- **Mystery:** the night before opening, the lead's script for *The Lighthouse Keeper's Daughter* (a play written by the
+  Playhouse's own writer, Rosalind Ashe) vanished. Someone left lines underlined in green ink.
+- **Suspects (3):**
+  - **Hugo:** the understudy, who wants the lead;
+  - **Petra:** the stage manager;
+  - **the stage-door cat**, Inkwell's most famous cat (comic).
+- **Truth:** the lead actor, Celeste Fairweather, hid her own script. She has lost her voice and was too embarrassed to say
+  so.
+  - The green underlines are in her style of writing (her notes always end with "—C.").
+  - She was marking the lines she wanted Hugo to take.
+  - **The clue:** the voice and style of the anonymous note matches Celeste's letters, not Hugo's.
+- **Arc:**
+  - **Raman postcard from Nairobi:** Crane closed two libraries;
+  - the word **NEVER** vanishes from a poster ("The show will ___ go on" became "The show will go on");
+  - a calling card in the prompt book.
+- **Ending:** Hugo and Celeste share the role; Felix helps prompt.
+- **Office object:** a green pen.
+
+### Case 6 — *Forty-Two Signatures*
+- **Level:** 3 · **World:** the Forum · **Skills:** vocabulary in context, fact and opinion, punctuation and meaning, a
+  contradiction.
+- **Mystery:** Crane's petition, "Save Our Library by Selling It!", has forty-two signatures. The Keeper suspects forgery,
+  but proving it means finding who really signed.
+- **Suspects (4):**
+  - **Mr Pettigrew;**
+  - **Councillor Bright;**
+  - **the petition's collector, Dot Harkness;**
+  - **Marlowe Finch,** again seen near the papers.
+- **Truth:** Dot collected real signatures for a *different* petition, "Save Our Library!", and Councillor Bright copied the
+  list onto Crane's petition.
+  - **The clues:**
+    - a punctuation change in the title (an exclamation mark moved, and words added in a different ink);
+    - Dot's diary;
+    - signers who say they signed "*to keep it open*".
+  - Bright is embarrassed and resigns from the review committee. Marlowe was there to return Dot's pen.
+- **Arc:**
+  - the word **STRIKES** vanishes from the Forum clock's notice;
+  - Nell's hunch about Marlowe is wrong ("hunch-o-meter: 10. Wrong again.");
+  - Ada appears for the first time and says: "You have read it. Now see it."
+- **Office object:** a fountain pen.
+
+### Case 7 — *The Trapdoor Reveal*
+- **Level:** 3 · **World:** the Playhouse Quarter · **Skills:** sequence (a tight timeline), pronoun reference, inference,
+  figurative and literal.
+- **Mystery:** during the dress rehearsal, the Playhouse's antique **Founder's Lantern** vanished from the stage. It was in
+  full view of everyone, then gone when the lights came up.
+- **Suspects (4):**
+  - **the lighting operator, Sunny;**
+  - **the props master, Mr Dunmore;**
+  - **Celeste;**
+  - **a visiting "inspector" from Crane's company.**
+- **Truth:** the lantern dropped through a trapdoor that the props master had marked for repair, and it is still beneath the
+  stage. The "inspector" lied about his timing.
+  - **The clues:**
+    - the stage cue sheet against three statements;
+    - "*it went down like a stone*" (literal, not figurative);
+    - "*he* had already left": past perfect proves the inspector lied about being in the wings.
+  - **Why the inspector lied:** he was secretly measuring the theatre for Crane.
+- **Felix's thread:** he gives the reveal speech on stage, overcoming his fright. *(The Podium link: the child can
+  plan Felix's speech with structure cards.)*
+- **Arc:**
+  - the word **LIES** vanishes from the Playhouse's motto, "All the world's a stage and the stage ___ never", a
+    Playhouse-made motto;
+  - **Mrs Achterberg** gives the proverb "A lantern lit below lights those above."
+- **Office object:** a small brass lantern.
+
+### Case 8 — *The Map That Changed Its Mind*
+- **Level:** 4 · **World:** the Scriptorium · **Skills:** inference, vocabulary in context, a contradiction (the lying
+  suspect), sequence.
+- **Mystery:** the Library's 300-year-old **Harbour Map** has been "corrected": the harbour wall is redrawn so that the
+  Library appears to stand on land Crane has bought.
+- **Suspects (4):**
+  - **the Keeper's deputy, Mr Swale;**
+  - **the map restorer, Ms Ito;**
+  - **Marlowe Finch;**
+  - **Mr Pettigrew.**
+- **Truth:** Mr Swale altered it, paid by Crane.
+  - **The clues:**
+    - Swale says the ink "*matched the original perfectly*", but the restorer's report says the new line is in **iron-gall
+      ink that had not dried**, so it was new;
+    - his timeline lie: he "*had not entered* the Seal Room since spring", but the Seal Room log has his initials;
+    - one of the four suspects tells one checkable lie, twice (in writing and aloud): Swale.
+  - Pettigrew, interviewed, is nervous and **honest**.
+- **Arc:**
+  - **Raman postcard from Singapore:** Crane's lawyer, S. Pettigrew, has doubts;
+  - the word **EVERY** vanishes from the Scriptorium's copy-book;
+  - Ada tells the agency the story of the **Founding Charter** and of **Odile**, her apprentice who left. She and Quill
+    failed to find the Charter forty years ago.
+  - The Blot Ledger now reads "UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY…" and Dev realises it's a sentence.
+- **Office object:** a map-maker's compass.
+
+### Case 9 — *The Bottle on the Lake*
+- **Level:** 4 · **World:** Poet's Lakeside · **Skills:** figurative and literal, author's purpose and voice, inference,
+  punctuation and meaning.
+- **Mystery:** a bottle washes up at the Regatta with a poem inside, signed with an ink blot. Is it a threat? It seems to
+  say the lighthouse will "*go dark*" on Regatta night.
+- **Suspects (4):**
+  - **the lighthouse keeper, Mrs Quayle;**
+  - **a poet, Mr Lyle Asante;**
+  - **the Regatta organiser;**
+  - **"the Blot".**
+- **Truth:**
+  - the poem isn't a threat: it's a **riddle** by the Blot, written in figurative language ("*the eye of the island will
+    close to see*"), meaning the lighthouse lamp will be shuttered so its **light falls through a gap onto the boathouse
+    roof**, revealing a painted word;
+  - the "threat" reading comes from a **misplaced comma** in the copy the organiser typed out;
+  - the poet's own poems use a different voice (he rhymes; this doesn't).
+- **The real culprit (of a smaller thing):** the organiser had cancelled the fireworks to save money and blamed "the
+  threat".
+- **Arc:**
+  - the word **WORD** is painted on the boathouse roof, revealed by the light;
+  - the Blot is now known to be a puzzle-maker, not a vandal.
+- **Ending:** the fireworks go ahead, paid for by the bakery.
+- **Office object:** the message bottle.
+
+### Case 10 — *The Deed Dated Wrong*
+- **Level:** 5 · **World:** Lamplit Row and the Forum · **Skills:** sequence (dates and tenses), vocabulary in context, a
+  contradiction, fact and opinion, author's purpose.
+- **Mystery:** Crane announces he has **bought** the Great Library, showing a signed deed of sale. The Keeper is sure she
+  never signed.
+- **Suspects (5):**
+  - **Silas Crane;**
+  - **Mr Pettigrew;**
+  - **the Keeper herself** (could she have signed by mistake?);
+  - **Mr Swale** (back from Case 8);
+  - **a handwriting expert hired by Crane.**
+- **Truth:** the deed is forged.
+  - **The clues:**
+    - **Raman postcard from Reykjavík:** the date written two ways, 03/04 against 4 March, shows the deed's date is
+      impossible under Inkwell's day/month order;
+    - **Crane's own letter**, dated a day *before* the deed, already says the Library "**was sold**";
+    - Pettigrew's statement: he "*was asked to witness* it" but "*did not see it signed*" (the passive voice hides who
+      asked);
+    - the expert's report is all opinion ("*a beautiful, convincing hand*") and no fact.
+  - **Pettigrew turns honest** and gives the agency the draft deed, with Crane's corrections in red.
+- **Arc:**
+  - the word **FOR** vanishes from Crane's own deed ("___ the sum of…"), which is how the agency knows the Blot is ahead of
+    them;
+  - the Ledger is now one word short.
+- **Ending:**
+  - the sale is void;
+  - Crane, in a quiet scene with Ada, admits the trick, and is sentenced by the magistrate to a year of volunteering at the
+    Library;
+  - Nell finally sends her Inspector application.
+- **Office object:** Crane's red pencil.
+
+### Case 11 — *The Clock That Never Strikes* (finale)
+- **Level:** 5 · **World:** the Scriptorium (the Seal Room) · **Skills:** every skill, plus a two-step inference.
+- **Mystery:** the final calling card says only "*Now read it all. — B.*" The Ledger needs one last word. The Blot has
+  invited the agency to the Seal Room at midnight.
+- **Suspects (5)** for who the Blot is:
+  - **Marlowe Finch;**
+  - **Mrs Achterberg;**
+  - **Professor Penhallow;**
+  - **Odile Vane** (a "visiting puzzle-setter" seen at three earlier cases, under different names);
+  - **Ada Holloway herself** (Nell's hunch, rated 10).
+- **Truth:** the Blot is **Odile Vane**.
+  - **The clues:**
+    - the voice of the calling cards matches Odile's old letters to Ada: the same unusual word *forthwith*, the same
+      sign-off dash;
+    - the timeline of her three disguised appearances;
+    - an anagram Dev cracks: "**Vane**" against the "**Nave**" alcove where the cards were printed.
+  - **The last word, EVERYONE,** is not hidden at all. It is the Library's motto above the door, which the child has passed
+    in every case.
+  - **The full sentence:** *Under the clock that never strikes lies "Every word, for everyone".*
+- **The Seal Room scene:**
+  - the painted clock on the ceiling has no hands ("never strikes");
+  - under the floor tile beneath it, in an oilskin wrap, lies the **Founding Charter**, whose first line is *"Every word, for
+    everyone."*
+  - The Library can never be sold.
+- **Ending:**
+  - Odile explains: she found the trail but needed a reader careful enough to follow it, and someone the town would believe;
+  - she apologises to Ada; Ada forgives her;
+  - they play cello and violin in the last scene;
+  - Felix gives the speech at the Charter's unveiling;
+  - Nell's letter arrives: "**Junior Inspector**";
+  - Biscuit the dog is found asleep in the Charter's old hiding place;
+  - Quill pins the Charter's ribbon to the Casebook Wall.
+- **Office object:** the Charter's ribbon.
+
+---
+
+## Part 6. The reading skills (tags)
+
+| Tag | What the clue needs the child to do | Example |
+|---|---|---|
+| `detail` | Locate a stated detail | "White *flour* on the straw." |
+| `sequence` | Order events using time words and tense | "*had already* left", "*after* the bell" |
+| `pronoun` | Resolve who "he / she / it / they" refers to | "*She* moved it", meaning the last girl named |
+| `inference` | Conclude what isn't said | Muddy boots → was outside |
+| `vocab` | A word's meaning *in this sentence* decides it | *ajar*, *intact*, "*sent off*" |
+| `punctuation` | A comma, apostrophe or quotation mark changes the meaning | "light the lamp by the bridge not…" |
+| `factopinion` | Separate what happened from what someone thinks | "was cursed" against "valve in position B" |
+| `figurative` | Tell figurative from literal language | "dry as dust" against "went down like a stone" |
+| `voice` | Match style and word choice to a writer | the sign-off "—C.", the word *forthwith* |
+| `contradiction` | Find where two documents can't both be true | the Seal Room log against "I had not entered" |
+
+Each tag maps to an objective in `mastery.js`. Credit is given only on a **later day** (the family's rule).
+
+---
+
+## Part 7. Level discipline
+
+| Level | Ages | Suspects | Documents | Words per document | Sentence length | Deductions | Extras |
+|---|---|---|---|---|---|---|---|
+| 1 | 6–8 | 3 | 4–5 | ≤ 40 | ≤ 10 words | 2 | Every document read aloud; a picture on every document; one clue type at a time |
+| 2 | 8–9 | 3–4 | 6 | ≤ 70 | ≤ 14 | 3 | Timeline joins |
+| 3 | 9–10 | 4 | 8 | ≤ 100 | ≤ 18 | 4 | One red herring |
+| 4 | 10–12 | 4 | 10 | ≤ 140 | ≤ 22 | 5 | One suspect lies once |
+| 5 | 12–14 | 5 | 12 | ≤ 180 | ≤ 26 | 6 | Two red herrings; an unreliable narrator; a two-step inference |
+
+**Words** come from the app's band word lists. Above-band words are allowed only where the word *is* the `vocab` clue, and
+are then glossed in the notebook once marked.
+
+---
+
+## Part 8. The script format (what each case file contains)
+
+Each case is written as a **script** that converts directly to `data/cases/<id>.json`.
+
+```
+# CASE n — Title
+meta: level · world · skills · vanished word · office object · arc beats
+
+## Case card            (≤ 60 words, read aloud at L1–2; the hook)
+## Cast                 (each suspect + helpers: name, one-line look, one-line manner, portrait expressions needed)
+
+## Chapter 1 — The scene
+### DOC n.1 · <type: note / letter / diary / notice / report / log / postcard / list / poster / transcript>
+  Author · Date/time · Found where · Picture (one line for the painter)
+  Text, with clue spans marked:  [[c:ID|the exact words]]
+  ...
+## Chapter 2 — Interviews
+### SUSPECT <name>
+  Questions offered (4–6, by type: who / what / when / where / why), each with the ANSWER document text and spans.
+## Chapter 3 — The board
+  DEDUCTIONS: D1 … each = { type (contradiction / timeline / pronoun / meaning / fact-opinion / figurative / voice),
+                            statement the child forms, supporting spans [c:IDs] (≥2), why it matters }
+  RED HERRINGS: each with the spans that clear it
+## Chapter 4 — The timeline
+  EVENTS in true order, each with its time-word span; which events the child places
+## Chapter 5 — The accusation
+  CULPRIT · MINIMAL EVIDENCE SET (3 deductions/spans) · WRONG-SUSPECT RESPONSES (Quill's line pointing to the clearing clue,
+  per suspect) · WEAK-EVIDENCE RESPONSE
+## The reveal              (a scene in dialogue: who explains what; the culprit's confession and reason; ≤ 400 words)
+## Epilogue                (the kind ending; the arc beat; the running joke; the office object)
+## Detective School drill  (one short drill built from this case's best clue)
+## Art and scene notes     (backgrounds, props, portraits, expressions; no lettering in any painting)
+```
+
+**Writing quality bar:** each case should read as a satisfying short mystery on its own, with the warmth of the cast and a
+real "aha".
+
+---
+
+## Part 9. Full scripts
+
+## CASE 0 — The Goose That Didn't Honk
+
+*A Bizzing mystery · the tutorial*
+
+meta: level 1 · world: Quayside (the agency, above Bellweather's Bakery) · skills: `detail`, `sequence`, `inference` ·
+vanished word: none (the first calling card only: "Read carefully. — B.") · office object: **Admiral's white goose
+feather** · arc beats: the child joins the agency and chooses a detective; the first Blot calling card, pinned inside the
+empty kennel; why there are 39 steps; Nell's hunch-o-meter, Felix's footnotes, Asha's timelines and Dev's codes all
+introduced; Biscuit's running joke begins; the painted Reading Door; Quill looks at the card a moment too long.
+
+**Teaches the interface, one step at a time:** choose a detective → read aloud → magnifier → mark a clue → the Knack →
+interview → link two clues → place the timeline → accuse with evidence. Every step works by touch AND keyboard. Quill
+never does the reading for the child.
+
+**Inspired by** "the curious incident of the dog in the night-time" in Arthur Conan Doyle's Sherlock Holmes story
+*Silver Blaze* (1892): the clue is an animal that did *nothing*. Here it is a goose. Felix credits it out loud; every word
+of the case is original.
+
+---
+
+### Case card
+
+*(read aloud)*
+
+It is your first morning at the Inkwell Detective Agency. Fog lies on the quay. Constable Tully is already waiting on
+step 39. His dog Biscuit has vanished from a shut kennel! Dog Show judging is at eleven. Nobody heard a thing. Not even
+Admiral, the goose who honks at every stranger. Why didn't the goose honk?
+
+---
+
+### Cast
+
+| who | role | look | manner | portrait expressions | motive · secret |
+|---|---|---|---|---|---|
+| **Quill** | founder and chief | the app's mascot, a tiny deerstalker put on the moment Tully says "gone" | short, warm, exact; corrects grammar at the worst moments | calm, amused, thoughtful (looking at the card) | – |
+| **Nell Okafor-Hart**, 13 | lead detective | cherry-red bicycle The Comet chained at the bottom; basket of torches, string, a folded form she never mentions | fast, kind, sure; the hunch-o-meter | calm, amused, nervous ("wrong again") | – |
+| **Asha Raman**, 12 | where and when | rowing-club jacket, a pencil behind each ear | brisk; writes a timeline of everything, including breakfast | calm, amused | – |
+| **Dev Raman**, 11 | codes | biscuit-tin periscope on a string round his neck | quiet; lights up at a pattern | calm, amused | – |
+| **Felix Moreno-Lindqvist**, 12 | words | neat cardigan, too many pens, a handkerchief | footnotes himself out loud; footnotes the footnotes | calm, amused | – |
+| **the new detective** | the player | the child's chosen detective, a blank notebook, a borrowed magnifying glass | the one who marks, links and accuses | (the persona's portrait) | – |
+| CLIENT **Constable Bram Tully** | Biscuit's owner | big, slow, kind; helmet slightly too small; an empty lead and a dog brush | for once, first up the stairs; worried, honest | calm, nervous, offended (briefly), relieved | – |
+| **Biscuit** | the missing dog | small, brown, very fluffy, one ear up | (a dog) | calm (in Tully's photo), asleep and floury (reveal) | – |
+| SUSPECT **Mrs Delphine Prout** | dog-show rival; came yesterday on the ferry | tall, a big tartan coat, a velvet bag of brushes, Duchess the white poodle under one arm | grand and sniffy; talks to Duchess more than to people; kinder than she sounds | calm, offended, nervous, relieved | Motive: Duchess must win, and fluffy Biscuit is her only real rival · Secret: the treats in her velvet bag are for Biscuit; she thinks he is a very handsome dog, and would never tell Duchess |
+| SUSPECT **Mr Ned Sully** | the fishmonger; owns the boat *The Sea Pie* | rubber boots, a striped jumper, a bucket of fish scraps, one gull that follows him everywhere | loud, cheerful, calls everyone "shipmate" | calm, amused, nervous | Motive: Biscuit loves his fish scraps and would follow him anywhere · Secret: he leaves Biscuit scraps by the kennel every night at half past eight, although Tully has put him on a show diet |
+| SUSPECT **Tam Bellweather**, 10 | the baker's youngest; leads the Lamplighters | flour on her nose, an apron with too many pockets, a bicycle bell | cheerful, kind, always in a hurry; brings home every lost thing | calm, amused, nervous, relieved | Motive: none but kindness; she brings home every lost thing · Secret: she carried Biscuit in out of the cold, then forgot to sign her note |
+| witness **Mrs Rosa Bellweather** | the baker, Tam's mother | sleeves rolled, a tray on each hand, steam behind her | busy, fond, talks while working | calm, amused | – |
+| witness **Admiral** | the bakery's goose (does not speak) | big, white, orange beak, one feather that sticks up | honks at strangers; never at friends | calm, honking, asleep | – |
+
+---
+
+### Chapter 1 — The scene
+
+#### Cutscene (four comic panels, read aloud)
+
+1. **Quayside, eight o'clock. Fog on the water.** Grey fog curls round the masts; gulls cry somewhere above it; the air
+   smells of salt and warm buns. The child stands at a green door beside a bakery window glowing with buns. A big white
+   goose on the bakery step stretches out his neck. ADMIRAL: "HONK! HONK! HONK!" NELL (leaning out of a high round
+   window): "Don't mind Admiral! He honks at anyone new. Come up! All of them!"
+2. **The stairs.** A narrow, crooked staircase rising and rising. Every so often a step is drawn with little wavy
+   lines (a creak). Caption: *Up, and up, and up.*
+3. **Step 39. Three hours to judging.** Constable Tully sits on the top step with an empty lead and a dog brush. Through
+   the little round window, the harbour clock says eight; Biscuit's show number pokes out of his pocket. The agency door
+   is open; Nell, Asha, Dev and Felix peer out. CAPTION: *Dog Show judging: eleven o'clock.* TULLY: "Biscuit's gone! And
+   judging is at eleven!" ASHA: "Constable Tully got here *first*?" DEV: "Then something is very wrong."
+4. **Close on Quill**, putting on a tiny deerstalker. QUILL: "Good. A case. Sit down, Constable. Detectives do not
+   guess. They read."
+
+#### TUTORIAL 0 · Choose your detective
+
+> **[UI]** Still on step 39. Before the first document, the six detective cards fan out: Thea, Milo, Oskar, Signe, Hari
+> and Vani (3 × 2 on desktop, two columns of three on a phone). Each card shows the name, the signature line, the gift
+> in one sentence and the Knack as a short text-highlight demo. Read aloud on every card.
+
+**QUILL:** "Every detective here reads in their own way. Which one are you?"
+*(Touch: tap a card. Keyboard: arrows to choose, Enter to pick. The child may rename the detective.)*
+**QUILL** (on choosing): "{det}. Good. Now, about this dog."
+
+#### TUTORIAL 1 · Read aloud and the magnifier
+
+> **[UI]** The first document slides onto a painted desk-lid propped on the top step. The speaker icon pulses once.
+
+**QUILL:** "This is a document. Every word in it can help you. Tap the speaker to hear it read."
+*(Keyboard: Tab to the speaker, then Enter.)*
+
+**QUILL** (after the reading): "Now drag the glass over the words. It makes them bigger. It does not make them
+easier. Only you can do that." *(Keyboard: arrows move the glass; Esc puts it down.)*
+
+#### DOC 0.1 · note — *Why are there 39 steps?*
+
+Author: Quill · Date/time: years ago · Found where: framed on the wall beside step 39 · Picture: a small framed note
+in neat ink, a sketch of a staircase with three steps drawn wobbly.
+
+> Why are there 39 steps?
+> I counted them while thinking.
+> [[c:creak|Every thirteenth step creaks]].
+> So three steps creak on the way.
+> Three creaks mean a friend is coming.
+> — Q.
+
+#### TUTORIAL 2 · Mark a clue (practice, nothing can go wrong)
+
+**QUILL:** "Which steps creak? The note tells you. Press and hold the words that say so."
+*(Keyboard: move along the phrases with the arrows, then press Space.)*
+
+> **[UI]** On a correct mark, the magnifying glass sweeps over the phrase, an inked underline draws itself, and a clue
+> card flies to the notebook on the left.
+
+**QUILL** (on success): "That is a clue card. It lives in your notebook now. To take it back, tap the card."
+**QUILL** (if the child marks "I counted them while thinking"): "True words. But do they say which steps creak? Look
+again."
+**QUILL** (after 2 misses, earned hint): "The answer has a number in it. A long number word."
+
+**DEV** (reading over the child's shoulder): "Thirteen, twenty-six, thirty-nine. Every thirteenth. It's a code! The
+stairs tell you someone's coming."
+**FELIX:** "Footnote: thirteen is called a baker's dozen. Footnote to the footnote: so these are three baker's
+dozens of steps. Very fitting, above a bakery."
+**ASHA:** "I'm starting a timeline. Seven o'clock: porridge. Eight o'clock: Constable Tully, early. Eight-oh-one:
+amazed."
+
+#### DOC 0.2 · report — *Constable Tully's report*
+
+Author: Constable Tully · Date/time: written at five this morning · Found where: handed over on step 39 before anyone
+asks · Picture: a page torn from a black police notebook, big careful capitals, a cocoa ring in one corner.
+
+> Constable Tully's Report
+> Wednesday night, cold and windy.
+> [[c:ten|I last saw Biscuit at ten]].
+> [[c:latch|I shut his latch from outside]].
+> [[c:still|At five, the latch was still shut]].
+> [[c:empty|But the kennel was empty]]!
+> [[c:nohonk|Not one honk all night]].
+
+**NELL:** "A stranger crept up in the night and took him! Hunch-o-meter: *ten*."
+**QUILL:** "Ten already? You have read one report."
+**NELL:** "Fine. Nine. Nine and a half."
+**TULLY:** "Or he got out by himself! He's very clever, Biscuit."
+**QUILL:** "Then the new detective will read about the latch."
+
+**FELIX** (going pink): "Ah. Then I should mention this. It was under the door this morning. I thought it was a poem."
+
+#### DOC 0.3 · note — *The note under the door*
+
+Author: unknown (no name) · Date/time: none written · Found where: pushed under the agency door in the night · Picture: a
+crumpled paper bun bag, flattened out; round, hurried pencil; no capital letters and no full stops.
+
+> [[c:crying|biscuit was crying in the cold]]
+> [[c:tookin|i took him in]]
+> [[c:bed|then i went up to bed]]
+> dont wory
+
+**FELIX:** "A biscuit, crying in the cold. I thought it was very sad poetry."
+**QUILL:** "Look at the first word, Felix. What is missing?"
+**DEV:** "A capital letter! It's not *a* biscuit. It's *Biscuit*!"
+**TULLY:** "Somebody has my dog!"
+**NELL:** "'I took him in.' In *where*?"
+**ASHA:** "Everybody on the quay has a bun bag. That doesn't tell us who."
+**QUILL** (to the child): "Mark the words that say what the writer did. There may be more than one."
+
+#### TUTORIAL 2b · Your Knack (one step, six variants)
+
+> **[UI]** The chosen detective's Knack button glows once on DOC 0.3. Keyboard: K, then arrows and Enter.
+
+**QUILL:** "Every detective has a knack. Yours works once in each chapter. It points; it never tells. Try it on this
+note."
+
+| detective | the Knack on the note | what it offers (three, only one matters) |
+|---|---|---|
+| **Thea** (Owl's Eye) | **THEA:** "What's *not* on this page? No name. No capital letters. No time." | three gaps glow faintly: the missing name · the missing capital *B* · the missing time |
+| **Milo** (Winged Words) | **MILO:** "So what it *actually* says is… somebody carried Biscuit indoors. But in *where*?" | three ways to say "i took him in": somebody carried Biscuit indoors · somebody took Biscuit up to the agency · Biscuit took somebody in |
+| **Oskar** (Two Ravens) | **OSKAR:** "We've seen that word before. *Cold*. It's in Constable Tully's report too." | Memory finds "cold and windy" in DOC 0.2; Thought offers three pins that might link: *crying* + *cold and windy* · *took him in* + *still shut* · *bed* + *creaks* |
+| **Signe** (The Spindle) | **SIGNE:** "Something happened between *took him in* and *went up to bed*. Nobody's told us where." | a strand of wool settles on the gap after "i took him in" (the gap, never the event) |
+| **Hari** (Another's Shoes) | **HARI:** "If I were the writer, what would I have seen? A little dog, crying in the wind." | a viewpoint card: *knew* (Biscuit was cold / Biscuit was hungry / Biscuit was lost) · *wanted* (to make him warm / to win the Dog Show / to hide him) · *didn't know yet* (that Tully would worry / that it would rain / that it was Wednesday) |
+| **Vani** (The Tuning Ear) | **VANI:** "Listen to how it *says* it. No capitals. No full stops. *Wory* with one r. Somebody sleepy, in a hurry." | three word-habits underlined: no capitals · no full stops · the spelling of *wory* |
+
+#### Down to the quay
+
+> **[UI]** Everyone clatters down the 39 steps (three creaks) and out into the fog. Masts creak. Water slaps the quay
+> wall. Biscuit's little blue kennel stands by the bakery yard gate, its straw damp. Admiral stands guard on the gate post. He looks at Nell: nothing. He looks at Tully: nothing. He
+> looks at the new detective: **HONK!**
+
+#### DOC 0.4 · sign — *BEWARE OF THE GOOSE*
+
+Author: Mrs Rosa Bellweather · Date/time: painted years ago · Found where: on the bakery yard gate, beside the kennel ·
+Picture: a white-painted board, a big goose drawn in one corner, its beak open.
+
+> BEWARE OF THE GOOSE!
+> His name is Admiral.
+> He guards the quay all night.
+> [[c:strangers|He honks at strangers]].
+> Very, very loudly.
+> Please do not feed him cake.
+
+**FELIX:** "Footnote: geese have guarded things for thousands of years. Footnote to the footnote: very loudly."
+
+#### DOC 0.5 · list — *Asha's kennel notes*
+
+Author: Asha Raman · Date/time: this morning, eight o'clock · Found where: Asha's pocket notebook, written at the kennel ·
+Picture: a ruled notebook page, two pencils' worth of handwriting, a tiny drawing of a kennel with its door shut.
+
+> The kennel, eight o'clock
+> Latch: shut.
+> Biscuit's bowl: empty.
+> Straw: cold.
+> [[c:fishy|A smell of fish]].
+> [[c:flour|White flour on the straw]].
+> [[c:card|A small card, pinned inside]].
+> — A. Raman
+
+> **[UI]** The card is small and cream, with one perfect round ink blot. On it: *Read carefully. — B.* It stays pinned in
+> the kennel; the child can mark Asha's line about it.
+
+**NELL:** "B? B for Biscuit! He left us a note!"
+**DEV:** "Biscuit can't write, Nell."
+**ASHA:** "And why does it smell of fish?"
+
+> **[UI]** The fog thickens. The gulls go quiet. Far across the harbour, a violin plays four slow notes. Then nothing.
+> *(Chapter 1 ends here: the hook.)*
+
+**DEV:** "Who plays a violin on the water at eight in the morning?"
+**QUILL:** "Leave the card for now. A dog first."
+
+---
+
+### Chapter 2 — Interviews
+
+> **[UI]** Out of the fog along the quay comes a tall lady in a tartan coat with a white poodle under one arm. Admiral rises up on the
+> gate post: **HONK! HONK! HONK!** A moment later Mr Sully walks by with his fish bucket. Admiral does not even look up.
+
+#### TUTORIAL 3 · Interviews
+
+**QUILL:** "Now we ask questions. Pick a question card. The answer comes as a new document. Mark it like any other."
+*(Touch: tap a card. Keyboard: arrows to choose, Enter to ask.)*
+**QUILL** (after the first answer): "Watch the face too. Faces are clues. Words are better ones."
+
+#### CLIENT Constable Bram Tully
+
+**Questions offered:**
+
+- **WHEN** — "When did you last see Biscuit?" *(expression: nervous)*
+  > At ten. I gave him his biscuit.
+  > [[c:cried|He cried a bit in the wind]].
+  > Then I shut his latch.
+  > Then I went home to bed.
+- **HOW** — "Could Biscuit get out by himself?" *(expression: offended, then calm)*
+  > Biscuit? He's very clever.
+  > But [[c:paws|he can't work a latch]].
+  > He can't even open his biscuit tin.
+- **WHAT** — "Do you hear Admiral at night?" *(expression: calm)*
+  > Every honk.
+  > I live next door to the bakery.
+  > [[c:hearall|He honks, I wake up]].
+  > Last night I slept like a baby.
+
+#### SUSPECT Mrs Delphine Prout
+
+**Questions offered:**
+
+- **WHO** — "Who are you?" *(expression: calm)*
+  > Delphine Prout. This is Duchess.
+  > [[c:ferry|We came yesterday, on the ferry]].
+  > Duchess has won nine cups.
+  > She will win ten today.
+- **WHY** — "Why do you want to win so much?" *(expression: offended)*
+  > Want to? [[c:win|Duchess must win]].
+  > She always wins.
+  > That fluffy brown dog had no chance anyway.
+  > Not that I took him!
+- **WHERE** — "Where were you last night?" *(expression: nervous)*
+  > In the Harbour Hotel, room nine.
+  > Duchess snores, so I hardly slept.
+  > Nobody saw me.
+  > Is that a crime?
+  > We sail home at noon, anyway.
+- **WHAT** — "Does Admiral know you?" *(expression: offended)*
+  > Know me? That goose!
+  > [[c:honked|He honked at me all the way up the quay]].
+  > Twice.
+  > Duchess has not recovered.
+- **WHAT** — "What is in your velvet bag?" *(expression: nervous)*
+  > Brushes. Combs. Ribbons.
+  > [[c:treats|And dog treats. Not for Duchess]].
+  > Duchess only eats chicken.
+  > That is all I will say.
+
+**NELL:** "She *wanted* Biscuit gone. She has secret *treats*. And nobody saw her. Hunch-o-meter: ten!"
+**ASHA:** "You said nine and a half for 'a stranger'."
+**NELL:** "She *is* a stranger. So it's the same hunch. Bigger."
+**NELL:** "And she sails at noon! With Biscuit in that bag!"
+**TULLY:** "On the noon ferry? But judging is at eleven!"
+
+#### SUSPECT Mr Ned Sully
+
+> **[UI]** Mr Sully's portrait on cork, his gull on his shoulder. He slaps his boat log down on the desk-lid before anyone
+> asks. It arrives as DOC 0.6.
+
+#### DOC 0.6 · log — *Boat log: The Sea Pie*
+
+Author: Mr Ned Sully · Date/time: Wednesday night to Thursday morning · Found where: handed over by Mr Sully · Picture: a
+damp, salty logbook with a fish drawn on the cover, times written in thick pencil.
+
+> Boat Log: The Sea Pie
+> Wednesday night
+> [[c:sailed|9.00 Sailed out with the tide]].
+> 1.00 Fish! Lots of fish.
+> Thursday morning
+> [[c:back|6.00 Back at the quay]].
+
+**Questions offered:**
+
+- **WHAT** — "Does Biscuit know you?" *(expression: amused)*
+  > Know me? Best friends!
+  > [[c:scraps|He loves my fish scraps]].
+  > He'd follow me to the moon for a sardine.
+- **WHERE** — "Where were you last night?" *(expression: amused)*
+  > Out at sea, shipmate.
+  > It's all in my boat log.
+  > Ask the fish. They saw me.
+- **WHEN** — "When did you get back?" *(expression: nervous)*
+  > Six this morning.
+  > The quay was quiet.
+  > I thought Biscuit was asleep in his straw.
+  > Poor old Biscuit.
+- **WHY** — "Why does the kennel smell of fish?" *(expression: nervous)*
+  > Ah. You noticed.
+  > [[c:everynight|I leave him scraps every night]].
+  > Before I sail, at half past eight.
+  > Don't tell the Constable.
+  > Biscuit is on a show diet.
+
+**TULLY** (*offended, briefly*): "A show diet is a show diet, Ned!"
+
+#### SUSPECT Tam Bellweather
+
+> **[UI]** Tam's portrait hangs on the board, but Tam is out on the bread round. Mrs Bellweather answers through the
+> bakery hatch, a tray in each hand. Clouds of steam roll out behind her.
+
+**Questions offered:**
+
+- **WHERE** — "Where is Tam now?" *(Mrs Bellweather: amused)*
+  > Out on the bread round, love.
+  > She rides all over the harbour.
+  > Back by nine, I hope.
+- **WHAT** — "Does Admiral honk at you?" *(amused)*
+  > Admiral? Bless him.
+  > [[c:us|He never honks at us. Or at Mr Sully]].
+  > He knows us.
+- **WHO** — "What is Tam like?" *(amused)*
+  > Kind! Tam brings home every lost thing.
+  > Gulls, kittens, a boot.
+  > [[c:upstairs|She sleeps up over the kitchen]].
+  > With her music on.
+- **WHEN** — "When did you go to bed?" *(calm)*
+  > Nine, like always.
+  > I sleep like a log.
+  > [[c:oven|The oven stays warm all night]].
+  > [[c:basket|The big bun basket sits right by it]].
+- **WHAT** — "What did you hear this morning?" *(calm)*
+  > Only my oven.
+  > [[c:snore|It made a funny new noise. A sort of snore]].
+  > The kitchen is all steam.
+  > I can hardly see my own buns.
+
+#### WITNESS Admiral
+
+> **[UI]** Admiral's portrait is a painting of him on the gate post. A question card reads "Ask Admiral". Tapping it
+> gives:
+
+> Admiral looks at Nell.
+> No honk.
+> He looks at Constable Tully.
+> No honk.
+> He looks at you.
+> [[c:honkyou|HONK! HONK! HONK!]]
+
+**QUILL:** "A goose is a very honest witness. He says the same thing every time."
+**NELL:** "Then why didn't he honk at Mrs Prout last night?"
+**QUILL:** "Good. Hold on to that question. It is the whole case."
+*(Chapter 2 ends here: the hook.)*
+
+---
+
+### Chapter 3 — The board
+
+#### TUTORIAL 4 · Link two clues
+
+> **[UI]** The view pulls back to a cork board in lamplight. Fog presses on the round window; somewhere out on the water a
+> foghorn sounds. The child's clue cards are pinned on it, with the suspect portraits along the top. Nell has already
+> pinned a red string from Mrs Prout's portrait to the empty kennel. Keyboard: B opens the board.
+
+**QUILL:** "Two clues together can say more than each alone. Drag one clue card onto another." *(Keyboard: choose a
+card, press Space, choose another, press Space.)*
+**QUILL** (as the string draws): "Now tell me what they show together." *(The wheel opens. At level 1 only two
+choices glow brighter than the rest: **timeline** and **meaning**. All the choices stay available.)*
+**QUILL** (gold link): "Yes. The string goes gold when two clues truly belong together."
+**QUILL** (slack link): "What do these two *really* say? Read them out loud to me."
+
+#### DEDUCTIONS
+
+**D1 · inference** — *Admiral honks at strangers. But he did not honk once all night. So whoever took Biscuit was
+someone Admiral knows: a Bellweather, or Mr Sully. Not Mrs Prout, who came yesterday on the ferry.*
+- Supporting spans: [c:strangers] "He honks at strangers" · [c:nohonk] "Not one honk all night" · [c:us] "He never
+  honks at us. Or at Mr Sully" · (also accepted) [c:ferry] "We came yesterday, on the ferry" · [c:honked] "He honked
+  at me all the way up the quay" · [c:honkyou] "HONK! HONK! HONK!" · [c:hearall] "He honks, I wake up"
+- Minimum link: [c:strangers] + [c:nohonk], with [c:us] to say who Admiral knows.
+- Why it matters: the clue is a thing that did *not* happen. A goose who honks at every stranger stayed quiet, so no
+  stranger came.
+- Hint ladder (earned): 1. "Admiral is a noisy goose. What did he do last night?" 2. "Nothing. Not one honk. Now, who
+  does Admiral never honk at?" 3. "Link 'He honks at strangers' to 'Not one honk all night'."
+
+**FELIX** (as the string goes gold): "Footnote: a famous detective once solved a case because a dog did nothing in the
+night. Ours is a goose. Footnote to the footnote: Sherlock Holmes, in *Silver Blaze*, by Arthur Conan Doyle. 1892."
+**QUILL:** "Everyone *heard* nothing. You *noticed* the nothing. That is the difference between seeing and observing."
+**NELL:** "Unless she fed him! The sign says don't feed him cake. So people *do*. And she has treats!"
+**NELL:** "Hunch-o-meter for Mrs Prout: still ten." *(the needle trembles, but stays up)*
+**QUILL:** "A goose who honked at her twice this morning? Hm. A hunch is a question, Nell. Not an answer."
+
+**D2 · timeline** — *Mr Sully sailed at nine, and Biscuit was still in his kennel at ten. So Mr Sully was out at sea.
+The writer took Biscuit in, then went up to bed. And there is flour on the straw. Flour means the bakery.*
+- Supporting spans: [c:sailed] "9.00 Sailed out with the tide" · [c:ten] "I last saw Biscuit at ten" · [c:flour]
+  "White flour on the straw" · (also accepted) [c:tookin] "i took him in" · [c:bed] "then i went up to bed" ·
+  [c:upstairs] "She sleeps up over the kitchen" · [c:back] "6.00 Back at the quay" · [c:crying] "biscuit was crying in
+  the cold"
+- Minimum link: [c:sailed] + [c:ten], then [c:flour] to say who was there.
+- Why it matters: nine comes before ten. Mr Sully had gone before Biscuit went missing, so the person Admiral knew
+  was a Bellweather, and the flour says baker.
+- Hint ladder (earned): 1. "Mr Sully's boat log has times. When did he sail?" 2. "Nine. When did Constable Tully last
+  see Biscuit?" 3. "Link '9.00 Sailed out with the tide' to 'I last saw Biscuit at ten'. Then find who leaves flour
+  behind."
+
+**D3 · inference (optional: the wrong theory)** — *Biscuit did not get out by himself. The latch was shut from outside
+at ten, and still shut at five. A dog cannot shut a latch behind him.*
+- Supporting spans: [c:latch] "I shut his latch from outside" · [c:still] "At five, the latch was still shut" ·
+  [c:empty] "But the kennel was empty" · [c:paws] "he can't work a latch"
+- Why it matters: it clears the last easy answer. Somebody opened the latch, lifted Biscuit out, and shut it again.
+
+#### RED HERRINGS
+
+- **Mrs Prout** (the false solution: Nell's ten) — cleared by [c:strangers] "He honks at strangers" + [c:nohonk] "Not
+  one honk all night" (+ [c:ferry], [c:honked], and in Chapter 4 [c:roomin] "8.00 Room nine in" + [c:locked] "Front door
+  locked from nine till six"). She is a stranger to Admiral, and he honked at her all the way up the quay; last night he
+  never honked at all. And the hotel night book says she never went out. ([c:win] "Duchess must win" and [c:treats] "And
+  dog treats. Not for Duchess" are what make her look guilty. *Wanting* is not *doing*, and the treats were for Biscuit,
+  given kindly by daylight: her secret.)
+- **Mr Sully** — cleared by [c:sailed] "9.00 Sailed out with the tide" + [c:ten] "I last saw Biscuit at ten" (+
+  [c:back], [c:everynight] "I leave him scraps every night"). He was at sea from nine till six. ([c:scraps] "He loves my
+  fish scraps", [c:fishy] "A smell of fish" and [c:us] are why he looks possible: Biscuit loves him, the kennel smells
+  of his fish, and Admiral knows him. The fish smell is his secret: scraps at half past eight, before he sailed.)
+- **"He got out by himself"** (the wrong theory) — cleared by D3.
+
+> **[UI]** The board is done. Nell's red string still runs from Mrs Prout to the kennel. Then, from the stairs below:
+> *Creak.* … *Creak.* … *Creak.* *(Chapter 3 ends here: the hook.)*
+
+**DEV:** "Three creaks. Someone is coming up."
+**NELL:** "Mrs Prout! Come to confess!"
+
+---
+
+### Chapter 4 — The timeline
+
+> **[UI]** It is not Mrs Prout. It is Constable Tully, puffing, a mug of cocoa in one hand and a page in the other. Ten
+> minutes behind, as usual, with the paperwork, as usual.
+
+**TULLY:** "Nine o'clock already! Judging is at eleven. I asked at the Harbour Hotel. The night porter gave me this."
+
+#### DOC 0.7 · log — *The Harbour Hotel night book*
+
+Author: Mr J. Pike, night porter · Date/time: Wednesday night · Found where: brought up the 39 steps by Constable Tully ·
+Picture: a page from a big leather hotel book, a brass key drawn in the margin, a tea ring.
+
+> Harbour Hotel night book
+> Wednesday
+> [[c:roomin|8.00 Room nine in]]. Lady and poodle.
+> [[c:locked|Front door locked from nine till six]].
+> 11.00 Room nine wants warm milk.
+> Room nine snores. Or the poodle does.
+> — J. Pike, night porter
+
+**ASHA:** "Room nine. That's Mrs Prout's room."
+**NELL:** "Locked from nine till six? Then she never went out at all."
+**NELL:** "Hunch-o-meter for Mrs Prout… one. Maybe zero." *(the needle drops flat)*
+**FELIX:** "Footnote: the warm milk was for Duchess. Footnote to the footnote: Duchess snores."
+**QUILL:** "Then who *did* Admiral let by, without one honk?"
+
+#### TUTORIAL 5 · The washing line
+
+> **[UI]** A washing line stretches across the bakery yard. Event postcards hang in a pile. Keyboard: T opens it;
+> arrows choose a card, Space picks up, arrows move, Space pegs it.
+
+**QUILL:** "Put things in the order they happened. Look for times and time words: *nine*, *ten*, *then*, *five*. I
+will peg the first card to show you."
+> **[UI]** Quill pegs "Mr Sully sails out with the tide." The span glows when hovered.
+
+**QUILL** (wrong order, the line shakes gently): "Which word says *when*? Show me."
+
+| # | event | time-word span | placed by |
+|---|---|---|---|
+| 1 | Mr Sully sails out with the tide | [c:sailed] "9.00" | Quill (demo) |
+| 2 | Tully says goodnight to Biscuit and shuts the latch | [c:ten] "at ten" · [c:latch] | child |
+| 3 | Biscuit cries in the cold wind | [c:crying] · [c:cried] | child |
+| 4 | Someone takes Biscuit in | [c:tookin] "i took him in" | child |
+| 5 | The note-writer goes up to bed | [c:bed] "then i went up to bed" | child |
+| 6 | The latch is still shut, but the kennel is empty | [c:still] "At five" · [c:empty] | child |
+| 7 | Mr Sully comes back to the quay | [c:back] "6.00" | child |
+| 8 | Asha finds flour on the straw | [c:flour] (Asha: "eight o'clock") | pre-placed |
+
+**ASHA** (when the line is right): "Ooh. That is a *good* timeline. Better than my porridge one."
+
+> **[UI]** The washing line stops swinging. From the bakery's open window, through the steam, comes a small, slow sound.
+> A snore. *(Chapter 4 ends here: the hook.)*
+
+**FELIX:** "Was that… the oven?"
+
+---
+
+### Chapter 5 — The accusation
+
+#### TUTORIAL 6 · Accuse, with evidence
+
+> **[UI]** A painted reveal room: the bakery hatch on the foggy quay, the warm kitchen glowing behind it, the three
+> suspect portraits on easels. Keyboard: A opens it. The Knack is greyed out here: the child accuses alone.
+
+**QUILL:** "Now the big moment. Choose who took Biscuit. Then pin three pieces of evidence to the portrait. A
+good detective never accuses empty-handed."
+**QUILL** (reading the pins back): "You say… let me hear it."
+
+**The question asked:** *Who took Biscuit, and where is he now?*
+
+- **CULPRIT:** Tam Bellweather (kindly: not a thief, a rescuer).
+- **MINIMAL EVIDENCE SET (3):** D1 (inference) · D2 (timeline) · [c:basket] "The big bun basket sits right by it".
+  Also accepted in place of one: [c:upstairs] "She sleeps up over the kitchen" · [c:snore] "It made a funny new noise.
+  A sort of snore" · [c:oven] "The oven stays warm all night" · [c:tookin] "i took him in".
+- **Then the child chooses a place** on a painted picture of the quay and the kitchen:
+
+  | place | Quill, if chosen |
+  |---|---|
+  | Mrs Prout's hotel | "Would Admiral let a stranger by without one honk? Read the goose sign again." |
+  | **the bun basket by the oven** | *(right)* |
+  | Mr Sully's boat | "Where was *The Sea Pie* at ten o'clock? Read the boat log again." |
+  | step 39 | "We started up there. The note says *in*. In where? Listen to what Mrs Bellweather heard this morning." |
+
+**WRONG-SUSPECT RESPONSES**
+- **Mrs Prout:** "Admiral honks at strangers. Did anybody hear a honk last night? Read the goose sign and Constable
+  Tully's report again. Then read the hotel night book."
+- **Mr Sully:** "Look at the boat log. Where was Mr Sully at ten o'clock?"
+
+**WRONG THEORY** — *"He got out by himself":* "Biscuit can't shut a latch. Read the report: how was the latch at five?"
+
+**WEAK-EVIDENCE RESPONSE** (right suspect, evidence that does not show it, such as [c:scraps] or [c:creak]):
+"That is true. But does it show who carried Biscuit, and where? Pin the words about the goose, the times and the
+flour."
+
+---
+
+### The reveal
+
+> **[UI]** The bakery hatch on the foggy quay, just after nine. Everyone gathers: Constable Tully, Mrs Prout with Duchess, Mr
+> Sully with his gull, and Mrs Bellweather in the hatch with steam behind her. Inside, beside the big black oven, a bun
+> basket under a checked cloth goes up… and down… and up.
+
+**QUILL:** "Everyone is here. Detective, show them what you read."
+**QUILL:** "First, the kennel. Shut from outside, still shut at five, and empty. So somebody lifted him out, and shut it
+again."
+**QUILL:** "Next, the goose sign. It was on the gate from the very first page. 'He honks at strangers.'"
+**QUILL:** "Now read the report again. 'Not one honk all night.' And Mrs Bellweather: 'He never honks at us.'"
+**FELIX:** "So no stranger came. Footnote: the nothing was the clue."
+**NELL:** "And your treats were for Biscuit, Mrs Prout."
+**MRS PROUT** (*relieved*): "He is a very handsome dog. Do not tell Duchess."
+**QUILL:** "Then the boat log. Mr Sully sailed at nine. Biscuit was still home at ten."
+**MR SULLY:** "The fish smell was my scraps. Sorry, Constable!"
+**QUILL:** "That leaves the flour, the word 'in', and a snoring oven."
+**NELL:** "He's in the oven!"
+**QUILL:** "*By* the oven, Nell. One small word. A very different morning."
+
+> **[UI]** The child lifts the cloth. Curled in the bun basket, white with flour from nose to tail, Biscuit is fast
+> asleep. He snores.
+
+**MRS BELLWEATHER:** "So *that's* my snoring oven!"
+**TULLY:** "Biscuit!" *(he does not cry; he says it is the steam)*
+
+> **[UI]** A bicycle bell in the fog. TAM rolls up to the hatch, flour on her nose. Admiral waddles behind her. Not a
+> honk.
+
+**TAM:** "Morning! Why is everyone here? Oh! You found my note!"
+**TAM** (*nervous*): "Took? No! I *rescued* him! He was crying in the cold wind. So I wrapped him in a flour sack and
+carried him in."
+**TAM:** "I shut the latch, like Mum says. Then I wrote my note."
+**TAM:** "Admiral knows me. I feed him every day."
+**QUILL:** "Your note said 'I took him in'. *In* is a very small word with a very big job. In *where*?"
+**TAM** (*relieved, then amused*): "Oh! It could have been in the agency. Or in the sea!"
+**TAM:** "Sorry, everyone. Next time I'll write it all. And sign it. Have a bun?"
+**TULLY:** "Sorry? You kept him warm all night. Thank you, Tam. And judging isn't till eleven!"
+**NELL:** "Hunch-o-meter for Mrs Prout: ten. Wrong."
+**ASHA:** "Tens are hard."
+**DEV:** "Wait. What about the card? The blot card in the kennel."
+**TAM** (*puzzled*): "What card? There was no card when I took him."
+**FELIX:** "So someone came *after* Tam. Footnote: and someone played a violin on the water."
+**ASHA:** "Admiral didn't honk all night. But he honked all morning. At the ferry, the gulls and me."
+**QUILL:** "Not spooky. *Careful.* Someone wants us to read."
+
+> **[UI]** Out in the fog, one gull cries. Then the whole quay is very quiet.
+
+---
+
+### Epilogue
+
+> **[UI]** The Harbour Dog Show, eleven o'clock, bunting along the quay.
+
+1. **The Dog Show.** The fog lifts at last. Duchess wins first prize. Biscuit, still floury, wins a ribbon for *Whitest
+   Brown Dog*. Nell walks over to Mrs Prout. **NELL:** "I'm sorry. My hunch was wrong." **MRS PROUT:** "Duchess forgives
+   you. I am still deciding." *(She pats Biscuit anyway, slips him a treat, and some of the flour comes off on her
+   glove.)*
+2. **The office, at last.** Back up the 39 steps. Three creaks. **DEV:** "Three creaks. A friend is coming." It is
+   Admiral, waddling up behind the new detective. He looks at the new detective. He honks, once, small. Then he drops
+   a white feather at the new detective's feet and waddles away. **TAM** (from the stairs): "That means you're not a
+   stranger any more."
+   **Admiral's white feather** goes on the empty shelf, the first object there. A little light comes on above it.
+   *(Tap it later to remember this case.)*
+3. **The calling card** is pinned to the Casebook Wall, in the very middle. *Read carefully. — B.*
+   **NELL:** "B for Bellweather!" **TAM:** "I sign with a T!" **FELIX:** "When you remember." **DEV:** "B for
+   Biscuit?"
+   **QUILL** says nothing. Quill looks at the card for a moment too long, then turns away. *(Players who notice this
+   will be glad they did, eleven cases from now.)*
+4. **The painted door.** Behind the Casebook Wall is a door painted on the wall, with a painted keyhole. Nell rattles
+   its handle on her way past, out of habit. **NELL:** "Every key in town. Nothing." **ASHA:** "She's tried the
+   bakery key, the boat key and Constable Tully's whole ring." **QUILL:** "Some doors are not waiting for a key."
+5. **Biscuit**, washed, asleep in Tully's helmet. **TULLY:** "He'll never get lost again." **QUILL:** "Hmm."
+6. **The hat stand.** Quill takes down the smallest hat and puts it on the new detective's head. **QUILL:** "Trainee
+   Detective. Welcome to the agency. Your notebook is not blank any more."
+7. **Asha's timeline**, pinned by the window: *8.00 Tully on step 39. 9.10 Biscuit found. 9.11 Biscuit snores. 9.12
+   more buns.*
+
+**Case solved.** Skills used: *finding a detail* · *putting events in order* · *working out what isn't said*. A new page
+appears in the notebook: **The Blot Ledger**, empty, with one line written in Quill's hand: *"Collect the missing words
+here."*
+
+---
+
+### Detective School drill — *Then what?*
+
+*(Timeline drill, built from Tam's night. Read aloud. Drag, or use arrows and Space.)*
+
+Four cards, shuffled. Put them in order:
+- "Then I carried him in, by the oven."
+- "Last of all, I went up to bed."
+- "First, Biscuit cried in the cold wind."
+- "Then I wrapped him in a flour sack."
+
+**QUILL** (when right): "First, then, then, last of all. Little words that hold a story in order."
+**QUILL** (when wrong): "Find the word that says *first*. Start there."
+
+---
+
+### Art and scene notes
+
+**No lettering in any painting.** The goose sign, the boat log, the report, Asha's notes, the bun-bag note and the
+calling card are painted as blank templates; their words are set live in the app.
+
+- **Backgrounds:**
+  - *Quayside exterior, morning:* harbour, masts, gulls, pink-gold sky; a bakery window glowing with buns; a narrow
+    green door beside it; The Comet (cherry-red bicycle) chained to a lamp post; Admiral on the bakery step.
+  - *The staircase:* narrow, crooked, warm wood, rising out of frame; three steps (13, 26, 39) slightly darker and
+    worn, with tiny wavy creak lines in the animation only, never painted text.
+  - *Step 39 landing:* the agency door open; morning light from a little round window; Tully filling the top step.
+  - *The quay by the bakery yard:* a small blue kennel with a latched door, straw inside; the yard gate with a blank
+    white board on it (the goose sign); a gate post for Admiral; the fishing boat *The Sea Pie* moored beyond, its name
+    board blank.
+  - *The bakery hatch, foggy quay* (the reveal): the hatch open, steam rolling out into grey fog, the suspects gathered
+    in a half-circle, gulls on the bollards, the warm kitchen glowing behind.
+  - *Bakery kitchen:* copper pans, a big black oven, steam curling, the big round bun basket beside the oven under a
+    checked cloth; Biscuit inside, visible only after the tap.
+  - *The Dog Show* (epilogue): bunting, a small judges' table, dogs and owners of every kind; faces small.
+  - *The office* (epilogue): round harbour window, empty cork Casebook Wall, a door painted on the wall behind it (a
+    painted keyhole, no handle text), hat stand with hats in a row from small to tall, Quill's desk with a tower of
+    dictionaries, the dumbwaiter hatch, the brass speaking-tube.
+- **Props:** Admiral's white feather (long, clean, slightly curled; the shelf model); the calling card (small, cream,
+  one perfect round ink blot in the middle); the flattened paper bun bag; the flour sack; Tully's empty lead and dog
+  brush; Mr Sully's fish bucket; Mrs Prout's velvet brush bag (a paper twist of dog treats in the side pocket); Mr Sully's scrap tin; Tully's
+  cocoa mug; the *Whitest Brown Dog* ribbon.
+- **Portraits:** Tully (large, gentle, moustache optional, helmet slightly too small; calm, nervous, offended,
+  relieved). Mrs Prout (sixties, tall, grand, tartan coat, Duchess under one arm; calm, offended, nervous, relieved;
+  never a caricature). Mr Sully (fifties, weathered, striped jumper, a gull on his shoulder; calm, amused, nervous).
+  Tam (10, any background, flour on her nose, short practical hair, apron with pockets; calm, amused, nervous,
+  relieved). Mrs Bellweather (forties, strong arms, sleeves rolled, kind tired eyes; calm, amused). Admiral (a real
+  white farmyard goose, orange beak, one feather sticking up; calm, honking, asleep). Biscuit (fluffy, one ear up;
+  asleep and floury in the bun basket).
+- **Document templates:** framed note (0.1), police notebook page (0.2), flattened bun bag (0.3), painted gate board
+  (0.4), ruled pocket notebook (0.5), salty logbook (0.6), leather hotel night book page with a brass key in the margin
+  (0.7).
+- **Motion:** Admiral's neck stretching to honk; the checked cloth rising and falling with Biscuit's snores; the card
+  fluttering in the kennel; reduced motion makes all of these fades.
+- **Sound:** gulls, honks (never under read-aloud), a bicycle bell, three creaks (only on 13, 26, 39), oven hum, one
+  small snore, a far foghorn, water slapping the quay wall. Once only, at the end of Chapter 1: four slow violin notes far
+  across the harbour, faint and sweet, never loud. *(The season's first trace of the Blot. Nobody sees who plays.)*
+- **Atmosphere:** fog on the quay from the first panel until it lifts at the Dog Show; spooky but safe, warm windows
+  always glowing somewhere in frame.
+- **Credit:** the "dog in the night-time" idea is credited to Arthur Conan Doyle, *Silver Blaze* (1892), in Felix's
+  footnote. Quill's "seeing and observing" line adapts Holmes in *A Scandal in Bohemia* (1891). Both public domain;
+  no line is quoted.
+
+---
+
+## CASE 1 — The Marrow That Walked Away
+
+*A Bizzing mystery*
+
+meta: level 1 · world: the Story Garden (`garden`), the Flower Show · skills: `pronoun`, `inference`, `vocab` · vanished
+word: **UNDER** · office object: **a rosette** · arc beats: the first word for the Blot Ledger (a calling card in the
+Flower Show catalogue; UNDER gone from the Story Garden guidebook's sign); the Ledger is opened; Biscuit lost and found;
+Nell's unsent form; Asha and Dev argue over the torch.
+
+mystery pass (6 Oct 2026):
+- **the clock:** judging at eleven; no marrow on the table, no prize. Said in the card, the cutscene, the board (ten
+  o'clock) and the timeline (half past ten).
+- **the impossible thing:** one thin line runs from the tent door across the grass, with no footprints beside it. The
+  marrow "walked away" by itself. (One line is one wheel: a wheelbarrow. Feet leave no mark on grass baked hard by the
+  heat; a wheel carrying Bertha does.)
+- **the false solution:** Mrs Pell, by the end of chapter 3: Grandpa's letter, Nell's hunch at ten, and a folded paper in
+  her hat with Grandpa's name on it. Broken in chapter 4 when she lets the agency read it.
+- **the hidden clue:** Grandpa's own P.S. on the very first page: his wheelbarrow is gone too.
+- **the escalation:** accused, Mrs Pell takes her name card off the Green Giant and walks out of the show.
+- **the Blot, closer:** a calling card in a catalogue Dev had just read, where no card was a moment before. It smells of
+  violets. So, at the end, does the guidebook page with the gap.
+
+---
+
+### Case card
+
+*(read aloud)*
+
+It is Flower Show morning in the Story Garden. Grandpa Okoro's prize marrow, Big Bertha, has vanished from the show
+tent! A garden gnome sits in her place. One thin line runs away across the grass, with no footprints. Judging is at
+eleven. No marrow, no prize. A note says "she moved it". Who is *she*?
+
+---
+
+### Cast
+
+| who | role | look | manner | portrait expressions | motive · secret |
+|---|---|---|---|---|---|
+| **Grandpa Emeka Okoro** | client, marrow grower | seventies, cardigan with soil on the cuffs, reading glasses always pushed up on his head | warm, proud, in a hurry; reads too fast | calm, nervous, amused, relieved | – |
+| SUSPECT **Mrs Hilda Pell** | rival grower | sixties, sun hat with a fierce brim, gardening gloves, a watering can like a weapon | grumpy on the outside, kind underneath; says "Hmph" | calm, offended, amused, relieved | Motive: Big Bertha might beat her Green Giant · Secret: the paper in her hat is a present, her secret compost recipe, written for Grandpa "in case you lose" |
+| SUSPECT **Kip Mensah**, 7 | a boy who loves pumpkins | gap-toothed, pumpkin-orange jumper, a toy trowel in his pocket | cheerful, honest, every answer is about pumpkins | calm, amused, nervous, relieved | Motive: he loves round green things and was seen carrying one · Secret: he held his small pumpkin up to Big Bertha, so it could see how big to grow |
+| SUSPECT **the Garden Gnome Society** (speaker: **Mr Hamish Puddle**, Chief Gnome) | the town's harmless pranksters | a tall, thin man in a pointed red felt hat and a false white beard on elastic | solemn about silly things | calm, amused, offended, relieved | Motive: a vanished marrow would be the greatest prank in Gnome history · Secret: the Chief Gnome is scared of the dark, which is why gnomes only ever come at sunrise |
+| **Zuri Okoro**, 12 | Grandpa's granddaughter; in Asha's rowing club | rowing-club vest, wet plaits, a medal on a ribbon | kind, practical, out of breath | (reveal only) calm, amused, relieved | – |
+| **Sami Haddad** | the Story Garden's gardener | (epilogue only) muddy boots, a pencil behind one ear | writes everything down | calm, amused | – |
+| **Quill, Nell, Asha, Dev, Felix, the new detective** | the agency | as Case 0 | as Case 0 | as Case 0 | – |
+| **Constable Tully** | the constable | as Case 0, plus a lead with no dog on it | ten minutes behind | calm, nervous, relieved | – |
+
+---
+
+### Chapter 1 — The scene
+
+#### Cutscene (five comic panels, read aloud)
+
+1. **The agency, nine o'clock.** Already hot. The round window is propped open and the harbour smells of salt. The
+   dumbwaiter rattles up. On the bun tray, instead of buns, a folded letter with soil on it. QUILL: "Post. By bun."
+2. **The Story Garden, ten past nine.** Heat shimmers over the gravel paths. Hedges, a striped show tent, bunting, bees,
+   a brass band tuning up somewhere. The clock on the white bandstand says ten past nine. GRANDPA OKORO waves both arms
+   by the tent door. GRANDPA: "Judging is at eleven! No marrow on the table, no prize!"
+3. **Inside the tent.** Hot yellow light through the canvas. A long table, a label holder with no label, and in the
+   middle of a big empty space, a small garden gnome with a fishing rod, grinning. GRANDPA: "Big Bertha! Gone! And
+   this… *person* in her place!"
+4. **The grass outside the tent door.** One thin line, pressed into the grass like a pencil mark, runs away from the
+   door towards the gravel path, and stops. Not one footprint beside it. DEV (on his knees): "One line. No feet." NELL:
+   "She walked away! Big Bertha walked away all by herself!"
+5. **Nell**, pushing back her hat. NELL: "Hunch-o-meter's already beeping." QUILL: "Hunches do not beep. Marrows do not
+   walk. Read first."
+
+#### DOC 1.1 · letter — *Grandpa Okoro's letter*
+
+Author: Grandpa Okoro · Date/time: Saturday, early · Found where: sent up by the bakery dumbwaiter · Picture: a letter on
+lined paper, soil fingerprints, a drawing of a very long marrow with a smile; the P.S. squeezed in sideways at the bottom.
+
+> Dear detectives,
+> [[c:long|My long green marrow has gone]]!
+> [[c:says-she|The gardener's note says she moved it]].
+> It must be Mrs Pell!
+> Or that pumpkin boy, Kip.
+> [[c:round|He carried something round and green]].
+> [[c:barrow|P.S. My wheelbarrow is gone too!]]
+> — Grandpa Okoro
+
+**GRANDPA** (in the tent, glasses on top of his head): "I read the note. Very quickly. It is plain as day."
+**FELIX:** "Footnote: a marrow is a giant courgette. Americans say zucchini. Footnote to the footnote: it just never stopped growing."
+**NELL:** "A wheelbarrow too! Two things gone!"
+**GRANDPA** (flapping a hand): "Oh, the barrow. Somebody is always borrowing that. Bertha is what matters."
+**QUILL:** "Plain as day is when we read most carefully. New detective, the note is pinned to the tent pole."
+
+#### DOC 1.2 · note — *The gardener's tent notes*
+
+Author: Sami Haddad, gardener · Date/time: Friday evening · Found where: pinned to the tent pole · Picture: a page from a
+small spiral pad, pencil, a doodle of a sun with a frowning face, a tiny wheelbarrow.
+
+> Tent notes, Friday. [[c:hot|Very hot!]]
+> [[c:pell-five|At five, Mrs Pell watered her roses]].
+> [[c:pell-she|She grumbled about the heat]].
+> [[c:zuri-six|At six, Zuri Okoro came with a wheelbarrow]].
+> [[c:she-moved|She moved the marrow in the evening]].
+> I went home at eight.
+> — Sami, gardener
+
+**NELL:** "There! 'She moved the marrow.' And Mrs Pell is right there in the note. Hunch-o-meter: ten!"
+**QUILL:** "Two people in that note are a *she*, Nell."
+**NELL:** "…Nine."
+**QUILL** (to the child): "Each *she* points back to someone. Who is named just before each one? Mark what you find."
+
+**ASHA:** "Zuri Okoro? She's in my rowing club! She's in the long race this morning, right round the island. It
+finishes at half past ten."
+**GRANDPA:** "My Zuri? She was only helping Sami, I expect. No, no. It is Hilda Pell. I know a cross face when I see one."
+**DEV:** "So we can't ask Zuri anything till half past ten."
+**FELIX:** "Footnote: judging is at eleven. Footnote to the footnote: it is now nine fourteen."
+
+#### DOC 1.3 · notice — *Flower Show Rules*
+
+Author: the Story Garden Show Committee · Date/time: every summer · Found where: painted board by the tent door · Picture:
+a wooden notice board on two legs, a carved oak leaf at the top, a row of vegetables carved along the bottom.
+
+> Flower Show Rules
+> Judging is at eleven.
+> [[c:wilt|In the heat, vegetables wilt]].
+> [[c:droopy|They go soft and droopy]].
+> [[c:lose|A wilted marrow cannot win]].
+> [[c:shed|Spare pots go in the shed under the oak]].
+> [[c:cool|It is the coolest place in the garden]].
+
+> **[UI]** When the child marks a span with *wilt* in it, the notebook card turns over to show a gloss (level 1 rule:
+> an above-band word is glossed only once marked): *wilt: to go soft and droop, often in heat.*
+
+> **[UI]** Stage: the canvas creaks in the heat. A bee bumps against the tent roof, again and again, looking for a way out.
+
+**DEV** (peering through his biscuit-tin periscope at the oak tree): "There's a shed under that oak. Door shut."
+**FELIX:** "Footnote: an oak can live for hundreds of years. Footnote to the footnote: this one looks about a
+Tuesday old. Very small oak."
+**ASHA:** "Small, but shady."
+
+#### DOC 1.4 · list — *The Show Catalogue*
+
+Author: the Show Committee · Date/time: printed Friday · Found where: a pile on the table by the door · Picture: a little
+folded booklet, a ribbon of green on the cover, a pressed daisy. **Tucked inside the Class 4 page: a small cream card with
+one perfect ink blot.**
+
+> Show Catalogue
+> Class 4: Biggest Marrow
+> Mrs Pell: Green Giant
+> Mr Okoro: Big Bertha
+> Class 5: Pumpkins
+> [[c:kip-entry|Kip Mensah, age 7: a small green pumpkin]]
+> Class 6: Best Garden Gnome
+> The Gnome Society: Gerald
+
+**FELIX:** "Footnote: a marrow is a kind of squash. Footnote to the footnote: so is a pumpkin. Big Bertha and Kip's
+pumpkin are cousins."
+**DEV** (holding up the card): "Another one. Same blot."
+
+> **ARC · the calling card** (not a case document; read aloud): *Every gap has a word. — B.*
+
+#### DOC 1.5 · note — *The note under Gerald*
+
+Author: the Garden Gnome Society · Date/time: Saturday, sunrise · Found where: under the gnome on Big Bertha's empty table
+· Picture: a paper cut in the shape of a pointed hat, red ink, a drawing of a gnome winking.
+
+> Ha ha! The Gnomes were here!
+> [[c:sunrise|We came at sunrise, as always]].
+> [[c:line|Who drew that line on the grass? Not us!]]
+> [[c:never|We never touch the vegetables]].
+> That is Gnome Rule One.
+> — The Garden Gnome Society
+
+**NELL:** "Pranksters! In the tent! Leaving notes! Hunch-o-meter—"
+**ASHA, DEV, FELIX** (together): "Don't."
+
+> **[UI]** Chapter end. Dev turns the catalogue over in his hands, frowning.
+
+**DEV:** "That card. I read the Class 4 page when we came in. There was no card in it then."
+**FELIX** (sniffing the card): "Footnote: it smells of violets. Footnote to the footnote: there are no violets in this
+tent."
+
+> **[UI]** The tent flap lifts, and falls. Outside, the bunting hangs quite still. There is no wind at all.
+
+---
+
+### Chapter 2 — Interviews
+
+> **[UI]** The interview corner is a bench under the bandstand, the only shade on the lawn. Each suspect sits for a
+> painted portrait. Question cards fan out below. Far off, across the lake, a starting horn and faint cheering.
+
+#### SUSPECT Mrs Hilda Pell
+
+- **WHO** — "Did you move Grandpa Okoro's marrow?" *(offended)*
+  > Certainly not! Why would I touch his marrow? Mine is bigger. Well. Nearly.
+- **WHEN** — "When were you in the tent?" *(calm)*
+  > At five. I watered my roses.
+  > [[c:pell-home|Then I went home for tea]].
+  > I always have tea at half past five.
+- **WHAT** — "What did you see?" *(calm)*
+  > His marrow, on its table. Long and green and showing off. I said "Hmph." It said nothing.
+- **WHY** — "Why are you so cross?" *(amused, for one second)*
+  > I am always cross. It saves time.
+  > Also, his marrow is very fine.
+  > Do not tell him I said so.
+- **WHERE** — "Where is your marrow?" *(calm)*
+  > On its table, by the door. Where marrows belong. Not walking about.
+- **WHAT** — "What is that paper in your hat?" *(offended)*
+  > Nothing! It is private.
+  > [[c:pell-hat|It has his name on it]].
+  > So what? Hmph.
+
+#### SUSPECT Kip Mensah
+
+- **WHAT** — "What did you carry last night?" *(amused)*
+  > My pumpkin! It is small and round. It is green now. Pumpkins start green, you know.
+- **WHEN** — "When were you in the tent?" *(calm)*
+  > [[c:kip-six|At six, with Mum]].
+  > I put my pumpkin on its mat. Mum said, "Home by half past."
+- **WHO** — "Did you see anyone else?" *(calm)*
+  > [[c:kip-barrow|A big girl with a wheelbarrow]].
+  > She looked at the long marrow.
+  > [[c:kip-wilt|She said, "It will wilt in here!"]]
+- **WHAT** — "What does *wilt* mean?" *(nervous, then amused)*
+  > I don't know! I'm seven. I know *pumpkin*. I know *orange*. I know *very big*.
+- **WHERE** — "Were you at Big Bertha's table?" *(nervous)*
+  > Um. Yes.
+  > [[c:kip-show|I held my pumpkin up to the long marrow]].
+  > It's a secret.
+  > Please don't tell.
+- **WHY** — "Why do you love pumpkins?" *(amused)*
+  > They are round and happy. They sit very still. You can't lose a pumpkin.
+
+**QUILL** (quietly, to the child): "Kip doesn't know the word. Do you know where to find it?"
+
+#### SUSPECT The Garden Gnome Society (Mr Hamish Puddle, Chief Gnome)
+
+- **WHEN** — "When were you in the tent?" *(calm)*
+  > At sunrise. Gnomes are early. The dew was on our beards.
+- **WHAT** — "What did you leave?" *(amused)*
+  > One gnome in every tent. In the marrow tent, we left Gerald. He fishes.
+- **WHERE** — "Where did you put Gerald?" *(calm)*
+  > [[c:empty|We put Gerald on the empty table]].
+  > It looked lonely. Gerald cheers up a table.
+- **WHO** — "Did you take the marrow?" *(offended)*
+  > Never! We never touch the vegetables. Gnome Rule One. Gnome Rule Two is: smile.
+- **WHY** — "Why do gnomes never come at night?" *(offended)*
+  > [[c:gnome-secret|That is a Gnome secret]].
+  > Gnomes do not tell secrets.
+  > Gnome Rule Three.
+- **WHY** — "Why do you play these jokes?" *(amused)*
+  > To make people smile. Did you smile? A little? Then it worked.
+
+> **[UI]** Chapter end. Mrs Pell stands up from the bench and straightens her sun hat. A folded paper slides half out
+> from under the brim. On the outside, in big, fierce letters: OKORO. She pushes it back in, quickly.
+
+**NELL** (whispering): "Did you see that?"
+
+---
+
+### Chapter 3 — The board
+
+> **[UI]** The cork board, pinned under the bandstand roof. At level 1, two links are needed. The wheel's options are
+> all there; **who "she" is** and **meaning** are the two this case uses. The bandstand clock says ten. Heat wobbles
+> off the gravel like water.
+
+**ASHA** (as the board opens): "Ten o'clock. One hour to judging."
+**DEV:** "And if Bertha's somewhere hot, she's wilting right now."
+
+#### DEDUCTIONS
+
+**D1 · who "she" is** (`pronoun`) — *"She moved the marrow" means Zuri, not Mrs Pell. Zuri is the last girl named before
+that "she". Mrs Pell's own "she" is a sentence earlier, grumbling.*
+- Supporting spans: [c:zuri-six] "At six, Zuri Okoro came with a wheelbarrow" · [c:she-moved] "She moved the marrow in
+  the evening"
+- Also accepted alongside them: [c:pell-she] "She grumbled about the heat" (Mrs Pell's own *she*) · [c:kip-barrow] "A big
+  girl with a wheelbarrow" · [c:says-she] "The gardener's note says she moved it" (Grandpa's misreading) · [c:barrow]
+  "P.S. My wheelbarrow is gone too!"
+- Why it matters: Grandpa read *she* and jumped to the person he was cross with. The pronoun points back to the nearest
+  girl named: Zuri, who came with a wheelbarrow, which is what you need to move a marrow longer than Dev.
+- Hint ladder (earned): 1. "There are two *she*s in the gardener's notes. Take them one at a time." 2. "Who is named in
+  the line just before 'She moved the marrow'?" 3. "Link 'At six, Zuri Okoro came…' to 'She moved the marrow…'."
+
+**D2 · meaning** (`vocab`, `inference`) — *Zuri moved Big Bertha so she would not wilt in the hot tent, and the coolest
+place in the garden is the shed under the oak. That is where the marrow is.*
+- Supporting spans: [c:kip-wilt] "She said, 'It will wilt in here!'" · [c:wilt] "In the heat, vegetables wilt" ·
+  [c:cool] "It is the coolest place in the garden"
+- Also accepted: [c:droopy] "They go soft and droopy" · [c:lose] "A wilted marrow cannot win" · [c:shed] "Spare pots go
+  in the shed under the oak" · [c:hot] "Very hot!"
+- Why it matters: Kip heard the word but did not know it. The rules board says what *wilt* means and what it costs: a
+  wilted marrow cannot win. Zuri was not taking Big Bertha. She was saving her. And to stop a thing wilting in the heat,
+  you take it somewhere cool.
+- Hint ladder (earned): 1. "Kip heard a word he didn't know. Find it in another document." 2. "What makes vegetables
+  wilt? Where would you take one to stop it?" 3. "Link 'It will wilt in here!' to 'the coolest place in the garden'."
+
+**D3 · how the marrow walked** (`inference`; optional, not counted toward the two) — *The thin line in the grass was made
+by one wheel: a wheelbarrow. Grandpa's wheelbarrow went missing too, and Zuri came with a wheelbarrow.*
+- Supporting spans: [c:line] "Who drew that line on the grass? Not us!" · [c:barrow] "P.S. My wheelbarrow is gone too!"
+- Also accepted: [c:zuri-six] · [c:kip-barrow] · [c:hot]
+- Why it matters: it answers *how could it?* A wheelbarrow has one wheel, so it leaves one line. The grass was baked
+  hard ("Very hot!"), so feet left no mark. A wheel carrying a marrow as heavy as Kip did.
+- Hint ladder (earned): 1. "How many wheels made that line?" 2. "What has one wheel? Has anyone lost one?"
+
+**WRONG LINK** (Quill, if the child links [c:pell-hat] to [c:says-she]): "A name on a paper is not a marrow in a barrow.
+What does the paper *say*?"
+
+#### RED HERRINGS
+
+- **Mrs Pell** — looks guilty because of [c:pell-hat] "It has his name on it". Cleared by [c:pell-she] "She grumbled
+  about the heat" + [c:zuri-six] (her *she* belongs to her own sentence, and a new girl is named before the marrow line)
+  + [c:pell-home] "Then I went home for tea" + [c:pell-tea] "I wrote it at home, with my tea, at six" (chapter 4). She
+  was gone before six. *Secret:* the paper is a present ([c:pell-gift]).
+- **Kip** — looks guilty because of [c:round] and [c:kip-show] "I held my pumpkin up to the long marrow". Cleared by
+  [c:round] "He carried something round and green" + [c:kip-entry] "Kip Mensah, age 7: a small green pumpkin" (+
+  [c:long] "My long green marrow has gone"). Grandpa saw something *round*. Big Bertha is *long*. Kip was carrying his
+  own pumpkin. *Secret:* he was showing it the marrow, so it could see how big to grow.
+- **The Garden Gnome Society** — looks guilty because of [c:gnome-secret] "That is a Gnome secret". Cleared by
+  [c:sunrise] "We came at sunrise, as always" + [c:empty] "We put Gerald on the empty table" + [c:line] (+ [c:she-moved]
+  "in the evening"). The table was already empty, and the line already drawn, when the gnomes came. The marrow had gone
+  the evening before. *Secret:* the Chief Gnome is scared of the dark.
+
+> **[UI]** Chapter end: the false solution.
+
+**NELL:** "Hunch-o-meter: ten. Mrs Pell grumbled. Mrs Pell wants to win. And Mrs Pell has a paper with his name on it,
+hidden in her hat!"
+**GRANDPA:** "I knew it! Somebody fetch Constable Tully!"
+
+> **[UI]** Kip runs off for the constable. Mrs Pell marches to the Green Giant's table and lifts off her own name card.
+
+**MRS PELL:** "There. I am out of the show. A thief's marrow can't win, can it? Hmph."
+**QUILL** (quietly, to the child): "Ten is a big number. Is it a true one?"
+
+> **[UI]** The gate clicks shut behind her. On the bandstand, the clock says ten past ten.
+
+---
+
+### Chapter 4 — The timeline
+
+> **[UI]** The washing line is strung between two bean poles. Keyboard: T. A new question card has appeared for Mrs
+> Pell, who is sitting on the wall outside the gate, very straight, watering can on her knee.
+
+#### SUSPECT Mrs Hilda Pell (by the gate)
+
+- **WHAT** — "May we read the paper?" *(offended, then relieved)*
+  > Oh, very well.
+  > [[c:pell-gift|"For Emeka. My secret compost. In case you lose."]]
+  > [[c:pell-tea|I wrote it at home, with my tea, at six]].
+  > Hmph.
+
+**ASHA:** "At six, Mrs Pell was at home with her tea. At six, Zuri came with a wheelbarrow."
+**NELL:** "…Hunch-o-meter: zero. Sorry, Mrs Pell."
+**MRS PELL:** "Hmph. Apology received. Mostly."
+
+| # | event | time-word span | placed by |
+|---|---|---|---|
+| 1 | Mrs Pell waters her roses, goes home, and writes Grandpa a note with her tea | [c:pell-five] "At five" · [c:pell-home] "Then I went home" · [c:pell-tea] "at six" | child |
+| 2 | Zuri arrives with a wheelbarrow; Kip brings his pumpkin | [c:zuri-six] "At six" · [c:kip-six] "At six, with Mum" | pre-placed |
+| 3 | Zuri says it will wilt, and wheels the marrow away, leaving one thin line | [c:she-moved] "in the evening" | child |
+| 4 | Sami the gardener goes home | "I went home at eight" | pre-placed |
+| 5 | The gnomes find the line, and leave Gerald on the empty table | [c:sunrise] "at sunrise" · [c:line] | child |
+| 6 | Grandpa finds Gerald and writes to the agency | (letter: Saturday, early) | pre-placed |
+| 7 | The race round the island finishes | "half past ten" (Asha) | pre-placed |
+| 8 | Judging | "Judging is at eleven" | pre-placed |
+
+**ASHA** (pegging a card herself): "And I'll add one. *Dawn: Zuri rows in the race.* That's why she's not here."
+**QUILL** (if the gnomes are pegged before the marrow moves): "Was the table full or empty when Gerald arrived? Show me
+the word."
+
+> **[UI]** Chapter end. Across the lake, a long horn, and then cheering.
+
+**ASHA:** "Half past ten. The race is over. Zuri's coming in."
+**DEV:** "And Bertha's been somewhere since last night. In this heat."
+
+---
+
+### Chapter 5 — The accusation
+
+> **[UI]** The reveal room is the show tent itself: long tables, flowers, bunting, Gerald grinning on the empty table.
+> The three suspects stand by their entries. A fourth portrait, Zuri's (from the rowing-club photo Asha carries), joins
+> the row the moment the child first marks a span that names her.
+
+**The question asked:** *Who moved the marrow, and where is it now?*
+
+- **WHO MOVED IT:** Zuri Okoro (not a thief: a helper who left her message in a note that was read too fast).
+- **MINIMAL EVIDENCE SET (3):** D1 (who "she" is) · D2 (meaning) · [c:kip-wilt] "She said, 'It will wilt in here!'"
+  (Also accepted for the third: [c:kip-barrow], [c:barrow].)
+- **Then the child chooses a place** on a painted map of the Story Garden (the tent · the bandstand · the Fable Fountain
+  · the shed under the oak). The shed is right.
+
+**WRONG-SUSPECT RESPONSES**
+- **Mrs Pell:** "Read the gardener's notes again. Who is named just before 'She moved the marrow'?"
+- **Kip:** "What shape did Grandpa see Kip carrying? What shape is Big Bertha?"
+- **The Garden Gnome Society:** "When did the gnomes come? And was Big Bertha's table full or empty?"
+
+**WEAK-EVIDENCE RESPONSE** (right person, but evidence like [c:never] or [c:long]): "True. But does it show *who* moved
+it, or *why*? Pin the words that point to her, and the word that explains her."
+
+---
+
+### The reveal
+
+> **[UI]** Setting (not counted): The show tent, twenty to eleven. Hot canvas, the hum of bees. Mrs Pell by the door,
+> her name card in her hand. Kip with his pumpkin. Mr Puddle with Gerald under his arm. Grandpa, glasses on his head.
+> The new detective stands by the empty table.
+
+**QUILL:** "Twenty minutes. New detective, the floor is yours."
+**NEW DETECTIVE:** "Kip first. Grandpa saw him carry something round. Big Bertha is long."
+**KIP:** "It was my pumpkin! I held it up to Bertha, so it could see how big to grow."
+**GRANDPA:** "Then I hope it was taking notes."
+**NEW DETECTIVE:** "The gnomes came at sunrise. The table was empty, the line already drawn."
+**MR PUDDLE:** "And we never come at night because… I am scared of the dark. There. A Chief Gnome."
+**NEW DETECTIVE:** "Mrs Pell's *she* grumbled about the heat. Then she went home. At six, she was writing a present."
+**MRS PELL:** "It was meant to be a secret. Hmph."
+**QUILL:** "Now the deciding line. Grandpa, read your letter."
+**GRANDPA:** "'The gardener's note says she moved it.'"
+**QUILL:** "And now Sami's note. Glasses *on*."
+
+> **[UI]** Grandpa pulls his glasses down and reads, slowly.
+
+**GRANDPA:** "'At six, Zuri Okoro came with a wheelbarrow. She moved the marrow…' Oh. *She* is Zuri."
+**DEV:** "And the line with no footprints. One line means one wheel."
+**ASHA:** "A wheelbarrow. *Your* wheelbarrow, Grandpa. It was there on the very first page."
+**FELIX:** "And the grass was baked hard. 'Very hot!' Feet don't sink in. A wheel with Bertha in it does."
+**NEW DETECTIVE:** "Zuri knew Bertha would wilt. So she took her to the coolest place in the garden."
+**EVERYONE:** "The shed under the oak!"
+
+> **[UI]** The bandstand clock: ten fifty.
+
+**NELL:** "Ten minutes! There's less minutes than ever!"
+**QUILL** (running, deerstalker bobbing): "*Fewer* minutes. Now, run!"
+
+> **[UI]** The shed under the oak. Cool shade, a smell of moss, a slow drip. The door
+> creaks open onto darkness.
+
+**ASHA** (whispering): "Torch. My turn."
+**DEV** (whispering): "It was your turn last time."
+**ASHA:** "Last time was a *staircase*. That doesn't count."
+
+> **[UI]** The torch clicks on. On damp sacks, beside a striped wheelbarrow, lies Big Bertha: long, green and
+> perfectly firm.
+
+**GRANDPA:** "Bertha! Oh, Bertha. You're cool as a cucumber."
+**FELIX:** "Technically, sir, she's cooler. Cucumbers were in the tent."
+
+> **[UI]** Running feet. ZURI, plaits dripping, a medal bouncing.
+
+**ZURI:** "Grandpa! I heard you across the lake! Bertha was going soft, so I wheeled her here. I asked
+Sami to write it down."
+**GRANDPA:** "He did. I read it too fast." *(he turns to the doorway)* "Hilda. I am very sorry."
+**MRS PELL:** "Hmph. I would have been cross too. It is a very fine marrow."
+**QUILL:** "Nobody here did anything wrong. One small word was read in a hurry."
+
+> **[UI]** Zuri and Grandpa lift Big Bertha into the wheelbarrow together. Kip runs alongside, holding his pumpkin up so
+> it can see.
+
+---
+
+### Epilogue
+
+> **[UI]** The show tent, eleven o'clock exactly. The judges in straw hats. Rosettes on a tray. Mrs Pell's name card is
+> back on the Green Giant's table.
+
+1. **The judging.** Mrs Pell's Green Giant wins first. Big Bertha wins second. Kip's pumpkin gets a special rosette:
+   *Most Hopeful Pumpkin.* Kip holds it up to the pumpkin so it can see.
+2. **Mrs Pell's recipe.** She presses the folded paper into Grandpa's hand. **MRS PELL:** "My secret compost. Banana
+   skins. Eggshells. And you say good morning to it." **GRANDPA:** "You talk to your marrow?" **MRS PELL:** "Every day.
+   Tell anyone and I'll deny it."
+3. **The rosette.** Grandpa pins his second-place rosette on Zuri. Zuri unpins it and gives it to the new detective.
+   **ZURI:** "You read the note properly. That's worth a rosette." *(Office object: the rosette goes on the shelf, next
+   to Admiral's white feather.)*
+4. **Sami the gardener** pokes his head into the tent, pencil behind his ear. **SAMI:** "Did someone read my notes?"
+   **EVERYONE:** "Yes!" **SAMI:** "Nobody ever reads my notes."
+5. **Biscuit.** Constable Tully arrives at last, ten minutes after the judging, holding an empty lead. **TULLY:** "I came
+   about a thief. Also, has anyone seen—" The Best Garden Gnome line-up: Gerald, a gnome with a wheelbarrow, a gnome
+   with a lantern… and, sitting very, very still in a pointed red hat, a small brown fluffy dog. **MR PUDDLE:** "We
+   thought he was a new member." The judges have pinned a rosette on him: *Highly Commended.* **TULLY:** "Biscuit! He's
+   never sat that still for me."
+6. **Nell**, on the way home, stops The Comet by the harbour wall. She takes the folded form from her basket, writes
+   *Cases solved: 2* in the margin, looks at it, folds it again, and puts it back.
+7. **The gap.** That evening, Felix borrows *The Story Garden Guide* from the little reading hut, to check his oak
+   footnote. On the page about the oak, a painted sign reads:
+
+   > **ARC · the guidebook sign** (read aloud): *Keep off the grass, ______ the oak.*
+
+   A neat, empty gap, as if one word had been lifted out with tweezers.
+   **DEV:** "The gap is five letters wide. I measured."
+   **QUILL:** "*Every gap has a word.* The card told us. Where have we seen a word about the oak today?"
+   > **[UI]** The child finds it in DOC 1.3, "the shed **under** the oak", and marks the single word. Ink runs from the
+   > notebook into the Blot Ledger. The first line of the Ledger reads: **UNDER**.
+
+   **FELIX:** "A word that vanished… and the case was hiding under the very same oak. Footnote: that is a
+   coincidence. Footnote to the footnote: I do not believe it is a coincidence."
+   **FELIX** (lifting the book to his nose, slowly): "Footnote to the footnote to the footnote: violets."
+   **QUILL:** "One word is not a sentence. Not yet."
+
+   > **[UI]** Last panel: the reading hut at dusk, its door ajar. On the bench outside, where nobody was sitting a
+   > moment ago, a single violet petal.
+
+**Case solved.** Skills used: *who "she" means* · *a word's meaning* · *working out what isn't said*. Blot Ledger:
+**UNDER**.
+
+---
+
+### Detective School drill — *Who is "she"?*
+
+*(Pronoun drill, built from the gardener's notes. Read aloud. Tap the portrait, or use arrows and Space.)*
+
+> Mrs Pell watered her roses. She went home for tea.
+> Then Zuri came in. She had a wheelbarrow.
+
+For each highlighted **She**, choose: *Mrs Pell* or *Zuri*.
+
+**QUILL** (right): "Each *she* points back to the girl named just before. Pronouns are arrows. Follow them."
+**QUILL** (wrong): "Put your finger on the *she*. Now slide it back. Who do you bump into first?"
+
+---
+
+### Art and scene notes
+
+**No lettering in any painting.** The rules board, catalogue, gnome note, guidebook sign, Mrs Pell's paper and rosettes
+are painted blank; every word is set live (the OKORO on Mrs Pell's paper is live type laid over a blank fold).
+
+- **Backgrounds (the `garden` palette, day):**
+  - *The Story Garden, Flower Show:* clipped hedges, a striped show tent with bunting, a white bandstand with a clock
+    face (hands painted live, so the time can change by chapter), the Fable Fountain in the distance (a stone fox, water
+    running the normal way), flower beds, a mixed crowd of all ages and backgrounds, kept small. Heat shimmer over the
+    gravel.
+  - *The tent door and the line:* a close view of lawn, the grass slightly yellow and dry, one thin pressed line running
+    away from the tent door to the edge of a gravel path. No footprints.
+  - *Inside the tent:* long trestle tables of vegetables and flowers on cloths, hot yellow light through the canvas;
+    one big empty space on a table with a small grinning gnome holding a fishing rod.
+  - *The shed under the oak:* a young oak with a wide, low canopy; a little wooden shed in deep cool shade, moss on the
+    roof; inside, clay pots stacked, damp sacks, a striped wheelbarrow, torchlight.
+  - *Bandstand interview corner:* bench, bunting, flower boxes.
+  - *The reading hut at dusk:* small, wooden, its door ajar; a bench outside; one violet petal on the bench.
+- **Props:** Big Bertha (a huge, long, glossy green marrow, longer than Dev); Kip's small round green pumpkin; Gerald the
+  fishing gnome; the Best Garden Gnome line-up; the calling card (cream, one round blot); *The Story Garden Guide* (a
+  small cloth-bound picture book) open at a painted oak with a blank sign; the rosettes (first: big, three tiers;
+  second: two tiers; the shelf model is the second-place one); Mrs Pell's watering can and her folded paper; Grandpa's
+  striped wheelbarrow; Zuri's rowing medal.
+- **Portraits:** Grandpa Okoro (Nigerian heritage, seventies, glasses on head, gentle; calm, nervous, amused, relieved).
+  Mrs Pell (sixties, sun hat, fierce eyebrows, kind mouth; calm, offended, amused, relieved). Kip (7, gap tooth, orange
+  jumper; calm, amused, nervous, relieved). Mr Puddle (tall, thin, red pointed hat, false beard on elastic; calm, amused,
+  offended, relieved). Zuri (12, rowing vest, plaits, medal; calm, amused, relieved). Sami (forties, muddy boots, pencil
+  behind ear; calm, amused).
+- **Document templates:** lined letter with soil prints and a sideways P.S. (1.1), spiral-pad page (1.2), wooden notice
+  board (1.3), folded catalogue booklet (1.4), hat-shaped red paper (1.5).
+- **Motion:** heat shimmer, the tent flap lifting with no wind, the shed door creaking open, the torch beam, ink running
+  into the Ledger. Reduced motion: fades.
+- **Sound:** bees, a brass band far off, a starting horn and cheering across the lake, the shed door, a slow drip.
+  Silent under read-aloud.
+
+---
+
+## CASE 2 — The Lamplighter's Wrong Turn
+
+*A Bizzing mystery.*
+
+```
+meta:
+  id:            case-02
+  level:         1  (ages 6–8 · 3 suspects · 5 scene documents · ≤40 words per document · ≤10-word sentences · 2 deductions)
+  world:         study (Lamplit Row)
+  skills:        sequence · detail · punctuation
+  vanished word: THE  (from "This way to the Great Library", a sign in Pollard's Books' window)
+  office object: a lamplighter's pole tip (Ivy's old brass hook)
+  arc beats:     B. Silas Crane seen measuring the Library steps with a tape, smiling
+                 C. the first Raman postcard (Lisbon; an acrostic whose first letters spell CRANE)
+                 A. a Blot calling card behind the bookshop sign: "Small words carry big loads. — B."
+  read aloud:    every document, always on
+```
+
+**Mystery pass (6 Oct 2026).**
+- **The clock:** the Town Council says that unless someone can explain the dark lamp by six tonight, lighting time, the
+  lamps go to grown-ups and the Lamplighters hang up their poles. Said in the card, the opening, the board ("three hours")
+  and the timeline (the Clock Tower bongs five).
+- **The impossible thing:** "the lamp that lit itself". Ivy went to light Tam's extra lamp and found it already burning.
+  (Tam had lit the bakery lamp at six; Ivy was at the wrong lamp. Tully's report counted two burnt matches under it.)
+- **The false solution:** Moss, by the end of chapter 3: she wishes every lamp were off, she fibbed about where she was
+  at seven, and her knees are sooty. Broken in chapter 4 when she owns up: she was on Gran's roof on Ink Street.
+- **The hidden clue:** in Tully's very first report, among the tidy details: *two burnt matches under the bakery lamp.*
+  Two lightings of one lamp; none of the other.
+- **The escalation:** Ivy quits and hangs the only long pole in the shed. Without her, nobody can reach the bridge lamp
+  tonight either, and the fog is coming in.
+- **Continuity:** on a normal night Tam lights the bridge lamp with Ivy's long pole, which Ivy lends her at the end of her
+  round. That is why Tam wrote to Ivy, and only Ivy.
+- **The Blot, closer:** a card behind a sign in a shop that has been locked all day, a smell of rosin, and four slow
+  violin notes somewhere in the fog.
+
+**Writer's note on the two hurried notes (DOC 2.2 and Moss's sighting note).** Lamplighters do not punctuate. Their notes
+are set on short lines, and each *line* keeps to the level's ten-word limit. The missing comma in Tam's note is the case,
+so the note is never "corrected" anywhere a child can see it until the reveal.
+
+---
+
+### Case card
+
+> It was the darkest night of the year.
+> On Lamplit Row, the tall lamp by the bridge stayed dark.
+> A visitor stepped into the canal. She is safe, just soggy.
+> Three Lamplighters walk that way every night.
+> Each says, "I did my job!"
+> One says her lamp lit itself.
+> Solve it by six tonight, or the Lamplighters lose their lamps.
+
+*(60 words. Read aloud.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Portrait expressions | Motive · Secret |
+|---|---|---|---|---|---|
+| **Ivy Larkin**, 9 | Suspect · Lamplighter | Tallest of the six; two long plaits; carries the only long pole, taller than a door | Proud, quick, talks fast, finishes your sentence for you | calm, offended, nervous, guilty, relieved, amused | Motive: she lends Tam her long pole every single night, and grumbles that it is *her* pole · Secret: she is saving her pocket money to buy Tam a long pole of her own, for her birthday |
+| **Rafi Bose**, 10 | Suspect · Lamplighter | Small, round glasses, a short pole with a tidy brass hook | Careful; counts things; tells you exactly what happened, in order | calm, nervous, offended, amused, relieved | Motive: the bridge lamp is the best lamp, and he is always told he is too short for it · Secret: he crosses the bridge at six every night with his pockets full of crumbs, to feed the ducks under it |
+| **Moss Kettle**, 8 | Suspect · Lamplighter | Woolly hat with a stitched star; a toy telescope on a string | Dreamy; loves the dark; says "boo" when it is cloudy | calm, amused, offended, nervous, relieved | Motive: she loves the dark and wishes every lamp were off · Secret: at seven she was up on Gran's roof with her telescope, where she is not allowed, so she fibbed and said "indoors" |
+| **Tam Bellweather**, 10 | Witness · leader of the Lamplighters | Flour on her nose and sleeves; pencil behind one ear | Always in a hurry; tells jokes; writes notes on bun bags | calm, amused, nervous, guilty, relieved | – |
+| **Mrs Ingrid Gundersen** | Witness · the visitor | Bright raincoat, a very soggy paper map, wet to the knees | Cheerful about everything, including canals | amused, calm, relieved | – |
+| **Constable Bram Tully** | Helper | Big, slow, kind; a cocoa flask; a notebook with a dog-shaped doodle | "Ten minutes behind, but I always get there"; counts everything, even matches | calm, worried, relieved | – |
+| **Silas Crane** | Arc cameo | Long grey coat, a silver tape measure, a wide smile | Smooth and pleasant; calls everything "lovely" | amused (only) | – |
+
+The agency: **Quill**, **Nell**, **Asha**, **Dev**, **Felix** and the new detective (the child).
+
+---
+
+### Opening (comic panels, read aloud)
+
+1. **The agency, morning.** Rain on the round window; fog sitting on the harbour like a grey cat. Constable Tully puffs up
+   the 39 stairs with a cocoa flask.
+   **Tully:** "A lamp went dark last night. A visitor went *splash*. And Biscuit has gone missing. Again."
+   **Tully:** "The Council says: explain it by six tonight. Or the lamps go to grown-ups, and the Lamplighters hang up
+   their poles."
+2. **Nell** grabs her coat. **Nell:** "A dark lamp on the darkest night? Somebody skipped it. Hunch-o-meter: ten!"
+   **Quill:** "A hunch is not a clue. Bring me words."
+3. **Asha** opens her notebook. **Asha:** "Timeline. Breakfast, eight o'clock. Toast. Now, the lamp."
+   **Dev** (whispering): "My turn to carry the torch." **Asha** (whispering): "It's *daytime*." **Dev:** "Still my turn."
+4. **Felix**, already at the door: "Footnote: a *lamplighter* is a person who lights lamps. Footnote to the footnote: I
+   knew you knew that."
+5. **Lamplit Row, by the bridge.** Wet cobbles, the canal black and quiet, the tall lamp dark against the fog. Tam on the
+   bakery step with a tray of buns nobody is eating. **Tam:** "We light up at six. If nobody knows what happened by
+   then… no more Lamplighters."
+
+---
+
+### Chapter 1 — The scene
+
+#### DOC 2.1 · report
+- **Author:** Constable Bram Tully · **Date/time:** Tuesday night, quarter past seven · **Found where:** Tully's notebook
+- **Picture:** a page from a constable's notebook, a cocoa ring on one corner, a little doodle of a dog in the margin.
+
+> [[c:at-seven|At seven]], a visitor stepped into the canal.
+> It was by the bridge.
+> The water came to her knees.
+> She is safe. Her map is soggy.
+> [[c:bridge-dark|The lamp by the bridge was dark.]]
+> [[c:two-matches|Under the bakery lamp: two burnt matches.]]
+
+**TULLY:** "I always count the matches. Tidy street, tidy mind."
+**NELL:** "Very tidy, Constable." *(She is already reading the next page.)*
+
+#### DOC 2.2 · note
+- **Author:** Tam Bellweather · **Date/time:** Tuesday, about five o'clock · **Found where:** in Ivy's coat pocket (she hands
+  it over proudly: "See? I did what it said!")
+- **Picture:** a crumpled paper bun bag with a floury thumbprint, pencil words sloping downhill.
+
+> ivy
+> i have to help dad bake tonite
+> [[c:note|light the lamp by the bridge not
+> the one by the bakery]]
+> thanks
+> tam
+
+#### DOC 2.3 · list
+- **Author:** Tam Bellweather (written slowly, on a Sunday, in her best handwriting) · **Found where:** pinned inside the
+  Lamplighters' lamp shed
+- **Picture:** a neat chart on a wooden board; three poles hang beside it, short, middle and long, each on its own peg.
+  The shed smells of matches and wet wool.
+
+> THE ROUND
+> Rafi: Canal Street. Short pole.
+> Moss: Ink Street. Middle pole.
+> Ivy: Lantern Row. Long pole.
+> Tam: [[c:tam-six|the bakery lamp at six]], then the bridge lamp.
+> [[c:long-pole|The bridge lamp needs the long pole.]]
+> [[c:lend|Ivy lends Tam the long pole.]]
+
+**ASHA:** "So on a normal night, Ivy finishes her round at the bridge and hands Tam the long pole. And Tam lights the
+bridge lamp."
+**DEV:** "But last night Tam was baking."
+
+#### DOC 2.4 · sign, with a calling card
+- **Author:** unknown · **Found where:** the window of Pollard's Books, on the corner by the bridge
+- **Picture:** an old painted street sign propped in a bookshop window, an arrow pointing right, towards the bridge. A small
+  white card is tucked behind it, with one perfect round ink blot. On the door, a small sign: closed (no lettering in the
+  painting; the word is live).
+
+> The sign in the window says:
+> [[c:sign|This way to ____ Great Library →]]
+> One word is gone. The gap is neat.
+> Behind the sign is a little card.
+> It has a perfect ink blot.
+> [[c:card|Small words carry big loads.]] — B.
+
+**DEV** (rattling the shop door): "Locked. Mr Pollard's been away all week. And that card wasn't there when we came past
+this morning."
+**FELIX** (nose to the glass): "Footnote: the window smells of rosin. Rosin is what you rub on a violin bow. Footnote to
+the footnote: why would a locked bookshop smell of violins?"
+
+#### DOC 2.5 · postcard
+- **Author:** Dr Leela Raman · **Postmark:** Lisbon, Friday · **Found where:** on the agency doormat, delivered with the buns
+- **Picture:** a postcard of a yellow tram climbing a steep hill of red roofs; a stamp with a sailing ship.
+
+> Dear Asha and Dev,
+> [[c:pc-c|Cobbled hills go up and down.]]
+> [[c:pc-r|Red roofs and yellow trams.]]
+> [[c:pc-a|A rich man buys old buildings here.]]
+> [[c:pc-n|Next he wants to buy in Inkwell.]]
+> [[c:pc-e|Every first letter spells his name.]]
+> Love, Mum
+
+*(The postcard is an arc clue, not a case clue. Dev reads the first letters down the side: C · R · A · N · E. Asha checks
+the postmark: "Friday to Tuesday. Four days. Mum's cards always take four days. Breakfast took nine minutes.")*
+
+**Chapter end.** *(Stage: the agency walks back along the canal. The fog has come up thick and white; the lamps are only
+gold smudges in it.)* Somewhere in the fog, a violin plays four slow notes. Then stops.
+**DEV** (whispering): "Who plays a violin on Lamplit Row?"
+*(Quill says nothing at all, for a long moment, and looks into the fog.)*
+
+---
+
+### Chapter 2 — Interviews
+
+*Every answer arrives as a typed transcript on the desk, except Moss's sighting, which is her own hurried note. The
+interview corner is the bakery step, warm from the ovens; the fog presses against the window behind it.*
+
+#### SUSPECT Ivy Larkin
+
+**Q (what):** "Did you light your lamps last night?"
+> Yes! All my high lamps on Lantern Row.
+> Then I did Tam's extra one.
+> [[c:ivy-bakery|I went to the lamp by the bakery.]]
+> Just like the note said!
+*(portrait: proud → calm)*
+
+**Q (when):** "When did you get to that lamp?"
+> [[c:ivy-half|At half past six.]]
+> I know, because the Clock Tower bonged once.
+> One bong means half past.
+
+**Q (what):** "Was the lamp dark when you got there?"
+> Um.
+> [[c:already-lit|It was already lit.]]
+> I struck my match anyway.
+> I thought, wow, that was fast!
+*(portrait: amused → nervous)*
+
+**Q (why):** "Why the bakery lamp, and not the bridge?"
+> Read Tam's note!
+> [[c:not-joke|Tam always does the NOT joke.]]
+> "Light the bridge one… NOT!"
+> So I lit the bakery one.
+
+**Q (who):** "Who has the long pole?"
+> [[c:ivy-pole|Me. I have the only long pole.]]
+> Tam borrows it every single night.
+> [[c:ivy-mine|It's MY pole, you know.]]
+> I didn't need it last night, though.
+> The bakery lamp is short.
+*(portrait: offended)*
+
+#### SUSPECT Rafi Bose
+
+**Q (where):** "Where were you at half past six?"
+> On Canal Street. I light the low lamps.
+> [[c:rafi-short|My pole is short.]]
+> It only reaches low lamps.
+
+**Q (when):** "Did you see the bridge lamp?"
+> Yes. [[c:rafi-six|I crossed the bridge at six.]]
+> The lamp was dark then.
+> That is normal.
+> Tam lights it at half past.
+> Ivy brings her the long pole.
+
+**Q (what):** "Could you reach the bridge lamp?"
+> No. I tried once, last winter.
+> I jumped very high.
+> I landed in a puddle.
+> Not a canal. A puddle.
+*(portrait: offended → amused)*
+
+**Q (why):** "Why do you cross the bridge every night?"
+> Every night, at six.
+> It's on my way.
+> [[c:rafi-pockets|My pockets? Nothing in them.]]
+> Just… nothing.
+*(portrait: nervous; his coat pockets are very lumpy)*
+
+**Q (who):** "Who did you see?"
+> Ivy, at half past six.
+> [[c:rafi-saw|She was by the bakery with the long pole.]]
+> She looked very proud.
+
+#### SUSPECT Moss Kettle
+
+**Q (why):** "Do you like the dark?"
+> I love it!
+> On dark nights you see more stars.
+> [[c:moss-stars|I wish every lamp was off!]]
+> Oh. Should I not say that?
+*(portrait: amused → nervous)*
+
+**Q (where):** "Where were you at half past six?" *(Moss hands over her sighting note, written in a hurry.)*
+> [[c:moss-ink|half past six ink street]]
+> all my lamps lit
+> a man in a grey coat
+> [[c:crane-tape|measring the libary steps with a tape]]
+> he smild
+> lovely steps he said lovely
+
+**Q (where):** "Where were you at seven?"
+> Indoors. Having tea.
+> [[c:moss-tea|Definitely indoors.]]
+> Why are you looking at my knees?
+*(portrait: nervous)*
+
+**Q (who):** "Which lamps can you reach?"
+> [[c:moss-middle|I use the middle pole.]]
+> It reaches the Ink Street lamps.
+> The bridge lamp is a giant!
+
+#### WITNESS Tam Bellweather
+
+**Q (who):** "Who did you write the note to?"
+> To Ivy.
+> [[c:tam-ivy|Only Ivy's pole reaches the bridge lamp.]]
+> Most nights she lends it to me.
+> I had to bake buns with Dad.
+> Two hundred buns!
+
+**Q (when):** "When did you write it?"
+> [[c:tam-five|At five.]] I was in a big hurry.
+> There was flour everywhere.
+> I wrote it on a bun bag.
+
+**Q (what):** "Which lamp did you light last night?"
+> [[c:tam-lit|Our bakery lamp, at six, like always.]]
+> I light it from our step.
+> One match. Whoosh.
+> It's my favourite lamp.
+
+**Q (what):** "Do you tell NOT jokes?"
+> All the time!
+> "Rafi, your hat is lovely… NOT!"
+> Why?
+*(portrait: amused → nervous: she has just begun to wonder)*
+
+#### WITNESS Mrs Ingrid Gundersen
+
+**Q (why):** "Why were you by the bridge?"
+> I followed the sign in the bookshop window.
+> [[c:sign-way|It pointed over the bridge.]]
+> To the Library! I wanted to see it at night.
+
+**Q (what):** "What happened?"
+> It was very dark.
+> I stepped a little to the left.
+> Splash! Only up to my knees.
+> Very cold. Very Inkwell. I loved it.
+*(portrait: amused)*
+
+**Chapter end.** *(Stage: Moss tugs her coat down over her knees. Too late. They are grey with soot, the kind you only
+get from chimneys and roofs.)*
+**NELL** (whispering): "Indoors? Since when is indoors sooty?"
+
+---
+
+### Chapter 3 — The board
+
+*(Stage: the cork board, set up in the lamp shed. Rain ticks on the tin roof. Three poles on their pegs. Fog creeps up the
+canal outside the door.)*
+**TAM:** "It's three o'clock. Three hours till six."
+
+**DEDUCTIONS** (level 1: two)
+
+**D1 · timeline**
+- **Statement the child forms:** *Ivy went to the bakery lamp, not the bridge lamp. Tam had already lit the bakery lamp at
+  six, so Ivy found it lit at half past six.*
+- **Supporting spans:** [c:tam-lit] · [c:ivy-half] · [c:already-lit] · [c:ivy-bakery] *(also accepted: [c:tam-six],
+  [c:rafi-saw], [c:two-matches])*
+- **Minimum link:** [c:tam-lit] + [c:already-lit]
+- **Why it matters:** nobody "skipped" a lamp. Ivy did a job, just at the wrong lamp. Six o'clock comes *before* half past
+  six, so a lamp lit at six is *already* lit at half past. That is the lamp that "lit itself", and that is why Tully found
+  two matches under it.
+
+**D2 · meaning (punctuation)**
+- **Statement the child forms:** *Tam's note has no comma, so it can be read two ways. Tam meant "Light the lamp by the
+  bridge, not the one by the bakery." Ivy read the "not" as one of Tam's NOT jokes.*
+- **Supporting spans:** [c:note] · [c:not-joke] · [c:tam-ivy] *(also accepted: [c:long-pole], [c:ivy-pole], [c:lend])*
+- **Minimum link:** [c:note] + [c:tam-ivy] (or [c:note] + [c:not-joke])
+- **Why it matters:** this is the deciding clue. The words did not change; only the missing mark did. Tam chose Ivy
+  *because* only Ivy's long pole reaches the tall bridge lamp, so Tam must have meant the bridge.
+
+**RED HERRINGS**
+- **Rafi** was on the bridge at six, his pockets are lumpy, and he won't say why ([c:rafi-six], [c:rafi-pockets]).
+  **Cleared by** [c:rafi-short] + [c:long-pole]: his short pole cannot light a lamp that needs the long pole, and it was
+  never his lamp. *Secret:* crumbs, for the ducks under the bridge.
+- **Moss** wishes every lamp were off, and fibbed about where she was at seven ([c:moss-stars], [c:moss-tea]). **Cleared
+  by** [c:moss-ink] + [c:moss-middle] + [c:long-pole] + [c:moss-roof] (chapter 4): at half past six she was on Ink Street,
+  by the Library; at seven she was on Gran's roof; and her middle pole cannot reach the bridge lamp anyway. *Wishing* is
+  not *doing*.
+
+**ARC CLUES** (optional marks; logged in the notebook's back pages, never needed to solve the case)
+- **Why the visitor was on the bridge:** [c:sign] + [c:sign-way] — the sign with the missing word points over the bridge.
+- **Crane arrives:** [c:crane-tape] + [c:pc-a] + [c:pc-n] — a man measuring the Library steps; a rich man who buys old
+  buildings and wants Inkwell next.
+- **The acrostic:** [c:pc-c] · [c:pc-r] · [c:pc-a] · [c:pc-n] · [c:pc-e] → C R A N E, confirmed by [c:card]'s own advice
+  that small things (first letters, too) carry big loads.
+
+**Wrong-link hint (Quill, if the child links [c:moss-stars] to [c:bridge-dark]):** "She *wishes* it. Show me where she
+*did* it."
+
+**EXTRA MARK** (markable, not needed to solve): [c:ivy-mine] "It's MY pole, you know." Ivy's grumble, which is her
+motive on the board and the cover for her secret.
+
+**Chapter end: the false solution.**
+**NELL:** "Moss wants every lamp off. Moss fibbed about seven o'clock. Moss has sooty knees! Hunch-o-meter: ten!"
+*(Moss puts both hands over her mouth.)*
+**IVY:** "Everyone's blaming Lamplighters. Fine. I quit."
+*(Stage: Ivy hangs the long pole on its peg and walks out into the fog without looking back.)*
+**RAFI:** "But… nobody else can reach the bridge lamp."
+**TAM** (very quietly): "Then tonight it stays dark again."
+*(Stage: far off, the Clock Tower bongs four.)*
+
+---
+
+### Chapter 4 — The timeline
+
+*(Stage: Moss, red to the ears, comes back with a new question card in her hand.)*
+
+#### SUSPECT Moss Kettle (owning up)
+
+**Q (where):** "Moss, where were you really at seven?"
+> Every lamp was lit. Seven on Ink Street.
+> Then I climbed up to Gran's roof.
+> I took my telescope.
+> No stars. Too cloudy. Boo.
+> [[c:moss-roof|I'm not allowed up there. Sorry I fibbed.]]
+*(portrait: nervous → relieved)*
+
+**ASHA:** "Gran's roof is on Ink Street. Nowhere near the bridge."
+**DEV:** "And her pole is the middle one. It can't reach."
+**NELL:** "Hunch-o-meter: …one. Sorry, Moss."
+**MOSS:** "I *did* see the bridge lamp from the roof. All dark. I thought it looked lovely. Sorry about that too."
+
+The washing line runs from five o'clock to quarter past seven.
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | Tam writes the note to Ivy on a bun bag | [c:tam-five] "At five." | **yes** |
+| 2 | Rafi crosses the bridge; the bridge lamp is dark, as it always is then | [c:rafi-six] "I crossed the bridge at six." | no (pegged for you) |
+| 3 | Tam lights the bakery lamp from her step: one match | [c:tam-lit] "at six, like always" | **yes** |
+| 4 | Ivy reaches the bakery lamp, finds it already lit, and strikes a second match | [c:ivy-half] "At half past six." | **yes** |
+| 5 | Moss, on Ink Street, sees a man measuring the Library steps | [c:moss-ink] "half past six ink street" | no (pegged for you) |
+| 6 | Moss climbs up to Gran's roof with her telescope | [c:moss-roof] (after her lamps) | no (pegged for you) |
+| 7 | Mrs Gundersen follows the sign, crosses in the dark and steps into the canal | [c:at-seven] "At seven" | **yes** |
+| 8 | Constable Tully finds the bridge lamp dark, and two matches under the bakery lamp | DOC 2.1, "quarter past seven" [c:bridge-dark] · [c:two-matches] | no (pegged for you) |
+
+**The line's little shake:** if the child pegs event 4 *before* event 3, the line wobbles and Quill says: "Can a lamp be
+*already* lit before anyone lights it?"
+
+**Chapter end.** *(Stage: Dev holds Tully's notebook open under the shed's one bulb.)*
+**DEV:** "Two matches. Under *one* lamp."
+**ASHA:** "And none under the bridge lamp." *(Stage: the Clock Tower bongs five. One hour.)*
+
+---
+
+### Chapter 5 — The accusation
+
+**CULPRIT:** **Ivy Larkin**, who went to the wrong lamp *by mistake*, because Tam's note had no comma. (The accusation
+screen says "Who left the bridge lamp dark?" and, after the reveal, adds: "…and why?")
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. [c:already-lit] — the lamp Ivy reached was already lit.
+2. [c:tam-lit] — Tam lit the bakery lamp at six.
+3. [c:note] — the note with no comma.
+
+*(Also accepted in any slot: [c:ivy-bakery], [c:not-joke], [c:tam-ivy], [c:two-matches].)*
+
+**WRONG-SUSPECT RESPONSES (Quill)**
+- **Rafi:** "Rafi's pole is short. The bridge lamp needs the long pole. Who carries it?" *(points to [c:rafi-short] and
+  [c:long-pole])*
+- **Moss:** "Moss loves the dark. But where was she at half past six? Read her note again." *(points to [c:moss-ink])*
+- **Tam** (if the child tries her as a fourth choice): "Tam wrote the note. She did not go to any lamp but her own. Who
+  *carried* the note?"
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You have shown *where* Ivy went. Now show me *why*. Read Tam's note out loud. Where
+would you take a breath?"
+
+---
+
+### The reveal
+
+*The bakery step, quarter to six. Fog on the canal, gold light in the bakery window, the smell of hot buns. All three
+Lamplighters (Ivy too, arms folded, no pole), Tam with a tray, Mrs Gundersen in borrowed socks, and the agency. Across
+the street, the shed door stands open on one long pole.*
+
+**QUILL:** Fifteen minutes to six. New detective. Who left the bridge lamp dark?
+
+**NEW DETECTIVE:** Ivy. But not on purpose.
+
+**IVY:** *(offended)* I did NOT skip a lamp! I lit one!
+
+**NELL:** You did. Just not the right one. But first, the others.
+
+**NEW DETECTIVE:** Rafi's pole is short. The bridge lamp needs the long pole.
+
+**RAFI:** *(turning out his lumpy pockets: crumbs)* And these are for the ducks under the bridge. Every night at six.
+Ducks are not on my round.
+
+**NEW DETECTIVE:** Moss wished the lamps off. But wishing is not doing. She was on Gran's roof, on Ink Street.
+
+**MOSS:** Gran knows now. She says next time, ask.
+
+**QUILL:** Now the lamp that lit itself.
+
+**ASHA:** Tam lit the bakery lamp at six. Ivy got there at half past six. So when Ivy arrived…
+
+**IVY:** *(slowly)* …it was already lit. I thought my match was magic.
+
+**DEV:** Tully wrote it on the very first page. Two burnt matches, under one lamp.
+
+**FELIX:** Footnote: matches are not magic. Footnote to the footnote: I checked.
+
+**QUILL:** Now the note. Ivy told us, "Tam always does the NOT joke." New detective, read the note with a breath in it.
+
+**NEW DETECTIVE:** "Light the lamp by the bridge, *(breath)* not the one by the bakery."
+
+**DEV:** Ivy read it like this: "Light the lamp by the bridge… NOT! The one by the bakery." Look where Tam's line ends.
+Right on *not*. Like the end of a joke.
+
+**TAM:** *(covering her face with a floury hand)* My NOT joke. Oh no. I forgot the comma. Ivy, I'm sorry.
+
+**IVY:** I should have asked. Why would you need my long pole for a short lamp?
+
+**TAM:** And I'm sorry I borrow your pole every night.
+
+**IVY:** I don't mind. Not really. *(very fast)* I'm saving up. For your birthday. Your own long pole.
+
+*(Tam hugs her. There is flour on Ivy's coat for a week.)*
+
+**NELL:** *(whispering to the new detective)* I said someone skipped it. Hunch-o-meter: ten. Wrong again.
+
+**MRS GUNDERSEN:** Nobody be sad! I have a story to tell at home now. And these socks are lovely.
+
+**TULLY:** *(arriving, puffing)* I worked it out! It was… oh. You've done it.
+
+**QUILL:** Ten minutes behind, Constable. Right on time.
+
+*(The Clock Tower bongs six. Rafi runs the long pole across the street.)*
+
+**IVY:** *(lifting the long pole)* Bridge lamp. *Now.* Not the bakery one.
+
+**TAM:** With a comma!
+
+**ALL:** With a comma!
+
+*(Ivy reaches up. The tall lamp by the bridge glows gold through the fog.)*
+
+---
+
+### Epilogue
+
+**The comma whistle.** By the next evening, the Lamplighters have invented it. When anyone reads a note aloud, a Lamplighter
+gives one short *peep* wherever a comma should be. Tam blows it at every comma for a week, including in the middle of
+"Pass, *peep*, the buns, *peep*, please." Her dad buys earmuffs.
+
+**The vanished word.** Felix stands in front of Pollard's window.
+**FELIX:** "This way to Great Library." It sounds like a robot.
+**DEV:** Because *the* is missing. The smallest word.
+**ASHA:** *Small words carry big loads.* Like a comma.
+The new detective writes **THE** into the Blot Ledger, under **UNDER**. The ink spreads.
+**NELL:** Under the. Under the *what*?
+**QUILL:** Patience, Nell. A sentence takes its time.
+
+**The postcard.** At the agency, Dev runs his finger down the left edge of Mum's card.
+**DEV:** C… R… A… N… E. Crane!
+**FELIX:** Footnote: a crane is a long-necked bird. The lifting machine is named after the bird. Footnote to the footnote:
+this one appears to be a man.
+**ASHA:** "A rich man buys old buildings." And Moss saw a man measuring the Library steps.
+**NELL:** With a smile.
+Through the round window, far below, a man in a long grey coat walks past the bakery. He looks up, sees them, and tips
+his hat. Then he takes out a silver tape measure and measures the bakery door.
+**QUILL:** *(quietly)* Hm.
+
+**Biscuit.** Constable Tully finds Biscuit at last, fast asleep in a rowing boat under the bridge, wearing Mrs Gundersen's
+woolly hat, with three ducks asleep beside him. **RAFI:** "Oh! So *that's* who's been eating half the crumbs." Nobody
+knows how Biscuit got the hat. Mrs Gundersen says he can keep it.
+
+**The office object.** Ivy's long pole gets a shiny new hook. She brings the old brass one up all 39 stairs and gives it to
+the agency.
+**IVY:** So you remember the comma.
+**QUILL:** We will.
+The **lamplighter's pole tip** goes on the shelf. When you tap it, it glows, just for a moment.
+
+**Quill, last word:** The new detective pins the case to the Casebook Wall. Nell reads the label aloud: "Solved, *peep*, by
+all of us."
+**QUILL:** "By all of us" needs no comma. But I liked the whistle.
+
+**The last chill.** That night every lamp on Lamplit Row is lit, the tall one by the bridge brightest of all. Down the
+misty canal, from somewhere past the bookshop, come four slow notes on a violin: the same four as before. Then nothing.
+Pollard's Books is still locked. Nobody on Lamplit Row plays the violin.
+
+---
+
+### Detective School drill — *Where Does the Comma Go?*
+
+**Clue Spotter, comma edition.** One hurried note at a time. The child drags a comma into the note, then taps the lamp
+(or bun, or door) the note now means. Each note is read aloud twice: once flat, once with the comma's breath.
+
+1. "light the lamp by the bridge not the one by the bakery" → comma after *bridge* → **the bridge lamp**.
+2. "Rafi eat your bun" → comma after *Rafi* → **Rafi is told to eat his bun** (not someone eating Rafi!).
+3. "open the red door not the blue one" → comma after *door* → **the red door**.
+4. "time to eat Moss" against "time to eat, Moss" → the child picks the one that calls **Moss to tea** (and laughs at
+   the picture for the other one: Moss on a plate, looking very surprised).
+
+**The NOT joke twist (bonus card):** "Your hat is lovely… NOT!" Quill asks: "Is this a joke or an instruction? How do you
+know?" (The dots and the exclamation mark tell you. Tam's note had neither.)
+
+---
+
+### Art and scene notes
+
+**Backgrounds (no lettering in any painting; every sign is blank or symbolic)**
+- **Lamplit Row at dusk:** wet cobbles, a hump-backed stone bridge over a narrow canal, gas lamps in three heights (low,
+  middle, tall). The tall lamp by the bridge is the tallest thing on the street. Teal fog, gold lamplight.
+- **The same street at night, one lamp dark:** cosy, not scary. Bellweather's Bakery glows warm; the bridge is in soft
+  indigo shadow. A small, cheerful figure in a bright raincoat on the bridge, mid-step.
+- **Lamplit Row in thick fog (chapter 1 end, the last chill):** lamps as soft gold smudges, the canal a pale ribbon,
+  the bookshop window dark. Eerie, never frightening: the warm bakery light is always somewhere in frame.
+- **The lamp shed:** a wooden shed with three poles on pegs (short, middle, long), a chart board (blank in the painting;
+  the text is live), coils of wick, a tin of matches, rain on a tin roof, one bare bulb.
+- **Pollard's Books window:** stacked books, a cat-shaped bookend, an old painted arrow sign (blank board, arrow only)
+  pointing towards the bridge. A small white card with a round ink blot tucked behind it. The door shut, a blank hanging
+  sign on it.
+- **Bellweather's Bakery step:** the bakery lamp beside the door, short enough for a child to reach with a hook from the
+  top step. Two burnt matches on the cobbles beneath it (a small, fair detail in the painting).
+- **Gran's roof, Ink Street:** chimney pots, a small figure with a toy telescope, cloud where the stars should be; far
+  off, the bridge and its one dark lamp.
+
+**Props:** a crumpled paper bun bag with pencil writing (live text) and a floury thumbprint; Tully's notebook with a cocoa
+ring; two burnt matches; a postcard of a yellow tram on a steep street; Moss's toy telescope; Rafi's crumbs; a silver
+tape measure; a new hook and an old brass hook for the long pole; a tin whistle (the comma whistle).
+
+**Portraits**
+- **Ivy:** tall, two long plaits, dark green coat, the long pole held upright like a flag. Six expressions; *guilty* is
+  small and embarrassed, never sad.
+- **Rafi:** small, round glasses, tidy scarf, short pole, lumpy coat pockets. *Offended* is a puffed-up chin; *amused* is
+  a big grin.
+- **Moss:** woolly hat with a stitched star, freckles, a telescope on a string, sooty knees in chapters 2–4. *Nervous* is
+  hands over her mouth.
+- **Tam** (10): apron, flour on nose and sleeves, pencil behind her ear. *Guilty* is a floury hand over her face.
+- **Mrs Gundersen:** older visitor, silver hair, bright raincoat, wet knees, enormous smile. Borrowed striped socks in the
+  reveal.
+- **Silas Crane:** long grey coat, neat grey hair, wide smile, silver tape measure. One expression only: *amused*. Never
+  menacing; he looks like someone who is enjoying a lovely day.
+
+**Comic panels:** opening (5 panels as scripted); reveal (5 panels: bakery step; Ivy reading the note "NOT!"; Tam's
+floury face-palm; the tall lamp lit in the fog; Biscuit in the boat in the hat, ducks asleep beside him).
+
+**Sound:** rain on glass, the canal lapping, the hiss of gas, the Clock Tower's bongs, four violin notes (twice only).
+Silent under read-aloud.
+
+**Office object:** a curved brass hook from the end of a lamplighter's pole, slightly worn, on a small wooden stand.
+
+---
+
+## CASE 3 — The Case of the Upside-Down Fountain
+
+*A Bizzing mystery.*
+
+```
+meta:
+  id:            case-03
+  level:         2  (ages 8–9 · 3 suspects · 6 scene documents · ≤70 words per document · ≤14-word sentences ·
+                     3 deductions · timeline joins)
+  world:         garden (the Story Garden)
+  skills:        factopinion · inference · figurative  (supporting: sequence, for the timeline join)
+  vanished word: CLOCK  (from the fountain plaque: "When the garden ____ strikes eight, the gates close…")
+  office object: a stone frog (carved by Juniper's grandad, from the edge of the old frog hollow)
+  arc beats:     A. CLOCK vanishes from the fountain plaque; a waxed calling card floats in the basin
+                 B. Silas Crane's first PUBLIC NOTICE: the headline says the fountain will be "improved";
+                    the fine print says the Story Garden will close, and reopen by ticket
+                 Act I beat: Crane arrives in person, smiling, with a silver pen
+                 Season seed: "Mrs Olive Dean" in the guest book; a fiddle in the fog; violets on the card
+  read aloud:    every document, always on
+  mystery pass:  clock — the Committee signs Crane's offer at noon, moved to eleven in Chapter 3 ·
+                 impossible thing — a locked garden, one ring of keys, and still the valve moves every night ·
+                 false solution — Mr Grail, the only man with keys, who secretly spends the night in his hut ·
+                 hidden clue — "the house with the green door in the wall", the address on Juniper's poster (Ch. 1)
+```
+
+---
+
+### Case card
+
+> Every morning, the Fable Fountain runs backwards, up into the stone fox's mouth.
+> All night the garden is locked, and only the keeper has a key.
+> The Committee calls it a curse.
+> At noon, they sign a stranger's offer to fix it.
+> Then the garden may never be free again.
+> Read closely, detective.
+> Curses do not leave footprints.
+
+*(58 words. Read aloud.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Motive · Secret | Portrait expressions |
+|---|---|---|---|---|---|
+| **Mr Ambrose Grail** | Suspect · park keeper | Broad, grey whiskers, enormous boots, a ring of keys on his belt the size of a dinner plate | Gruff and fair; grumbles about midges; secretly feeds the robins | Sick of being bossed by the Committee, and of the "midge hotel"; a cursed fountain gets ripped out, hollow and all · He is afraid of the garden in the dark. Since the "joker" began he comes back at ten and sits all night in his hut with the lamp turned up, never once past the door | calm, offended, nervous, amused, guilty (a flicker only), relieved |
+| **Juniper Thorne**, 9 | Suspect · lives in Garden Cottage | Short curly hair, green frog-pattern wellies, a jam jar, binoculars round her neck | Quiet, earnest, careful with words; never tells a lie, but sometimes doesn't answer | Her frogs' pond is drying up in the drought · She is frightened of gruff Mr Grail, who wrote that the hollow should be filled with soil, so she never dared ask him | calm, nervous, guilty, relieved, amused, offended |
+| **Mrs Constance Bellamy** | Suspect · Chair of the Fountain Restoration Committee (speaks for the Committee) | Large hat with silk flowers, a clipboard, reading glasses on a chain she never uses | Dramatic; calls everyone "darling"; loves the word *cursed* | A "curse" brings Mr Crane's money and a grand restoration, with the Committee's name on a new plaque · She cannot read small print without the glasses she is too proud to wear, so she never read Crane's notice | calm, offended, amused, nervous, relieved |
+| **Mr Haris Qadir** | Witness · water engineer | Overalls, a pencil behind each ear, a spirit level in his pocket | Says "fact" a lot; very calm; enjoys a pipe more than most people enjoy cake | — | calm, amused |
+| **Tam Bellweather**, 11 | Witness · Lamplighter | Flour on her sleeve, a comma whistle round her neck (since Case 2) | In a hurry; her notes still have no full stops | — | calm, amused |
+| **Constable Bram Tully** | Helper | Cocoa flask, a lead with no dog on it | "I've brought the keys. Oh, Mr Grail has the keys." | — | calm, worried, relieved |
+| **Silas Crane** | Arc · property developer | Long grey coat, a silver tape measure, a silver pen, a stack of crisp notices | Smiling, smooth, pleasant to everyone; never raises his voice | — | amused, calm |
+
+The agency: **Quill**, **Nell**, **Asha**, **Dev**, **Felix** and the new detective (the child).
+
+---
+
+### Opening (comic panels, read aloud)
+
+1. **The Story Garden, Wednesday, seven in the morning.** Thick white mist on the hedges. Somewhere inside it, the
+   bandstand clock ticks, slow and loud. The Fable Fountain: a stone fox sitting on a rock, mouth open. Water should pour
+   *out* of the fox's mouth into the basin. Instead the basin is half empty, and the water is gurgling *up* and *into*
+   the fox's mouth with a long, wet, sucking sound, like a fox drinking through a straw. The fox's stone eyes shine wet.
+   **Mr Grail** (keys in one hand, the gate still swinging): "Again!"
+2. **The agency.** A note arrives by dumbwaiter, under a cinnamon bun. **Felix** reads it: "'Come at once. The fountain
+   is cursed. We sign Mr Crane's offer at noon. Yours, Constance Bellamy, Chair.' Footnote: *cursed* is an old word.
+   Footnote to the footnote: so is *Constance*."
+3. **Nell** is already on The Comet. **Nell:** "A committee that wants money says *curse*. I smell a plan. Hunch-o-meter:
+   ten!" **Quill:** "You smell a cinnamon bun. Bring me facts. Before noon."
+4. **Asha and Dev** run behind, into the mist. **Dev** (whispering): "My turn to carry the torch." **Asha** (whispering):
+   "It's a *fountain*. In the *morning*." **Dev:** "Fountains have dark bits."
+5. **The garden gate.** On every lamppost on the way, the same crisp cream notice with a gold border. Its bottom strip of
+   print is too small to read from the path. **Asha** (checking her sleeve): "Seven fifty-two. Four hours and eight
+   minutes to noon." **Dev:** "And one bun." **Asha:** "Half a bun. You dropped half in the mist."
+
+---
+
+### Chapter 1 — The scene
+
+*The Story Garden, a little before eight. The mist has not lifted. The bandstand clock ticks somewhere inside it, and the
+fountain gives a long, slurping gulp every few seconds, as if the fox is very thirsty and slightly rude. Robins hop on the
+padlocked side gate. Behind the yew hedge, where no rain has fallen for three weeks, the air smells of wet moss.*
+
+#### DOC 3.1 · report
+- **Author:** Mrs Constance Bellamy, for the Fountain Restoration Committee · **Date/time:** Monday · **Found where:** handed
+  to the agency at the fountain, on lilac paper
+- **Picture:** a lilac report in a ribbon folder, a pressed rose clipped to the corner.
+
+> THE FOUNTAIN REPORT
+> For five mornings, the water has run backwards, into the fox's mouth.
+> [[c:cursed|The fountain was cursed]] by an unhappy spirit.
+> [[c:everyone|Everyone agrees.]]
+> [[c:saddest|It is the saddest sight in all of Inkwell.]]
+> Only a full restoration will lift the curse.
+> Happily, a kind gentleman has offered to pay. (See his notice.)
+> Our meeting closed [[c:committee-seven|at seven o'clock]], and we all went home together.
+> — C. Bellamy, Chair
+
+*(Scene detail, not a document: on the bandstand table behind the Committee lies their guest book, open. Its last entry,
+set in live text the child can zoom into, reads "Tuesday, 6 p.m. — Mrs Olive Dean, visiting puzzle-setter". In the same
+painting a tall woman with a long grey plait, a green coat and a violin case is walking out of frame. Nobody remarks on
+her, and she is never a suspect. This is a seed for Case 11.)*
+
+#### DOC 3.2 · log
+- **Author:** Mr Haris Qadir, water engineer · **Date/time:** Tuesday, half past seven in the morning · **Found where:** his
+  clipboard, hanging on the valve box
+- **Picture:** a squared engineer's log sheet on a clipboard, a neat sketch of a lever with two positions, A and B.
+
+> ENGINEER'S LOG — Fable Fountain
+> Tuesday. Half past seven, morning.
+> Pump fine. No damage.
+> [[c:posB|Valve found in position B.]]
+> Position A pushes water up and out of the fox.
+> Position B is called "fill". It pulls water back through the fox.
+> [[c:fill-hollow|It sends it down the old pipe to the hollow behind the yew hedge.]]
+> [[c:prints|Small boot prints by the valve box. Wavy soles.]]
+> Valve box latch: stiff, but not locked.
+
+#### DOC 3.3 · log
+- **Author:** Mr Ambrose Grail, park keeper · **Date/time:** this week · **Found where:** the keeper's hut, hanging on a nail
+- **Picture:** a battered ruled logbook with a muddy thumbprint and a pencil on a string.
+
+> KEEPER'S LOG — A. Grail
+> Every evening this week:
+> [[c:grail-eight|8 p.m. Valve in A. Gates locked.]] Home for tea.
+> Every morning this week:
+> 7 a.m. Gates unlocked. [[c:grail-seven|Valve in B again!]] Put it back to A.
+> Note to self: no rain for three weeks.
+> Note to self: who is having a laugh at me?
+> Note to self: midges. [[c:grail-soil|That old hollow should be filled with soil.]]
+
+#### DOC 3.4 · poster
+- **Author:** Juniper Thorne · **Found where:** pinned to the Story Garden noticeboard, beside the bandstand, two weeks ago (the felt pen
+  has faded a little in the sun)
+- **Picture:** a home-made poster in felt pen: a drawing of three cross-eyed, very worried frogs and one cracked, dry pond.
+  In the bottom corner, very small, a drawing of a little arched door.
+
+> HELP THE FROGS!
+> The hollow behind the yew hedge is a frog pond.
+> Well, it was.
+> [[c:dust|Now my frogs are dry as dust.]]
+> [[c:grandad|Grandad Thorne kept this garden once. He says the fox used to feed the frogs.]]
+> Please, somebody, help them.
+> — Juniper Thorne, age 9
+> Garden Cottage ([[c:green-door|the house with the green door in the wall]])
+
+*(The clue hidden in plain sight. The address at the bottom of a child's poster looks like the least important line on the
+desk, and almost nobody marks it in Chapter 1. It answers the impossible question: the locked garden has a door that is not
+a gate. The reveal comes back to it: "It was on the very first page.")*
+
+#### DOC 3.5 · plaque, with a calling card
+- **Author:** the fountain's builder, long ago (the card: unknown) · **Found where:** on the fountain's stone rim; the card
+  floating in the basin
+- **Picture:** a weathered bronze plaque on the fountain rim (lettering is live text, not painted). On the water floats a
+  small waxed card with one perfect round ink blot.
+
+> THE FABLE FOUNTAIN
+> Here the thirsty fox gives back the water the river gave him.
+> [[c:plaque|When the garden ____ strikes eight, the gates close and the fox sleeps.]]
+> One word is missing. The gap is neat and clean.
+> Floating in the basin is a small waxed card.
+> It has a perfect ink blot. The ink has not run.
+> [[c:card|Look below the surface.]] Read on forthwith. — B.
+
+#### DOC 3.6 · notice
+- **Author:** Silas Crane · **Found where:** pinned to the Story Garden gate, and to every lamppost on the way there
+- **Picture:** a crisp cream notice with a gold border, a grand headline space at the top, and a strip of tiny print at
+  the very bottom that you have to lean in to read.
+
+> PUBLIC NOTICE
+> [[c:improved|GOOD NEWS! THE FABLE FOUNTAIN WILL BE IMPROVED!]]
+> Kindly paid for by Crane Holdings.
+> A brighter, better Story Garden for everyone!
+> With warm wishes, Silas Crane
+>
+> [[c:fineprint|During the improvement works, the Story Garden will close to the public.]]
+> [[c:until|It will close from 1 November until further notice.]]
+> [[c:tickets|Afterwards, entry will be by ticket only.]]
+
+*(The fine print is set in the app's smallest legible size; the magnifier enlarges it like anything else. It is an arc
+clue, never needed to solve the case, and the reveal reads it aloud.)*
+
+**Chapter 1 ends** *(stage, two beats)*:
+- Dev fishes the waxed card out of the basin with a twig. It has been floating all night, and it is bone dry. He sniffs it.
+  **DEV:** "Violets." Nobody in the garden is wearing violets.
+- And from behind the yew hedge, where no rain has fallen for three weeks, comes the sound of a very happy frog.
+
+---
+
+### Chapter 2 — Interviews
+
+*The interviews happen on the bandstand steps. The mist is thinning into gold. Every few seconds the fountain gulps.*
+
+#### SUSPECT Mr Ambrose Grail
+
+**Q (when):** "When do you check the valve?"
+> Twice a day, regular as rain. Well, when we had rain.
+> At eight every evening I check it's in A, and I lock the gates.
+> At seven every morning I unlock them.
+> And every morning this week it's in B.
+> [[c:leg|Somebody's pulling my leg.]]
+*(portrait: offended)*
+
+**Q (who):** "Who has keys to the gates?"
+> Me. Only me.
+> [[c:keys|The keys never leave my belt, not even in the bath.]]
+> Don't ask how I know that's true. It is.
+*(portrait: amused)*
+
+**Q (what):** "What do you think of the hollow behind the yew hedge?"
+> A midge hotel, that's what.
+> I'd fill it with soil tomorrow if the Committee let me.
+> [[c:grail-why|Why would I send water there? I'd be feeding the midges.]]
+
+**Q (what):** "What boots do you wear?"
+> Size twelve. Same pair for twenty years.
+> [[c:grail-boots|The soles are as flat as a pancake.]]
+> I don't slip, mind. I just stomp.
+
+**Q (where):** "Where do you go after you lock up?"
+> Home for my tea, in Mill Lane, outside the garden.
+> A kipper and a crossword.
+> I'm in my slippers by quarter past eight. Ask the robins.
+*(portrait: calm, a little too calm)*
+
+#### SUSPECT Juniper Thorne
+
+**Q (where):** "Where do you live?"
+> Garden Cottage, next to the Story Garden.
+> [[c:juniper-door|Our green door opens right into the garden, by the yew hedge.]]
+> Mum says it's the best door in Inkwell.
+*(portrait: calm)*
+
+**Q (what):** "What do you wear in the garden?"
+> [[c:wellies|My frog wellies. They have wavy soles, like ripples.]]
+> Frogs like ripples.
+> Well, they like ripples in water. These are rubber.
+
+**Q (when):** "When do you visit your frogs?"
+> Every evening.
+> [[c:after-bell|After the garden clock strikes eight, I say goodnight to them.]]
+> Then I go in for my bath.
+> They have a bath too, now.
+*(portrait: nervous: she has said a little too much)*
+
+**Q (who):** "Who told you about the fountain?"
+> Grandad. He was the keeper here before Mr Grail.
+> He drew a map of every pipe in this garden.
+> [[c:grandad-showed|He showed me the fox's secret when I was six.]]
+> I wasn't supposed to tell anyone. So I didn't.
+
+**Q (what):** "Are your frogs really dry as dust?"
+> Well, no. Frogs can't be dust. That's just a saying.
+> It means the hollow was drying up.
+> [[c:full-again|But now it's full again every morning.]]
+> They're very happy. They sing.
+*(portrait: guilty → relieved. When Mr Grail stomps past the bandstand, she steps behind Asha and says nothing at all.)*
+
+#### SUSPECT Mrs Constance Bellamy (for the Committee)
+
+**Q (why):** "Why do you say the fountain was cursed?"
+> Because it's spooky, darling!
+> [[c:spooky|Water going backwards is simply spooky.]]
+> And Mr Crane says a curse is very bad for a garden.
+> He has offered to fix everything. Such a kind man.
+> We sign his offer at noon.
+*(portrait: amused)*
+
+**Q (when):** "Where did the Committee go after your meeting?"
+> We closed at seven and walked out of the gates together.
+> [[c:gates-open|The gates were still open then, of course.]]
+> I was home by half past, having cocoa with my cat, Sir Reginald.
+
+**Q (what):** "Have you looked at the valve?"
+> The what? Darling, I don't do valves.
+> I do committees.
+> [[c:no-valve|I've never even seen the valve box.]]
+
+**Q (who):** "Who wrote the public notice?"
+> Mr Crane himself! Such a smile.
+> He gave us a hundred copies.
+> *(Her reading glasses swing on their chain. She does not put them on.)*
+> [[c:small-bits|I haven't read the small bits. Nobody reads the small bits.]]
+*(portrait: calm → nervous, much later, in the reveal)*
+
+#### WITNESS Mr Haris Qadir
+
+**Q (what):** "Can a curse turn a valve?"
+> In my experience, curses do not have hands.
+> A valve needs a hand.
+> It needs someone who knows which way to push it.
+> [[c:knew-pipe|Whoever did this knew the old pipe was there.]]
+
+**Q (who):** "Who knows about the old pipe?"
+> It isn't on the new plans.
+> [[c:old-map|Only the old keeper's map shows it.]]
+> Keeper Thorne drew that map, forty years ago. Lovely pipes.
+
+**Chapter 2 ends** *(stage)*: Dev puts his biscuit-tin periscope to the dusty window of the keeper's hut. **DEV**
+(whispering): "There's a camp bed in there. And a blanket. And a lamp burnt right down to the bottom." **ASHA**
+(whispering): "He said he was home in his slippers." Somewhere in the mist, the bandstand clock ticks on.
+
+---
+
+### Chapter 3 — The board
+
+**As the board opens** *(talk)*:
+- **NELL:** Forget the Committee. Look. The garden is locked all night.
+- **NELL:** One ring of keys, and it never leaves his belt. Not even in the bath.
+- **ASHA:** And somebody slept in that hut.
+
+**DEDUCTIONS** (level 2: three)
+
+**D1 · fact-opinion**
+- **Statement the child forms:** *"The fountain was cursed" is only an opinion: nobody saw a curse. The fact is that
+  somebody moves the valve to B in the night.*
+- **Supporting spans:** [c:cursed] · [c:everyone] · [c:posB] · [c:grail-seven] *(also accepted: [c:spooky], [c:knew-pipe])*
+- **Minimum link:** [c:cursed] + [c:posB]
+- **Why it matters:** a sentence can *sound* like a fact ("was cursed", "Everyone agrees") and still be an opinion. A
+  fact can be checked: the valve was in position B, and Mr Grail found it there every morning. Facts point to a *hand*,
+  not a curse.
+
+**D2 · figurative (and the motive)**
+- **Statement the child forms:** *"Dry as dust" does not mean the frogs are dust. It means their pond was drying up.
+  Position B sends water to that very pond. Whoever moved the valve wanted to fill the frogs' hollow.*
+- **Supporting spans:** [c:dust] · [c:fill-hollow] · [c:grandad] *(also accepted: [c:full-again], [c:grandad-showed],
+  [c:old-map], [c:knew-pipe])*
+- **Minimum link:** [c:dust] + [c:fill-hollow]
+- **Why it matters:** the figure of speech hides a real worry. And "the fox used to feed the frogs" is figurative too,
+  but it points at something literal: the old pipe from the fox to the hollow, which only Keeper Thorne's family knew.
+
+**D3 · timeline (and inference)**
+- **Statement the child forms:** *The valve was in A at eight, when the gates were locked, and in B by seven next
+  morning. So it was moved after the gates shut, by someone who did not need the gate: someone with a door straight into
+  the garden, wearing wavy-soled boots.*
+- **Supporting spans:** [c:grail-eight] · [c:grail-seven] · [c:after-bell] · [c:juniper-door] · [c:prints] ·
+  [c:wellies] *(also accepted: [c:tam-torch], [c:green-door], [c:keys])*
+- **Minimum link:** [c:grail-eight] + [c:after-bell] + [c:juniper-door] (the timeline join), or [c:prints] + [c:wellies]
+  (the footprints)
+- **Why it matters:** this is the **timeline join**. Two documents by two different people (the keeper's log and
+  Juniper's own answer) fit together at *eight o'clock*. Before eight: valve in A, gates open. After eight: gates locked,
+  and Juniper is in the garden through her green door. It is also the answer to the impossible question: a locked garden
+  is only locked to people who need the gate.
+
+**RED HERRINGS**
+- **Mr Grail** has the only keys, says somebody is "pulling my leg", and someone slept in his hut. **Cleared by**
+  [c:grail-soil] + [c:grail-why] (he wants the hollow *filled with soil*, the opposite of filling it with water),
+  [c:grail-boots] + [c:prints] (his soles are flat; the prints have wavy soles), and, in Chapter 4, [c:tam-torch] (the
+  torch went home through the green door; he lives in Mill Lane) and [c:grail-hut] (he never goes past the hut door in
+  the dark). *Pulling my leg* is figurative: he means someone is teasing him.
+- **The Committee** has a reason to want a "curse": a kind gentleman will pay. **Cleared by** [c:committee-seven] +
+  [c:gates-open] + [c:grail-eight] (they left at seven, while the gates were open; at eight the valve was still in A)
+  and [c:no-valve]. Their report is opinion, but an opinion is not a crime.
+
+**Wrong-link hints (Quill)**
+- If the child links [c:leg] as evidence against anyone: "Is anybody really pulling his leg? Show me the leg."
+- If the child links [c:saddest] to [c:posB]: "One of these can be checked. One is a feeling. Which is which?"
+- If the child links [c:grail-hut] to [c:keys]: "A man who won't walk past his own hut door in the dark. Would he cross the
+  whole garden to the yew hedge?"
+
+**ARC CLUES** (optional marks; logged in the back of the notebook)
+- **The vanished word:** [c:plaque] + [c:after-bell] — the plaque's gap is in the same place as Juniper's words "the
+  garden clock strikes eight". The missing word is **CLOCK**.
+- **Crane's notice:** [c:improved] against [c:fineprint] + [c:until] + [c:tickets] — the headline says *improved*; the
+  small print says *closed*, then *tickets*. Confirmed by [c:small-bits]: nobody reads the small bits, which is exactly
+  what the notice counts on.
+- **The Blot's card:** [c:card] — "Look below the surface", the advice for the whole case (and, though nobody knows it
+  yet, the whole season).
+- **The fiddle in the fog:** [c:tam-fiddle] (Chapter 4) — nobody in the case owns a fiddle. Logged under *Blot?* with a
+  question mark.
+
+**Chapter 3 ends: the false solution** *(talk)*
+- **NELL:** He says he was home in his slippers. But someone spent the night in that hut.
+- **NELL:** A locked garden. One ring of keys. One man inside it all night. Hunch-o-meter: *ten*.
+- **ASHA:** His soles are flat, though.
+- **NELL:** He could change his boots. He has had twenty years to buy another pair.
+- *(Constable Tully puffs up the path, cocoa slopping.)* **TULLY:** Message from Mrs Bellamy. Mr Crane has a train at
+  noon. They're signing at *eleven* now.
+- **ASHA** (checking her sleeve): Ten past ten. Fifty minutes.
+- *(At the hut door, Mr Grail has heard every word. He takes off his cap, turns it round and round in his big hands, and
+  says nothing at all.)*
+
+---
+
+### Chapter 4 — The timeline
+
+**Before the line goes up: two things that change everything.**
+
+#### WITNESS Tam Bellweather (a Lamplighter's sighting note)
+
+*(Tam skids in through the gate with a bun in one hand and a note in the other. It is about last night, Tuesday.)*
+
+**Q (what):** "Did the Lamplighters see anything by the garden?" *(Tam hands over a note, written in a hurry.)*
+> 8 oclock garden wall lamps lit
+> [[c:tam-torch|saw a little torch by the yew hedge after the gates shut]]
+> frog noises
+> it went back in the green door
+> later [[c:tam-fiddle|a fiddle somwhere in the fog]]. sad tune. then nothing
+> tam
+
+*(Felix: "Footnote: *it* means the torch. Footnote to the footnote: torches do not open doors. Someone was holding it."
+Asha: "And Mr Grail lives in Mill Lane. There's no green door in Mill Lane.")*
+
+#### SUSPECT Mr Ambrose Grail (one more question)
+
+**Q (why):** "Why is there a camp bed in your hut?" *(only after Chapter 3)*
+> *(He turns his cap round and round.)*
+> [[c:grail-back|Since the joker started, I come back at ten.]]
+> I sit in the hut with the lamp turned up, all night.
+> I mean to catch him. I never do.
+> [[c:grail-hut|I never go past the hut door. Not in the dark.]]
+> The garden's different at night. It whispers.
+> Don't tell the robins.
+*(portrait: guilty, then relieved. NELL, very quietly: "Hunch-o-meter: nought." QUILL: "Better. Now read the line.")*
+
+**The washing line** runs from seven in the evening to half past seven the next morning. **Timeline join:** two cards
+from two different documents meet at *eight o'clock*, and the child pegs them side by side.
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | The Committee's meeting closes; they walk out of the open gates together | [c:committee-seven] "at seven o'clock" | **yes** |
+| 2 | Mr Grail checks the valve: A. He locks the gates and goes home for tea | [c:grail-eight] "8 p.m. Valve in A. Gates locked." | **yes** |
+| 3 | The garden clock strikes eight; Juniper comes out through the green door to say goodnight to her frogs | [c:after-bell] "After the garden clock strikes eight" | **yes** (join with 2) |
+| 4 | Tam lights the garden-wall lamps and sees a little torch by the yew hedge, which goes back in the green door | [c:tam-torch] "after the gates shut" | **yes** |
+| 5 | Mr Grail comes back and sits in his hut with the lamp up, never past the door | [c:grail-back] "I come back at ten" | no (pegged for you) |
+| 6 | All night, the fountain runs "backwards" and the hollow fills | (no time word: the child infers it from 2 and 7) | no (pegged for you) |
+| 7 | Mr Grail unlocks the gates and finds the valve in B | [c:grail-seven] "7 a.m. … Valve in B again!" | **yes** |
+| 8 | Mr Qadir logs position B and small, wavy boot prints | DOC 3.2, "Half past seven, morning." | no (pegged for you) |
+
+**The line's little shake:** if the child pegs the Committee (1) *after* Mr Grail's lock-up (2), the line wobbles and Quill
+says: "Could they walk out of *open* gates after they were *locked*?"
+
+**Chapter 4 ends** *(stage)*: The bandstand clock says twenty to eleven. Through the bars of the gate, the children see a
+long grey coat, and the glint of a silver pen being uncapped.
+
+---
+
+### Chapter 5 — The accusation
+
+**CULPRIT:** **Juniper Thorne**, who has been switching the valve to "fill" every evening after the gates close, to save her
+frogs' pond in the drought.
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. [c:posB] — fact, not curse: the valve was moved to B.
+2. [c:fill-hollow] (with [c:dust]) — B fills the frogs' hollow, the pond that was "dry as dust".
+3. [c:after-bell] (with [c:juniper-door]) — Juniper is in the garden after the gates are locked, through her own door.
+
+*(Also accepted in any slot: [c:prints] + [c:wellies], [c:tam-torch], [c:grandad-showed], [c:green-door].)*
+
+**WRONG-SUSPECT RESPONSES (Quill)**
+- **Mr Grail:** "Read the last note in his log. Would a man who wants the hollow filled with soil fill it with water? Now
+  look at his boots." *(points to [c:grail-soil] and [c:grail-boots])*
+- **The Committee:** "When did they go home? And when was the valve last seen in A?" *(points to [c:committee-seven] and
+  [c:grail-eight])*
+- **"The curse":** "Curses do not have hands. Find me the hand." *(points to [c:knew-pipe])*
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You have shown that someone moved the valve. Who could be in the garden after eight,
+when the gates were locked? And who *wanted* that hollow full?"
+
+---
+
+### The reveal
+
+*The fountain, a quarter to eleven. The mist has burnt off and the stone fox is still drinking. Everyone is here: Mr Grail
+on the bench with his cap in his hands, Mrs Bellamy with her clipboard and a silver pen of her own, Mr Qadir with a spanner,
+Juniper with her jam jar, Tam with a bun, the agency, and Constable Tully with a lead and no dog. The bandstand clock
+ticks.*
+
+**QUILL:** New detective. Fifteen minutes. Was the fountain cursed?
+
+**NEW DETECTIVE:** No. The report says, "The fountain was cursed." That's an opinion. The engineer's log says, "Valve found
+in position B." That's a fact.
+
+**MRS BELLAMY:** *(offended)* But *everyone agrees*, darling!
+
+**FELIX:** Footnote: "everyone agrees" is not evidence. Footnote to the footnote: I didn't agree. Nobody asked me.
+
+**QUILL:** Then whose hand moved the valve? In a locked garden, with one ring of keys?
+
+**NELL:** I said Mr Grail. *(She winces.)* It was a ten.
+
+**MR GRAIL:** *(gruffly)* The hut's mine. Lamp up, door shut, all night. I don't like the garden in the dark.
+
+**NEW DETECTIVE:** But the garden has a door that isn't a gate. It was on the very first page: "the house with the green
+door in the wall."
+
+**DEV:** On Juniper's poster. We all read it. Nobody saw it.
+
+**ASHA:** Valve in A at eight, gates locked. After the clock struck eight, Juniper went out to her frogs. Tam saw the
+torch go home through the green door.
+
+**NELL:** And the boot prints have wavy soles. Like ripples. *(quietly)* Hunch-o-meter: seven.
+
+**QUILL:** Juniper. Will you tell us why?
+
+**JUNIPER:** *(quietly)* The frogs were dry as dust. Grandad showed me the fox's secret. Lever to B, and the fox feeds the
+frogs. So every evening, I pushed it.
+
+**MR GRAIL:** And every morning I pushed it back.
+
+**JUNIPER:** I'm sorry, Mr Grail. I didn't ask, because you wrote you'd fill it with soil. I was scared of you.
+
+**MR GRAIL:** *(a long pause)* …And I'm scared of the dark. Seems we're square, girl.
+
+**MR QADIR:** Fact: the pump is fine. Fact: the frogs are in excellent voice.
+
+**NELL:** Mrs Bellamy, before you sign, may I read you the small bits?
+
+*(Nell reads the fine print aloud through the magnifier. Mrs Bellamy's glasses, for the first time ever, go on her
+nose.)*
+
+**MRS BELLAMY:** I never could read small print without these. Too proud. *Close* the garden? *Tickets*? For *frogs*?
+The Committee withdraws its thanks!
+
+*(At the gate, a man in a long grey coat puts away his silver pen, and smiles.)*
+
+**SILAS CRANE:** Everyone reads the headline, Miss Okafor-Hart. That is rather the point of headlines. Good morning.
+
+*(He tips his hat and walks away, still smiling. The bandstand clock strikes eleven.)*
+
+**JUNIPER:** Thank you for the fiddle last night. The frogs loved it.
+
+**NELL:** What fiddle?
+
+**JUNIPER:** Somebody played a sad tune over the wall. Wasn't it you?
+
+*(Nobody answers. A robin sings. In Dev's pocket, the dry waxed card smells, very faintly, of violets.)*
+
+---
+
+### Epilogue
+
+**A pond for the frogs.** By Saturday the whole town is digging. Mr Grail brings the biggest spade ("Midges and all,
+then"). Mr Qadir fits a rain barrel and a little trickle-pipe, so the hollow fills from the bandstand roof whenever it
+rains, and the fountain runs forwards for good. Bellweather's Bakery sends buns. Tam blows the comma whistle at every
+pause in Mr Grail's speech, which is a lot of pauses. Juniper names the biggest frog **Grail**. Mr Grail pretends not to
+be pleased. Juniper gives him her second-best torch, "for the dark bits". He keeps it on his belt, next to the keys.
+
+**The Committee** holds a bake sale to restore the fountain itself. They raise enough, and a bit more. Mrs Bellamy now
+wears her glasses on her nose, and reads everything, including the backs of seed packets. Her new report says: "The
+fountain was cursed. *(Opinion.)* It is now fixed. *(Fact.)*" Felix frames a copy.
+
+**The vanished word.** Dev reads the plaque again with Juniper's answer beside it.
+**DEV:** "When the garden ____ strikes eight." What strikes? A clock does.
+**JUNIPER:** The garden *clock*! On the bandstand. Grandad wound it every Sunday.
+The new detective writes **CLOCK** into the Blot Ledger. The ink spreads: **UNDER · THE · CLOCK**.
+**ASHA:** Three words, three cases. Breakfast, three minutes. That's probably nothing.
+**DEV:** Probably. *(He frowns at the Ledger. Then a cinnamon bun arrives, and he stops frowning.)*
+**FELIX:** The card said "Look below the surface." Footnote: so did the engineer. Footnote to the footnote: so did the
+frogs, I expect.
+
+**Biscuit.** Constable Tully finds Biscuit at last, asleep on the *roof* of the bandstand, right under the garden clock.
+Nobody can work out how he got up there. Mr Grail fetches a ladder. Biscuit comes down only for a bun.
+
+**The office object.** Juniper climbs all 39 stairs with something heavy in her jam jar: a little stone frog, mossy and
+smiling, that sat at the edge of the old hollow.
+**JUNIPER:** Grandad carved it. He says it's been watching the pond for forty years. It can watch your shelf now.
+**QUILL:** Thank you, Juniper. It has good eyes.
+The **stone frog** goes on the shelf, beside the lamplighter's hook. When you tap it, it gives one small, satisfied
+*croak*.
+
+**Nell's thread.** That night, Nell takes the Inspector application out of her basket, smooths it flat, writes her name in
+the first box, and puts it back. Not yet.
+
+---
+
+### Detective School drill — *Fact or Opinion?* (with a figurative bonus)
+
+**Clue Spotter, sorting edition.** Six lines from the case slide onto the desk, one at a time. The child sorts each into the
+**FACT** drawer (it can be checked) or the **OPINION** drawer (it is what someone thinks or feels).
+
+| Line | Drawer | Quill's check |
+|---|---|---|
+| "Valve found in position B." | FACT | "Could you go and look? Yes." |
+| "The fountain was cursed." | OPINION | "Who saw the curse? Nobody." |
+| "Everyone agrees." | OPINION | "Did *you* agree? Then not everyone." |
+| "8 p.m. Valve in A. Gates locked." | FACT | "Written at the time, by the person who did it." |
+| "It is the saddest sight in all of Inkwell." | OPINION | "Saddest to whom?" |
+| "Small boot prints by the valve box. Wavy soles." | FACT | "You could measure them." |
+
+**Figurative bonus:** three sayings appear: "dry as dust", "pulling my leg", "as flat as a pancake". For each, the child
+taps the picture that shows what it *really* means (a dried-up pond; someone being teased; a very flat boot sole), and
+laughs at the picture that shows it *literally* (a frog made of dust; a man's leg being tugged; a boot made of pancake).
+
+---
+
+### Art and scene notes
+
+**Backgrounds (no lettering in any painting; plaques and notices are blank shapes, the text is live)**
+- **The Story Garden at dawn:** thick white mist on clipped hedges, the bandstand with a round clock face (hands painted,
+  no numerals) half lost in the mist, dew on the grass, a robin on the gate. Warm greens, soft gold light breaking through.
+  Spooky-soft, never frightening: the kind of mist you want to walk into with a torch and a friend.
+- **The Fable Fountain, close:** a stone fox sitting on a rock above a round basin, mouth open, stone eyes wet. The
+  "backwards" morning version: basin half empty, water swirling *up* into the fox's mouth. A small bronze plaque on the rim
+  (blank). A tiny waxed card afloat.
+- **Behind the yew hedge:** a mossy hollow; in the "before" plate, cracked mud with three anxious frogs; in the "after"
+  plate, full and rippling, lily pads, frogs singing.
+- **The green door in the wall:** a small arched wooden door, painted green, set in the old brick garden wall, with Garden
+  Cottage's chimney beyond. In the opening panels it should be visible but unremarkable, half behind ivy.
+- **The valve box:** a squat iron box half-hidden in ferns by the hedge, lid open, a lever with two notches. Small wavy
+  boot prints in the mud.
+- **The keeper's hut, inside (seen through Dev's periscope):** a camp bed, a folded grey blanket, a flask, a lantern burnt
+  to the bottom of its glass, a pair of enormous boots by the door. Cosy, a little sad, nothing sinister.
+- **The garden gate at evening:** iron gates, a big padlock, a lamppost with Crane's notice pinned to it (blank gold-edged
+  sheet).
+- **The bandstand scene behind the Committee (DOC 3.1):** the Committee's guest book lies open on the bandstand table; its
+  last entry is live text the child can zoom into ("Tuesday, 6 p.m. — Mrs Olive Dean, visiting puzzle-setter"), not
+  painted. In the same painting a tall woman with a long grey plait, a green coat and a violin case is walking out of
+  frame. Nobody remarks on her; she is never a suspect (seed for Case 11).
+
+**Props:** Mrs Bellamy's lilac report with a pressed rose; Mr Qadir's clipboard with a sketch of lever positions A and B;
+Mr Grail's battered logbook; Juniper's felt-pen frog poster (with a tiny drawn door in one corner); Crane's crisp notice
+with a gold border; a jam jar; frog wellies with wavy soles; a key ring the size of a dinner plate; a spade; a rain
+barrel; Crane's silver pen; the camp bed and burnt-down lantern in the hut.
+
+**Portraits**
+- **Mr Grail:** broad, weathered face, grey whiskers, flat cap, huge boots. *Offended* is a deep frown; *amused* is a
+  hidden smile under the whiskers. *Guilty* is the cap turning in his hands. Kind underneath, always.
+- **Juniper:** nine, short curly hair, freckles, binoculars, frog wellies, jam jar. *Guilty* is eyes down and the jar held
+  close, never tearful; *relieved* is a big, gap-toothed smile.
+- **Mrs Bellamy:** silk-flower hat, pearls, clipboard, glasses on a chain. *Amused* is theatrical; *nervous* is a hand
+  fluttering at her pearls. A last-scene variant with the glasses on her nose.
+- **Mr Qadir:** overalls, a pencil behind each ear, a calm half-smile. Two expressions are enough.
+- **Silas Crane:** long grey coat, neat grey hair, silver tape measure, silver pen, wide smile. *Amused* and *calm* only. He
+  should look charming, never sinister: a man who is sure he has already won.
+
+**Comic panels:** opening (5 panels as scripted); reveal (6 panels: the report and the log side by side; the poster's green
+door circled by the magnifier; Juniper at dusk by the green door with a torch; Mr Grail and Juniper, square at last; Nell
+reading the fine print, Mrs Bellamy's glasses going on; Crane pocketing his pen at the gate as the clock strikes eleven).
+
+**Office object:** a small mossy stone frog with a carved smile, about the size of a child's fist.
+
+---
+
+## CASE 4 — The Missing Gavel
+
+*A Bizzing mystery*
+
+meta: level 2 · the Forum (`forum`) · skills: `vocab`, `pronoun`, `sequence` (plus `inference` on one supporting clue) ·
+vanished word **THAT** · office object **the repaired gavel's old handle** · arc beats: Act II opens; the vote on the
+Library's money is postponed; **Crane's petition appears for the first time, every signature in the same handwriting**
+(left unexplained until Case 6); **Marlowe Finch is suspected and cleared for the first time**; the Blot Ledger reads
+UNDER · THE · CLOCK · THAT, and Dev says it is not random; violets on the motto's grey card, rosin under it.
+
+**Level 2 limits held:** 4 suspects · 6 case documents · every document and interview answer ≤ 70 words · every sentence
+≤ 14 words · 3 deductions · a timeline the child joins. The Blot's calling card and the carved motto are **arc items**
+(shown on the desk and logged in the Ledger), not case documents.
+
+**Mystery pass:** clock — the vote is at ten, and in Chapter 3 Mr Crane's own gavel arrives to start it without Old
+Thumper · impossible thing — the chamber was locked from Monday until Wednesday and the clerk took his key away, yet the
+box is empty · false solution — Marlowe, with a motive, a heavy bag, a side door and no answers (hunch-o-meter: ten) ·
+hidden clue — "Clerk's desk: brown paper, string and stamps." in Constable Tully's report (Ch. 1).
+
+---
+
+### Case card
+
+> The vote starts at ten o'clock. The Library's money depends on it.
+> But Old Thumper, the Town Hall's ancient gavel, has vanished from its box.
+> The chamber was locked from Monday until this morning.
+> No gavel, no vote.
+> The minutes say it was "sent off."
+> And Marlowe was seen leaving with a heavy bag.
+> Where is Old Thumper?
+
+*(58 words. Read aloud.)*
+
+---
+
+### Cast
+
+#### Suspects
+
+**Councillor Hector Bright**, chair of the council, *for* the "review"
+- **Look:** tall, a mustard waistcoat, very shiny shoes, a pocket watch he checks far too often.
+- **Manner:** loud and hearty, until he is nervous; then he goes very quiet and polishes the watch.
+- **Motive · Secret:** a gavel that vanishes hides what happened to it on Monday · he cracked Old Thumper's handle on the
+  third knock, put him back in the box very gently, and told nobody.
+- **Expressions:** calm, nervous, offended, guilty, relieved, amused.
+
+**Councillor Grace Mbeki**, *against* the "review"
+- **Look:** reading glasses on a beaded chain, a cardigan with deep pockets stuffed with speech cards.
+- **Manner:** crisp, quick and funny. Impatient: she has a speech ready and wants to give it.
+- **Motive · Secret:** no gavel, no vote, and the Library keeps its money for now · she was on the Town Hall steps at
+  seven this morning, practising her speech on the pigeons, and would rather sink through the floor than say so.
+- **Expressions:** calm, offended, amused, nervous (briefly), relieved, guilty (not used).
+
+**Mr S. Pettigrew**, assistant to Silas Crane
+- **Look:** short and round, a brown suit one size too big, round spectacles he polishes when anxious, a briefcase he holds like a shield.
+- **Manner:** anxious and polite. He apologises to doors he bumps into. Honest when asked a plain question.
+- **Motive · Secret:** Mr Crane wants a quick vote, and with Old Thumper gone, another gavel could start it · his
+  briefcase holds a brand-new gavel Mr Crane sent "in case", and he is too ashamed to show it.
+- **Expressions:** nervous (default), calm, offended, guilty, relieved, amused (rare, small).
+
+**Marlowe Finch**, 16, the Library's youngest assistant archivist
+- **Look:** a long scarf, ink on one thumb, arms always full of books.
+- **Manner:** shy, speaks fast, apologises for things that aren't his fault. Kind without making a fuss of it.
+- **Motive · Secret:** he loves the Library, and a vote that never starts cannot cut its money · his heavy bag held
+  twelve overdue books from the council's reading room, carried back quietly so that nobody was fined, or embarrassed,
+  before the vote.
+- **Expressions:** nervous, calm, offended (gently), guilty (wrongly), relieved, amused.
+
+#### Helpers and others
+
+- **Quill**: the agency's chief, in the tiny deerstalker. Corrects grammar at the worst moments.
+- **Nell Okafor-Hart**: lead detective. Hunch-o-meter switched on from page one.
+- **Asha Raman**: timelines on everything, including the bun she is eating.
+- **Dev Raman**: reads the clerk's blotting pad with a mirror from his biscuit-tin periscope.
+- **Felix Moreno-Lindqvist**: footnotes, with footnotes. Delighted by "minutes".
+- **Constable Bram Tully**: ten minutes behind, carrying the keys and the cocoa. Biscuit is missing again.
+- **Tam Bellweather**: leader of the Lamplighters; writes notes in a hurry.
+- **Professor Orla Penhallow**: Keeper of the Great Library. Sitting very straight in the public gallery, very worried.
+- **Mr Reuben Osei**: Town Hall clerk, kind and careful, away at his sister's until Friday. Appears only at the end.
+- **Ms Juno Marsh**: woodturner of Marsh and Daughter, Harbourside. Arrives with a parcel.
+
+---
+
+### Chapter 1 — The scene
+
+*Wednesday morning in the Forum. The Town Hall steps are crowded, and the pigeons are cross about it. Inside, the council
+chamber smells of floor polish and old speeches. Dust turns slowly in the sunbeams. Above the door, under the carved motto,
+the big clock ticks, louder than a clock should. On the long table sits a velvet-lined box, and the box is empty: there is
+only the dent where Old Thumper lay for two hundred years, like a shadow with nobody to cast it. The agency arrives at
+9.20, ten minutes ahead of Constable Tully's cocoa.*
+
+**Opening panels (comic cutscene, 4 panels):**
+1. **The Forum, twenty past nine.** Morning sun, people on the steps, pigeons, a speakers' corner, the Town Hall's big doors,
+   and the clock above them. **Asha** (checking her sleeve): "Nine twenty. Forty minutes to the vote."
+2. **Inside.** Councillor Bright staring into an empty velvet box. Councillor Mbeki tapping her speech cards. **Bright:**
+   "Locked since Monday! Locked! And *empty*! And Grace has been on the steps since seven!" **Mbeki:** "Hector, I was
+   *outside*."
+3. **The gallery.** Professor Penhallow, hands folded tightly. Behind her, Mr Pettigrew clutching a scroll in one hand and
+   his briefcase in the other, like a shield.
+4. **The door.** Nell, leaning on The Comet: "An empty box is still a clue." **Quill:** "So is a locked door. Forty
+   minutes."
+
+#### DOC 4.1 · notice
+- **Author:** Councillor Bright, for the Town Hall · **Date/time:** posted Tuesday, 2 pm · **Found where:** the
+  noticeboard by the Town Hall doors · **Picture:** a crisp printed notice on green baize, four brass pins, a
+  hand-drawn gavel at the top.
+
+> TOWN HALL OF INKWELL · SPECIAL VOTE
+> Wednesday, 10 am, in the Council Chamber.
+> Shall the council "review" the Great Library's money?
+> This vote was [[c:notice-tuesday|called on Tuesday at two]], by Councillor Bright.
+> Town Hall rule: every vote begins with three knocks.
+> The knocks come from [[c:notice-thumper|Old Thumper, the council's gavel]].
+> No knocks, no vote.
+> All are welcome to listen.
+
+**Notebook glosses (shown once marked):** *gavel*: a small wooden hammer a chairperson knocks to start or end a meeting.
+*review*: to look at again. (Felix: "Footnote: when a council says it will *review* your money, it often means *cut*
+it. Footnote to the footnote: not always. But often.")
+
+#### DOC 4.2 · minutes
+- **Author:** R. Osei, Clerk · **Date/time:** Monday, 4 pm to 5 pm · **Found where:** the clerk's minute book, open on
+  his desk · **Picture:** a tall ruled ledger, neat brown ink, a ribbon bookmark.
+
+> MINUTES OF THE COUNCIL · Monday
+> Present: Councillor Bright (chair), Councillor Mbeki.
+> Guest: Professor Penhallow, Keeper of the Library.
+> 4.10 pm: A talk about the Library's money. No vote today.
+> 4.50 pm: The chair closed the meeting with [[c:min-knocks|three very loud knocks]].
+> 5.00 pm: The councillors left. The clerk tidied the chamber.
+> [[c:min-after|After the meeting]], [[c:min-sentoff|the gavel was sent off]].
+> Written by R. Osei, Clerk
+
+**Notebook gloss:** *minutes*: the written record of a meeting. (Felix: "Footnote: nothing to do with clocks. Footnote
+to the footnote: well, a little. They both keep track of things.")
+
+#### DOC 4.3 · report
+- **Author:** Constable Bram Tully · **Date/time:** Wednesday, 9 am · **Found where:** handed to Quill on the Town Hall
+  steps · **Picture:** a constable's notebook page, a cocoa ring on one corner, careful round handwriting.
+
+> CONSTABLE'S REPORT · [[c:tully-time|Wednesday, 9 am]]
+> [[c:tully-locked|Chamber locked since Monday]]. Gavel box empty.
+> Minutes say the gavel was "sent off".
+> Sent off! [[c:tully-footballer|Like a footballer who broke the rules]].
+> Thrown out, then?
+> Tam saw [[c:tully-marlowe|Marlowe Finch leave on Monday with a heavy bag]].
+> [[c:tully-string|Clerk's desk: brown paper, string and stamps.]]
+> In the box: a card with an ink blot.
+> A word covered on the motto.
+> P.S. Biscuit is missing again.
+
+*(Tully's reading is the wrong one. The report is honest about what he saw; it is the meaning he gives "sent off" that the
+child must test. Two lines in it are bigger than they look. "Chamber locked since Monday" is the impossible thing: Mr Osei
+has the only other key, and he is at his sister's. "Clerk's desk: brown paper, string and stamps." is the clue hidden in
+plain sight: a list of what is on a desk, which nobody marks in Chapter 1. Somebody wrapped a parcel.)*
+
+#### DOC 4.4 · note (Lamplighters)
+- **Author:** Tam Bellweather · **Date/time:** Monday evening · **Found where:** pushed under the agency door Tuesday
+  morning, with a bun · **Picture:** a torn page from a bakery order pad, smudged with flour, pencil, crooked lines.
+
+> [[c:tam-monday|monday lamp time]]. town hall steps.
+> mr osei come out with [[c:tam-parcel|a long parsel under his arm]].
+> marlowe finch held the door for him.
+> [[c:tam-he|he said thank you marlowe]] and [[c:tam-post|went to the post offis]].
+> marlowe went home the other way.
+> [[c:tam-bag|he had a big bag. heavy.]]
+> all lamps lit by 6 oclock.
+> tam
+
+*(The pronoun is the clue, and Tam's note has two "he"s. "He said thank you Marlowe" cannot be Marlowe: you do not
+thank yourself. So that "he" is Mr Osei, and it is Mr Osei who went to the post office with the long parcel. The second
+"he" comes straight after "marlowe went home the other way", so the "he" with the big bag is Marlowe, carrying the
+books home the other way. Each "he" points back to the person just named. A reader in a hurry, like Nell in Chapter 3,
+reads the whole note as being about Marlowe.)*
+
+#### DOC 4.5 · letter (a print on a blotting pad)
+- **Author:** R. Osei, Clerk (a letter to Ms Marsh, woodturner) · **Date/time:** "…nday evening" · **Found where:** pressed
+  backwards into the clerk's blotting pad. Dev reads it in the mirror from his biscuit-tin periscope. Some words did not
+  print. · **Picture:** a green leather blotter, faint mirror-writing in brown ink, a small hand mirror propped against
+  the inkstand.
+
+> …nday evening
+> …ear Ms Marsh,
+> [[c:blot-thumper|Old Thumper's handle cracked at today's meeting]].
+> Poor old fellow.
+> [[c:blot-mended|He is sent to be mended]], [[c:blot-tonight|by tonight's post]].
+> Please fit a new handle. Keep the old one for me.
+> [[c:blot-away|I am away from tomorrow]], at my sister's.
+> There is no vote until next month, so there is no hurry.
+> Back … Friday.
+> … Osei, Clerk
+
+*(Two things for a careful reader. The second "He" is not Mr Osei: it is Old Thumper, the thing with the cracked
+handle. And Mr Osei believed there was no vote until next month. He wrote this on Monday. The special vote was not
+called until Tuesday afternoon, after he had gone. "Back … Friday" is the day he planned to return, and in the epilogue
+he does, on the Friday train.)*
+
+**Notebook gloss:** *blotting pad*: thick soft paper that soaks up wet ink. It keeps a backwards copy of whatever was
+pressed on it.
+
+#### DOC 4.6 · petition (Crane document)
+- **Author:** unknown ("Collected by" is blank) · **Date/time:** handed in Tuesday, noon · **Found where:** pinned to the
+  speakers' corner on the Forum steps · **Picture:** a long cream scroll, a wax seal with a crane bird, forty-two names
+  down the page. **Every name is set in the same curly handwriting font: same loops, same slant, same tail on every
+  "y".**
+
+> SAVE OUR LIBRARY BY SELLING IT!
+> We, the people of Inkwell, ask the council to vote at once.
+> Sell the Great Library to Crane and Co.
+> It will reopen as "The Inkwell Experience", with tickets.
+> Signed:
+> Ruth Annan · Billy Coe · Mira Das · Tom Ferris · Jo Haddad
+> … and thirty-seven more.
+> Collected by: [[c:pet-blank|________]]
+> Handed in by [[c:pet-handed|S. Pettigrew, for Crane and Co]].
+
+*(Arc document. It does not decide this case. The child may mark the blank line and the identical hands; the notebook
+files them under "Crane" with a question mark. Case 6 explains them.)*
+
+#### Arc items (on the desk, not case documents)
+
+**The calling card** (found in the empty gavel box by Tully; a small cream card, a perfect round ink blot):
+
+> One small word has gone.
+> Two small words can mean two things.
+> — B.
+
+**The carved motto** over the council chamber door. One word is covered by a neat stone-grey card that matches the stone
+exactly. The motto now reads:
+
+> SPEAK SO ____ ALL MAY HEAR
+
+*(Felix lifts the grey card in the epilogue; underneath, carved in the stone: **THAT**. The motto, whole, is "Speak so
+that all may hear." The word goes into the Blot Ledger. The Blot's card is a puzzle, not a confession: its second line
+points, fairly, at "sent off".)*
+
+**Chapter 1 ends** *(stage)*: Felix climbs on a chair under the motto, for a closer look at the grey card. He sniffs,
+frowns, and sniffs again. **FELIX** (whispering): "Footnote: it smells of violets. Footnote to the footnote: stone
+doesn't smell of anything." Above his head, the big clock ticks on. Nine thirty-one.
+
+---
+
+### Chapter 2 — Interviews
+
+*Interviews take place in the Town Hall's side room, which smells of floor polish and old speeches. Through the wall, the
+big clock ticks. Each answer arrives on the desk as a typed transcript.*
+
+#### SUSPECT Councillor Hector Bright
+
+**Q1 · what · "What happened at Monday's meeting?"**
+
+> We talked about the Library's money. Long talk. Very long.
+> At ten to five I closed the meeting.
+> Three knocks with Old Thumper. Good, firm knocks.
+> Perhaps a bit too firm.
+> Next question?
+
+**Q2 · what · "What do you mean, 'a bit too firm'?"** *(appears after Q1)*
+
+> *(He polishes his watch for a long time.)*
+> Oh, very well.
+> On the third knock, [[c:bright-crack|I heard a crack]].
+> I put Old Thumper back in his box very gently.
+> I told nobody. I was ashamed.
+> That gavel is two hundred years old!
+> Then this morning the box was empty.
+> I thought someone had found out and hidden him.
+
+**Q3 · why · "Why did you call a special vote on Tuesday?"**
+
+> A gentleman came to see me on Tuesday.
+> Mr Crane's assistant. Very polite.
+> He said the whole town wanted a quick vote.
+> He had a petition. Forty-two names!
+> So I called the vote that afternoon.
+> [[c:bright-wants|I wanted that vote today]], you see.
+> Without Old Thumper, I cannot start it.
+
+**Q4 · when · "When did you leave the Town Hall on Monday?"**
+
+> Five o'clock, on the dot. I checked my watch.
+> I walked out with Councillor Mbeki.
+> We argued all the way down the steps.
+> Friendly arguing. Mostly.
+
+**Q5 · who · "Who handles the gavel, apart from you?"**
+
+> Only the clerk, Mr Osei.
+> He keeps the box, the minute book, and the keys.
+> He is away at his sister's until Friday.
+> Lucky man.
+
+#### SUSPECT Councillor Grace Mbeki
+
+**Q1 · why · "Did you want this vote to happen?"**
+
+> Want it? I have nine speech cards in my pocket!
+> I would have won it, too.
+> The Library is free for everyone. It should stay that way.
+> A missing gavel helps nobody. It only makes us wait.
+
+**Q2 · when · "When did you leave on Monday?"**
+
+> [[c:mbeki-left|I left with Councillor Bright at five]].
+> He talked about his shoes all the way down the steps.
+> [[c:mbeki-osei|Mr Osei was still tidying the table]].
+> He was humming. He always hums when he tidies.
+
+**Q3 · what · "Did you see the gavel after the meeting?"**
+
+> It was on the table when I stood up.
+> Mr Osei was looking at it closely.
+> He had his glasses on the end of his nose.
+> I thought he was just being careful. He is always careful.
+
+**Q4 · who · "Who would want the vote stopped?"**
+
+> People will say I would. I am against the review, after all.
+> But I wanted to stand up and win.
+> Hiding a gavel is not winning.
+> Ask whoever wanted the vote in such a hurry.
+
+**Q5 · why · "Why were you at the Town Hall at seven this morning?"**
+
+> *(She goes a little pink.)*
+> I was on the steps. Practising.
+> Never you mind what.
+> The doors were locked. I didn't go in.
+> Ask the pigeons. On second thoughts, don't.
+
+#### SUSPECT Mr S. Pettigrew
+
+**Q1 · when · "When did you come to Inkwell?"**
+
+> [[c:pet-train|I came on Tuesday's noon train]].
+> Here is my ticket. It is a little crumpled. Sorry.
+> I had never been inside this Town Hall before Tuesday.
+> I went straight to Councillor Bright's office.
+
+**Q2 · why · "Why did you want a quick vote?"**
+
+> Mr Crane said quick votes are kind votes.
+> I am not sure that is true.
+> I am not sure of a lot of things lately.
+> *(He looks at his shoes.)*
+
+**Q3 · what · "Where did the petition come from?"**
+
+> [[c:pet-full|Mr Crane gave it to me already full]].
+> All forty-two names were on it.
+> I did not see a single person sign it.
+> Is that usual? It did not feel usual.
+
+**Q4 · where · "Where were you on Monday evening?"**
+
+> On a train, two towns away, eating a cold pie.
+> I can tell you the pie was cold.
+> I cannot prove it, I suppose. Pies do not keep receipts.
+
+#### SUSPECT Marlowe Finch
+
+**Q1 · what · "What was in your heavy bag on Monday?"**
+
+> *(He winds his scarf round once more.)*
+> Just… things. Library things.
+> Heavy things. Things with corners.
+> I'd rather not say, if that's all right.
+> I didn't take the gavel.
+> People always think I took things.
+
+**Q2 · what · "What did you see on the Town Hall steps?"**
+
+> [[c:mar-door|I held the door for Mr Osei]].
+> He had a long parcel in brown paper.
+> I didn't ask what was in it. That's private.
+> He thanked me and hurried off.
+> He said the post office shuts at half past six.
+
+**Q3 · where · "Where did you go after that?"**
+
+> The other way. Back to the Library.
+> I went in by the side door.
+> I didn't want anyone to see me.
+> *(He looks at the floor.)* That sounds bad, doesn't it?
+
+**Q5 · who · "Who do you think took the gavel?"**
+
+> I don't think anyone *took* it.
+> Mr Osei is the most careful man in Inkwell.
+> If he had it, it's safe somewhere.
+
+*(Q4 and Q6 open in Chapter 4.)*
+
+**Chapter 2 ends** *(stage)*: In the corridor, Mr Pettigrew sets down his briefcase to apologise to a door. The catch
+slips open a crack. Dev, behind a fern, lifts his biscuit-tin periscope. **DEV** (whispering): "There's something in
+there. Long. Wooden. With a big round head." **ASHA** (whispering): "Nine thirty-eight."
+
+---
+
+### Chapter 3 — The board
+
+**Before the board:** the child may also mark the petition's [c:pet-blank] "________" and [c:pet-handed] "S. Pettigrew, for Crane and Co";
+they file under *Crane*, not under this case.
+
+**As the board opens** *(talk)*: Nell pins Marlowe's portrait in the centre. "Heavy bag, Monday evening, right outside the
+door. Hunch-o-meter: nine."
+
+**Halfway: it gets worse** *(talk)*. Mr Pettigrew, very pink, opens his briefcase on the long table. Inside lies a
+brand-new gavel, shiny as a conker, with a crane bird carved on its head and the price tag still on its string.
+- **PETTIGREW:** Mr Crane sent it. In case. I didn't like to show it. It looks so… prepared.
+- **BRIGHT** *(opening a rule book as thick as a loaf)*: Town Hall rule ninety. "If Old Thumper is lost for good,
+  another gavel may knock."
+- **BRIGHT:** Sent off. Thrown out. Lost. If he's gone for good, we vote at ten. With this.
+- **MBEKI:** Who says he's *lost*?
+- **QUILL:** Two small words. Everything now turns on them.
+- **ASHA:** Nine forty. Twenty minutes.
+
+#### DEDUCTIONS
+
+**D1 · meaning (`vocab`)**
+- **Statement the child forms:** "Sent off" in the minutes means *posted away*, not *thrown out*. Old Thumper is the
+  gavel, and he was posted away to be mended.
+- **Supporting spans:**
+  - [c:min-sentoff] "the gavel was sent off"
+  - [c:blot-mended] "He is sent to be mended"
+  - [c:notice-thumper] "Old Thumper, the council's gavel"
+  - [c:blot-thumper] "Old Thumper's handle cracked at today's meeting"
+  - [c:tully-footballer] "Like a footballer who broke the rules" *(the wrong meaning, linked as the contrast)*
+- **Why it matters:** "Sent off" has two meanings. A footballer is *sent off* the pitch for breaking the rules. A parcel
+  is *sent off* in the post. The clerk wrote the second meaning; Tully read the first. Nothing was stolen, and nothing
+  is lost for good. The vanished gavel is a misunderstanding, and the Blot's card ("two small words can mean two
+  things") was pointing at it all along.
+- **Unlocks:** the truth card **"Mr Osei, the clerk"** is pinned to the board (he is not a suspect; he is who moved the
+  gavel).
+
+**D2 · who "he" is (`pronoun`)**
+- **Statement the child forms:** In Tam's note, the "he" who says thank you is Mr Osei, not Marlowe. Mr Osei carried the long parcel to the
+  post office. Marlowe went the other way with a bag of books.
+- **Supporting spans:**
+  - [c:tam-he] "he said thank you marlowe"
+  - [c:tam-post] "went to the post offis"
+  - [c:tam-parcel] "a long parsel under his arm"
+  - [c:mar-door] "I held the door for Mr Osei"
+  - [c:tully-string] "Clerk's desk: brown paper, string and stamps." *(also accepted: the hidden clue; somebody wrapped
+    a parcel at that desk)*
+- **Why it matters:** you cannot thank yourself, so "he" must be the other person on the steps. That puts the long parcel
+  (gavel-shaped) in Mr Osei's hands, heading for the post: the same night his letter says "by tonight's post". It also
+  clears Marlowe, whose heavy bag held twelve overdue books.
+
+**D3 · timeline (`sequence`)**
+- **Statement the child forms:** The gavel left on Monday evening. The special vote was not called until Tuesday
+  afternoon. So nobody could have hidden the gavel to stop the vote: when it left, there was no vote to stop.
+- **Supporting spans:**
+  - [c:min-after] "After the meeting"
+  - [c:tam-monday] "monday lamp time"
+  - [c:notice-tuesday] "called on Tuesday at two"
+  - [c:pet-train] "I came on Tuesday's noon train"
+- **Why it matters:** order is everything. Mr Osei sent Old Thumper off on Monday, believing the next vote was a month
+  away. He left for his sister's on Tuesday morning. Only *then* did Mr Pettigrew arrive and Councillor Bright call the
+  vote. Every "someone hid it to stop the vote" theory needs the vote to come first. It came last. The same order
+  answers the locked door: the gavel left on Monday evening, before the chamber was locked, in the hands of the man who
+  locked it. Nobody needed to get in afterwards.
+
+#### RED HERRINGS
+
+**Councillor Bright** (twitchy, polishing his watch, and hiding something)
+- **Why he looks guilty:** he goes quiet, he won't meet anyone's eye, and he admits "I put Old Thumper back very
+  gently".
+- **Cleared by:**
+  - [c:bright-crack] "I heard a crack": his secret is that he *cracked* the gavel, not that he took it;
+  - [c:bright-wants] "I wanted that vote today": he called the vote and needs the gavel to start it;
+  - [c:mbeki-left] "I left with Councillor Bright at five": he left with a witness while the gavel was still on the
+    table.
+
+**Councillor Mbeki** (she is against the review, so a postponed vote seems to help her; and she was on the steps at seven)
+- **Cleared by:**
+  - [c:mbeki-left] "I left with Councillor Bright at five";
+  - [c:mbeki-osei] "Mr Osei was still tidying the table";
+  - D3: on Monday there was no special vote to stop. *(Her secret, the pigeons, comes out kindly in the reveal.)*
+
+**Mr Pettigrew** (Crane's man, pushing for a quick vote, with a spare gavel in his briefcase)
+- **Cleared by:**
+  - [c:pet-train] "I came on Tuesday's noon train": he arrived after the gavel had already gone;
+  - [c:min-after] "After the meeting": the gavel left on Monday.
+- **Note:** he is uneasy about the petition ([c:pet-full] "Mr Crane gave it to me already full"). He is honest about it,
+  and about the shiny gavel. This is set up for Cases 6 and 10.
+
+**Marlowe Finch** (heavy bag, Monday evening, at the door)
+- **Why he looks guilty:** [c:tully-marlowe] "Marlowe Finch leave on Monday with a heavy bag" and [c:tam-bag] "he had a big bag. heavy."
+  A heavy bag, at the right door, at the right time; he won't say what was in it, and he crept back to the Library by
+  the side door.
+- **Cleared by:**
+  - [c:mar-books] "Twelve overdue library books" (Chapter 4);
+  - [c:mar-slip] "Stamped in at twenty past six on Monday" (Chapter 4);
+  - [c:tam-he] "he said thank you marlowe": the parcel was in Mr Osei's hands, not Marlowe's.
+
+**Wrong-link hint (Quill):** if the child links [c:tully-marlowe] to [c:tam-bag]: "Two people saw a heavy bag. Did either
+of them see inside it?"
+
+**Chapter 3 ends: the false solution** *(talk)*
+- **NELL:** Think about it. Marlowe loves that Library, and no gavel means no cut.
+- **NELL:** He had the bag. He was at the door. He won't say what was in it.
+- **NELL:** And he crept into the Library by the side door, so nobody would see. Hunch-o-meter: *ten*.
+- *(At the chamber door, Marlowe Finch has heard every word. He turns, scarf flying, and runs down the Town Hall steps.)*
+- **TULLY:** He's running! Is that a ten-and-a-half?
+
+---
+
+### Chapter 4 — The timeline
+
+**Before the line goes up.** *Six minutes later, Marlowe is back, out of breath, holding a slip of paper the way you hold a
+ticket for a train that is leaving.*
+
+#### SUSPECT Marlowe Finch (Chapter 4)
+
+**Q6 · what · "What did you run to fetch?"**
+
+> *(Out of breath, he holds up a slip of paper.)*
+> This. From the Library returns desk.
+> [[c:mar-books|Twelve overdue library books]], from the council's reading room.
+> One was three years late.
+> [[c:mar-slip|Stamped in at twenty past six on Monday]]. Twelve stamps.
+> I didn't want anyone fined before the vote.
+> So I carried them back. Quietly.
+
+**Q4 · why · "Why didn't you tell anyone about the books?"** *(appears after Q6)*
+
+> Because the councillors would feel embarrassed.
+> And embarrassed people vote crossly.
+> The Library doesn't need anyone voting crossly.
+
+*(Talk.)* **QUILL:** "Show me where it says the bag held a gavel." Nell reads the slip. It says books. Twelve of them.
+**NELL:** "I'm switching the hunch-o-meter off." **QUILL:** "Leave it on. Just read before you look at it." **NELL:** "Me
+and Asha will do the timeline." **QUILL:** "Asha and *I*."
+
+*The washing line is strung across the Town Hall side room. The child pegs postcards in order. Time-word spans glow when
+hovered.*
+
+| # | Event (true order) | Time-word span | Child places? |
+|---|---|---|---|
+| 1 | The meeting ends with three very loud knocks. Old Thumper's handle cracks. | [c:min-knocks] "three very loud knocks" (4.50 pm, Monday) | pre-placed |
+| 2 | The councillors leave together. Mr Osei is still tidying. | [c:mbeki-left] "I left with Councillor Bright at five" | **yes** |
+| 3 | Mr Osei wraps the gavel and writes to Ms Marsh. | [c:min-after] "After the meeting" | **yes** |
+| 4 | Mr Osei locks the chamber and leaves with the long parcel; Marlowe holds the door, then goes the other way with the books. | [c:tam-monday] "monday lamp time"; [c:tully-locked] "Chamber locked since Monday" | **yes** |
+| 5 | The parcel goes in the post. | [c:blot-tonight] "by tonight's post" | pre-placed |
+| 6 | Mr Osei leaves for his sister's. | [c:blot-away] "I am away from tomorrow" (Tuesday morning) | pre-placed |
+| 7 | Mr Pettigrew arrives with the petition. | [c:pet-train] "I came on Tuesday's noon train" | **yes** |
+| 8 | Councillor Bright calls the special vote. | [c:notice-tuesday] "called on Tuesday at two" | **yes** |
+| 9 | Constable Tully opens the chamber with the spare key and finds the box empty. | [c:tully-time] "Wednesday, 9 am" | pre-placed |
+
+**The join the child must see:** event 3 sits *before* events 7 and 8. When the child pegs "Bright calls the vote" after
+"the parcel goes in the post", the line tightens and the gold string from D3 lights. If the child pegs the vote first,
+the line shakes gently and Asha says: "My timeline says otherwise. And my timeline includes this bun."
+
+**Asha's running timeline (on her sleeve, in biro):** "9.20 arrive. 9.21 bun. 9.24 empty box. 9.25 second bun."
+
+**Chapter 4 ends** *(stage)*: Nine fifty-eight. Councillor Bright stands at the head of the long table and lifts Mr
+Crane's shiny gavel. **BRIGHT:** "Two minutes. Unless somebody can tell me where Old Thumper is."
+
+---
+
+### Chapter 5 — The accusation
+
+*The drawing-room reveal is set in the council chamber itself, under the carved motto. The four suspects stand along the
+long table. After D1, a fifth card stands at the door: Mr Osei's portrait, labelled "the clerk". It is an answer card,
+not a fifth suspect.*
+
+**The question on screen:** *Who moved Old Thumper, and what really happened?*
+
+**CULPRIT:** nobody stole the gavel. **Mr Osei, the clerk, sent it to be mended** by post on Monday evening, before the
+special vote existed. (In the accusation screen the child chooses the Osei card, then pins three pieces of evidence.)
+
+**MINIMAL EVIDENCE SET (any three, one from each deduction):**
+1. D1, meaning: [c:min-sentoff] "the gavel was sent off" + [c:blot-mended] "He is sent to be mended"
+2. D2, pronoun: [c:tam-he] "he said thank you marlowe" + [c:tam-post] "went to the post offis"
+3. D3, timeline: [c:min-after] "After the meeting" + [c:notice-tuesday] "called on Tuesday at two"
+
+*(Also accepted: [c:tully-string] "Clerk's desk: brown paper, string and stamps.")*
+
+**WRONG-SUSPECT RESPONSES (Quill):**
+- **Councillor Bright:** "He broke a gavel. He did not steal one. Read what he *wanted* on Wednesday morning." *(points
+  to [c:bright-wants])*
+- **Councillor Mbeki:** "Where was she at five? And who was still at the table?" *(points to [c:mbeki-left],
+  [c:mbeki-osei])*
+- **Mr Pettigrew:** "Which came first: the gavel leaving, or his train arriving? Put them in order." *(points to
+  [c:pet-train], [c:min-after])*
+- **Marlowe Finch:** "Who said thank you to whom? You cannot thank yourself." *(points to [c:tam-he]; then: "Twelve
+  books, one cross librarian. Read the slip.")*
+
+**WEAK-EVIDENCE RESPONSE** (right card, fewer than three valid links): "You've chosen the right person, but a guess
+isn't proof. Show me *what* 'sent off' means, *who* 'he' is, and *when* it all happened. Three pins, not one."
+
+---
+
+### The reveal
+
+*The council chamber, two minutes to ten. Everyone stands under the carved motto: Councillor Bright with Mr Crane's shiny
+gavel raised, Councillor Mbeki with nine speech cards, Mr Pettigrew hugging his briefcase, Marlowe by the door, Professor
+Penhallow very straight in the gallery, Constable Tully with his cocoa. The big clock ticks. Nell steps up to the speakers'
+step, then thinks better of it and hands the notebook to the child.*
+
+**NEW DETECTIVE:** Old Thumper isn't lost. Nobody stole him.
+
+**BRIGHT:** *(lowering the gavel)* Nobody? From a room locked since Monday?
+
+**NELL:** He didn't need to get out. He left before the door was locked, with the man who locked it.
+
+**FELIX:** The minutes say, "After the meeting, the gavel was sent off." Footnote: "sent off" has two meanings.
+
+**TULLY:** Like a footballer! Thrown out for bad behaviour!
+
+**FELIX:** Or like a parcel, in the post. Footnote to the footnote: the gavel did not commit a foul.
+
+**DEV:** *(holding up his biscuit-tin mirror)* Mr Osei's blotter says which. "He is sent to be mended, by tonight's
+post." And "he" is the gavel.
+
+**ASHA:** It was on the very first page, too. Constable Tully's own report: "Clerk's desk: brown paper, string and
+stamps."
+
+**TULLY:** So it was. I thought it was just a desk.
+
+**NEW DETECTIVE:** And Tam saw who carried the parcel. "he said thank you marlowe." You can't thank yourself. So "he" was
+Mr Osei.
+
+**MARLOWE:** *(very quietly)* I only held the door. My bag was books.
+
+**NELL:** My hunch-o-meter said ten. It should have said nought. I'm sorry, Marlowe.
+
+**QUILL:** It should have said "show me".
+
+**ASHA:** And the order settles it. The gavel left on Monday night. Mr Pettigrew's train came on Tuesday at noon. The vote
+was called at two. Nobody hides a gavel to stop a vote that doesn't exist yet.
+
+**BRIGHT:** *(sitting down heavily)* I must confess. I cracked him. Third knock. Too ashamed to say.
+
+**MBEKI:** Hector. It's a hammer. It's *for* knocking. *(She goes pink.)* And since we're confessing: at seven this
+morning, I was practising my speech. On the pigeons.
+
+**PETTIGREW:** And this gavel was Mr Crane's idea. "In case the old one is lost." *(He swallows.)* I rather hoped it
+wasn't.
+
+*(The doors bang open. Tam Bellweather, floury to the elbows, waves a telegram.)*
+
+**TAM:** The Constable sent me the minute Dev read the blotter. Answer's come!
+
+**TULLY:** *(reading)* "GAVEL AT MARSH'S. NEW HANDLE FRIDAY. NO VOTE TILL NEXT MONTH, SURELY? SORRY FOR FUSS. OSEI."
+
+*(The big clock strikes ten. Nobody knocks.)*
+
+**BRIGHT:** Old Thumper isn't lost. He's mending. *(He hands the shiny gavel back.)* The rule says we wait for him.
+
+**PENHALLOW:** *(letting out a long breath)* Then the vote waits.
+
+**PETTIGREW:** Mr Crane will be… disappointed. *(He looks at his petition.)* All these names look… rather alike, don't
+they?
+
+**DEV:** *(already looking)* Every "y" has the same curly tail.
+
+**QUILL:** Write it down. Not every question gets answered in one case.
+
+---
+
+### Epilogue
+
+*Friday. The Forum in late sun.*
+
+- **The ending:** Ms Marsh arrives at the Town Hall with a brown-paper parcel. Old Thumper is back, with a handle of
+  honey-coloured ash. She hands Councillor Bright the old cracked handle, wrapped in a ribbon. Mr Osei, back on the
+  Friday train just as his letter said, adds a line to the minutes: *"Friday: the gavel was sent back (mended)."* Felix
+  approves of the brackets.
+- **The vote:** Councillor Mbeki proposes that the vote waits a month, "so that all may hear," and that the town is
+  invited to speak first. Councillor Bright, for once, agrees without checking his watch. Mr Pettigrew posts Mr Crane's
+  shiny gavel back to him, second class. Professor Penhallow shakes Marlowe's hand. Marlowe drops four books.
+- **Bright's apology:** he tells the whole council he cracked the gavel. Nobody minds. Marlowe hands him the returns
+  slip: the book that was three years late was Councillor Bright's own, *Keeping Calm in Committees*. Bright pays the
+  fine himself and laughs, for the first time all week. He gives the old handle to the agency "for the young detective
+  who read it right".
+- **The pigeons:** Councillor Mbeki practises her speech on the Forum steps, in broad daylight this time. The pigeons
+  have heard it before. They stay anyway.
+- **The arc beat:** Felix climbs on the chair again and lifts the stone-grey card from the motto: **THAT**. A fine pale
+  dust sifts down onto his sleeve, and the smell of violets comes with it. "Footnote: rosin," he says. "Violinists rub it
+  on their bows. Footnote to the footnote: nobody on the council plays the violin." The child inks the word into the
+  Blot Ledger, which now reads **UNDER · THE · CLOCK · THAT**. Dev writes the four words in a row on his sleeve. "That's
+  not random," he says. "Nobody is *that* random." Asha: "It's a sentence starting." Dev: "Or a very bad poem." The
+  petition, with its forty-two identical hands, is copied into the notebook under a big question mark.
+- **Marlowe:** thanks the agency for believing him. Nell says sorry, properly, without a number.
+- **The running jokes:**
+  - Asha and Dev argue, in whispers, about whose turn it is to carry the torch down the Town Hall cellar stairs. There is
+    no reason to go to the cellar. They go anyway.
+  - **Biscuit** is found asleep in the council's ballot box, "casting his vote for a nap," says Tully, delighted with
+    himself for a whole afternoon.
+- **The office object:** the old cracked handle of Old Thumper, tied with Ms Marsh's ribbon, goes on the shelf. Tap it to
+  replay the case.
+
+---
+
+### Detective School drill
+
+**"Two meanings" (vocab, ~2 minutes).** Six short sentences. For each, the child chooses which meaning of *sent off* it
+uses: **posted away** or **ordered to leave**.
+
+1. Gran sent off her birthday cards on Monday. *(posted away)*
+2. The referee sent off the player for pushing. *(ordered to leave)*
+3. The gavel was sent off to be mended. *(posted away)*
+4. Rex was sent off the pitch for biting the ball. *(ordered to leave; it's a dog's football match)*
+5. The letter was sent off before lunch. *(posted away)*
+6. The goalkeeper was sent off and had to sit on the bench. *(ordered to leave)*
+
+**Bonus card (pronoun):** "Marlowe held the door for Mr Osei. He said thank you and hurried off." Who is "he"? *(Mr
+Osei. Marlowe did the kind thing; the person thanking is the one who was helped.)* Quill: "Pronouns point. Follow the
+finger."
+
+---
+
+### Art and scene notes
+
+- **Backgrounds (day, with a lamplit-evening variant for the epilogue's sunset):**
+  - **The Forum steps:** wide stone steps, a speakers' corner with a small wooden platform, market awnings at the edges,
+    pigeons. The Town Hall façade with tall doors and a big round clock above them (hands painted, no numerals). Any
+    signs are blank shapes.
+  - **The council chamber:** a long oak table, high-backed chairs, a public gallery with a brass rail, tall windows, dust
+    turning in the sunbeams, a big clock over the door. The velvet-lined gavel box centre-table, with the dent where the
+    gavel lay. A carved stone band over the door; **the motto text is live type set on the band, never painted**. The
+    Blot's stone-grey card is a separate prop layer that lifts off.
+  - **The clerk's office:** a desk with a green leather blotter, an inkstand, a tall ruled minute book, pigeonholes, a
+    kettle, and, in plain view, a roll of brown paper, a ball of string and a sheet of stamps.
+  - **Town Hall side room** (interviews): polished floor, a fern, a portrait frame with an abstract painted landscape
+    (no faces, no lettering).
+- **Props:** the empty velvet box; Old Thumper (dark old wood, a brass band, a pale crack along the handle; later a new
+  honey-coloured ash handle); the brown-paper parcel with string; the Blot's calling card; Dev's biscuit-tin periscope
+  with a small mirror; Marlowe's bag of library books and the returns slip with twelve stamps; the petition scroll with
+  the crane-bird wax seal; Bright's pocket watch; Bright's rule book, as thick as a loaf; Mbeki's speech cards; Tully's
+  cocoa flask; Mr Pettigrew's briefcase and, inside it, Mr Crane's brand-new gavel (shiny, a crane bird carved on its
+  head, a price tag on a string); Tam's telegram.
+- **Portraits (six expressions each):** Bright, Mbeki, Pettigrew, Marlowe. Small figures for Osei and Ms Marsh (calm,
+  amused, relieved).
+- **Documents:** notice on green baize; minutes in a ruled ledger; Tully's notebook; Tam's floury bakery order slip;
+  the mirror-blotter (render the text normally once Dev has "flipped" it; the painted blotter beneath shows only faint
+  mirrored scribble shapes); the petition, with all forty-two names in **one** handwriting font, so the sameness is
+  visible.
+- **Handwriting fonts:** Osei (neat, upright); Tully (round, careful); Tam (quick, uneven, lower case); petition (a
+  curly, looped hand, chosen so it can be recognised again in Case 6).
+- **Palette:** the Forum's world hue; warm stone, civic green, brass. Morning light for Chapter 1; late golden light for
+  the epilogue.
+- **No lettering in any painting.** The motto, notice and all document text are live text.
+- **Diversity:** the crowd on the Forum steps is mixed in age and colour, ordinary, nobody a type; the camera stays high
+  enough that faces stay small.
+
+---
+
+## CASE 5 — The Understudy's Secret
+
+*A Bizzing mystery*
+
+meta: level 2 · the Playhouse Quarter (`playhouse`) · skills: `voice`, `inference`, `sequence` (plus `detail` on the
+postcard) · vanished word **NEVER** · office object **a green pen** · arc beats: the second **Raman postcard**, from
+Nairobi, a dated list proving Crane and Co bought and closed two libraries; NEVER vanishes from the Playhouse poster;
+a calling card in the prompt book; Felix discovers he is happy in the hidden prompt corner (set-up for his reveal speech
+in Case 7); the Blot Ledger reads UNDER · THE · CLOCK · THAT · NEVER.
+
+**Level 2 limits held:** 3 suspects on the board at the start, a 4th unlocked by reading (never more than 4) · 6 case
+documents · every document and interview answer ≤ 70 words · every sentence ≤ 14 words · 3 deductions · a timeline the
+child joins. The calling card is an **arc item**, not a case document.
+
+**Mystery pass (6 Oct 2026).**
+- **Stakes and clock:** curtain up is tomorrow at seven, and halfway through Rosalind Ashe moves the deadline to
+  tonight: no Keeper and no script at the nine o'clock run-through, and opening night is cancelled.
+- **The impossible thing:** the script vanished from a room nobody entered. Petra watched the door all hour, and the only
+  person who came out carried nothing but a shawl.
+- **The false solution:** Tully rode the number four bus, and it was on time. Hugo lied. Nell: ten. Hugo's secret, in
+  chapter 4, breaks it.
+- **The clue in plain sight:** Celeste's thank-you card, "if I could". It reads like a flourish. It is literal.
+- **The Blot:** a smell of rosin on the calling card, and three notes on a violin from the empty seats.
+- **Continuity fixed:** Celeste's voice went on Tuesday, so on Wednesday she *wrote* her thanks to Petra (DOC 5.4); Hugo
+  "took it straight to Petra", and Petra's log now says so (7.20).
+
+**The play.** *The Lighthouse Keeper's Daughter* is the Playhouse's own new play, written by its in-house writer,
+**Rosalind Ashe** (an Inkwell character). Every line quoted from it here is original to this case.
+
+---
+
+### Case card
+
+> Curtain up is tomorrow at seven.
+> But tonight the star's script has vanished from a room nobody entered.
+> Someone has underlined green lines in the understudy's script.
+> A note with no name says, "Learn the green lines."
+> Is Hugo stealing the lead? Was it Petra? Or the cat who will not move?
+
+*(52 words. Read aloud. The clock "tomorrow at seven" is shown as a ticket stub in the card's corner.)*
+
+---
+
+### Cast
+
+#### Suspects (on the board from the start)
+
+**Hugo Aldana**, the understudy
+- **Look:** early twenties, curly hair that will not stay flat, a too-long knitted scarf, a bus ticket always poking out
+  of a pocket.
+- **Manner:** eager, sweet, says sorry far too often. Knows every line of every part, including the cat's (there is no
+  cat's part).
+- **Expressions:** calm, nervous (default), offended, amused, guilty (wrongly), relieved.
+- **Motive · Secret:** wants the lead, and the green lines are in *his* script · his "late bus" is a white lie: every
+  evening he reads the whole play aloud to his gran at Harbour House, because she cannot come to opening night.
+
+**Petra Nwosu**, stage manager
+- **Look:** headset round her neck, a pencil behind each ear, a clipboard, black clothes, sensible boots.
+- **Manner:** brisk, exact, secretly very kind. Talks in lists. Writes everything down, including the cat.
+- **Expressions:** calm (default), offended, nervous, amused, guilty (not used), relieved.
+- **Motive · Secret:** if the star cannot go on, it is Petra's job to say who does, and she can see every door from her
+  corner · she has known about Celeste's voice since Tuesday, and promised to tell no one.
+
+**Encore**, the stage-door cat, Inkwell's most famous cat
+- **Look:** large, ginger and white, one ear folded, a velvet collar from an old costume.
+- **Manner:** sleeps on whatever matters most. Has been in more shows than anyone. Answers no questions.
+- **Expressions:** asleep, one-eye-open, offended, amused, smug, yawning (the cat's six).
+- **Motive · Secret:** he sleeps on whatever matters most · he knows exactly where the script is, because he is lying
+  on it.
+
+#### The fourth portrait (unlocked by deduction D1)
+
+**Celeste Fairweather**, the lead, playing the Keeper
+- **Look:** sixties, silver hair in a soft knot, a long green shawl, a green pen behind one ear.
+- **Manner:** warm, grand, funny, calls everyone "dear". Tonight she only whispers, and writes instead of talking.
+- **Expressions:** calm, nervous, offended, amused, guilty, relieved.
+- **Motive · Secret:** twenty years on that stage without missing a single show · her voice went on Tuesday, and only
+  Petra knows.
+
+#### Helpers and others
+
+- **Quill**: in the deerstalker; whispers grammar corrections in the dark.
+- **Nell Okafor-Hart**: hunch-o-meter at ten before she reaches the stage door.
+- **Asha Raman**: timeline on the back of a programme. Checks the postcard's dates.
+- **Dev Raman**: solves the postcard puzzle; spots that word patterns repeat. Has the best nose in the agency.
+- **Felix Moreno-Lindqvist**: footnotes about green ink and understudies. Discovers the prompt corner.
+- **Constable Bram Tully**: ten minutes behind, with the cocoa. Rode the number four bus tonight. Biscuit is missing
+  again.
+- **Rosalind Ashe**: the Playhouse's writer. Ink on her cuffs, pencil in her hair. Sets the deadline in chapter 2;
+  appears in the reveal and epilogue.
+- **Sunny**: the lighting operator (seen briefly; returns in Case 7).
+
+---
+
+### Chapter 1 — The scene
+
+*Friday, 8 pm, the night before opening. The Playhouse is open to the sky, and a sea wind keeps lifting the corners of
+the programmes on the empty seats. The lighthouse set stands on stage, its lamp dark. Backstage smells of paint, dust
+and honey-and-lemon. Somewhere above the stage a rope creaks against its pulley, slow as a clock.*
+
+**Opening panels (comic cutscene, 5 panels):**
+1. The open-air Playhouse at dusk, the painted lighthouse on stage with its lamp dark, lanterns along the empty seats,
+   programmes lifting in the sea wind. Caption: *Friday, 8 pm. Curtain up: tomorrow at seven.*
+2. Backstage: Petra with her clipboard, pointing at an empty dressing table. **PETRA:** "Curtain up tomorrow at seven.
+   No script, no Keeper. No Keeper, no show."
+3. Hugo holding his script up, green lines on the page, looking horrified. **HUGO:** "I didn't do this! Sorry. I mean,
+   I didn't."
+4. Encore asleep on a costume basket, one ear folded, refusing to move for anyone. Behind him, a dressing-room door with
+   a painted star, firmly shut. Caption: *Nobody went through that door all evening.*
+5. The agency at the stage door. Nell: "Understudy. Wants the lead. Hunch-o-meter: ten!" Quill: "Show me where it says
+   that."
+
+#### DOC 5.1 · log
+- **Author:** Petra Nwosu, stage manager · **Date/time:** Friday evening · **Found where:** the prompt corner, clipped to
+  the prompt book · **Picture:** a ruled log sheet on a clipboard, small square capitals, a pencil on a string.
+
+> LOG · Friday
+> 5.30 Celeste in. Whispers she is [[c:log-saving|saving her voice]].
+> 5.45 [[c:log-honey|Honey and lemon sent up]].
+> 6.00 [[c:log-table|Script on her table]].
+> 6.30 [[c:log-alone|Celeste alone in her room. Door shut]].
+> 6.40 [[c:log-shawl|Celeste's shawl into the costume basket]].
+> 6.45 [[c:log-light|Light check on stage. Me and Sunny]].
+> 7.00 [[c:log-gone|Celeste's script GONE!]]
+> 7.15 [[c:log-hugo|Hugo in. Bus late]].
+> 7.20 [[c:log-note|Hugo brings me a green note]]. Pale.
+> All night: [[c:log-cat|Encore asleep in the costume basket]].
+
+**Notebook gloss:** *prompt corner*: the hidden place at the side of the stage where the stage manager runs the show and
+whispers forgotten lines. (Quill, reading over the child's shoulder: "'Sunny and I.' Not 'me and Sunny.' Carry on.")
+
+#### DOC 5.2 · note (anonymous, green ink)
+- **Author:** unsigned · **Date/time:** undated · **Found where:** tucked inside the cover of Hugo's script, on his chair
+  · **Picture:** a cream card, green ink, big looping letters, one tiny green smudge after the final dash.
+
+> [[c:note-dear|Hugo dear]],
+> Learn the green lines tonight. [[c:note-simply|Simply all of them]].
+> They will be yours on Saturday.
+> [[c:note-splendid|You will be splendid]].
+> Please do not ask why.
+> And please do not tell a soul.
+> [[c:note-friend|Your friend —]]
+
+*(The note has no name. Its voice has three tells: "dear" after a name, the word "simply", and the sign-off "Your
+friend —" with the dash and nothing after it.)*
+
+#### DOC 5.3 · script page (with green underlines)
+- **Author:** Rosalind Ashe (the play); the green underlines by an unknown hand · **Date/time:** — · **Found where:**
+  Hugo's understudy script, page 12, open on his chair · **Picture:** a typed script page, a coffee ring, some lines
+  underlined in green ink, a green note in the margin.
+
+> *The Lighthouse Keeper's Daughter*, by Rosalind Ashe. Act One.
+> LARK: Mother, the storm is coming.
+> KEEPER: <u>Then we climb. Ninety-nine steps, and a lamp at the top.</u>
+> <u>A ship we cannot see is still a ship.</u>
+> LARK: Who will thank us?
+> KEEPER: Nobody, my love.
+> KEEPER: <u>That is how you know it matters. Now hold the rail.</u>
+> *(Green ink, in the margin:)* [[c:page-long|All the long ones are yours, dear]].
+
+*(The short line, "Nobody, my love", is not underlined. Only the long speeches are. Someone can still manage a few words,
+but not a speech.)*
+
+#### DOC 5.4 · card
+- **Author:** Celeste Fairweather · **Date/time:** Wednesday · **Found where:** pinned to the cork board in the prompt
+  corner, among cue sheets · **Picture:** a cream card with a painted gull, green ink, the same big looping letters.
+
+> [[c:card-dear|Petra dear]],
+> [[c:card-simply|Simply splendid work]] on the storm scene!
+> The thunder made me jump. The rain made me cry.
+> Thank you, thank you.
+> [[c:card-could|I would shout it from the lamp room, if I could]].
+> [[c:card-friend|Your friend —C.]]
+
+*(The clue in plain sight. "I would shout it from the lamp room" sounds like a grand actor's flourish, and the child
+will read straight past it. It is literal. The card is dated Wednesday; Celeste's voice went on Tuesday; she wrote her
+thanks because she could not say them.)*
+
+#### DOC 5.5 · poster (with a vanished word)
+- **Author:** the Playhouse · **Date/time:** printed last month · **Found where:** on the stage door · **Picture:** a
+  painted poster of the lighthouse beam across a stormy sea; a neat slip of cream paper covers one word. **All poster text
+  is live type, never painted.**
+
+> THE PLAYHOUSE PRESENTS
+> *The Lighthouse Keeper's Daughter*
+> A new play by Rosalind Ashe
+> Starring Celeste Fairweather as the Keeper
+> [[c:poster-years|Twenty years on our stage]], and [[c:poster-gap|she has ____ missed a show]]!
+> Opening Saturday at seven.
+
+*(The gap is noticeable: read without it, the poster seems to boast that she "has missed a show", the opposite of a
+boast. Tully reads it aloud exactly that way and is puzzled. Felix lifts the cream slip in the reveal: **NEVER**. The
+word is also a clue: Celeste is proud that she has never missed a show in twenty years.)*
+
+#### DOC 5.6 · postcard (Raman thread)
+- **Author:** Dr Leela Raman · **Date/time:** postmarked Nairobi, Monday · **Found where:** arrived at the agency by the
+  bakery dumbwaiter, with the cinnamon buns, just before the agency set out · **Picture:** the front shows acacia trees at
+  sunset and giraffes on the horizon; the back has a stamp with a sunbird and Leela's quick, slanting writing.
+
+> Jambo, my two detectives!
+> Today I found Crane and Co's old company papers.
+> Your puzzle: put my list in date order.
+> [[c:pc-larkclose|9 June: Larkhill Library closes]]. New sign: "The Larkhill Experience".
+> [[c:pc-larkbuy|2 February: Crane and Co buys Larkhill Library]].
+> [[c:pc-fenclose|1 March: Fenwick Library closes]]. New sign: "The Fenwick Experience".
+> [[c:pc-fenbuy|14 November last year: Crane and Co buys Fenwick Library]].
+> What comes next on this list?
+> Love, Mum
+
+*(Arc document. Asha sorts the dates; Dev spots the repeating sign. It does not decide this case.)*
+
+#### Arc item (on the desk, not a case document)
+
+**The calling card**, found by Petra between two pages of the prompt book (a small cream card, a perfect round ink blot):
+
+> A voice can be lost.
+> A voice can be found on paper.
+> — B.
+
+*(A puzzle, as always. Both lines are true in this case: Celeste has lost her speaking voice, and her writing voice is on
+paper in two places.)*
+
+**End of chapter 1 (the Blot is closer than you think).** *Dev holds the card to his nose. "Pine trees? No. Sharper."
+Felix: "Footnote: that's rosin. Violinists rub it on their bows so the strings will sing. Footnote to the footnote:
+there is no violin in this play." Nobody says anything. Then, from somewhere out in the dark seats, soft as a draught,
+someone plays three notes on a violin, and stops. Petra throws up the house lights. Every seat is empty. The programmes
+lift and settle in the wind.*
+**TULLY:** The wind.
+**QUILL:** The wind does not play in tune.
+
+---
+
+### Chapter 2 — Interviews
+
+*Interviews take place in the green room, which is not green. Felix points this out. Each answer arrives on the desk as a
+typed transcript. Outside the window, the painted lighthouse stands dark against a darker sky.*
+
+#### SUSPECT Hugo Aldana
+
+**Q1 · when · "When did you get to the Playhouse tonight?"**
+
+> A quarter past seven. I'm so sorry.
+> The number four bus broke down by the bridge.
+> I ran the rest of the way.
+> Petra wrote it down. She writes everything down.
+
+**Q2 · what · "What did you find on your chair?"**
+
+> My script, open at page twelve.
+> Green lines all over the Keeper's speeches.
+> And a card tucked in the cover.
+> I didn't write it! I don't even own a green pen.
+> I took it straight to Petra.
+
+**Q3 · why · "Do you want to play the Keeper?"**
+
+> Every understudy dreams about it. Of course I do.
+> But not like this. Not by taking someone's script.
+> Celeste taught me how to bow.
+> I'd never steal from her.
+
+**Q4 · what · "Can we see something you wrote?"**
+
+> *(He hands over a note he left for Petra on Thursday.)*
+> [[c:hugo-note|petra — sorry sorry]]. bus late again.
+> i'll learn act two on the way home.
+> really sorry. h
+
+*(Hugo's own voice: no capital letters, "sorry" again and again, signs with a small "h". Nothing like the green note.
+And "bus late *again*": the bus is late a great deal. Tully notices that, later.)*
+
+**Q5 · who · "Who do you think wrote the green note?"**
+
+> Someone who believes in me, I suppose.
+> That's the strange part. It's a kind note.
+> Thieves don't usually say "you will be splendid".
+
+*(Hugo has a sixth question, but it does not appear until the end of chapter 3. See chapter 4.)*
+
+#### SUSPECT Petra Nwosu
+
+**Q1 · when · "When did you last see Celeste's script?"**
+
+> Six o'clock. On her table. I check every table at six.
+> At seven it was gone.
+> [[c:petra-search|I searched that room from the mirror to the mat. Nothing.]]
+> In between, I was on stage with Sunny.
+> We were checking every light for the storm scene.
+
+**Q2 · what · "Do you ever use green ink?"**
+
+> Not in my prompt corner.
+> Some actors say green is unlucky on stage.
+> I use pencil. Pencil rubs out. Mistakes happen.
+> [[c:petra-green|Only one person here writes in green]].
+> But that's her own business.
+
+**Q3 · who · "Who went into Celeste's room tonight?"**
+
+> Only Celeste.
+> [[c:petra-nobody|I can see her door from my corner and from the stage. Nobody went in]].
+> [[c:petra-shawl|She came out once, with only her shawl over her arm]].
+> She has been whispering since Tuesday.
+> She says she is just resting her voice.
+
+*(Petra chooses her words like a person carrying something full to the brim. She does not lie. She keeps a promise. Nell
+notices the care, and does not like it.)*
+
+**Q4 · what · "What about the card in your prompt book?"**
+
+> I found it at half past seven. It wasn't there at six.
+> A little ink blot, very neat.
+> I don't know who left it.
+> I do know the cat didn't. The cat can't open books.
+
+**Q5 · where · "Where is Encore now?"**
+
+> Still in the costume basket.
+> He climbed in just before the light check.
+> He won't move. I've tried a sardine.
+> When a cat won't move off something, it's usually something warm.
+
+#### SUSPECT Encore, the stage-door cat
+
+*(The cat's "interview" is a transcript of what he does. Petra translates. Tully takes notes, seriously.)*
+
+**Q1 · where · "Where were you at seven o'clock?"**
+
+> *(Encore opens one eye.)*
+> *(He closes it again.)*
+> PETRA: In the costume basket. Same as now.
+
+**Q2 · what · "Did you take Celeste's script?"**
+
+> *(Encore yawns. He turns round three times on the basket.)*
+> *(He lies down exactly where he was before.)*
+> TULLY: I'll put that down as a no.
+
+**Q3 · why · "Why won't you get out of the basket?"**
+
+> *(Encore puts one paw firmly on a green shawl.)*
+> *(He purrs, very loudly.)*
+> PETRA: He's guarding something. He always guards Celeste's things.
+
+**Q4 · who · "Who is your favourite person in the Playhouse?"**
+
+> *(Encore looks past everyone, to the dressing room with the shut door.)*
+> PETRA: Celeste. He sits on her lap at every rehearsal.
+
+#### SUSPECT Celeste Fairweather *(unlocked after D1)*
+
+*(Celeste can only whisper. She writes her answers on cards, in green ink. Each card arrives on the desk.)*
+
+**Q1 · where · "Where is your script?"**
+
+> Gone, dear. Simply gone.
+> Do not fuss about it.
+> The show will be splendid.
+> —C.
+
+**Q2 · why · "Why are you whispering?"**
+
+> Resting my voice, dear. Simply resting.
+> Actors do it all the time.
+> [[c:celeste-never|Twenty years, and I have not missed one show]].
+> I do not intend to start now.
+> —C.
+
+**Q3 · what · "Did you write a note to Hugo?"**
+
+> *(She looks at the card for a long time before she writes.)*
+> Why would anyone ask that?
+> Hugo is a dear boy.
+> He knows every line in the play.
+> —C.
+
+**Q4 · when · "When did you go to the costume basket?"**
+
+> Twenty to seven, perhaps.
+> I put my shawl away. It was too warm.
+> Is that a crime now, dear?
+> —C.
+
+*(Celeste never lies outright. She avoids answering. Nell, who reads people, notices the question she does not answer:
+Q3.)*
+
+**End of chapter 2 (the deadline moves closer).** *Rosalind Ashe comes down the aisle between the empty seats, a pencil
+in her hair and a sheet of paper in her hand. She pins the paper to the prompt-corner board, face down.*
+**ROSALIND:** That's my notice for the stage door. It says *cancelled*. I'm not waiting for tomorrow. If I have no
+Keeper and no script at the nine o'clock run-through, I turn it over.
+**PETRA:** *(looking at the stage clock)* Nine. That's fifty minutes.
+*In the costume basket, Encore begins, very loudly, to purr.*
+
+---
+
+### Chapter 3 — The board
+
+**Before the board:** Nell pins Hugo's portrait in the middle. "He wants the part, and he's got the lines underlined.
+Hunch-o-meter: ten!" Felix: "Footnote: an *understudy* learns a part in case the lead can't go on. Footnote to the
+footnote: learning it isn't stealing it." Quill: "Show me where it says Hugo took anything." Petra, from the prompt
+corner, without looking up: "Forty minutes to nine."
+
+#### DEDUCTIONS
+
+**D1 · voice (`voice`)**
+- **Statement the child forms:** The green note was written by Celeste. It sounds like her card to Petra, not like Hugo's
+  notes.
+- **Supporting spans:**
+  - [c:note-dear] "Hugo dear" with [c:card-dear] "Petra dear"
+  - [c:note-simply] "Simply all of them" with [c:card-simply] "Simply splendid work"
+  - [c:note-splendid] "You will be splendid" *(and "splendid" again, the card's own word)*
+  - [c:note-friend] "Your friend —" with [c:card-friend] "Your friend —C."
+  - [c:hugo-note] "petra — sorry sorry" *(the contrast: Hugo's own voice)*
+  - [c:petra-green] "Only one person here writes in green" *(supporting)*
+- **Why it matters:** writers leave fingerprints in words. Celeste always puts "dear" after a name, uses the word
+  "simply", and signs "Your friend —C." The note does all three, and stops at the dash, as if she began to sign and
+  remembered not to. Hugo writes in lower case and says sorry; Petra writes in lists. The green note is Celeste's.
+- **Unlocks:** Celeste's portrait is pinned to the board as the fourth suspect.
+
+**D2 · why (`inference`)**
+- **Statement the child forms:** Celeste is losing her voice and is too proud and embarrassed to say so. She marked the
+  long speeches for Hugo because she cannot manage them, and she hid her own script because it would give her secret
+  away.
+- **Supporting spans:**
+  - [c:log-saving] "saving her voice"
+  - [c:log-honey] "Honey and lemon sent up"
+  - [c:page-long] "All the long ones are yours, dear"
+  - [c:poster-gap] "she has ____ missed a show" with [c:poster-years] "Twenty years on our stage"
+  - [c:celeste-never] "Twenty years, and I have not missed one show" *(supporting)*
+  - [c:card-could] "I would shout it from the lamp room, if I could" *(supporting: the clue in plain sight)*
+- **Why it matters:** nobody says "I've lost my voice" anywhere in the documents. The child has to put it together:
+  whispering, honey and lemon, long speeches handed over while short lines are kept, and a thank-you *written* on
+  Wednesday by a woman who always says it out loud. And the poster explains the silence: twenty years without missing a
+  show is a lot to be proud of, and a lot to lose. Once the gap is filled (NEVER), the motive is plain.
+
+**D3 · timeline (`sequence`)**
+- **Statement the child forms:** The script vanished between six and seven, while Celeste was alone in her room and
+  Petra was on stage. Hugo arrived after it had gone. So Hugo could not have taken it.
+- **Supporting spans:**
+  - [c:log-table] "Script on her table"
+  - [c:log-alone] "Celeste alone in her room. Door shut"
+  - [c:log-gone] "Celeste's script GONE!"
+  - [c:log-hugo] "Hugo in. Bus late"
+  - [c:log-light] "Light check on stage. Me and Sunny" *(supporting: clears Petra)*
+  - [c:petra-nobody] "I can see her door from my corner and from the stage. Nobody went in" *(supporting)*
+  - [c:petra-shawl] "She came out once, with only her shawl over her arm" *(supporting)*
+  - [c:petra-search] "I searched that room from the mirror to the mat. Nothing." *(supporting)*
+- **Why it matters:** the green note and the underlines were waiting for Hugo when he arrived at 7.15. The script was
+  already gone at 7.00. Only Celeste was in her own room in that hour, and ten minutes after the door shut she carried
+  her shawl to the costume basket.
+
+#### THE IMPOSSIBLE THING (how could it?)
+
+*The script was on the table at six. Nobody went into the room. Petra searched it at seven, mirror to mat, and the script
+was not there. The only person who came out was Celeste, once, "with only her shawl over her arm". So how did a whole
+script leave a room that nobody entered?* The child already holds every piece: [c:log-shawl] (the shawl went into the
+costume basket at 6.40), [c:petra-shawl] (it went over her arm, folded), and Petra's Q5, "When a cat won't move off
+something, it's usually something warm." The script went out of the room inside the shawl. It is answered in the reveal.
+
+#### ARC LINK (optional, not one of the three)
+
+**The postcard puzzle (`sequence`, `detail`).** The child may drag Leela's four lines into date order on a small timeline
+of their own:
+1. [c:pc-fenbuy] "14 November last year: Crane and Co buys Fenwick Library"
+2. [c:pc-larkbuy] "2 February: Crane and Co buys Larkhill Library"
+3. [c:pc-fenclose] "1 March: Fenwick Library closes"
+4. [c:pc-larkclose] "9 June: Larkhill Library closes"
+
+The gold string reads: *Crane and Co buys a library, and about four months later it closes.* Filed
+under *Crane* in the notebook; it earns credit for `sequence` but does not decide this case.
+
+#### RED HERRINGS
+
+**Hugo** (wants the part; the underlines are in his script; and he lied about the bus)
+- **Why he looks guilty:** the green lines are all the Keeper's speeches, in *his* copy. The note says "They will be
+  yours on Saturday." And at the end of this chapter Tully proves the bus was on time: [c:tully-bus] "The number four
+  ran on time tonight", which Hugo admits: [c:hugo-lie] "I wasn't on the bus".
+- **Cleared by:**
+  - [c:log-hugo] "Hugo in. Bus late": he arrived after [c:log-gone] "Celeste's script GONE!";
+  - [c:hugo-note] "petra — sorry sorry": his voice is nothing like the note's;
+  - [c:hugo-gran] "Matron signed me in at half past five and out at ten to seven": he was across town for the whole
+    hour (chapter 4).
+- **His secret, told kindly:** he reads the play to his gran every evening, and was too shy to say so.
+
+**Petra** (the calling card was in *her* prompt book; she was alone in the prompt corner; she is plainly keeping
+something back)
+- **Cleared by:**
+  - [c:log-light] "Light check on stage. Me and Sunny": she was on stage, with a witness;
+  - [c:petra-green] "Only one person here writes in green": she writes in pencil, in lists.
+- **Her secret, told kindly:** she has known about Celeste's voice since Tuesday, and kept her promise. What she held back
+  was a friend's secret, not a script.
+
+**Encore** (comic; he will not move off the costume basket)
+- **Cleared by:**
+  - [c:log-cat] "Encore asleep in the costume basket": asleep all night;
+  - common sense, with Tully's help: a cat cannot write in green ink. (Tully checks his paws anyway. They are clean.)
+- **The joke that is also a clue:** a cat who won't move is sitting on something warm and important. See
+  [c:log-shawl] "Celeste's shawl into the costume basket".
+
+**End of chapter 3 (the false solution).** *Constable Tully arrives, ten minutes behind, with the cocoa and a bus ticket.*
+**TULLY:** Funny thing. Hugo says the number four broke down. I came here on the number four. It ran on time.
+**NELL:** He *lied*. So where was he between six and seven? In the wings, that's where, with nobody looking. He took the
+script, and Celeste's kind little note just made it easy for him. Hunch-o-meter: ten. Tully, the handcuffs.
+**TULLY:** I've only brought cocoa.
+**QUILL:** A lie about a bus is a lie about a bus. Ask him where he *was*.
+*In the wings, Hugo has gone the colour of the cream slip on the poster. Petra looks at the stage clock: half past
+eight.*
+
+---
+
+### Chapter 4 — The timeline
+
+*The washing line is strung across the green room (which is still not green). Before the first peg goes on, Hugo asks to
+speak. His sixth question unlocks.*
+
+#### SUSPECT Hugo Aldana *(new, unlocked by the end of chapter 3)*
+
+**Q6 · why · "Why did you say the bus was late?"**
+
+> TULLY: [[c:tully-bus|The number four ran on time tonight]]. I was on it.
+> HUGO: [[c:hugo-lie|I wasn't on the bus]]. Sorry.
+> I was at Harbour House, with my gran.
+> She can't come tomorrow, so I read her the play. Every part.
+> I made up a part for the cat. She likes the cat.
+> [[c:hugo-gran|Matron signed me in at half past five and out at ten to seven]].
+> Then I ran.
+
+*(Nell, very quietly: "Wrong again." Asha, already writing: "So he wasn't in the building at all between six and seven.
+He was across town with a matron and a gran." Hugo, to the child: "An actor who rehearses for his gran. I thought
+everyone would laugh." Nobody laughs.)*
+
+#### THE LINE
+
+*The child pegs postcards in order. Petra calls the time as the pegs go on: "Twenty to nine."*
+
+| # | Event (true order) | Time-word span | Child places? |
+|---|---|---|---|
+| 1 | Celeste arrives, croaky and whispering. | [c:log-saving] (5.30) | pre-placed |
+| 2 | Honey and lemon go up to her room. | [c:log-honey] (5.45) | pre-placed |
+| 3 | Petra checks: the script is on Celeste's table. | [c:log-table] (6.00) | **yes** |
+| 4 | Celeste shuts herself in her room, alone. She underlines Hugo's script and writes the note. | [c:log-alone] (6.30) | **yes** |
+| 5 | Celeste takes her shawl, and her script wrapped inside it, to the costume basket. | [c:log-shawl] (6.40) | **yes** |
+| 6 | Encore climbs into the basket and settles on the shawl. | Petra's "just before the light check" (Q5) | pre-placed |
+| 7 | Petra and Sunny check the lights on stage. | [c:log-light] (6.45) | pre-placed |
+| 8 | Matron signs Hugo out of Harbour House, and he runs for the Playhouse. | [c:hugo-gran] (6.50) | **yes** |
+| 9 | Petra finds the script gone. | [c:log-gone] (7.00) | **yes** |
+| 10 | Hugo arrives, late, and finds the green lines and the note. | [c:log-hugo] (7.15) | **yes** |
+| 11 | Hugo takes the green note straight to Petra. | [c:log-note] (7.20) | pre-placed |
+
+**The join the child must see:** event 9 (gone) is pegged *before* event 10 (Hugo arrives), and Hugo's whole hour is at
+Harbour House. If the child pegs Hugo's arrival first, the line shakes and Asha says: "Can't take a thing that's already
+gone. That's not detective work, that's magic."
+
+**Asha's running timeline (on the back of a programme):** "7.40 arrive. 7.41 cat. 7.42 cat refuses. 7.43 cocoa."
+
+**End of chapter 4.** *The last peg goes on. Petra looks up at the stage clock: ten to nine. Rosalind Ashe takes her seat
+in the back row with the notice face down on her knee. And on the dark stage, at the foot of the lighthouse, Celeste is
+already waiting, with her green pen and a stack of blank cards.*
+
+---
+
+### Chapter 5 — The accusation
+
+*The drawing-room reveal happens on the stage itself, under the dark lighthouse, the seats empty and lantern-lit. Hugo,
+Petra and Celeste stand in a row. Encore is carried on in the costume basket, because he will not be parted from it.
+Ten minutes to the run-through.*
+
+**The question on screen:** *Who hid Celeste's script, and wrote the green note?*
+
+**CULPRIT:** **Celeste Fairweather.** She hid her own script and wrote the note, to hand her long speeches to Hugo
+without admitting that she has lost her voice.
+
+**MINIMAL EVIDENCE SET (three pins, one from each deduction):**
+1. D1, voice: [c:note-friend] "Your friend —" + [c:card-friend] "Your friend —C."
+2. D2, why: [c:log-saving] "saving her voice" + [c:page-long] "All the long ones are yours, dear"
+3. D3, timeline: [c:log-alone] "Celeste alone in her room. Door shut" + [c:log-gone] "Celeste's script GONE!"
+
+**WRONG-SUSPECT RESPONSES (Quill):**
+- **Hugo:** "Forget the bus. Where was he from half past five till ten to seven, and who signed him out? And when was the
+  script already gone?" *(points to [c:hugo-gran], [c:log-gone])*
+- **Petra:** "Where was she at quarter to seven, and who was with her? And what does she write with?" *(points to
+  [c:log-light], [c:petra-green])*
+- **Encore:** "A fine suspect. A terrible writer. Read where he spent the evening." *(points to [c:log-cat]; Encore
+  looks offended)*
+
+**WRONG-THEORY RESPONSE (Quill), if the child blames the Blot:** "The Blot takes one word at a time and leaves the gap
+tidy. A whole script is not a word. Read the log: who came out of that room, and what was over her arm?"
+
+**WEAK-EVIDENCE RESPONSE** (right suspect, fewer than three valid links): "You've chosen the right person, but you
+haven't shown it yet. Whose *words* are these? *Why* would she do it? And *when* could she? Three pins."
+
+---
+
+### The reveal
+
+*The stage, ten to nine. The lighthouse lamp is dark. Petra brings up one soft light. Rosalind Ashe sits in the back row,
+her notice face down on her knee. Everyone waits.*
+
+**QUILL:** Ten minutes. New detective, take them through it.
+
+**NELL:** *(to the child)* You read it. You say it. *(beat)* Fine, I'll start. Hugo didn't take anything.
+
+**ASHA:** Matron had him at Harbour House until ten to seven. The script was gone at seven. He was still running.
+
+**HUGO:** Reading to my gran. Sorry. I mean, not sorry.
+
+**NELL:** Petra was on stage with Sunny. But she was hiding something.
+
+**PETRA:** *(quietly)* I knew about the voice. She made me promise. I didn't know about the script.
+
+**FELIX:** So it's the voice. Not the speaking one, the writing one. "Hugo dear." "Petra dear." "Simply all of them."
+"Simply splendid." Footnote: everyone has words they can't stop using. Footnote to the footnote: mine is "footnote".
+
+**DEV:** *(holding the note beside the card)* The card ends "Your friend —C." The note ends "Your friend —"
+and stops. Someone began to sign, then remembered not to.
+
+*(Everyone turns. Celeste stands very still. She pulls the green pen from behind her ear, and writes.)*
+
+**CELESTE:** *(the card, read aloud by Petra)* "Yes. It was me. —C."
+
+**NELL:** But nobody went into that room. And you came out with nothing!
+
+**QUILL:** Nothing but a shawl. Read the log. Where did the shawl go?
+
+*(Nell kneels by the costume basket.)*
+
+**NELL:** The cat's laying on it!
+
+**QUILL:** *Lying.* Hens lay eggs. Cats lie on scripts. Lift him gently.
+
+*(Nell lifts Encore. Encore allows it, with dignity. Under him, folded inside the green shawl: Celeste's script, warm and
+slightly furry.)*
+
+**NELL:** But *why*?
+
+*(Celeste points at the poster on the stage door. Felix crosses, and gently lifts the cream slip of paper. Underneath:
+NEVER.)*
+
+**FELIX:** *(reading)* "Twenty years on our stage, and she has never missed a show."
+
+**CELESTE:** *(a whisper)* My voice went on Tuesday. *(she writes the rest)* "On Wednesday I could not even
+say thank you to Petra, so I wrote it. I hid my script. It was full of notes like *voice going, rest!* I gave Hugo the
+long speeches. If he was ready, nobody needed to know. —C."
+
+**DEV:** It was on her card from the very first page. "I would shout it from the lamp room, if I could." She couldn't.
+
+**HUGO:** Celeste. You could have just *told* me.
+
+**CELESTE:** *(writing)* "Yes, dear. That is the lesson. I am a slow learner. —C."
+
+**TULLY:** *(arriving with more cocoa)* What did I miss?
+
+*(In the back row, Rosalind Ashe stands, and tears her notice in two.)*
+
+**ROSALIND ASHE:** A better second act than mine.
+
+---
+
+### Epilogue
+
+*Saturday, opening night. Every lantern in the Playhouse is lit.*
+
+- **The kind ending:** Rosalind Ashe rewrites one scene overnight. The Keeper is now played by two people: the **Old
+  Keeper** (Celeste), who climbs the ninety-nine steps and lights the lamp without a word, and the **Young Keeper**
+  (Hugo), her memory of herself, who speaks the long speeches beside her. Rosalind's new line for the Old Keeper,
+  written on a card she hands to Celeste: *"Some nights the lamp says it for me."* The audience stands at the end.
+  Celeste has never missed a show. She just didn't speak in this one. Hugo bows exactly as she taught him.
+- **Hugo's gran:** is in the front row after all. Matron has brought the whole of Harbour House in the minibus, and they
+  clap loudest at the cat's part, which Rosalind has quietly written in. (Encore plays it asleep.)
+- **Celeste's apology:** she writes cards to Hugo, to Petra and to the agency. Every one says "dear" and "simply" and
+  ends "Your friend —C." The one to Petra says: "Thank you for keeping it. Simply the best friend a voice could have."
+  The one to the agency comes with her green pen: "For the detective who read my handwriting better than I hid it."
+- **Felix:** sits in the prompt corner with Petra all night, following the script with a finger, ready to whisper any
+  forgotten line. Nobody forgets one. "It's perfect here," he whispers. "I can be in the show and nobody can see me."
+  Quill makes a note. (Case 7 is coming.)
+- **The arc beats:**
+  - **NEVER** goes into the Blot Ledger. It now reads **UNDER · THE · CLOCK · THAT · NEVER**.
+  - **The postcard:** Asha puts Leela's list in order: 14 November, Fenwick bought; 2 February, Larkhill bought; 1 March,
+    Fenwick closed; 9 June, Larkhill closed. "About four months from buying to closing," she says. "Both times." Dev
+    spots the pattern in the signs: *The Larkhill Experience. The Fenwick Experience.* "What comes next on this list?"
+    he reads. Nobody needs to say it. *The Inkwell Experience.* Asha pins the postcard to the Casebook Wall, next to the
+    petition from Case 4.
+  - Dev, holding the Blot's card: "'A voice can be found on paper.' The Blot knew what this case was about before we
+    did." Nell: "Hunch-o-meter: the Blot is on our side. Six." Quill: "Write it in pencil."
+- **The running jokes:**
+  - Asha and Dev argue, in whispers, about whose turn it is to hold the torch in the wings. Petra shushes them. They
+    keep arguing, more quietly.
+  - **Biscuit** is found at the very top of the lighthouse set, sitting in the lamp room, wearing a sailor's cap from the
+    props table. He gets a round of applause on his way down. Encore watches from the costume basket and does not
+    clap.
+- **The office object:** Celeste's green pen goes on the shelf. Tap it to replay the case.
+- **The last chill:** as the audience files out, Encore stops washing his paw and stares at the very back row. One seat
+  there is folded down, though nobody bought a ticket for it. Then, from somewhere above the empty seats, the same three
+  notes on a violin, soft as a draught, and the prompt corner smells, just for a moment, of rosin. When Petra brings up
+  the house lights, the seat has folded itself up again. Felix writes it down. Quill reads it twice.
+
+---
+
+### Detective School drill
+
+**"Who wrote this?" (voice, ~2 minutes).** Three short notes appear with no names. The child drags each to Celeste,
+Hugo or Petra, then marks the word or habit that gave it away.
+
+1. "Costumes, done. Lights, done. Cat: will not move." *(Petra: a list.)*
+2. "sorry, sorry, i left my scarf in the wings. h" *(Hugo: lower case, sorry, small h.)*
+3. "Simply wonderful rehearsal, dear. Your friend —C." *(Celeste: simply, dear, the sign-off.)*
+
+**Bonus card:** "Bertie dear, simply the best soup! Your friend —" Who wrote it, and what is missing? *(Celeste; the C.)*
+Quill: "Everyone writes in their own voice. Listen with your eyes."
+
+---
+
+### Art and scene notes
+
+- **Backgrounds (night, lamplit and cosy, never scary; a day variant of the Playhouse exterior for the map):**
+  - **The open-air Playhouse:** a curved bank of wooden seats under the sky, lanterns strung along the rows, the stage
+    set as a tall striped lighthouse with a lamp room at the top, painted waves at its foot. Programmes on the empty
+    seats, their corners lifting in the wind.
+  - **Backstage corridor:** dressing-room doors (blank, with star shapes but no names), costume rails, ropes and
+    sandbags, a big wicker costume basket.
+  - **Celeste's dressing room:** a mirror ringed with bulbs, a cup of honey and lemon, a vase of sea lavender, an empty
+    patch on the table where the script was.
+  - **The prompt corner:** a small desk lit by a hooded lamp, the prompt book, cue sheets on a cork board, a headset. The
+    dressing-room door is visible from it down a short corridor (this matters: Petra can see the door).
+  - **The green room:** comfortable, shabby, painted a warm *orange* (Felix's joke depends on it).
+- **The violin beat:** never painted as a figure. It is sound only (three soft notes), with the house lights coming up
+  on empty seats. In the last chill, one seat in the back row is folded down; nobody is in it.
+- **Props:** Celeste's script (with a green-ribboned cover), Hugo's understudy script (page 12 open), the cream note in
+  green ink, Celeste's gull card, the poster with its removable cream slip (separate layer), the calling card, the prompt
+  book, Petra's clipboard and pencils, the green shawl, the costume basket, the honey-and-lemon cup, Leela's postcard
+  (acacia trees and giraffes; sunbird stamp), Biscuit's sailor's cap, Rosalind's face-down notice (blank side up), Tully's
+  bus ticket, the stage clock in the prompt corner.
+- **Portraits (six expressions each):** Hugo, Petra, Celeste. **Encore** gets the cat's six: asleep, one-eye-open,
+  offended, amused, smug, yawning. Small figures for Rosalind Ashe and Sunny.
+- **Documents:** the log on a clipboard; the note and the gull card **in the same green handwriting font** (big looping
+  letters), so the match is visible as well as readable; Hugo's note in a quick lower-case font; the script page typed,
+  with green underline strokes rendered by the app over live text.
+- **Handwriting fonts:** Celeste (green, looping, generous); Hugo (small, quick, lower case); Petra (small square
+  capitals); Leela (slanting, travel-hurried, the same font as in Case 2).
+- **Palette:** the Playhouse world hue; deep teal night, golden lantern light, the warm red of the seats, and one accent
+  of green (Celeste's ink and shawl) that the eye can follow from scene to scene.
+- **No lettering in any painting.** Poster, script, cards and dressing-room stars carry no painted words; all text is
+  live.
+- **Diversity:** the opening-night audience (and the Harbour House minibus party) is mixed in age and colour, ordinary
+  and various; keep the camera high so faces stay small.
+
+---
+
+## CASE 6 — Forty-Two Signatures
+
+*A Bizzing mystery.*
+
+```
+meta:
+  id:            case-06
+  level:         3  (ages 9–10 · 4 suspects · 8 scene documents · ≤100 words per document · ≤18-word sentences ·
+                     4 deductions · one red herring)
+  world:         forum (the Forum: the Town Hall steps, the Forum office, the clock tower)
+  skills:        vocab · factopinion · punctuation · contradiction   (sequence carried lightly by the clock)
+  vanished word: STRIKES  (from the Forum clock's notice: "The Forum clock _______ once at each half hour.")
+  office object: a fountain pen (Dot Harkness's green one, "the pen that signs what it means")
+  arc beats:     A. a Blot calling card behind the clock notice: "Count the words, not the names. — B."
+                 B. Crane's petition (first seen in Case 4) and Crane's flyer: an opinion dressed as a fact, and a
+                    title with a moved "!"
+                 C. Marlowe suspected and cleared (second time); Nell's hunch-o-meter: "Ten. Wrong again."
+                 C. INSPECTOR ADA HOLLOWAY'S FIRST APPEARANCE: "You have read it. Now see it."
+                    (and the first hint that Quill and Ada know each other very well)
+  mystery pass (6 Oct 2026):
+    clock:          the Review Committee votes on the petition tomorrow at noon. If it stands, the Library may be
+                    sold. Halfway, it gets worse: Mr Crane has the meeting moved to nine, because he has a train at
+                    ten.
+    impossible:     an alibi that seems perfect. Dot's sheets were locked in the Forum office at six. The only person
+                    seen at the door after six had no key and never went in. The only other key-holder was home by
+                    six, and his wife says so. Who copied forty-two names in a locked room, with the lamp on for
+                    ages? (Home by six was true. "I did not go back" was not: one bong is half past six.)
+    false solution: end of Chapter 3, Nell's case against Marlowe (at the door with a pen, "poking at the
+                    letterbox", off "quick with a big pile of papers": he fished the sheets out). Hunch-o-meter:
+                    ten. Broken at the start of Chapter 4 by Marlowe's sixth answer and Mr Osei's lost-property label.
+    hidden clue:    the petition's last-but-one line, Chapter 1: "Collected by: D. Harkness". Everyone reads it as
+                    the line that makes Dot look guilty. It is the line that proves the copier had seen her list.
+    blot:           the calling card is inside the glass of the clock notice, where none was at noon, and one long
+                    violin note sounds from the locked clock tower after the half-hour bong.
+```
+
+**Writer's note on the petition (DOC 6.1).** The struck-out exclamation mark after *LIBRARY* is set as live text with a
+strikethrough (`~~!~~`), never painted. It is small on purpose. Ada's line exists because careful readers *read* that
+title and do not *see* it. Do not enlarge it, colour it or animate it. The child must find it.
+
+**Continuity (resolved).** This case happens on **the Thursday after the Case 4 vote**: the vote was called on Wednesday
+at ten and could not start without Old Thumper. The forgery is older. Dot collected her forty-two names from Monday to
+**Friday of the week before**, and Councillor Bright copied them in the Forum office that Friday night. He posted the copy
+to Mr Crane on Saturday; Mr Crane gave it, "already full", to Mr Pettigrew, who carried it in on Tuesday's noon train
+(Case 4, where the "Collected by" line is still blank and nobody *sees* the scratched-out "!"). After the vote failed,
+Bright wrote Dot's name on the blank line and sent the petition to the Review Committee on Thursday morning. Mr Osei, who
+locked the office on Friday, left for his sister's on Tuesday and is back on Friday's train, as in Case 4.
+
+**Writer's note on Tam's note (DOC 6.6).** Lamplighters do not punctuate. The note is set on short lines, and each *line*
+keeps to the level's eighteen-word limit. Tam's word for the clock's strikes is "bongs", as in Case 2.
+
+---
+
+### Case card
+
+> Mr Crane's petition hangs in the Town Hall.
+> It says forty-two neighbours want the Great Library sold.
+> The Review Committee votes on it tomorrow at noon.
+> And Dot Harkness is furious, because her name is on it.
+> "I never collected a single name for that man!"
+> Who really signed? And what did they think they were signing?
+
+*(56 words. Read aloud at the child's choice. The clock, "tomorrow at noon", is shown as a small clock face in the card's
+corner.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Motive · Secret | Portrait expressions |
+|---|---|---|---|---|---|
+| **Councillor Hector Bright** | Suspect | Tall, a mustard waistcoat, very shiny shoes, a pocket watch he checks far too often | Warm, grand and wordy; says "frankly" before saying something that isn't; when nervous, goes quiet and polishes his watch | Mr Crane asked him to find supporters, and he wants the Library's roof mended at any price · he has emptied the leak buckets in the reading room every wet night this year, and told nobody | calm, amused, offended, nervous, guilty, relieved |
+| **Mr Septimus Pettigrew**, 34 | Suspect · Silas Crane's lawyer, whom Crane calls "my assistant" (the agency learns he is a lawyer in Case 8) | Short and round, a brown suit one size too big, round spectacles he polishes when anxious | Apologises before every answer; cannot tell a lie without his ears going pink | he works for Mr Crane, and he carried the petition in on Tuesday · he keeps one hand over his coat pocket, because in it is a brand-new Library card, made out on Tuesday afternoon | calm, nervous, guilty, relieved |
+| **Dot Harkness**, 74 | Suspect · the petition's collector | Small, a cardigan with eleven pockets, a voice like a tram bell (she drove the harbour tram for forty years) | Short and loud; proud of everything she does, especially punctuation | her name is on the petition, and she would love to see Mr Crane shamed · she walked past the petition twice on Tuesday and never read it, because she will not wear her reading glasses | offended, amused, calm, relieved |
+| **Marlowe Finch**, 16 | Suspect · red herring | Assistant archivist; a long scarf, arms full of books up to the chin, ink on one thumb | Nervous, brilliant, kind; apologises to doors he bumps into | he loves the Library, and a petition proved false would sink Mr Crane · he runs the children's story hour on Fridays at a quarter past six, does all the voices, and is too shy to tell anyone | nervous, calm, offended, relieved |
+| **Professor Orla Penhallow** | Witness · the Keeper | Upright, iron-grey bun, half-moon spectacles on a chain | Strict and fair; labels her own opinions as opinions | – | calm, worried, relieved |
+| **Constable Bram Tully** | Helper · signer No. 9 | Big, slow, kind; cocoa flask; notebook with a dog doodle | Ten minutes behind, never jealous | – | calm, worried, amused, relieved |
+| **Tam Bellweather**, 10 | Helper · leader of the Lamplighters | Flour on her nose; pencil behind one ear | Always in a hurry; writes notes on bun bags | – | calm, amused |
+| **Inspector Ada Holloway (retired)**, 78 | Mentor · FIRST APPEARANCE | Tall, a moth-eaten velvet jacket, a cello bow tucked behind one ear like a pencil | Speaks in riddles; never gives an answer, only a page to read again | – | amused, calm, thoughtful |
+| **Mrs Winifred Achterberg** | Ada's housekeeper | Round, apron with a pocket of clothes pegs, flour to the elbows | Speaks only in proverbs | – | calm, amused |
+| **Semicolon** | Ada's parrot | Grey, a red tail, one feather that sticks up like a question mark | Says only "Elementary; therefore!" | – | (one painted pose; a head-tilt animation) |
+| **Silas Crane** | Arc cameo | Long grey coat, silver tape measure, a wide smile | Calls everything "lovely" | – | amused (only) |
+
+The agency: **Quill**, **Nell**, **Asha**, **Dev**, **Felix** and the new detective (the child).
+
+---
+
+### Opening (comic panels)
+
+1. **The Forum steps, Thursday noon.** Wind off the harbour, pigeons, oranges on the market stalls. A crowd round the Town
+   Hall noticeboard. Silas Crane pins up a bright flyer and beams. Above them all, the Forum clock tower. Caption:
+   *Thursday, the day after the vote that never started.*
+   **CRANE:** "Forty-two of your neighbours agree! Lovely, isn't it? Lovely."
+2. **The agency stairs.** A small woman in a many-pocketed cardigan takes the 39 steps two at a time and arrives at the
+   top not even puffed.
+   **DOT:** "My name's on that thing! *Collected by D. Harkness!* I drove the harbour tram for forty years. I never
+   collected a single name for *that man*."
+3. **The agency.** Professor Penhallow lays a folder on Quill's desk as if it might bite. Caption: *The Review Committee
+   votes tomorrow at noon.*
+   **PENHALLOW:** "I believe this petition is forged. Believing is not proving. Tomorrow at noon the Review Committee
+   votes on it. If it stands, the Library may be sold."
+   **QUILL:** "Then we have until noon tomorrow."
+4. **Nell**, already pulling on her coat.
+   **NELL:** "Tam told me she saw Marlowe at the Forum office last Friday, with a pen. *Again*, Marlowe. Hunch-o-meter:
+   ten."
+   **QUILL:** "Show me where it says that."
+   **NELL:** "She wrote it down! Somewhere. I haven't read it yet."
+5. **Dev**, at the round window with a biscuit-tin telescope pointed at the Forum clock tower.
+   **DEV:** "Something else. The notice under the Forum clock has a hole in it. A neat one."
+   **ASHA:** "Timeline: Blot cards in five of our six cases. Breakfast at seven. Porridge."
+   **DEV** *(whispering)*: "My turn with the torch."
+   **ASHA** *(whispering)*: "It's *noon*."
+
+---
+
+### Chapter 1 — The scene
+
+*Thursday afternoon. A cold wind comes up from the harbour and rattles the flyers on the noticeboard. The Town Hall
+corridors smell of floor polish and wet umbrellas, and every half hour the Forum clock drops one deep note over the
+square, so low you feel it in your shoes.*
+
+#### DOC 6.1 · petition
+- **Author:** not signed (the handwriting is studied in DOC 6.2) · **Date/time:** handed in on Tuesday by Mr Pettigrew;
+  sent to the Review Committee on Thursday morning · **Found where:** pinned to the Review Committee's noticeboard inside
+  the Town Hall
+- **Picture:** the long cream scroll from Case 4, Town Hall paper, a wax seal with a crane bird; forty-two names in one
+  curly hand, the same loops and the same tail on every "y". The title runs across the top; the last three words look a
+  slightly different colour of ink, and the "Collected by" line is fresher than the rest (painted as soft colour shifts
+  only, no lettering in the painting).
+
+> [[c:pet-title|SAVE OUR LIBRARY]]~~!~~ [[c:pet-added|BY SELLING IT!]]
+> [[c:pet-ask|We, the people of Inkwell, ask the council to vote at once.]]
+> Sell the Great Library to Crane and Co.
+> It will reopen as "The Inkwell Experience", with tickets.
+> Signed:
+> Ruth Annan · Billy Coe · Mira Das · Tom Ferris · Jo Haddad
+> … and thirty-seven more.
+> [[c:pet-collector|Collected by: D. Harkness]]
+> Handed in by S. Pettigrew, for Crane and Co.
+
+*(The clue in plain sight. Everyone, Nell included, reads "Collected by: D. Harkness" as the line that makes Dot look
+guilty. It is the line that says the copier knew whose names these were. It pays off in the reveal.)*
+
+#### DOC 6.2 · report
+- **Author:** Professor Orla Penhallow, Keeper of the Great Library · **Date/time:** Thursday, eleven o'clock · **Found
+  where:** handed to Quill in a buff folder
+- **Picture:** a typed report on Library paper with a small wax seal (an open book, no letters), a magnifying glass resting
+  across one corner.
+
+> Examination of the petition. Facts, not feelings.
+> [[c:rep-hand|All forty-two names are written in the same hand.]]
+> [[c:rep-collector|At Wednesday's vote the "Collected by" line was blank. Today it is filled in, in that same hand.]]
+> [[c:rep-ink|"SAVE OUR LIBRARY" is in black ink. "BY SELLING IT!" is in blue ink.]]
+> [[c:rep-scrape|After the word "LIBRARY" there is a scratched-out mark.]] It is shaped like an exclamation mark.
+> [[c:rep-blue|The blue ink matches the pen in the Forum office's petitions tray.]]
+> My feeling is that somebody has been very foolish. That is an opinion. I have labelled it as one.
+> — O. Penhallow, Keeper
+
+#### DOC 6.3 · poster (a Crane document)
+- **Author:** Silas Crane · **Date/time:** pinned up Thursday, noon · **Found where:** the Forum noticeboard, outside the
+  Town Hall
+- **Picture:** a glossy flyer with a painted picture of the Library with a ticket booth at its door and balloons on the
+  steps (no lettering in the painting; the words are live text). One corner flaps in the wind.
+
+> GOOD NEWS FOR INKWELL!
+> [[c:fly-agree|Forty-two of your neighbours agree: the Library must be sold.]]
+> [[c:fly-love|Everybody loves a fresh start.]]
+> Crane and Co will turn the dusty old Library into The Inkwell Experience.
+> There will be tickets, a gift shop and a café!
+> [[c:fly-save|Selling it is the only way to save it.]]
+> Have your say at the Review Committee, Friday at noon.
+> With warm regards,
+> Silas Crane
+
+#### DOC 6.4 · diary
+- **Author:** Dot Harkness · **Date/time:** Monday to Friday of last week, the week before the vote · **Found where:** Dot
+  takes it out of pocket number seven
+- **Picture:** a small diary with a tram ticket as a bookmark; big, round handwriting; one tiny drawing of a dog with a
+  line through it.
+
+> Monday. Started my petition on the Forum steps.
+> [[c:dot-title|I wrote the title at the top of every sheet: "SAVE OUR LIBRARY!"]] Short and loud, like me.
+> [[c:dot-why|Every signer writes why they signed, in their own words.]]
+> Wednesday. Bram Tully signed, then signed for his dog. I crossed the dog out. Dogs cannot vote.
+> Friday. [[c:dot-count|Forty-two names!]]
+> [[c:dot-tray|I left the sheets in the petitions tray in the Forum office.]]
+> [[c:dot-six|Mr Osei locked the office door as the clock struck six.]]
+> [[c:dot-pen|On the way home I found I'd dropped my good green pen.]] Bother.
+
+#### DOC 6.5 · letter
+- **Author:** Councillor Hector Bright · **Date/time:** Thursday, eight o'clock in the morning · **Found where:** clipped
+  to the petition when it reached the Review Committee
+- **Picture:** thick cream paper with a council crest (a ship and an open book, no lettering); handwriting in tidy,
+  sloping black ink.
+
+> To my fellow members of the Review Committee,
+> Yesterday's vote could not be called. So I send you Mr Crane's petition instead, now complete.
+> [[c:bri-trans|I have transcribed the forty-two names faithfully, so that every one is clear.]]
+> [[c:bri-proud|Frankly, it is a proud day for Inkwell.]]
+> The people have spoken.
+> [[c:bri-people|They want to save their Library, and Mr Crane's offer will save it.]]
+> I shall vote with the people tomorrow.
+> Yours, in the service of the town,
+> Councillor Hector Bright
+> Thursday, 8 a.m.
+
+#### DOC 6.6 · note (a Lamplighters' sighting)
+- **Author:** Tam Bellweather · **Date/time:** written last Friday night, sent up with Saturday's buns, and never read ·
+  **Found where:** at the bottom of the dumbwaiter's bun basket, under a cinnamon bun nobody ate (it is now as hard as a
+  doorstop)
+- **Picture:** a floury paper bun bag, pencil words sloping downhill, a thumbprint of icing.
+
+> to nell friday
+> lit the forum lamps like always
+> [[c:tam-marlowe|marlowe at the forum office door just after the six bongs]]
+> [[c:tam-pen|had a pen and was poking at the letterbox]]
+> [[c:tam-papers|went off quick with a big pile of papers]]
+> [[c:tam-bright|after the one bong councillor bright went in the office with a key]]
+> [[c:tam-lamp|lamp on in there for ages]]
+> nobody else
+> tam
+> ps bun is for the new one
+
+*Dev taps the bun on the desk. It goes* clonk.
+**FELIX:** Footnote: a bun this hard is technically a brick.
+
+#### DOC 6.7 · notice, with a calling card
+- **Author:** R. Osei, Town Clerk · **Found where:** in a little glass frame at the foot of the Forum clock tower, beside
+  the tower's locked door
+- **Picture:** a small brass-framed notice on old stone; above it, the clock tower climbing out of the picture. Tucked in
+  the frame's corner, under the glass, a white card with one perfect round ink blot.
+
+> NOTICE: THE FORUM CLOCK
+> [[c:clk-half|The Forum clock _______ once at each half hour.]]
+> [[c:clk-hour|On the hour it rings the full count, so six rings at six o'clock.]]
+> Please do not climb the tower to wind it.
+> I wind it myself on Sundays.
+> — R. Osei, Town Clerk
+>
+> *The card in the corner of the frame:*
+> [[c:card|Count the words, not the names.]] — B.
+
+#### DOC 6.8 · report (signers' statements)
+- **Author:** Constable Bram Tully · **Date/time:** Thursday afternoon · **Found where:** Tully brings it up the 39 steps
+  with the cocoa
+- **Picture:** a page from a constable's notebook; a cocoa ring; a little doodle of a dog with a question mark.
+
+> Statements from three signers. Taken by Constable B. Tully.
+> Ruth Annan, teacher: [[c:sig-ruth|"I was first on Dot's sheet. I signed to keep it open."]]
+> Tom Ferris, ferryman: [[c:sig-ferris|"Sell it? Never! I wrote 'for my grandchildren'."]]
+> Myself, constable: [[c:sig-tully|"I signed on Wednesday. I signed to keep the doors open."]]
+> [[c:sig-none|All three say they never signed anything for Mr Crane.]]
+> Also asked: [[c:tully-wife|Mrs Bright says the councillor was home by six last Friday, for leek soup.]]
+> Biscuit is still missing.
+
+*(After DOC 6.7, Dev measures the gap with a ruler from his pocket. "Seven letters wide. Not* rings*. That's five. Not*
+chimes*. Six." Felix: "Footnote: a clock* strikes *because a little hammer strikes a bell. Footnote to the footnote:
+seven letters. S, T, R, I, K, E, S." Dev, crossly: "I was about to say that." The word is not logged until the case is
+solved.)*
+
+**End of chapter 1 (the Blot is closer than you think).** *Dev looks at the card, then at his telescope. "That card wasn't
+there at noon. I looked right at this frame." The glass is whole. The little brass catch is stiff with old paint. The
+tower door beside it is locked, and Mr Osei, who has the only key, is away at his sister's until Friday. A faint smell
+of violets hangs in the cold air. Then, high above them, the clock strikes the half hour: one deep bong. And after it,
+from somewhere up inside the locked tower, a single long note on a violin holds, and fades, and is gone. The pigeons
+lift off the steps all at once.*
+**TULLY:** Pigeons. They do that.
+**QUILL:** Pigeons do not play the violin. Asha, write down the time.
+**ASHA:** *(writing)* Half past four.
+
+---
+
+### Chapter 2 — Interviews
+
+*Every answer arrives as a typed transcript on the desk. Questions marked ◆ appear only after the child has read the
+document named. Rain begins as the interviews start, drumming on the Town Hall's high windows; the corridors echo, and
+somewhere a radiator knocks like someone asking to come in.*
+
+#### SUSPECT Marlowe Finch *(the agency goes to Marlowe first: Nell insists)*
+
+**Q (why):** "Why were you at the Forum office last Friday?"
+> Oh. Was I seen? I'm always seen. It's the books.
+> [[c:mar-found|I found a green fountain pen on the Forum steps.]]
+> Everybody knows Dot's pen. She signs everything with it.
+> [[c:mar-letterbox|I pushed it through the office letterbox for her.]]
+*(portrait: nervous → calm)*
+
+**Q (what):** "Did you go inside the office?"
+> No! [[c:mar-locked|The door was locked, and I don't have a key.]]
+> I'm only an assistant archivist.
+> I have a key to the mop cupboard. That's all.
+> Sometimes I'm not trusted with the mop.
+*(portrait: offended → amused)*
+
+**Q (what):** "What was the big pile of papers you carried away?"
+> Papers? Oh! [[c:mar-books|Books. Fourteen picture books from the reading room.]]
+> Books are made of paper, so Tam isn't wrong.
+> I'm never not carrying fourteen books.
+
+**Q (who):** "Did you see anyone else?"
+> Someone tall was coming up the steps as I went down.
+> [[c:mar-keys|I heard keys jingle.]] I didn't see a face.
+> I was looking at my feet. Fourteen books, steps, it's a whole thing.
+
+**Q (when):** "When was this?"
+> [[c:mar-when|Just after the clock rang six.]] I counted the rings.
+> I always count. It's an archivist thing.
+
+*(Marlowe has a sixth question, but it does not appear until the start of chapter 4.)*
+
+#### SUSPECT Dot Harkness
+
+**Q (what):** "Did you collect names for Mr Crane's petition?"
+> For HIM? I'd sooner collect wasps.
+> My petition was to keep the Library open and free.
+> [[c:dot-mark|My title had one exclamation mark, right after "LIBRARY".]]
+> Short and loud. I'm proud of that mark.
+*(portrait: offended → amused)*
+
+**Q (where):** "Where are your sheets now?"
+> That's what I want to know!
+> [[c:dot-gone|They were not in the tray on Monday morning.]]
+> Mr Osei looked everywhere, even in the biscuit tin.
+
+**Q (who):** "Who knew your sheets were in the tray?"
+> Half the town. I'm loud.
+> I said it on the steps on Friday, at the top of my voice.
+> [[c:dot-heard|Councillor Bright was walking past when I said it.]] He tipped his hat.
+
+**Q (what):** "What did your signers write, beside their names?"
+> Why they signed. "To keep it open." "For my grandchildren." "I learned to read there."
+> [[c:dot-reasons|Not one of them wrote "sell it".]] Not one.
+
+**Q (why)** ◆ *after DOC 6.1*: "Why is your name on Mr Crane's petition?"
+> Because somebody copied it! Look at that list.
+> [[c:dot-order|Ruth first, then Billy, then Mira, then Tom. That's MY order.]]
+> Ruth was first because Ruth is first at everything.
+
+**Q (why)** ◆ *after DOC 6.2*: "Why didn't you say anything on Tuesday?"
+> Tuesday? I walked past that thing twice.
+> [[c:dot-specs|I didn't read it. I'd left my reading glasses at home.]]
+> I always leave them at home. I don't like them.
+> And on Tuesday there was no name on the bottom line.
+> Today there's mine. That's why I'm shouting.
+*(portrait: offended → a little pink)*
+
+*(Nell, under her breath: "She saw it on Tuesday and said nothing for two days." Asha: "She saw a* sheet*. Read the
+second line.")*
+
+#### SUSPECT Mr Septimus Pettigrew
+
+*(He sits on the very edge of his chair, one hand pressed flat over his coat pocket, and polishes his spectacles with the
+other.)*
+
+**Q (what):** "Did Crane and Co send signed sheets to Councillor Bright?"
+> Oh dear. I'm sorry. No.
+> [[c:pett-none|We sent no sheets at all.]]
+> [[c:pett-letter|Mr Crane only wrote to the councillor, two weeks ago.]]
+> The letter asked him to find supporters by Friday.
+*(portrait: nervous → guilty, ears pink, although he is not)*
+
+**Q (when):** "When did you first see the forty-two names?"
+> [[c:pett-tuesday|On Tuesday morning, when Mr Crane gave me the petition to carry here.]]
+> [[c:pett-post|It came to him by post on Saturday, in the councillor's envelope. One sheet, nothing else.]]
+> Mr Crane was very pleased. I was less pleased. I don't know why. I'm sorry.
+
+**Q (where):** "Where were you last Friday evening?"
+> At my chess club, two towns away, losing.
+> [[c:pett-chess|Eleven people watched me lose, from six until nine.]]
+> I first came to Inkwell on Tuesday's noon train.
+> I am very good at losing. I have had practice.
+*(portrait: nervous → amused)*
+
+**Q (what):** "Does the town agree with Mr Crane?"
+> Mr Crane says so. Mr Crane says so very often.
+> [[c:pett-asked|I'm afraid nobody has asked the town.]]
+> I only carry the papers. I'm sorry.
+
+**Q (why):** "Why do you keep your hand on your pocket?"
+> Do I? Oh. I'm sorry.
+> It's nothing. It's nothing to do with Mr Crane.
+> [[c:pett-pocket|Please don't make me show you. He mustn't know.]]
+*(portrait: guilty, ears very pink; he polishes his spectacles until they squeak)*
+
+#### SUSPECT Councillor Hector Bright
+
+**Q (where):** "Where were you last Friday evening?"
+> At home, frankly. [[c:bri-home|I left the Forum at half past five and was home by six.]]
+> [[c:bri-never|I did not go back.]]
+> My wife made soup. Leek. It was excellent. Ask her.
+*(portrait: calm → amused)*
+
+**Q (what):** "Where did the forty-two names come from?"
+> Mr Crane's office sent the signed sheets to me.
+> [[c:bri-muddy|The originals were rather muddy, so I copied them out neatly.]]
+> Then I returned the originals to Mr Crane. Faithfully.
+*(portrait: calm → a flicker of nervous; he checks his watch)*
+
+**Q (who):** "Do you know Dot Harkness?"
+> The lady who shouts on the steps? Everyone knows her.
+> [[c:bri-notseen|Frankly, I have never seen her list.]]
+> I don't look at other people's petitions. It would be rude.
+
+**Q (why):** "Why do you want the Library sold?"
+> Want? I love the Library. I learned to read there.
+> But the roof leaks, and the town cannot pay.
+> [[c:bri-roof|Mr Crane will pay. That will save it.]]
+> You see? We all want to save it.
+
+**Q (who):** "Who has a key to the Forum office?"
+> The town clerk, Mr Osei. And the chair of the Review Committee.
+> [[c:bri-key|I have one, naturally.]] I am the chair.
+
+**End of chapter 2 (it gets worse).** *Constable Tully squelches in from the rain, ten minutes behind, with the cocoa and a
+dripping notice.*
+**TULLY:** The Review Committee's moved. Mr Crane asked. It's nine tomorrow morning now, not noon.
+**ASHA:** But his own flyer says noon!
+**TULLY:** He has a train at ten. He said waiting was "not lovely".
+**PETTIGREW:** *(from the doorway, very quietly)* I'm sorry. I did tell him people might want to come.
+*The Forum clock strikes once over the wet square. Half past five.*
+**QUILL:** Fifteen and a half hours. Read faster. No. Read *better*.
+
+---
+
+### Chapter 3 — The board
+
+*The agency office after dark. Rain runs down the round window and blurs the harbour lights. The lamp on Quill's desk
+makes a small gold room inside the room, and the cork board creaks a little every time a pin goes in.*
+
+**Before the board:** Asha chalks *9 a.m.* at the top of the board and underlines it twice.
+
+#### DEDUCTIONS (level 3: four)
+
+**D1 · meaning (punctuation)**
+- **Statement the child forms:** *The petition's title began as Dot's title, "SAVE OUR LIBRARY!". Someone scratched out
+  the exclamation mark and added "BY SELLING IT!" in a different ink. Same words, opposite meaning.*
+- **Supporting spans:** [c:pet-title] "SAVE OUR LIBRARY" · [c:pet-added] "BY SELLING IT!" · [c:rep-scrape] "After the word
+  \"LIBRARY\" there is a scratched-out mark." · [c:rep-ink] "\"SAVE OUR LIBRARY\" is in black ink. \"BY SELLING IT!\" is
+  in blue ink." · [c:dot-title] "I wrote the title at the top of every sheet: \"SAVE OUR LIBRARY!\""
+  *(also accepted: [c:dot-mark])*
+- **Minimum link:** [c:rep-scrape] + [c:dot-title] (or [c:pet-title] + [c:dot-mark])
+- **Why it matters:** this is the "see it" clue. With its "!", *SAVE OUR LIBRARY!* is a whole cry: keep it. Moved to the
+  end, the words become the first half of a different sentence that means sell it. One small mark, moved, turns Dot's
+  petition inside out. It proves the copier started from Dot's sheet.
+
+**D2 · fact-opinion**
+- **Statement the child forms:** *Crane's flyer says forty-two neighbours "agree" the Library must be sold. That is a
+  claim about what people think, and the people say the opposite. What they actually did was sign Dot's sheet to keep
+  it open.*
+- **Supporting spans:** [c:fly-agree] "Forty-two of your neighbours agree: the Library must be sold." · [c:sig-ruth] "\"I
+  was first on Dot's sheet. I signed to keep it open.\"" · [c:sig-tully] "\"I signed on Wednesday. I signed to keep the
+  doors open.\"" · [c:sig-ferris] "\"Sell it? Never! I wrote 'for my grandchildren'.\"" *(also accepted: [c:dot-reasons],
+  [c:dot-order], [c:pett-asked], [c:fly-save])*
+- **Minimum link:** [c:fly-agree] + [c:sig-ruth] (or + [c:sig-tully])
+- **Why it matters:** the flyer is written to *sound* like a fact. The only facts in this case are what people did and
+  wrote, and they wrote "to keep it open". The forty-two are Dot's forty-two, in Dot's order.
+
+**D3 · meaning (vocab)**
+- **Statement the child forms:** *To "transcribe" means to copy out by hand. The councillor's own letter says he
+  transcribed the forty-two names, and every name is in one hand. He says he copied them from Crane's sheets, but Crane's
+  office sent no sheets. The only forty-two names he could have copied are Dot's.*
+- **Supporting spans:** [c:bri-trans] "I have transcribed the forty-two names faithfully, so that every one is clear." ·
+  [c:rep-hand] "All forty-two names are written in the same hand." · [c:pett-none] "We sent no sheets at all." ·
+  [c:bri-muddy] "The originals were rather muddy, so I copied them out neatly." *(also accepted: [c:pett-post],
+  [c:pett-tuesday], [c:rep-blue], and the clue in plain sight, [c:pet-collector] with [c:rep-collector] and
+  [c:bri-notseen])*
+- **Minimum link:** [c:bri-trans] + [c:rep-hand]
+- **Glossed in the notebook once marked:** *transcribe* (verb): to write out a copy of something, word for word.
+  Felix's footnote: from Latin *trans*, across, and *scribere*, to write. "Writing across, from one page to another."
+- **Why it matters:** Bright chose a grand word to sound official, and the grand word is a confession. He did not
+  collect, receive or check the names. He *copied* them, and he says so in ink.
+
+**D4 · contradiction (with the clock)**
+- **Statement the child forms:** *The councillor says he was home by six and did not go back. But Tam saw him go into the
+  Forum office with a key after the one bong. The clock rings once at each half hour, so that was half past six, after
+  Dot's sheets were locked in.*
+- **Supporting spans:** [c:bri-never] "I did not go back." · [c:bri-home] "I left the Forum at half past five and was
+  home by six." · [c:tam-bright] "after the one bong councillor bright went in the office with a key" · [c:clk-half] "The
+  Forum clock _______ once at each half hour." · [c:dot-six] "Mr Osei locked the office door as the clock struck six."
+  *(also accepted: [c:bri-key], [c:mar-keys], [c:tam-lamp], [c:dot-heard], [c:tully-wife])*
+- **Minimum link:** [c:bri-never] + [c:tam-bright] (then [c:clk-half] to fix the time)
+- **Why it matters:** both cannot be true. Tam's note runs in order: the six bongs, then the one bong, so the one bong
+  is half past six. The clock's notice, with its missing word, still tells you what one ring means. Bright knew where
+  the sheets were (Dot told the whole steps), had a key, and went in, after six, for ages.
+
+#### THE IMPOSSIBLE THING (how could it?)
+
+*Dot's sheets were locked in the Forum office at six. The only person seen at the door after six, Marlowe, had no key and
+never went in. Mr Osei, who locked it, went home. The only other key-holder, Councillor Bright, was home by six, and
+Mrs Bright says so too. So who sat in
+a locked office copying forty-two names, with the lamp on for ages?* The child already holds every piece:
+[c:tully-wife] and [c:bri-home] (home by six is true), [c:tam-bright] ("after the one bong"), and [c:clk-half] (one ring
+at each half hour). Home by six does not cover half past six. It is answered in the reveal.
+
+#### RED HERRINGS
+
+**Marlowe Finch** (the case's red herring, and Nell's false solution)
+- **Why he looks guilty:** [c:tam-marlowe] "marlowe at the forum office door just after the six bongs", [c:tam-pen] "had a
+  pen and was poking at the letterbox", [c:tam-papers] "went off quick with a big pile of papers".
+- **Cleared by** (chapter 4): [c:mar-letterbox] "I pushed it through the office letterbox for her." + [c:tully-pen] "A
+  green fountain pen. His label says: \"Found Monday, on the office mat, under the letterbox.\"" + [c:dot-pen] "On the
+  way home I found I'd dropped my good green pen." + [c:mar-story] "It starts at a quarter past six. Twelve small
+  children saw me run in." *(also: [c:mar-locked], [c:mar-books])*. The pen is exactly where a letterbox would drop it.
+  Marlowe never went in: he posted back a lost pen, and the "papers" were fourteen picture books for story hour. His
+  kindness is the clue.
+- **His secret, told kindly:** he does all the voices at the children's story hour, and is too shy to say so.
+
+**Dot Harkness** (her name is on it, and she said nothing on Tuesday)
+- **Why she looks guilty:** [c:pet-collector] "Collected by: D. Harkness"; and she walked past the petition on Tuesday.
+- **Cleared by:** [c:dot-title] her own title had the "!" that someone scratched out; [c:rep-collector] the "Collected by"
+  line was written after the vote, in the copier's hand; [c:dot-specs] "I didn't read it. I'd left my reading glasses at
+  home."
+- **Her secret, told kindly:** she will not wear her reading glasses, and the tram drivers must never know.
+
+**Mr Pettigrew** (he works for Crane, he carried the petition in, and he is hiding something in his pocket)
+- **Why he looks guilty:** [c:pett-tuesday] he carried the petition here; [c:pett-pocket] "Please don't make me show you.
+  He mustn't know."
+- **Cleared by:** [c:pett-chess] "Eleven people watched me lose, from six until nine." (two towns away, on the night of
+  the copying); [c:pett-none] "We sent no sheets at all."
+- **His secret, told kindly:** a brand-new Library card, made out on Tuesday afternoon. Mr Crane must not know.
+
+#### Wrong-link hints (Quill)
+- *If the child links [c:tam-pen] to [c:rep-blue]:* "Which pen? What colour? Read Dot's diary again."
+- *If the child links [c:pet-collector] to [c:dot-count] to blame Dot:* "Her name is on it. Did *she* put it there? Ask
+  who copies a name."
+- *If the child links [c:pett-pocket] to [c:pett-tuesday]:* "A pocket is a secret, not a sentence. Where was he on
+  Friday night?"
+
+**End of chapter 3 (the false solution).** *Nell stands back from the board with her arms folded.*
+**NELL:** Look at it. Marlowe, at the office door just after six, with a pen, poking at the letterbox. Then off he goes,
+quick, with a big pile of papers. He fished Dot's sheets out through the letterbox! With the pen! Hunch-o-meter: ten.
+**ASHA:** And Councillor Bright going in after the one bong?
+**NELL:** He's a councillor with a key. He was fetching his umbrella.
+**TULLY:** *(reaching for his notebook)* Shall I go and fetch Marlowe?
+**QUILL:** Fetch his *answers*. He has one we have not heard.
+*Across the harbour, the Forum clock strikes once. Half past seven. In thirteen and a half hours, the Committee sits.*
+
+---
+
+### Chapter 4 — The timeline
+
+*Marlowe arrives at the agency soaked, with fourteen books under his coat to keep them dry. His sixth question unlocks.*
+
+#### SUSPECT Marlowe Finch *(new, unlocked at the start of chapter 4)*
+
+**Q6 (why):** "Why did you go off so quickly?"
+> MARLOWE: Friday is story hour, in the Library's children's corner.
+> [[c:mar-story|It starts at a quarter past six. Twelve small children saw me run in.]]
+> I do the voices. All of them. Please don't tell anyone.
+> TULLY: And this was in Mr Osei's lost-property box.
+> [[c:tully-pen|A green fountain pen. His label says: "Found Monday, on the office mat, under the letterbox."]]
+
+*(Asha: "On the mat. Under the letterbox. Exactly where a pen lands when you post it." Nell looks at the board for a long
+time.)*
+
+**NELL:** Ten. Wrong again.
+
+#### Interlude — No. 9 Lantern Row *(Ada's first appearance)*
+
+*Plays here, after Marlowe's sixth answer, every time. If the child has already made D1 and D3, Ada's lines are the same;
+the child simply knows what she means.*
+
+*Lamplit Row, after dark. The rain has stopped and left the fog behind. The gas lamps wear haloes, a clock somewhere
+ticks too slowly, and a tall thin house has books stacked in the windows like bricks. The agency climbs the steps. Nell
+is quiet for once.*
+
+**NELL:** It wasn't Marlowe.
+
+**ASHA:** Marlowe pushed a pen through a letterbox. The pen's on the mat. The door was locked.
+
+**NELL:** I know. I *know.* *(to the new detective)* Hunch-o-meter: ten. Wrong again. I keep rating him ten. Why
+do I keep rating him ten?
+
+**FELIX:** Footnote: because it's the biggest number on the meter. Footnote to the footnote: you could make a bigger
+meter. *(Nell glares.)* Or not.
+
+**QUILL:** We are stuck. When I am stuck, I come here.
+
+*The door opens before anyone knocks. MRS ACHTERBERG, flour to the elbows, looks at them all.*
+
+**MRS ACHTERBERG:** A crooked line is straight until you look along it.
+
+**DEV:** *(whispering)* What does that mean?
+
+**ASHA:** *(whispering)* I think it means come in.
+
+*Inside: books in towers, a cello, a teacup with a skin on it. INSPECTOR ADA HOLLOWAY sits by a cold fire with a cello
+bow behind her ear. A grey parrot on the lampshade tilts its head.*
+
+**SEMICOLON:** Elementary; therefore!
+
+**ADA:** Quill.
+
+**QUILL:** Ada.
+
+*(A long pause. Nobody in the agency has ever seen Quill pause.)*
+
+**ADA:** Still correcting people's grammar?
+
+**QUILL:** Still forgetting your tea?
+
+**ADA:** *(picking up the cup, finding it cold, putting it down)* Always. *(to the new detective)* You're the new one.
+Show me what you have.
+
+*The child lays the petition on the table. Ada does not touch it. She reads it once, lips moving. Then she looks at the
+child over her spectacles.*
+
+**ADA:** Read me the title.
+
+**NEW DETECTIVE:** "Save Our Library by Selling It."
+
+**ADA:** Mm. You have *read* it. *(She taps the paper once, nowhere in particular.)* Now *see* it.
+
+**NELL:** See what?
+
+**ADA:** If I told you, you would have heard it. That is not the same. *(to the child)* Read the title again with your
+finger under every mark, not every word. Then read the Keeper's report. Then read the councillor's letter with a
+dictionary at your elbow. Felix will do.
+
+**FELIX:** I'm — thank you. Footnote: I am, technically, a dictionary at an elbow.
+
+**SEMICOLON:** Elementary; therefore!
+
+**ADA:** He says that about everything. He is usually right. *(She lifts the cello bow from behind her ear and begins,
+very softly, to play.)* Off you go. Nine o'clock is coming.
+
+*On the stairs down, Nell catches Quill's eye.*
+
+**NELL:** You *know* her. Properly.
+
+**QUILL:** I knew her. *(A beat.)* "Know" is present tense. It may be both. Mind the bottom step.
+
+#### THE LINE
+
+The washing line runs from two weeks ago to Thursday noon. Asha calls the time as the pegs go on: "Twelve hours to nine."
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | Mr Crane writes to Bright, asking him to find supporters by Friday | [c:pett-letter] "two weeks ago" | no (pegged for you) |
+| 2 | Dot starts her petition and writes "SAVE OUR LIBRARY!" on every sheet | [c:dot-title] (Monday, last week) | **yes** |
+| 3 | Dot leaves the forty-two names in the petitions tray; the office is locked as six strikes | [c:dot-six] "as the clock struck six" | **yes** |
+| 4 | Marlowe posts Dot's pen through the letterbox and runs to story hour with fourteen books | [c:mar-when] "Just after the clock rang six." | **yes** |
+| 5 | Bright goes into the office with his key; the lamp stays on "for ages" | [c:tam-bright] "after the one bong" | **yes** |
+| 6 | Bright posts one full sheet to Mr Crane | [c:pett-post] "by post on Saturday" | **yes** |
+| 7 | Dot's sheets are missing from the tray; Mr Osei finds the pen on the mat | [c:dot-gone] "on Monday morning" | no (pegged for you) |
+| 8 | Mr Pettigrew carries the full petition in (Case 4) | [c:pett-tuesday] "On Tuesday morning" | no (pegged for you) |
+| 9 | After the vote fails, the "Collected by" line is filled in, and Bright sends the petition to the Review Committee | [c:rep-collector] "At Wednesday's vote … blank"; [c:bri-trans] (letter dated "Thursday, 8 a.m.") | **yes** |
+| 10 | Crane pins up his flyer | DOC 6.3, "Thursday, noon" | no (pegged for you) |
+
+**Asha's peg:** she insists on adding an eleventh card, "Breakfast, Thursday: porridge", which the line politely accepts
+and shows in grey.
+
+**The line's little shake:** if the child pegs event 5 *before* event 3, the line wobbles and Quill says: "One bong.
+What does one ring mean on that clock? Read the notice, gap and all."
+
+**End of chapter 4.** *The last peg goes on. Quill looks at the line for a long time. "Every peg is where it belongs," he
+says. "Now we find out whether anyone will say so." Across the harbour, through the fog, the Forum clock strikes once.
+Half past nine. And high on the left of the dark Town Hall, a light comes on in the window of the Forum office.*
+**DEV:** *(at the telescope)* Someone's in there. Right now.
+**ASHA:** The only key in town is the councillor's.
+
+---
+
+### Chapter 5 — The accusation
+
+*The Review Committee room in the Town Hall, Friday, a quarter to nine. Rain again, ticking on the tall window over the
+harbour. Long table, green baize, a jug of water nobody drinks. All four suspects seated. Crane by the window with his
+coat on and his train ticket in his glove, smiling at the harbour. Tully, yawning, explains last night's light: "That
+was me. Looking for Biscuit in the petitions tray. He wasn't there."*
+
+**CULPRIT:** **Councillor Hector Bright**, who went back into the Forum office at half past six last Friday, copied the
+forty-two names from Dot's petition onto Town Hall paper, turned her title inside out with a moved "!", sent it to Mr
+Crane, and after the vote wrote Dot's name on the blank line.
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. **D3** — [c:bri-trans] + [c:rep-hand]: he *transcribed* them; one hand wrote every name.
+2. **D1** — [c:rep-scrape] + [c:dot-title]: the title started as Dot's, "!" and all.
+3. **D4** — [c:bri-never] + [c:tam-bright]: he said he did not go back; he went back.
+
+*(D2 is accepted in any slot.)*
+
+**WRONG-SUSPECT RESPONSES (Quill)**
+- **Marlowe:** "Marlowe posted a pen. Where did the pen land? Read Mr Osei's label. And where was he at a quarter past
+  six?" *(points to [c:tully-pen] and [c:mar-story])*
+- **Dot:** "Dot's name is on it, in someone else's hand. Would Dot scratch out her own exclamation mark? Read her
+  diary." *(points to [c:dot-title] and [c:dot-mark])*
+- **Mr Pettigrew:** "Mr Pettigrew was two towns away, losing at chess in front of eleven people. And he says Crane sent
+  no sheets. Who said Crane *did*?" *(points to [c:pett-chess] and [c:bri-muddy])*
+
+**WRONG-THEORY RESPONSE (Quill), if the child blames the Blot:** "The Blot takes one word and leaves a tidy gap.
+Forty-two names in one hand is not tidy. Whose word is *transcribed*?"
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You have shown me that someone copied Dot's list. Now show me who *says* he copied
+it. A grand word can be a confession. Felix, the dictionary."
+
+**Grammar beat (during the accusation, before the reveal):**
+**BRIGHT:** Between you and I, this is all a misunderstanding.
+**QUILL:** Between you and *me*. Carry on.
+
+---
+
+### The reveal
+
+*The Review Committee room, ten to nine. Rain on the tall window. Ada has slipped into the back row, Semicolon on her
+shoulder. Mr Crane checks the clock and smiles.*
+
+**QUILL:** New detective. Who made the forty-two signatures?
+
+**NEW DETECTIVE:** Councillor Bright. He copied them from Dot's petition.
+
+**BRIGHT:** *(offended)* Frankly, that is absurd. I have never seen her list.
+
+**FELIX:** *(holding up the letter)* Your own letter: "I have *transcribed* the forty-two names faithfully." Footnote:
+*transcribe* means to copy out by hand.
+
+**ASHA:** And all forty-two are in one hand. You said Crane's office sent you sheets.
+
+**PETTIGREW:** *(ears pink)* I'm sorry. We sent none. One sheet came to us, in your envelope.
+
+**DOT:** *(jabbing the scratched-out mark)* And that's MY exclamation mark. You copied my title before you'd thought
+about it. Then you scratched me out.
+
+**BRIGHT:** I was home by six! Ask my wife!
+
+**NELL:** We did. You were. *(She holds up Tam's bun bag.)* But Tam saw you go back in, "after the one bong".
+
+**DEV:** And the notice says the clock strikes once at each half hour. Gap and all. One bong is half past six.
+
+**NELL:** "Home by six" was true. "I did not go back" wasn't. The lamp was on for ages because forty-two names take ages.
+
+**QUILL:** And it was there from the very first page. *(He taps the petition.)* "Collected by: D. Harkness." Blank at
+Wednesday's vote. Who knew whose names these were?
+
+**NEW DETECTIVE:** Only someone who had seen her list.
+
+*A long silence. Bright takes out his pocket watch, and does not polish it. His shoulders come down.*
+
+**BRIGHT:** *(quietly)* Yes.
+
+**PENHALLOW:** Why, Hector?
+
+**BRIGHT:** Mr Crane wanted supporters by Friday. Nobody would sign. Then I heard Mrs Harkness on the steps, with
+forty-two. They all wanted to *save* the Library. Mr Crane would save it. The same thing, I told myself. *(He stops.)* It
+isn't. I knew it as I scratched out that mark. After the vote, Mr Crane said a blank line looked odd. So I wrote her
+name. Frankly, it was the only true thing on the page.
+
+**DOT:** Where are my sheets?
+
+**BRIGHT:** In the committee drawer. I'm sorry, Mrs Harkness. I'm sorry, all forty-two of you.
+
+**NELL:** *(gently, round the table)* Marlowe was doing the voices at story hour. Dot left her glasses at home. And
+Mr Pettigrew?
+
+**PETTIGREW:** *(taking a brand-new Library card from his pocket)* I joined on Tuesday. I'm sorry.
+
+**CRANE:** *(from the window, smoothly)* Well! A misunderstanding. Lovely. Come along, my assistant. *(He leaves, a little
+faster than he came. Mr Pettigrew stays in his chair.)*
+
+**SEMICOLON:** Elementary; therefore!
+
+---
+
+### Epilogue
+
+**Forty-three.** Constable Tully finds Dot's real sheets in the committee drawer under a folder called *Matters
+Arising*. At nine they are read to the committee, reasons and all. Then Councillor Bright stands up, resigns from the
+Review Committee, borrows Dot's green pen and signs her petition, number forty-three. In the "why" column he writes:
+*Because I learned to read there, and forgot what reading is for.* The review is postponed again. Mr Crane catches his
+train. Mr Pettigrew catches the next one, reading.
+
+**What Bright does next.** He volunteers to copy out the Library's water-damaged catalogue cards by hand. "I have, it
+turns out, a gift for transcribing." He also admits he has emptied the leak buckets in the reading room every wet night
+this year. Professor Penhallow labels both of these, out loud, "a fact", and gives him a better bucket.
+
+**The pen.** Dot gives the agency her green fountain pen. "Every name I collected was written with it. It signs what it
+means. I've a new one for signing now. This one has done its job." It goes on the shelf, uncapped, beside the stone frog
+from Case 3. She is wearing her reading glasses. Nobody mentions it.
+
+**Marlowe.** Nell climbs to the Library's mop cupboard to say sorry. Marlowe is inside, reading.
+**NELL:** I rated you a ten. Twice now.
+**MARLOWE:** That's very flattering. As a suspect.
+**NELL:** I'm going to start waiting for the evidence.
+**MARLOWE:** *(holding out the top book of fourteen)* It helps if you read it first.
+
+**The vanished word.** At the clock tower, the agency reads the notice again.
+**DEV:** "The Forum clock *strikes* once at each half hour." Seven letters.
+**FELIX:** Footnote: *strike* has more meanings than almost any word in English. A clock strikes. An idea strikes. A
+match strikes. Footnote to the footnote: today, a councillor was struck out.
+**ASHA:** That's not a footnote. That's a pun.
+The new detective writes **STRIKES** in the Blot Ledger. The ink spreads into the page.
+**DEV:** *(reading the Ledger aloud)* Under the clock that never strikes. *(He frowns.)* Never strikes. A clock that never
+strikes isn't much of a clock.
+**QUILL:** *(looking at nothing in particular)* Isn't it?
+
+**The running joke.** Biscuit is found by Mr Osei on Sunday when he climbs the tower to wind the clock: asleep in the
+bell chamber, in a nest of old bunting, with his ears folded flat. "He's slept through the strikes all week," says
+Mr Osei. "Every half hour. Not a twitch." Tully carries him down all two hundred steps.
+**TULLY:** I signed for him, you know. On Dot's petition.
+**DOT:** And I crossed him out.
+**TULLY:** He'd have wanted it kept open too.
+
+**The last scene.** Back at No. 9 Lantern Row, Ada's tea has gone cold again. She does not notice. She is looking at a
+photograph on the mantelpiece: two young people on the Library steps, forty years ago. One of them is wearing a very small
+deerstalker. When the agency leaves, Quill sees a small white card tucked behind the door knocker of No. 9. A perfect
+round ink blot, and no words at all. Ada turns it over, puts it in her pocket, and says nothing. Down the foggy street,
+nobody is walking away.
+
+---
+
+### Detective School drill
+
+**Move the mark.** *(Clue Spotter, punctuation)* Five short titles on chalkboard tiles. Drag one punctuation mark to make
+each title mean the opposite, then say what changed.
+
+1. "Save Our Library!" → "Save Our Library? By Selling It!" *(model answer; shown first)*
+2. "Stop! Painting the fence." → "Stop painting the fence." *(a sign that asks you to stop, against one that tells you
+   off)*
+3. "Let's eat, Grandma!" → "Let's eat Grandma!" *(the family favourite; Felix's footnote is three footnotes long and is
+   asked to save it for later)*
+4. "No dogs allowed, Biscuit." → "No dogs allowed? Biscuit!" *(Tully disagrees with both)*
+5. "Keep the Library open!" → "Keep the Library? Open it!" *(the child explains: the first wants it to stay open; the
+   second asks a question and then orders it opened, as if it were shut.)*
+
+Then one **fact or opinion** tile from the flyer: "Forty-two of your neighbours agree." The child sorts it: *opinion
+dressed as a fact*. Quill: "Who asked them?"
+
+---
+
+### Art and scene notes
+
+- **Backgrounds (day and night):**
+  - *The Forum steps*: broad pale stone steps, the Town Hall's columns, the market behind, the speakers' corner box, pigeons.
+    Day: brisk wind, flyers flapping. Night: two gas lamps lit by the Lamplighters, rain on the stone, the office window
+    glowing amber high on the left.
+  - *The Forum office*: a small panelled room; a wire petitions tray, a blue pen on a chain, a brass letterbox flap on the
+    inside of the door with a doormat below; one desk lamp.
+  - *The clock tower foot*: old stone, a small brass frame on the wall beside a locked oak door. The clock face high above
+    has hands (it *does* strike). Contrast this deliberately with the handless painted clock seen in Case 11.
+  - *The Review Committee room*: green baize table, a water jug, a tall rain-streaked window over the harbour.
+  - *No. 9 Lantern Row*: Ada's sitting room. Book towers, a cello on a stand, a cold teacup, a fire that has gone to embers,
+    a parrot on a fringed lampshade. A photograph on the mantel of two figures on the Library steps; one is small and
+    wears a tiny deerstalker. Paint it softly; it should be noticed only by children who look. Outside: fog, gas lamps
+    with haloes.
+- **The Blot beat:** never painted as a figure. The violin note is sound only, with pigeons lifting from the steps; the
+  card behind Ada's knocker is a small white shape, nobody in the street.
+- **Props:** Crane's petition (the Case 4 scroll, crane-bird seal); the Keeper's report with a book-shaped wax seal;
+  Crane's glossy flyer; Dot's diary with a tram ticket bookmark; Bright's crested letter; Tam's bun bag and the
+  rock-hard bun; the clock notice in its brass frame; Tully's notebook; Mr Osei's lost-property box with a handwritten
+  label; Mr Pettigrew's new Library card; Bright's pocket watch; Dot's green fountain pen (the office object, with a small
+  tram-shaped clip).
+- **New portraits:** Councillor Bright (six expressions; the same model as Case 4), Dot Harkness, Mr Pettigrew (the Case
+  8 model: short and round, brown suit one size too big, round spectacles; his "guilty" is pink ears and a polished lens,
+  never real guilt), Ada Holloway (amused, calm, thoughtful; her model sheet is used all season), Mrs Achterberg,
+  Semicolon.
+- **Returning portraits:** Marlowe, Penhallow, Tully, Tam, Crane (amused only).
+- **Lettering:** none in any painting. The petition title, the flyer, the clock notice and every name are live text. The
+  struck-out "!" is live text with a strikethrough, never drawn.
+- **Diversity check:** the forty-two signers include young and old, families of every kind and background; when the
+  petition is read aloud at the end, the crowd on the steps is painted as ordinary and various, camera high, faces small.
+
+---
+
+## CASE 7 — The Trapdoor Reveal
+
+*A Bizzing mystery.*
+
+```
+meta:
+  id:            case-07
+  level:         3  (ages 9–10 · 4 suspects · 8 scene documents · ≤100 words per document · ≤18-word sentences ·
+                     4 deductions · one red herring)
+  world:         playhouse (the Playhouse Quarter: the open-air theatre, the wings, the prompt corner, under the stage)
+  skills:        sequence · pronoun · inference · figurative
+  vanished word: LIES  (from the Playhouse motto, "A good play ____ only to tell the truth.")
+  office object: a small brass lantern (made by Mr Dunmore from offcuts of the trapdoor's old catch)
+  arc beats:     A. a Blot calling card in the programme pile: "A word can fall through a gap and still be there. — B."
+                 B. Crane's "inspector" was secretly measuring the theatre for The Inkwell Experience
+                 C. FELIX OVERCOMES HIS STAGE FRIGHT and gives the reveal speech on stage (The Podium link)
+                 C. Mrs Achterberg's proverb: "A lantern lit below lights those above."
+                 C. Nell refuses to rate a hunch until she has read everything (the lesson of Case 6 lands)
+                 A. seed (Interlude): a violin in the dark beyond the stalls plays half a slow tune and stops.
+                    Ada goes still. Nobody sees who. (Ada plays the same tune, alone, in the last scene.)
+  mystery pass (6 Oct 2026):
+    clock:          curtain up for opening night is tomorrow at seven. No lantern, no show: it has stood on the stage
+                    in every play for a hundred and fifty years. Halfway, it gets worse: Sunny packs her bag for the
+                    11:30 tram to her gran's, because everyone keeps looking at the box.
+    impossible:     a lantern as heavy as a small dog leaves the front of a lit stage in forty seconds of dark. The
+                    gates were locked from seven, Tully searched every bag, and nothing left the theatre. How?
+                    It went down, not out.
+    false solution: end of Chapter 3, Constable Tully's case against Mr Dunmore (he wants the lantern off the stage,
+                    he carries every key, a bump "under the floor" is his, and something lantern-shaped stands under a
+                    sheet in his workshop). Broken at the start of Chapter 4 when the sheet comes off.
+    hidden clue:    Sunny's log, Chapter 1: "The glow tape winked at me. Lovely." Read as Sunny being Sunny; it is
+                    the trap dropping open and springing shut under the mark.
+    continuity:     Hale steps out of the wings a minute after lights-up, out of breath (his notebook: "8:04. Back
+                    to the wings").
+```
+
+**Writer's note on the glow tape (DOC 7.4).** Sunny says "lovely" about lights and nothing else, so "The glow tape winked
+at me. Lovely." must read as character, not clue. Glow tape glows in a blackout; it only *winks* if the floor under it
+tips away and comes back. Felix's speech pays it off. Never explain it before then.
+
+**Writer's note on the secrets.** Every suspect hides one thing that is not the crime, and each one makes them look worse
+before it clears them: Sunny cracked the lantern's glass and hid in the box crying; Mr Dunmore has built the lantern a
+glass case as a birthday surprise; Celeste leaves before every blackout because she is afraid of the dark; Mr Hale grew up
+in this theatre and knows every door in it blind. Each is told kindly at the reveal.
+
+**Writer's note on the two "lies".** The vanished word is the case in miniature. The Playhouse motto uses *lies* to mean
+*tells something untrue*; the season's sentence will use it to mean *rests*. In this case a man lies about where he was,
+and a lantern lies under the stage. Felix names both in the epilogue. Do not explain the double meaning anywhere before
+the case is solved.
+
+**Writer's note on Sunny's log (DOC 7.4).** "It went down like a stone" must be read by the cast as a theatre review
+(Petra's margin note in DOC 7.1 does exactly that) before the child reads it literally. Never italicise it, never set it
+apart. It sits in a list of short lines, like everything else Sunny writes.
+
+---
+
+### Case card
+
+> Dress rehearsal at the Playhouse. The Founder's Lantern glows at the front of the stage.
+> The lights go out for forty seconds. When they come back, the lantern has gone.
+> The gates were locked. Nothing left the theatre.
+> One visitor says he saw a thief.
+> Curtain up is tomorrow at seven. No lantern, no show.
+
+*(55 words. Read aloud at the child's choice.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Portrait expressions |
+|---|---|---|---|---|
+| **Sunny Marchetti**, 19 | Suspect · red herring · lighting operator | Short hair dyed sky-blue, a roll of tape on her wrist like a bracelet, a flask of tea | Cheerful, exact, says "lovely" about lights and nothing else | calm, amused, nervous, offended, relieved |
+| **Mr Gus Dunmore**, 63 | Suspect · props master · Tully's false solution | Sawdust in his eyebrows, a pencil behind each ear, a key ring as big as a saucer | Grumbles in measurements; nobody reads his notes, and he says so | calm, offended, worried, guilty, relieved |
+| **Celeste Fairweather** | Suspect · the lead (returning from Case 5) | Silver-streaked hair pinned up, a lighthouse keeper's daughter's oilskin, a scarf for her voice | Dramatic, generous, calls everyone "darling"; signs her notes "—C." | calm, amused, offended, relieved |
+| **Mr Lionel Hale** | Suspect · "inspector" from Crane Holdings | Neat brown suit, a clipboard he never writes on in public, a silver tape measure on his belt | Polite and smooth, a little too sure; says "quite" | calm, nervous, offended, guilty, relieved |
+
+**Motive · Secret** (each secret is not the crime; each makes its owner look worse, then clears them)
+
+| Suspect | Motive · Secret |
+|---|---|
+| Sunny | She cracked the lantern's glass last week, and a lantern that vanishes can't show a crack · She hid in the box and cried about it; Mr Dunmore mended it and never told a soul |
+| Mr Dunmore | He wants the lantern off the stage and behind glass, and he carries every key in the building · He has built it a glass case, a surprise for the Playhouse's hundred-and-fiftieth birthday, hidden under a dust sheet in his workshop |
+| Celeste | The last hands on the lantern, gone the instant before the dark · She has been afraid of blackouts since she was six, and Petra always times her exit so she is never on stage for one |
+| Mr Hale | Mr Crane wants every room measured by Friday, and nobody must know · He was in the Playhouse youth company as a boy (he played the cat in the pantomime), so he knows every door in the theatre in the dark |
+| **Petra Nwosu** | Witness · stage manager | Headset round her neck, a pencil in her hair, the prompt book under one arm | Brisk; writes everything down; agrees with everyone in the margin | calm, worried, relieved |
+| **The stage-door cat** | Comic witness | Fat, ginger, one torn ear, Inkwell's most famous cat | Knocks things over; brings things back | (one pose; a tail-flick animation) |
+| **Inspector Ada Holloway (retired)** | Mentor · in the stalls as Celeste's guest | Velvet jacket, a flask of tea (cold), Semicolon in a covered cage | Watches; says almost nothing this case | amused, calm, thoughtful |
+| **Mrs Winifred Achterberg** | Ada's housekeeper · in the stalls | Round, a hat with a cherry on it, a paper bag of humbugs | Speaks only in proverbs | calm, amused |
+| **Constable Bram Tully** | Helper | Cocoa flask, notebook with a dog doodle | Ten minutes behind, never jealous | calm, worried, relieved |
+
+The agency: **Quill**, **Nell**, **Asha**, **Dev**, **Felix** (prompting the show since Case 5) and the new detective (the
+child).
+
+---
+
+### Opening (comic panels)
+
+1. **The Playhouse, Tuesday night, 8:01. Opening night is tomorrow at seven.** A lit stage under the open sky and
+   strings of bulbs that sway in a wind off the harbour; moths circling the bulbs; a smell of sawdust and warm dust from the
+   lamps. Empty stalls except for a few guests (one of them, unremarked, a tall woman in a green coat with a long grey
+   plait, a violin case at her feet). On stage, Celeste, as Wren, sets a glowing brass lantern down at the front. In the
+   prompt corner, half hidden by the curtain, Felix follows the script with one finger.
+   **FELIX** *(whispering, to himself)*: "Footnote: the prompt corner is the safest seat in a theatre. Nobody can see you."
+2. **8:02. Blackout.** A panel that is nearly all black. Down centre, one small square of green glow. Two small live-text
+   sounds: *clunk*, and, a moment late, a long rumble of thunder.
+3. **Lights up, cold.** The front of the stage is empty. Petra, headset askew: "The Founder's Lantern! Where's the
+   *lantern*?" Then: "It's been on this stage every night for a hundred and fifty years. No lantern, no opening!"
+   A minute later, a neat man in a brown suit steps out of the wings, a little out of breath, smoothing his tie.
+   **HALE:** "I saw the whole thing. Quite clearly. It was the lighting operator."
+4. **The agency, on stage.** Constable Tully at the gate behind them with his cocoa flask, Nell opens her mouth. Shuts it.
+   Opens it again.
+   **TULLY:** "Gates locked since seven. I've been on them. Nobody's gone out, and nothing has either."
+   **NELL:** "Hunch-o-meter: … No. I'm not rating it. Not till I've read everything."
+   **QUILL:** "Good." *(A pause.)* "Very good."
+   **ASHA:** "Timeline from seven fifty-eight. Supper was at quarter past six. Dhal."
+   **DEV** *(whispering)*: "My turn with the torch." **ASHA** *(whispering)*: "There are forty stage lights on." **DEV:**
+   "Still my turn."
+5. **The prompt corner.** Felix, sneezing in the dust.
+   **FELIX:** "I was right here. I saw nothing. It was dark. Footnote: that's what dark is *for*."
+   **NELL:** "When we solve it, you're telling it. Out there. On the stage."
+   **FELIX** *(very pale)*: "Footnote to the footnote: no."
+
+---
+
+### Chapter 1 — The scene
+
+#### DOC 7.1 · log (the cue sheet)
+- **Author:** Petra Nwosu, stage manager · **Date/time:** Tuesday, dress rehearsal · **Found where:** the prompt book, open
+  on Felix's stool in the prompt corner
+- **Picture:** a ruled page in a fat, battered prompt book; neat ink columns; a pencil note squeezed into the margin; a ring
+  from a mug.
+
+> ACT 2, SCENE 3: THE LAMP ROOM. Dress rehearsal, Tuesday.
+> [[c:cue13|Cue 13, 7:58. LX: lights up, warm. Wren enters SL.]]
+> [[c:cue14|Cue 14, 8:01. Wren sets the Founder's Lantern on the new mark, DSC.]]
+> [[c:cue-moved|New mark is glow tape. Moved there this afternoon. — P.]]
+> [[c:cue-exit|Wren exits SL.]]
+> [[c:cue15|Cue 15, 8:02. LX: blackout. SFX: thunder sheet, Mr Dunmore, SL wings.]]
+> [[c:cue16|Cue 16, forty seconds later. LX: lights up, cold. Sunny, from the box.]]
+> *Margin, in pencil:*
+> [[c:petra-margin|Sunny says cue 15 "went down like a stone". Agreed! Scene needs work. — P.]]
+
+#### DOC 7.2 · notice
+- **Author:** Gus Dunmore, props master · **Date/time:** Monday · **Found where:** pinned to the crew noticeboard backstage,
+  half covered by a poster for a pantomime
+- **Picture:** a cork board crowded with notes; this one in thick carpenter's pencil on the back of a sawn-off piece of card;
+  a drawing pin in each corner.
+
+> FOR ALL CREW. READ THIS. YES, YOU.
+> [[c:trap-loose|The catch on trap three is loose.]]
+> [[c:trap-drop|Put any weight on it and it drops open, then springs shut again.]]
+> Do not stand on it. Do not put anything on it.
+> [[c:trap-chalk|I have chalked a cross on it, right in the middle.]]
+> The new catch comes on Saturday. I mend it then.
+> — G. Dunmore, props
+> P.S. Whoever keeps borrowing my good hammer: I know it's the cat.
+
+#### DOC 7.3 · list (the stage plan)
+- **Author:** Gus Dunmore · **Found where:** framed on the wall by the stage door, "for new crew"
+- **Picture:** a simple painted bird's-eye shape of the stage with three small squares marked on it (no letters in the
+  painting); the words below are live text.
+
+> THE STAGE: WHERE THINGS ARE. For new crew.
+> [[c:plan-key|D is down, nearest the audience. U is up, at the back. C is centre.]]
+> S is stage. L and R are left and right, as an actor faces the audience.
+> Trap one: USL. Trap two: USR.
+> [[c:plan-trap3|Trap three: DSC.]]
+> [[c:plan-under|Under the stage: old costumes, old scenery, spiders. The door is by the scene dock.]]
+> Thunder sheet: SL wings. Prompt corner: SL, behind the curtain.
+> [[c:plan-box|Lighting box: top of a thirty-rung ladder, at the very back of the stalls.]]
+> Foyer and box office: front of house, through the pass door.
+
+#### DOC 7.4 · log (the lighting log)
+- **Author:** Sunny Marchetti · **Date/time:** Tuesday, dress rehearsal · **Found where:** on the desk in the lighting box,
+  under a tea flask
+- **Picture:** a spiral notebook beside a small lighting desk with sliders; a torch held to the desk with many turns of blue
+  tape.
+
+> LIGHTING LOG. Tues. Dress. S.M.
+> 7:58. Cue 13. Lights up, warm. Lovely.
+> 8:01. Cue 14. Wren puts the lantern down. So shiny!
+> 8:02. Cue 15. Blackout.
+> [[c:sunny-clunk|A clunk, down centre.]]
+> [[c:sunny-stone|It went down like a stone.]]
+> [[c:sunny-wink|The glow tape winked at me. Lovely.]]
+> [[c:sunny-thunder|Thunder late AGAIN. Mr D, please!]]
+> [[c:sunny-16|Cue 16. Lights up, bang on time.]]
+> [[c:sunny-gone|Lantern gone??]]
+> [[c:sunny-chair|Never left my chair. Never do.]]
+> Note to self: buy more tea.
+
+#### DOC 7.5 · statement
+- **Author:** Mr Lionel Hale · **Date/time:** Tuesday, half past eight · **Found where:** written for Constable Tully, who
+  brings it up from the stage door with the cocoa
+- **Picture:** a sheet of crisp headed paper (a crane-bird crest, no letters), handwriting very upright and very even.
+
+> Statement of Mr L. Hale, Buildings Inspector, Crane Holdings.
+> I came to the rehearsal as a guest.
+> [[c:hale-wings|I stood in the wings, stage left, all through the blackout.]]
+> [[c:hale-saw|In the dark, I saw the lighting operator creep onstage and take the lantern.]]
+> [[c:hale-torch|I could see her by her little torch.]]
+> [[c:hale-stayed|I did not leave the wings until the lights came up.]]
+> I hope this helps. A thief should be caught.
+> L. Hale
+
+#### DOC 7.6 · statement
+- **Author:** Celeste Fairweather · **Date/time:** Tuesday, half past eight · **Found where:** handed over in her dressing
+  room, written in green ink on lilac paper
+- **Picture:** a lilac note with a pressed violet stuck to one corner; a jar of honey and a scarf on the dressing table.
+
+> Darlings, here is everything.
+> [[c:cel-set|I set the lantern on the new mark, exactly as Petra asked.]]
+> [[c:cel-wobble|The floor gave a tiny wobble under it.]] I thought it was my knees.
+> [[c:cel-side|When I went on, Mr Dunmore and the inspector were side by side in the wings.]]
+> [[c:cel-off|Then I came off, stage left, just before the blackout.]]
+> [[c:cel-left|When I came off, he had already left.]]
+> [[c:cel-alone|Mr Dunmore was alone at the thunder sheet, waiting for his cue.]]
+> I went straight to my dressing room to rest my voice. You know why.
+> —C.
+
+#### DOC 7.7 · notebook page
+- **Author:** not signed · **Date/time:** Tuesday · **Found where:** the stage-door cat drops it at Felix's feet in the
+  prompt corner, slightly chewed, and sits on it
+- **Picture:** a small page torn from a pocket notebook, a corner damp; tidy, very upright handwriting (the same hand as
+  DOC 7.5, painted only as a matching slant).
+
+> Playhouse. Tues. Private.
+> [[c:note-foyer|8:00. Foyer. Eighteen paces by eleven. Gift shop goes here.]]
+> [[c:note-box|8:02. Box office. Too small. Knock through to the bar?]]
+> [[c:note-back|8:04. Back to the wings. Look interested.]]
+> [[c:note-crane|Mr C. wants every room measured by Friday.]]
+> [[c:note-secret|Do NOT tell the theatre.]]
+
+#### DOC 7.8 · programme, with a calling card
+- **Author:** the Playhouse · **Found where:** the top programme of the pile on the front-of-house table; the card is
+  tucked inside its cover
+- **Picture:** a folded programme with a painted lighthouse on the cover (no lettering); a white card with one perfect round
+  ink blot slipping out of it.
+
+> THE PLAYHOUSE, INKWELL.
+> Tonight: *The Lighthouse Keeper's Daughter*, by Rosalind Ashe.
+> Dress rehearsal, Tuesday, 7 p.m.
+> Our founder, Wilhelmina Thorne, lit the Founder's Lantern on our very first night.
+> It has stood on our stage in every play since.
+> Our motto is carved over the stage door:
+> [[c:motto|"A good play ____ only to tell the truth."]]
+> Lighting: Sunny Marchetti. Props: Gus Dunmore. Stage manager: Petra Nwosu.
+> Puzzle page: Mme Elodie Van.
+>
+> *The card inside the cover:*
+> [[c:card|A word can fall through a gap and still be there.]] — B.
+
+*(After DOC 7.8, Dev runs to the stage door and looks up. The carving over it has a smooth, empty gap. "Four letters,"
+he says. "The motto doesn't make sense without them. A good play… only to tell the truth?" Felix: "It's missing its verb.
+Footnote: a sentence without a verb is like a play without a stage." Dev: "Or a stage without a lantern." The word is not
+logged until the case is solved.)*
+
+*(End of Chapter 1. Constable Tully comes back from the gates, notebook open.)*
+**TULLY:** Every bag searched. Every bin. Every coat pocket. Gates locked from seven, and I was on them.
+**TULLY:** So it never left. *(He looks at the bare boards.)* It's still in here. Somewhere.
+*(The stage-door cat pads to the front of the stage and sits beside the glow tape. It stares down at the boards, tail
+twitching, and will not look away.)*
+
+---
+
+### Chapter 2 — Interviews
+
+*Every answer arrives as a typed transcript on the desk. Questions marked ◆ appear only after the child has read the
+document named.*
+
+#### SUSPECT Sunny Marchetti *(Hale's accusation makes her the first interview)*
+
+**Q (where):** "Where were you during the blackout?"
+> In the box. Top of the ladder, back of the stalls.
+> [[c:sunny-faders|I had both hands on the faders, waiting for cue 16.]]
+> Forty seconds isn't long. It's very long in the dark, though.
+*(portrait: nervous → calm)*
+
+**Q (what):** "What did you mean, 'it went down like a stone'?"
+> I meant the clunk. Something heavy, down centre.
+> [[c:sunny-down|Clunk, then it just went down. Then nothing.]]
+> Petra thinks I meant the scene was a flop. It was a bit floppy.
+> But that isn't what I wrote.
+
+**Q (who) ◆ after DOC 7.5:** "Mr Hale says he saw you take the lantern by the light of your torch."
+> My torch? [[c:sunny-notorch|My torch is taped to the desk in the box.]] It doesn't come off. That's the point.
+> And thirty rungs down, then the whole stalls, then back up? In forty seconds?
+> I'm a lighting operator, not a squirrel.
+*(portrait: offended → amused)*
+
+**Q (why):** "Petra says you cracked the lantern's glass last week."
+> I did. I polished it too hard. I cried in the box.
+> Mr Dunmore mended it and said it wasn't my fault.
+> [[c:sunny-love|I love that lantern. I'd never hide it.]]
+*(portrait: nervous → relieved)*
+
+#### SUSPECT Mr Gus Dunmore
+
+**Q (what):** "Tell us about trap three."
+> Catch is loose. I wrote it on the board on Monday, big letters.
+> [[c:dun-cross|I chalked a cross on it, right in the middle of the stage front.]]
+> New catch comes Saturday. Till then, nobody stands on it.
+
+**Q (what) ◆ after DOC 7.1:** "Did you know the lantern's mark had been moved?"
+> Moved? Moved WHERE?
+> *(He looks at the prompt book for a long time.)*
+> [[c:dun-tape|Down centre? Then somebody's stuck glow tape right over my chalk cross.]]
+> Nobody reads my notes. Nobody ever reads my notes.
+*(portrait: offended → worried)*
+
+**Q (when):** "Why was the thunder late?"
+> Petra says wait three seconds after the blackout. Sunny says go at once.
+> We argue every night. Tonight I waited.
+> [[c:dun-bump|I heard a bump under the floor and thought it was the cat.]]
+> It's always the cat.
+
+**Q (why):** "Do you think the lantern belongs on a stage?"
+> No! It's a hundred and fifty years old.
+> [[c:dun-glass|It belongs in a glass case, not in a play.]] I've said so a hundred times.
+> But it isn't mine to move. That's Petra's say, not mine.
+> *(His eyes go, for a second, to a tall shape under a dust sheet in the corner.)*
+*(portrait: calm → offended)*
+
+**Q (who):** "Who was with you in the wings?"
+> The inspector, at the start of the scene. Stood very close. Asked a lot about walls.
+> [[c:dun-gone|Then he wasn't there. I didn't see him go.]]
+> I was counting my three seconds. I don't look about when I count.
+
+#### SUSPECT Celeste Fairweather
+
+**Q (where):** "Where exactly did you set the lantern down?"
+> On the new glow-tape mark, darling. Down centre, right at the front.
+> Petra moved it there this afternoon. It looks much better.
+> It wobbled a little. I thought it was nerves. Mine, not the lantern's.
+
+**Q (who):** "Who was in the wings when you came off?"
+> Only Mr Dunmore, holding his thunder sheet like a shield.
+> [[c:cel-gone|The inspector was gone.]] I noticed, because he'd been staring at the walls all scene.
+> Measuring them with his eyes, darling. Like a man buying curtains.
+
+**Q (why):** "Why did you go straight to your dressing room?"
+> My voice, darling. Last month it vanished altogether.
+> I rest it between scenes now. Honey and silence.
+> *(She folds her scarf, and unfolds it.)*
+> And the dark. I have been afraid of blackouts since I was six.
+> [[c:cel-dark|Petra always puts my exit just before the blackout, so I'm never on stage for one.]]
+> There. Now you know everything. Don't make me lose my voice shouting it.
+*(portrait: amused → nervous → relieved)*
+
+**Q (what):** "Last time, you hid your own script. Did you hide the lantern?"
+> *(offended, then laughing)* I hid my script because I was ashamed.
+> [[c:cel-honest|Since then I've told everyone everything. It's much less tiring.]]
+> And that lantern weighs as much as a small dog. I can barely lift it.
+*(portrait: offended → amused)*
+
+#### SUSPECT Mr Lionel Hale
+
+**Q (where):** "Where were you during the blackout?"
+> In the wings, stage left, as I wrote.
+> [[c:hale-sure|I was there for the whole forty seconds. I'm quite sure.]]
+*(portrait: calm)*
+
+**Q (what):** "What exactly did you see?"
+> The lighting girl. Operator. I beg your pardon.
+> With a little torch, creeping across the front of the stage.
+> It was very dark. But I have excellent eyes.
+
+**Q (why):** "Why are you at the Playhouse?"
+> I'm a guest. Mr Crane admires the theatre. He wishes it well.
+> [[c:hale-guest|I am not here to inspect anything tonight.]]
+> I knew this theatre once. A long time ago. That is all.
+*(portrait: calm → a flicker of nervous; one hand goes to the tape measure on his belt)*
+
+**Q (what) ◆ after DOC 7.7:** "Is this page from your notebook?"
+> That? Where did you … the *cat*?
+> *(A long pause.)*
+> [[c:hale-mine|It's mine.]] I would rather not say any more just now.
+> I would like to think first. Quite a lot.
+*(portrait: nervous → guilty)*
+
+*(End of Chapter 2. As the agency crosses the empty stage, the boards give a long, soft creak, though nobody is standing
+where it came from. Then, from somewhere under their feet, a sound like a sigh.)*
+**DEV** *(whispering)*: Did the floor just *sigh*?
+**ASHA** *(whispering)*: Floors don't sigh. *(A pause.)* Walk faster.
+
+---
+
+### Interlude — the empty stalls *(Mrs Achterberg's proverb)*
+
+*Unlocks after all four interviews. Ten o'clock. The work lights are on, white and flat. A wind off the harbour gets under
+the canvas roof over the stalls and makes it breathe in and out, and the strings of bulbs sway and tick against their
+poles. Far out on the water, a foghorn says one long, low word. Ada and Mrs Achterberg sit in the third row; Semicolon's
+cage is covered with a tea towel. The agency sits on the edge of the stage, legs dangling, well away from the glow tape.*
+
+**NELL:** I *want* to rate it. I've got a hunch, and it's a big one.
+
+**ASHA:** Is it a ten?
+
+**NELL:** It's a … I'm not saying. I'm waiting for the evidence. *(She sits on her hands.)* It's very uncomfortable.
+
+**QUILL:** It is supposed to be.
+
+**DEV:** We know Mr Hale wasn't where he said. Probably. But that doesn't tell us where the lantern is. People don't
+just fall through floors.
+
+**FELIX:** Footnote: a *trapdoor* is a door in a floor. Footnote to the footnote: the word *trap* here is old. It
+meant a door that drops, not a … *(He stops. He looks at the floor. He looks at Nell.)* Did someone say I'm doing the
+speech?
+
+**NELL:** You are.
+
+**FELIX:** I can't. There'll be people. People *looking*. When people look at me my words go and hide behind my teeth.
+
+*Mrs Achterberg unwraps a humbug, very slowly, and puts it in her mouth. Then she takes it out again.*
+
+**MRS ACHTERBERG:** A lantern lit below lights those above.
+
+*Silence. She puts the humbug back.*
+
+**DEV** *(whispering)*: Is that about the lantern or about Felix?
+
+**ASHA** *(whispering)*: Yes.
+
+**ADA:** *(to nobody, unscrewing her flask and finding the tea cold)* Winifred has never once been wrong. She is rarely
+quick.
+
+**SEMICOLON** *(from under the tea towel)*: Elementary; therefore!
+
+*Sunny comes down the ladder from the box, one rung at a time, with her tea flask under her arm and a canvas bag over her
+shoulder.*
+
+**SUNNY:** I'm going to my gran's. Last tram's at half past eleven.
+
+**PETRA:** Nobody's sending you anywhere, Sunny.
+
+**SUNNY:** Nobody has to. Everyone keeps looking up at the box. *(She sits on the bottom rung, and does not go yet.)*
+
+**TULLY:** *(checking his watch, very gently)* Twenty-one hours to curtain up. An hour and a half to that tram.
+
+**ASHA:** Ninety minutes. *(She writes it on her hand.)*
+
+**QUILL:** *(to Felix, quietly)* When you speak, do not speak to the room. Speak to one person. Pick the new detective.
+They have read everything you have.
+
+**FELIX:** *(to the new detective, very small)* Will you sit at the front?
+
+*(The child's choice: "Yes" is the only button. It is drawn as a ticket stub: Row A, Seat 1.)*
+
+*Then, from somewhere out in the dark beyond the stalls (not the stage, not the street), a violin begins to play. Slow.
+A few bars of a tune that is not in the play. It stops in the middle, the way a question stops, as if it is waiting for
+someone to answer.*
+
+*In the third row, Ada's flask stops halfway to her mouth. She does not drink. Under the tea towel, Semicolon says nothing
+at all.*
+
+**DEV** *(whispering)*: Who's playing?
+
+**ASHA** *(whispering)*: It's coming from the lane.
+
+*(Felix goes to the gate and looks. The lane is empty under its one lamp. There is only the wind, and a faint, sweet smell,
+like the resin on a fiddle bow. When he comes back, nobody asks, and he does not say.)*
+
+---
+
+### Chapter 3 — The board
+
+#### Board intro: Constable Tully's case *(the false solution)*
+
+*The cork board goes up on an easel down stage left, well away from the glow tape. Constable Tully opens his notebook at a
+fresh page. It says DUNMORE, underlined twice.*
+
+**TULLY:** I've been thinking. I don't do it quick, but I do do it. Mr Dunmore wants that lantern off the stage. He says
+so, a hundred times. He was in the wings, in the dark. He carries every key in this building on one ring.
+
+**TULLY:** He heard a bump *under the floor*, he says. Under the floor is his. And there's something lantern-shaped under a
+sheet in his workshop. I looked through the window.
+
+**ASHA:** And his thunder was late.
+
+**TULLY:** Three seconds late. Where was he for three seconds?
+
+**NELL:** *(sitting on her hands)* I'm not rating it. *(A pause.)* But if I did, it would be a big number.
+
+**QUILL:** Write it in pencil, Constable.
+
+**DEDUCTIONS** (level 3: four)
+
+**D1 · pronoun**
+- **Statement the child forms:** *In Celeste's note, "he had already left" means the inspector. Two men were in the wings,
+  and the very next sentence says Mr Dunmore was still there, alone.*
+- **Supporting spans:** [c:cel-side] "When I went on, Mr Dunmore and the inspector were side by side in the wings." ·
+  [c:cel-left] "When I came off, he had already left." · [c:cel-alone] "Mr Dunmore was alone at the thunder sheet,
+  waiting for his cue." *(also accepted: [c:cue15] for "Mr Dunmore, SL wings"; [c:cel-gone])*
+- **Minimum link:** [c:cel-left] + [c:cel-alone]
+- **Why it matters:** "he" could be either man until you read on. The man who stayed is named; so the man who left is the
+  other one. A pronoun is decided by the sentences round it, not only the one it sits in.
+
+**D2 · contradiction (sequence)**
+- **Statement the child forms:** *Mr Hale says he stood in the wings all through the blackout. But "had already left"
+  means he left before Celeste came off, and she came off before the blackout. His own notebook puts him in the box
+  office at 8:02, the minute the lights went out.*
+- **Supporting spans:** [c:hale-wings] "I stood in the wings, stage left, all through the blackout." · [c:cel-left]
+  "When I came off, he had already left." · [c:cel-off] "Then I came off, stage left, just before the blackout." ·
+  [c:note-box] "8:02. Box office. Too small. Knock through to the bar?" *(also accepted: [c:hale-stayed],
+  [c:hale-sure], [c:cue-exit] with [c:cue15], [c:note-back], [c:note-foyer])*
+- **Minimum link:** [c:hale-wings] + [c:cel-left] (+ [c:cel-off] or [c:note-box] to fix the time)
+- **Why it matters:** *had already left* is the past perfect: it puts his leaving *before* another past moment. He could
+  not have watched a blackout from a place he had already left. If he wasn't there, he saw nothing, and his story about
+  Sunny is made up.
+
+**D3 · figurative**
+- **Statement the child forms:** *"It went down like a stone" is not a review of the scene. In Sunny's log, "it" is the
+  clunk down centre. Something heavy really went down.*
+- **Supporting spans:** [c:sunny-stone] "It went down like a stone." · [c:sunny-clunk] "A clunk, down centre." ·
+  [c:sunny-down] "Clunk, then it just went down. Then nothing." · [c:petra-margin] "Sunny says cue 15 \"went down like a
+  stone\". Agreed! Scene needs work. — P." *(also accepted: [c:dun-bump])*
+- **Minimum link:** [c:sunny-clunk] + [c:sunny-stone]
+- **Why it matters:** in a theatre, a joke that flops "goes down like a stone", and Petra read it that way. Read in its
+  own place, straight after a clunk, the words are literal. A figure of speech can also be a plain report.
+
+**D4 · meaning (inference: DSC is trap three)**
+- **Statement the child forms:** *The lantern's new mark was DSC, down stage centre. On the plan, DSC is trap three, and
+  trap three drops open under any weight and springs shut. The glow tape covered Mr Dunmore's chalk cross. The lantern
+  fell through the trap, and the trap closed over it. It is under the stage.*
+- **Supporting spans:** [c:cue14] "Cue 14, 8:01. Wren sets the Founder's Lantern on the new mark, DSC." · [c:plan-trap3]
+  "Trap three: DSC." · [c:trap-drop] "Put any weight on it and it drops open, then springs shut again." · [c:dun-tape]
+  "Down centre? Then somebody's stuck glow tape right over my chalk cross." *(also accepted: [c:plan-key],
+  [c:trap-loose], [c:cue-moved], [c:cel-wobble], [c:dun-bump], [c:plan-under], [c:sunny-wink])*
+- **Minimum link:** [c:cue14] + [c:plan-trap3] + [c:trap-drop]
+- **Glossed in the notebook once marked:** *DSC* (stage shorthand): down stage centre, the middle of the stage, nearest the
+  audience. Dev's note: "A code everybody in a theatre already knows. The best kind."
+- **Why it matters:** each note was right on its own. Petra moved the mark without reading the props board; Mr Dunmore
+  chalked his cross without reading the prompt book. Read side by side, the two notes put the lantern exactly on the one
+  spot that swallows things. Nobody stole it. It is still in the building.
+
+**RED HERRING**
+- **Sunny Marchetti** is named as the thief in Hale's statement ([c:hale-saw]), and she cracked the lantern's glass last
+  week. **Cleared by** [c:plan-box] "Lighting box: top of a thirty-rung ladder, at the very back of the stalls." +
+  [c:cue16] "Cue 16, forty seconds later. LX: lights up, cold. Sunny, from the box." + [c:sunny-notorch] "My torch is
+  taped to the desk in the box." *(also: [c:sunny-16], [c:sunny-chair], [c:sunny-love])*. She ran the lights-up from the
+  top of a ladder at the back of the stalls forty seconds after the blackout began, and the "little torch" Hale says he
+  saw cannot leave her desk. Asha: "Thirty rungs down, the whole stalls, onto the stage and back up the ladder in forty
+  seconds? I row for the county. I couldn't."
+
+**RED HERRING 2 · the false solution**
+- **Mr Gus Dunmore** is Constable Tully's thief at the end of this chapter: he wants the lantern behind glass
+  ([c:dun-glass]), and he heard a bump under the floor that is his to keep ([c:dun-bump]). **Cleared by** (Chapter 4)
+  [c:dun-case] "It's for the Playhouse's hundred-and-fiftieth birthday, next month. A surprise, from the crew." +
+  [c:dun-struck] "Then I shook it, late. Ask Sunny. She writes it down every time I'm late." + [c:sunny-thunder] "Thunder
+  late AGAIN. Mr D, please!" *(also: [c:cel-alone])*. The late thunder that made him look guilty is the proof he was at
+  his sheet in the dark, shaking it. And the case under the sheet is empty.
+
+**Wrong-link hints (Quill)**
+- *If the child links [c:hale-saw] to [c:sunny-gone]:* "One man says he saw her. Was he there to see? Read Celeste's note,
+  and read on past the pronoun."
+- *If the child links [c:dun-glass] to [c:sunny-gone] to blame Mr Dunmore:* "He wants it in a glass case. Wanting is not
+  doing. Where was he at cue 15? The cue sheet says."
+- *If the child links [c:petra-margin] alone to anything:* "That is Petra *quoting* Sunny. Read what Sunny actually wrote,
+  where she wrote it."
+- *If the child links [c:dun-glass] to [c:dun-bump] (Tully's case):* "A wish for a glass case and a bump under the floor.
+  That is Constable Tully's case, in pencil. Where was Mr Dunmore at cue 15, and who heard him there?"
+
+*(End of Chapter 3. Across the yard, a light comes on in Mr Dunmore's workshop. Through the window: a tall shape under a
+dust sheet, and Mr Dunmore's hand reaching for its corner.)*
+
+---
+
+### Chapter 4 — The timeline
+
+#### It opens in the workshop *(the false solution breaks)*
+
+*The workshop smells of glue and pencil shavings. Tully stands in the doorway with his notebook. Mr Dunmore has his hand on
+the dust sheet.*
+
+**SUSPECT Mr Gus Dunmore, Q (what) ◆ opens at the start of Chapter 4:** "What's under the sheet?"
+> *(He pulls the dust sheet off. Underneath stands a tall case of oak and glass, exactly lantern-sized. It is empty.)*
+> [[c:dun-case|It's for the Playhouse's hundred-and-fiftieth birthday, next month. A surprise, from the crew.]]
+> So, yes. I built a box for that lantern. I'm not daft. I know how it looks.
+> But at cue 15 I was at my sheet, counting to three, like Petra says.
+> [[c:dun-struck|Then I shook it, late. Ask Sunny. She writes it down every time I'm late.]]
+*(portrait: guilty → offended → relieved)*
+
+**TULLY:** *(quietly tearing the DUNMORE page out of his notebook)* Pencil. You did say pencil.
+
+**ASHA:** Late thunder means he was *there*, shaking it. In the dark. With both hands.
+
+**DEV:** So Mr Hale wasn't in the wings, and Mr Dunmore was. *(He looks at the empty glass case.)* Then who's got the
+lantern?
+
+The washing line runs from Monday to 8:04 on Tuesday night. This is a **tight** timeline: five of its cards fall inside
+six minutes, and the child places them by time words and by tense.
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | Mr Dunmore chalks a cross on trap three and pins up his notice | DOC 7.2, "Monday" · [c:trap-chalk] | no (pegged for you) |
+| 2 | Petra moves the lantern's mark to DSC with glow tape | [c:cue-moved] "Moved there this afternoon." | **yes** |
+| 3 | Scene 3 begins; Celeste goes on; Hale and Dunmore side by side in the wings | [c:cue13] "7:58" · [c:cel-side] "When I went on" | **yes** |
+| 4 | Hale paces out the foyer for a gift shop | [c:note-foyer] "8:00." | **yes** |
+| 5 | Celeste sets the lantern on DSC; it wobbles; she exits; Hale has *already* left | [c:cue14] "8:01" · [c:cel-left] "had already left" | **yes** |
+| 6 | Blackout; clunk; the glow tape winks as the trap drops and springs shut; Mr Dunmore shakes the thunder, late; Hale is in the box office | [c:cue15] "8:02" · [c:note-box] "8:02." *(also: [c:sunny-wink], [c:dun-struck])* | **yes** |
+| 7 | Lights up: the lantern is gone | [c:cue16] "forty seconds later" | no (pegged for you) |
+| 8 | Hale strolls back to the wings to "look interested" | [c:note-back] "8:04." | **yes** |
+
+**Asha's peg:** "Dhal, 6:15", in grey, at the far left. She is firm about it.
+
+**The line's little shake:** if the child pegs event 5's "had already left" *after* event 6, the line wobbles and Quill
+says: "*Had* already. Before what? Read Celeste's sentence again, and find the moment it's measured from."
+
+*(End of Chapter 4. Asha stands back from the washing line.)*
+**ASHA:** After 8:02, nobody on this line is holding a lantern. Nobody. Not one card.
+**DEV:** Then it's still exactly where Celeste put it.
+*(Everyone turns, slowly, to look down stage centre. The stage-door cat is sitting beside the glow tape, as it has sat all
+night, staring at the boards.)*
+
+---
+
+### Chapter 5 — The accusation
+
+*The stage itself, eleven o'clock. Half an hour to the last tram; twenty hours to curtain up. The work lights are switched
+off and the stage lights on, warm, as if for a show. The four suspects sit on chairs in a row along the back, Sunny with her
+canvas bag on her knees and her tram ticket in her fist. Petra, Ada, Mrs Achterberg and Tully sit in the stalls. The new
+detective sits in Row A, Seat 1. Felix stands alone, down stage centre, carefully* not *on the glow tape.*
+
+**This case's accusation has two halves, both required:** *Where is the lantern?* and *Who told a story that wasn't
+true?*
+
+**CULPRIT:** **Mr Lionel Hale** told the false story: he was not in the wings during the blackout and saw nothing, because
+he was measuring the front of house for Silas Crane. **Nobody stole the lantern.** It fell through trap three and lies
+beneath the stage.
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. **D2** — [c:hale-wings] + [c:cel-left]: he says he was there; he had already left.
+2. **D4** — [c:cue14] + [c:plan-trap3] + [c:trap-drop]: the lantern stood on a trap that drops under weight.
+3. **D3** — [c:sunny-clunk] + [c:sunny-stone]: it really went down. *(D1 is accepted in this slot.)*
+
+**WRONG-SUSPECT RESPONSES (Quill)**
+- **Sunny:** "Sunny lit the stage from the top of a thirty-rung ladder forty seconds after it went dark. And her torch is
+  taped down. Who said he saw it move?" *(points to [c:plan-box], [c:cue16], [c:sunny-notorch])*
+- **Mr Dunmore:** "At cue 15 Mr Dunmore was alone at the thunder sheet. Celeste saw him there, and Sunny heard him shake
+  it, late. A man shaking a sheet of tin does not carry a lantern. And his glass case is empty." *(points to
+  [c:cel-alone], [c:cue15], [c:dun-struck], [c:dun-case])*
+- **Celeste:** "Celeste set the lantern down and came off before the blackout. She told us the floor wobbled. That is a
+  clue, not a confession." *(points to [c:cel-off], [c:cel-wobble])*
+
+**WEAK-EVIDENCE RESPONSES (Quill)**
+- *If the child proves Hale lied but not where the lantern is:* "You have shown a man told a story. A missing thing is
+  still missing. Where does a lantern go when nobody carries it?"
+- *If the child proves the trapdoor but not the lie:* "You have found the lantern. Now: someone named a thief who was not
+  one. Sunny deserves to hear you prove it."
+
+#### Felix plans his speech *(The Podium link)*
+
+*Before the reveal, Felix hands the new detective six cards. "Help me put them in order. Hook, three points, close. One
+of these doesn't belong." The child arranges them on a little music stand; the order is checked, gently, and any order
+with the hook first, the close last and the three points in any order between them is accepted.*
+
+| Card | Slot |
+|---|---|
+| "The lights went out for forty seconds, and a lantern vanished." | **Hook** |
+| "What Sunny heard: 'It went down like a stone.'" | **Point** |
+| "Where the lantern stood: DSC is trap three." | **Point** |
+| "Who was really in the wings: 'he had already left'." | **Point** |
+| "A lantern lit below lights those above." | **Close** |
+| "Footnote: a complete history of trapdoors, 1500 to today." | **The bin** *(Felix, sadly: "One day.")* |
+
+#### Felix's speech (in full)
+
+*He walks to the front. The stage lights are hot. He opens his mouth, and nothing comes. Five seconds. The stage-door cat
+walks across the stage, sits down, and looks at him. Felix finds Row A, Seat 1, and speaks only to the new detective.*
+
+**Hook**
+> Good evening.
+> At two minutes past eight tonight, the lights on this stage went out for forty seconds.
+> When they came back, a lantern that has stood here for a hundred and fifty years was gone.
+> Nobody carried it away. Nobody hid it.
+> And one person told us a story about it that was not true.
+> I am going to show you three things.
+> What Sunny heard. Where the lantern stood. And who was really in the wings.
+
+**Point one: what Sunny heard**
+> In her log, Sunny wrote: "A clunk, down centre. It went down like a stone."
+> We all read that as a review. When a joke flops, we say it went down like a stone.
+> But read it where she wrote it, straight after the clunk.
+> "It" is not the scene. "It" is the thing that clunked.
+> Sunny wasn't being clever. She was being exact.
+> Something heavy went down.
+> Footnote — *(He stops. Laughter, kind. He smiles.)* No. No footnotes tonight.
+
+**Point two: where the lantern stood**
+> This afternoon, the lantern's mark was moved to DSC. Down stage centre.
+> On Mr Dunmore's plan, down stage centre is trap three.
+> On Mr Dunmore's notice, trap three drops open under any weight, then springs shut again.
+> The new glow tape went right over his chalk cross.
+> And Sunny saw it happen. Her log says: "The glow tape winked at me. Lovely."
+> Glow tape doesn't wink. Not unless the floor under it drops away and springs back.
+> It was in her log from the start, and we all read it as Sunny being Sunny.
+> Two good notes, by two careful people.
+> Nobody read them side by side. Until tonight.
+
+**Point three: who was really in the wings**
+> Mr Hale wrote that he stood in the wings all through the blackout.
+> He wrote that he saw Sunny take the lantern.
+> But Celeste wrote: "When I came off, he had already left."
+> *Had already.* That means before the lights went out, he was gone.
+> His own notebook puts him in the box office at two minutes past eight.
+> And Sunny's little torch is taped to her desk.
+> She never left her chair.
+
+**Close**
+> So nobody stole the Founder's Lantern.
+> The gates were locked, and nothing left the theatre, because it never left the stage.
+> It went down, not out.
+> It has been here all evening, under our feet.
+> Tonight Mrs Achterberg told us, "A lantern lit below lights those above."
+> I thought it was a riddle about a lantern. It is.
+> It is also about everyone who works where you cannot see them.
+> The crew. The prompter. The person in the box.
+> Mr Dunmore, would you open trap three, please?
+
+*(The speech is the model for The Podium's level 3 rubric: a hook that poses the problem, a preview of three
+points, each point with its evidence quoted, a close that returns to the hook's image and asks for an action.)*
+
+---
+
+### The reveal
+
+*Mr Dunmore takes the key ring from his belt and goes down through the scene-dock door. A pause. A scrape below. Then
+trap three drops open with a squeak, and up through it, in Mr Dunmore's two hands, rises the Founder's Lantern, catching
+the stage lights and glowing gold.*
+
+**PETRA:** Oh.
+
+**SUNNY:** *(both hands over her mouth)* It's not even scratched.
+
+**DUNMORE:** *(from below)* Landed in the costume basket. On forty years of petticoats. And there's … hang on.
+
+**DEV** *(whispering)*: My turn with the torch. **ASHA** *(whispering)*: It's *glowing*. It's a *lantern*.
+
+**DUNMORE:** There's a dog down here. Asleep. In the lighthouse keeper's hat.
+
+**TULLY:** *(rising from the stalls)* BISCUIT!
+
+**QUILL:** *(to the dog, as he is lifted up through the trap)* Lie down, Biscuit. *Lie*, not *lay*. Good boy.
+
+**DEV:** *(whispering)* So *that's* who sighed.
+
+*Everyone looks at Mr Hale. He stands up slowly, takes the tape measure from his belt and holds it in both hands.*
+
+**HALE:** It's true. I wasn't in the wings. Mr Crane asked me to measure every room by Friday. Quietly. For The Inkwell
+Experience. *(He swallows.)* I knew my way in the dark. I was in the youth company here, at nine. I played the cat. When
+the lantern vanished, everyone asked who was where. I hadn't been where I should be. I panicked, and I said the first name
+I could think of.
+
+**SUNNY:** Mine.
+
+**HALE:** Yours. I'm sorry, Miss Marchetti. It was a cowardly thing to say about someone who works so hard to be seen by
+nobody.
+
+**SUNNY:** *(after a moment)* You could have just said you were in the foyer.
+
+**HALE:** I know that now. It would have been much less tiring.
+
+**CELESTE:** *(warmly)* Darling, that's my line. *(To everyone.)* And I left before the blackout because I'm afraid of the
+dark. There. Now nobody has a secret.
+
+**FELIX:** Footnote: lots of brave people are. Footnote to the footnote: me.
+
+**DUNMORE:** *(handing the lantern to Sunny)* Go on. Find the crack you made. *(She turns it in the light. She can't.)*
+
+**TULLY:** *(to Mr Dunmore)* I had you down for it. In pencil. I'm sorry.
+
+**DUNMORE:** I'd have had me down for it too. The case is for the lantern after all. Just not your way.
+
+**PETRA:** *(to Mr Dunmore)* I moved your mark without reading your board.
+
+**DUNMORE:** I chalked a cross without reading your book. *(He holds out a hand. Petra shakes it.)* New rule. We read each
+other's notes.
+
+*Sunny tears her tram ticket in half, very neatly, and hangs her canvas bag back on the bottom rung of the ladder.*
+
+**NELL:** *(to the new detective, quietly)* I had a hunch it was the floor. I didn't rate it.
+
+**NEW DETECTIVE:** What would you have rated it?
+
+**NELL:** Two. *(She grins.)* I should rate everything two.
+
+*In the stalls, Ada is clapping, slowly, with her cold flask under one arm.*
+
+**SEMICOLON:** Elementary; therefore!
+
+*Felix is still standing down stage centre, off the glow tape. He looks out at the audience, all of them, and for the
+first time does not look away.*
+
+---
+
+### Epilogue
+
+**The applause.** It goes on long enough that Felix has to bow twice, and the second bow is better. Celeste says,
+"Darling, you must audition." Felix says, "Footnote: no." Then, after a moment: "Footnote to the footnote: maybe." Quill
+writes his name on the sign-up sheet for The Podium, in very small, very neat letters, and shows it to him.
+Felix does not cross it out.
+
+**The lantern.** On Saturday, Mr Dunmore fits the new catch to trap three and stamps on it nine times. Petra moves the
+Founder's Lantern's mark back to stage left. The lantern goes on with the show on opening night, at seven exactly, and
+afterwards, by everyone's vote, into Mr Dunmore's oak-and-glass case in the foyer, where the gift shop would have been.
+
+**Mr Hale.** He gives Constable Tully the rest of his notebook. Tully gives it to Professor Penhallow, who reads it twice
+and labels it, out loud, "useful". Hale buys Sunny a new tea flask. Sunny lets him carry it up all thirty rungs.
+
+**The vanished word.** Dev stands under the stage door and reads the carving.
+**DEV:** "A good play *lies* only to tell the truth." Four letters.
+**FELIX:** Footnote: there are two words *lie* in English, from two different old words. One means to tell something
+untrue. One means to rest flat. Footnote to the footnote: tonight we had both. A man lied, and a lantern lay under the
+stage.
+**ASHA:** And a dog lay in a hat.
+The new detective writes **LIES** in the Blot Ledger. The ink spreads.
+**DEV:** *(reading the Ledger aloud)* Under the clock that never strikes lies … *(He stops.)* That's almost a …
+**ASHA:** Almost a what?
+**DEV:** Nothing. Not yet. *(He reads it again, under his breath, all the way home.)*
+
+**The office object.** A week later, a small parcel comes up in the dumbwaiter, between two cinnamon buns. Inside is a
+little brass lantern, no bigger than an egg cup, made by Mr Dunmore from the old trapdoor catch. The card says, in thick
+carpenter's pencil: *For the prompter. Lit below. — G.D.* Felix puts it on the shelf himself, between Dot's green pen and
+the gavel's old handle, and switches on the tiny bulb inside.
+
+**The last scene.** At No. 9 Lantern Row, rain is ticking on the windows. Mrs Achterberg brings Ada a fresh cup of tea.
+Ada lets it go cold. She is playing the cello, very softly: a slow tune, and not one from the play. It is the tune the
+violin played in the dark beyond the stalls. Halfway through, she stops, in the very same place, and waits.
+**MRS ACHTERBERG:** A borrowed song is sung twice.
+**ADA:** *(not looking up)* Felix was very good, Winifred.
+*(She plays the first bars again, and stops again, in the same place. She listens. Outside there is only the rain.)*
+**SEMICOLON:** *(very quietly, for once)* Elementary; therefore.
+
+---
+
+### Detective School drill
+
+**Literal or figurative?** *(Clue Spotter, figurative)* Six sentences on chalkboard tiles, each with its own sentence
+before it. The child decides: does *went down like a stone* mean something really fell, or that something went badly?
+
+1. "Felix told his best joke. It went down like a stone." → **figurative** *(the joke flopped; jokes do not fall)*
+2. "A clunk, down centre. It went down like a stone." → **literal** *(model answer; Sunny's line, shown first)*
+3. "The anchor splashed over the side. It went down like a stone." → **literal**
+4. "The new rule about homework went down like a stone." → **figurative**
+5. "Dev dropped his biscuit tin off the pier. It went down like a stone." → **literal** *(Dev: "My periscope!")*
+6. "Nell's hunch-o-meter rating went down like a stone." → **figurative** *(Nell: "Rude.")*
+
+Then one **pronoun** tile from Celeste's note: "When I came off, he had already left. Mr Dunmore was alone." The child taps
+who *he* is. Quill: "Read on. The answer is in the next sentence."
+
+---
+
+### Art and scene notes
+
+- **Backgrounds (day and night):**
+  - *The Playhouse stage*: an open-air wooden stage under strings of bulbs, a painted lighthouse flat at the back, a rope
+    rail, the wings in deep curtain shadow. Night: the main case setting, lamplit and warm, never spooky. Day: the
+    epilogue, sunlight on the boards. Paint trap three as a square seam in the boards at the front centre, hard to see
+    unless you look; a small strip of glow tape over it in the night version.
+  - *The prompt corner*: a stool, a little hooded lamp, the prompt book, a curtain edge, dust motes visible in the lamp
+    beam (Felix sneezes here).
+  - *The lighting box*: a tiny wooden booth on stilts at the back of the stalls, a long ladder up to it, a lighting desk
+    with sliders, a torch taped down with blue tape, a tea flask.
+  - *Under the stage*: low beams, a wicker costume basket overflowing with petticoats, old painted flats leaning in rows,
+    a square of light falling from the open trap. Cosy, not creepy; one friendly spider in a corner.
+  - *The foyer and box office*: a small panelled foyer, a ticket window with a brass grille, a bench. In the epilogue, the
+    lantern in Mr Dunmore's oak-and-glass case.
+  - *Mr Dunmore's workshop* (new): a lean-to across the yard from the stage, shavings on the floor, clamps on the walls,
+    one warm bulb. Version A (Chapter 3 hook, seen through the window): a tall shape under a dust sheet. Version B
+    (Chapter 4): the sheet off, a tall empty case of oak and glass, exactly lantern-sized.
+  - *The lane beyond the stalls* (Interlude): a cobbled lane, one gas lamp, nobody in it. Wind in the canvas roof over the
+    stalls. The violin is sound only: never paint a player, a shadow or a figure.
+  - *The stage door*: an arched wooden door with a carved stone band above it. The carving is drawn as decorative bands
+    and a smooth empty gap; **no letters are painted**. The motto is live text.
+- **Props:** Petra's prompt book with a pencil margin note; Dunmore's notice on sawn-off card; the framed stage plan
+  (painted as shapes only); Sunny's spiral log; Hale's crested statement; Celeste's lilac note with a pressed violet; the
+  chewed notebook page; the lighthouse programme; the Founder's Lantern (brass, glass panes, a ring handle; it glows warm
+  gold in the stage lights); Hale's silver tape measure; the little brass lantern (the office object).
+- **New portraits:** Sunny Marchetti, Mr Gus Dunmore, Mr Lionel Hale (his "guilty" is a long look at his own tape
+  measure), Petra Nwosu. **Returning:** Celeste (from Case 5), Ada, Mrs Achterberg, Tully, Semicolon (covered cage, then
+  uncovered), the stage-door cat.
+- **Felix's speech panels:** five panels, one per structure card. Panel 1, Felix tiny on a big stage, lights glaring.
+  Panels 2–4, the camera moves steadily closer and the stage lights soften. Panel 5, Felix full height in warm light, the
+  lantern rising through the trap behind him. In every panel, one face in the front row is the child's avatar.
+- **Opening panels:** panel 2 is black except for one small square of green glow down centre (the glow tape; it is the
+  same in every blackout and is never pointed at). Panel 3: Hale comes out of the wings a beat after the lights, a little
+  out of breath; paint his tie slightly askew.
+- **Lettering:** none in any painting. Cue numbers, the plan's letters, the motto, the programme and every note are live
+  text.
+- **Audience:** the few guests in the stalls are ordinary and various, of all ages; camera high enough that faces stay small.
+  In opening panel 1, one guest is a tall woman in a green coat with a long grey plait and a violin case at her feet.
+  Paint her as one ordinary guest among the rest: never lit, centred or singled out, and absent from every other panel.
+
+---
+
+## CASE 8 — The Map That Changed Its Mind
+
+*A Bizzing mystery*
+
+```
+meta:
+  level: 4 (ages 10–12) · 4 suspects · 10 documents · 5 deductions · one suspect lies (Mr Swale): one checkable false
+         fact, "not since spring", which he writes once and repeats aloud when asked. Everything else he says is dodging,
+         not a fact a document can catch.
+  world: scriptorium (the Seal Room, the Copying Room, the front desk)
+  skills: inference · vocab · contradiction · sequence
+  vanished word: EVERY (from rule 4 of the Scriptorium copy-book)
+  office object: a map-maker's compass (a pair of brass dividers)
+  arc beats:
+    - Raman postcard from Singapore: a rebus naming S. Pettigrew, Crane's lawyer, who "has ? ? ?" (doubts)
+    - Thread B: Silas Crane's letter claims the Library stands on Gull Wharf, which he owns
+    - Mr Swale altered the map, paid by Crane (Swale returns as a suspect in Case 10)
+    - Mr Pettigrew is nervous and honest (sets up his turn in Case 10)
+    - Marlowe Finch suspected for the third time, and cleared
+    - Ada tells the story of the Founding Charter and of Odile, her apprentice who left
+    - The Blot Ledger reads UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY…; Dev realises it is a sentence
+    - Nell, for the first time, refuses to rate a hunch (her flaw begins to mend)
+      (continuity: in Case 7 she would not rate a hunch about a case; here, after slipping back to a ten on Marlowe, she
+      refuses one about herself, her Inspector application. Quill's line marks the difference.)
+    - Seed (Odile), Chapter 1: the calling card is in a gap that was not there at seven, and the page smells of violets
+    - Seed (the clock), deliberate: the caption says nothing ticks in the Seal Room; at Lantern Row Ada says every clock
+      in the Library strikes, and Quill corrects her: only every clock they *heard*. Asha writes "Seal Room, no tick"
+      in her margin. Nobody explains it.
+  mystery pass (6 Oct 2026):
+    clock:          Crane's letter: the Town Registry's clerk will copy the new line into the Town Book at five today.
+                    Halfway, Crane has it moved to four.
+    impossible:     a locked room. Four people hold Seal Room keys, and every one says the map was never touched by
+                    them. The one who went in on Tuesday (Marlowe) had five minutes, and nobody can move a wall in five.
+    false solution: end of Chapter 3, Nell's hunch-o-meter hits ten for Marlowe (ink on every finger, a key, late on
+                    Tuesday, Swale's finger, and the calling card turned up in his book). Broken at the start of Chapter 4
+                    by Ms Ito: the job takes forty-five minutes, not five.
+    hidden clue:    the porter's log, Chapter 1: "Seal Room stair smells of vinegar. Someone's chips, I expect." Fresh
+                    iron-gall smells of vinegar (Ms Ito's report). Paid off at the reveal.
+  documents: DOC 8.1–8.10 (each ≤140 words, every sentence ≤22 words); interview answers are transcripts held to the same limits
+  glossed words (once marked): iron-gall · ruling · decline · stoop · half 7 · lies (two meanings)
+```
+
+### Case card
+
+Three hundred years ago, someone drew the harbour wall on the Library's Harbour Map. This week, someone drew it again,
+behind the Library, on Silas Crane's land. Four people hold a key to the map's locked room. All four say, "Not me."
+At five today, the new line goes into the Town Book. Unless you find who drew it.
+
+*(59 words)*
+
+### Cast
+
+#### Suspects
+
+| Name | Look (one line) | Manner (one line) | Portrait expressions | Motive · Secret |
+|---|---|---|---|---|
+| **Mr Rupert Swale**, 61, Deputy Keeper of the Great Library | Very tall and stooped, half-moon glasses on a chain, grey cardigan with leather elbows, a fountain pen clipped in the top pocket | Formal and polished; says "I assure you" exactly when he is least sure | calm, offended, nervous, guilty, relieved | Crane's thick envelope, and the promise of "Director of the Experience" · twenty years ago he was passed over for Keeper, and nobody has ever asked him to be first at anything (comes out at the reveal) |
+| **Ms Kiyomi Ito**, 44, map restorer (every Wednesday) | White cotton gloves, a magnifying visor pushed up into short black hair, a canvas apron of tiny brushes | Brisk, exact and kind underneath; talks in numbered points | calm, offended, amused, relieved | Crane offered her a well-paid post, and she is alone with the map every Wednesday · she nearly said yes, for her mother's roof: "accept" is under the first crossing-out |
+| **Marlowe Finch**, 16, assistant archivist | Slight, ink on every finger, a tower of books up to the chin, a pencil behind each ear | Nervous and brilliant; over-explains; keeps count of how often he is suspected | nervous, offended, amused, relieved | (as it looks) a Seal Room key, ink on every finger, late on Tuesday, and Mr Swale's finger · he stayed late, unasked and unpaid, to rule forty pages so the new apprentices would not have to |
+| **Mr Septimus Pettigrew**, 34, Silas Crane's lawyer (Crane calls him "my assistant") | Short and round, a brown suit one size too big, round spectacles he polishes when anxious | Apologises before every sentence; tells the truth when asked straight | nervous, guilty (about something else), relieved | he works for Crane and carried the envelope · in the spring he telephoned a library Crane had closed, to ask if it had been fair |
+
+#### Helpers
+
+- **Quill** — deerstalker on. Running joke: corrects grammar at the worst moment.
+- **Nell Okafor-Hart** — the Comet parked at the Library steps. Running joke: the hunch-o-meter. This case she rates Marlowe
+  an 8, then a 10 (wrong), and then, at Lantern Row, refuses to rate a hunch about herself.
+- **Asha Raman** — measures the wall line with Ms Ito's dividers. Timeline of the case, and of breakfast (porridge, 7:10).
+- **Dev Raman** — cracks his mother's rebus; reads the Ledger as a sentence.
+- **Felix Moreno-Lindqvist** — sneezes in the Scriptorium (eleven times; Asha logs them). Footnotes *iron-gall*, *decline*,
+  *doubt* and *lies*.
+- **Professor Orla Penhallow**, the Keeper — strict, frightened, fair.
+- **Mr Abel Mensah**, night porter — cheerful, writes comments in the margins of his key log.
+- **Constable Bram Tully** — brings the keys and the cocoa; finds Biscuit.
+- **Inspector Ada Holloway (retired)**, **Mrs Winifred Achterberg**, **Semicolon** — at No. 9 Lantern Row for the epilogue.
+- **Silas Crane** — appears only in his letter, and on a photograph in Mr Pettigrew's memory.
+
+---
+
+### Chapter 1 — The scene
+
+**Opening panels (4):**
+1. The agency, Wednesday morning, rain on the round window. Marlowe bursts in after the 39 stairs, gasping, holding a
+   letter with a cracked wax seal. Quill: "Breathe first. Then read it to us." Marlowe: "The Keeper says come now. The
+   Registry's clerk comes at five, to copy the map into the Town Book."
+2. The Seal Room in the Scriptorium: cold stone, candle sconces, a long oak table, a dust cloth lifted from an enormous
+   brown map. Ms Ito points with a gloved finger. Caption: *Everywhere else in the Scriptorium, clocks tick. In here,
+   nothing does.*
+3. Close on the map: two harbour lines. One is old, dark and scraped faint. One is pale, new, and curves *behind* the
+   Library's tiny painted dome.
+4. Felix sneezes, so hard his head tips back towards the shadowy ceiling. Everyone jumps. Quill: "Bless you. Now: read."
+
+---
+
+#### DOC 8.1 · letter
+- **Author:** Professor Orla Penhallow, Keeper · **Date/time:** Wednesday, 9:40 am · **Found:** carried up the 39 stairs by
+  Marlowe Finch · **Picture:** a cream letter, the Library's wax seal (an open book) cracked in two.
+
+> To the Inkwell Detective Agency,
+>
+> Please come to the Scriptorium at once.
+>
+> Our Harbour Map is three hundred years old. This morning, it seems to have changed its mind.
+>
+> The harbour wall on the map used to run in front of the Library. Now [[c:behind|it runs behind the Library]], as if we stood on Gull Wharf.
+>
+> Mr Crane bought Gull Wharf in the summer. You can guess why that frightens me.
+>
+> Ms Ito found the change [[c:itofound|at nine this morning]]. I checked the map myself [[c:monday|on Monday at ten, and all was well]].
+>
+> The map lives in the Seal Room, and the Seal Room is always locked. Four people have been near it this week.
+>
+> Every one of them tells me the map was never touched.
+>
+> Bring your sharpest eyes.
+>
+> O. Penhallow, Keeper
+
+---
+
+#### DOC 8.2 · report
+- **Author:** Ms Kiyomi Ito, map restorer · **Date/time:** Wednesday, 11:00 am · **Found:** clipped to the map's dust cloth
+  · **Picture:** a typed report on squared paper, a photograph of the map paper-clipped to the corner.
+
+> RESTORER'S REPORT — The Harbour Map
+>
+> Examined: Wednesday, 9:00 to 11:00 am.
+>
+> 1. I compared the map with my photograph from March.
+>
+> 2. One line is different: the harbour wall beside the Library. The old line has been scraped faint.
+>
+> 3. The new line is [[c:irongall|iron-gall ink]]. Iron-gall goes on pale. It turns darker as it dries, slowly, over many days. [[c:vinegar|Fresh, it smells sharp, like vinegar.]]
+>
+> 4. [[c:oldbrown|The old lines are dark brown]]. [[c:newgrey|The new line is pale grey]]. It [[c:notdried|had not dried]].
+>
+> 5. So the new line was drawn [[c:daytwo|in the last day or two]].
+>
+> 6. [[c:itonever|Restorers never use iron-gall. It bites into old paper.]] Everything I use can be taken off again.
+>
+> 7. Fresh iron-gall sits on the varnish for a few days. If we act quickly, I can lift it.
+>
+> K. Ito, Map Restorer
+
+---
+
+#### DOC 8.3 · log
+- **Author:** Mr Abel Mensah, night porter · **Date/time:** Monday to Wednesday · **Found:** on the porter's desk by the
+  Scriptorium door · **Picture:** a ruled ledger with a brass key on a red tag lying across it; doodles of keys in the
+  margin.
+
+> NIGHT PORTER'S KEY LOG — Scriptorium
+>
+> [[c:keyholders|Seal Room keys: O. Penhallow (Keeper), R. Swale (Deputy), M. Finch (seal box only), K. Ito (Wednesdays)]].
+>
+> After 5 pm, all keys are signed out at this desk.
+>
+> Monday. No Seal Room key out. Rain.
+>
+> Tuesday. [[c:mf510|5:10 pm, M.F., to return the seal box. Key back 5:15 pm.]]
+>
+> Tuesday. [[c:rs840|8:40 pm, R.S., humidity reading. Key back 9:25 pm.]]
+>
+> Tuesday. 9:30 pm, [[c:chips|Seal Room stair smells of vinegar. Someone's chips, I expect.]]
+>
+> Tuesday. 11 pm, all doors checked. Quiet as a library. Ha!
+>
+> Wednesday. Day staff took over at 7 am.
+>
+> Margin note: R.S. took the small lamp. [[c:fortyfive|Forty-five minutes for one humidity reading!]] Very thorough, our Mr S.
+>
+> A. Mensah, Night Porter
+
+---
+
+#### DOC 8.4 · statement
+- **Author:** Mr Rupert Swale, Deputy Keeper · **Date/time:** Wednesday, 12:00 noon · **Found:** typed and signed, handed
+  to the Keeper · **Picture:** crisp Library notepaper, a fountain-pen signature with a flourish.
+
+> STATEMENT OF R. SWALE, DEPUTY KEEPER
+>
+> I have served this Library for twenty-two years. I wish to help the Keeper in every way.
+>
+> I examined the Harbour Map at eleven today, with the Keeper. [[c:matched|To my eye, the ink of the wall line matched the original perfectly.]] I believe that line has always been where it is now. Memory can play tricks.
+>
+> I should add that [[c:notentered|I had not entered the Seal Room since spring]], until this morning. My duties keep me at the front desk.
+>
+> If you want my advice, speak to young Finch. [[c:finchink|Finch was in the building late on Tuesday, with ink.]]
+>
+> R. Swale
+
+---
+
+#### DOC 8.5 · letter
+- **Author:** Silas Crane · **Date/time:** delivered by hand, Wednesday morning · **Found:** in the Keeper's in-tray, stamped
+  by the front desk · **Picture:** heavy cream paper, a gold embossed crane, a round rubber stamp in purple ink.
+
+> CRANE HOLDINGS — The Inkwell Experience
+>
+> Dear Professor Penhallow,
+>
+> Good news travels fast!
+>
+> [[c:nowshows|As your own Harbour Map now shows]], the old harbour wall runs behind the Library. The Library therefore stands on Gull Wharf, which I own.
+>
+> I am sure we can be friends about this. I will pay a fair price for the books. The building, of course, is already mine.
+>
+> [[c:clerk|The Town Registry's clerk will call at five today to copy your map's new line into the Town Book.]]
+>
+> Shall we say tea on Friday? I will bring the cake.
+>
+> Warmest wishes,
+>
+> Silas Crane
+>
+> Purple stamp: [[c:recd830|RECEIVED — FRONT DESK — WEDNESDAY 8:30 AM]]
+
+---
+
+#### DOC 8.6 · note
+- **Author:** Tam Bellweather, for the Lamplighters · **Date/time:** Tuesday night · **Found:** pushed under the agency door,
+  smelling of cinnamon · **Picture:** a torn bakery bag, pencil, one greasy thumbprint.
+
+> tues nite — lamplighters report from tam
+>
+> lit the scriptorium lamps 7 oclock. marlowe was in the copy room window [[c:ruling|ruling lines in a big book]] with a ruler. looked tired. waved at us
+>
+> ivy says marlowe went out the side door [[c:mfleft|about half 7]] arms full of books as usual
+>
+> then [[c:tallman|at twenty to nine a tall man with a stoop]] went up the seal room stair with a little lamp
+>
+> [[c:bottle|he had a little bottle in his other hand]] like ink or medicine. we didnt see his face. he went very careful on the stairs like he didnt want to be heard
+>
+> no sign of biscuit. sorry constable
+>
+> — tam (and ivy and the others)
+
+---
+
+#### DOC 8.7 · copy-book
+- **Author:** the Scriptorium (rules); Marlowe Finch (the note below) · **Date/time:** rules: old; note: Tuesday, 7 pm ·
+  **Found:** open on the copyists' long desk, a calling card tucked into the gap · **Picture:** a huge ruled book, neat
+  lamp-black lines, one empty space in rule 4 with a small white card lying in it.
+
+> THE SCRIPTORIUM COPY-BOOK — Rules for Copyists
+>
+> 1. [[c:lampblack|In this book, use lamp-black ink only. Never iron-gall.]]
+>
+> 2. Rule your lines before you begin.
+>
+> 3. Copy slowly. A hurried hand is a blotted hand.
+>
+> 4. A copyist checks [[c:gap|___ line]] against the original before the ink dries.
+>
+> 5. Sign and date your page.
+>
+> Below, in a fresh hand: [[c:mfruled|Forty pages ruled for Thursday's apprentices. Lamp-black, as always. — M.F., Tuesday, 7 pm]]
+>
+> In the gap in rule 4, a small white card with a perfect ink blot: [[c:card|"Eight now. Read them as one. — B."]]
+
+*(Marlowe, reading over the new detective's shoulder, goes pale.)*
+**MARLOWE:** That wasn't there at seven. I wrote my note right under rule 5. Rule 4 was whole. I read the rules every
+time; I can't help it.
+**FELIX:** *(sniffing the page, then sneezing)* Footnote: why does a copy-book smell of violets?
+*(Nobody answers. A draught from nowhere lifts the corner of the page, holds it up for a moment, and lets it fall.)*
+
+---
+
+#### DOC 8.8 · letter (draft)
+- **Author:** Ms Kiyomi Ito · **Date/time:** written Sunday, posted Monday · **Found:** on Ms Ito's worktable, under a glass
+  paperweight · **Picture:** a handwritten draft with two crossings-out, a pencilled note in the corner.
+
+> Dear Mr Crane,
+>
+> Thank you for your letter of last week. You offered me the post of "Chief Curator of the Inkwell Experience". You wrote that our maps would "look wonderful behind glass, with tickets".
+>
+> It is a kind offer, and the pay is generous. [[c:decline|I must, however, decline.]]
+>
+> A map belongs where anyone can lean over it and find their own street. [[c:nineyears|I have restored maps here for nine years, and nobody has ever paid to see one.]]
+>
+> Please do not write again.
+>
+> Yours sincerely,
+>
+> Kiyomi Ito
+>
+> Pencil, in the corner: [[c:posted|Draft. Fair copy posted Monday. — K.I.]]
+
+---
+
+#### DOC 8.9 · visitors' book
+- **Author:** the front desk; note by Mr Jide Oyelaran, desk clerk · **Date/time:** Tuesday · **Found:** on the front desk
+  · **Picture:** a long ledger with columns, five different handwritings, a bell beside it.
+
+> GREAT LIBRARY — SCRIPTORIUM VISITORS' BOOK — Tuesday
+>
+> Name · In · Out · To see · Purpose
+>
+> Farah Quint · 10:05 am · 12:40 pm · Reading Room · Ship records
+>
+> [[c:spin|S. Pettigrew · 3:50 pm · 4:05 pm · Mr Swale · To deliver a letter]]
+>
+> Hollis and Bea Grant · 4:00 pm · 4:30 pm · Copying Room tour · Family visit
+>
+> The front desk closes at 5 pm. [[c:novisitors|Visitors may not enter the Seal Room.]]
+>
+> Clerk's note: [[c:envelope|Mr Pettigrew's envelope was thick and sealed. Mr Swale put it straight into his inside pocket.]] He did not open it at the desk.
+>
+> J. Oyelaran, Desk Clerk
+
+---
+
+#### DOC 8.10 · postcard
+- **Author:** Dr Leela Raman · **Date/time:** postmarked Singapore, Tuesday last week · **Found:** in the agency's post,
+  addressed to Asha and Dev · **Picture:** front: orchids and a river at dusk; back: tiny drawings in a row (a tabby cat on a
+  cushion; a musical stave with seven steps and a note on the top step; a seed, then a tall bean plant; three question
+  marks).
+
+> Dear Asha and Dev,
+>
+> Singapore is as hot as soup. I ate noodles at midnight under a tree full of lights.
+>
+> I visited the old library by the river. Mr Crane closed it last year. The librarian told me something important.
+>
+> One of Mr Crane's own lawyers rang her in the spring. He asked whether the closing had been fair. [[c:kindvoice|She said he had a kind voice and sounded worried.]]
+>
+> His name is your puzzle, Dev:
+>
+> [[c:rebus|S. + (our cat Pickle) + (the note seven steps up from doh) + (a seed, then a tall bean plant)]]
+>
+> And what does he have? [[c:doubts|? ? ?]]
+>
+> Asha, check my date before you trust me.
+>
+> Love, Mum
+>
+> Postmark: [[c:postmark|Singapore, Tuesday last week]]
+
+*(End of Chapter 1. Ms Ito lays the dust cloth back over the map, very gently, as if it might wake. Asha writes the time on
+her hand: 11:02. Six hours to the clerk.)*
+**ASHA:** Four keys. Four people. And every one of them says the map was never touched.
+**DEV:** Then who drew on it? The map?
+
+---
+
+### Chapter 2 — Interviews
+
+*Each answer arrives on the desk as a typed transcript. The portrait's expression is given before each answer.*
+
+#### SUSPECT Mr Rupert Swale
+*Interviewed at the front desk. He stays standing, so the agency has to look up at him.*
+
+##### Q1 · where · "Where were you on Tuesday evening?"
+Expression: calm
+> At home, mostly, with a good book and a cup of cocoa. I left the front desk at five. I believe I came back briefly for my umbrella. One forgets these little things, at my age.
+
+##### Q2 · when · "When did you last go into the Seal Room before today?"
+Expression: offended
+> I have already answered that in writing. [[c:notspring|Not since spring.]] I have no reason to go in. I am a front-desk man these days, I assure you.
+
+##### Q3 · what · "What ink do you use?"
+Expression: calm
+> [[c:swaleink|Iron-gall, for signing the loan papers.]] It is a tradition, young lady. Three hundred years of tradition. Half the old families in Inkwell have a bottle in a drawer somewhere.
+
+##### Q4 · why · "Why did Mr Pettigrew bring you an envelope?"
+Expression: nervous
+> That is a private matter, and I shall not discuss it. A man may receive a letter. Is there a rule against letters now?
+
+##### Q5 · who · "Who do you think changed the map?"
+Expression: calm
+> Changed? I am not convinced it was changed at all. But if it was, look for someone who was here late, with ink. Young Finch has ink on every finger.
+
+---
+
+#### SUSPECT Ms Kiyomi Ito
+*Interviewed in the Seal Room, gloves on, without looking up from the map.*
+
+##### Q1 · when · "When did you find the change?"
+Expression: calm
+> At nine, the moment I lifted the cloth. I always start at the harbour wall, because the Library sits right beside it. In my March photograph, the line runs in front. Today it runs behind.
+
+##### Q2 · what · "Do you ever use iron-gall ink?"
+Expression: offended
+> Never. Point one: it bites paper over the years. Point two: a restorer must be able to undo her work. Iron-gall cannot be undone once it has bitten. Point three: please stop asking.
+
+##### Q3 · who · "Did Mr Crane write to you?"
+Expression: amused, then nervous, then calm
+> He did. He offered me a job looking after maps behind glass. My answer is on my table, under the paperweight. Read it if you like.
+>
+> *(A pause. She stops working.)* [[c:nearly|I nearly said yes. The pay would have mended my mother's roof.]] "Accept" is under the first crossing-out. I am not ashamed of the second one.
+
+##### Q4 · who · "Who goes into the Seal Room?"
+Expression: calm
+> The Keeper, every Monday. Marlowe, to fetch and return the seal box. Mr Swale holds a key, though he says he never needs it. [[c:stoop|He is so tall he has to stoop under the Seal Room door.]]
+
+##### Q5 · what · "Can the map be mended?"
+Expression: relieved
+> Yes, if we are quick. Fresh iron-gall sits on top of the old varnish for a few days. I can lift it before it bites. After that, the harbour would stay wrong for ever.
+
+---
+
+#### SUSPECT Marlowe Finch
+*Interviewed in the Copying Room, behind a wall of books. His fingers are inky. Nell's hunch-o-meter reads 8.*
+
+##### Q1 · what · "What were you doing on Tuesday evening?"
+Expression: nervous
+> Ruling the copy-book. Lines, I mean! With a ruler! Thursday's apprentices need forty pages ready. [[c:mfblack|I used lamp-black, like the rules say. We're not allowed anything else in there.]]
+>
+> Nobody asked me to. I remember my first Thursday, ruling till midnight. Please don't tell Mr Swale. He says I waste lamp oil.
+
+##### Q2 · why · "Why did you go into the Seal Room?"
+Expression: nervous
+> To put the seal box back on its shelf. Five minutes, maybe less. Mr Mensah wrote it down. [[c:mfcloth|The map was under its cloth. I didn't even lift it.]]
+
+##### Q3 · who · "Who uses iron-gall ink in the Library?"
+Expression: calm
+> [[c:onlyswale|Only Mr Swale. He signs the loan papers with it, at the front desk.]] He says it's tradition. It's banned in the Scriptorium, because it eats the paper.
+
+##### Q4 · when · "Did you see anyone else on Tuesday night?"
+Expression: nervous
+> Mr Swale, actually. On the stairs, as I was leaving, at half past seven. [[c:umbrella|He said he'd come back for his umbrella. It wasn't raining.]]
+
+##### Q5 · why · "Why are there so many books in your arms?"
+Expression: amused
+> Because people keep returning them to me instead of the desk. Also, this is the third time I've been suspected this year. I've started keeping a list. You're on it.
+
+---
+
+#### SUSPECT Mr Septimus Pettigrew
+*Interviewed on the Library steps. He would not come inside. "I don't think I'm welcome, and I'm not sure I should be."*
+
+##### Q1 · why · "Why were you at the Library on Tuesday?"
+Expression: nervous
+> Sorry. Yes. Mr Crane asked me to carry an envelope to Mr Swale. So I did. I was in and out in fifteen minutes. The desk clerk will tell you.
+
+##### Q2 · what · "What was in the envelope?"
+Expression: guilty
+> I don't know. It was sealed. It was heavy for a letter. [[c:thick|It felt as if there was money in it, and I have wondered about that ever since.]] I'm sorry. I should have asked.
+
+##### Q3 · where · "Have you ever been in the Seal Room?"
+Expression: nervous
+> No. Visitors aren't allowed, and I've never asked. I've only seen the map in a photograph. [[c:redpencil|Mr Crane keeps it on his office wall, with a new line drawn on it in red pencil.]]
+
+##### Q4 · when · "Did you telephone a library in Singapore?" *(offered only after DOC 8.10 has been marked)*
+Expression: guilty, then relieved
+> Oh. Yes. In the spring. I wanted to know if what Mr Crane did there was fair. The librarian was very kind. She said it was not. I have had doubts ever since. Please don't tell him.
+
+##### Q5 · who · "Who do you think changed the map?"
+Expression: relieved
+> I'm a lawyer. I'm supposed to say that I don't know. So: I don't know. But I know who I gave the envelope to. And I know whose wall that photograph hangs on.
+
+*(End of Chapter 2. Through the Copying Room window, the agency watches Mr Swale cross the courtyard in the rain. At the
+foot of the Seal Room stair he stops, takes the fountain pen from his top pocket, and looks at it for a long moment. Then
+he puts it back, and does not go up.)*
+
+---
+
+### Chapter 3 — The board
+
+#### Board intro: the clock moves, and Nell hits ten *(escalation and the false solution)*
+
+*The Copying Room, two o'clock. Rain down the long windows. Constable Tully comes in dripping, with a note from the Town
+Hall.*
+
+**TULLY:** Message from the Town Registry. Mr Crane asked them very nicely. The clerk's coming at four now, not five.
+
+**PENHALLOW:** *(very quietly)* Two hours.
+
+**NELL:** Then we haven't got time to be careful. Look at it. Ink on every finger. A Seal Room key. In the building late on
+Tuesday. Mr Swale saw him there. And the Blot's card turned up in *his* book, after he'd been at it.
+
+**NELL:** Hunch-o-meter: nine. *(A pause.)* Ten. Sorry, Marlowe.
+
+**MARLOWE:** *(from behind his books)* You're already on my list. You've been on it since March.
+
+**QUILL:** Show me where it says he drew a line, Nell. A ten is a number. It is not a reason.
+
+#### DEDUCTIONS
+
+**D1 · timeline / meaning — The wall line is new, drawn between Monday morning and Wednesday morning.**
+- *Statement the child forms:* "The new line had not dried, so it was drawn in the last day or two. The map was fine on
+  Monday at ten. So it was changed between Monday at ten and Wednesday at nine."
+- *Supporting spans:* [c:notdried] "had not dried" · [c:daytwo] "in the last day or two" · [c:monday] "on Monday at ten,
+  and all was well" · [c:itofound] "at nine this morning"
+- *Also:* [c:behind] "it runs behind the Library" is what the change *does*: it moves the Library onto Gull Wharf.
+- *Why it matters:* It shrinks the whole week to one window. Only the key log entries inside that window matter.
+- *Vocab note:* "dried" here means more than "stopped being wet". Iron-gall darkens as it dries over days, so a pale line is
+  a young line.
+
+**D2 · contradiction (the lie) — Mr Swale was in the Seal Room on Tuesday night.**
+- *Statement:* "Mr Swale says he had not entered the Seal Room since spring. But the key log shows R.S. took the key at 8:40
+  on Tuesday, and R. Swale is the only R.S. with a key. The Lamplighters saw a tall man with a stoop on the Seal Room stair
+  at twenty to nine."
+- *Supporting spans:* [c:notentered] "I had not entered the Seal Room since spring" · [c:rs840] "8:40 pm, R.S., humidity
+  reading. Key back 9:25 pm." · [c:keyholders] "Seal Room keys: O. Penhallow (Keeper), R. Swale (Deputy), M. Finch (seal
+  box only), K. Ito (Wednesdays)" · [c:tallman] "at twenty to nine a tall man with a stoop" · [c:stoop] "He is so tall he
+  has to stoop under the Seal Room door."
+- *Also accepted:* [c:notspring] "Not since spring." (the same lie, said aloud) · [c:ittakes] "In forty-five minutes, a
+  careful person could." (Chapter 4)
+- *Why it matters:* Both cannot be true. This is the case's one checkable lie, told twice, and it sits inside the window
+  from D1. (The porter's margin, [c:fortyfive] "Forty-five minutes for one humidity reading!", hints that the visit was not
+  about humidity, and Ms Ito's answer in Chapter 4 says forty-five minutes is exactly how long the job takes.)
+- *Sequence note:* "twenty to nine" and "8:40" are the same time written two ways; the child links them.
+
+**D3 · fact-opinion / contradiction — The ink did not match the original.**
+- *Statement:* "Mr Swale says the ink matched the original perfectly. But that is only 'to my eye'. The restorer's facts
+  say the old lines are dark brown and the new line is pale grey. They cannot match."
+- *Supporting spans:* [c:matched] "To my eye, the ink of the wall line matched the original perfectly." · [c:oldbrown]
+  "The old lines are dark brown" · [c:newgrey] "The new line is pale grey"
+- *Why it matters:* Why would the deputy keeper insist on something anyone can see is false? Someone who wants the line to
+  be "old" has a reason.
+
+**D4 · inference — The new line was drawn in iron-gall ink, and only Mr Swale uses iron-gall.**
+- *Statement:* "The new line is iron-gall. Restorers never use it. The copy-book allows only lamp-black. Marlowe says only
+  Mr Swale uses iron-gall, and Mr Swale says so himself."
+- *Supporting spans:* [c:irongall] "iron-gall ink" · [c:itonever] "Restorers never use iron-gall. It bites into old paper."
+  · [c:lampblack] "In this book, use lamp-black ink only. Never iron-gall." · [c:onlyswale] "Only Mr Swale. He signs the
+  loan papers with it, at the front desk." · [c:swaleink] "Iron-gall, for signing the loan papers."
+- *Why it matters:* It ties the ink on the map to one desk in the Library. (The "little bottle" the Lamplighters saw,
+  [c:bottle], supports it. So does the porter's nose: [c:chips] "Seal Room stair smells of vinegar. Someone's chips, I
+  expect." against [c:vinegar] "Fresh, it smells sharp, like vinegar." Half past nine, five minutes after R.S. gave the key
+  back.)
+
+**D5 · sequence / inference — Mr Crane knew about the new line before anyone found it.**
+- *Statement:* "Crane's letter says 'as your own Harbour Map now shows'. The front desk stamped it at 8:30. Ms Ito only
+  found the change at nine. So someone told Crane before the Library knew. On Tuesday, Crane's envelope went into Mr Swale's
+  inside pocket."
+- *Supporting spans:* [c:nowshows] "As your own Harbour Map now shows" · [c:recd830] "RECEIVED — FRONT DESK — WEDNESDAY
+  8:30 AM" · [c:itofound] "at nine this morning" · [c:envelope] "Mr Pettigrew's envelope was thick and sealed. Mr Swale
+  put it straight into his inside pocket." · [c:thick] "It felt as if there was money in it, and I have wondered about that
+  ever since."
+- *Why it matters:* It gives the motive. The line was drawn for Crane, by someone Crane had paid. ("Good news travels fast!"
+  is Crane almost boasting about it.) Mr Pettigrew adds the picture on Crane's wall: [c:redpencil] "Mr Crane keeps it on his
+  office wall, with a new line drawn on it in red pencil." The line existed in red pencil before it existed in ink.
+
+#### RED HERRINGS
+
+**Marlowe Finch** — ink on every finger; in the building late on Tuesday; holds a Seal Room key; Mr Swale points at him;
+Nell rates him an 8, then a 10.
+- *Cleared by:* [c:ruling] "ruling lines in a big book" (ruling means drawing straight lines with a ruler, not governing,
+  and not drawing on maps) · [c:mfruled] "Forty pages ruled for Thursday's apprentices. Lamp-black, as always." ·
+  [c:lampblack] "In this book, use lamp-black ink only. Never iron-gall." · [c:mf510] "5:10 pm, M.F., to return the seal
+  box. Key back 5:15 pm." · [c:mfleft] "about half 7" (he left more than an hour before the 8:40 key) · [c:fivemin] "In
+  five minutes, nobody could do it. Not even me." (Chapter 4: his five-minute key could never have been long enough).
+- *Also:* [c:mfblack] "I used lamp-black, like the rules say." and [c:mfcloth] "The map was under its cloth. I didn't even
+  lift it."
+- *His kindness is the clue:* he tells the truth about seeing Mr Swale ([c:umbrella] "He said he'd come back for his
+  umbrella. It wasn't raining."), though it makes him the only witness. Note that Mr Swale's own pointing finger,
+  [c:finchink] "Finch was in the building late on Tuesday, with ink.", tells us *he* knew who was in the building late.
+
+**Ms Kiyomi Ito** — alone with the map every Wednesday; she found the change; Crane offered her a job.
+- *Cleared by:* [c:decline] "I must, however, decline." (decline means politely say no; it does not mean "go down") ·
+  [c:posted] "Draft. Fair copy posted Monday. — K.I." · [c:nineyears] "I have restored maps here for nine years, and nobody
+  has ever paid to see one." · [c:itonever] "Restorers never use iron-gall."
+- *Also:* she has no key after 5 pm on a Tuesday ([c:keyholders] "K. Ito (Wednesdays)").
+- *Her secret makes her look worse first:* [c:nearly] "I nearly said yes. The pay would have mended my mother's roof."
+  Nearly is not yes. The posted refusal is dated Monday.
+
+**Mr Septimus Pettigrew** — works for Crane; carried the envelope; in the Library on Tuesday.
+- *Cleared by:* [c:spin] "S. Pettigrew · 3:50 pm · 4:05 pm · Mr Swale · To deliver a letter" · [c:novisitors] "Visitors
+  may not enter the Seal Room." · [c:thick] his own honest answer.
+- *Arc:* the postcard ([c:rebus], [c:kindvoice], [c:doubts]) names him and shows his doubts began long before this case;
+  [c:postmark] "Singapore, Tuesday last week" proves Dr Raman wrote it before the envelope was ever carried.
+
+**The Blot** — a calling card in the copy-book. The child may wonder if the Blot drew the line.
+- *Cleared by Quill:* "The Blot has taken eight words away. Has the Blot ever *added* a line to anything?" The Blot hides
+  words; it has never drawn on a document. This time it took one: [c:gap] "___ line" and left [c:card] "Eight now. Read them
+  as one. — B." (the card is the Ledger beat, not a clue to the map).
+
+*(End of Chapter 3. Ms Ito appears in the Copying Room doorway, peeling off her white gloves one finger at a time.)*
+**MS ITO:** Before anybody writes a name down: has anyone asked me how long it takes to move a three-hundred-year-old wall?
+
+---
+
+### Chapter 4 — The timeline
+
+#### It opens with Ms Ito *(the false solution breaks)*
+
+##### SUSPECT Ms Kiyomi Ito · Q6 · how · "How long would it take to change the line?" *(opens at the start of Chapter 4)*
+Expression: calm
+> Point one: scraping an old line faint, without making a hole, takes half an hour. At the least.
+>
+> Point two: the new line, drawn steady, ten minutes more. Point three: by one small lamp, longer still.
+>
+> [[c:fivemin|In five minutes, nobody could do it. Not even me.]] [[c:ittakes|In forty-five minutes, a careful person could.]]
+>
+> *(She looks at the porter's log on the desk, and says nothing else.)*
+
+**NELL:** *(quietly)* Marlowe had five minutes. Five to fifteen past five. *(She turns the hunch-o-meter face down.)* I'm
+taking the ten back.
+
+**MARLOWE:** I'm crossing you off my list. *(A pause.)* In pencil.
+
+*The washing line across the agency. Cards marked ★ are placed by the child; the rest are pegged already.*
+
+| # | Event | Time-word span | Placed by child |
+|---|---|---|---|
+| 1 | Ms Ito photographs the map; the wall runs in front of the Library | "my photograph from March" (DOC 8.2) | |
+| 2 | Mr Crane writes to Ms Ito offering a job; she declines and posts her reply | [c:posted] "Fair copy posted Monday" | ★ |
+| 3 | The Keeper checks the map; all is well | [c:monday] "on Monday at ten, and all was well" | ★ |
+| 4 | Mr Pettigrew delivers the thick envelope to Mr Swale | [c:spin] "3:50 pm · 4:05 pm" | ★ |
+| 5 | Marlowe returns the seal box to the Seal Room | [c:mf510] "5:10 pm, M.F., to return the seal box. Key back 5:15 pm." | |
+| 6 | Marlowe rules the copy-book in lamp-black | [c:mfruled] "Tuesday, 7 pm" | |
+| 7 | Marlowe leaves by the side door; meets Mr Swale "back for his umbrella" | [c:mfleft] "about half 7" · [c:umbrella] | ★ |
+| 8 | Mr Swale takes the Seal Room key with a lamp and a little bottle; forty-five minutes, long enough to move a wall | [c:rs840] "8:40 pm" · [c:tallman] "at twenty to nine" *(also: [c:ittakes])* | ★ |
+| 9 | The key comes back; the stair smells of vinegar | "Key back 9:25 pm" (DOC 8.3) · [c:chips] "9:30 pm" | |
+| 10 | Crane's letter reaches the front desk | [c:recd830] "WEDNESDAY 8:30 AM" | ★ |
+| 11 | Ms Ito lifts the cloth and finds the change | [c:itofound] "at nine this morning" | ★ |
+| 12 | The Keeper writes to the agency | DOC 8.1, "Wednesday, 9:40 am" | |
+| 13 | Mr Swale signs his statement | DOC 8.4, "Wednesday, 12:00 noon" | |
+
+**The line shakes** (gently) if card 10 is placed after card 11, and Quill asks: "Read the stamp again. Which came first,
+Crane's good news or our bad news?"
+
+*(End of Chapter 4. Every clock in the Scriptorium strikes three, one after another down the corridors, like a staircase
+of bells. Then the building is quiet again.)*
+**ASHA:** One hour to the clerk.
+**DEV:** *(whispering)* Did you hear the Seal Room one?
+**ASHA:** *(whispering)* No. *(A pause.)* I don't think it has one.
+
+---
+
+### Chapter 5 — The accusation
+
+**CULPRIT:** Mr Rupert Swale, Deputy Keeper (paid by Silas Crane).
+
+**MINIMAL EVIDENCE SET (any 3 of these, of which D2 must be one):**
+1. **D2** — the lie: [c:notentered] against [c:rs840] and [c:keyholders].
+2. **D3** or **D1** — the line is new and does not match: [c:matched] against [c:oldbrown] / [c:newgrey], or [c:notdried]
+   with [c:monday].
+3. **D4** or **D5** — the ink or the motive: [c:irongall] with [c:onlyswale], or [c:nowshows] with [c:recd830] and
+   [c:envelope].
+
+**WRONG-SUSPECT RESPONSES (Quill):**
+- **Marlowe Finch:** "Marlowe was *ruling* lines. Show me what that word means in Tam's note. Then tell me which ink the
+  copy-book allows, and which ink is on the map. And ask Ms Ito what anyone can do in five minutes."
+- **Ms Ito:** "Read her letter to Mr Crane again. What does *decline* mean, in that sentence? And who told us restorers
+  never touch iron-gall?"
+- **Mr Pettigrew:** "Look at the visitors' book. When did he leave? And who is never allowed into the Seal Room?"
+- **The Blot:** "The Blot takes words away. This time someone *added* a line. Different hand, different habit."
+
+**WEAK-EVIDENCE RESPONSE:** "That shows someone was near the map. It does not show they drew on it. Find a place where a
+person says one thing and a document says another. Then find the ink."
+
+---
+
+### The reveal
+
+*The Seal Room, Wednesday, a quarter to four. Rain on the tall windows. The map lies under lamplight. Everyone is there.
+Tully stands by the door with cocoa. Fifteen minutes to the clerk.*
+
+**NELL:** Mr Swale. You wrote that you hadn't entered the Seal Room since spring. You said it again today, out loud.
+
+**SWALE:** I did, and I assure you—
+
+**ASHA:** The key log says R.S. took the key at 8:40 on Tuesday. Tam saw a tall man with a stoop on these stairs at twenty
+to nine. Same time, written two ways.
+
+**DEV:** And there's only one R.S. on the key list.
+
+**MS ITO:** He kept it forty-five minutes. Exactly long enough.
+
+**FELIX:** And the new line is iron-gall. *(Sneezes.)* Only you use iron-gall in this building, Mr Swale.
+
+**MS ITO:** And it is grey. The old line is brown. Nothing "matched perfectly". And at half past nine, Mr Mensah smelled
+vinegar on this stair. Fresh iron-gall smells of vinegar. It was in his log from the start. We all thought it was chips.
+
+*(The child pins three pieces of evidence on Swale's portrait. Quill reads them back.)*
+
+**QUILL:** Four keys. Four people who said "not me". Three were telling the truth. And Mr Crane wrote "as your own map now
+shows" before anyone knew. Good news travels fast, Mr Swale. Who carried it?
+
+*(Swale sits down slowly. He takes off his half-moon glasses and folds them.)*
+
+**SWALE:** Between you and I—
+
+**QUILL:** *Me.* Between you and *me*. Do go on.
+
+**SWALE:** *(a small, tired laugh)* Mr Crane said the Library would be sold anyway. One pale line would only make it sooner,
+and kinder. I could be Director of his Experience. Twenty years ago I asked to be Keeper. They chose Orla. They were
+right. Nobody has ever asked me to be first at anything.
+
+*(He takes the thick envelope from his inside pocket and lays it down, still sealed.)*
+
+**SWALE:** I didn't open it. I couldn't. I drew the line, then sat here till the key was due back, looking at it. I told
+myself a line on a map hurts nobody.
+
+**QUILL:** A line on a map is a sentence, Mr Swale. It says who owns what. You wrote a false one.
+
+**PENHALLOW:** *(quietly)* You could have told me you wanted more. I would have listened.
+
+**SWALE:** I know. That is the worst part. Orla, I am sorry.
+
+*(Above them, every clock in the Scriptorium strikes four. A damp clerk from the Town Registry puts his head round the
+door, a ledger under his arm.)*
+
+**PENHALLOW:** Thank you for coming. There is nothing to copy.
+
+---
+
+### Epilogue
+
+#### The secrets, kindly
+
+*The clerk goes. The rain eases. Nobody leaves the Seal Room quite yet.*
+
+**NELL:** *(to Marlowe)* I rated you a ten. I'm sorry.
+
+**MARLOWE:** You're off the list. *(A pause.)* Mostly.
+
+**MS ITO:** *(to the Keeper)* And I nearly said yes to him, Orla. You should know that too.
+
+**PENHALLOW:** Nearly is not yes, Kiyomi. *(She looks at Marlowe's inky fingers.)* And forty pages ruled for nobody's thanks
+is not nothing.
+
+**MR PETTIGREW:** *(from the doorway, polishing his spectacles)* Sorry. I came to say I'm glad. I'll go now.
+
+**QUILL:** Stay for cocoa, Mr Pettigrew. Constable Tully always brings too much.
+
+#### The map
+
+Ms Ito works until midnight with a brush as fine as an eyelash. The pale grey line lifts off the varnish like a breath off a
+window. Underneath, the old brown wall is faint but whole, running in front of the Library, where it has run for three
+hundred years.
+
+Asha holds the brass dividers and walks them along the harbour, step by step, against the March photograph. "Every point
+matches," she says. "Every single one." Felix starts to say that *every* is the word missing from the copy-book. Then he
+sneezes, for the eleventh time.
+
+Mr Swale gives the envelope to Constable Tully, unopened, and steps down as Deputy Keeper. He asks if he may help Ms Ito with
+the map's yearly clean. The Keeper thinks for a long moment, and says yes, "under supervision". He looks, for the first time
+all day, relieved.
+
+Constable Tully finds Biscuit asleep in the map chest, in the wide flat drawer for the Southern Oceans, on top of a chart of
+the Antarctic. "Well," says Tully, "he's always liked it cool."
+
+Ms Ito puts the dividers into the child's hands. "For the detective who checks every line," she says. "Keep them sharp."
+
+**Office object:** the map-maker's compass goes on the shelf, legs open, as if it is still measuring.
+
+#### No. 9 Lantern Row
+
+*Evening. Rain on the windows. Books in teetering towers. A cello leaning in the corner. Semicolon asleep on the lamp. Ada
+sits by the fire with a cup of tea she has already forgotten.*
+
+**ADA:** Well? You have the look of people with a puzzle in a pocket.
+
+*(Dev takes out his mother's postcard and lays it flat on the hearthrug.)*
+
+**DEV:** S, then Pickle. Pickle's our cat. Our pet. **PET.**
+
+**ASHA:** Then a note seven steps up from doh. Doh, re, mi, fa, so, la…
+
+**DEV:** **TI.** Then a seed, and a tall bean. It **GREW**. S. Pet-ti-grew.
+
+**FELIX:** And three question marks. He has doubts. Footnote: *doubt* comes from an old word for wavering between two
+things. Which is exactly what he looked like on those steps.
+
+**ASHA:** Postmarked Tuesday last week. Mum wrote it before he ever carried that envelope. So his doubts are older than this
+case. He's been worried since the spring.
+
+**NELL:** He told us the truth today, even though he was scared of it. *(She pauses.)* Someone with doubts might be someone
+who helps.
+
+**QUILL:** Keep his card.
+
+*(Dev nods, and opens the ribbon-tied Blot Ledger. He writes the new word in, slowly. Ink spreads into the page.)*
+
+**DEV:** Under. The. Clock. That. Never. Strikes. Lies. Every.
+
+*(He stops. He reads it again, without the gaps.)*
+
+**DEV:** It isn't a list. It's never been a list. It's a *sentence*. "Under the clock that never strikes lies every…"
+
+**FELIX:** Lies. Footnote: not *lies* as in fibs. *Lies* as in "is lying there". Like a cat lies on a rug.
+
+**NELL:** Something is lying under a clock. Something the Blot wants us to find.
+
+**ASHA:** "Eight now. Read them as one." That's what the card meant.
+
+*(Across the room, Ada has gone very still. Her bow is in her hand, but she has not played a note.)*
+
+**ADA:** Every clock in the Great Library strikes. I know. Quill and I listened to all forty-one of them, one winter, forty
+years ago.
+
+**QUILL:** Forty-two, counting the porter's lodge.
+
+**ADA:** That one strikes thirteen. It doesn't count.
+
+**QUILL:** It strikes. And forty-two is only the ones we *heard*, Ada.
+
+**ADA:** That is what I said.
+
+**QUILL:** It is not quite what you said. *(He does not explain. He glances, just once, at the new detective.)*
+
+*(Asha opens her mouth, then shuts it again. In the margin of her timeline, very small, she writes: Seal Room, no tick.
+Then she underlines it, twice.)*
+
+*(Ada puts the bow down. Mrs Achterberg comes in with fresh tea, looks at Ada's face, and sets the cup down without a
+proverb. Which, for Mrs Achterberg, is a kind of shout.)*
+
+**ADA:** Sit down, all of you. This is a long story, and I have told it to nobody.
+
+*(The fire settles. Even Semicolon opens one eye.)*
+
+**ADA:** Forty years ago, the Great Library nearly closed. The council said it cost too much. Every week there was another
+meeting, another vote, another word like "review". You will know that word by now.
+
+People began to talk about the Founding Charter. The Library's first Keeper, Hannah Lark, wrote it in 1726. Three hundred
+years ago, near enough. It said the Library
+must be free, for everyone, for ever. If anyone could find it, no council and no buyer could ever close those doors. But
+Hannah Lark hid it, and nobody alive had seen it.
+
+Quill and I were the best detectives in Inkwell. We thought so, anyway. And that autumn, I took an apprentice.
+
+Her name was Odile. Odile Vane. She was eighteen. She arrived on my doorstep with a battered violin case and a notebook of
+puzzles she had made herself. She could find a pattern in a puddle. She saw the odd letter out before I had seen the word.
+
+*(Ada smiles, for the first time in the story.)*
+
+She wrote "forthwith" in everything. Reports, birthday cards, the shopping list. "Buy eggs forthwith." Winifred kept that
+one for years. And she signed every letter with a long dash before her initial, like a ribbon trailing off a parcel. I used
+to tease her that the dash was longer than the letter.
+
+In the evenings I played the cello and she played the violin. We were terrible together. Wonderful, and terrible. Winifred
+used to shut the kitchen door.
+
+**MRS ACHTERBERG:** *(quietly)* Two birds on one branch sing louder than they know.
+
+**ADA:** All that winter, the three of us searched for the Charter. We opened panels. We lifted floorboards. We listened to
+forty-one clocks. Odile read Hannah Lark's account books, line by line, by candle. And she began to notice small
+things. A word underlined here. A word underlined there. She said, "Ada, the Keeper didn't hide it from us. She hid it *for*
+us. For whoever reads carefully enough."
+
+I didn't believe her. I wanted fingerprints and footprints. I wanted proof you could hold in your hand. Underlined words
+seemed like a game to me.
+
+Then, in the spring, the town saved the Library by itself. Children came to the Town Hall with pennies in jam jars. The
+council was so ashamed that it gave up. The doors stayed open.
+
+And I closed the case. The Library was safe. I told myself the Charter did not matter any more.
+
+Odile came to this room that night. She stood exactly where you are sitting. She said, "It matters, Ada. It matters for
+next time. There is always a next time."
+
+And I said a thing I have been sorry for every day since. I said, "Puzzles are for children, Odile. Detectives deal in
+evidence."
+
+*(Nobody speaks. The rain ticks on the glass.)*
+
+**ADA:** In the morning her room was empty. Her violin was gone. On the step outside, she had left her magnifying glass, and a
+note. It said, "You taught me to read. One day I'll show you what it's for. — O." The long dash, even then.
+
+I wrote to her for years. Every letter came back unopened. I don't know where she is. She would be fifty-eight now.
+
+**QUILL:** We were both wrong, Ada. I let you close it. I was tired, and I was glad of the rest.
+
+**ADA:** No. *I* was proud. I could not bear a puzzle I could not solve, so I said it was not a puzzle at all. That is the
+worst thing a detective can do. *(She looks at the child.)* Write that in your notebook. Not because I said it. Because it
+is true.
+
+*(She picks up the cello. She plays a few slow bars. The tune seems to stop and wait, as if for an answer.)*
+
+**ADA:** This piece was written for two. For forty years I have only ever played half of it.
+
+*(She puts the bow down. Mrs Achterberg sets a hot cup in her hands and closes Ada's fingers round it.)*
+
+**MRS ACHTERBERG:** Old maps know the way home. So do old friends.
+
+**ADA:** Winifred, that is not a proverb.
+
+**MRS ACHTERBERG:** It is now.
+
+**SEMICOLON:** Elementary; therefore!
+
+*(Laughter, a little wet. Ada looks at the child, and at the dividers poking from the child's bag.)*
+
+**ADA:** You checked every line of that map today. Not most of them. Every one. *(A pause.)* She would have liked you.
+
+*(On the way down the steps, Nell takes the unsent Inspector application out of the Comet's basket. Asha raises an
+eyebrow.)*
+
+**ASHA:** Hunch-o-meter?
+
+**NELL:** *(putting the form back, carefully)* I'm not rating this one. I'm going to wait for the evidence.
+
+**QUILL:** *(to the child, very quietly)* Mark the date. She has refused a hunch about a case before. Never one about
+herself.
+
+**Arc beat:** the Blot Ledger, ribbon-tied, now reads **UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY…** The last ink is
+still wet.
+
+---
+
+### Detective School drill — "The Log and the Statement"
+
+**Clue type:** contradiction (with sequence). Built from DOC 8.3 against DOC 8.4.
+
+The child reads a short gardener's statement and a shed key log, then taps the one sentence that cannot be true.
+
+> **Statement (Mr Pell):** I love that shed. I painted it blue in May. I had not opened the shed since June. I keep my
+> spade at home now.
+>
+> **Shed key log:** 3 July, 6:15 pm, T. Pell, spade returned. 9 July, 8:00 am, A. Rao, mower out. 9 July, 11:00 am,
+> A. Rao, mower back.
+
+- **Answer:** "I had not opened the shed since June." The log shows T. Pell took the key on 3 July.
+- **Quill's follow-up:** "Which word in his sentence makes it a promise about time?" (*since*.) "And which words in the log
+  prove it false?" (*3 July … T. Pell*.)
+- **A second round** swaps in a red herring: a log line for "T. Pellow". The child must notice the name is not the same.
+
+**Round two — "Same name?"** *(Added 5 Oct 2026, owner-approved; for sign-off with the case.)*
+
+1. Mr Pell says: "I had not opened the shed since June." The new log says: "3 July, 6:15 pm, T. Pellow, spade returned."
+   Can Mr Pell's sentence still be true? **Answer:** Yes. Pellow is not Pell. (Options: No, the log proves it false · Yes,
+   Pellow is not Pell · No, nobody opened the shed in July.)
+2. Back to the Library. The key log says: "5:10 pm, M.F., to return the seal box." The key list says: "M. Finch (seal box
+   only)". Is M.F. on the key list? **Answer:** Yes, M. Finch. (Options: No, nobody · Yes, M. Finch · Yes, K. Ito.)
+3. The key log says: "8:40 pm, R.S., humidity reading." Who on the key list has the initials R.S.? **Answer:** R. Swale
+   (Deputy). (Options: O. Penhallow (Keeper) · R. Swale (Deputy) · K. Ito (Wednesdays) · M. Finch (seal box only).)
+4. The visitors' book says: "S. Pettigrew · 3:50 pm · 4:05 pm · Mr Swale". Is S. Pettigrew on the Seal Room key list?
+   **Answer:** No, and visitors may not enter. (Options: Yes, as S.P. · No, and visitors may not enter · Yes, on
+   Wednesdays.)
+5. Dr Raman's postcard is postmarked "Singapore, Tuesday last week". The visitors' book is for "Tuesday". Is it the same
+   Tuesday? **Answer:** No, they are a week apart. (Options: Yes, the word is the same · No, they are a week apart · We
+   cannot tell at all.)
+
+- **Quill, after round two:** "Read every letter of a name, and every word of a date. A log only catches a lie when the
+  name really matches."
+
+---
+
+### Art and scene notes
+
+*No lettering in any painting. Every word on every document, card, book spine and sign is live text set by the app.*
+
+#### Backgrounds
+- **The Seal Room (day):** a vaulted stone room deep in the Scriptorium. Candle sconces, a long oak table, the Harbour Map
+  under a linen dust cloth. Tall narrow windows, the light falling in slanted bars. Shelves of seal boxes, each with a
+  wax-red tag. **On the ceiling, half in shadow and never pointed at, a painted clock face with no hands.** It must be
+  present in this plate (the season's fair-play seed), but not lit, centred or emphasised. In opening panel 4, Felix's
+  sneeze tips his head back towards it: the only eyeline in the case that goes near it. The words do the rest (the panel 2
+  caption "In here, nothing does", Asha's "I don't think it has one", and Quill's "only the ones we *heard*").
+- **The Seal Room (lamplit, rain):** for the reveal at a quarter to four; rain on the tall windows, lamplight pooled on the
+  map, the rest of the room soft indigo.
+- **The Copying Room:** long desks, green-shaded lamps, rows of ink pots (black), the copy-book open, rulers, a window onto
+  Lamplit Row where a lamplighter's pole is just visible.
+- **The Copying Room (rain):** for the board intro: rain running down the long windows, Tully dripping on the
+  floorboards, green-shaded lamps lit at two in the afternoon.
+- **The front desk:** a carved oak counter, a brass bell, the visitors' book, a rack of loan papers, a small dark bottle in a
+  pen tray (iron-gall; not labelled).
+- **No. 9 Lantern Row (night):** fire, rain on the windows, teetering books, the cello, Semicolon on the lamp, a forgotten
+  teacup on the arm of the chair. Warm amber against teal shadows. Cosy, never sad-dark.
+
+#### Props
+- The Harbour Map: brown, old, a little painted dome for the Library; two harbour lines visible in close-up (one dark brown
+  and scraped faint, one pale grey and crisp).
+- Ms Ito's brass dividers (the office object): two pointed legs, a hinge, a small knurled wheel.
+- The porter's key log, the thick sealed envelope, the white calling card with a perfect ink blot.
+- The Raman postcard: orchids and river on the front; on the back a row of tiny drawings (tabby cat on a cushion; a stave
+  with seven steps and a note on the top step; a seed and a tall bean plant; three question marks drawn as shapes).
+- Ada's cello, Odile's magnifying glass (Ada keeps it on the mantelpiece, wrapped in a handkerchief; seen, not mentioned).
+
+#### Portraits (new this case)
+- **Mr Swale:** calm, offended, nervous, guilty, relieved. His height must read clearly beside the others (he stoops under
+  door frames in the cutscene panels).
+- **Ms Ito:** calm, offended, amused, relieved. Visor up for calm, down for working.
+- **Mr Pettigrew:** nervous, guilty, relieved. Shorter than Marlowe in any group panel, so the Lamplighters' "tall man"
+  cannot be him.
+- **Marlowe:** reuse the model sheet; add ink on the fingers.
+- **Ada:** add a new expression for the story scene: *remembering* (eyes lowered, a half smile, the bow resting on her
+  knee).
+
+#### Cutscene panels for the reveal (5)
+1. Asha's finger on the log beside Tam's bakery-bag note.
+2. Ms Ito's gloved hand beside the pale line and the brown line.
+3. Swale sitting, glasses folded.
+4. The sealed envelope on the table, untouched.
+5. The Keeper's face: not angry, sad.
+
+#### Sound
+The Scriptorium's clocks striking three, then four, one after another down the corridors (never in the Seal Room); rain;
+paper rustle; a pen scratch as Dev writes EVERY into the Ledger; rain at Lantern Row; four slow cello notes under Ada's
+last line (recorded live, never synthesised; silent during read-aloud).
+
+---
+
+## CASE 9 — The Bottle on the Lake
+
+*A Bizzing mystery*
+
+```
+meta:
+  level: 4 (ages 10–12) · 4 suspects · 10 documents + 1 that arrives in chapter 4 · 5 deductions · one suspect lies
+    once (Mr Fosse)
+  the clock: the Regatta committee meets at seven tonight to decide if there is a Regatta at all (moved to six, halfway)
+  the impossible thing: a word painted on a roof the whole town can see, all summer, and nobody has seen it
+  the false solution: Mrs Quayle (motive, shutters, and "Private" in her own log); broken by DOC 9.11 in chapter 4
+  hidden in plain sight: the poem's second line, "The last oar will lie on the grass like a spoon beside a plate."
+  world: lakeside (the slipway, the boathouse, the island lighthouse, the Regatta office)
+  skills: figurative · voice · inference · punctuation
+  vanished word: WORD (painted on the boathouse roof; seen only when the shuttered lighthouse sends one beam onto it)
+  office object: the message bottle (brown glass, black wax seal pressed into a blot, the poem still inside)
+  arc beats:
+    - The Blot's riddle-poem: the Blot is now known to be a puzzle-maker, not a vandal
+    - The Blot Ledger reads UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD…
+    - A lady with a violin case visits the lighthouse; a lady paints the boathouse roof (a seed for Case 11; never named)
+    - Someone plays a fiddle on the dark shore on Friday night, and again when the word shines (the Blot is close; never seen)
+    - Thread B: Crane pulled his sponsorship from the Regatta ("not a good fit for the Experience")
+    - Ada writes a letter "to an old address" (her first step back towards Odile)
+    - Asha's case: she finds the bottle, and races in the eights the next afternoon
+    - Nell keeps her Case 8 promise to wait for the evidence, almost
+  documents: DOC 9.1–9.11 (each ≤140 words, every sentence ≤22 words); interview answers are transcripts held to the same limits
+  glossed words (once marked): slipway · knot-hole · shutter · eyelid (figurative) · decline (from Case 8, revisited) ·
+    "stiff letter" · reef knot
+```
+
+### Case card
+
+At dawn, an oar knocks a bottle in the mist. Inside is a poem, sealed with a perfect ink blot. It says the lighthouse will
+go dark on Regatta night. The fireworks are cancelled. At seven tonight, the committee decides if there is a Regatta at
+all. A poem is not a newspaper. Read it the way it was written.
+
+*(60 words)*
+
+### Cast
+
+#### Suspects
+
+| Name | Look (one line) | Manner (one line) | Portrait expressions | Motive · Secret |
+|---|---|---|---|---|
+| **Mrs Morwenna Quayle**, 62, keeper of the island lighthouse | Weathered and broad-shouldered, a cable-knit jumper, oilskin hat, reading glasses on a cord, a tin of lamp oil never far away | Blunt, warm, says exactly what she means; counts everything | calm, offended, amused, relieved | Motive: the fireworks frighten her swallows, and she holds the only shutters on the lake · Secret: on Friday night she rowed out and fished one of Lyle's green bottles from the water, because the poem inside was written for her, and she wanted to keep it ("Private" in her log) |
+| **Mr Lyle Asante**, 29, Poet in Residence at the Lakeside Café | Tall and thin, a long striped scarf even in summer, ink on one cuff, a satchel of green bottles that clink | Gentle and dramatic; **rhymes without meaning to when he is nervous** (running joke) | calm, nervous, offended, amused, relieved | Motive: a threat in a bottle made the front page; his twelve poems in bottles made nothing · Secret: all week he has been trying, in secret, to write a poem without rhyme, like the Blot's, and every attempt rhymes by the second line |
+| **Mr Barnaby Fosse**, 55, Regatta Secretary (the organiser) | Round, pink-cheeked, a blazer with brass buttons, a clipboard, a whistle on a lanyard | Fussy, cheerful in a hurry; says "budget-wise" and "safety first" | calm, nervous, offended, guilty, relieved | Motive: the Regatta cannot pay for the fireworks, and a "threat" would hide it · Secret: he sold his own sailing dinghy to pay for the prize cups, and told nobody |
+| **"The Blot"** | No face: a white calling card with a perfect ink blot, painted as a portrait on cork | Answers only through the agency's own records (the Ledger, Quill) | (one image; the card turns in the light) | Motive: a word must be found, and only a careful reader will find it · Secret: the poem is not a warning at all, but a set of instructions |
+
+#### Helpers
+
+- **Quill** — deerstalker on, a small life-jacket over it (Constable Tully insisted). Running joke: grammar at the worst
+  moment.
+- **Asha Raman** — rowing captain; finds the bottle at practice; races in the eights on Sunday.
+- **Dev Raman** — reads the Blot's cards as patterns; keeps the Ledger. The torch argument happens on the lighthouse stair.
+- **Nell Okafor-Hart** — hunch-o-meter: Mrs Quayle, 9, then 10. Wrong about the tens, again; this time she says so out
+  loud.
+- **Felix Moreno-Lindqvist** — footnotes *regatta*, *metaphor* and *slipway*. Not allergic to lakes. Finally, a case
+  without sneezing. (He sneezes once, at the fireworks.)
+- **Constable Bram Tully** — brings the original poem from Mr Fosse's drawer, and cocoa in a flask; is sent, very
+  unwillingly, to collect Mrs Quayle's lighthouse keys for the Harbour Master; finds Biscuit.
+- **Mr Gil Otterburn** — the boathouse keeper; a man of few words, all of them written in his boathouse book.
+- **Mrs Dolores Pyke** — of Pyke and Daughters, firework makers; appears in her letter, and on Regatta night.
+- **Inspector Ada Holloway** and **Mrs Achterberg** — by note only (DOC 9.9).
+- **Tam Bellweather** — delivers Ada's note; is first in the queue for buns on Regatta night.
+
+---
+
+### Chapter 1 — The scene
+
+**Opening panels (5):**
+1. **The slipway at dawn.** Mist lies on the lake so thick that the oars vanish into it. Asha's rowing eight glides in,
+   eight breaths and one creak. An oar goes *clunk*, on something that is not wood. *ASHA: "Easy all. What was that?"*
+2. **The slipway at dawn.** Asha leans over and lifts a brown bottle, cold and dripping, its cork sealed with black wax
+   pressed into a perfect blot. Somewhere out in the mist, the lighthouse lamp sweeps by, a pale smear. *ASHA (whispering):
+   "The Blot. On our lake."*
+3. **The boathouse noticeboard, 10 am.** Mr Fosse, clipboard under one arm, pins a typed notice to the board with a red
+   crayon box round three lines. A small crowd reads it. Somebody gasps. *MR FOSSE: "Committee at seven tonight! If this
+   isn't settled, there's no Regatta at all. Safety first!"*
+4. **The agency's round window, afternoon.** Rain begins to tick on the glass. Quill reads the Gazette's front page. Nell is
+   already pulling on her jacket. *NELL: "Me and Asha will take the lighthouse." QUILL: "Asha and *I*. Take it anyway. Seven
+   o'clock is not far off."*
+5. **The island lighthouse.** White and calm across the grey water, a single gull on its gallery rail. On the near shore, the
+   long grey boathouse roof, in plain view of the whole lawn. Nothing on it at all.
+
+---
+
+#### DOC 9.1 · poem (the original)
+- **Author:** signed "— B." · **Date/time:** found Saturday, twenty past six in the morning · **Found:** in a brown bottle at
+  the slipway, by Asha Raman; later kept in Mr Fosse's office drawer · **Picture:** thick cream paper, curling at the edges,
+  written in a careful upright hand; a perfect ink blot below the last line; a small white calling card curled in the
+  bottle's neck.
+
+> The swallows will fold their wings.
+>
+> [[c:lastoar|The last oar will lie on the grass like a spoon beside a plate.]]
+>
+> Then [[c:eye|the eye of the island will close to see]].
+>
+> Do not be afraid when the lighthouse [[c:godark|goes dark]].
+>
+> [[c:origcomma|No boats will be out, when the eye of the island closes]].
+>
+> [[c:knot|One knot in its eyelid will stay open.]]
+>
+> Through it, [[c:finger|one long finger of light]] will cross the water.
+>
+> It will touch [[c:roof|the sleeping back of the house where boats sleep]].
+>
+> There, [[c:waited|a word has waited all summer, invisible as breath]].
+>
+> [[c:tenthbell|At the tenth bell]], it will shine.
+>
+> Read it, and keep it. It is the next one.
+>
+> [[c:blotsign|— B.]]
+>
+> Tucked into the bottle's neck, a small white card with a perfect ink blot: [[c:card9|"Look where the light falls. — B."]]
+
+---
+
+#### DOC 9.2 · notice
+- **Author:** Mr Barnaby Fosse, Regatta Secretary · **Date/time:** Saturday, 10:00 am · **Found:** pinned to the boathouse
+  noticeboard · **Picture:** a typed sheet with a red-crayon box drawn round three lines; four drawing pins, one missing.
+
+> REGATTA WARNING
+>
+> [[c:threathead|A THREAT has been found in a bottle on our lake.]]
+>
+> Here are the important lines, [[c:exactly|typed exactly as written]]:
+>
+> "Then the eye of the island will close to see.
+>
+> Do not be afraid when the lighthouse goes dark.
+>
+> [[c:typedcomma|No, boats will be out when the eye of the island closes]]."
+>
+> [[c:fosseopinion|This is plainly a threat to put out the light while our boats are racing.]]
+>
+> [[c:cancelnote|For everyone's safety, the fireworks are cancelled.]] All crews must keep close to the shore.
+>
+> [[c:committee|The committee meets at 7 pm tonight to decide if the Regatta goes ahead at all.]]
+>
+> The original is locked in my office for the constable.
+>
+> B. Fosse, Regatta Secretary
+
+---
+
+#### DOC 9.3 · letter
+- **Author:** Mrs Dolores Pyke, Pyke and Daughters, Firework Makers · **Date/time:** dated Friday · **Found:** opened, on
+  Mr Fosse's desk in the Regatta office, under a tide table · **Picture:** a cheerful letterhead of painted rockets (no
+  lettering in the painting), a coffee ring.
+
+> Dear Mr Fosse,
+>
+> [[c:thursday|Thank you for your letter of Thursday]].
+>
+> We are sorry to hear that [[c:afford|the Regatta cannot afford fireworks this year]]. We have unpacked your rockets and put them back on the shelf.
+>
+> If the money turns up, we could still fire on Sunday night. Rockets are patient. They will keep.
+>
+> This year we also made a quiet display, all colour and very little bang. It was for the swallows, as Mrs Quayle once asked. What a pity.
+>
+> With good wishes to the Regatta,
+>
+> Dolores Pyke
+>
+> Friday
+
+---
+
+#### DOC 9.4 · log
+- **Author:** Mrs Morwenna Quayle, lighthouse keeper · **Date/time:** Thursday and Friday · **Found:** on the lamp-room
+  table in the island lighthouse · **Picture:** a salt-stained logbook, columns of numbers, a pencil tied on with string.
+
+> ISLAND LIGHT — KEEPER'S LOG
+>
+> Thursday. Lit 7:52 pm. Out 6:31 am. Wind south-west, 3. Oil, 4 pints.
+>
+> [[c:violin|3 pm: a visitor, a lady with a violin case. Asked how the fog shutters work.]] Showed her. Good manners. Gave no name.
+>
+> Friday. Lit 7:50 pm. Out 6:33 am. Wind west, 2. Oil, 4 pints.
+>
+> [[c:greenbottles|Sunset: twelve green bottles bobbing past the island.]] The poet's nonsense again.
+>
+> [[c:private|10 pm: took the dinghy out, towards the slipway. Back 10:40. Private.]]
+>
+> Shutters: eight wooden panels round the lamp. [[c:fogonly|Closed only in fog.]]
+>
+> [[c:knothole|Panel 3 has a knot-hole the size of a coin.]] [[c:faces|It faces the boathouse.]] Must mend it.
+>
+> [[c:nevermissed|This light has not missed a night in thirty-one years.]]
+>
+> M. Quayle
+
+---
+
+#### DOC 9.5 · poems
+- **Author:** Mr Lyle Asante · **Date/time:** from his pamphlet *Lakeside Lines*, printed in June · **Found:** a pile of
+  them on the café counter · **Picture:** a small stapled pamphlet, two poems, each ending in a tiny drawn swallow.
+
+> Swallow Song
+>
+> Above the lake the swallows fly
+>
+> and stitch a seam across the sky.
+>
+> They hem the cloud and mend the blue,
+>
+> then fold the evening up for you.
+>
+> — L.A. (a little drawn swallow)
+>
+> The Island Lamp
+>
+> (for Mrs Quayle)
+>
+> Each night she climbs the curling stair
+>
+> to light the lamp and leave it there.
+>
+> [[c:neversleeps|It turns all night, it never sleeps]],
+>
+> a golden promise that she keeps.
+>
+> [[c:lasign|— L.A. (a little drawn swallow)]]
+
+---
+
+#### DOC 9.6 · flyer
+- **Author:** Mr Lyle Asante · **Date/time:** Friday · **Found:** taped to the café window · **Picture:** a hand-drawn flyer,
+  green ink, a border of tiny bottles and swallows.
+
+> MESSAGES ON THE WATER
+>
+> A gift for Regatta weekend!
+>
+> [[c:twelve|On Friday at sunset, I will set twelve green bottles on the lake.]] Each holds a poem for a child to find.
+>
+> [[c:rhymes|Every one has a title, every one rhymes, and every one is signed with my little swallow.]]
+>
+> If you find one, keep it. Or write your own and send it back to the water.
+>
+> [[c:boatnooars|In my opinion, a poem that does not rhyme is a boat without oars.]]
+>
+> Lyle Asante
+>
+> Poet in Residence, the Lakeside Café
+
+---
+
+#### DOC 9.7 · programme
+- **Author:** the Regatta committee (organiser: B. Fosse) · **Date/time:** printed two weeks ago · **Found:** a stack on
+  the boathouse table · **Picture:** a folded card programme with a painted rowing eight on the front (no lettering in the
+  painting).
+
+> THE INKWELL REGATTA — Sunday
+>
+> 2:00 pm · Junior sculls
+>
+> 4:30 pm · Rowing club eights (captain: A. Raman)
+>
+> 7:45 pm · Lantern parade of boats
+>
+> [[c:lasthome|8:30 pm · Last boats home]]
+>
+> [[c:closes9|9:00 pm · The lake closes to all boats. No exceptions.]]
+>
+> 9:30 pm · Fireworks over the water
+>
+> 10:00 pm · Prizes, on the lawn opposite the boathouse
+>
+> Tea and buns all day by Bellweather's Bakery.
+>
+> Organiser: B. Fosse, Regatta Secretary
+
+---
+
+#### DOC 9.8 · book
+- **Author:** Mr Gil Otterburn, boathouse keeper · **Date/time:** May to July · **Found:** hanging on a nail inside the
+  boathouse door · **Picture:** a damp-cornered notebook, a pencil stub, a sketch of a swallow's nest.
+
+> BOATHOUSE BOOK — summer notes
+>
+> May. Roof re-tarred. [[c:heron|Grey as a heron.]]
+>
+> [[c:june|June. A lady offered to paint the roof for nothing.]] Said she liked heights and owed the town a kindness.
+>
+> She brought [[c:silver|a tin of silver-grey paint]] and a ladder. Worked one whole night, by lantern.
+>
+> [[c:cantsee|Next morning I couldn't see what she'd done.]] Roof as grey as before. Odd.
+>
+> She left a tin of toffees and a note: [[c:keeptill|"It will keep till it's needed."]]
+>
+> July. Swallows nesting under the eaves. Doors to stay open.
+>
+> [[c:viewpoint|From the lawn opposite you can see the whole roof, end to end.]]
+>
+> G. Otterburn
+
+---
+
+#### DOC 9.9 · note
+- **Author:** Inspector Ada Holloway (retired) · **Date/time:** Saturday, 4 pm · **Found:** delivered by Tam Bellweather,
+  out of breath, with a bun · **Picture:** blue writing paper, a faint teacup ring, a small pressed violet tucked in the
+  fold.
+
+> My dear detectives,
+>
+> Constable Tully tells me there is a poem in a bottle, and half the town is frightened of it.
+>
+> Two things.
+>
+> First, [[c:original|always read the original. A copy is only as good as the hands that made it.]]
+>
+> Second, Winifred says, [[c:keyhole|"Close the curtain, and the keyhole shines."]] She will not explain. She never does.
+>
+> [[c:asapoem|Read a poem as a poem, not as a newspaper.]]
+>
+> I have written a letter tonight, to an old address. It will very likely come back.
+>
+> My tea has gone cold again. Semicolon sends his regards; therefore.
+>
+> A.H.
+
+---
+
+#### DOC 9.10 · newspaper
+- **Author:** the *Lakeside Gazette*, Regatta Special · **Date/time:** Saturday afternoon · **Found:** a copy on every café
+  table · **Picture:** a folded newspaper with a painted photograph of the bottle on a jetty (headline set live by the app).
+
+> THREAT IN A BOTTLE?
+>
+> A poem found on the lake has alarmed the Regatta.
+>
+> [[c:fossesaid|"It is a threat, plain and simple," said Regatta Secretary Barnaby Fosse.]] [[c:thismorning|"I cancelled the fireworks this morning, the moment I read it."]]
+>
+> Lighthouse keeper Morwenna Quayle disagreed. [[c:quaylesaid|"Nobody darkens my light while a boat is on the water. Nobody."]]
+>
+> Poet Lyle Asante denied writing it. "It doesn't even rhyme," he said, looking hurt.
+>
+> The bottle was found [[c:found|at twenty past six on Saturday morning]] by rowing captain Asha Raman, 12.
+>
+> Mrs Quayle has complained about the fireworks before. [[c:stiffletter|Last year she wrote that they 'frighten the swallows out of their feathers'.]]
+>
+> "Safety first, budget second," said Mr Fosse.
+
+---
+
+**Chapter 1 ends** *(stage directions: the lawn opposite the boathouse, late afternoon, the rain easing to drizzle)*
+
+*The detectives stand on the wet lawn and look across at the boathouse. Its long grey roof is in plain view, end to end,
+streaked with rain. There is nothing on it at all. Gulls. Tar. A drip from the gutter.*
+
+**QUILL:** A word has waited all summer, the poem says. On a roof the whole town can see from here.
+
+**DEV:** Then why has nobody ever seen it?
+
+---
+
+### Chapter 2 — Interviews
+
+*Each answer arrives on the desk as a typed transcript. The portrait's expression is given before each answer.*
+
+#### SUSPECT Mrs Morwenna Quayle
+*Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp
+ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in
+whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.*
+
+##### Q1 · what · "Could the lighthouse really go dark?"
+Expression: calm
+> With the fog shutters, yes. Eight wooden panels round the lamp. I close them only in thick fog, so the light won't dazzle the crews. Panel 3 has that knot-hole. [[c:onebeam|With the shutters closed, it throws one thin beam, straight across to the boathouse.]]
+
+##### Q2 · who · "Did you write the poem?"
+Expression: amused
+> Me? I write numbers. Wind, oil, hours. [[c:numbers|I couldn't write a poem if you paid me in kippers.]] Ask that poet. He rhymes at the breakfast table.
+
+##### Q3 · why · "You don't like the fireworks, do you?"
+Expression: offended
+> No, I don't. The swallows nest under my gallery, and the bangs send them flapping. I wrote Barnaby a stiff letter last year. [[c:notthreat|But a stiff letter isn't a threat. It's a stiff letter.]]
+
+##### Q4 · when · "Who has seen the shutters lately?"
+Expression: calm
+> A lady came on Thursday afternoon, with a violin case. She asked lovely questions. I showed her the knot-hole. [[c:useful|She said, 'Leave that one. Some holes are useful.']] I thought it was a joke.
+
+##### Q5 · where · "Would you ever close the shutters on Regatta night?"
+Expression: calm, then thoughtful
+> Not while a single boat is on the water. Never. But the lake closes at nine. After that, the water's empty. Show me it's safe, and I'll listen.
+
+##### Q6 · where · "Your log says you took the dinghy out on Friday night. Where did you go?"
+Expression: offended
+> [[c:privatemeans|It says "Private", and private is what it means.]] I was back by twenty to eleven. My light was never alone longer than a kettle takes to cool. That's all you're getting, young lady, and you can stop writing it down.
+
+*(Nell writes it down. Under the table, the hunch-o-meter creeps up to 10.)*
+
+---
+
+#### SUSPECT Mr Lyle Asante
+*Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his
+scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.*
+
+##### Q1 · what · "Is this your bottle?"
+Expression: nervous
+> Mine are green, and this is brown. / Mine wear ribbons; this has none. / Oh dear. I'm rhyming. I do that when I'm worried. No. It isn't mine.
+
+##### Q2 · when · "Where were you when the bottle was found?"
+Expression: amused
+> Asleep, at twenty past six! Poets don't do dawn. I launched my twelve on Friday at sunset, from the café jetty. Mrs Quayle saw them go by. She called them nonsense, I expect. [[c:elevenback|Eleven children have brought me thank-you notes. One green bottle is still out there somewhere.]]
+
+##### Q3 · what · "What do you think the poem means?"
+Expression: calm
+> It's good. Annoyingly good. [[c:riddle|It's not a threat, it's a riddle.]] Threats are plain. They want to be understood. [[c:eyelamp|'The eye of the island' isn't an eye at all. It's the lamp.]]
+
+##### Q4 · why · "Why doesn't the poem rhyme?"
+Expression: offended
+> Because whoever wrote it isn't me! [[c:alwaysrhyme|I always rhyme. I've rhymed since I was four.]] My first poem was about a cat who sat. It was very short, and very good.
+
+##### Q5 · who · "Do you know who 'B.' is?"
+Expression: calm
+> Everyone's heard of the Blot. The words that go missing in the Library. I've never met the Blot. But I'd like to. Anyone who writes "invisible as breath" is worth a cup of tea.
+
+##### Q6 · what · "What's in your wastepaper basket?"
+Expression: nervous
+> Oh no. Those are private. Oh, you've already smoothed one out. [[c:norhyme|All week I've been trying to write a poem with no rhyme at all, like the Blot's.]] Attempt number nine. [[c:attempt9|"The lake is grey. The boats are still. / The swallows sleep upon the hill."]] It rhymed! [[c:linetwo|They always rhyme by the second line.]] I'm hopeless. Please don't tell the café.
+
+---
+
+#### SUSPECT Mr Barnaby Fosse
+*Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof.
+The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.*
+
+##### Q1 · why · "Why did you type a copy of the poem?"
+Expression: calm
+> So everyone could read it on the board! The original is in spidery handwriting. I typed the important lines. Two fingers, very fast. I'm a busy man, Regatta weekend.
+
+##### Q2 · what · "Is your copy exactly the same as the original?"
+Expression: calm
+> [[c:everyword|Every word the same! I checked.]] Well. I checked the words.
+
+##### Q3 · when · "When did you cancel the fireworks?"
+Expression: nervous
+> As I told the Gazette. Now, let's talk about safety, shall we? Safety is what matters. Safety first.
+
+##### Q4 · what · "How is the Regatta's money?"
+Expression: guilty
+> Budget-wise? Tight as a reef knot. [[c:sponsor|Our big sponsor pulled out in September.]] A Mr Crane. He said a regatta was "not a good fit for the Experience". Whatever that means.
+
+##### Q5 · where · "Where is the original poem now?"
+Expression: calm
+> Locked in my desk drawer, for the constable. Nobody has touched it since I typed it out. Except me. And the drawer.
+
+---
+
+#### SUSPECT "The Blot"
+*There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and
+Quill.*
+
+##### Q1 · what · "What has the Blot done before?"
+Expression: (the card turns in the light)
+> Blot Ledger, notes by Dev. Eight cases, eight words, one card each time. Words hidden, never torn out. [[c:noharm|Nobody hurt. Nothing broken. Not one page torn.]] Every card is a puzzle, not a warning.
+
+##### Q2 · what · "How does the Blot write?"
+Expression: (the card turns)
+> Notes by Dev. [[c:blotstyle|Always signs '— B.' with a dash. Never a title. Never a rhyme.]] Short sentences. Felix says the Blot writes like someone who expects to be read twice.
+
+##### Q3 · where · "Where is this case's word?"
+Expression: (the card turns)
+> Quill: Not found yet. The poem says a word has waited all summer. So it is already somewhere. Somewhere we can't see it yet. Somewhere a light could show us.
+
+##### Q4 · why · "Is the poem a threat?"
+Expression: (the card turns)
+> Quill: Show me the line that says anyone will be hurt. Then read the original, not the copy. Then tell me again.
+
+---
+
+**Chapter 2 ends** *(stage directions: the Lakeside Café steps, where the detectives meet after the interviews; Constable Tully arrives, dripping, with cocoa and bad news)*
+
+**CONSTABLE TULLY:** The Harbour Master's read the Gazette. The committee's moved to six o'clock, so he can be there.
+
+**CONSTABLE TULLY:** *(holding up a form, unhappily)* And he wants Mrs Quayle's lighthouse keys. Tonight. I'm to fetch them.
+
+**ASHA:** Thirty-one years without missing a night. And they'll take her keys for a poem?
+
+**QUILL:** Six o'clock. Then we read faster.
+
+---
+
+### Chapter 3 — The board
+
+#### DEDUCTIONS
+
+**D1 · punctuation — The typed copy moved one comma, and it turned the poem upside down.**
+- *Statement the child forms:* "The original says 'No boats will be out', which means zero boats. The copy says 'No, boats
+  will be out', which means 'No! There will be boats out.' Mr Fosse checked the words but not the commas."
+- *Supporting spans:* [c:origcomma] "No boats will be out, when the eye of the island closes" · [c:typedcomma] "No, boats
+  will be out when the eye of the island closes" · [c:exactly] "typed exactly as written" · [c:everyword] "Every word the
+  same! I checked."
+- *Why it matters:* The "threat" lives only in the copy. The poem as the Blot wrote it says the lighthouse will go dark
+  when *no* boats are out. (Ada's note, [c:original] "always read the original. A copy is only as good as the hands that
+  made it.", points the child here.)
+
+**D2 · inference (timeline) — When the light goes dark, the lake will be empty.**
+- *Statement:* "The poem says the word will shine at the tenth bell: ten o'clock. The programme says the last boats come
+  home at 8:30 and the lake closes to all boats at nine. So at ten, no boat can be on the water."
+- *Supporting spans:* [c:tenthbell] "At the tenth bell" · [c:closes9] "9:00 pm · The lake closes to all boats. No
+  exceptions." · [c:lasthome] "8:30 pm · Last boats home" · [c:quaylesaid] "Nobody darkens my light while a boat is on
+  the water. Nobody."
+- *Also accepted:* [c:lastoar] "The last oar will lie on the grass like a spoon beside a plate." (the poem's own order:
+  the oars are out of the water first, and *then* the eye closes).
+- *Why it matters:* Even read as plainly as possible, the poem cannot put a boat in danger. It was timed for when the water
+  is empty. Mr Fosse's claim, [c:fosseopinion] "This is plainly a threat to put out the light while our boats are racing.",
+  is an opinion, and the facts disagree with it.
+
+**D3 · figurative — "The eye of the island will close to see" means the lamp will be shuttered so one beam can show
+something.**
+- *Statement:* "The eye of the island is the lighthouse lamp. Its eyelid is the shutters. The knot in the eyelid is the
+  knot-hole in panel 3, which faces the boathouse. The long finger of light is the one beam. The sleeping back of the house
+  where boats sleep is the boathouse roof."
+- *Supporting spans:* [c:eye] "the eye of the island will close to see" · [c:knot] "One knot in its eyelid will stay open."
+  · [c:finger] "one long finger of light" · [c:roof] "the sleeping back of the house where boats sleep" · [c:knothole]
+  "Panel 3 has a knot-hole the size of a coin." · [c:faces] "It faces the boathouse." · [c:onebeam] "With the shutters
+  closed, it throws one thin beam, straight across to the boathouse."
+- *Why it matters:* Taken literally, "an eye that closes to see" is nonsense, and nonsense sounds frightening. Taken as
+  figurative language, it is a set of instructions. Mrs Achterberg's proverb, [c:keyhole] "Close the curtain, and the
+  keyhole shines.", says the same thing in a different picture, and the Blot's own card, [c:card9] "Look where the light
+  falls. — B.", tells the reader where to stand.
+- *Bonus link (the impossible thing, for the Ledger):* see D6 below.
+
+**D4 · voice — The poem is not Lyle Asante's, and not Mrs Quayle's.**
+- *Statement:* "Lyle's poems always have a title, always rhyme, and are signed with a little swallow. The bottle poem has no
+  title, does not rhyme, and is signed '— B.' with a blot. Lyle even thinks the lamp never sleeps. Mrs Quayle writes
+  numbers, not poems."
+- *Supporting spans:* [c:rhymes] "Every one has a title, every one rhymes, and every one is signed with my little swallow."
+  · [c:alwaysrhyme] "I always rhyme. I've rhymed since I was four." · [c:lasign] "— L.A. (a little drawn swallow)" ·
+  [c:blotsign] "— B." · [c:blotstyle] "Always signs '— B.' with a dash. Never a title. Never a rhyme." · [c:neversleeps]
+  "It turns all night, it never sleeps" · [c:numbers] "I couldn't write a poem if you paid me in kippers."
+- *Why it matters:* The poem's voice matches the Blot's eight earlier cards, and nobody else's. The Blot wrote it. So the
+  question is no longer *who wrote it*, but *who turned it into a threat*.
+- *Note:* the child may notice that Lyle and the Blot both write about swallows folding. That is the lake, not the writer:
+  everyone at Poet's Lakeside writes about swallows. Rhyme, title and sign-off are the voice.
+
+**D5 · contradiction (the lie) — Mr Fosse cancelled the fireworks two days before the bottle was found.**
+- *Statement:* "Mr Fosse told the Gazette he cancelled the fireworks this morning, the moment he read the poem. But the
+  firework maker's letter, dated Friday, thanks him for his letter of Thursday, and says the Regatta cannot afford them.
+  The bottle was only found on Saturday."
+- *Supporting spans:* [c:thismorning] "I cancelled the fireworks this morning, the moment I read it." · [c:thursday] "Thank
+  you for your letter of Thursday" · [c:afford] "the Regatta cannot afford fireworks this year" · [c:found] "at twenty past
+  six on Saturday morning" · [c:sponsor] "Our big sponsor pulled out in September."
+- *Why it matters:* The fireworks were cancelled for money, not for safety. The "threat" arrived just in time to take the
+  blame. This is the one lie in the case.
+
+**D6 · inference (optional; the impossible thing) — A word on a roof everyone can see, that nobody has seen.**
+- *Statement:* "The roof was tarred in May, grey as a heron. In June a lady painted it with silver-grey paint, and next
+  morning it looked as grey as before. Grey on grey: by day, the word disappears into the roof. It can only shine when the
+  lake is dark and one thin beam falls on it."
+- *Supporting spans:* [c:waited] "a word has waited all summer, invisible as breath" · [c:silver] "a tin of silver-grey
+  paint" · [c:cantsee] "Next morning I couldn't see what she'd done." · [c:heron] "Grey as a heron." · [c:viewpoint] "From
+  the lawn opposite you can see the whole roof, end to end."
+- *Why it matters:* It answers *how could it?* without magic. Nobody has seen the word because nobody has ever looked at
+  that roof in the dark with only one beam on it. It does not count toward the accusation, but the Ledger needs it.
+
+#### RED HERRINGS
+
+**Mr Lyle Asante** — he put bottles on the lake on Friday; he writes poems; he wrote a poem about the lighthouse; and his
+wastepaper basket is full of poems *without rhyme*, like the Blot's.
+- *Looks worse:* [c:norhyme] "All week I've been trying to write a poem with no rhyme at all, like the Blot's."
+- *Cleared by:* [c:twelve] "On Friday at sunset, I will set twelve green bottles on the lake." (his are green; the Blot's is
+  brown) · [c:greenbottles] "Sunset: twelve green bottles bobbing past the island." · [c:rhymes] · [c:lasign] (voice, D4).
+- *His secret clears him:* [c:attempt9] "\"The lake is grey. The boats are still. / The swallows sleep upon the hill.\"" ·
+  [c:linetwo] "They always rhyme by the second line." He tried to write like the Blot, and could not do it once.
+- *And his own opinion:* [c:boatnooars] "In my opinion, a poem that does not rhyme is a boat without oars." A poet who
+  believes that does not write a poem without rhyme.
+
+**Mrs Morwenna Quayle** — she controls the shutters; she does not like the fireworks; the Gazette reminds everyone of her
+letter; and her own log says she rowed towards the slipway on Friday night, the night before the bottle came ashore.
+- *Looks worse:* [c:private] "10 pm: took the dinghy out, towards the slipway. Back 10:40. Private." · [c:privatemeans] "It
+  says \"Private\", and private is what it means." · [c:stiffletter].
+- *Cleared by:* [c:numbers] (voice) · [c:quaylesaid] "Nobody darkens my light while a boat is on the water. Nobody." ·
+  [c:nevermissed] "This light has not missed a night in thirty-one years." · [c:fogonly] "Closed only in fog."
+- *Her secret clears her (DOC 9.11, chapter 4):* [c:greenone] "On Friday night I rowed after one green bottle, nearly to the
+  slipway, and fished it out." · [c:forme] "Inside was \"The Island Lamp\". It is a poem about my light, written for me." ·
+  linked with [c:elevenback] "Eleven children have brought me thank-you notes. One green bottle is still out there
+  somewhere." The missing twelfth bottle is on her lamp-room shelf.
+- *The figurative trap:* [c:stiffletter] "Last year she wrote that they 'frighten the swallows out of their feathers'." No
+  swallow has ever lost a feather to a firework. It is figurative, and so is "stiff letter" ([c:notthreat] "But a stiff
+  letter isn't a threat. It's a stiff letter.").
+- *Nell's hunch:* 9, then 10 at the end of the board (below), crossed out in chapter 4. Quill: "Good. What made you cross
+  it out?" Nell: "A green bottle. And she talks in numbers. The poem doesn't have a single one."
+
+**The Blot** — wrote the poem, signed it, sealed it with a blot.
+- *Cleared of making a threat by:* [c:origcomma] (the original says no boats will be out) · [c:noharm] "Nobody hurt. Nothing
+  broken. Not one page torn." · [c:riddle] "It's not a threat, it's a riddle." · [c:eyelamp] "'The eye of the island' isn't
+  an eye at all. It's the lamp."
+- *Seed for Case 11 (not a clue here):* [c:violin] "3 pm: a visitor, a lady with a violin case. Asked how the fog shutters
+  work." · [c:useful] "She said, 'Leave that one. Some holes are useful.'" · [c:june] "June. A lady offered to paint the
+  roof for nothing." · [c:keeptill] "It will keep till it's needed." · [c:fiddle] "P.S. Someone was on the shore by the
+  slipway, playing a fiddle in the dark. I saw no face." Nobody in the case names her. The child may wonder.
+- *Also unmarked by the deductions, but markable:* [c:godark], [c:threathead], [c:cancelnote], [c:fossesaid],
+  [c:asapoem], [c:committee] (the clock).
+
+#### THE BOARD'S WRONG ANSWER (end of chapter 3)
+
+*The cork board in lamplight, propped against the wall of the Lakeside Café's back room, which Lyle has lent the agency
+for the day. Rain on the window. Across the cove: the boathouse, the island, the lighthouse. Nell pins Mrs Quayle's portrait in the middle and runs red string
+to four cards: the stiff letter, the shutters, the Gazette, and "Private".*
+
+**NELL:** Hunch-o-meter: ten. She doesn't like the fireworks. She holds the only shutters on the lake. On Friday night she
+rowed towards the slipway in the dark, and wrote "Private". In the morning, there's a bottle at the slipway, and the
+fireworks are cancelled. Exactly what she wanted.
+
+**CONSTABLE TULLY:** *(turning the Harbour Master's form over and over)* I'd rather not take her keys. But it does look
+bad.
+
+**QUILL:** Ten. You were wrong about the last ten, Nell.
+
+**NELL:** Not this one.
+
+**Chapter 3 ends.** *Through the rain on the window, a small boat is crossing the grey lake, rowed hard. Mrs Quayle is in
+it, oilskin hat pulled down. On the seat beside her, wrapped in a jumper, is a green bottle.*
+
+---
+
+### Chapter 4 — The timeline
+
+*Mrs Quayle ties up at the café jetty in the rain and climbs the steps to the back room, dripping, which she says is
+nothing after 112. She puts a green bottle on the table in front of Quill, and a folded page beside it, and will not sit
+down.*
+
+#### DOC 9.11 · note (arrives in chapter 4)
+- **Author:** Mrs Morwenna Quayle · **Date/time:** Saturday, 5 pm · **Found:** brought across the lake by Mrs Quayle
+  herself, rowing in the rain · **Picture:** a page torn from the back of the keeper's log, salt-stained, a column of
+  numbers showing through from the other side; beside it, a green bottle with a blue ribbon and a little paper swallow.
+
+> Detectives,
+>
+> You read "Private" in my log. Here is private.
+>
+> [[c:greenone|On Friday night I rowed after one green bottle, nearly to the slipway, and fished it out.]]
+>
+> [[c:forme|Inside was "The Island Lamp". It is a poem about my light, written for me.]]
+>
+> Nobody has written me a poem in sixty-two years. I did not want a child to find it first. Soppy. I know.
+>
+> I never touched a brown bottle. Don't tell the poet I kept it.
+>
+> [[c:fiddle|P.S. Someone was on the shore by the slipway, playing a fiddle in the dark. I saw no face.]]
+>
+> Wind west, 2. Oil, 4 pints.
+>
+> M. Quayle
+
+*Nell reads it twice. Then she takes out her pencil and crosses out the ten, slowly, so that everyone can see.*
+
+**QUILL:** Good. What made you cross it out?
+
+**NELL:** A green bottle. And she talks in numbers. The poem doesn't have a single one. *(To Mrs Quayle.)* I'm sorry. I
+gave you a ten.
+
+**MRS QUAYLE:** I've had worse marks. Now find out who frightened my town, before six, or I'll be handing my keys to a
+man who doesn't know which end of a lamp is hot.
+
+**DEV:** *(very quietly, holding up the note)* A fiddle. On the shore. In the dark. The night before the bottle came in.
+
+*Nobody answers him. The rain ticks on the window.*
+
+*The washing line, strung across the café's back room between a coat hook and a lamp. Cards marked ★ are placed by the
+child.*
+
+| # | Event | Time-word span | Placed by child |
+|---|---|---|---|
+| 1 | The boathouse roof is re-tarred | "May. Roof re-tarred." (DOC 9.8) | |
+| 2 | A lady paints the boathouse roof with silver-grey paint, overnight | [c:june] "June. A lady offered to paint the roof for nothing." | ★ |
+| 3 | Mr Crane's company pulls its Regatta sponsorship | [c:sponsor] "Our big sponsor pulled out in September." | ★ |
+| 4 | Mr Fosse writes to Pyke and Daughters, cancelling the fireworks | [c:thursday] "Thank you for your letter of Thursday" | ★ |
+| 5 | A lady with a violin case asks Mrs Quayle about the fog shutters | [c:violin] "3 pm: a visitor, a lady with a violin case." | |
+| 6 | Mrs Pyke replies: rockets back on the shelf | DOC 9.3, dated "Friday" | |
+| 7 | Lyle sets twelve green bottles on the lake | [c:twelve] "On Friday at sunset" | ★ |
+| 8 | Mrs Quayle rows towards the slipway and fishes out one green bottle | [c:private] "10 pm" · [c:greenone] "On Friday night" | ★ |
+| 9 | Asha finds the brown bottle at the slipway | [c:found] "at twenty past six on Saturday morning" | ★ |
+| 10 | Mr Fosse pins up the REGATTA WARNING | DOC 9.2, "Saturday, 10:00 am" | |
+| 11 | Mr Fosse tells the Gazette he cancelled "this morning" | [c:thismorning] | ★ |
+| 12 | Ada's note arrives | DOC 9.9, "Saturday, 4 pm" | |
+| 13 | Sunday: last boats home; the lake closes | [c:lasthome] "8:30 pm" · [c:closes9] "9:00 pm" | ★ |
+| 14 | The lamp is shuttered; one beam crosses the water | [c:tenthbell] "At the tenth bell" | ★ |
+
+**The line shakes** (gently) if card 4 is pegged after card 9, and Quill asks: "Read the date at the top of Mrs Pyke's
+letter. Can you thank someone for a letter they have not written yet?"
+
+**Chapter 4 ends.** *Asha pegs the last card. The café clock says ten to six.*
+
+**ASHA:** Ten minutes.
+
+*Through the café window, across the darkening cove, the lighthouse beam swings past the boathouse. For one blink, no
+longer, the grey roof winks silver. Then it is grey again.*
+
+**FELIX:** Did anyone else see that?
+
+**QUILL:** Later. Six o'clock first.
+
+---
+
+### Chapter 5 — The accusation
+
+*The question on the drawing-room card is not "Who wrote the poem?" (the board has answered that: the Blot). It is:*
+**"Who made the Regatta afraid, and why?"**
+
+**CULPRIT:** Mr Barnaby Fosse, Regatta Secretary. He cancelled the fireworks on Thursday because the Regatta could not pay
+for them. On Saturday he typed the poem in a hurry and moved a comma, and the copy read like a threat. Then he let the
+"threat" take the blame for the cancelled fireworks, and told the Gazette he had cancelled them "this morning".
+
+**MINIMAL EVIDENCE SET (three pieces: D5 and D1 both, plus D2 or D3):**
+1. **D5** (must be one) — the lie: [c:thismorning] against [c:thursday] and [c:found].
+2. **D1** (must be one) — the comma: [c:origcomma] against [c:typedcomma].
+3. **D2** or **D3** (either one) — the poem is safe, and means something else: [c:tenthbell] with [c:closes9], or [c:eye]
+   with [c:knothole] and [c:faces].
+
+*(D5 proves why he did it; D1 proves how the threat was made; D2 or D3 proves there never was a threat. Without D1, the
+lie has no threat to hide behind; without D5, the comma could be an accident.)*
+
+**WRONG-SUSPECT RESPONSES (Quill):**
+- **Mrs Quayle:** "Mrs Quayle was on the water on Friday night, true, and she doesn't like fireworks. But what colour was
+  the bottle she fished out? Count the numbers in her log. Then count the numbers in the poem."
+- **Lyle Asante:** "What colour are his bottles? And look in his wastepaper basket: how far does he get before a poem
+  rhymes?"
+- **The Blot:** "The Blot wrote the poem. Read the Blot's line again, the *original*, comma and all. Does it say a boat will
+  be out, or that none will?"
+- **Mr Fosse, but with D1 alone:** "A comma in the wrong place can be an accident. Two fingers, very fast. What did he *do*
+  with the accident? Look at his dates."
+
+**WEAK-EVIDENCE RESPONSE:** "That proves the poem is not dangerous. It does not prove who made the town think it was. Find
+the person who said one thing to the Gazette, while a letter on their own desk said another."
+
+---
+
+### The reveal
+
+*The Regatta office, Saturday, six o'clock: the committee's hour. Rain drums on the tin roof, and the clock above the door
+ticks loud enough to count. Mr Fosse, Mrs Quayle, Lyle and Mr Otterburn squeeze in among the whistle boxes. Constable Tully
+holds the original poem in an evidence bag, and Mrs Quayle's keys in his other hand. The Blot's card is pinned to the
+noticeboard, turning slightly in the draught. The child pins the evidence, one card at a time.*
+
+**QUILL:** Six o'clock. Before anyone decides anything, we read the poem. Properly.
+
+**NELL:** First: was it ever a threat? *(She holds the original and the typed copy side by side.)* The original says "No
+boats will be out." The copy says "No, boats will be out." One comma moved, and a riddle became a threat.
+
+**ASHA:** And it was timed for an empty lake. Last boats home at half past eight. Lake shut at nine. The light goes out "at
+the tenth bell".
+
+**DEV:** It was there from the very first page. *(He reads.)* "The last oar will lie on the grass like a spoon beside a
+plate." The oars are put away. *Then* the eye closes.
+
+**FELIX:** Second: who wrote it? Not Mr Asante. Footnote: nine attempts in his bin, and every one
+rhymed by line two.
+
+**LYLE:** *(scarlet)* It's a small, rhyming curse.
+
+**NELL:** Not Mrs Quayle. I gave her a ten, and I was wrong. On Friday night she rowed out for a green bottle, because the
+poem in it was written for her.
+
+**MRS QUAYLE:** *(not looking at Lyle)* It's on my lamp-room shelf. Don't let it go to your head.
+
+**LYLE:** *(beaming)* Too late.
+
+**QUILL:** Then who turned a riddle into a threat?
+
+**ASHA:** *(holding up two papers)* Here is the Gazette: "I cancelled the fireworks this morning, the moment I read it."
+Here is Mrs Pyke, on Friday: "Thank you for your letter of Thursday." Two days before I found the bottle.
+
+**DEV:** The fireworks were cancelled for money. The threat just arrived in time to take the blame.
+
+**MR FOSSE:** *(sitting down heavily on a box of whistles)* I didn't move the comma on purpose. Two fingers, ten in the
+morning. But when I read it back… nobody would ask about the money now. Mr Crane pulled out in September. I sold my own
+dinghy to pay for the cups, and it still wasn't enough for rockets.
+
+**MRS QUAYLE:** You let them think I'd put my light out on a lake full of children.
+
+**MR FOSSE:** *(quietly)* Yes. I'm sorry, Morwenna. Truly.
+
+**CONSTABLE TULLY:** *(holding out the keys, very relieved)* These are yours, Mrs Quayle.
+
+**FELIX:** And the roof the whole town can see, where nobody has ever seen a word? Mr Otterburn's book: "Grey as a
+heron." The paint: silver-grey. Grey on grey, by day.
+
+**MR OTTERBURN:** *(the most words anyone has heard him say)* Couldn't see it. Thought I'd dreamt her.
+
+**QUILL:** Then tomorrow, at the tenth bell, we read the roof.
+
+---
+
+### Epilogue
+
+#### The money
+
+The committee votes in four minutes flat, which Mr Fosse says is a record. The Regatta goes ahead. The Harbour Master's
+form goes into the stove.
+
+Tam Bellweather, who has been listening from the doorway with a bun, runs home through the rain. Ten minutes later the
+speaking-tube in the agency whistles, and Mrs Bellweather's voice comes up it.
+
+"The bakery has had its best Regatta weekend in twenty years," she says. "We'll pay for the rockets. On one condition. The
+quiet ones. For the swallows."
+
+Mrs Pyke, it turns out, has them on the shelf already. Rockets are patient.
+
+#### Regatta night
+
+The eights race at half past four. Asha's crew comes second by the length of a nose, because the captain kept looking at
+the lighthouse. "Worth it," she says, and writes "4:52 pm, second, worth it" in her timeline.
+
+At 8:30 the last boats come home in a lantern parade. At nine, Mr Fosse blows his whistle, and the lake closes. Not a single
+boat is out. Asha checks twice.
+
+At 9:30, Pyke and Daughters' quiet fireworks bloom over the water: gold and green and silver, and almost no bang at all. The
+swallows under the lighthouse gallery shuffle, and go back to sleep. Mrs Quayle, on the lighthouse rail, nods once, which
+from her is a standing ovation. Felix sneezes, once, from the smoke.
+
+Then the town gathers on the lawn opposite the boathouse for the prizes, and the clock on the café wall strikes ten.
+
+Out on the island, Mrs Quayle closes the fog shutters, one by one. *Clack. Clack. Clack.* Eight panels. The great lamp
+disappears.
+
+The lighthouse goes dark.
+
+Nobody screams. Nobody even gasps. Everyone on the lawn has read the original, pinned up beside Mr Fosse's apology on the
+boathouse board, comma and all.
+
+And through the knot-hole in panel 3, one long finger of light reaches out across the water. It touches the boathouse roof.
+
+The grey roof glitters. Across it, in silver letters taller than a rowing boat, one word shines out:
+
+**WORD**
+
+It has been there since June. Invisible as breath.
+
+Somewhere along the dark shore, beyond the last lantern, a fiddle plays four slow notes, and stops. Asha swings her torch
+that way. There is only the wet path, an empty bench, and the faint, sweet smell of violets.
+
+The whole lawn goes quiet. Then Tam starts clapping, and everyone joins in, and Lyle Asante has to sit down.
+
+"It's a riddle," he says to no one in particular. "And it's a good one. Oh, I wish I'd written it."
+
+#### The Ledger
+
+Back at the agency, very late, Dev unties the Blot Ledger and writes the ninth word. The ink spreads into the page.
+
+**UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD…**
+
+**DEV:** The Blot didn't break anything. Not even a scratch in the tar. Just a word that could only be read once, by one
+beam, by people who'd read the poem properly.
+
+**ASHA:** That's not a vandal. That's a puzzle-maker.
+
+**NELL:** A puzzle-maker who wants something found.
+
+**FELIX:** "Every word…" Footnote: I've read that somewhere. Somewhere I walk past every day. Footnote to the footnote: it's on
+the tip of my—
+
+*(A last, late rocket goes up over the harbour: quiet, gold. Everyone turns to watch it. Felix never finishes the footnote.)*
+
+**QUILL:** *(looking at the child)* He'll get there. So will you.
+
+#### The running jokes
+
+- **Biscuit** is found by Constable Tully in the cox's seat of the winning boat, wearing a laurel wreath somebody had hung
+  on the bow. Tully: "Who's boat is this, then?" Quill: "*Whose*. Whose boat. *Who's* means *who is*." Tully: "Well, who
+  is it? Because he's not getting out."
+- **Nell's hunch-o-meter:** at the reveal, Asha asks for a rating on Mr Fosse. Nell: "No hunch. I had evidence. It felt
+  strange. Good strange."
+- **Lyle**, walking home along the shore, is heard working on a poem with no rhymes at all. He gets as far as two lines
+  before one rhymes by accident. Attempt number ten.
+- **Ada's letter** to the old address has not come back yet. Mrs Achterberg, when asked, says only: "A letter that does not
+  return has found a door."
+
+#### The office object
+
+The brown bottle, with its black wax blot and the poem curled inside, goes on the shelf beside the map-maker's compass. When
+the evening light comes through the round window, it throws one small brown shadow across the Casebook Wall, like a finger
+pointing.
+
+---
+
+### Detective School drill — "One Comma"
+
+**Clue type:** punctuation. Built from DOC 9.1 against DOC 9.2.
+
+The child sees a pair of sentences, the same words in the same order, and chooses which one means what the card says.
+
+> **Card:** "There will be no cake."
+>
+> A. No cake, will be left on the plate when the party ends.
+>
+> B. No, cake will be left on the plate when the party ends.
+>
+> C. No cake will be left on the plate, when the party ends.
+
+- **Answer:** C (and A is a trap: the comma there does nothing useful, but it does not change who has cake).
+- **Round two:** "Let's paint, Granny." against "Let's paint Granny." The child matches each to a picture (painted, never
+  lettered): a grandmother holding a brush; a grandmother looking alarmed at a brush.
+- **Quill's follow-up:** "Which word did the comma turn into a whole answer by itself?" (*No.*)
+- **Round three (voice):** two short verses about the lake. One rhymes and ends with a little swallow; one does not and ends
+  "— B." The child says which is Lyle's and points to the two things that prove it.
+
+**Round three — the verses** *(Added 5 Oct 2026, owner-approved; for sign-off with the case.)* Both are lines from this
+case's own documents (DOC 9.5 and DOC 9.1).
+
+> **Verse A — Swallow Song**
+> Above the lake the swallows fly
+> and stitch a seam across the sky.
+> — L.A. (a little drawn swallow)
+>
+> **Verse B**
+> The swallows will fold their wings.
+> The last oar will lie on the grass like a spoon beside a plate.
+> — B.
+
+1. Which verse is Lyle's? **Answer:** Verse A. (Options: Verse A · Verse B · Both of them.)
+2. Proof one: which two words in Verse A rhyme? **Answer:** *fly* and *sky*. (Options: lake and swallows · fly and sky ·
+   stitch and seam.)
+3. Proof two: how does each verse end? **Answer:** A with a swallow, B with "— B." (Options: Both with a swallow · A with a
+   swallow, B with "— B." · Both with "— B.")
+4. Which verse has a title? **Answer:** Verse A. (Options: Verse A · Verse B · Neither.)
+5. Both verses are about swallows. Does that prove one person wrote both? **Answer:** No. Everyone at the lake writes about
+   swallows. (Options: Yes, same birds, same writer · No, everyone at the lake writes about swallows · Yes, because both
+   are about the lake.)
+
+- **Quill, after round three:** "The subject is the lake, not the writer. Rhyme, title and sign-off are the voice."
+
+---
+
+### Art and scene notes
+
+*No lettering in any painting. Every word on every document, notice, programme, newspaper and roof is live text set by the
+app, including WORD itself, which is drawn over the night plate by the app at the reveal.*
+
+#### Backgrounds
+- **The slipway at dawn:** mist on the water, a rowing eight with its oars feathered, the island lighthouse faint across the
+  lake, swallows skimming low. Soft pink and pearl-grey.
+- **The boathouse:** long, low and wooden, with a broad grey roof that runs nearly to the water like the back of a sleeping
+  animal. Swallows' nests under the eaves. A noticeboard by the door (sheets on it blank in the painting).
+- **The lighthouse lamp room:** a great glass lamp in the middle, eight wooden shutter panels hinged round it. **Panel 3 has
+  a visible knot-hole**, about the size of a coin, which must be readable in the close-up. A logbook with a pencil on a
+  string. Oil cans. A view of the lake through the gallery door.
+- **The Regatta office:** a tin roof, rain, boxes of whistles, cups on a shelf, a typewriter, programmes in stacks, a tide
+  table pinned over a letter.
+- **The Lakeside Café:** green bottles in every window, a counter piled with pamphlets, a long striped scarf on a hook, a
+  wastepaper basket overflowing with crumpled paper.
+- **The café's back room (chapters 3 and 4):** the agency's borrowed base for the day. A cork board propped on a chair, a
+  washing line strung from a coat hook to a lamp, rain on a wide window that looks across the cove to the boathouse and
+  the island. At dusk, painted twice: the grey roof, and the same roof catching one blink of silver as the beam swings by
+  (a glint only; never letters).
+- **Regatta night (the key plate):** painted twice, as the scene changes.
+  - *Before ten:* the lawn full of townspeople (mixed ages and families, nobody a type, faces small), lanterns, the
+    lighthouse lamp shining, quiet fireworks fading overhead.
+  - *At ten:* the lighthouse dark except for one narrow beam from the island to the boathouse roof. The roof glitters
+    silver where the beam lands. The app sets the word on the roof in live type, with a slow shimmer (a fade under reduced
+    motion). The painting itself carries only the glitter, never letters.
+
+#### Props
+- The message bottle (office object): brown glass, a cork, black wax pressed into a perfect round blot, the poem rolled and
+  tied with plain string.
+- Lyle's bottles: green glass, blue ribbon on the neck, a small paper swallow tied to each.
+- The typed REGATTA WARNING with a red-crayon box.
+- Mrs Pyke's letter under the tide table; Mrs Pyke herself on Regatta night, small, grey-haired, ear defenders round her
+  neck, delighted.
+- Ada's note on blue paper, with a pressed violet.
+- Mrs Quayle's green bottle (one of Lyle's twelve, blue ribbon, paper swallow) and her note on a torn log page.
+- The Harbour Master's form, and Mrs Quayle's ring of lighthouse keys in Constable Tully's large hand.
+
+#### Portraits (new this case)
+- **Mrs Quayle:** calm, offended, amused, relieved (add *thoughtful* for Q5: glasses pushed up, looking out to the water).
+- **Lyle Asante:** calm, nervous, offended, amused, relieved. Nervous shows him tugging his scarf.
+- **Mr Fosse:** calm, nervous, offended, guilty, relieved. Guilty: hat in hands, sitting on the box of whistles.
+- **The Blot:** one image only: the calling card on cork. It turns slightly in the light when the child chooses a question.
+
+#### Cutscene panels for the reveal (4)
+1. Two sheets side by side under Nell's hands: the cream original and the typed copy. The app sets their text; the painting
+   shows only paper.
+2. Mrs Pyke's letter and its date, under Asha's finger.
+3. Mr Fosse on the box of whistles, clipboard on his knees.
+4. Mrs Quayle at the window of the office, looking across at her lighthouse.
+
+#### Sound
+Water lapping; an oar's *clunk* on glass; rain on a tin roof; the Regatta office clock ticking; the clack of eight
+shutters; a hush; four slow notes on a fiddle, far off, and then nothing; the quiet fireworks (soft pops, never a big
+bang); applause on the lawn; a pen scratch as Dev writes WORD into the Ledger. None of it during read-aloud.
+
+---
+
+## CASE 10 — The Deed Dated Wrong
+
+*A Bizzing mystery*
+
+meta: level 5 · world: Lamplit Row (`study`) and the Forum (`forum`) · skills: `sequence` (dates and tenses), `vocab`,
+`contradiction`, `factopinion`, `voice` (author's purpose) · vanished word: **FOR** · office object: **Crane's red pencil** ·
+arc beats: the last Raman postcard (Reykjavík, the date written two ways); Crane's deed of sale undone by one tense;
+Pettigrew turns honest; the Blot is *ahead* of the agency (the word vanished from Crane's own deed before anyone saw it);
+the Ledger is one word short; Miss Delia Nove's first appearance on the page (the Blot, disguised: planted for Case 11);
+Crane's quiet scene with Ada; Nell sends her application.
+
+- **the clock:** at five o'clock today the Keeper must hand Crane the Library's keys on the Forum steps, and the doors close
+  "for improvements"; halfway, Crane moves it to four, and books his only witness onto the four o'clock ferry
+- **the impossible thing:** on the fourth of March the Keeper was on the mainland all day, yet her signature is on a deed
+  "signed in a quiet office" on Lamplit Row, so perfect that the expert has never seen two signatures so alike
+- **the false solution:** Mr Rupert Swale, the Keeper's old deputy, who knows her hand better than his own, won't say where
+  he has been, and walked out of Crane's office with a big envelope; Nell rates him ten. Broken in chapter 4 by DOC 10.11,
+  his letter from the Library returns box: he has been washing pots on the mainland since before the visitor form was signed
+- **hidden in plain sight:** the date at the foot of Crane's own notice, "03/14". There is no fourteenth month
+
+---
+
+### Case card
+
+> Silas Crane says he has **bought** the Great Library. His deed is in the Registry, signed by the Keeper herself.
+> Professor Penhallow says she never signed it. At five o'clock today she must hand him the keys, and the doors will
+> close. Read every date. Read every tense. Then read the small print.
+
+*(54 words)*
+
+---
+
+### Cast
+
+**Suspects (5)**
+
+| Name | Look | Manner | Expressions needed | Motive · Secret |
+|---|---|---|---|---|
+| **Silas Crane** | Tall, silver-templed, a camel coat, a red pencil behind one ear | Smooth and smiling; calls everyone "my friend"; never answers the question asked | calm, amused, offended, nervous, guilty, relieved | *Motive:* he wants the Library for "The Inkwell Experience"; *means and opportunity:* his red pencil, his safe, and the visitor form he carried away on 26 February · *Secret:* the last book he borrowed as a boy, the week his family moved away, is still on his desk, thirty-one years overdue |
+| **Mr Septimus Pettigrew** | Short and round, a brown suit one size too big, round spectacles he polishes when anxious, a satchel of papers held like a shield | Anxious and polite; talks in the passive voice when frightened; apologises to furniture | nervous, guilty, relieved, calm, offended, amused | *Motive:* nine years of never saying no to Crane; *means and opportunity:* he typed the draft, and his name is on the witness line · *Secret:* the satchel he will not let go of holds the draft deed in Crane's red pencil, which he has carried everywhere for two weeks "by accident" |
+| **Professor Orla Penhallow**, the Keeper | Grey bun, Library keys on a ribbon, a pencil in the bun | Crisp, fair, quietly terrified; dates everything | calm, offended, nervous, relieved, amused, guilty | *Motive:* the Scriptorium roof leaks, and the menders want ninety thousand crowns she does not have; *means and opportunity:* it is her name, and she did sign a page for Crane · *Secret:* she signed that page folded, without reading it, and has told nobody but her day book |
+| **Mr Rupert Swale** | Thin, a coat a size too large since spring, hands red and rough | Stiff and ashamed after the business of the map (Case 8); answers in full sentences | guilty, nervous, calm, relieved, offended, amused | *Motive:* the Keeper dismissed him; Crane paid him once before; *means and opportunity:* six years as her deputy, so he knows her signature better than his own · *Secret:* since February he has been washing pots in his sister's café on the mainland, and is too ashamed to say so |
+| **Dr Hollis Quarrender**, handwriting expert | A velvet waistcoat, a jeweller's eyepiece, a magnificent moustache | Florid; says "in my long experience" before everything | amused, calm, offended, nervous, guilty, relieved | *Motive:* a generous fee; *means and opportunity:* his report made the deed look proper · *Secret:* his eyes are not what they were, and he is too proud to wear spectacles, so he likes a photograph he can make large |
+
+**Helpers**
+
+- **Quill**: tiny deerstalker on; corrects grammar at the worst moments.
+- **Nell Okafor-Hart**: the hunch-o-meter is set to "Swale, 10". The application form is still in The Comet's basket.
+- **Asha and Dev Raman**: Mum's last postcard has arrived. Asha checks dates; Dev cracks the puzzle. The torch argument
+  continues.
+- **Felix Moreno-Lindqvist**: footnotes, and footnotes to footnotes.
+- **Inspector Ada Holloway**: at No. 9 Lantern Row with cold tea and Semicolon the parrot.
+- **Mrs Winifred Achterberg**: one proverb, perfectly timed.
+- **Constable Bram Tully**: paperwork, keys, cocoa; Biscuit still missing.
+- **Mr Reuben Osei**: now the Forum Registry clerk (the gavel's old friend from Case 4); precise, unhurried.
+- **Marlowe Finch**: on the Library desk; brings the envelope from the returns box at the end of chapter 3.
+- **Tam Bellweather**: the Lamplighters' note.
+- **Dr Leela Raman**: by postcard, from Reykjavík.
+- **Magistrate Ruth Abernethy**: for the ending only.
+
+---
+
+### Case opening (comic panels)
+
+1. **The agency, Saturday breakfast.** Frost on the round window; the harbour steams in the cold. Cinnamon buns rise up the
+   dumbwaiter, warm and sticky. Under one bun: a postcard with a puffin stamp. Dev grabs it. Asha grabs Dev. *DEV: "Mum's
+   last one! She says she's coming home." ASHA: "Read the date first. You always skip the date."*
+2. **The speaking-tube whistles.** Tam's voice, out of breath: *"Forum. Now. Mr Crane's put up a notice and the Keeper's
+   gone the colour of milk."* Quill is already reaching for the deerstalker. *QUILL: "Fewer questions. More bicycles."*
+3. **The Forum steps.** Gulls wheel and complain overhead. A crowd round the notice board, breath smoking. Crane on the top
+   step, camel coat, red pencil behind his ear, smiling down. Professor Penhallow at the bottom, keys clenched in one fist.
+   *PENHALLOW: "I never signed it." CRANE: "My dear Keeper. The Registry says you did. Five o'clock, on these steps. Do
+   bring the keys."*
+4. **Close on the Library's great doors behind them**, the carved motto lit by the low sun. Above them, the Clock Tower's
+   hands stand at a quarter past eleven. Nell looks up at the motto, just for a second. *NELL (thinking): "Every word, for
+   everyone. Not for sale."*
+5. **The Comet at the foot of the steps.** Nell's application form pokes out of the basket, bent and floury. She pushes it
+   back down. *NELL: "Hunch-o-meter: this is a forgery, ten out of ten." QUILL: "Then prove it. With nine of them, at
+   least. You have until five."*
+
+---
+
+### Chapter 1 — The scene
+
+*Saturday 14 March. A cold, bright morning on the Forum steps, with a wind off the harbour that turns the pages of
+everything. A crowd around the notice board. Professor Penhallow is white to the lips. The Library's great doors, with the
+motto carved above them, are behind her. Somewhere in the crowd a man is already measuring them with a tape.*
+
+#### DOC 10.1 · notice
+
+Author: Silas Crane · Date/time: Saturday 14 March, pinned at 11.00 · Found where: the Forum notice board ·
+Picture: a cream poster with a gold border on a cork board, a crowd's shadows across it.
+
+> **A NEW CHAPTER FOR INKWELL**
+>
+> Friends and neighbours, I am delighted to share wonderful news. [[c:annDate|On the fourth of March]], in a quiet office
+> and before a trusted witness, Professor Orla Penhallow signed the Great Library over to me. [[c:gladly|She did so gladly,
+> I am sure]], because she knows that a tired old building needs a firm hand.
+>
+> Nothing will be lost. Everything will be improved. From June, the Library will reopen as The Inkwell Experience, with
+> guided tours, a gift shop and a café. [[c:tickets|Tickets will be fairly priced.]]
+>
+> The deed was lodged at the Forum Registry this morning, so everything is entirely proper.
+> [[c:fiveKeys|At five o'clock today, on these steps, the Keeper will hand me the keys, and the doors will close for
+> improvements.]]
+>
+> Questions are welcome at my office on Lamplit Row, although I cannot imagine there will be many.
+>
+> Change can feel strange. Progress always does.
+>
+> With warm regards to every reader,
+> Silas Crane · [[c:noticeDate|03/14]]
+
+#### DOC 10.2 · report (the deed: a Registry copy)
+
+Author: typed for Silas Crane; copy certified by Mr R. Osei · Date/time: copied Saturday 14 March, 9.20 · Found where: the
+Forum Registry, handed over by Mr Osei · Picture: a long parchment-coloured sheet with a red wax seal, a neat white gap in one
+line.
+
+> **DEED OF SALE**
+>
+> [[c:deedDate|This deed is made on 03/04]], at Inkwell.
+>
+> The Keeper of the Great Library, Professor O. Penhallow, sells the Great Library, with its books, rooms and land, to
+> Mr Silas Crane.
+>
+> The Library is sold [[c:gap|in exchange ___ the sum of one hundred thousand crowns]], paid in full.
+>
+> From the date above, the Library belongs to Mr Crane. He may open it, close it or charge for it as he sees fit.
+>
+> Signed: *O. Penhallow*, Keeper
+>
+> [[c:witness|Witnessed by: S. Pettigrew]]
+>
+> *Clerk's copy note:* there is a neat gap after the word "exchange", the width of one short word.
+> [[c:gapnote|It was there when Mr Crane opened his own envelope at my desk.]] A small card fell out with the deed.
+> — R. Osei, Registry clerk
+
+#### DOC 10.3 · note (the calling card)
+
+Author: unknown ("B.") · Date/time: found Saturday 14 March, 9.05 · Found where: inside Crane's envelope, with the deed ·
+Picture: a small cream card with one perfect round ink blot in the corner.
+
+> A word for a word.
+> [[c:onlyone|After this, only one is left.]]
+> [[c:forthwith10|Read on, forthwith.]]
+> — B.
+
+#### DOC 10.4 · postcard
+
+Author: Dr Leela Raman · Date/time: written 4 March, arrived Saturday 14 March · Found where: the agency's dumbwaiter, under a
+cinnamon bun · Picture: front, a row of painted wooden houses, red, yellow and blue, below a snowy mountain; back, a puffin
+stamp.
+
+> Reykjavík, 4 March
+>
+> My darlings,
+>
+> Snow, puffins and a hot spring that smells of eggs! [[c:twoways|Here they write today's date as 4.3, day first, just
+> like we do at home.]]
+>
+> I spent the week in an old shipping office, reading Mr Crane's company papers. He bought a little museum here once and
+> shut it within the year. The people here still miss it.
+>
+> One thing jumped out. [[c:monthfirst|Every letter Mr Crane ever signed puts the month first, so 03/04 means the fourth of
+> March to him.]] He has done it for thirty years. Habits are like footprints.
+>
+> Puzzle for Dev: write the day I posted this card the Inkwell way and the Crane way. Are they the same day?
+>
+> Asha: check Dev's answer against my date. He forgets which way round.
+>
+> Home soon. Feed the periscope.
+>
+> All my love, Mum (Dr L. Raman)
+
+#### DOC 10.5 · log
+
+Author: Mr R. Osei, Registry clerk · Date/time: Saturday 14 March · Found where: the Registry counter, open at the day's page ·
+Picture: a ruled ledger with a brass corner, a pen in the gutter.
+
+> **FORUM REGISTRY — DAY BOOK**
+>
+> Saturday 14 March
+>
+> [[c:dayfirst|Registry Rule 1: every date in an Inkwell deed is read day first, then month.]]
+>
+> 8.50 · Visitor in the waiting room: [[c:delia10|Miss Delia Nove, puzzle-setter]], with a newspaper and a violin case.
+> She asked for nothing. She helped Mr Crane pick up his gloves when he dropped them, and held his envelope.
+>
+> [[c:lodged|9.05 · Deed of sale lodged by Mr S. Crane, in person.]] A gap found in the wording, and a card. Mr Crane
+> said, "A printing fault. Lodge it anyway." Lodged.
+>
+> [[c:queried|9.10 · Date on deed: 03/04. Query sent to Mr Crane's office.]] No reply.
+>
+> 9.40 · [[c:swalepapers|Mr R. Swale called to collect his own papers: a land map he lodged last year.]] He did not ask
+> about any deed.
+>
+> 11.00 · Mr Crane's notice pinned on the Forum board.
+>
+> — R. Osei
+
+#### DOC 10.6 · letter
+
+Author: Silas Crane · Date/time: dated 3 March; the envelope is postmarked "Inkwell, 3 March" · Found where: the
+*Inkwell Herald* letters desk. A copy was sent to the editor with a note: "Print when I say." · Picture: thick grey writing
+paper, a crane printed in the corner.
+
+> **Crane & Partners · Lamplit Row**
+>
+> [[c:letterDate|3 March]]
+>
+> Dear Partners,
+>
+> I write with the news we have waited two years for. [[c:wasSold|The Great Library was sold to me this week]], quietly
+> and properly, and the paperwork is in my safe.
+>
+> Our builders can begin in May. The reading rooms will become a café, and the Seal Room will make a charming gift shop.
+>
+> I expect a little noise from the Keeper, and from the children who run about town with notebooks. Ignore it. Noise is not
+> a lawyer.
+>
+> I shall lodge the deed when the moment is right, and announce it the same morning. Kindly keep this letter private until
+> then.
+>
+> Yours, with ambition,
+> S. Crane
+>
+> P.S. Pettigrew will witness. [[c:psWitness|He is nervous, but he will sign what he is given.]]
+
+#### DOC 10.7 · transcript (statement)
+
+Author: Mr S. Pettigrew, taken down by Constable B. Tully · Date/time: Saturday 14 March, 2 p.m. · Found where: Constable
+Tully's notebook, with a cocoa ring on the cover · Picture: a constable's notebook, ruled, a pencil stub tied to it with
+string.
+
+> **Statement of Mr Septimus Pettigrew, assistant and lawyer to Mr Crane**
+>
+> [[c:wasAsked|I was asked to witness the deed]] on the evening of 12 March. The papers were placed on the desk in front
+> of me. The Keeper's name had been signed already, and the ink was quite dry.
+>
+> [[c:didNotSee|I did not see it signed.]] I was told that it had been signed properly, earlier. I signed my own name
+> where a finger was pointing. The lamp was turned down afterwards, and the office was locked.
+>
+> I should like to say that nothing improper was done. [[c:notIntended|I am sure it was not intended to be.]]
+>
+> I am sorry to have taken up the Constable's afternoon. I have had very little sleep this week.
+>
+> Signed, S. Pettigrew
+
+#### DOC 10.8 · report
+
+Author: Dr Hollis Quarrender, "Expert in Hands" · Date/time: 13 March · Found where: pinned to the Registry copy of the
+deed by Mr Crane · Picture: heavy paper with a curly letterhead, an eyepiece drawn in the margin.
+
+> **Report on a signature, prepared for Mr S. Crane**
+>
+> I have studied the Keeper's signature on the deed with the greatest care. [[c:beautiful|It is a beautiful, convincing
+> hand]], confident and graceful. In my long experience, a forger's hand trembles, and this one does not tremble at all.
+>
+> [[c:feelCertain|I feel certain it is genuine]], and I would be astonished to be proved wrong.
+>
+> [[c:photo|I examined a photograph of the signature, sent to me by Mr Crane.]] I compared it with the Keeper's signature
+> on a Library visitor form, also sent to me by Mr Crane. [[c:sameStroke|The two match exactly, stroke for stroke, with
+> not a hair's difference.]]
+>
+> Nothing could be more reassuring.
+>
+> My fee has been paid, with thanks.
+>
+> Dr H. Quarrender
+
+#### DOC 10.9 · log and note
+
+Author: Professor O. Penhallow · Date/time: entries 26/2 and 4/3, note 14/3 · Found where: the Keeper's desk, the Library
+day book · Picture: a green leather day book, the Keeper's keys on its ribbon lying across it.
+
+> **GREAT LIBRARY — KEEPER'S DAY BOOK**
+>
+> 26/2 · Mr Crane visited and asked to see the Seal Room. Refused. [[c:visitorForm|I signed his visitor form at the foot
+> of a long page; the top was folded over.]] Careless of me. — O.P.
+>
+> [[c:away|4/3 · Keeper at the Mainland Archives meeting all day. Back 5/3 on the evening ferry.]] M. Finch on the desk.
+>
+> *Note added 14/3, for the detectives:*
+>
+> I did not sign any deed. I have asked myself whether that folded page could have been one. It could not.
+> [[c:carbon|The Library keeps a carbon copy of every visitor form, and mine is in the drawer, top and bottom.]]
+>
+> [[c:keeperDate|I write every date day first, as you see on every line here.]]
+>
+> One more thing. [[c:noHand|No one signs their name exactly the same way twice.]] My old teacher, Ada Holloway, taught me
+> that. If two signatures match perfectly, one of them was copied.
+>
+> O. Penhallow
+
+#### DOC 10.10 · note (the Lamplighters)
+
+Author: Tam Bellweather · Date/time: Saturday 14 March, noon · Found where: pushed under the agency door · Picture: a torn
+paper bag with flour on it, pencil, no punctuation.
+
+> seen mr swale come out of cranes office friday 8 oclock [[c:swaleEnvelope|with a big envelope]] he looked cross not
+> happy cross like he won something
+>
+> also [[c:pettBridge|mr p on the bridge after talking to himself i signed i signed i never saw]] he give the ducks his
+> whole sandwich
+>
+> also a tall lady with a grey plait outside the registry early saturday doing the crossword in ink
+>
+> no sign of biscuit tully is looking in the drains again
+>
+> tam
+
+*(DOC 10.11 is not on the desk yet. It arrives at the end of chapter 3.)*
+
+#### DOC 10.12 · report (the draft deed; unlocked by Pettigrew's interview, question 5)
+
+Author: typed by S. Pettigrew, corrected in red pencil by S. Crane · Date/time: typed 1 March · Found where: from Pettigrew's
+satchel, handed to the child · Picture: a typed sheet slashed with red pencil, a coffee ring, a pencilled margin note.
+
+> **DRAFT — NOT FOR LODGING**
+>
+> This deed is made on ______ . *[red: [[c:redDate|03/04. Write it MY way, as always.]]]*
+>
+> The Library is sold [[c:draftFor|in exchange for the sum of]] one hundred thousand crowns, paid in full. *[red: paid
+> later. Or not.]*
+>
+> Signed: ______ , Keeper. *[red: [[c:trace|Trace her name from the visitor form. Slowly.]]]*
+>
+> Witnessed by: ______ . *[red: [[c:redWitness|P. witnesses. He needn't watch, only sign.]]]*
+>
+> *Pencil note in the margin, in Pettigrew's hand:* I typed this on 1 March. I did not know then what the red would ask.
+> I know now, and I am ashamed. — S.P.
+
+**Chapter 1 ends** *(stage directions: the Forum Registry's waiting room. The clock above the counter ticks so loudly that
+it seems to be counting. A pale square of sun lies across an empty bench.)*
+
+*On the bench, folded neatly, is a newspaper. Its crossword is finished in ink, almost every square. The room smells
+faintly of violets, though there is not a flower in the building.*
+
+**ASHA:** *(the Keeper's day book in one hand, Dr Quarrender's report in the other)* On the fourth of March she was on the
+mainland. All day. And her name is on the deed, perfect to the last curl.
+
+**NELL:** So how does a Keeper on the mainland sign a deed on Lamplit Row?
+
+**DEV:** *(sniffing)* And who does a crossword in ink?
+
+**QUILL:** Five o'clock, detectives. Questions later. Interviews now.
+
+---
+
+### Chapter 2 — Interviews
+
+*Each answer arrives as a typed transcript on the desk. The portrait's expression is given in brackets.*
+
+#### SUSPECT Silas Crane
+
+*Crane's office on Lamplit Row: gaslight burning at noon, a model of "The Inkwell Experience" under glass, the Library's
+dome with a ticket booth glued to it. A tall clock ticks in the corner. On the desk, under a paperweight, lies a battered
+children's book with a Library label on its spine.*
+
+**Q1 · when · "When did the Keeper sign the deed?"** *(amused)*
+
+> My friend, it is on the notice and in the deed. [[c:craneFourth|The fourth of March, a perfectly ordinary Wednesday.]]
+> The Keeper came to my office, she signed, and we shook hands. I offered her a biscuit. She declined, which I thought a
+> little rude.
+
+**Q2 · what · "Why did you write to your partners about the sale?"** *(calm)*
+
+> [[c:craneAfter|I wrote to them after the sale, naturally.]] One does not tell one's partners about a thing that has not
+> happened yet. That would be counting chickens. I never count chickens. I buy the farm.
+
+**Q3 · what · "What does 03/04 mean?"** *(offended)*
+
+> It means the date, my friend. The fourth of March. Everybody reads it that way. Well, everybody sensible. I have written
+> dates the same way all my life, and nobody has ever complained.
+
+**Q4 · why · "Why do you want the Library?"** *(nervous, for the first time)*
+
+> Because free things are forgotten. Nobody values what costs nothing. I used to sit in that Library every afternoon, as a
+> boy, in the window seat above the harbour. Then we moved away. When I came back, it looked tired. I can make it shine.
+> Shining costs money.
+
+#### SUSPECT Mr Septimus Pettigrew
+
+*A bench on the canal bridge. The wind has turned, and smells of rain and river weed. The ducks are watching him
+hopefully. He has not let go of his satchel once.*
+
+**Q1 · who · "Who asked you to witness the deed?"** *(nervous)*
+
+> I was asked. [[c:pettPassive|The request was made in the office.]] It was made quite firmly. I would rather not say by
+> whom. Saying it out loud would make it true. I have been trying very hard for it not to be true.
+
+**Q2 · when · "When did you sign as witness?"** *(guilty)*
+
+> On the evening of the twelfth of March. A Thursday. I remember because Thursday is soup day, and I missed the soup.
+
+**Q3 · what · "Did you see the Keeper sign?"** *(guilty)*
+
+> No. I have said so to the Constable. The name was already there. I was told it was all proper. A witness is supposed to
+> watch, you know. That is the whole meaning of the word. [[c:witnessMeans|To witness is to see a thing done.]] I saw a
+> thing that was already done.
+
+**Q4 · why · "Why did you sign, then?"** *(nervous)*
+
+> Because I have worked for Mr Crane for nine years, and I have always signed. He is not cruel. He simply never hears
+> the word "no". So I stopped saying it. That was my mistake, not his.
+
+**Q5 · what · "Is there anything else we should read?"** *(relieved)* — *unlocks DOC 10.12*
+
+> *(A long silence. He opens the satchel.)* Yes. I typed the first draft myself, on the first of March. Mr Crane corrected
+> it in red, as he always does. I kept it. I told myself I kept it by accident. Here. I would like very much to stop being
+> afraid of a pencil.
+
+#### SUSPECT Professor Orla Penhallow, the Keeper
+
+*The Keeper's office: towers of returned books, a cold radiator that knocks like someone asking to come in, the keys on
+their ribbon. Under the window, a tin bucket catches a slow drip from the ceiling: plink, and a long wait, and plink.*
+
+**Q1 · what · "Could you have signed the deed by mistake?"** *(nervous)*
+
+> I have asked myself that a hundred times since breakfast. I signed one thing for Mr Crane: his visitor form, on the
+> twenty-sixth of February. The top was folded. That was careless. But the carbon copy is in my drawer, whole, and it is a
+> visitor form. I will show you.
+
+**Q2 · where · "Where were you on the fourth of March?"** *(calm)*
+
+> On the mainland, at the Archives meeting, all day, and very bored. I came back on the evening ferry of the fifth. Marlowe
+> kept the desk. The ferry ticket is in my coat, if you need it. You probably do.
+
+**Q3 · how · "How do you write a date?"** *(amused)*
+
+> Day first, then month. Always. It is the Inkwell way, and the Registry's rule. I would sooner write with my left foot
+> than put the month first.
+
+**Q4 · why · "Why are you so frightened?"** *(guilty)*
+
+> Because the Library's Charter, the one that keeps it free, has been lost for three hundred years. Without it, I cannot
+> prove the Library may never be sold. I can only prove I did not sell it. Please let that be enough.
+
+**Q5 · why · "Does the Library need money?"** *(guilty)*
+
+> *(She glances at the bucket.)* [[c:roofMoney|Yes. The Scriptorium roof leaks, and the menders want ninety thousand
+> crowns.]] We have nine. Mr Crane knows it. He offered to "help" in February. I said no, and I would say it again in the
+> rain.
+
+#### SUSPECT Mr Rupert Swale
+
+*The Registry's back bench, in the brown light under the pigeonholes. He holds a rolled land map as if it might bite,
+and keeps his hands out of sight whenever he can.*
+
+**Q1 · where · "Where were you on Friday at eight o'clock?"** *(guilty)*
+
+> At Mr Crane's office, as your Lamplighters saw. I took him a big envelope.
+> [[c:swaleBusiness|What was in it is between me and Mr Crane.]] He laughed. I left.
+
+**Q2 · what · "Tam says you looked cross, like you'd won something."** *(offended)*
+
+> Cross, certainly. He laughed at me. As for my face, I shall not explain it to a paper bag. *(Then, more quietly.)*
+> Something was won on Friday. Not by him.
+
+**Q3 · why · "Why were you at the Registry this morning?"** *(calm)*
+
+> To take my own old land map out of it. I lodged it last year, before all this. I did not want anything of mine in the
+> same building as anything of his. Mr Osei will tell you I never went near the deed.
+
+**Q4 · who · "Who could have written the deed?"** *(calm)*
+
+> Not the Keeper. In six years as her deputy, I never once saw her put the month before the day. She would rather eat a
+> book. [[c:knowHand|I know her signature better than my own.]] I posted a thousand letters with it. Look for someone who
+> writes dates the other way round.
+
+**Q5 · where · "Where have you been since February?"** *(guilty)*
+
+> [[c:notSay|Away. I would rather not say where.]] It is nothing I am proud of. *(He puts his hands in his pockets. Before
+> he does, you see them: pink and rough, as if they have been in hot water for weeks.)*
+
+#### SUSPECT Dr Hollis Quarrender
+
+*His study: a velvet chair, magnifying glasses of every size, a stuffed owl with one glass eye that seems to follow you.
+Dust turns slowly in the window light.*
+
+**Q1 · what · "What did you examine?"** *(amused)*
+
+> A photograph of the signature, my dear detective, and a very fine photograph it was. Mr Crane was kind enough to post it.
+> In my long experience, a good photograph tells you everything.
+
+**Q2 · what · "Did you see the real deed?"** *(nervous)*
+
+> The real deed? Well. No. It was locked in Mr Crane's safe, and then it was at the Registry, and I was very busy with a
+> duchess's diary. A photograph is very nearly the same thing. And, between ourselves, my eyes are not what they were. A
+> photograph can be made very large.
+
+**Q3 · what · "You say the two signatures match stroke for stroke. Is that good?"** *(calm, then nervous)*
+
+> It is splendid! Identical! Every loop, every curl. [[c:quarrenderIdentical|I have never seen two signatures so
+> perfectly the same.]] *(A pause.)* Never, in forty years. Not once. Oh dear.
+
+**Q4 · why · "Who paid you?"** *(guilty)*
+
+> Mr Crane. Generously. I see now that I was paid to have an opinion, and I gave him a lovely one. I shall write to the
+> Registry and withdraw it. An opinion is not a fact, however nicely it is dressed.
+
+**Chapter 2 ends** *(stage directions: the canal bridge, half past two. The sky has gone the grey of old pewter, and the
+first drizzle freckles the water. Constable Tully arrives at a jog, holding his helmet on.)*
+
+**CONSTABLE TULLY:** Two bits of news, and neither of them is cocoa. Mr Crane's moved the keys. Four o'clock now, not
+five. "The light is better for the photographs," he says.
+
+**CONSTABLE TULLY:** And he's bought Mr Pettigrew a ticket on the four o'clock ferry. A long holiday, he says. Paid.
+
+*Mr Pettigrew takes a ferry ticket out of his satchel, as if he had forgotten it was there, and looks at it for a long
+time. He does not say whether he will go.*
+
+**ASHA:** The only witness, on a boat, at the exact minute the keys change hands.
+
+**QUILL:** Ninety minutes, then. It sounds longer than an hour and a half. Spend it like an hour.
+
+---
+
+### Chapter 3 — The board
+
+#### DEDUCTIONS
+
+**D1 · meaning (date order) · "In Inkwell, the deed's date is a day that hasn't happened yet."**
+- Supporting spans:
+  - [c:dayfirst] "Registry Rule 1: every date in an Inkwell deed is read day first, then month."
+  - [c:deedDate] "This deed is made on 03/04"
+  - [c:lodged] "9.05 · Deed of sale lodged by Mr S. Crane, in person."
+  - [c:twoways] "Here they write today's date as 4.3, day first, just like we do at home."
+- Why it matters: read by Inkwell's rule, 03/04 is the **third of April**. The deed was lodged on 14 March, so it claims to
+  have been signed nearly three weeks in the future. As written, it cannot be valid.
+
+**D2 · voice (whose habit) · "The person who wrote the date puts the month first: Crane, not the Keeper."**
+- Supporting spans:
+  - [c:monthfirst] "Every letter Mr Crane ever signed puts the month first, so 03/04 means the fourth of March to him."
+  - [c:keeperDate] "I write every date day first, as you see on every line here."
+  - [c:redDate] "03/04. Write it MY way, as always."
+  - also accepted: [c:noticeDate] "03/14" (the date at the foot of Crane's own notice: there is no fourteenth month, so he
+    must write the month first) · [c:craneFourth] "The fourth of March, a perfectly ordinary Wednesday."
+- Why it matters: the date on the deed is in Crane's habit, not the Keeper's. **Step one of the two-step inference:** if
+  Crane wrote the date, he meant 4 March, which matches his own notice ("On the fourth of March").
+
+**D3 · contradiction (tense and date) · "Crane wrote that the Library *was sold* the day before the sale."**
+- Supporting spans:
+  - [c:letterDate] "3 March"
+  - [c:wasSold] "The Great Library was sold to me this week"
+  - [c:annDate] "On the fourth of March"
+  - [c:craneAfter] "I wrote to them after the sale, naturally."
+- Why it matters: **step two.** Taking Crane's own reading (4 March), his letter of 3 March speaks of the sale in the past
+  tense a day before it supposedly happened. The postmark fixes the letter's date. Crane's interview claim ("after the
+  sale") is the one lie he tells. Either reading of 03/04 makes the deed impossible: a future date in Inkwell's order, or
+  a sale described as finished before it began in Crane's.
+
+**D4 · fact-opinion · "The expert's report is opinion dressed as fact; its one real fact shows a tracing."**
+- Supporting spans:
+  - [c:beautiful] "It is a beautiful, convincing hand"
+  - [c:feelCertain] "I feel certain it is genuine"
+  - [c:photo] "I examined a photograph of the signature, sent to me by Mr Crane."
+  - [c:sameStroke] "The two match exactly, stroke for stroke, with not a hair's difference."
+  - [c:noHand] "No one signs their name exactly the same way twice."
+  - [c:trace] "Trace her name from the visitor form. Slowly."
+- Why it matters: "beautiful", "convincing" and "I feel certain" are opinions. The facts are that he saw only a
+  photograph, and that the signature is identical to the visitor form. Since no one signs exactly the same way twice, a
+  perfect match proves the signature was copied from the form.
+
+**D5 · meaning (the passive voice) · "Pettigrew's statement hides who asked him; the draft names him."**
+- Supporting spans:
+  - [c:wasAsked] "I was asked to witness the deed"
+  - [c:didNotSee] "I did not see it signed."
+  - [c:psWitness] "He is nervous, but he will sign what he is given."
+  - [c:redWitness] "P. witnesses. He needn't watch, only sign."
+- Why it matters: "was asked" never says *who* asked. Crane's own P.S. and red pencil fill the gap. And a witness who
+  "did not see it signed" has not witnessed anything ("To witness is to see a thing done"). The deed's witness line is
+  empty in all but ink.
+
+**D6 · meaning (the vanished word) · "The gap in Crane's deed is the word FOR, and the Blot took it before we arrived."**
+- Supporting spans:
+  - [c:gap] "in exchange ___ the sum of one hundred thousand crowns"
+  - [c:draftFor] "in exchange for the sum of"
+  - [c:gapnote] "It was there when Mr Crane opened his own envelope at my desk."
+  - [c:onlyone] "After this, only one is left."
+- Why it matters: "in exchange ___" can only take *for*, and the draft proves it. The gap was there before the deed
+  reached the Registry counter, so the Blot reached Crane's deed first. The Ledger now has ten words, and the card says
+  one is left.
+
+**D8 · inference (optional; the impossible thing) · "The Keeper was on the mainland, so her perfect signature was traced
+from the folded visitor form she signed for Crane on 26 February."**
+- Supporting spans:
+  - [c:away] "4/3 · Keeper at the Mainland Archives meeting all day. Back 5/3 on the evening ferry."
+  - [c:visitorForm] "I signed his visitor form at the foot of a long page; the top was folded over."
+  - [c:quarrenderIdentical] "I have never seen two signatures so perfectly the same."
+  - [c:noHand] "No one signs their name exactly the same way twice."
+  - [c:trace] "Trace her name from the visitor form. Slowly."
+- Why it matters: it answers *how could she?* without magic. She could not sign on Lamplit Row from the mainland, and she
+  did not. Her real signature went to Crane's office on 26 February, at the foot of a folded page, and was traced from
+  there, so slowly that it came out too perfect. It does not count toward the accusation, but it is the case's "aha".
+
+#### EARNED HINTS (one per deduction; each costs nothing but a pause)
+
+- **D1 · Asha:** "Which way round does Inkwell read a date? There's a rule. It's printed at the top of a page."
+- **D2 · Dev:** "Mum's postcard isn't only a puzzle. She says what Crane *always* does. Who else writes dates, in this case,
+  and which way round?"
+- **D3 · Ada (by speaking-tube from No. 9, tea going cold):** "A man may write a letter before or after a thing. His verb
+  tells you which he thought it was. Read the *verb*, then read the *date*."
+- **D4 · Mrs Achterberg:** "A peacock's tail is very fine, and it tells you nothing about the road." *(Felix, footnoting:
+  "She means the expert's adjectives are pretty and prove nothing. Footnote to the footnote: peacocks can't read.")*
+- **D5 · Quill:** "*I was asked.* By whom? The sentence has a hole in it, exactly the shape of a person. Find a document
+  that fills it."
+- **D6 · Felix:** "In exchange ___ the sum. Try every short word you know. Only one of them lets you breathe at the end of
+  the sentence."
+
+#### THE QUILL MOMENT
+
+When the child links D3 (the letter and the notice), the string turns gold, and Nell shouts, "He wrote it before it
+happened! Run to the Registry, before him and Pettigrew leave town!" Quill, already halfway out of the door, calls back:
+"Before *he* and Pettigrew leave. Subject, not object. Now, run!"
+
+#### RED HERRINGS
+
+**RH1 · the Keeper signed it by mistake.** She admits she signed a folded page for Crane, and the Library needs money
+badly.
+- Looks worse: [c:visitorForm] "I signed his visitor form at the foot of a long page; the top was folded over." ·
+  [c:roofMoney] "Yes. The Scriptorium roof leaks, and the menders want ninety thousand crowns."
+- Cleared by:
+  - [c:carbon] "The Library keeps a carbon copy of every visitor form, and mine is in the drawer, top and bottom."
+  - [c:away] "4/3 · Keeper at the Mainland Archives meeting all day. Back 5/3 on the evening ferry."
+- The folded page was a visitor form, and its carbon proves it. She was not even in Inkwell on 4 March. Crane did use
+  that form, though, as the thing he traced (D4).
+
+**RH2 · Swale, back for more (the false solution).** Seen leaving Crane's office with a big envelope "like he won
+something", then at the Registry on the morning the deed was lodged. He knows the Keeper's hand better than anyone, she
+dismissed him, and he will not say where he has been.
+- Looks worse: [c:swaleEnvelope] "with a big envelope" · [c:swaleBusiness] "What was in it is between me and Mr Crane." ·
+  [c:knowHand] "I know her signature better than my own." · [c:notSay] "Away. I would rather not say where."
+- Cleared by (DOC 10.11, chapter 4, and the Registry's times):
+  - [c:mainland] "Since the twentieth of February I have washed pots in my sister's café on the mainland."
+  - [c:ferryBack] "I came back on Friday's six o'clock ferry, for one reason only."
+  - [c:gaveBack] "I took a big envelope and gave back every crown he ever paid me."
+  - [c:knowNothing] "I know nothing about any deed, and I wish to know nothing."
+  - [c:swalepapers] "Mr R. Swale called to collect his own papers: a land map he lodged last year."
+- His secret clears him. He was on the mainland from 20 February to Friday 13 March, so he was washing pots when the
+  Keeper signed the visitor form (26/2) and when Pettigrew found her name already signed and dry (12 March). The envelope
+  went *into* Crane's office full of Crane's own money. "Like he won something" was relief. At the Registry he arrived
+  after the deed was lodged and took only his own map. And a forger who knew her hand by heart would not need to trace it.
+
+**RH3 · Pettigrew, the witness with a satchel.** His name is on the deed, he talks to himself on bridges, he will not open
+his satchel, and by half past two he has a ticket out of town.
+- Looks worse: [c:pettBridge] "mr p on the bridge after talking to himself i signed i signed i never saw" · [c:witness]
+  "Witnessed by: S. Pettigrew"
+- Cleared by: [c:redWitness] "P. witnesses. He needn't watch, only sign." · [c:psWitness] "He is nervous, but he will sign
+  what he is given."
+- He signed a line he should not have, and he knows it. But the satchel holds the draft that names who asked him, and the
+  ticket was bought for him, not by him. Saying no is the one thing he has never practised.
+
+#### THE UNRELIABLE NARRATOR
+
+**Crane's notice (DOC 10.1).** Its purpose is to persuade, not to report. "[c:gladly] She did so gladly, I am sure" is
+an opinion about someone else's feelings. "Everything will be improved" and "Tickets will be fairly priced" are promises,
+not facts. The only checkable claim in it, the date, is the one that collapses (D1–D3).
+
+#### THE PLANT (for Case 11; not needed to solve this case)
+
+- [c:delia10] "Miss Delia Nove, puzzle-setter", in the waiting room with a violin case, held Crane's envelope at 8.50.
+  Tam saw "a tall lady with a grey plait". The card ends "[c:forthwith10] Read on, forthwith." The child may pin these;
+  the Board accepts them as "noted for later" and the Ledger shows a small question mark.
+- Not marked, and not explained: the Registry waiting room smells of violets after she has gone, and her newspaper's
+  crossword is finished in ink, almost every square (chapter 1 ends; paid off in the epilogue).
+
+#### THE BOARD'S WRONG ANSWER (end of chapter 3)
+
+*The agency, ten past three. Drizzle on the round window; the harbour has gone the colour of a slate. Downstairs, the
+bakery's ovens tick. Nell pins Mr Swale's portrait in the middle of the cork board and runs red string to four cards: Tam's
+"big envelope", the Registry's 9.40, "I know her signature better than my own", and "I would rather not say where".*
+
+**NELL:** Hunch-o-meter: ten. Look at the draft. Mr Crane told *somebody* to trace her name. Who knows the Keeper's hand
+better than anyone alive? Her old deputy. She dismissed him. He was Crane's man on the map. He walks out of Crane's office
+with a big envelope, looking as if he's won. Next morning, he's at the Registry. And he won't say where he's been for
+three weeks.
+
+**CONSTABLE TULLY:** *(unclipping a small pair of silver handcuffs he has never once used)* I'd rather not. But it does fit.
+
+**FELIX:** Footnote: it fits *beautifully*. Footnote to the footnote: so did Dr Quarrender's report.
+
+**QUILL:** Ten again, Nell. And fifty minutes to four.
+
+**Chapter 3 ends.** *Feet on the thirty-nine stairs, taking them two at a time. Marlowe Finch bursts in, out of breath,
+holding too many books and one envelope.*
+
+**MARLOWE:** The Library returns box. It was in with the cookery books. It's for the Keeper, and it's Mr Swale's hand.
+
+*Everyone looks at the portrait in the middle of the board. Nobody touches the string.*
+
+---
+
+### Chapter 4 — The timeline
+
+*The agency, a quarter past three. Professor Penhallow has come up all thirty-nine stairs without stopping, which she says
+is nothing after a week like this. She opens the envelope with a paperknife. Everyone reads over her shoulder, which Quill
+says is rude, and then does too.*
+
+#### DOC 10.11 · letter (arrives in chapter 4)
+
+Author: Mr Rupert Swale · Date/time: Friday 13 March, late · Found where: the Library returns box, among the cookery books;
+brought by Marlowe Finch, Saturday afternoon · Picture: plain paper folded small, a damp ring from a teacup, the corner
+softened as if it has been held in a wet hand.
+
+> Dear Professor Penhallow,
+>
+> You were right to dismiss me after the business of the map. I have not asked for my post back, and I shall not.
+>
+> [[c:mainland|Since the twentieth of February I have washed pots in my sister's café on the mainland.]] It is honest work.
+> I was too ashamed to tell anyone, so I told nobody.
+>
+> [[c:ferryBack|I came back on Friday's six o'clock ferry, for one reason only.]] Tonight I went to Mr Crane's office for the
+> last time. [[c:gaveBack|I took a big envelope and gave back every crown he ever paid me.]] He laughed, which made me cross.
+> Then I walked out, and I felt lighter than I have in years.
+>
+> [[c:knowNothing|I know nothing about any deed, and I wish to know nothing.]]
+>
+> Tomorrow I shall collect my own old land map from the Registry, so that none of my papers sit beside his. Then I go back
+> to my pots.
+>
+> I could not face your desk, so this goes in the returns box. I am sorry.
+>
+> Yours, with apology,
+> Rupert Swale
+
+*Nell reads it twice. Then she takes out her pencil and crosses out the ten, slowly, so that everyone can see.*
+
+**ASHA:** He went to the mainland on the twentieth of February. The Keeper signed the visitor form on the twenty-sixth. He
+was washing pots while somebody else had her name.
+
+**NELL:** And the envelope went *in* full. "Like he won something." He had. *(Quietly.)* I gave him a ten. I'm sorry.
+
+**PROFESSOR PENHALLOW:** *(folding the letter very small)* Pots. Oh, Rupert.
+
+**CONSTABLE TULLY:** *(putting the handcuffs away, enormously relieved)* Then who did the tracing?
+
+**QUILL:** Whoever had the form. Put it on the line, and see who carried it away.
+
+*The washing line, strung across the agency from the hat stand to the speaking-tube. Cards marked ★ are placed by the
+child.*
+
+**EVENTS in true order** (child places the ones marked ★)
+
+| # | Event | Time-word span | Placed by child |
+|---|---|---|---|
+| 1 | Swale crosses to the mainland to wash pots | [c:mainland] "Since the twentieth of February" | ★ |
+| 2 | Crane visits the Library; the Keeper signs his folded visitor form | "26/2" [c:visitorForm] | ★ |
+| 3 | Pettigrew types the draft deed | "I typed this on 1 March" (DOC 10.12) | |
+| 4 | Crane writes to his partners: the Library "was sold" | [c:letterDate] "3 March" | ★ |
+| 5 | The Keeper is on the mainland all day; Crane's claimed signing day | "4/3" [c:away] · [c:annDate] | ★ |
+| 6 | Leela writes her postcard in Reykjavík | "Reykjavík, 4 March" | |
+| 7 | Pettigrew "witnesses" a name already signed and dry | "on the evening of 12 March" [c:wasAsked] | ★ |
+| 8 | Dr Quarrender praises a photograph | "13 March" (DOC 10.8) | |
+| 9 | Swale comes back on the ferry | [c:ferryBack] "Friday's six o'clock ferry" | |
+| 10 | Swale returns Crane's money | "friday 8 oclock" [c:swaleEnvelope] | |
+| 11 | Miss Delia Nove holds Crane's envelope | "8.50" [c:delia10] | |
+| 12 | Crane lodges the deed, gap already in it | "9.05" [c:lodged] | ★ |
+| 13 | Swale collects his own map | "9.40" [c:swalepapers] | |
+| 14 | Crane's notice goes up, signed "03/14" | "11.00" [c:noticeDate] | |
+| — | **The date on the deed, read the Inkwell way: 3 April** | [c:dayfirst] + [c:deedDate] | ★ (the line shakes: it hangs *after* today's peg) |
+
+The washing line has a peg marked **TODAY · 14 March**. When the child hangs "the deed's date" by Inkwell's rule, it lands
+to the right of TODAY and the line shakes gently. Hung by Crane's habit, it lands *after* the letter of 3 March that calls
+the sale finished, and the line shakes again. Either way, it doesn't fit.
+
+**Chapter 4 ends.** *Asha pegs the last card. Down at the quay, the ferry gives one long, low hoot: twenty minutes to
+four. Through the round window, far below on the Forum steps, a camel coat. A man looking at his watch.*
+
+**DEV:** Mr Pettigrew's on that boat.
+
+**QUILL:** Then we are not. Council chamber. Run.
+
+---
+
+### Chapter 5 — The accusation
+
+*The Forum's council chamber, ten to four. Rain on the tall windows; the gas lamps lit early. The mended gavel from Case 4
+sits on the table. Four of the five suspects face the child. The fifth chair, Mr Pettigrew's, is empty. Mr Osei has brought
+the Registry day book. Constable Tully has gone down to the quay.*
+
+**CULPRIT:** Silas Crane forged the deed of sale.
+
+**MINIMAL EVIDENCE SET** (exactly these three: D1, D3 and D4):
+1. **D1:** [c:dayfirst] + [c:deedDate]: by Inkwell's rule the deed is dated 3 April, in the future.
+2. **D3:** [c:letterDate] + [c:wasSold]: on 3 March, Crane already wrote that the Library *was* sold.
+3. **D4:** [c:sameStroke] + [c:noHand] (or [c:trace]): the signature was copied from the visitor form.
+
+*(D2, D5 and D6 are also accepted alongside them: they strengthen the case, but none of them replaces D1, D3 or D4. D1
+proves the deed cannot stand as written; D3 proves Crane knew it was a story before it "happened"; D4 proves the
+Keeper's name was traced, not signed.)*
+
+**WRONG-SUSPECT RESPONSES** (Quill)
+
+- **Mr Pettigrew:** "He signed something he should not have, and he knows it. But read his words again: 'I did not see it
+  signed.' Show me where *he* made the Keeper's name. Who asked him? The sentence won't say. Find a document that will."
+- **Professor Penhallow:** "She did sign one folded page, and the roof does leak. Now read what's in her drawer. And where
+  was she on the fourth? A Keeper on the mainland signs nothing in Lamplit Row."
+- **Mr Swale:** "Your hunch-o-meter liked him, Nell, and so did mine for a while. Read the letter from the returns box.
+  Where was he on the twenty-sixth of February? Then read the Registry's times. He came *after* the deed."
+- **Dr Quarrender:** "He's guilty of something, but it's carelessness, and a little vanity. He gave an opinion about a
+  photograph. Ask who sent the photograph."
+
+**WEAK-EVIDENCE RESPONSE** (Quill): "That's a feeling, and a good one. But a magistrate needs a date she can count on her
+fingers. Find me the day that hasn't happened yet, or the tense that came too early."
+
+---
+
+### The reveal
+
+*The council chamber, ten to four. Rain streams down the tall windows. Crane is still smiling, and checking his watch.*
+
+**NELL:** Mr Crane, your deed says it was made on 03/04.
+
+**CRANE:** The fourth of March. Shall we move on?
+
+**ASHA:** *(the day book)* Registry Rule 1: day first. That's the third of April. Your deed was signed on a day that
+hasn't happened yet.
+
+**CRANE:** *(a little less smiling)* A matter of style.
+
+**DEV:** *(The postcard.)* "Every letter Mr Crane ever signed puts the month first." And it was there from the very first
+page. *(The notice.)* You dated your own notice 03/14. There is no fourteenth month.
+
+**FELIX:** So you meant the fourth. *(The letter.)* Dated the third of March: "The Great Library *was sold* to me this
+week." Yet you told us, "I wrote to them after the sale, naturally." Footnote: *was sold* is finished. On the third,
+the sale hadn't started.
+
+**QUILL:** *Had not* started. Contractions in court, Felix? Carry on.
+
+**PROFESSOR PENHALLOW:** And my name? I was on the mainland all that day.
+
+*(The child lays the expert's report beside the draft deed. Red pencil: "Trace her name from the visitor form.
+Slowly.")*
+
+**DR QUARRENDER:** *(very small)* Too perfect. Oh dear. I should have worn my spectacles.
+
+**NELL:** You signed one folded page, Professor: his visitor form. He carried it away and traced it. Not Mr Swale: he was
+washing pots on the mainland, and came home only to give the money back.
+
+**MR SWALE:** *(scarlet, hands behind his back)* Every crown.
+
+*(The door bangs. Mr Pettigrew, soaked, holds up a ferry ticket torn in two.)*
+
+**MR PETTIGREW:** I was asked to witness. I will say it properly now. *Mr Crane* asked me. I did not see it signed. Nobody
+saw it signed, because nobody signed it.
+
+*(A long silence. Crane takes the red pencil from behind his ear and turns it over.)*
+
+**CRANE:** It would have been beautiful, you know. The Experience. Gold rope. A little shop. I'd have mended your roof.
+
+**PROFESSOR PENHALLOW:** I'd rather a bucket than a ticket. It is beautiful *now*. It is beautiful at four o'clock on a wet
+Tuesday, when a child who has nowhere else to go comes in and is warm.
+
+**CRANE:** *(quietly)* I know. I used to be that child.
+
+*(He puts the pencil on the table, next to the gavel. Outside, the Clock Tower strikes four. Nobody hands anybody any
+keys.)*
+
+**CONSTABLE TULLY:** *(arriving, dripping, cocoa in hand)* I was down at the quay. Have I missed it?
+
+**QUILL:** By ten minutes. As usual. Sit down; you're just in time for the paperwork.
+
+*(Word count: about 390)*
+
+---
+
+### Epilogue
+
+#### The sale is void
+
+Mr Osei writes one line in the Registry day book, in his unhurried hand: *"Deed of 03/04 struck out. Date impossible.
+Signature traced. Witness saw nothing. — R. Osei."* Then he blots it, which makes Dev jump.
+
+Dr Quarrender's letter of withdrawal arrives by the afternoon post. It is three pages long and contains the phrase "in my
+long experience" eleven times. On the last page it says, simply, "I was wrong. I am sorry."
+
+#### No. 9 Lantern Row, that evening
+
+*The fire is lit. Semicolon is asleep on the cello's scroll. Ada's tea, as usual, has gone cold beside her.*
+
+Silas Crane comes to the door alone, without his coat. Mrs Achterberg lets him in and says, "A cart before the horse goes
+nowhere, however fine the cart." He does not understand her. Then, standing in the hall, he does.
+
+The detectives are in the kitchen. They are not supposed to be listening. They are listening.
+
+**ADA:** You used to sit in the window seat above the harbour. Third shelf of the sea stories. You read with your mouth
+moving.
+
+**CRANE:** You remember that?
+
+**ADA:** I remember everyone who reads with their mouth moving. They're the ones who mean it.
+
+**CRANE:** I wrote the letter on the third because I was certain. I'd planned it so carefully that it felt finished. I
+wrote *was* because in my head, it already was.
+
+**ADA:** That is the oldest mistake in the world, Silas. Telling a story in the past tense before you've lived it.
+
+**CRANE:** Will she prosecute? The Keeper?
+
+**ADA:** That's for the magistrate. But I'll tell you what I'd want, if I were the Keeper. I'd want you inside the
+building. Not owning it. Shelving it.
+
+*(Crane laughs, then stops, because she isn't joking.)*
+
+*He takes something from his pocket and puts it on the table beside the cold tea: a small, battered book with a Library
+label on its spine.*
+
+**CRANE:** *The Lighthouse Boy.* Third shelf of the sea stories. I took it out the week we moved away. It is thirty-one
+years overdue.
+
+**ADA:** Then take it back yourself, on Monday. Hand it to the Keeper. She'll want to see your face when you do.
+
+*When he goes, the fog has come up from the harbour, and the gas lamps of Lantern Row wear it like wool. Mrs Achterberg
+shuts the door behind him and says, to nobody in particular, "Late fruit is still fruit."*
+
+#### The magistrate's decision
+
+On Monday, Magistrate Ruth Abernethy reads every document twice, which Quill says is the mark of a good magistrate.
+
+"The deed is void," she says. "Mr Crane, you tried to sell what was never yours, using someone else's name. You will
+volunteer at the Great Library for one year. Two afternoons a week, and Saturday mornings. You will shelve, mend and
+fetch. You will not be in charge of anything, including the biscuits."
+
+Mr Crane returns *The Lighthouse Boy* to the Keeper before the hearing, and pays the fine out of his own pocket, in small
+coins, one at a time. It takes some while.
+
+Mr Pettigrew, for his honesty, receives a warning and a handshake. He asks the magistrate whether the Library needs a
+lawyer who works for free. She says she will pass the question on. He looks as though someone has given him a medal.
+
+#### The Ledger
+
+That night, the child opens the Blot Ledger and writes the tenth word in ink: **FOR**.
+
+> UNDER · THE · CLOCK · THAT · NEVER · STRIKES · LIES · EVERY · WORD · FOR · ______
+
+"It's one word short," says Dev. "And the Blot got to Crane's deed *before* we did. Before anyone did. The Blot is ahead
+of us."
+
+"The Blot held his envelope," says Asha slowly, looking at the Registry day book. "Eight-fifty. Miss Delia Nove,
+puzzle-setter. Violin case."
+
+"A tall lady with a grey plait," says Nell, reading Tam's note again. "Doing the crossword in ink."
+
+Asha unfolds the newspaper from the Registry bench. The crossword is finished in ink, every square, except three, in a
+row, in the very middle. The clue beside them says: *Not against (3).*
+
+Nobody says anything for a moment. Downstairs, the bakery's ovens tick as they cool.
+
+"Footnote," says Felix. "*For* is one of the oldest words in English. It means 'in place of' and 'on behalf of'.
+Footnote to the footnote: the motto above the Library door has it too."
+
+He doesn't say anything else. But the child looks at the Ledger for a long time.
+
+#### Nell's application
+
+On the way home, Nell stops The Comet outside the Constabulary. She takes the application form out of her basket. It has
+been in there so long that it has a cinnamon smell and a bicycle-chain mark across one corner.
+
+"Hunch-o-meter," says Dev, "on whether they say yes."
+
+"No hunch," says Nell. "Evidence. I'll wait for it."
+
+She posts it. Quill, on the handlebars, says nothing at all, which from Quill is the highest praise there is.
+
+#### Biscuit
+
+Constable Tully finds Biscuit at last, curled up and snoring in the Registry's tray marked **PENDING**, on top of
+Mr Swale's old land map. "Pending," says Tully, lifting him out. "That's about right for him."
+
+#### The office object
+
+Crane's **red pencil** goes on the shelf above Quill's desk, between the map-maker's compass and the message bottle. When
+the child taps it, a small card appears: *"The past tense is a promise that something has finished. Check that it has."*
+
+---
+
+### Detective School drill
+
+**Two Ways to Write a Day** (Timeline tile)
+
+Eight dates appear on postcards, each written with numbers: 03/04, 12/01, 05/06, 11/11, 07/02, 01/12, 10/03, 06/05. Above
+the washing line, a sign says either **INKWELL WAY (day first)** or **CRANE WAY (month first)**. The child pegs each card
+under its month. Then a second round mixes in sentences: "On 3 March he wrote that it *was sold*. It was sold on 4 March."
+The child marks which sentence can't be true.
+
+**Why this drill:** the case turns on knowing that a date's meaning depends on its writer's rule, and that a tense makes a
+claim about time.
+
+---
+
+### Art and scene notes
+
+**Backgrounds**
+- **The Forum steps, morning:** pale March sun, long shadows, a crowd in coats around a cork notice board. The Library's
+  great doors in the distance with the carved motto rendered as an *unreadable* band of carving (no lettering; the motto
+  is set live in text when tapped). This is the last time before Case 11 that the door appears; it should be clearly
+  visible and lit.
+- **The Forum Registry:** brass counter, pigeonholes, a tall clock with hands, a waiting room bench. A violin case leans
+  at the end of the bench in the "8.50" panel, its owner hidden behind a newspaper. In the chapter 1 hook the bench is
+  empty: a pale square of sun, the folded newspaper, nothing else.
+- **Crane's office, Lamplit Row:** gaslight at noon, a glass case holding a model of the Library with a tiny ticket booth,
+  a heavy black safe, a red pencil, a tall ticking clock, and under a paperweight a battered children's book with a
+  Library label on its spine (his secret, in plain view).
+- **The Keeper's office:** returned books in towers, a tin bucket under a drip from the ceiling.
+- **The agency in drizzle:** the round window streaked, the harbour slate-grey, the cork board with red string to Swale's
+  portrait (chapter 3), then the washing line from the hat stand to the speaking-tube (chapter 4).
+- **No. 9 Lantern Row, evening:** fire, cello, teetering books, Semicolon asleep; the kitchen door ajar with five faces
+  in the gap.
+- **The council chamber:** tall windows streaming with rain, gas lamps lit early, long table, the mended gavel, one
+  empty chair until the door bangs open.
+
+**Props**
+- the deed (cream, red wax seal, a clean gap in one line); the draft deed (typed, slashed with red);
+- the Reykjavík postcard (front: painted houses below a snowy mountain; puffin stamp; no lettering on the front);
+- the calling card (cream, one perfect blot);
+- Tam's flour-dusted paper bag; Swale's big envelope; Swale's letter, softened at one corner;
+- the Registry newspaper, its crossword inked in except three empty squares in a row (no readable lettering: the clue
+  is set live in text);
+- Pettigrew's ferry ticket, torn neatly in two; *The Lighthouse Boy*, a battered children's book (no readable title on
+  the cover);
+- Crane's red pencil (the office object): a short, much-sharpened red pencil with a crane stamped in gold on the end.
+
+**Portraits and expressions**
+- **Crane:** must move from amused to *guilty* to *relieved* over the case; the relieved expression in the No. 9 scene
+  should be the first unguarded face he has shown all season.
+- **Pettigrew:** nervous throughout, and *relieved* when he hands over the draft. The relieved expression should look
+  younger.
+- **Penhallow, Swale, Quarrender:** the full set of six. Swale's hands are pink and rough (pot-washing), and he hides
+  them in most poses.
+- **Miss Delia Nove** is *not* portrayed in this case: only a violin case, a grey plait over a shoulder, a newspaper.
+
+**No lettering in any painting.** Documents, notice and deed are set live; the motto on the door is carved texture only.
+
+---
+
+## CASE 11 — The Clock That Never Strikes
+
+*A Bizzing mystery · the season finale*
+
+meta: level 5 · world: the Scriptorium (`scriptorium`), the Seal Room · skills: every skill, led by `voice`, `sequence`,
+`punctuation`, `figurative`, `detail`, and a two-step inference · vanished word: **EVERYONE** (never hidden: the motto above
+the Library door) · office object: **the Charter's ribbon** · arc beats: the Blot unmasked as Odile Vane; the full message
+read; the Founding Charter found under the Seal Room floor; the Library can never be sold; Odile and Ada reconciled; Felix's
+unveiling speech; Nell made Junior Inspector; Crane, grudgingly, enjoying a book; Biscuit found; Quill pins the ribbon; the
+Reading Door's story told, and the Door left ajar for Season Two.
+
+**Mystery pass (6 Oct 2026).**
+- **Stakes and the clock:** midnight, when the Clock Tower strikes twelve; miss it and the Blot leaves on the first boat.
+  On Monday at nine the Review Committee votes on a fee at the Library door, and only the Charter can stop it.
+- **The impossible thing:** a fresh calling card lies on the floor of the Seal Room, a room locked since the autumn. The
+  Keeper's key never leaves her ribbon, and there is not one footprint in the dust.
+- **The false solution:** Ada. She has the cello case, the "O.", the Charter story, and the only other key to the new lock,
+  cut after Mr Swale and the map (Case 8). Nell is
+  at ten and Tully has the handcuffs out by the end of Chapter 3. Ada's own answer at the start of Chapter 4 breaks it.
+- **The clue in plain sight:** Tam's "echo" on Lamplit Row in Chapter 1. It was never an echo. It was the other half of the
+  duet.
+
+---
+
+### Case card
+
+> The last calling card says only: *"Now read it all."* The Ledger has ten words and one empty line. At midnight, when the
+> Clock Tower strikes twelve, the agency must enter the Seal Room, locked since autumn, where a fresh card already waits.
+> On Monday at nine, the Library's future goes to a vote. Five suspects. One last word.
+
+*(59 words)*
+
+---
+
+### Cast
+
+**Suspects (5)** for who the Blot is
+
+| Name | Look | Manner | Motive · Secret | Expressions needed |
+|---|---|---|---|---|
+| **Marlowe Finch**, 16, assistant archivist | Too many books, inky fingers, a cardigan buttoned wrong | Nervous, brilliant, apologises in writing as well as aloud | *Motive:* loves the Library's oldest wing; the Blot's game keeps its press alive. · *Secret:* he wipes the press clean for a stranger, three times a week, so the Keeper won't close the alcove. | nervous, guilty, relieved, calm, amused, offended |
+| **Mrs Winifred Achterberg**, Ada's housekeeper | Flour on her sleeves, a basket on one arm, very upright | Speaks only in proverbs; looks at you until you understand them | *Motive:* loyal to Ada, and to the old days, and would do much to bring them back. · *Secret:* she recognised Odile at the plum stall in October, and kept quiet so as not to break Ada's heart a second time. | calm, amused, offended, nervous, relieved, guilty |
+| **Professor Orla Penhallow**, the Keeper | Grey bun, the keys on their ribbon, a pencil in the bun | Crisp and fair; has relaxed a little since Case 10, but only a little | *Motive:* the Review Committee votes on Monday; only the Charter can save her Library, and she holds one of the two Seal Room keys. · *Secret:* she leaves the Nave door on the latch every night for the unknown printer, against her own rules. | calm, offended, nervous, relieved, amused, guilty |
+| **"Miss Delia Nove"**, visiting puzzle-setter (Odile Vane) | Tall, a long grey plait, a green coat, a violin case that never leaves her hand | Courteous, amused, answers questions with better questions | *Motive:* to finish the sentence she began reading forty years ago, before the Library can be sold. · *Secret:* every night at eleven she plays the other half of Ada's duet from the Nave alcove, and Ada's letter to the old address is in her violin case. | amused, calm, nervous, guilty, relieved, offended |
+| **Inspector Ada Holloway (retired)** | Shawl, cardigan, reading spectacles on a chain, a cello case | Teaches by riddle; never gives an answer; tea forever cold | *Motive:* the Charter is her one unsolved case; she could stage a hunt to make the children find what she could not. · *Secret:* she kept the old Seal Room key for forty years and told the Keeper she had lost it; and she plays at eleven with the window open, in case Odile is near enough to hear. | calm, amused, offended, nervous, relieved, guilty |
+
+**Helpers**
+
+- **Quill**: deerstalker on; one grammar correction, at exactly the wrong moment.
+- **Nell Okafor-Hart**: hunch-o-meter at "Ada, 10". Waiting for a letter from the Constabulary.
+- **Asha and Dev Raman**: Asha's timeline; Dev's cipher notebook; the torch, as ever, disputed. Their mother comes home.
+- **Felix Moreno-Lindqvist**: sneezes in the Scriptorium; gives the unveiling speech.
+- **Constable Bram Tully**: keys, cocoa, a pair of small silver handcuffs he has never used; Biscuit missing again.
+- **Tam Bellweather** and the Lamplighters: the comma whistle.
+- **Silas Crane**: in a volunteer's apron, shelving; **Mr Pettigrew**, the Library's new unpaid lawyer.
+- **Semicolon** the parrot.
+
+---
+
+### Case opening (comic panels)
+
+1. **The agency, Saturday 21 March, morning.** Fog on the harbour; the masts are only pencil lines. The dumbwaiter rattles
+   up. On the plate: two cinnamon buns and a small cream card with a perfect blot. Tam, at the speaking-tube: *"wasn't me!
+   i only put the buns in!"*
+2. **Close on the card.** Four words. The whole agency leans in so far that Felix's hat falls off. *DEV: "That's it?"
+   NELL: "That's everything."*
+3. **The Casebook Wall.** Eleven pinned cases, red string, a ribbon-tied notebook: the Blot Ledger, one line empty. Behind
+   the wall, the painted Reading Door, shut. The child's hand hovers over the Ledger with a pen. *QUILL: "Not yet. You don't
+   write a word you haven't found."*
+4. **No. 9 Lantern Row.** Ada at the window, cello case open, holding a bundle of old letters tied with a faded ribbon.
+   Semicolon on her shoulder. Down in the foggy street, unnoticed, a tall figure in a green coat stops under the window,
+   listens, and walks on. *ADA: "I have kept these for forty years. I think, this morning, I must let someone else read
+   them."*
+5. **The Great Library's door at dusk**, the carved motto above it catching the last light. Across Lamplit Row, the Clock
+   Tower's hands stand at six. The detectives run underneath the motto without looking up. *QUILL: "Six hours to midnight.
+   Walk. Read. Don't rush."* **Hold on the motto** for one beat after they've gone.
+
+---
+
+### Chapter 1 — The scene
+
+#### DOC 11.1 · note (the last calling card, and what was folded inside it)
+
+Author: "B." · Date/time: Saturday 21 March, delivered at 7 a.m. · Found where: the agency dumbwaiter, between two buns ·
+Picture: a cream card with one perfect blot, a folded slip of thinner paper tucked behind it.
+
+> **On the card:**
+>
+> [[c:readAll|Now read it all.]]
+> — B.
+>
+> **On the folded slip:**
+>
+> You are invited to the Seal Room of the Scriptorium at midnight tonight. [[c:forthMidnight|Come forthwith when the
+> Clock Tower strikes twelve]], and bring the Ledger. Ask the Keeper to bring her key.
+>
+> Bring the newest detective, who reads slowly and well. Bring Inspector Holloway, if she will come. She will know why.
+>
+> Do not be late. If nobody comes by the last stroke, I shall take it that nobody reads any more, and I shall leave
+> Inkwell on the first boat.
+>
+> Nothing will be taken from anyone tonight. Something will be given back.
+> — B.
+
+#### DOC 11.2 · list (the calling cards, copied out)
+
+Author: Dev Raman · Date/time: copied Saturday morning · Found where: Dev's biscuit tin of evidence · Picture: a page of
+squared paper, each card's words copied in Dev's careful capitals, a blot drawn beside each.
+
+> **THE BLOT'S CARDS (my copy, the important ones)**
+>
+> Case 0, the kennel: "Read carefully. — B."
+>
+> Case 3, the fountain: "[[c:cardFountain|Look below the surface. Read on forthwith. — B.]]"
+>
+> Case 6, the petition: "Count the words, not the names. — B."
+>
+> Case 7, the Playhouse: "[[c:cardGap|A word can fall through a gap and still be there.]] — B."
+>
+> Case 9, the bottle: "Look where the light falls. — B."
+>
+> Case 10, Crane's deed: "[[c:cardDeed|A word for a word. After this, only one is left. Read on, forthwith. — B.]]"
+>
+> Case 11: "Now read it all. — B."
+>
+> **Notes.** [[c:dashB|Every card ends the same way: a long dash, a space, then the letter.]] Never a short dash. Never
+> just the letter.
+>
+> "Forthwith" turns up on three different notes now, counting tonight's invitation.
+> [[c:felixForth|Felix says nobody under seventy says "forthwith".]] Felix says a lot of things. He is usually right,
+> which is annoying.
+
+#### DOC 11.3 · log (the Blot Ledger)
+
+Author: the newest detective (the child) · Date/time: kept all season · Found where: the ribbon-tied notebook on the Casebook
+Wall · Picture: a small notebook, ten words inked in, one line ruled and empty, with a tiny blot beside each word.
+
+> **THE BLOT LEDGER**
+>
+> 1 · UNDER · a sign in the Story Garden
+> 2 · THE · a bookshop window, Lamplit Row
+> 3 · CLOCK · the fountain plaque
+> 4 · THAT · the Forum's carved motto
+> 5 · NEVER · a Playhouse poster
+> 6 · STRIKES · the Forum clock's notice
+> 7 · LIES · the Playhouse motto
+> 8 · EVERY · the Scriptorium copy-book
+> 9 · WORD · painted on the boathouse roof
+> 10 · FOR · Mr Crane's own deed
+> 11 · ______
+>
+> [[c:ledgerLine|Read in order so far: UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD FOR]]
+>
+> *Asha's note in the margin:* [[c:notDestroyed|Ten words, ten cases, and not one of them was torn out or scratched
+> away.]] Every gap is neat. Where did they go?
+
+#### DOC 11.4 · letter
+
+Author: "O." · Date/time: forty years ago, undated · Found where: Ada's cello case, in a bundle tied with faded ribbon ·
+Picture: a thin, much-folded letter in violet ink, a pencilled note on the envelope.
+
+> *On the envelope, in pencil:* [[c:vaneName|Odile Vane's last letter. Do not lose. A.H.]]
+>
+> Dear Ada,
+>
+> [[c:odileForth|I am going away, and I am going forthwith]], before you can talk me out of it.
+>
+> You say the Charter is a legend. I say it is a sentence that nobody has finished reading. You told me to stop looking.
+> I cannot stop; you know I cannot.
+>
+> [[c:odileViolin|I am taking my violin.]] One day I shall play it with your cello again, if you will let me. Do not wait
+> for me. Do look for me.
+>
+> You taught me to read. One day I'll show you what it's for. When I come back, I shall bring the whole sentence, or I
+> shall not come back at all.
+>
+> Forgive me if you can.
+>
+> [[c:dashO|— O.]]
+
+#### DOC 11.5 · log (Asha's timeline)
+
+Author: Asha Raman · Date/time: compiled Saturday morning, from four old case files · Found where: Asha's timeline
+notebook, the one with breakfast in it · Picture: a ruled notebook, a long line drawn across two pages, pegs inked on it.
+
+> **ASHA'S TIMELINE: THE PUZZLE-SETTER, FOUR TIMES**
+>
+> **Case 3, the Fountain.** [[c:olive|Tuesday, 6 p.m.: "Mrs Olive Dean, visiting puzzle-setter" signs the Fountain
+> Committee's guest book.]] Wednesday, 7 a.m.: CLOCK gone from the plaque.
+>
+> **Case 7, the Playhouse.** [[c:elodie|Dress rehearsal, 7 p.m.: "Mme Elodie Van, puzzle page" is listed in the
+> programme.]] Same night, after the lantern fell: LIES gone from the motto.
+>
+> **Case 9, the Lighthouse.** Thursday, 3 p.m.: a lady with a violin case asks how the fog shutters work. No name at all.
+>
+> **Case 10, the Registry.** [[c:delia|Saturday, 8.50 a.m.: "Miss Delia Nove, puzzle-setter" holds Mr Crane's
+> envelope.]] 9.05 a.m.: FOR found gone from his deed.
+>
+> Three names. Four hats. [[c:sameLady|Every witness says the same: tall, a grey plait, a violin case.]]
+>
+> Each time, she arrives *before* the word goes, and nobody sees her after.
+>
+> Breakfast today: toast, 7.10. Argued with Dev about the torch, 7.12. Still my turn.
+
+#### DOC 11.6 · diary (Dev's cipher notebook)
+
+Author: Dev Raman · Date/time: Friday night and Saturday morning · Found where: Dev's cipher notebook, lemon-juice stains on
+the cover · Picture: a notebook page with letters written in a circle, arrows between them, a little ladder drawn in the
+margin.
+
+> **DEV'S CIPHER NOTEBOOK**
+>
+> The cards are printed, not written. Under Felix's magnifying glass, every small "e" has the same tiny chip in its top
+> loop.
+>
+> [[c:press|I found the same chipped "e" on the old hand press in the Scriptorium's Nave alcove.]] Somebody prints there.
+> The ink on the rollers is fresh.
+>
+> [[c:ladder|There is a step-ladder in the corner of the alcove, under a little brass grille, with ink on the top step.]]
+> Why does a printing press need a ladder?
+>
+> NAVE. Four letters. I always try them backwards and round about: E-V-A-N. A-V-E-N. V-A-N-E.
+>
+> [[c:naveVane|Turn NAVE round and it spells VANE.]] I don't know anyone called Vane. Asha says a vane is the thing on a
+> roof that shows which way the wind blows. She says that's not a clue, that's weather.
+>
+> I think it's both.
+>
+> P.S. I owe Asha the torch on Tuesday. She says Monday. She has written it on her timeline, which is cheating.
+
+#### DOC 11.7 · note
+
+Author: Marlowe Finch · Date/time: pinned this week · Found where: on the old hand press in the Nave alcove, with the key log
+below it · Picture: a note on lined paper pinned to a wooden press; below it, a ruled key log in a brass frame.
+
+> **Library key log, Nave alcove, this week:**
+> [[c:keyLog|M. Finch: Monday, Wednesday, Friday, 5 p.m., returned 5.30.]]
+>
+> **Note pinned to the press:**
+>
+> To whoever keeps using this press: hello! Sorry!
+>
+> [[c:marloweClean|I clean the ink off the rollers every Monday, Wednesday and Friday]], so the Keeper won't close the
+> alcove. That's why my fingers are always blue. People keep asking.
+>
+> [[c:marloweKind|I don't know who you are, but you never break anything, so I'm covering for you a little.]] Please wipe
+> the rollers when you've finished. Please also don't tell anyone I wrote this.
+>
+> Also, the alcove smells of violets every morning. Is that you? It's nice.
+>
+> Sorry again!
+> M.F. (sorry!)
+
+#### DOC 11.8 · notice (staff memo)
+
+Author: Professor O. Penhallow · Date/time: Monday 16 March · Found where: the staff-room board · Picture: a typed memo on
+Library paper, four drawing pins, one of them crooked.
+
+> **GREAT LIBRARY · STAFF MEMO · from the Keeper**
+>
+> 1. [[c:banForth|The word "forthwith" is banned from all Library notes. It is pompous. Say "now".]]
+>
+> 2. The Seal Room stays locked. [[c:onlyKey|My key stays on my ribbon, and I have not opened that door since the autumn.]]
+>
+> 3. Whoever is printing in the Nave alcove: I know about it, and I am pretending I don't. Do not make me stop pretending.
+>
+> 4. Mr Crane will shelve Poetry and Plays on Tuesdays. He will not "reorganise" them. He will not "improve" them.
+>
+> 5. [[c:reviewVote|The Review Committee meets on Monday 23 March at nine, to vote on charging a fee at the door.]] Without
+> the Founding Charter, I have no answer for it. If anyone has one, my door is open.
+>
+> 6. The Keeper's biscuits are NOT for volunteers, however charming.
+>
+> O.P.
+
+#### DOC 11.9 · note
+
+Author: Mrs W. Achterberg · Date/time: Saturday 21 March · Found where: in the agency's basket of buns, under a cloth ·
+Picture: a recipe card, flour fingerprints, a tiny drawing of a teapot.
+
+> For the young detectives, with the scones.
+>
+> A riddle is only a question in its Sunday coat.
+>
+> The kettle you watch boils for somebody else.
+>
+> [[c:achterHands|My hands are for bread, not for printing presses]], and my evenings are for my bed. [[c:achterMarket|On
+> the Saturday of Mr Crane's deed, at nine o'clock, I was at the market with the Inspector, weighing plums.]]
+>
+> The plums were sour. So was the Inspector, until we found a ripe one.
+>
+> Old bread makes the best toast.
+>
+> W.A.
+
+#### DOC 11.10 · diary (Nell's casebook)
+
+Author: Nell Okafor-Hart · Date/time: Friday night, late · Found where: Nell's casebook, the hunch-o-meter page, left open on
+the agency desk · Picture: a page of fast, slanting handwriting, a dial drawn in the corner with its needle at 10.
+
+> **NELL'S CASEBOOK · private · HUNCH-O-METER PAGE**
+>
+> Suspect: Inspector Ada Holloway. Hunch: 10 out of 10.
+>
+> 1. Ada knows more about the Founding Charter than anyone alive.
+>
+> 2. [[c:nellCello|Tam saw a lady with a case going in at the Nave door. Ada carries a cello case everywhere.]] Obviously!
+>
+> 3. The cards say "read carefully". Ada says "You have read it. Now see it." Same idea. Same person.
+>
+> 4. [[c:nellO|The old letter is signed "O." That's an O for HollOway!]] Two of them, even.
+>
+> 5. She has never once told us an answer. That is exactly what the Blot does.
+>
+> 6. She plays at eleven with her window wide open. In MARCH. That's a signal to somebody.
+>
+> Conclusion: it's Ada. I just feel it.
+>
+> *Underneath, in Quill's small, exact writing:* [[c:quillShow|Show me where it says that.]]
+
+#### DOC 11.11 · notice (the visitor's guide)
+
+Author: the Great Library · Date/time: the current leaflet · Found where: the rack inside the Library's great door ·
+Picture: a folded leaflet with a painted drawing of the Library's dome; no words in the drawing.
+
+> **WELCOME TO THE GREAT LIBRARY · A VISITOR'S GUIDE**
+>
+> **The Great Door.** [[c:motto|Carved in oak above the door you came in by: "Every word, for everyone."]] The first
+> Keeper chose the words in 1726. You have probably walked under them a hundred times without looking up. Most people do.
+>
+> **The Scriptorium.** Candlelit copying rooms, old maps, and the Nave alcove with its antique hand press.
+>
+> **The Seal Room.** A vaulted stone room with a long oak table, where the seals and the Harbour Map are kept.
+> [[c:noHands|Its ceiling vault is painted with a great clock face, with all twelve numbers but no hands.]] Nobody knows
+> why. [[c:rings|The floor is laid in old square tiles, in rings like ripples, around a single tile in the very middle.]]
+> [[c:grille|Its tall windows are leaded shut. High in the wall it shares with the Nave alcove is a round brass grille.]]
+>
+> **The Inkwell Clock Tower** (not part of the Library). [[c:towerStrikes|It strikes every hour, loudly]], as everyone on
+> Lamplit Row will tell you.
+>
+> The Library is free, and always has been.
+
+#### DOC 11.12 · note (the Lamplighters)
+
+Author: Tam Bellweather · Date/time: Friday 20 March, late · Found where: pushed under the agency door · Picture: a torn
+paper bag, flour on it, pencil, the first line with three neat little ticks added later.
+
+> every night this week 11 oclock a lady goes in the nave door on cobble lane tall grey plait
+>
+> [[c:tamCase|she had a case not a cello case a violin one]] we checked twice
+>
+> [[c:tamAda|the inspector was home every night at 11 playing her cello]] you can hear it all down lantern row its the sad
+> one
+>
+> [[c:echo|then lantern row does its echo from the library end only higher and the tune comes out different]] spooky
+>
+> mrs a lamp goes out at 10 every night like a clock
+>
+> no biscuit again tully is looking in the bins
+>
+> tam
+>
+> ps we used the comma whistle on the second line it helps
+
+*(End of Chapter 1. As the child sets Tam's note down, the speaking-tube whistles. It is not Tam. It is Professor Penhallow,
+who has never once used it before. "Detectives. Somebody has been inside my Seal Room. It is locked. My key has not left
+my ribbon. And there is a card on the floor.")*
+
+---
+
+### Chapter 2 — Interviews
+
+*The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall
+windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.*
+
+#### SUSPECT Marlowe Finch
+
+**Q1 · what · "Why are your fingers always blue?"** *(nervous)*
+
+> Ink! From the press in the Nave alcove! I clean it. Somebody keeps using it and leaving the rollers sticky, and the Keeper
+> hates mess. If she found it, she'd lock the alcove. So I wipe it, three times a week.
+
+**Q2 · who · "Do you know who uses the press?"** *(guilty)*
+
+> No. Honestly no. I left a note. I said I'd cover for them a little. That was probably wrong. I just thought, whoever it
+> is, they never break anything. They even put the type back in the right order. Nobody does that.
+
+**Q3 · when · "When are you in the alcove?"** *(calm)*
+
+> Five o'clock, Monday, Wednesday and Friday. It's in the key log. I'm always out by half past five, because the Keeper
+> locks the Scriptorium at six. At eleven at night I'm asleep. I have to be. I'm sixteen.
+
+**Q4 · why · "Have you ever written the word 'forthwith'?"** *(amused, then offended)*
+
+> Forthwith? *(He laughs.)* I've never even *said* it. It sounds like a sneeze in a wig. Sorry. That was rude. Sorry.
+
+#### SUSPECT Mrs Winifred Achterberg
+
+**Q1 · what · "Do you write riddles?"** *(amused)*
+
+> A riddle is only a question in its Sunday coat. I ask my questions in their aprons.
+
+**Q2 · where · "Where were you at nine o'clock on the morning of Crane's deed?"** *(calm)*
+
+> At the market with the Inspector. Plums. If you doubt a woman, ask the fruit seller; she remembers every complaint.
+
+**Q3 · when · "Where are you at eleven at night?"** *(offended)*
+
+> The early bird has the warm side of the bed. My lamp goes out at ten. Ask the boy with the flour on him.
+
+**Q4 · who · "Who do you think the Blot is?"** *(relieved)*
+
+> A lost sheep often follows the old path home. She has been gone a long time, that one. I have kept her teacup.
+
+*(The child may pin this answer. Felix: "Footnote: she said 'she'. And 'her teacup'. And 'gone a long time'.")*
+
+**Q5 · when · "Have you seen her, the one whose teacup you kept?"** *(guilty, then calm)*
+
+> [[c:plumStall|At the plum stall, in October. She looked at me over the plums and put one finger to her lips.]] A secret
+> kept for a friend is a loaf kept warm. I have not told the Inspector. Hope is heavy to carry twice.
+
+#### SUSPECT Professor Orla Penhallow
+
+**Q1 · what · "Are you the Blot?"** *(offended, then amused)*
+
+> I am the Keeper. If I wanted to hide a word in this Library, I would shelve it under Grammar. Nobody would find it for
+> a century.
+
+**Q2 · what · "Why did you ban the word 'forthwith'?"** *(calm)*
+
+> Because Library staff kept using it to sound important. "Please return the atlas forthwith." Say *now*. Children
+> understand *now*. I sign my memos with my initials, and I have never in my life signed anything with a dash.
+
+**Q3 · where · "Who has been into the Seal Room?"** *(nervous)*
+
+> Nobody, since the autumn. My key never leaves my ribbon. This morning, after your invitation, I unlocked the door for one
+> minute.
+> [[c:noPrints|The dust on the floor is as thick as felt, and there is not one footprint in it.]] Yet by the far wall lies
+> a cream card with a blot, and the ink is fresh. I did not step in. I did not want to be the first footprint.
+> [[c:secondKey|After Mr Swale and the map, I had the lock changed. The locksmith cut two keys. The spare went to Inspector
+> Holloway, sealed, in case anything happened to me.]]
+
+**Q4 · why · "Will you bring your key tonight?"** *(relieved)*
+
+> I will bring it, and I will bring a torch, and I will bring Constable Tully. I have been frightened for this Library for
+> six years. Tonight I would like to be something else.
+
+**Q5 · how · "If you lock the Scriptorium at six, how does anyone get in at eleven?"** *(guilty, then relieved)*
+
+> *(A long pause. The pencil comes out of her bun and goes back in.)* [[c:latch|Because every night since February, I have
+> left the Nave door on the latch.]] A Keeper should not. I know. But whoever prints in there puts the type back in the
+> right order. For six years I have wanted somebody to love this place the way I do. I did not want to know who. I wanted it
+> to go on.
+
+#### SUSPECT "Miss Delia Nove"
+
+*Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room
+smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.*
+
+**Q1 · who · "Who are you?"** *(amused)*
+
+> A puzzle-setter. I set crosswords for anyone who will pay, and for some who won't. I am staying at the harbour
+> guesthouse. The breakfasts are excellent and the gulls are rude.
+
+**Q2 · where · "Were you at the Registry on the morning of Mr Crane's deed?"** *(calm)*
+
+> I was. A man dropped his gloves. I held his envelope while he picked them up. One should always help a man with his
+> envelope. You never know what's in it.
+
+**Q3 · what · "What's in the violin case?"** *(nervous, for the first time)*
+
+> A violin. What else would you keep in a violin case? *(A pause.)* It has not been played with anyone else for a long
+> time. It is out of practice at duets.
+
+**Q4 · why · "Why are you in Inkwell?"** *(guilty, then relieved)*
+
+> To finish something I started a long time ago. And now, if you'll excuse me, it is getting dark.
+> [[c:slip|I shall go forthwith.]]
+>
+> *(She stops at the door. She looks back, very directly, at the child. She smiles as if she has been waiting for someone
+> to notice.)*
+
+#### SUSPECT Inspector Ada Holloway
+
+*No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog
+comes in and sits on the piano. Semicolon: "Elementary; therefore!"*
+
+**Q1 · what · "Nell thinks you're the Blot."** *(amused)*
+
+> Nell thinks with her whole heart, which is the right organ for courage and the wrong one for evidence. Has she read
+> what Tam wrote? Slowly? With the whistle?
+
+**Q2 · who · "Who was Odile?"** *(nervous)*
+
+> My apprentice. The quickest mind I ever taught, and the most stubborn. We looked for the Charter together, she and I and
+> Quill. We failed. I said, "Enough." She said, "Never." Then she left. I was wrong to say enough. I have known it for
+> forty years.
+
+**Q3 · how · "How did Odile sign her letters?"** *(calm)*
+
+> With a dash and her initial. Always a long dash. She said a short dash was a hyphen with ideas above its station. And
+> she said *forthwith*, even at twenty. She thought it was funny. So did I, secretly.
+
+**Q4 · where · "Where were you at eleven o'clock this week?"** *(relieved)*
+
+> Here, playing the slow piece. The one with two parts, of which I can only play one. Lantern Row has heard it every night.
+> I'm told it is very sad. It is meant to be waiting.
+
+**Q5 · what · "Do you have a Seal Room key?"** *(nervous, then relieved)* *(offered at the start of Chapter 4)*
+
+> *(She unties the bundle of letters. An old iron key hangs from the faded ribbon, and with it a small envelope.)* Two, in
+> fact. This old one I told Orla I had lost. That was a lie, a small and sentimental one. It was the last thing the three of
+> us shared, and it opens nothing now. [[c:lockChanged|The new one is still in Orla's envelope, and her wax seal on it has
+> never been broken.]] Ask her to look.
+
+*(End of Chapter 2. At six the Scriptorium bell rings for closing. The speaking-tube whistles again. TAM: "the guesthouse
+lady with the violin has paid her bill. she asked when the first boat goes. six oclock tomorrow morning. then she went out
+in the fog and nobody saw where." Felix: "Footnote: the invitation says the Blot leaves on the first boat too." Nobody
+says anything for a while.)*
+
+---
+
+### Chapter 3 — The board
+
+#### DEDUCTIONS
+
+**D1 · voice · "The Blot writes like Odile Vane: the same old-fashioned word, the same long-dash sign-off."**
+- Supporting spans:
+  - [c:cardDeed] "A word for a word. After this, only one is left. Read on, forthwith. — B."
+  - [c:forthMidnight] "Come forthwith when the Clock Tower strikes twelve"
+  - [c:odileForth] "I am going away, and I am going forthwith"
+  - [c:dashB] "Every card ends the same way: a long dash, a space, then the letter."
+  - [c:dashO] "— O."
+  - [c:slip] "I shall go forthwith."
+- Why it matters: "forthwith" is rare ("nobody under seventy says 'forthwith'"), and the Keeper has banned it from her
+  staff. The Blot uses it three times; so did Odile, forty years ago; so does "Miss Delia Nove", leaving the map room. The
+  sign-off is the same shape: a long dash, a space, one letter. **This is the deciding clue:** two lines, forty years apart,
+  "I am going forthwith" and "I shall go forthwith".
+
+**D2 · timeline · "The 'visiting puzzle-setter' is one woman under three names, and she arrives just before each word
+vanishes."**
+- Supporting spans:
+  - [c:olive] "Tuesday, 6 p.m.: "Mrs Olive Dean, visiting puzzle-setter" signs the Fountain Committee's guest book."
+  - [c:elodie] "Dress rehearsal, 7 p.m.: "Mme Elodie Van, puzzle page" is listed in the programme."
+  - [c:delia] "Saturday, 8.50 a.m.: "Miss Delia Nove, puzzle-setter" holds Mr Crane's envelope."
+  - [c:sameLady] "Every witness says the same: tall, a grey plait, a violin case."
+- Why it matters: three names, one description, and each visit comes just *before* a vanishing (CLOCK, LIES, FOR). The
+  puzzle-setter is the Blot.
+
+**D3 · meaning (anagram) · "The cards are printed in the Nave alcove, and NAVE is VANE turned round."**
+- Supporting spans:
+  - [c:press] "I found the same chipped "e" on the old hand press in the Scriptorium's Nave alcove."
+  - [c:naveVane] "Turn NAVE round and it spells VANE."
+  - [c:vaneName] "Odile Vane's last letter. Do not lose. A.H."
+- Why it matters: Dev doesn't know anyone called Vane. The child does, from the envelope in Ada's cello case. The place
+  where the cards are made carries Odile's own name, back to front: a puzzle-setter's signature.
+
+**D4 · punctuation · "Tam's note, read with its commas, says *violin*, not cello. It wasn't Ada."**
+- Supporting spans:
+  - [c:tamCase] "she had a case not a cello case a violin one"
+  - [c:nellCello] "Tam saw a lady with a case going in at the Nave door. Ada carries a cello case everywhere."
+  - [c:tamAda] "the inspector was home every night at 11 playing her cello"
+  - [c:odileViolin] "I am taking my violin."
+  - also accepted: [c:echo] "then lantern row does its echo from the library end only higher and the tune comes out
+    different"
+- Why it matters: with the comma whistle, Tam's line reads *"she had a case, not a cello case, a violin one."* Nell read
+  "a case" and stopped. Ada was at home playing at eleven; the lady at the Nave door carried a violin, and Odile took hers
+  when she left. And the "echo" that comes back *higher* and *different* is no echo: an echo repeats. It is a second
+  instrument, answering. Nell's casebook is the unreliable narrator: a hunch written down as if it were evidence.
+
+**D5 · detail and inference · "The last word was never hidden. It's carved above the door: EVERYONE."**
+- Supporting spans:
+  - [c:ledgerLine] "Read in order so far: UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD FOR"
+  - [c:motto] "Carved in oak above the door you came in by: "Every word, for everyone.""
+  - [c:readAll] "Now read it all."
+- Why it matters: the Ledger ends EVERY · WORD · FOR, and the motto runs "Every word, for everyone". "Now read it all"
+  means read *everything*, including the words over your own head. The last word is **EVERYONE**. The message reads:
+  *Under the clock that never strikes lies "Every word, for everyone."*
+
+**D6 · figurative to literal (the two-step inference) · "The clock that never strikes is the painted clock with no hands;
+the Charter lies under the middle tile beneath it."**
+- Supporting spans:
+  - [c:noHands] "Its ceiling is painted with a great clock face, with all twelve numbers but no hands."
+  - [c:towerStrikes] "It strikes every hour, loudly"
+  - [c:rings] "The floor is laid in old square tiles, in rings like ripples, around a single tile in the very middle."
+  - [c:ledgerLine] "Read in order so far: UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD FOR"
+- Why it matters: **step one:** "the clock that never strikes" sounds like a riddle, but it is literal. Not the Clock
+  Tower, which strikes every hour; a clock with no hands, which cannot. That is the Seal Room ceiling. **Step two:**
+  "under ... lies" is literal too: *lies* means *rests*, not *tells untruths* (the word that vanished from the Playhouse
+  motto in Case 7). Under a ceiling clock is the floor, and the tile under the clock's centre is the one in the middle of
+  the rings. *"Every word, for everyone"* is not a place. It is a document's first line: the Founding Charter.
+
+**D7 · inference · the impossible thing (optional) · "Nobody walked into the locked Seal Room. The card fell in through
+the grille from the Nave alcove."**
+- Supporting spans:
+  - [c:noPrints] "The dust on the floor is as thick as felt, and there is not one footprint in it."
+  - [c:grille] "Its tall windows are leaded shut. High in the wall it shares with the Nave alcove is a round brass grille."
+  - [c:ladder] "There is a step-ladder in the corner of the alcove, under a little brass grille, with ink on the top
+    step."
+  - [c:cardGap] "A word can fall through a gap and still be there."
+- Why it matters: a locked door and unbroken dust mean nobody came in by the floor. But a room with a grille has a second
+  way in, for anything flat and light. The ladder stands under that grille on the alcove side, with a printer's ink on its
+  top step, and the Blot told the town the trick in Case 7. It does not count toward the six, but the reveal explains it
+  with exactly these lines.
+
+#### EARNED HINTS
+
+- **D1 · Felix:** "Some words are fingerprints. Find a word that only one kind of person uses, then find every place it
+  turns up."
+- **D2 · Asha:** "Don't read the names. Read the descriptions. And read *when*."
+- **D3 · Dev:** "I've done the hard part. Somebody in this case knows a Vane. It's written on an envelope."
+- **D4 · Tam (through the speaking-tube):** "blow the whistle at every gap where you'd breathe. go on. *phweet.*"
+- **D5 · Mrs Achterberg:** "The thing you walk under every day is the thing you never see."
+- **D6 · Ada:** "A riddle is a sentence that means exactly what it says, read by someone who expected it to mean something
+  else."
+- **D7 · Dev:** "Doors aren't the only holes in a room."
+
+#### RED HERRINGS
+
+**RH1 · Ada Holloway** (Nell's hunch, 10/10; the false solution). She knows the Charter's story, carries a big case, never
+gives answers, plays at eleven with her window open, and holds the only other key to the new Seal Room lock.
+- Suspicion: [c:nellCello], [c:nellO], [c:secondKey] "After Mr Swale and the map, I had the lock changed. The locksmith cut
+  two keys. The spare went to Inspector Holloway, sealed, in case anything happened to me."
+- Cleared by:
+  - [c:tamCase] "she had a case not a cello case a violin one"
+  - [c:tamAda] "the inspector was home every night at 11 playing her cello"
+  - [c:vaneName] "Odile Vane's last letter. Do not lose. A.H."
+  - [c:lockChanged] "The new one is still in Orla's envelope, and her wax seal on it has never been broken." *(Chapter 4)*
+- Ada signs "A.H.", with no dash; she was heard playing at home at the hour the lady entered the Nave door; the "O." on the
+  old letter is not "an O for Holloway", it is Odile; her old key opens nothing, and the Keeper's seal on her new one has
+  never been broken. Her secret is only sentiment: she kept the old key, and the window open, for Odile. *(Hunch-o-meter: "10. Wrong. Again. But in a nice
+  direction.")*
+
+**RH2 · Marlowe Finch** (the season's red herring, for the last time). Blue-inked fingers, the alcove key, a note admitting
+he covers for the Blot, and ink on the ladder's top step.
+- Cleared by:
+  - [c:marloweClean] "I clean the ink off the rollers every Monday, Wednesday and Friday"
+  - [c:keyLog] "M. Finch: Monday, Wednesday, Friday, 5 p.m., returned 5.30."
+  - [c:marloweKind] "I don't know who you are, but you never break anything, so I'm covering for you a little."
+- His ink is from cleaning; he is in the alcove at five, not eleven; he signs "M.F. (sorry!)", never "— B."; and his
+  kindness to a stranger he has never met is, once more, the thing that clears him.
+
+**RH3 · Professor Penhallow.** She holds the one Seal Room key in use, the card appeared in her locked room, she leaves
+the Nave door open at night, and on Monday she needs the Charter more than anyone.
+- Suspicion: [c:onlyKey] "My key stays on my ribbon, and I have not opened that door since the autumn." and [c:latch] "Because
+  every night since February, I have left the Nave door on the latch."
+- Cleared by: [c:banForth] "The word "forthwith" is banned from all Library notes. It is pompous. Say "now"." and
+  [c:grille] "Its tall windows are leaded shut. High in the wall it shares with the Nave alcove is a round brass grille."
+  Nobody needed her
+  key; the Keeper hates the Blot's favourite word; and she signs with initials, never a dash. (Her "O.P." is a second red
+  letter "O" for anyone who reads initials too fast.) Her secret, the latch, is kindness to a stranger, like Marlowe's.
+
+**RH4 · Mrs Achterberg.** She riddles like the Blot, she knows who the Blot is, and she has said nothing.
+- Suspicion: [c:plumStall] "At the plum stall, in October. She looked at me over the plums and put one finger to her
+  lips."
+- Cleared by: [c:achterMarket] "On the Saturday of Mr Crane's deed, at nine o'clock, I was at the market with the
+  Inspector, weighing plums." and [c:achterHands] "My hands are for bread, not for printing presses". At nine she was at
+  the market stalls with Ada, while "Miss Delia Nove" was still in the Registry holding Crane's envelope until he lodged it
+  at 9.05; and Tam sees her lamp out at ten, an hour before the lady goes in at the Nave door. She riddles; the Blot
+  riddles; but a proverb is not a calling card. Her secret is a kept secret, not a crime: she would not raise Ada's hopes
+  until they were sure.
+
+*(End of Chapter 3. Ten o'clock. Nell pins Ada's portrait in the middle of the board and ties every red string she has to
+it. "The second key. The cello case. The O. The open window. Hunch-o-meter: ten." Constable Tully unclips the little
+silver handcuffs he has never once used, and looks at them as if they might bite. Across the harbour, the Clock Tower
+strikes ten. Two hours.)*
+
+---
+
+### Chapter 4 — The timeline
+
+*No. 9 Lantern Row, a quarter past ten. Fog round the gas lamps like wool. Nell knocks. Tully stands behind her, holding
+the handcuffs behind his back, very badly. The Keeper has come too, with her key and her torch. Ada opens the door before
+the second knock. **Ada's Q5 is offered now.***
+
+*(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away and looks enormously
+relieved. Then he turns, slowly, towards the Keeper. "So that leaves one key…" "Constable," says Professor Penhallow,
+"if I wanted a card in that room, I would have written a memo." The question goes up on the washing line with everything
+else: if nobody can get in, how did the card?)*
+
+**EVENTS in true order** (child places the ones marked ★)
+
+| # | Event | Time-word span | Placed by child |
+|---|---|---|---|
+| 1 | The first Keeper carves the motto and hides the Charter | "in 1726" (DOC 11.11) | |
+| 2 | Odile leaves Ada, "forthwith", taking her violin | "forty years ago" (DOC 11.4) [c:odileForth] | ★ |
+| 3 | "Mrs Olive Dean" at the Fountain; CLOCK vanishes | "Tuesday, 6 p.m." [c:olive] | ★ |
+| 4 | "Mme Elodie Van" at the Playhouse; LIES vanishes | "Dress rehearsal, 7 p.m." [c:elodie] | ★ |
+| 5 | After Mr Swale and the map, the Seal Room lock is changed; the spare key goes to Ada, sealed | "After Mr Swale and the map" [c:secondKey] | ★ |
+| 6 | "Miss Delia Nove" holds Crane's envelope; FOR vanishes | "Saturday, 8.50 a.m." [c:delia] | ★ |
+| 7 | Ada and Mrs Achterberg weigh plums at the market | "at nine o'clock" [c:achterMarket] | |
+| 8 | The Keeper bans "forthwith"; the Review Committee is set for Monday 23 March | "Monday 16 March" (DOC 11.8) [c:reviewVote] | |
+| 9 | A lady with a violin case enters the Nave door; Ada plays at home; the "echo" answers | "every night this week 11 oclock" [c:tamCase] [c:tamAda] [c:echo] | ★ |
+| 10 | The last card arrives with the buns | "7 a.m." (DOC 11.1) | |
+| 11 | The Keeper finds a card in the locked Seal Room | "This morning" [c:noPrints] | ★ |
+| 12 | The Clock Tower strikes twelve; the agency enters the Seal Room | [c:forthMidnight] | ★ |
+
+When all ★ cards are pegged, the line glows faintly along its whole length and a small blot appears on every peg from
+3 to 6, then on the last. The washing line is one story now.
+
+*(End of Chapter 4. Eleven fifty-five. The Scriptorium is dark except for the Keeper's torch, and very cold. The agency
+stands outside the Seal Room door. Then, from somewhere beyond it, a violin plays four slow notes, and stops. Felix does
+not sneeze. Nobody breathes. Across Lamplit Row, the Clock Tower begins to strike.)*
+
+---
+
+### Chapter 5 — The accusation
+
+*The Seal Room, a minute after midnight. The Keeper's new key turns with a sound like a knuckle cracking. The vaulted
+room, cold and dusty, the long oak table under its cloth, lit by the brass lantern from Case 7. Above, in the ceiling vault,
+the painted clock: twelve gold numerals, no hands. The
+tiles spread in rings across the floor, and the dust lies on them unbroken, except where the agency now stands. By the far
+wall, under the high brass grille, the card lies where the Keeper saw it. All five suspects stand in the lamplight. "Miss
+Delia Nove" stands nearest the door, violin case in hand. Nobody saw her arrive.*
+
+**CULPRIT:** "Miss Delia Nove" is **Odile Vane**, and Odile Vane is the Blot.
+
+**MINIMAL EVIDENCE SET** (four: D1, D2, D3 for *who*, and D6 for *where*):
+1. **D1:** [c:odileForth] + [c:cardDeed] (or [c:slip]): the same rare word and the same long-dash sign-off.
+2. **D2:** [c:sameLady] + any two of [c:olive], [c:elodie], [c:delia]: one woman, three names, each just before a word
+   vanished.
+3. **D3:** [c:naveVane] + [c:vaneName]: the press in the Nave alcove spells her name back to front.
+4. **D6:** the handless painted clock: the Ledger's "clock that never strikes", which answers "Where is the Charter?" (level 5's two-step inference).
+
+*(D4 is accepted in place of D2 or D3. D7, the impossible thing, is accepted as extra evidence.)*
+
+**WRONG-SUSPECT RESPONSES** (Quill)
+
+- **Ada:** "Nell's hunch, ten out of ten. Now read Tam's note with the comma whistle. What kind of case? Where was Ada at
+  eleven? And whose seal is still unbroken on her key?"
+- **Marlowe:** "Blue fingers, yes. Now read *when* he's in the alcove, and *why*. And show me one card he signed with a
+  dash."
+- **Professor Penhallow:** "She banned the Blot's favourite word. Would you ban your own fingerprint? And nobody needed her
+  key. Look up at the wall."
+- **Mrs Achterberg:** "Where was she at nine on the morning of Crane's deed? Keeping a secret isn't making one. And look
+  again at who she says the Blot is. She told you, in a proverb."
+
+**WEAK-EVIDENCE RESPONSE** (Quill): "You've found a woman who likes puzzles. So does half this town. Show me *her* words
+on the Blot's cards, or show me the Blot's place carrying her name."
+
+**WRONG THEORY** (Quill, if the child says nobody could have done it): "A locked door is only one of a room's holes. What
+is high in the wall, and what stands under it on the other side?"
+
+**WHERE IS THE CHARTER?** *(Added 5 Oct 2026, owner-approved; for sign-off with the case.)*
+
+After the culprit, the child chooses one place: **under the painted clock's centre tile** · behind the Seal Room door ·
+inside the Clock Tower. The right answer is the centre tile (D6).
+
+- **Behind the Seal Room door** (Quill): "Behind a door isn't under anything. Read the Ledger again: 'Under the clock that
+  never strikes…' Then look up. Which clock has no hands?"
+- **Inside the Clock Tower** (Quill): "That clock strikes every hour, loudly. The Ledger wants the clock that never
+  strikes: twelve numbers, no hands. Now look under it."
+
+---
+
+### The reveal
+
+*The Seal Room. The last stroke of twelve still hums in the stones. The lantern flickers. The child holds up three cards.
+"Miss Delia Nove" sets down her violin case.*
+
+**NELL:** *(quietly)* Hunch-o-meter: zero. Evidence: everything. *(To the child)* Go on. You found it.
+
+*(Asha reads the timeline: three names, one grey plait. Dev holds up NAVE, then turns it round.)*
+
+**DEV:** V-A-N-E.
+
+**QUILL:** And the voice. Today: "I shall go forthwith." Forty years ago: "I am going away, and I am going forthwith." Same word. Same long dash.
+
+**ADA:** *(very still)* Odile.
+
+**ODILE:** *(taking off her hat; the grey plait falls down her back)* Hello, Ada. You've let your tea go cold again.
+
+**PENHALLOW:** You've been taking words all over this town for a year. Signs, posters, mottoes. My own copy-book.
+
+**ODILE:** Never taking. Hiding. Paper patches the colour of the page. Grey card on stone. Wax on bronze. On Mr Crane's typed deed, a white slip over one short word, so it read as a gap. One word I never hid: I painted it on a boathouse roof, for a lighthouse to read. Warm water undoes the rest.
+
+**DEV:** And the locked room?
+
+**ODILE:** I never set foot in it. A grille in the wall, a ladder on my side. A word can fall through a gap and still be there. I told you so at the Playhouse.
+
+**MARLOWE:** *(faintly)* It was *you*. You put the type back in order.
+
+**ODILE:** Somebody has to. And somebody wiped my rollers, and somebody left my door on the latch. *(Marlowe goes pink. The Keeper goes pinker.)* Thank you, both.
+
+**ADA:** Why, Odile? Why not just *come home* and tell me?
+
+**ODILE:** Because forty years ago I found the trail, and you told me puzzles were for children. *(Gently.)* You were right. They are. So I set the sentence out again, one word a case, for a careful reader the town would believe. Then Mr Crane arrived with his tape measure.
+
+**CRANE:** *(from the back, in his apron)* I *did* bring a tape measure.
+
+**ODILE:** *(She opens the violin case. Beside the violin lies a letter in Ada's hand.)* Your letter found me, Ada. Every night you played your half at eleven, with the window open. Tam called my half the echo. I'm sorry. For leaving. For the silence. For being right in the rudest possible way.
+
+**ADA:** *(after a long moment)* You were right. I was rude first. Forty years first. *(She holds out her hand.)* Come here, you impossible girl.
+
+*(Semicolon: "Elementary; therefore!" Nobody can tell if Ada is laughing or crying. Both, says Felix later. Footnote: both.)*
+
+---
+
+### Epilogue
+
+#### I. The Seal Room, a quarter past midnight
+
+Professor Penhallow crosses the dust at last and picks up the card from under the grille. It says, in printed capitals
+with a chip in every *e*: *Look up. Then look down. — B.*
+
+"Well," says the Keeper, still holding the key that opened the door. "I suppose somebody had better read the floor."
+
+Everyone looks at the child.
+
+Tully and Marlowe lift the long oak table, map, dust cloth and all, and carry it to the wall.
+
+Asha takes the map-maker's compass from Case 8 out of her pocket. She sets its point on the edge of the outermost ring
+of tiles and swings it, slow and careful, until the pencil meets itself. The middle tile sits exactly under the painted
+clock's centre, where the hands would be if there were any.
+
+"Torch," says Dev.
+
+"*My* turn," says Asha.
+
+"It's Tuesday's torch," hisses Dev. "This is Saturday."
+
+"It's *Sunday*," says Asha. "Since midnight. I wrote it down."
+
+Constable Tully holds the torch. Nobody argues with Constable Tully.
+
+Felix sneezes, three times, so hard that the lantern flame bows. Dust rises off the floor in a little cloud and settles
+again, and in the settling the child sees it: a thin line round the middle tile, cleaner than the rest, as if someone,
+once, very long ago, had lifted it and put it back.
+
+Tully kneels. He has brought the old handle of the town gavel from the shelf at the agency, the one Mr Osei sent to be
+mended in Case 4. He slides its flat end into the gap. The tile shifts.
+
+"Gently," says Penhallow.
+
+"Gently," says Ada.
+
+"Lift it," says Nell. "It's laid there for three hundred years—"
+
+"*Lain*," says Quill. "It has *lain* there. Hens lay; charters lie. Now, *lift!*"
+
+The tile comes up.
+
+Underneath is a hollow the size of a large book, cool and dry, and in it is a bundle wrapped in brown oilskin, tied with
+a ribbon that was once blue. Tully lifts it out as if it were a sleeping kitten. Penhallow unties the ribbon with
+fingers that won't keep still. The oilskin opens like a leaf.
+
+Inside is a sheet of heavy parchment, the ink gone the brown of tea, the writing still perfectly clear. The Keeper reads
+the first line aloud, and her voice breaks halfway through, and she reads it again.
+
+> *Every word, for everyone.*
+>
+> *This Library shall belong to no one, so that it may belong to everyone. It shall not be sold, nor let, nor shut against
+> any reader, for any price, in any year. Whoever keeps it, keeps it for the next reader, and the next.*
+>
+> *Set under the clock that never strikes, because a library has no closing time.*
+>
+> *— Hannah Lark, first Keeper of the Great Library of Inkwell, 1726*
+
+Nobody says anything for a long time.
+
+"She signed with a dash," says Dev at last, in a whisper. "A long one."
+
+"Where do you think I learned it?" says Odile.
+
+The child opens the Ledger, on the floor, in the lantern light, and writes the last word in ink:
+
+> UNDER · THE · CLOCK · THAT · NEVER · STRIKES · LIES · EVERY · WORD · FOR · **EVERYONE**
+
+Above them, the Clock Tower across Lamplit Row strikes one. The painted clock, with no hands, says nothing at all.
+
+Ada unties the faded ribbon from her letters and slides the old iron key off it. She puts it in the Keeper's hand. "For
+your museum drawer, Orla. Forty years late."
+
+"I'll label it," says Penhallow. "*Kept for sentiment.*" She closes her fingers round it. "The only good reason."
+
+#### II. Odile and Ada
+
+They walk back to No. 9 Lantern Row together at half past one in the morning, the whole agency trailing behind like a
+procession, because nobody can bear to go home. The fog has lifted. Every gas lamp on the Row has a halo.
+
+Halfway down Lamplit Row, Dev stops dead under a gas lamp with his notebook open.
+
+"Olive Dean," he says. "Elodie Van. Delia Nove." He counts letters on his fingers. "O-D-I-L-E-V-A-N-E. They're *all* you.
+Every one of them is your name, mixed up."
+
+"I wondered which of you would notice," says Odile. "I thought it might be you. You turn things round."
+
+"You signed every disguise," says Dev, outraged and delighted at once.
+
+"A puzzle-setter always signs her work," says Odile. "Otherwise it's just a mess."
+
+Nell walks beside Ada for a while without saying anything, which, for Nell, is a kind of speech.
+
+"I had you at ten," she says at last.
+
+"I have been a ten before," says Ada. "It is very tiring. I recommend two."
+
+On the way, Odile gives the child a folded list in violet ink: nine hiding places, from the Story Garden Guide to Mr
+Crane's deed, and at the bottom, *warm water, a soft brush, patience*. "They're yours to lift," she says. "Marlowe will
+help. He's very good with rollers. The tenth word stays on the boathouse roof. I'm rather proud of that one."
+
+"Your boat goes at six," says Ada.
+
+"Let it," says Odile.
+
+At the door of No. 9, Mrs Achterberg is waiting in her dressing gown with the kettle already on. She looks at Odile for a
+long time. Then she takes a teacup down from the very top shelf, a blue one with a chip in the handle, dusts it with her
+apron, and fills it.
+
+"An old cup holds the tea best," she says.
+
+"You kept it," says Odile.
+
+"Forty years," says Mrs Achterberg. "A cup does not care how long. It only cares who drinks."
+
+"You knew," says Ada, looking at her housekeeper.
+
+"Since the plums in October," says Mrs Achterberg. "Hope is heavy to carry twice. I carried it a little way for you."
+
+Ada sits by the fire. She doesn't say anything. She picks up her cello, tunes the A string, and waits.
+
+Odile opens the violin case.
+
+#### III. The unveiling
+
+On Monday at nine, the Review Committee meets for eleven minutes. Councillor Mbeki reads the Charter's second line aloud,
+closes the file marked *REVIEW*, and moves that the committee never meet again. It is the first vote in Inkwell's history
+that nobody argues about.
+
+The following Saturday, the Founding Charter goes on show in a glass case under the Library's great door, directly
+beneath the motto it explains.
+
+Half of Inkwell comes. Grandpa Okoro brings a pot of marrow soup made from the second-prize marrow's sister, and Mrs Pell
+brings the bowls. Juniper brings a stone frog from the new pond and sets it, very seriously, beside the glass case "to
+keep an eye on things". Celeste Fairweather signs the visitors' book in green ink, with "—C." at the end. Dot Harkness
+lends the Keeper her fountain pen to sign the Library's new register. Mr Osei opens the ceremony with three taps of the
+mended gavel. The Lamplighters stand in a row along the steps, and every time someone in the speeches pauses for breath,
+Tam blows the comma whistle, very softly, until Constable Tully gently confiscates it.
+
+Dr Leela Raman is there, home at last, with a suitcase covered in stickers and a puffin in a paper bag for Dev. "Is it a
+real one?" says Dev. "It's a cake," says his mother. "Check the dates on everything, Asha. Even the cake."
+
+Silas Crane is there, in his volunteer's apron. He has shelved Poetry and Plays three times this week. He has not
+reorganised them. Mr Pettigrew stands beside him, holding a file marked *Library: pro bono*, looking taller than anyone
+has ever seen him.
+
+Then the Keeper says, "And now, a speech from one of our detectives," and Felix Moreno-Lindqvist walks to the top of the
+steps.
+
+Two hundred faces look up at him.
+
+He freezes.
+
+For three seconds, which is a very long time on a step, nothing happens. Then he finds the child in the crowd, and the
+child nods, and Felix takes a breath, and begins.
+
+> **Felix's speech**
+>
+> Good afternoon. My name is Felix, and I am allergic to dust, which has made this a very difficult year.
+>
+> *(Laughter. He looks surprised, then pleased.)*
+>
+> I want to tell you about eleven words.
+>
+> All year, words went missing from this town. A word from a garden sign. A word from a fountain. A word from a poster,
+> a motto, a copy-book, and one from a man's own deed of sale. *(Mr Crane looks at his shoes.)* One word was even painted
+> on a boathouse roof, where only a lighthouse could read it. People said someone was stealing them. Nobody was. Someone
+> was *lending* them to us, one at a time, to see if we would read carefully enough to give them back.
+>
+> We nearly didn't. We got things wrong. Nell got Marlowe wrong, four times. *(Nell: "Three!" Marlowe: "Four.")* I got
+> stage fright on a stage. Asha argued with Dev about a torch for an entire year, and I still don't know whose turn it
+> is.
+>
+> But here is what we learned. You can't solve anything by guessing. You solve it by reading what's actually there: the
+> comma, the tense, the date, the word somebody chose. You have to read slowly, and then you have to read the door over
+> your head, which nobody ever looks at.
+>
+> I'd like to give you a footnote.
+>
+> *(Groans. Laughter.)*
+>
+> The word *library* comes from the Latin *liber*, which meant the inner bark of a tree, the thing people first wrote on.
+> Footnote to the footnote: there was another Latin word, *liber*, which sounds exactly the same and means something
+> different. It means *free*.
+>
+> I checked. They're two different words. But I don't think it's an accident that they sound the same here.
+>
+> The first Keeper wrote, "This Library shall belong to no one, so that it may belong to everyone." That isn't a rule
+> about a building. It's a promise to the next person who walks through that door. Maybe that's you. Maybe it's
+> someone who has nowhere else to go on a wet Tuesday afternoon, who comes in and is warm.
+>
+> Every word, for everyone.
+>
+> That's all. Thank you. *(A pause.)* I didn't freeze. Footnote: I did, a bit, at the start. But I didn't stay frozen.
+> That's the important part.
+
+There is a silence, the good kind. Then the whole of the Forum steps is clapping, and Semicolon, on Ada's shoulder,
+shrieks "Elementary; therefore!" so loudly that a gull drops a chip.
+
+Later, when the crowd has gone home, the child finds Silas Crane in the Library window seat above the harbour. His trolley
+of books stands abandoned beside him. He is reading a book of sea stories, and his lips are very slightly moving. He
+notices the child, scowls, turns a page, and goes on reading.
+
+#### IV. Letters
+
+That afternoon the post comes up the thirty-nine steps of Bellweather's. On the thirteenth step it creaks, and on the
+twenty-sixth, and on the thirty-ninth, as it always does.
+
+There is a letter for Nell, in a long envelope with the Constabulary's crest.
+
+She doesn't open it. She hands it to the child. "You read it," she says. "I'll only rush."
+
+> **THE INKWELL CONSTABULARY**
+>
+> Dear Miss Okafor-Hart,
+>
+> Thank you for your application to be made an Inspector of the Inkwell Constabulary.
+>
+> I must tell you, honestly, that you are too young. Our rules say an Inspector must be twenty-one. They have said so for
+> a hundred and forty years.
+>
+> However, I have read your application, and I have read the reports of Constable Tully, Professor Penhallow and
+> Inspector Holloway (retired). I have also read the Registry's day book for 14 March, which I understand you read first.
+>
+> Rules are made of words, and you have shown this town what careful readers can do with words. So we have added one.
+>
+> From today, you are the Inkwell Constabulary's first **Junior Inspector**.
+>
+> You will need a badge. It is enclosed. You will also need patience, which cannot be enclosed. I am told you are
+> working on it.
+>
+> With respect and real pleasure,
+>
+> Chief Constable Imogen Strand
+
+Nell reads it twice. Then she takes out her hunch-o-meter page, crosses out every number on it, and writes at the bottom:
+*"10/10. Evidence: a letter."*
+
+"First time you've been right about a ten," says Dev.
+
+"I wasn't guessing," says Nell, and pins the badge on The Comet's basket, where the application used to be.
+
+There is one more letter, with no stamp, in the dumbwaiter under a bun. It says, in printed capitals with a chip in
+every *e*:
+
+> Thank you for reading.
+> — O.
+
+#### V. Biscuit
+
+That evening, Marlowe goes back to the Seal Room to return the floor tile to its place, now that the Charter has a glass
+case instead of a hole. He comes running up to the reading room ten minutes later, out of breath, with too many books.
+
+"Constable! Constable, you need to see this."
+
+In the hollow under the painted clock, curled up on the folded oilskin, warm and dusty and snoring gently, is Biscuit.
+
+Nobody knows how he got in. The door had been open for exactly ten minutes. Constable Tully sits down on the floor beside the
+hole and laughs until he has to wipe his eyes.
+
+"Three hundred years," he says, "and the first thing to lie under the clock after the Charter is my dog."
+
+"*Lie*," says Quill, from the doorway. "Correct."
+
+#### VI. The Casebook Wall
+
+Late that night, the agency is quiet. The round window over the harbour is full of stars. Downstairs, the bakery ovens
+tick as they cool.
+
+On the shelf above Quill's desk sit eleven things: Admiral's white feather, the rosette, the lamplighter's pole tip, the stone frog,
+the gavel's old handle, the green pen, the fountain pen, the small brass lantern, the map-maker's compass, the message
+bottle, and Crane's red pencil. There is a space at the end.
+
+Quill takes the Charter's ribbon, faded blue, three hundred years old, given by the Keeper "to the detectives, from
+everyone", and climbs the Casebook Wall. Every case is there: twelve of them now, joined by red string, and in the middle
+the Blot Ledger, every line full.
+
+Quill pins the ribbon above them all, so that its two ends hang down over the whole wall like a bookmark.
+
+Then Quill climbs down, takes off the tiny deerstalker, and hangs it on the hat stand, on the peg beside a hat that is
+the child's size.
+
+"Forty years," says Quill, to nobody in particular, looking out at the dark shape of the Library across the water. "We
+stood on that tile, Ada and I. We stood right on it."
+
+"You *read* it," says the child. "You just hadn't *seen* it."
+
+Quill looks at the child for a long moment, and then does something nobody at the agency has ever seen before. Quill
+laughs.
+
+Across the rooftops, from the open window of No. 9 Lantern Row, comes music. A cello, low and warm, and above it, a violin,
+a little out of practice at duets and getting better with every bar. It is not the sad piece. It is the one with two
+parts, played, for the first time in forty years, by both.
+
+Behind the Casebook Wall, the painted Reading Door gives a small creak. It has opened four times this year, each time onto
+somebody else's story, and the four souvenirs it sent home sit on the new shelf beside it. Tonight nobody has touched it.
+It opens an inch on its own, and a draught comes through that smells of old paper and rain.
+
+"We went through that door once," says Quill. "Ada and I. Forty years ago, looking for the Charter in every story but our
+own. It's how I know the rules."
+
+"Why does it open at all?" says the child.
+
+Quill looks up at the ribbon. "Read the first line again."
+
+*Every word, for everyone.* Every story in every book belongs to whoever opens it. The door is only the Charter, keeping
+its promise.
+
+In the Library, under the great door, a single lamp burns all night beside the Charter. It always will. A library has no
+closing time.
+
+And at the agency, behind the Casebook Wall, the painted door stands ajar.
+
+*Case closed. Season closed. The door is open.*
+
+*The Casebook Wall shows: **The Vanishing Words · solved · by everyone**.*
+
+#### The office object
+
+**The Charter's ribbon** is pinned above the Casebook Wall, not on the shelf. When the child taps it, the whole wall lights
+softly, case by case, from the goose feather to the red pencil, and a small card appears: *"You have read it. You have seen
+it. Now go and read something else."* — A.H.
+
+---
+
+### Detective School drill
+
+**Read It All** (Clue Spotter tile)
+
+Six short sentences appear on painted signs, each with a figure of speech: "the clock that never strikes"; "the eye of the
+island will close"; "it went down like a stone"; "dry as dust"; "lies under the oak"; "a library has no closing time".
+For each, the child chooses **literal**, **figurative** or **both**, and then taps the word that decides it. A second round
+gives three sign-offs ("— B.", "—C.", "M.F. (sorry!)") and three sentences, and the child matches each sentence to its
+writer by one word or one dash.
+
+**Round two** *(Added 5 Oct 2026, owner-approved; for sign-off with the case.)* Five lines from this case's own documents,
+each offered with four sign-offs. The child picks the writer, then taps the word or the dash that decides it. "—C." (a short
+dash and no space) is a trap: the Blot never uses a short dash.
+
+1. "Come forthwith when the Clock Tower strikes twelve" → **— B.** *(forthwith: the Keeper has banned it, Marlowe has never
+   said it)*
+2. "I clean the ink off the rollers every Monday, Wednesday and Friday" → **M.F. (sorry!)** *(rollers)*
+3. "My hands are for bread, not for printing presses" → **W.A.** *(bread)*
+4. "I am taking my violin." → **— O.** *(violin: Ada plays the cello; offered against A.H.)*
+5. Which of these could end one of the Blot's cards: "—C.", "- B.", "B.", "— B."? → **— B.** *(a long dash, a space, then
+   the letter)*
+
+**Why this drill:** the finale was solved by taking a riddle literally and a sign-off seriously.
+
+---
+
+### Art and scene notes
+
+**Backgrounds**
+- **The Seal Room, midnight:** Case 8's vaulted stone room: candle sconces, a long oak table with the Harbour Map under a
+  linen dust cloth, shelves of seal boxes, tall narrow leaded windows, and the ceiling vault painted
+  with a huge pale-gold clock face: twelve numerals rendered as **simple marks or dots, not lettering or digits**, and
+  **no hands** (this must be unmistakable). The floor: square tiles laid in rings, a single tile at the centre, a faintly
+  cleaner line around it, and a soft unbroken skin of dust. High in one wall, a round brass grille; under it, on the floor,
+  a small cream card. Lit warm by the brass lantern; deep teal shadows. Cosy, not eerie.
+- **The Seal Room, Charter found:** the same, the centre tile lifted, the oilskin bundle in a hollow, the faded blue ribbon
+  across the tiles.
+- **The Nave alcove:** a narrow vaulted alcove, an antique wooden hand press, rollers glossy with fresh ink, a pinned note,
+  a brass-framed key log, and in the corner a small wooden step-ladder under a round brass grille.
+- **The Great Door at dusk and in daylight:** the carved motto rendered as carved **texture only** (live text on tap). In
+  the unveiling it is in full sun, with the Charter's glass case beneath it and the crowd on the steps.
+- **Lamplit Row in fog, Saturday:** gas lamps haloed, the Clock Tower a dark shape with a pale face; for the cutscene, a
+  tall figure in a green coat under No. 9's window, seen from behind, a violin case in hand.
+- **No. 9 Lantern Row, half past one in the morning:** fire, cello and violin, a blue teacup with a chipped handle,
+  Semicolon asleep on a lampshade.
+- **The agency at night:** the round window full of stars, the shelf of eleven objects lit by a desk lamp, the Casebook
+  Wall with the ribbon pinned over it, the hat stand with the child's hat. Behind the wall, the painted Reading Door stands
+  ajar, a thread of warm light along its edge: the season's last panel.
+
+**Props**
+- the last calling card and folded invitation; Dev's squared-paper copy of the cards; the Blot Ledger;
+- Odile's violet-ink letter and its envelope; Asha's timeline; Dev's cipher notebook (letters in a circle, a little ladder);
+- Marlowe's note on the press; the Keeper's memo; Mrs Achterberg's recipe card; Nell's casebook with the hunch dial;
+- the visitor's guide (a painted dome, no lettering); Tam's flour-bag note;
+- the card under the grille; Tully's small silver handcuffs (never used); Ada's old iron key on its faded ribbon;
+- Ada's letter to the old address, in the violin case; Odile's violet-ink list of nine hiding places;
+- the oilskin bundle; **the Founding Charter** (brown ink on heavy parchment; set live, never painted); **the Charter's
+  ribbon** (faded blue silk, frayed at both ends: the office object);
+- Nell's Junior Inspector badge.
+
+**Portraits and expressions**
+- **Odile Vane:** the season's most important new portrait. Tall, 58, a long grey plait, a green coat, a violin case.
+  Kind, quick eyes. She must read as *warm and clever*, never sinister. Her "guilty" expression is rueful; her "relieved"
+  is the one used at the duet. Draw her three disguises as small variations: a straw hat (Olive Dean), a beret (Elodie
+  Van), a felt hat and newspaper (Delia Nove). Same plait in all three.
+- **Ada:** her "relieved" expression in this case should be the warmest face she has worn all season.
+- **Quill:** a laughing expression, used **once**, in Epilogue VI.
+- **Crane:** a seventh, bonus expression for the epilogue: absorbed in a book, very slightly smiling, pretending not to
+  be.
+- **Nell:** a new expression: reading a letter, mouth open.
+
+**Crane's panel (Epilogue III):** the Library window seat above the harbour, late afternoon. Silas Crane in his apron, a
+trolley of books beside him, has stopped shelving. He is reading a book of sea stories with his mouth very slightly moving.
+When he notices the viewer, he scowls, turns a page, and goes on reading.
+
+**No lettering in any painting.** Every word, including the motto, the Charter and every letter, is set live in the app's
+type.
+
+---
+
+## Part 9b. The Ink Journeys (scripts)
+
+## JOURNEY 1 — The Case of the Backwards Cattle
+
+*A Bizzing mystery · an Ink Journey through the Reading Door · 🪔 Katha: a story as it is told.*
+
+```
+meta:
+  id:            journey-01
+  kind:          journey
+  level:         2  (ages 8–9 · 3 suspects · 6 scene documents · ≤70 words per document · ≤14-word sentences ·
+                     3 deductions · timeline joins)
+  world:         olympus (the Margin skin: Greek hillsides, a herald's wax tablets, a marble board)
+  source:        the Homeric Hymn to Hermes (Hymn 4, about the 6th century BCE), retold. Quoted lines are from
+                 H. G. Evelyn-White's translation (Loeb, 1914), public domain.
+  badge:         🪔 Katha — a story as it is told. Every invented beat is listed in "Story additions" below.
+  companion:     Nell Okafor-Hart (Quill stays on the office side, holding the Door)
+  skills:        inference · sequence · detail · figurative  (supporting: vocab, for "herald", "lyre", "plectrum")
+  vanished word: none (the Blot cannot follow through the Door; the Ledger stays at UNDER · THE · CLOCK)
+  souvenir:      a tortoise-shell plectrum (the first shelf-piece by the Door)
+  bonus card:    plectrum (all six personas; see "Word Hoard")
+  hands forward: evidence that points the wrong way → Case 4's "sent off" (Nell: "Prints pointing the wrong way.
+                 Remember the cows?")
+  arc beats:     the Door opens for the first time; Quill's three rules; Nell's hunch-o-meter is wrong on a ten,
+                 and she notices; on return, a calling card where none was a moment ago
+  read aloud:    every document, always on
+```
+
+**Writer's note on time.** The hymn's day runs: Hermes is **born at dawn**, plays the **lyre at noon**, takes the
+**cattle in the evening**, and is **back in his cradle before morning**. The Journey opens on the *next* dawn, when Apollo
+finds the meadow empty. So when the baby says "I was born yesterday", it is literally true. That is the hymn's joke, and
+this chapter's figurative-versus-literal lesson.
+
+**Writer's note on the Door's clock.** Quill's third rule is "A story keeps its own clock." This one closes at sunset. Zeus
+also judges at sunset, then (escalation, end of chapter 3) at noon. Both clocks are on screen: a small sun-dial in the
+corner of the board, painted, no numerals.
+
+---
+
+### Case card
+
+> The painted door has opened at last.
+> Through it is a hillside in the Greek myths, and a very upset god.
+> Apollo's fifty cows have vanished in the night.
+> Every hoof-print points into the meadow. Not one points out.
+> At sunset, Zeus will judge, and someone will pay.
+> Read the tracks, {det}.
+> Tracks are a text too.
+
+*(58 words with a six-letter name. Read aloud.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Motive · Secret | Portrait expressions |
+|---|---|---|---|---|---|
+| **The old man of Onchestus** | Suspect · the false solution | Bent and brown as a vine root, a straw hat, a pruning knife on a cord, brushwood in his beard | Talks in circles; bad at keeping quiet and knows it | *Motive:* Apollo's cows ate his best vines last spring. · *Secret:* last night he promised a small stranger to "see nothing", and he is trying very hard to keep a promise he never wanted | calm, nervous, offended, amused, relieved |
+| **Maia** | Suspect · Hermes's mother | Dark hair loose, a blue cloak sewn with tiny silver stars, a cave lamp | Gentle, tired, protective; answers a question with a question when cornered | *Motive:* she and her son live in a cold cave with no herds and no honours. · *Secret:* yesterday she left the baby sleeping and went up the mountain to sit with her six sisters all day, and she is ashamed of it | calm, nervous, worried, relieved |
+| **Hermes**, one day old | Suspect · culprit | A baby in a woven cradle, huge innocent eyes, one curl, swaddled to the chin; something lumpy under the blanket | Butter-wouldn't-melt; far too good with words for one day old | *Motive:* he wants a herd and honour, like his big brother. · *Secret:* under the blanket is a thing nobody has ever seen: the first lyre | innocent, amused, nervous, guilty (a grin, never tears), relieved |
+| **Apollo** | Client · god of the bow and of song (in the Greek myths) | Golden, enormous, a laurel wreath askew, a silver bow on his back that he never touches | Big, comic, frantic; kind underneath; stamps when upset and the hill shakes a little | — | worried, offended, amused, amazed, relieved |
+| **Kleon**, Apollo's herald 🪔 | Witness · reads the tracks | A thin young man with a herald's staff, wax tablets on a strap, sandals worn to string | Exact; reads everything aloud twice | — | calm, worried |
+| **Zeus** | Judge | Vast, white-bearded, sitting on a cloud like an armchair; a soft rumble of thunder when he chuckles | Grave for one minute, then laughs | — | calm, amused (laughing) |
+
+The agency: **Nell** comes through the Door with {det}. **Quill** stays at the office side, holding the Door open with a
+dictionary; his voice comes through the keyhole, and his hints arrive as folded notes that drift through on the breeze.
+
+**Wrong theory (not a suspect):** **a wolf**, Apollo's first idea. Cleared in chapter 3.
+
+---
+
+### Tutorial notes (first Journey only)
+
+1. **The Door.** Before the first panel, one screen: the painted Door, ink brimming in its keyhole. The child taps the
+   handle (or presses Enter). Quill says his three rules, once, slowly (panel 2 below).
+2. **Margin notes.** The first time a "Did you know?" tab appears in the margin, it pulses once (reduced motion: a
+   static outline). Tapping opens the note and its source. Reading notes never pays and never blocks.
+3. **Going where the story goes.** Between scenes, a page turns, and the next place appears. Quill: "In the Margin, you
+   don't walk. You turn the page." There is no map screen.
+4. **The sun.** A small painted sun sits at the top of the board. It moves only when a chapter ends, never on a timer.
+   Nothing in a Journey is timed.
+
+---
+
+### Opening (comic panels, read aloud)
+
+1. **The office, the morning after Case 3.** The painted Door stands ajar. Ink fills its keyhole like a tiny well. The
+   room smells of wild thyme, which nobody in Inkwell grows. {det}'s persona sign is in the panel: the owl's shadow on
+   the round window / the laces lifting / two crows on the lamp post / a strand of yellow wool on the floorboards / a tab
+   of the notebook turned to gold / one soft note in the air.
+   **NELL:** "Every key in town. Nothing. And now it just… opens?"
+2. **Quill on the desk**, small deerstalker on.
+   **QUILL:** "Three rules. One: inside a story, you can find out anything. You can't change what the story is. Two:
+   bring back what you learned, not what you found. Three: mind the time. A story keeps its own clock."
+   **NELL:** "And this one?"
+   **QUILL:** "Closes at sunset. I'll hold the Door."
+3. **Through the Door: Pieria at dawn.** A wide meadow on a hillside, mist in the hollows, wild thyme in purple
+   cushions, a sea far below. The meadow is empty. Only the grass by the gate is flattened, as if a crowd had stood there.
+4. **Apollo**, golden and enormous, holding his own head in both hands. He is drawn upset and comic, never frightening.
+   **APOLLO:** "My cattle! Fifty of them! Counted, every one!"
+   **NELL** *(whispering to {det})*: "He's very… shiny."
+5. **Apollo**, pointing down the long road south.
+   **APOLLO:** "At sunset my father will judge. Somebody will pay for my cows. That old man down at Onchestus saw
+   something. I know it."
+   **NELL:** "Hunch-o-meter's already twitching."
+
+---
+
+### Chapter 1 — The scene
+
+*Place: the meadow in Pieria, dawn. Dew on the thyme. A bell-less cowbell post by the gate. Bees, already awake. Then the
+trail south, and, at the chapter's end, the mouth of a cave on Mount Cyllene.*
+
+#### DOC J1.1 · tablet
+- **Author:** Apollo, cut into wax by his herald · **Date/time:** today, at dawn · **Found where:** propped on the gate-post
+  of the empty meadow
+- **Picture:** a herald's wax tablet in a wooden frame, the wax scratched in neat lines, a sprig of laurel tucked in the
+  hinge.
+
+> Hear this!
+> [[c:fifty|Yesterday afternoon I counted my cattle. Fifty cows, all here.]]
+> [[c:sunset-left|At sunset I went up to Olympus to sing.]]
+> [[c:empty|At dawn I came back. The meadow is empty.]]
+> [[c:noon|Yesterday at noon I heard a new sound from the south.]]
+> [[c:bowstring|It was like a bowstring that had learned to sing.]]
+> I thought nothing of it.
+> [[c:wolf-theory|A wolf has done this, or a thief.]]
+> At sunset, Zeus will judge.
+> — Apollo
+
+*(The noon line is the clue hidden in plain sight. It reads like Apollo grumbling about his morning. It is a span the
+child can mark, and it is re-read at the reveal.)*
+
+#### DOC J1.2 · report
+- **Author:** Kleon, herald of Apollo · **Date/time:** today, early morning · **Found where:** read aloud by Kleon at the
+  gate, then pinned to the post
+- **Picture:** a second wax tablet with a little sketch scratched in the corner: a hoof-print, drawn as two curved half-moons.
+
+> THE TRACKS, AS I READ THEM
+> [[c:tracks-in|Every hoof-print points into the meadow.]]
+> [[c:none-out|Not one print points out.]]
+> Fifty cows cannot walk in and melt away.
+> [[c:trail|A trail of trampled grass runs south, over the hill.]]
+> [[c:trail-north|On that trail, every print still faces north, towards the meadow.]]
+> [[c:no-wolf|There are no wolf prints anywhere.]]
+> — Kleon, herald
+
+#### DOC J1.3 · report
+- **Author:** Kleon, herald of Apollo · **Date/time:** today, mid-morning · **Found where:** on the trail, two hills south
+- **Picture:** a tablet with a careful sketch of one odd print: a big, ragged oval with a small round dent in the middle.
+
+> THE ODD PRINTS
+> Beside the cow tracks run other prints.
+> [[c:broom|They are large and brushy at the edges, like a broom that walked.]]
+> [[c:not-man|They are not a man's. They are not a woman's. They are not a wolf's.]]
+> [[c:fig|In the middle of each is a dent no bigger than a fig.]]
+> [[c:zigzag|They wander from side to side across the trail.]]
+> The trail runs on, towards the vineyards of Onchestus.
+> — Kleon
+
+#### DOC J1.4 · list
+- **Author:** Kleon, herald of Apollo · **Date/time:** today, late morning · **Found where:** where the trail meets a
+  river, far to the south, below a mountain
+- **Picture:** a tablet listing three finds, with the finds themselves laid on a flat stone beside it: a woven twig
+  pad, a curved scrap of mottled shell, a tuft of brown-and-white hair.
+
+> FOUND WHERE THE TRAIL MEETS THE RIVER
+> [[c:twigs|1. Twigs of myrtle and tamarisk, woven tight like a basket.]]
+> [[c:shell|2. A scrap of old tortoise shell. Small holes are bored along one edge.]]
+> 3. Cow hairs, brown and white. Apollo's, surely.
+> [[c:river|Here the cow prints go on along the river.]]
+> [[c:split|The brushy prints turn off alone, up towards Mount Cyllene.]]
+> — Kleon
+
+#### DOC J1.5 · notice
+- **Author:** the hall of Zeus · **Date/time:** today, late morning · **Found where:** it floats down on a small white
+  cloud and hovers at the child's eye level until read
+- **Picture:** a scroll tied with a gold thread, resting on a cloud the size of a pillow.
+
+> FROM THE HALL OF ZEUS, ON OLYMPUS
+> [[c:judge-sunset|Zeus will hear the matter of Apollo's cattle at sunset.]]
+> [[c:summons-om|The old man of Onchestus must come and say what he saw.]]
+> [[c:vines-ate|Apollo says his cows ate the old man's vines last spring.]]
+> [[c:pay|If no thief is named, the old man's vineyard goes to Apollo.]]
+> It will pay for the lost herd.
+> A cloud will carry all who are called.
+
+#### DOC J1.6 · tablet
+- **Author:** Maia · **Date/time:** written this morning · **Found where:** hung on a peg at the mouth of a cave high on
+  Mount Cyllene
+- **Picture:** a small, worn wax tablet hanging by a cord, a sprig of wild olive tied to it, the cave mouth dark behind.
+
+> Hush. A baby sleeps here.
+> [[c:born-dawn|My son was born at dawn yesterday.]]
+> [[c:not-stirred|He has not stirred from his cradle since.]]
+> Please knock softly.
+> Better still, do not knock at all.
+> — Maia, of the cave on Mount Cyllene
+
+**Chapter 1 hook.** *(At the cave mouth. Nell raises her hand to knock, remembers the tablet, and lowers it. From inside
+the cave, very small and very clear, comes a sound nobody in Inkwell has ever heard: plink. Plonk. Plink.)*
+**NELL** *(whispering)*: "That's not the wind."
+
+**Did you know?** *(margin note, chapter 1)* The *Hymn to Hermes* is one of the "Homeric Hymns", a set of old Greek poems
+once credited to Homer, though scholars agree he did not write them. It tells Hermes's first day in one line: "Born with
+the dawning, at mid-day he played on the lyre, and in the evening he stole the cattle of far-shooting Apollo."
+*Source:* Homeric Hymn 4, *To Hermes*, lines 17–18, trans. H. G. Evelyn-White (Loeb Classical Library, 1914).
+*(This note opens only after Case Closed, because it names the thief. Before then the tab reads: "The poem this Journey
+comes from is about 2,500 years old. Its name is a spoiler. Solve it first.")*
+
+---
+
+### Chapter 2 — Interviews
+
+*Questions marked ◆ appear only after the child has read the document named. The child turns the page to reach each
+place: a vineyard at Onchestus by noon light, then back to the cave on Cyllene.*
+
+#### SUSPECT The old man of Onchestus
+
+*Place: rows of vines on a sunny slope, bundles of cut brushwood at the row-ends, a bee asleep in a grape leaf.*
+
+**Q (what):** "What did you see last night?"
+> I saw vines. A great many vines.
+> My eyes are old, and the moon was thin.
+> [[c:om-staff|Someone went by with a staff, walking from side to side.]]
+> That is all. That is quite enough.
+*(portrait: nervous)*
+
+**Q (who):** "Who was it?"
+> Who? I could not say.
+> [[c:om-promise|I made a promise last night, and I keep my promises. Mostly.]]
+> Do not ask me what I promised. That is part of the promise.
+*(portrait: nervous → offended)*
+
+**Q (what):** "What were you doing out so late?"
+> [[c:om-brush|Cutting brushwood, to tie up my vines.]]
+> I had bundles of it, all evening long.
+> Brushwood gets everywhere. In my beard, in my hat, in my supper.
+
+**Q (why)** ◆ after DOC J1.5: "Do you like Apollo's cows?"
+> Like them? [[c:om-vines|They ate my best vines last spring!]]
+> Every leaf. Every grape. I wept like a fountain.
+> But a cow? I wouldn't know where to keep one. Fifty would be a whole town.
+*(portrait: offended → amused)*
+
+**Q (what):** "What sandals do you wear?"
+> [[c:om-feet|Plain leather ones. And my feet are as big as loaves.]]
+> I have walked these rows for seventy years.
+> Leather lasts. So do I.
+
+**Q (when):** "When did the someone pass?"
+> [[c:om-moonrise|After moonrise. Long after sunset.]]
+> I was tying the last row.
+> [[c:om-hum|The someone hummed a little tune, very pleased with the night.]]
+
+#### SUSPECT Maia
+
+*Place: inside the cave on Mount Cyllene. Cool and dim, a lamp, a loom with half a cloak on it, a woven cradle in the
+corner. The cradle does not move. Something in it goes plink.*
+
+**Q (where):** "Where is your son?"
+> In his cradle, the little lamb, fast asleep.
+> [[c:maia-dawn|At dawn today I looked in, and there he was, wrapped up tight.]]
+*(portrait: calm)*
+
+**Q (when):** "When did you see him before that?"
+> Before that?
+> [[c:maia-yday|Yesterday at dawn, when I laid him down.]]
+> Then I had things to do.
+> [[c:maia-dodge|A baby one day old? Where would he go?]]
+*(portrait: nervous: she has answered a question with a question)*
+
+**Q (what):** "What things did you have to do?"
+> Things. A mother has things.
+> [[c:maia-things|I was not in the cave all day. That is all I will say.]]
+*(portrait: worried. This is her secret showing at the edge. It makes her look worse: she has no one to say where she was.)*
+
+**Q (why):** "Why do you live up here?"
+> It is quiet, and it is ours.
+> [[c:maia-cave|But it is cold, and we have no herds, no gold, no honours.]]
+> My son's big brother has all three.
+*(portrait: worried)*
+
+**Q (what):** "What was that sound?"
+> What sound? I hear nothing.
+> *(From the cradle: plink.)*
+> [[c:maia-wind|That is the wind. The wind on this mountain is very musical.]]
+*(portrait: nervous → amused, despite herself)*
+
+#### SUSPECT Hermes, one day old
+
+*Place: the cradle. The baby opens one eye, then both, very wide. The blanket is pulled to his chin. Something under it
+has corners.*
+
+**Q (where):** "Where were you last night?"
+> Here! In my cradle! Where else does a baby go?
+> I am very small. Look at me. Tiny.
+*(portrait: innocent)*
+
+**Q (what):** "Do you know anything about fifty cows?"
+> Cows? What are cows? Are they nice?
+> [[c:her-born|I was born yesterday! My feet are soft, and the ground is rough.]]
+> I care about milk, and sleep, and warm blankets.
+*(portrait: innocent. Nell's mouth falls open at the size of the words.)*
+
+**Q (who):** "Do you know the old man with the vines?"
+> Never met him!
+> [[c:her-onchestus|I have never even been to Onchestus.]]
+> *(Nell, slowly: "Nobody said Onchestus.")*
+*(portrait: innocent → nervous)*
+
+**Q (what):** "What's under your blanket?"
+> Nothing. *(twang)* A hiccup. Babies hiccup.
+> [[c:her-twang|Musical hiccups. I was born with them.]]
+*(portrait: amused)*
+
+**Q (why):** "What do you want, little one?"
+> [[c:her-want|A herd of my own one day. And honour, like my big brother.]]
+> Not cows, of course. Something like cows. Honour.
+*(portrait: innocent, then a grin he cannot quite hide)*
+
+**The persona question** *(one optional question, asked in the persona's own style; the answer is the same for all six)*
+- Thea: "What's missing from your story?" · Milo: "So what you're actually saying is, you never left?" · Oskar: "You said
+  'rough'. When did you feel the ground?" · Signe: "What happened between noon and morning?" · Hari: "If I were you,
+  what would I have seen last night?" · Vani: "You talk very well for one day old. Who taught you?"
+> Nobody! I mean, nothing! I saw nothing.
+> [[c:her-saw|I saw nothing, just like the old man.]]
+> *(He claps both hands over his mouth. Plink.)*
+*(portrait: nervous. An extra mark: how does he know what the old man said?)*
+
+#### WITNESS Apollo
+
+**Q (what):** "Could a wolf have taken them?"
+> A wolf takes one calf and runs. Fifty cows?
+> [[c:apollo-never|And I have never seen prints like those. Not in all my days.]]
+> They make my hair stand up. Look. Up.
+*(portrait: worried → offended at his own hair)*
+
+**Chapter 2 hook.** *(Back at the cave mouth, the child turns to go. The baby's cradle is still. On the floor beside it,
+half under the blanket's fringe, lies a single twig of myrtle, woven at one end.)*
+**NELL:** "Myrtle. Kleon found myrtle by the river." *(She frowns at the cradle.)* "No. Babies don't weave."
+
+**Did you know?** *(margin note, chapter 2)* People say "I wasn't born yesterday!" to mean "you can't fool me". In the hymn,
+baby Hermes says the opposite, and means it literally: he really was born the day before. The English saying is much
+younger than the poem, a happy coincidence and not its origin.
+*Sources:* Homeric Hymn 4, *To Hermes*, about line 273, trans. Evelyn-White (1914): "I was born yesterday, and my feet are
+soft and the ground beneath is rough"; for the idiom, the *Oxford English Dictionary*, "yesterday" and "born" (writer to
+check the first recorded date before ship). [VERIFY: the idiom's first recorded date, and that it is
+not derived from the hymn.]
+
+---
+
+### Chapter 3 — The board
+
+*The board is a marble tablet set in a grove of olive trees, with red wool for string. The painted sun stands well up the
+sky.*
+
+**Board intro (banter)**
+**NELL:** "Brushwood in his beard. Cows that ate his vines. Out late. And a *promise* he won't explain. It's the old man.
+Hunch-o-meter: ten!"
+**QUILL** *(through the keyhole, faint, like a voice down a well)*: "Show me where it says that."
+**NELL:** "It says brushwood! It says broom! A broom is made of… brushwood." *(She stops.)* "That's a link. That's a real
+link, isn't it?"
+
+*(This is the false solution. The board will let the child pin [c:om-brush] to [c:broom] and [c:om-vines] to
+[c:wolf-theory]'s "or a thief"; the links stick, glowing faintly. Nothing stops the child agreeing with Nell. Chapter 4
+breaks it.)*
+
+**DEDUCTIONS** (level 2: three)
+
+**D1 · inference (the impossible thing)**
+- **Statement the child forms:** *Every hoof-print points into the meadow, but the meadow is empty. Fifty cows cannot walk
+  in and vanish. So they were walked out backwards, tails first. Someone wanted the tracks to lie.*
+- **Supporting spans:** [c:tracks-in] "Every hoof-print points into the meadow." · [c:empty] "At dawn I came back. The
+  meadow is empty." · [c:none-out] · [c:trail-north] *(also accepted: [c:trail], [c:om-heads] once it appears in
+  chapter 4)*
+- **Minimum link:** [c:tracks-in] + [c:empty]
+- **Why it matters:** tracks are a text. Read on their own, these say "fifty cows walked in". Read with the empty
+  meadow, they say the opposite. Two true sentences that cannot both be the whole truth mean somebody was clever.
+
+**D2 · inference and detail (the disguise)**
+- **Statement the child forms:** *The odd prints are not a strange creature's. They are twig pads, woven like a basket and
+  tied over a very small foot. Whoever drove the cows hid his own steps, and his foot was tiny.*
+- **Supporting spans:** [c:fig] "In the middle of each is a dent no bigger than a fig." · [c:twigs] "Twigs of
+  myrtle and tamarisk, woven tight like a basket." · [c:broom] "like a broom that walked" · [c:not-man] *(also
+  accepted: [c:zigzag] with [c:om-staff]; [c:om-knee] once it appears; [c:om-feet] as the clearing half)*
+- **Minimum link:** [c:fig] + [c:twigs] (or [c:broom] + [c:om-knee])
+- **Figurative, glossed when marked:** "like a broom that walked" is a simile. The prints are not a broom. They only
+  *look* as if a broom had feet. The child taps which part is real: "brushy at the edges" (real) or "walked" (the
+  picture).
+- **Why it matters:** this is Nell's false link turned round. Brushwood *is* in the prints, but a basket of twigs is
+  something worn, not something carried. And the dent inside is no bigger than a fig. The old man's feet are "as big as
+  loaves".
+
+**D3 · contradiction and sequence (the alibi)**
+- **Statement the child forms:** *Maia says her son has not stirred since dawn yesterday. But yesterday at noon a new
+  sound came from the south, a sound like a singing bowstring. A scrap of shell with string-holes lies by the river. And
+  the cradle twangs. Someone in that cave was very busy yesterday.*
+- **Supporting spans:** [c:noon] "Yesterday at noon I heard a new sound from the south." · [c:not-stirred] "He has not
+  stirred from his cradle since." · [c:shell] "Small holes are bored along one edge." · [c:her-twang] "Musical hiccups."
+  *(also accepted: [c:bowstring], [c:maia-wind], [c:maia-yday] with [c:maia-things], [c:her-onchestus], [c:her-saw],
+  [c:om-hum])*
+- **Minimum link:** [c:noon] + [c:not-stirred] (or [c:shell] + [c:her-twang])
+- **Why it matters:** "He has not stirred" is what Maia *believes*, and she only looked twice: at dawn yesterday and at
+  dawn today. Between those two looks lies a whole day she cannot speak for. The noon sound fills it.
+
+**RED HERRINGS AND WRONG THEORY**
+- **The wolf** (Apollo's theory). **Cleared by** [c:no-wolf] "There are no wolf prints anywhere." + [c:not-man] "They are
+  not a wolf's." + D1. *Quill:* "No wolf walks cattle backwards. Show me one that does."
+- **The old man of Onchestus** (Nell's ten; the false solution). Looks guilty through [c:om-brush], [c:om-vines],
+  [c:om-promise] and [c:om-staff]. **Cleared in chapter 4 by** [c:om-knee] + [c:fig] (the someone was knee-high; the
+  dent is fig-sized) and [c:om-feet] (leather sandals, feet like loaves). His secret is a promise, not a crime.
+- **Maia** (motive: the cold cave). Looks worse through [c:maia-dodge] and [c:maia-things]. **Cleared in chapter 4 by**
+  [c:maia-sisters]: she was on the mountaintop with her sisters all day. Her "has not stirred" was a belief, honestly held.
+
+**Wrong-link hints (Quill, through the keyhole)**
+- If the child links [c:om-brush] to [c:broom] as proof: "Brushwood in a bundle, or brushwood on a foot? Read the finds
+  list."
+- If the child links [c:wolf-theory] to anything as a fact: "That's Apollo guessing. A guess is not a track."
+- If the child links [c:bowstring] to Apollo's own bow: "Did Apollo's bow sing? He was in the meadow, and the sound came
+  from the south."
+
+**Chapter 3 hook (escalation).** *(Kleon comes running up the olive grove, his tablets clattering.)*
+**KLEON:** "Zeus won't wait for sunset! The sun's nearly at the top of the sky, and he judges *now*. And they've already
+fetched the old man up on a cloud. He's holding on to his hat."
+**NELL** *(very quietly)*: "If I'm wrong, he loses his vineyard."
+*(The painted sun on the board jumps to the very top of its arc.)*
+
+**Did you know?** *(margin note, chapter 3)* The oldest Greek lyres were made with a tortoise shell for the sound-box.
+Greek even had a word for that kind of lyre: *chelys*, which also means "tortoise". From *lyre* English gets *lyric*, the
+words of a song.
+*Sources:* M. L. West, *Ancient Greek Music* (Oxford, 1992), ch. 3, on the *chelys*-lyre; *Oxford English Dictionary* and
+Merriam-Webster, "lyric".
+
+---
+
+### Chapter 4 — The timeline
+
+*The washing line is strung between two clouds on the way up to Olympus. Its pegs are tiny gold leaves. The time-words
+are the lesson: **at dawn, at noon, that afternoon, at sunset, after moonrise, before morning.***
+
+**New interview line, on the cloud (◆ appears at the start of chapter 4).** The old man, clutching his hat, floating
+beside the line.
+
+**Q (who):** "Please. Who went by your vines?"
+> Oh, very well. A promise to a cow-thief is a thin sort of promise.
+> [[c:om-knee|He was no taller than my knee.]]
+> [[c:om-heads|He walked the cows tail first, with their heads towards him.]]
+> [[c:om-told|He said, "You saw nothing, grandfather." So I tried to see nothing.]]
+> It is very hard, seeing nothing. My eyes kept seeing things.
+*(portrait: relieved)*
+
+*(This line breaks the false solution. The glowing links Nell made in chapter 3 dim. Nell looks at the fig-sized dent in
+the sketch, then at the old man's huge leather sandals, then at the floor of the cloud.)*
+**NELL:** "Knee-high. A fig. Hunch-o-meter…" *(she stops)* "No. I'm not going to say a number."
+**QUILL** *(through the keyhole)*: "Good."
+
+**Maia's secret, on the next cloud (◆ after the old man's line).**
+
+**Q (where):** "Maia, where were you yesterday?"
+> On the mountaintop, with my six sisters.
+> [[c:maia-sisters|I left him asleep and sat with them until the stars came out.]]
+> I was ashamed to say so. What mother leaves a baby one day old?
+> [[c:maia-believed|I believed he slept. I did not see him sleep.]]
+*(portrait: worried → relieved)*
+
+**EVENTS** *(the washing line runs from "dawn yesterday" to "dawn today")*
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | The baby is born in the cave; Maia lays him down and goes to her sisters | [c:born-dawn] "born at dawn yesterday" + [c:maia-yday] | **yes** |
+| 2 | A new sound, like a singing bowstring, comes from the south | [c:noon] "Yesterday at noon" | **yes** |
+| 3 | Apollo counts fifty cows in the meadow | [c:fifty] "Yesterday afternoon" | **yes** |
+| 4 | Apollo goes up to Olympus to sing | [c:sunset-left] "At sunset" | **yes** (join with 5) |
+| 5 | The cows are walked out of the empty meadow, tails first | (no time word: the gap between 4 and 6) | no (the Spindle's slot; pegged for you after it is found) |
+| 6 | Someone knee-high passes the vines at Onchestus, humming | [c:om-moonrise] "After moonrise. Long after sunset." | **yes** |
+| 7 | The cows go on along the river; the brushy prints turn up the mountain | [c:split] (no time word) | no (pegged for you) |
+| 8 | Maia looks in: the baby is wrapped up tight | [c:maia-dawn] "At dawn today" | **yes** (join with 9) |
+| 9 | Apollo comes back to an empty meadow | [c:empty] "At dawn I came back." | **yes** |
+
+**Timeline joins.** Two documents by two people meet twice: Apollo's "At sunset I went up to Olympus" and the old man's
+"Long after sunset" meet at **sunset**; Maia's "At dawn today I looked in" and Apollo's "At dawn I came back" meet at
+**dawn**. The child pegs each pair side by side.
+
+**The line's little shake:** if the child pegs the noon sound (2) *before* the birth (1), the line wobbles and Quill says:
+"Can anyone make music before they are born? Even here?" If the child pegs Maia's look (8) before the moonrise (6):
+"She looked at *dawn*. Which comes first, moonrise or dawn?"
+
+**Chapter 4 hook.** *(The clouds bump gently against marble steps. Above, a hall without a roof, open to the sky. Zeus
+sits on a cloud like an armchair. In Maia's arms, the cradle-blanket goes: twang.)*
+**ZEUS** *(rumbling)*: "Well? Who took my son's cattle?"
+*(Every head turns to {det}.)*
+
+**Did you know?** *(margin note, chapter 4)* In the hymn, the cattle travel from Pieria, near Mount Olympus, all the way
+to the river Alpheus in the south, past Onchestus, in a single night: hundreds of miles. Only a poem can move fifty cows
+that fast, and the hymn enjoys saying so.
+*Sources:* Homeric Hymn 4, *To Hermes*, lines 68–104 (the night drive), trans. Evelyn-White (1914); Pieria, Onchestus,
+Cyllene and the Alpheus on any atlas of ancient Greece, e.g. R. J. A. Talbert (ed.), *Barrington Atlas of the Greek and
+Roman World* (Princeton, 2000).
+
+---
+
+### Chapter 5 — The accusation
+
+*The hall of Zeus on Olympus: white columns, no roof, clouds for a floor, the whole sky for a ceiling. Zeus on his cloud;
+Apollo standing, arms folded; the old man on a marble bench, hat on his knees; Maia with the cradle; Kleon with his
+tablets; Nell; {det}. The Knack is greyed out. {det} accuses alone.*
+
+**CULPRIT:** **Hermes**, one day old, who made the first lyre by noon, walked Apollo's fifty cows out of the meadow
+backwards that evening, wearing woven twig pads over his small feet, hid them by the river, and was back in his cradle
+before morning.
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. **D1** — [c:tracks-in] + [c:empty]: the tracks point in, the meadow is empty; the cows went out backwards.
+2. **D2** — [c:fig] + [c:twigs]: twig pads over a fig-sized foot.
+3. **D3** — [c:noon] + [c:not-stirred]: "has not stirred" fails; something sang at noon.
+
+*(Also accepted in any slot: [c:om-knee] + [c:om-heads], [c:shell] + [c:her-twang], [c:her-onchestus], [c:her-saw].)*
+
+**WRONG-SUSPECT RESPONSES (Quill, through the keyhole, very far away and very clear)**
+- **The old man of Onchestus:** "How tall was the someone? Read what he said on the cloud. Then look at the dent in the
+  middle of each print." *(points to [c:om-knee] and [c:fig])*
+- **Maia:** "Where was Maia all day? Up a mountain, with six witnesses who happen to be stars. And what did she actually
+  *see*?" *(points to [c:maia-sisters] and [c:maia-believed])*
+- **Wrong theory, "the wolf":** "No wolf walks cattle backwards, and none left a print. Read Kleon's first tablet."
+  *(points to [c:no-wolf])*
+- **Wrong theory, "Apollo lost count":** "He counted fifty yesterday afternoon. He wrote it down. Find me fifty cows."
+  *(points to [c:fifty])*
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You've shown the cows went out backwards. Now: whose foot fits inside a basket of
+twigs, with a dent no bigger than a fig? And who was awake at noon?"
+
+---
+
+### The reveal
+
+**ZEUS:** Little detective from the other side of the page. Who took the cattle?
+
+**{det}:** Hermes.
+
+*(Silence. Then the cradle says: plink.)*
+
+**APOLLO:** A *baby*? He was born yesterday!
+
+**HERMES:** I was! Exactly! Thank you!
+
+**{det}:** First, the tracks. Every hoof-print points into the meadow, and the meadow is empty. Fifty cows can't walk in
+and vanish. So they were walked out backwards, tails first.
+
+**NELL:** And the odd prints are twig pads. Woven like a basket, tied over a foot no bigger than a fig. The old man's feet
+are as big as loaves.
+
+**THE OLD MAN:** Bigger, on a hot day.
+
+**{det}:** The old man had a secret, but it wasn't a crime. He promised to see nothing, and he kept trying.
+
+**THE OLD MAN:** Very hard work.
+
+**{det}:** Maia had a secret too. She spent the day with her sisters, and she believed her son slept. She never saw it.
+
+**MAIA** *(softly)*: And at dawn today I heard the latch. I told myself it was the wind.
+
+**{det}:** And the last clue was there from the very first page. Apollo wrote: "Yesterday at noon I heard a new sound from
+the south." A bowstring that had learned to sing.
+
+*(Kleon holds up the first tablet. The noon line glows. Then the cradle twangs, and the two moments sit side by side.)*
+
+**HERMES** *(sitting up, blanket sliding off)*: Oh, all right.
+
+*(He holds up a tortoise shell with two curved arms and seven strings: the first lyre.)*
+
+**HERMES:** I found an old shell by the cave at dawn. By noon it could sing. By evening I was bored. You have temples and
+gold, big brother. I have a cold cave. I wanted a herd, and honour.
+
+*(Zeus begins to rumble. The rumble becomes a laugh. Zeus laughs so hard the clouds wobble.)*
+
+**ZEUS:** Born yesterday! Show your brother where the cows are, little one.
+
+*(A page turns. A high cave by a river. Fifty cows, all fine, chewing, faintly offended at being found.)*
+
+**APOLLO:** Fifty! *(counting)* …fifty.
+
+*(Hermes plucks the lyre. A slow, bright tune fills the cave. Apollo sits down on a rock without meaning to.)*
+
+**APOLLO:** What *is* that? I have never heard anything like it.
+
+**HERMES:** A trade? The lyre for the herd.
+
+**APOLLO:** *(after a long moment)* Done. And no more tricks.
+
+**HERMES:** Fewer tricks.
+
+**QUILL** *(through the keyhole)*: *Fewer*. Correct.
+
+*(Apollo plays. The cows stop chewing to listen. The old man of Onchestus puts his hat back on and goes home to his vines,
+which Apollo has promised to leave alone.)*
+
+---
+
+### Epilogue
+
+**The friendship.** Back on the hillside, the two brothers walk ahead, Apollo playing badly and then less badly, Hermes
+correcting him. Kleon writes a new tablet: *"Apollo's cattle: found. Apollo: musical."* In the Greek myths, Apollo
+becomes the god of music, and Hermes the messenger of the gods and the keeper of herds.
+
+**The souvenir.** As the sun touches the hills, Hermes holds something out to {det}: a small, smooth pick cut from the
+same old shell.
+**HERMES:** For plucking. It's called a… I haven't named it yet. You name it.
+**NELL:** We've got a word. Felix will tell you. At length.
+The Door's light flickers. Sunset. Nell grabs {det}'s sleeve, and they step through.
+
+**The new shelf.** In the office, a narrow shelf has appeared beside the Door, where yesterday there was only wall. The
+**tortoise-shell plectrum** goes on it, first of four empty places. When you tap it, it plays one bright note.
+**FELIX:** Footnote: *plectrum*, from Greek *plēktron*, "a thing to strike with". Footnote to the footnote: it means you
+strike the string, not the tortoise.
+**QUILL:** Bring back what you learned, not what you found. *(He looks at the plectrum.)* One exception. Just this once.
+
+**Nell's thread.** Nell sits on the office floor with her back to the Door.
+**NELL:** I said ten. About an old man who was keeping a promise.
+**QUILL:** And then?
+**NELL:** And then I didn't say a number. *(She takes the Inspector form out of her basket, looks at it, and puts it
+back.)* Not yet.
+
+**Biscuit.** Constable Tully puffs up all 39 stairs. "He's gone again." Biscuit is found asleep on the new shelf,
+curled round the plectrum, smelling faintly of wild thyme. Nobody can work out how he got through a door that was shut.
+
+**The calling card.** Dev comes up last, with a bun. He stops in the doorway.
+**DEV:** Was this here when you left?
+On the floorboards, just inside the office door, lies a small waxed card with a perfect ink blot. It was not there a
+moment ago. The stairs are empty. The air smells faintly of rosin, like a violin case just opened.
+> Every track points somewhere. Follow it forthwith. — B.
+
+**ASHA:** It's not a word. There's no gap anywhere.
+**DEV:** It's not for the Ledger. *(He turns it over.)* It's for us.
+*(Nobody says anything. Down on the quay, very faint, someone is tuning a violin.)*
+
+---
+
+### Detective School drill — *Which Way Did They Go?*
+
+**Track Reader.** Five short track descriptions slide onto the desk. For each, the child drags a little cow token the way
+the animal *really* went, then taps the words that prove it.
+
+| Tracks | Where they really went | The words that prove it |
+|---|---|---|
+| "Hoof-prints point into the barn. The barn is empty." | out of the barn, backwards | "The barn is empty." |
+| "Paw-prints go into the shed and come back out." | in, then out again | "come back out" |
+| "Boot prints lead to the pond. A wet boot is on the bank." | to the pond, then off without one boot | "A wet boot is on the bank." |
+| "Bird prints stop in the middle of the snow." | it flew away | "stop in the middle" |
+| "Hoof-prints point north. Every one is pressed deepest at the front." | north, the ordinary way (a fair check, so the child doesn't answer "backwards" every time) | "pressed deepest at the front" |
+
+**Figurative bonus:** "like a broom that walked", "quick as Hermes", "I wept like a fountain". For each, the child taps
+the picture of what it *really* means (brushy prints; very fast; crying a lot), and laughs at the literal picture (a broom
+with legs; a winged baby on a racetrack; an old man with water spouting from his eyes).
+
+---
+
+### Training Desk exercises
+
+*Twelve exercises, four per tier. Tiers: easier = L1, at = L2, harder = L3. Prompt sentences keep to each tier's sentence
+limit. None points at the culprit before chapter 5.*
+
+**e1 · easier (L1) · vocab-in-context · skill vocab · objective null · chapter 1 · source J1.2, span null**
+- **Prompt:** "Kleon is Apollo's herald. He reads the news out loud." A herald is…
+- **Options:** someone who carries news · a kind of cow · a song on a lyre
+- **Answer:** someone who carries news
+- **Explain:** The next sentence tells you. Kleon reads the news out loud. A herald brings news and says it for everyone
+  to hear.
+
+**e2 · easier (L1) · tense-sequence · skill sequence · objective null · chapter 1 · source J1.1, span fifty**
+- **Prompt:** Put Apollo's day in order, first to last.
+- **Options (to order):** He went to Olympus at sunset. · He counted fifty cows. · He found the meadow empty at dawn.
+- **Answer:** He counted fifty cows. → He went to Olympus at sunset. → He found the meadow empty at dawn.
+- **Explain:** The tablet says "yesterday afternoon", then "at sunset", then "at dawn". Afternoon comes before sunset.
+  Dawn is the next morning.
+
+**e3 · easier (L1) · figurative · skill figurative · objective null · chapter 1 · source J1.3, span broom**
+- **Prompt:** "Like a broom that walked." Did a broom really walk?
+- **Options:** Yes, a broom walked · No, the prints only looked brushy · No, a cow swept the path
+- **Answer:** No, the prints only looked brushy
+- **Explain:** "Like" tells you it is a picture in words. The prints were brushy at the edges, as if a broom had feet.
+
+**e4 · easier (L1) · inference · skill inference · objective null · chapter 2 · source J1.6, span not-stirred**
+- **Prompt:** Maia writes: "Please knock softly. Better still, do not knock." What does she want?
+- **Options:** lots of visitors · quiet, so the baby sleeps · someone to fix the door
+- **Answer:** quiet, so the baby sleeps
+- **Explain:** Her first line is "Hush. A baby sleeps here." She would rather nobody knocked at all.
+
+**e5 · at (L2) · inference · skill inference · objective null · chapter 2 · source interview, span om-promise**
+- **Prompt:** The old man says: "I made a promise, and I keep my promises. Mostly." What did he NOT say?
+- **Options:** who he made the promise to · that he keeps promises · that it was last night
+- **Answer:** who he made the promise to
+- **Explain:** He tells you there was a promise, and when. He does not say who it was for. What a person leaves out can
+  be a clue.
+
+**e6 · at (L2) · figurative · skill figurative · objective null · chapter 2 · source interview, span om-vines**
+- **Prompt:** "They ate my best vines! I wept like a fountain." What does "wept like a fountain" mean?
+- **Options:** he cried a lot · he built a fountain · he watered the vines
+- **Answer:** he cried a lot
+- **Explain:** A fountain pours out water. Weeping like one means a great many tears. It is a simile, a picture made
+  with "like".
+
+**e7 · at (L2) · tense-sequence · skill sequence · objective null · chapter 4 · source J1.1, span noon**
+- **Prompt:** Which came first: the new sound at noon, or Apollo going to Olympus?
+- **Options:** the new sound at noon · Apollo going to Olympus · they happened at the same time
+- **Answer:** the new sound at noon
+- **Explain:** Noon is the middle of the day. Apollo left at sunset, at the end of the day. Time-words like "noon" and
+  "sunset" let you order events.
+
+**e8 · at (L2) · vocab-in-context · skill vocab · objective null · chapter 4 · source J1.4, span shell**
+- **Prompt:** "A scrap of old tortoise shell. Small holes are bored along one edge." Here, "bored" means…
+- **Options:** made with a tool that turns · feeling dull and fed up · carried by a cloud
+- **Answer:** made with a tool that turns
+- **Explain:** A hole can be bored with a drill. "Bored" can also mean fed up, but a shell cannot be fed up. The words
+  around a word tell you which meaning fits.
+
+**e9 · harder (L3) · word-origin · skill vocab · objective w7-myth-names · chapter 5 · source J1.1, span null**
+- **Prompt:** In the Greek myths, the Muses were goddesses of the arts. Which English word comes from their name?
+- **Options:** music · mouse · mule
+- **Answer:** music
+- **Explain:** Greek *mousikē* meant "the art of the Muses". *Museum* comes from the same family: a home of the Muses.
+
+**e10 · harder (L3) · summarise · skill sequence · objective null · chapter 5 · source J1.1, span null**
+- **Prompt:** Put these four sentences in order to retell the hymn's first day.
+- **Options (to order):** That evening, Apollo's cattle were walked away backwards. · At noon, a new sound came from a
+  cave in the south. · Before morning, the cradle was full again. · At dawn, a baby was born on Mount Cyllene.
+- **Answer:** At dawn, a baby was born… → At noon, a new sound… → That evening, Apollo's cattle… → Before morning, the
+  cradle…
+- **Explain:** The time-words carry the order: at dawn, at noon, that evening, before morning. A good summary keeps
+  only the big steps.
+
+**e11 · harder (L3) · inference · skill inference · objective null · chapter 5 · source interview, span her-onchestus**
+- **Prompt:** Nobody had told the baby where the old man lives. Yet he said, "I have never even been to Onchestus." Why
+  does that matter?
+- **Options:** He knew a place he should not have known · Onchestus is a famous city · babies often know place names
+- **Answer:** He knew a place he should not have known
+- **Explain:** A person can give themselves away by knowing too much. Nobody had said "Onchestus" to him. So how did he
+  know?
+
+**e12 · harder (L3) · word-origin · skill vocab · objective w7-myth-names · chapter 5 · source epilogue, span null**
+- **Prompt:** *Lyre* is the Greek harp that Hermes made. Which word for the words of a song comes from it?
+- **Options:** lyric · liar · lyrebird
+- **Answer:** lyric
+- **Explain:** Songs were once sung to the lyre, so their words were "lyric" words. *Lyrebird* is named after the
+  instrument too, but it is a bird, not the words of a song. *Liar* is a different family altogether.
+
+---
+
+### Persona block (format 1.3: `journey.persona`)
+
+*One knack line per persona, at the chapter where that Knack helps most. Every candidate set has exactly 3 items and at
+most 1 from `minimalEvidence` (tracks-in, empty, fig, twigs, noon, not-stirred).*
+
+| Persona | Chapter | Knack line | Candidates (3) | In minimalEvidence |
+|---|---|---|---|---|
+| **Thea** (Owl's Eye) | 1, on DOC J1.2 | "What's *not* on this page? Not one print points *out*." | `gap:none-out` · `gap:no-wolf` · `gap:herald-time` (Kleon gives no hour) | none |
+| **Milo** (Winged Words) | 2, on [c:her-born] | "So what it *actually* says is: 'I'm too little to have walked anywhere.' That's a big thing for a small person to say." Paraphrase options: *I'm too little to have walked anywhere* (right) · *I was too little to walk yesterday, but I can now* (wrong time) · *My mother is too little to walk* (wrong pronoun) | `span:her-born` · `span:om-staff` · `span:maia-dodge` | none |
+| **Oskar** (Two Ravens) | 3, Memory word **"noon"** | "We've seen that word before. *Noon.*" Thought offers: `link:noon+not-stirred` (real) · `link:noon+sunset-left` (tempting: both Apollo) · `link:bowstring+wolf-theory` (tempting: both Apollo's guesses) | the three links listed | 1 (`noon`) |
+| **Signe** (The Spindle) | 4, on the timeline | "Something happened *here*, between sunset and moonrise, and nobody's told us." | `slot:5` (the real gap) · `slot:between-2-3` · `slot:between-8-9` | none |
+| **Hari** (Another's Shoes) | 2, on DOC J1.6 | "If I were Maia, what would I have seen? A sleeping baby. Twice." Viewpoint card: *What she knew:* he was asleep at [dawn yesterday / noon / sunset] · *What she wanted:* [quiet / cows / gold] · *What she didn't know yet:* [what happened in between / her sisters' names / where Onchestus is] | `span:maia-yday` · `span:maia-dawn` · `span:maia-cave` | none |
+| **Vani** (The Tuning Ear) | 2, Voice, [c:her-born] beside [c:om-feet] | "Listen to how he *says* it. 'The ground is rough.' Only someone who has stood on it says that." Three word-habits underlined in each: *rough / soft / feet* against *leather / feet / loaves*. Same writer? (No: two voices, one subject.) | `span:her-born` · `span:om-feet` · `span:maia-wind` | none |
+
+**Origin cards.** Journeys carry no persona hoard card. Every persona receives the **bonus card** below.
+
+---
+
+### Word Hoard — bonus card (all six personas)
+
+- **Word:** plectrum
+- **Path:** Greek *plēktron*, "a thing to strike with" (from *plēssein*, "to strike") → Latin *plectrum* → English
+  *plectrum*
+- **Story:** A plectrum is the small pick a player uses to pluck a lyre, a harp or a guitar. The Greek word means "a thing
+  to strike with", because you strike the string.
+- **Question:** A guitarist holds a plectrum. What does she do with it? · *pluck the strings* · *tune the strings* · *paint
+  the guitar* · **Answer:** pluck the strings
+- **Objective:** `w7-myth-names` (with `la10-world`) · **askFamily:** false · **sources:** *Oxford English Dictionary*,
+  "plectrum"; Merriam-Webster, "plectrum"; Etymonline, "plectrum"
+
+---
+
+### Story additions 🪔 (labelled, as the badge requires)
+
+Everything below is added for the Journey and is **not in the hymn**:
+- Nell, {det}, Quill and the Door; the herald **Kleon** and his tablets; Zeus's notice; the vineyard as Apollo's price.
+- The **escalation** (Zeus judging at noon) and the **clouds**.
+- **Apollo hearing the new sound at noon.** In the hymn, Hermes makes the lyre and plays it at mid-day, but Apollo does
+  not hear it until he finds the baby. The noon line on Apollo's tablet is this Journey's clue.
+- **Hermes's slip about Onchestus** and **"I saw nothing, just like the old man"**: this Journey's. The hymn's Hermes
+  does argue his innocence with "I was born yesterday".
+- **The latch Maia heard.** In the hymn she is awake when Hermes comes home, and scolds him.
+- The old man's **motive** (cows eating his vines) and his **brushwood**. In the hymn he is simply working in his vineyard
+  when Hermes passes and tells him to keep quiet.
+- **Maia's day with her sisters.** In the Greek myths Maia is the eldest of the seven Pleiades, the star-sisters; the
+  hymn does not say where she spent the day. In the hymn she is awake when Hermes creeps home and she scolds him; here
+  she says only that she "heard the latch".
+- **The shell.** In the hymn the tortoise is alive when Hermes finds it. This retelling gives him an old, empty shell, so
+  no animal comes to harm.
+- **The plectrum** as Hermes's gift.
+
+**Omitted on purpose:** in the hymn Hermes sacrifices two of the cows. It is not in this chapter in any form. The herd is
+fifty, all fifty are found, and the ending is a trade and a friendship.
+
+---
+
+### Did you know? (chapter 5 margin note, after Case Closed)
+
+In the hymn, when Hermes plays the lyre, Apollo is so delighted that he says the music is worth fifty cows, and the
+trade is made. Apollo also gives his little brother a shining staff, and Hermes becomes the herdsman of the gods. Two
+brothers who began with a theft end as lifelong friends.
+*Source:* Homeric Hymn 4, *To Hermes*, lines 436–580 (the lyre, the trade and the gifts), trans. Evelyn-White (1914).
+
+---
+
+### Art and scene notes
+
+**Backgrounds (no lettering in any painting; tablets, scrolls and notices are blank shapes, the text is live)**
+- **The office, morning:** the painted Door ajar, its keyhole brimming with ink; the room as in Case 3, plus a faint
+  purple haze of thyme at floor level. The persona sign in panel 1.
+- **Pieria at dawn:** a broad, empty upland meadow, mist in the hollows, purple wild-thyme cushions, a wooden gate with
+  flattened grass beside it, the sea far below. Gold-pink light.
+- **The trail:** a ribbon of trampled grass over rolling hills; in close-up, cloven hoof-prints all facing the same way
+  (towards the viewer, back towards the meadow) and, beside them, ragged oval prints with a small round dent in each.
+- **The vineyard at Onchestus:** low vines on a sunny slope, bundles of brushwood at the row-ends, a straw hat on a post.
+- **Where the trail meets the river:** a wide, shallow river among reeds; the finds on a flat stone.
+- **The cave on Mount Cyllene:** a cool, dim cave mouth with a wax tablet on a peg; inside, a lamp, a loom, a woven
+  cradle in the corner. The cradle's blanket has corners under it.
+- **The clouds and Olympus:** a roofless hall of white columns on cloud, the whole sky overhead, small gold-leaf pegs on a
+  washing line strung between clouds.
+- **The cattle cave by the Alpheus:** a high, dry cave, fifty brown-and-white cows calmly chewing, looking faintly
+  offended. All fifty well. **No altar, no fire, no sacrifice in any painting.**
+
+**Props:** wax tablets in wooden frames; a herald's staff; a scroll on a pillow-sized cloud; twig pads woven like small
+baskets (myrtle and tamarisk); a curved scrap of mottled shell with small holes; the first lyre (a tortoise-shell
+sound-box, two curved arms, a crossbar, seven strings); the tortoise-shell plectrum.
+
+**Portraits**
+- **Apollo:** golden, enormous, laurel askew, silver bow on his back that never leaves it. Drawn **kind and frantic,
+  never menacing**: *offended* is a comic pout; *amazed*, at the lyre, is jaw-dropped wonder.
+- **Hermes:** a baby with one curl and enormous eyes. *Innocent* is saucer-eyed; *amused* is a sideways grin; *guilty* is
+  the grin caught, never tears. No wings on his head or ankles yet (those come later in the stories).
+- **Maia:** gentle, tired, a star-sewn blue cloak. *Worried* is a hand at her throat. Dignified always.
+- **The old man:** brown and bent as a vine root, brushwood in his beard, huge leather sandals. *Relieved* is a
+  whole-face smile.
+- **Zeus:** vast, white-bearded, lounging on a cloud. *Amused* is a full belly-laugh with the clouds wobbling. **No
+  thunderbolt in hand in any panel.**
+- **Kleon:** thin, eager, tablets on a strap. Two expressions.
+- **Nell:** her usual look, with a sprig of thyme caught in her hair from panel 3 onward.
+
+**Sensitivity:** these are the Greek myths, drawn with respect and fun. Gods are characters in a story, not costumes or
+jokes. No sacrifice, no harm to any animal (the shell is old and empty), no violence. Apollo's anger is comic.
+
+**Comic panels:** opening (5 panels as scripted); reveal (6 panels: the tracks and the empty meadow side by side; the twig
+pad beside the old man's sandal; the noon line glowing on the tablet beside the twanging cradle; Hermes holding up the
+lyre; Zeus laughing, clouds wobbling; Apollo, enchanted, playing in the cattle cave); epilogue (3 panels: the shelf and the
+plectrum; Biscuit curled round it; the calling card on the floorboards, the stairwell empty).
+
+**Souvenir:** a small, smooth teardrop of mottled tortoise shell, the size of a thumbnail, warm brown and gold.
+
+---
+
+### [VERIFY] list for this Journey
+
+1. The Evelyn-White line numbers cited (lines 17–18; about line 273; 68–104; 436–580) against the 1914 Loeb printing,
+   and the exact wording of the two quoted lines ("Born with the dawning…"; "I was born yesterday…").
+2. The first recorded date of the idiom "I wasn't born yesterday" (OED), and the claim that it does not come from the
+   hymn (chapter 2 margin note).
+3. M. L. West, *Ancient Greek Music* (1992): the chapter that discusses the *chelys*-lyre (chapter 3 margin note).
+4. That the hymn says "seven strings" (the reveal's lyre; Evelyn-White has "seven strings of sheep-gut", about line 51).
+5. The *Barrington Atlas* citation, or replace it with a simpler atlas reference for children's notes.
+
+---
+
+## JOURNEY 2 — The Case of the Missing Hammer
+
+*A Bizzing mystery · an Ink Journey through the Reading Door · 🪔 Katha: a story as it is told.*
+
+```
+meta:
+  id:            journey-02
+  kind:          journey
+  level:         3  (ages 9–10 · 4 suspects · 8 scene documents · ≤100 words per document · ≤18-word sentences ·
+                     4 deductions · one red herring)
+  world:         asgard (the Margin skin: a snowbound Norse hall, rune-staves, a board of carved wood)
+  source:        Þrymskviða, "The Lay of Thrym", in the Poetic Edda (the Codex Regius manuscript, about 1270), retold.
+                 Quoted lines are from Henry Adams Bellows's translation (1923), public domain.
+  badge:         🪔 Katha — a story as it is told. Every invented beat is listed in "Story additions" below.
+  companion:     Dev Raman (codes, runes, kennings; this Journey grows him)
+  skills:        inference · factopinion · figurative (kennings) · voice  (supporting: sequence, for the night timeline)
+  vanished word: none (the Blot cannot follow through the Door; the Ledger stays at UNDER · THE · CLOCK · THAT · NEVER)
+  souvenir:      a falcon feather from Freyja's cloak
+  bonus card:    kenning (all six personas; see "Word Hoard")
+  hands forward: a clever excuse is not a fact → Case 6, Crane's flyer (fact against opinion)
+  arc beats:     Dev learns that a reputation is not evidence ("I read every story. I didn't read the page."); the second
+                 shelf-piece by the Door; on return, a tune on the wind
+```
+
+**Writer's note on the poem's shape.** In *Þrymskviða* the "who" is never secret: Loki flies to Giantland and Thrym simply
+tells him. The mystery here is the poem's own gaps, filled fairly:
+1. **How** did a giant take the hammer from beside a sleeping Thor, in a barred hall, with no footprints in the snow?
+   (The poem never says. This Journey's answer is a 🪔 addition, built only from clues the child can mark.)
+2. **Was Loki in it?** Everyone in the hall thinks so, because it is always Loki. The poem shows Loki working to get the
+   hammer back; this Journey makes the child prove it.
+3. **Where** is the hammer, and **why** was it taken? Thrym's boast answers both, if it is read literally.
+
+**Writer's note on the feast.** Chapter 4's second half is the **explanations game**: at Thrym's feast the child chooses
+Loki's replies to Thrym's suspicions. The child knows each reply is false. That is the lesson: a clever excuse can fit
+every fact a listener has, and still not be the truth.
+
+**Writer's note on the ending.** In the poem, Thor strikes down Thrym and his kin when the hammer is in his hands. **This
+chapter never says so and never shows it.** The hammer is laid in the bride's lap; Thor's hand closes on it; "the wedding
+was over very quickly". Cut to the snow.
+
+---
+
+### Case card
+
+> Thor wakes in the dark, and his hammer is gone.
+> The door was barred. The snow outside is smooth. Nobody came in.
+> Without the hammer, Asgard's walls are unguarded, and by nightfall the giants will know it.
+> Everyone in the hall says the same name: "It's always Loki."
+> Is it, {det}?
+> A name is not evidence.
+
+*(57 words with a six-letter name. Read aloud at the child's choice.)*
+
+---
+
+### Cast
+
+| Who | Role | Look (one line) | Manner (one line) | Motive · Secret | Portrait expressions |
+|---|---|---|---|---|---|
+| **Loki** | Suspect · the red herring | Lean and quick, red-brown hair that will not lie flat, a green cloak with too many pockets, a grin that arrives before he does | Clever, charming, slippery with words; tells the truth in a way that sounds like a lie | *Motive:* the gods blame him for everything, and the hammer's short handle really is his fault. · *Secret:* he spent the whole night at the dwarves' forge, asking them to make Thor a longer handle as a sorry-present. They said no. He is embarrassed, and he would rather be suspected than laughed at | amused, calm, offended, nervous, relieved |
+| **Brokkr and Sindri** *(one suspect card)* | Suspects · the dwarf smiths who forged the hammer | Two broad, short brothers in leather aprons, beards singed at the ends, soot to the elbows; Brokkr has a small scar on his eyelid | Proud, gruff, finish each other's sentences | *Motive:* "Our finest work!" They think Thor treats it like a ladle on a hook. · *Secret:* they promised Loki to tell nobody he came begging; they are bad at secrets and worse at lying | offended, nervous, amused, relieved |
+| **Tooth-Gnasher and Tooth-Grinder** *(one suspect card)* | Suspects · Thor's goats (comic) | Two shaggy grey goats with curling horns; one has a sock hanging from his mouth | Chew everything; stare meaningfully | *Motive:* they chew everything. · *Secret:* they saw something in the night, and goats cannot say what | (painted poses: chewing, staring north, ears flat, head-butt of joy) |
+| **Thrym** | Suspect · culprit · lord of the giants | Huge, frost-white beard plaited with gold rings, a cloak of white fur, arms improbably long; sits on a grassy mound | Vain, boastful, pleased with himself; not menacing, just very large and very sure | *Motive:* he wants Freyja for his bride, and he thinks the hammer will buy her. · *Secret:* none worth the name; he cannot stop telling people things | amused, calm, offended, nervous |
+| **Thor** | Client · god of thunder (in the Norse stories) | Red-bearded, broad as a door, iron gloves tucked in his belt, a woollen night-cap he forgets he is wearing | Loud, honest, quick to temper, quicker to laugh | — | worried, offended, amused, relieved |
+| **Sif** | Witness · Thor's wife | Long golden hair in one great plait, a keys-belt, a calm, watchful face | Notices everything; writes it down | — | calm, worried, amused |
+| **Freyja** | Witness · owner of the falcon-feather cloak | Tall, a cloak of falcon feathers over her arm, a great necklace of gold at her throat | Proud, warm, and very sure of her own mind | — | calm, offended (anger, played straight), amused |
+| **Heimdall** | Witness · the watchman of the gods | Pale and tall, a great horn on a strap, eyes that never seem to blink | Quiet; speaks rarely, and then wisely | — | calm |
+
+The agency: **Dev** comes through the Door with {det}. **Quill** holds the Door from the office side; his hints come
+through the keyhole on a draught that smells of snow.
+
+**The red herring:** Loki ("it's always Loki"). **The wrong theory** that Dev builds in chapter 3: *Loki let the giant
+in.*
+
+---
+
+### Tutorial notes (the explanations game, new in this Journey)
+
+1. In chapter 4, at Thrym's feast, a **Loki card** appears beside each of Thrym's suspicious questions, with three
+   possible replies.
+2. Quill explains once: "Choose the reply that fits **every fact Thrym knows**. Not the true one. The one he will
+   believe." A small list of *What Thrym knows* sits beside the cards.
+3. A reply that contradicts something Thrym knows makes the hall go quiet, and Thrym frowns. The child tries again. No
+   ink is lost, nothing is scored down, and the right reply is the poem's own.
+4. After each right choice, Dev asks: "Is it *true*?" The child taps **No**. That tap is the lesson.
+
+---
+
+### Opening (comic panels)
+
+1. **The office, the evening after Case 5.** Snow on the round window, though it is not snowing in Inkwell. The painted
+   Door is ajar; frost feathers its keyhole. {det}'s persona sign is in the panel. Dev sits on the floor with a library
+   book: *Runes and Riddles of the North*.
+   **DEV:** "Twenty-four letters. No Y. And they carved them on sticks. I *love* them."
+2. **Quill**, deerstalker on, a scarf on top.
+   **QUILL:** "Inside a story, you can find out anything. You can't change what it is. Bring back what you learned. And
+   mind the clock. This one keeps the dark until sunrise."
+3. **Through the Door: Thor's hall, Bilskirnir, before dawn.** A long hall of carved wood, a hearth banked high and glowing,
+   benches, shields on the walls (painted as round shapes, no symbols). A wooden peg above the hearth, directly under a
+   square smoke-hole in the roof. The peg is empty.
+4. **Thor**, in a night-cap, both fists in the air. The roar is lettered in the poem's own words, live text:
+   **THOR:** *"Hear now, Loki, what now I say…"* **…MY HAMMER IS GONE!**
+   *(Dust falls from the rafters. A goat in the stable bleats.)*
+5. **Every face in the hall turns to the doorway**, where a lean, red-haired figure has just walked in, brushing soot off
+   his sleeve.
+   **EVERYONE:** "*Loki.*"
+   **LOKI:** "Good morning to you too."
+   **DEV** *(whispering to {det})*: "I've read every story about him. It's *always* Loki."
+
+---
+
+### Chapter 1 — The scene
+
+*Place: Bilskirnir before dawn. The hearth crackles; the hall is warm. Outside, fresh snow lies smooth to the north wall
+of Asgard, close behind the hall. The wind is from the north, from Jötunheim, and it sounds like someone breathing.*
+
+#### DOC J2.1 · report
+- **Author:** Thor, as Sif wrote it down · **Date/time:** before dawn · **Found where:** on a wax board at the hearth
+- **Picture:** a long wooden board with a wax face, a stylus on a thong, a pair of iron gloves dropped beside it.
+
+> THOR'S ACCOUNT
+> [[c:peg-under|Every night I hang my hammer on the peg under the smoke-hole, near the warm hearth.]]
+> [[c:barred|Last night I barred the door myself, from the inside.]]
+> [[c:fire-high|The fire was banked high all night.]]
+> [[c:roof-creak|Once, in the third watch, the roof creaked like a sea-steed's mast in a gale.]]
+> I thought it was the wind, and slept again.
+> [[c:woke-gone|I woke before dawn, and the peg was empty.]]
+> [[c:bar-still|The bar was still across the door.]]
+> Nobody in the hall heard a thing.
+> — Thor, son of Odin
+
+*(The roof line is the clue hidden in plain sight. It reads like a sleepy man's weather report. "Sea-steed" is a kenning:
+a ship. The child can mark it, and it is re-read at the reveal.)*
+
+#### DOC J2.2 · note
+- **Author:** Sif · **Date/time:** before dawn · **Found where:** pinned to the hammer peg with a bone pin
+- **Picture:** a strip of birch bark with neat scratched writing, pinned beside the empty peg; a glitter of white on the
+  peg itself.
+
+> WHAT I FOUND
+> [[c:rime|There is rime on the hammer peg, white and feathery, though the hall is warm.]]
+> [[c:soot-stripe|The soot round the rim of the smoke-hole is wiped clean in one long stripe.]]
+> [[c:snow-floor|A little snow lies on the floor under the smoke-hole.]]
+> [[c:no-prints|Outside, the snow is smooth all round the hall. There is not one footprint.]]
+> [[c:wall-rime|On top of the north wall there is a long patch of rime, as long as a tree.]]
+> I have touched nothing.
+> — Sif
+
+#### DOC J2.3 · list
+- **Author:** Sif · **Date/time:** written yesterday evening · **Found where:** the hall's day-tally, hanging by the door
+- **Picture:** a notched tally-stick and a strip of bark tied to it, written small.
+
+> WHO CAME TO THE HALL YESTERDAY
+> Morning: the goats were fed and shut in the stable.
+> Noon: a message from Brokkr and Sindri. "Is our hammer well? Is it polished?"
+> [[c:loki-dusk|Dusk: Loki came with a knotted cord. He measured the hammer's handle.]]
+> [[c:loki-nothing|When I asked why, he said, "Oh, nothing. Nothing at all."]]
+> [[c:thor-shouts|Evening: Thor told the whole feast where he hangs his hammer, again.]]
+> Night: the door barred. Everyone asleep.
+> — Sif
+
+#### DOC J2.4 · stave
+- **Author:** Thor, carved long ago · **Date/time:** old · **Found where:** a stave nailed beside the peg
+- **Picture:** a flat staff of ash wood with a column of plain runes cut down it; the live-text translation appears in a
+  parchment box when tapped.
+
+> WHO CAN CARRY MY HAMMER FAR
+> Thor, in his iron gloves.
+> A giant, perhaps. Giants are strong.
+> [[c:dwarves-pole|The dwarves who made it, both together, slowly, with a pole.]]
+> [[c:goats-no|Not the goats. Pulling a cart is not carrying.]]
+> Nobody else in Asgard. I have watched them try.
+> [[c:rime-lore|Remember: frost-giants leave rime on whatever they touch.]]
+> [[c:north|Their land, Jötunheim, lies north, beyond the wall.]]
+
+#### DOC J2.5 · note
+- **Author:** Freyja · **Date/time:** at sunrise · **Found where:** tied to the collar of the falcon-feather cloak, which
+  Loki carries over his arm
+- **Picture:** a cloak of brown-and-cream falcon feathers, folded; a small card of birch bark tied to it with a gold
+  thread.
+
+> To Loki.
+> [[c:cloak-sunrise|I lend you my falcon cloak at sunrise, after Thor's roar woke all of Asgard.]]
+> [[c:cloak-once|It has not left my hall all night. It never does.]]
+> Fly quickly, and find the hammer.
+> Bring the cloak back with every feather.
+> I have counted them.
+> — Freyja
+
+#### DOC J2.6 · stave
+- **Author:** unknown · **Date/time:** found at dawn · **Found where:** stuck upright in the snow on top of the north
+  wall, where no one could reach it from inside
+- **Picture:** a short peeled stick with six runes cut in it, frosted white; Dev's notebook beside it, open.
+
+> SIX RUNES, CUT DEEP
+> [[c:runes|ᚠ ᚱ ᛖ ᛁ ᛃ ᚨ]]
+>
+> *Dev's working, in his notebook:*
+> F. R. E. I (they use it for Y). J. A.
+> [[c:freyja|FREYJA.]]
+> [[c:rune-why|Why would a thief leave a goddess's name?]]
+> [[c:rune-high|And how did it get up there? The wall is twice my height.]]
+
+*(The runes are plain Elder Futhark letters, live text. See the art notes for the blocklist.)*
+
+#### DOC J2.7 · log
+- **Author:** the stable-keeper 🪔 · **Date/time:** this morning · **Found where:** a slate on the stable door
+- **Picture:** a small slate with chalk lines, one corner bitten off.
+
+> GOATS, NIGHT
+> [[c:goats-latched|Shut in at dusk. Latch still down at dawn.]]
+> [[c:goats-ate|Eaten: one halter, one bucket handle, one of Thor's socks, and this corner of the slate.]]
+> [[c:goats-north|Since the third watch, both goats have stood with their noses to the north wall.]]
+> They will not stop staring. They will not stop chewing.
+> I do not know which is worse.
+
+**Chapter 1 hook.** *(Loki shakes out the falcon cloak. Feathers rustle like rain. He grins at {det}.)*
+**LOKI:** "I'm going to find out where your hammer is, Thor. North, I'd guess. I'm always right about north."
+**DEV** *(very quietly)*: "How does he know it's north?"
+
+**Did you know?** *(margin note, chapter 1)* *Þrymskviða* ("The Lay of Thrym") is a poem in the *Poetic Edda*, a collection
+of Old Norse poems that survives in one manuscript, the Codex Regius, written in Iceland around 1270. The poem begins:
+"Wild was Vingthor when he awoke, / And when his mighty hammer he missed." *Vingthor* is one of Thor's names.
+*Sources:* *The Poetic Edda*, trans. Henry Adams Bellows (American-Scandinavian Foundation, 1923), "Thrymskvitha",
+stanza 1; Carolyne Larrington (trans.), *The Poetic Edda* (Oxford World's Classics, rev. 2014), introduction, on the
+Codex Regius. [VERIFY: the Bellows lines against the 1923 printing before ship.]
+
+---
+
+### Chapter 2 — Interviews
+
+*Every answer arrives as a carved stave on the board. Questions marked ◆ appear only after the child has read the
+document named. To reach Thrym, the child turns the page: in the Margin, you go where the story goes.*
+
+#### SUSPECT Loki *(Dev insists on him first)*
+
+**Q (where):** "Where were you last night?"
+> Here and there. Mostly there.
+> [[c:loki-there|"There" was warm, and noisy, and full of people who don't like me.]]
+> That describes most places, to be fair.
+*(portrait: amused)*
+
+**Q (why)** ◆ after DOC J2.3: "Why did you measure the hammer's handle?"
+> Ah. Sif writes everything down. I admire that, mostly.
+> [[c:loki-cord|I was measuring it for a present. No. Forget I said present.]]
+> It was nothing. A very long nothing.
+*(portrait: nervous: this is his secret, showing at the edge)*
+
+**Q (when):** "When did you get the falcon cloak?"
+> At sunrise, after the roar. You heard the roar. Everyone heard the roar.
+> [[c:loki-no-cloak|Before that, I had no wings at all. Ask Freyja. She counts feathers.]]
+*(portrait: calm)*
+
+**Q (who):** "Who knew where Thor keeps his hammer?"
+> Who didn't? He tells every feast. Loudly. Twice.
+> [[c:loki-everyone|Every giant in Jötunheim could draw you a map of that peg.]]
+*(portrait: amused)*
+
+**Q (why):** "Why does everyone blame you?"
+> Because I'm usually guilty. I'm not offended. Usually is a fair word.
+> [[c:loki-handle|The hammer's short handle really is my fault. That was a long time ago, and involved a fly.]]
+> Today, though, I am only usually.
+*(portrait: offended → amused)*
+
+#### SUSPECT Brokkr and Sindri
+
+*Place: the dwarves' forge, under a mountain. Red light, ringing iron, a heat that makes Dev's glasses steam. Not a
+flake of frost anywhere.*
+
+**Q (what):** "Did you make the hammer?"
+> **BROKKR:** Made it! Our finest work!
+> **SINDRI:** And he hangs it on a peg. Like a ladle.
+> [[c:dw-pride|BROKKR: We have asked him to polish it. Twice. Yesterday, three times.]]
+*(portrait: offended)*
+
+**Q (where):** "Where were you last night?"
+> **SINDRI:** Here. At the forge. Working.
+> **BROKKR:** On nothing.
+> [[c:dw-nothing|SINDRI: On a handle. BROKKR: On NOTHING.]]
+*(portrait: nervous: they have promised to keep somebody's secret, and it is leaking)*
+
+**Q (what):** "Could frost form in here?"
+> **BROKKR:** Frost? In our forge?
+> [[c:dw-hot|SINDRI: Snow melts on our doorstep. Ice weeps at the sight of us.]]
+*(portrait: amused)*
+
+**Q (how):** "Could you carry the hammer?"
+> **BROKKR:** Together, on a pole, slowly. We did it once, to give it to the gods.
+> [[c:dw-tracks|SINDRI: And we'd leave tracks like two barrels rolling. Look at our feet.]]
+
+#### SUSPECT Tooth-Gnasher and Tooth-Grinder
+
+*Place: the stable. Hay, a warm smell, two goats. The interview is conducted by the goats' expressions, as with
+Encore the cat in Case 5.*
+
+**Q (where):** "Where were you last night?"
+> *(Tooth-Grinder chews the end of Dev's scarf, thoughtfully.)*
+> *(Tooth-Gnasher looks at the latch, which is down. Then at {det}. Then at the latch again.)*
+
+**Q (what):** "Did you see anything?"
+> *(Both goats turn, slowly, and stare at the north wall of the stable. Their ears go flat.)*
+> [[c:goats-stare|They hold still, the way animals do when something very big went by in the dark.]]
+*(This line is stage direction set as live text, so the child can mark it.)*
+
+**Q (what):** "Did you eat the hammer?"
+> *(Tooth-Gnasher looks deeply offended, and eats a bucket handle to make a point.)*
+
+#### SUSPECT Thrym, lord of the giants
+
+*The page turns. Jötunheim: a white plain under a white sky, a grassy mound blown clear of snow, a hall of grey stone.
+Loki lands in a whirr of feathers. Thrym sits on the mound plaiting golden leashes for his dogs, as the poem says, and
+smoothing his horses' manes.*
+
+**Q (what):** "Do you have Thor's hammer?"
+> Have it? I took it! Look at me, I'm delighted.
+> [[c:thrym-hid|I have hidden it eight miles under the earth.]]
+> [[c:thrym-price|No one gets it back unless Freyja is brought to me as my bride.]]
+*(portrait: amused)*
+
+**Q (what):** "Can anyone find it?"
+> [[c:thrym-brag|No one will ever find it. I am the cleverest giant who ever lived.]]
+> [[c:thrym-best|And Freyja will think I am the finest husband in all the worlds.]]
+*(portrait: amused. Dev mutters: "That's two opinions and no facts.")*
+
+**Q (how):** "How did you get into Asgard?"
+> Into it? Into Asgard?
+> [[c:thrym-feet|I never set one foot in Asgard. Feet are for little people.]]
+> *(He stretches. His arms go on, and on, like two pine trees.)*
+*(portrait: amused → nervous: he has said more than he meant)*
+
+**Q (who):** "Who told you where it was kept?"
+> Thor did! He tells every feast. We hear him from here.
+> [[c:thrym-hint|But who tells giants things? Ask Loki. Loki is always telling.]]
+*(portrait: amused. This is an insinuation, not a fact. Thrym knows exactly what he is doing.)*
+
+**Q (when):** "When must Freyja come?"
+> [[c:thrym-tonight|Tonight. The wedding feast is ready, and the mead is poured.]]
+> If no bride comes by dark, the hammer stays in the dark for good.
+
+**The persona question** *(one optional question, asked in the persona's own style; the answer is the same for all six)*
+- Thea: "What aren't you telling us?" · Milo: "So what you're actually saying is, you did it?" · Oskar: "You said
+  'eight'. Eight what, exactly?" · Signe: "What happened in the third watch?" · Hari: "If I were you, what would I have
+  wanted?" · Vani: "You boast a lot. Who taught you to talk like that?"
+> Nobody taught me! I'm a natural.
+> [[c:thrym-reach|In the third watch, I was simply stretching. A giant may stretch.]]
+*(portrait: nervous. An extra mark: when did anyone mention the third watch to him?)*
+
+**Chapter 2 hook.** *(The page turns back. In Thor's hall, a dozen gods are waiting. Loki lands, shakes out the cloak,
+and says the poem's news: the hammer is hidden, and the price is Freyja. Somebody at the back says, not quite quietly
+enough:)*
+**A VOICE:** "And how did the giant know the way in, Loki?"
+*(Loki's grin goes away, just for a moment.)*
+
+**Did you know?** *(margin note, chapter 2)* Why is Thor's hammer so short in the handle? In another old book, Snorri
+Sturluson's *Prose Edda* (about 1220), the dwarf brothers are forging it while Loki, in the shape of a fly, bites Brokkr
+on the eyelid. Brokkr stops pumping the bellows for a moment to brush him away, and the handle comes out short.
+*Source:* Snorri Sturluson, *Edda: Skáldskaparmál*, ch. 35, trans. Anthony Faulkes (Everyman, 1987), pp. 96–97.
+
+---
+
+### Chapter 3 — The board
+
+*The board is a wall of carved wooden staves in Thor's hall. Red wool for string. The hearth is low now; noon light comes
+down through the smoke-hole in a white square.*
+
+**Interlude: Freyja's hall, noon.** Thor and Loki ask Freyja to put on the bridal linen and go to Jötunheim. The poem
+gives her anger, and this Journey plays it straight.
+- **FREYJA** *(rising; the hall shakes; the great necklace at her throat breaks and falls, as the poem says)*: "Go to
+  Giantland as a bride? Traded for a hammer, like a sack of grain? I will not. Find another way, Thor. It's your
+  hammer."
+- **DEV** *(to {det}, quietly)*: "She's right."
+- **FREYJA** *(overhearing)*: "Of course I'm right."
+*(Nobody argues. Thor looks at his boots. This is not a joke and nobody in the panel laughs.)*
+
+**Board intro (Dev's theory: the false solution)**
+**DEV:** "Look. Loki measured the hammer at dusk. Loki said 'nothing'. Loki took the cloak. Loki knew it was north.
+Thrym says 'ask Loki'. The door was barred from inside, so someone inside let the giant in. It's *always* Loki.
+Hunch-o-meter…" *(he hesitates)* "…Nell would say ten. So, ten."
+**QUILL** *(through the keyhole, faint, with a draught of snow)*: "Show me where it says that."
+**DEV:** "It says it… everywhere. In every story I've read."
+**QUILL:** "This is the story you're in."
+
+*(The board lets the child pin Dev's links: [c:loki-dusk] to [c:loki-nothing], [c:thrym-hint] to [c:barred]. They stick,
+glowing faintly. Nothing stops the child agreeing with Dev. Chapter 4 breaks it.)*
+
+**DEDUCTIONS** (level 3: four)
+
+**D1 · inference (who: someone from the north)**
+- **Statement the child forms:** *There is rime on the hammer peg, though the fire burned high all night. Frost-giants
+  leave rime on whatever they touch. A frost-giant's hand was on that peg.*
+- **Supporting spans:** [c:rime] "There is rime on the hammer peg, white and feathery, though the hall is warm." ·
+  [c:rime-lore] "frost-giants leave rime on whatever they touch." · [c:fire-high] · [c:wall-rime] *(also accepted:
+  [c:north], [c:goats-north], [c:dw-hot] as the clearing half for the dwarves)*
+- **Minimum link:** [c:rime] + [c:rime-lore]
+- **Why it matters:** rime is frost. In a warm hall it should not be there at all. One small, cold fact points out of
+  Asgard, north, to Jötunheim. And it clears the dwarves, whose forge "melts snow on the doorstep".
+
+**D2 · fact-opinion (where and why: the boast is a confession)**
+- **Statement the child forms:** *Thrym's boast mixes facts and opinions. The opinions: "No one will ever find it", "I am
+  the cleverest giant". The facts: he hid the hammer eight miles under the earth, and the price is Freyja. Read
+  literally, a boast tells you where, and why.*
+- **Supporting spans:** [c:thrym-hid] "I have hidden it eight miles under the earth." · [c:thrym-price] "No one gets it
+  back unless Freyja is brought to me as my bride." · [c:thrym-brag] · [c:freyja] "FREYJA." *(also accepted:
+  [c:rune-why], [c:thrym-best], [c:thrym-tonight])*
+- **Minimum link:** [c:thrym-hid] + [c:thrym-price] (or [c:thrym-price] + [c:freyja])
+- **Why it matters:** a boaster wants you to admire him, so he tells you too much. Sort what can be checked from what is
+  only bragging: the brag is about Thrym; the facts are about the hammer. And the six runes on the wall were the price,
+  left in advance.
+
+**D3 · contradiction and timeline (Loki is cleared; started in chapter 3, finished in chapter 4)**
+- **Statement the child forms:** *Loki had no wings until sunrise, and the hammer went in the third watch. And the dwarves'
+  slate shows Loki at the forge from dusk until cockcrow, begging for a longer handle. His "nothing" was a present.*
+- **Supporting spans:** [c:cloak-sunrise] "I lend you my falcon cloak at sunrise, after Thor's roar woke all of Asgard." ·
+  [c:roof-creak] "in the third watch" · [c:slate-loki] (DOC J2.8, chapter 4) · [c:slate-cord] (DOC J2.8) ·
+  [c:loki-cord] "I was measuring it for a present." *(also accepted: [c:cloak-once], [c:loki-no-cloak], [c:dw-nothing],
+  [c:loki-there])*
+- **Minimum link:** [c:cloak-sunrise] + [c:roof-creak] (half: no flight in the night), then [c:slate-loki] (whole: he
+  was elsewhere all night)
+- **Why it matters:** this is the season's lesson about fairness. "It's always Loki" is a reputation, and a reputation is
+  not evidence. Every clue that pointed at Loki has an honest explanation, once the slate arrives.
+- **Board note:** the board stays open in chapter 4, so this deduction can be finished when DOC J2.8 arrives.
+
+**D4 · inference and figurative (how: the impossible thing)**
+- **Statement the child forms:** *Nobody came through the door: it was barred all night, and the snow is smooth. But the
+  hammer hung right under the smoke-hole. The soot on the rim is wiped in one long stripe, snow fell through, and the
+  roof creaked in the third watch. A giant who "never set one foot in Asgard" leaned over the north wall and reached
+  down through the smoke-hole.*
+- **Supporting spans:** [c:peg-under] "Every night I hang my hammer on the peg under the smoke-hole" · [c:soot-stripe]
+  "The soot round the rim of the smoke-hole is wiped clean in one long stripe." · [c:roof-creak] "the roof creaked like
+  a sea-steed's mast in a gale" · [c:thrym-feet] "I never set one foot in Asgard." · [c:barred] · [c:bar-still] ·
+  [c:no-prints] *(also accepted: [c:snow-floor], [c:wall-rime], [c:goats-stare], [c:thrym-reach], [c:rune-high])*
+- **Minimum link:** [c:peg-under] + [c:soot-stripe] (or [c:roof-creak] + [c:thrym-feet])
+- **Figurative, glossed when marked:** "a sea-steed's mast in a gale" is a kenning inside a simile. A *sea-steed* is a
+  ship. A mast creaks when wind, or weight, bends it. The roof was not a ship: something heavy was leaning on it.
+- **Why it matters:** this clears Loki completely. Dev's theory needed someone inside to open the door. The door never
+  opened. The thief never came in. Only his arm did.
+
+**RED HERRING**
+- **Loki.** Looks guilty through [c:loki-dusk] (the cord), [c:loki-nothing], [c:thrym-hint] ("ask Loki"), and the
+  cloak. **Cleared by** [c:cloak-sunrise] + [c:roof-creak] (no wings until after the theft) and, in chapter 4,
+  [c:slate-loki] + [c:slate-cord] (at the forge all night; the cord measured the handle for a present). D4 removes the
+  last of Dev's theory: no one opened the door.
+
+**Other suspects (cleared, not herrings)**
+- **Brokkr and Sindri:** [c:dw-hot] (no frost in a forge) + [c:dw-tracks] with [c:no-prints] (two dwarves with a pole
+  leave tracks; the snow is smooth). Their secret is Loki's, kept badly.
+- **The goats:** [c:goats-no] + [c:goats-latched]. They did not take it. They *watched* it go, nose to the north wall.
+
+**Wrong-link hints (Quill, through the keyhole)**
+- If the child links [c:thrym-hint] to anything as a fact: "Thrym says 'ask Loki'. Is that something that happened, or
+  something Thrym wants you to think?"
+- If the child links [c:loki-dusk] to [c:woke-gone]: "Dusk and the third watch are hours apart. What was the cord
+  *for*?"
+- If the child links [c:rime] to the cloak: "Feathers aren't frost. What does the stave say leaves rime?"
+
+**Chapter 3 hook (escalation).** *(A horn sounds over Asgard, long and low. Heimdall is calling the Thing, the gods'
+assembly.)*
+**THOR** *(pulling on his iron gloves, then remembering he has nothing to hold)*: "We'll settle it at the Thing. And if
+Loki opened the way for that giant, Loki is out of Asgard by moonrise."
+**LOKI** *(lightly)*: "Fair. Usually."
+*(Dev looks at the board, at all the red wool pointing to Loki. For the first time, he doesn't look pleased.)*
+
+**Did you know?** *(margin note, chapter 3)* Old Norse and Old English poets often named a thing by a riddle-picture
+called a **kenning**: a ship is a "sea-steed"; the sea is a "whale-road"; gold is "Freyja's tears", because in the
+stories Freyja weeps tears of gold. Dev's favourite is *word-hoard*, the Old English kenning for all the words a person
+knows.
+*Sources:* Snorri Sturluson, *Edda: Skáldskaparmál*, trans. Anthony Faulkes (Everyman, 1987), on kennings for gold and
+ships; *Beowulf*, line 10 (*hronrād*, "whale-road") and line 259 (*wordhord*), e.g. ed. R. D. Fulk et al., *Klaeber's
+Beowulf* (4th ed., 2008).
+
+---
+
+### Chapter 4 — The timeline, the Thing, and the feast
+
+#### Part 1 · The Thing, afternoon (the false solution breaks)
+
+*Place: the Thing-field, a ring of standing stones on a white hill. Gods on benches of turf. Heimdall with his horn.
+Loki stands alone in the middle. Then the crunch of short, heavy boots: Brokkr, out of breath, a slate under his arm.*
+
+**BROKKR:** "Promise or no promise, we will not see a fellow sent out of Asgard for a thing he didn't do. Even *him*."
+
+#### DOC J2.8 · log (◆ appears at the start of chapter 4)
+- **Author:** Brokkr and Sindri · **Date/time:** last night, written as it happened · **Found where:** carried to the
+  Thing by Brokkr
+- **Picture:** a forge slate black with soot, chalk tallies down one side, a scorch mark in one corner.
+
+> FORGE SLATE, LAST NIGHT
+> [[c:slate-loki|Dusk: Loki came to the forge. He stayed until cockcrow. He never once left.]]
+> [[c:slate-cord|He showed us a knotted cord. "The handle is this long. Make Thor a longer one. A sorry-present."]]
+> [[c:slate-no|We said no. A Brokkr hammer is not changed.]]
+> He asked again. And again. All night.
+> Bellows working the whole time. No frost here, ever.
+> Cockcrow: he went away sad, with soot on his sleeve.
+> We promised to tell nobody.
+> — B. & S.
+
+**LOKI** *(to the sky)*: "I was going to be *mysterious*."
+**SINDRI:** "You were going to be blamed."
+*(The red wool on the board in Thor's hall slackens, one strand at a time. The links Dev made dim and drop.)*
+**DEV** *(quietly)*: "Soot on his sleeve. He walked in with soot on his sleeve. It was in the first panel."
+**QUILL** *(through the keyhole)*: "It was."
+
+#### EVENTS (the washing line runs from last night's dusk to tonight's feast)
+
+*The pegs are small iron rings. The time-words are the old ones: **at dusk, in the third watch, at cockcrow, before dawn,
+at sunrise, at noon, by dark.***
+
+| # | Event | Time-word span | Child places it? |
+|---|---|---|---|
+| 1 | Loki measures the hammer's handle with a knotted cord | [c:loki-dusk] "Dusk" | **yes** |
+| 2 | Loki arrives at the dwarves' forge, and stays | [c:slate-loki] "Dusk: Loki came to the forge." | **yes** (join with 1) |
+| 3 | Thor bars the door; the hall sleeps | [c:barred] "Last night" | no (pegged for you) |
+| 4 | The roof creaks like a mast in a gale | [c:roof-creak] "in the third watch" | **yes** |
+| 5 | The goats start staring at the north wall | [c:goats-north] "Since the third watch" | **yes** (join with 4) |
+| 6 | Loki leaves the forge, sad, with soot on his sleeve | [c:slate-loki] "until cockcrow" | **yes** |
+| 7 | Thor wakes: the peg is empty, the bar still across | [c:woke-gone] "before dawn" | **yes** |
+| 8 | Freyja lends Loki the falcon cloak | [c:cloak-sunrise] "at sunrise" | **yes** |
+| 9 | Freyja refuses to be traded | (the interlude; "noon") | no (pegged for you) |
+| 10 | The wedding feast in Jötunheim | [c:thrym-tonight] "Tonight" | no (pegged for you) |
+
+**Timeline joins.** Two documents by two people meet twice: Sif's "Dusk: Loki came with a knotted cord" and the dwarves'
+"Dusk: Loki came to the forge" meet at **dusk** (he went from one to the other); Thor's "in the third watch" and the
+stable slate's "Since the third watch" meet at **the third watch**. At that moment, the slate puts Loki under a mountain.
+
+**The line's little shake:** if the child pegs the cloak (8) before the creak (4), the line wobbles and Quill says: "Could
+Loki fly before Freyja lent him wings? Read her note: *when*?" If the child pegs Loki leaving the forge (6) before the
+creak (4): "Cockcrow is the end of the night. The third watch is in the middle."
+
+#### Part 2 · Heimdall's plan
+
+*(Still at the Thing. The gods are quiet. The poem's next lines are paraphrased here.)*
+- **HEIMDALL** *(the watchman, who speaks rarely)*: "Freyja has given her answer, and it stands. So: put the bridal linen
+  on Thor. Put Freyja's great necklace on him, and keys at his belt, and a veil over all."
+- **THOR:** "The gods will laugh at me."
+- **LOKI:** "The gods will laugh at you either way. Without your hammer, the giants will be living in Asgard by spring.
+  I'll come as your bridesmaid."
+- **DEV** *(staring at the board, then at Loki)*: "He's *helping*. He's been helping all day."
+- **FREYJA** *(handing over the mended necklace, perfectly calm)*: "Mind the clasp."
+
+*(Panel: Thor in bridal linen and a long veil, iron gloves showing at the cuffs, the goats harnessed to his cart, the
+mountains ringing as they run. It is a disguise, and the poem's comedy; nobody in the panel mocks anyone.)*
+
+#### Part 3 · The feast (the explanations game)
+
+*Place: Thrym's hall in Jötunheim, by dark. Long tables, torchlight, giants in their best furs, the bride veiled at the
+high table, the bridesmaid beside her. Dev and {det} are at the end of a bench, very small, eating bread.*
+
+**What Thrym knows** *(the list beside the cards)*: the bride is Freyja · Freyja is far from home · Thrym sent for her
+only this morning · brides are usually shy · the bride has hardly said a word.
+
+| # | The oddity (the poem's own) | Three replies on Loki's card | The one that fits (the poem's) | Why it fits, and why it is false |
+|---|---|---|---|---|
+| 1 | **THRYM:** "Who ever saw a bride eat like that?" *(The bride has eaten a whole ox, eight salmon, and all the dainties set for the women, and drunk three great casks of mead.)* | "She's always this hungry." · "She is ill." · **"She has eaten nothing for eight nights, so eager was she to come to Jötunheim."** | the third | It explains the hunger *and* it flatters Thrym. "Always this hungry" clashes with "brides are usually shy". "Ill" clashes with a whole ox. **True?** No. The bride is Thor. |
+| 2 | **THRYM** *(lifting the veil to kiss the bride, and leaping back the length of the hall)*: "Why are Freyja's eyes so fierce? Fire burns from them!" | "It's the torchlight." · **"She has not slept for eight nights, so eager was she to come to Jötunheim."** · "She is angry with you." | the second | It explains red, burning eyes, and it flatters Thrym again. "Torchlight" would not make a giant leap back. "Angry" is the one reply that would stop the wedding. **True?** No. |
+
+*After each right reply, Dev taps the card: "Is it true?" The child taps **No**. Then Dev: "But it fits everything he
+knows. That's what makes it work." The lesson, in one line on screen: **An explanation can fit every fact and still be
+false.***
+
+**The poem's lines** *(set as live text in the feast panels; Bellows, 1923)*: the bridesmaid's two answers end on the same
+refrain, "So hot was her longing for Jotunheim." [VERIFY: exact wording against the 1923 printing.]
+
+**The ending of the feast (elliptical, as the poem permits).**
+1. **THRYM** *(delighted)*: "Bring in the hammer to bless the bride! Lay it in her lap!"
+2. *(Panel: a giant servant carries the hammer in on a cushion, frost still on its head from eight miles under the earth.
+   It is laid in the bride's lap.)*
+3. *(Panel: close on the veil. Under it, a red beard. A large hand, in an iron glove, closes on the handle.)*
+4. *(Black panel. One line of live text:)* **The wedding was over very quickly.**
+5. *(Panel: a white hillside at night. Thor walks home across the snow with the hammer on his shoulder, still in the
+   veil, the necklace clinking. Loki walks beside him, laughing so hard he has to stop and hold his knees. The goats
+   trot behind with the empty cart. Dev and {det} follow, footprints and all.)*
+
+**Chapter 4 hook.** *(At the top of the hill, Asgard's wall ahead, Heimdall's horn sounds once: the Thing is waiting,
+moonrise is near, and Loki's name has not been cleared aloud.)*
+**LOKI** *(still smiling, but not looking at anyone)*: "They'll still say it was me. They always do."
+**DEV:** "Not if we read it to them."
+
+**Did you know?** *(margin note, chapter 4)* Some of the most ordinary words in English came from Old Norse, the language
+of the poem. *They*, *sky*, *egg* and *window* are all Viking-age borrowings. *Window* is the Old Norse *vindauga*, a
+"wind-eye": a hole in the roof or wall that let the wind in, like the smoke-hole in Thor's hall.
+*Sources:* *Oxford English Dictionary*, "they", "sky", "egg", "window"; Merriam-Webster, "window" (from Old Norse
+*vindauga*).
+
+---
+
+### Chapter 5 — The accusation
+
+*The Thing-field at moonrise. A ring of standing stones, frost sparkling. The gods on their turf benches. Thor in his
+night-cap again, hammer across his knees. Loki alone in the middle. Brokkr and Sindri, the goats, Sif, Freyja, Heimdall.
+Thrym is not here; he is a long way off and in no position to argue. The Knack is greyed out. {det} accuses alone.*
+
+**THE QUESTION (Heimdall):** "Who took the hammer? Where was it? And how did a thief take it from a barred hall?"
+
+**CULPRIT:** **Thrym**, lord of the giants, who stood outside the north wall of Asgard in the third watch, reached down
+through the smoke-hole of Thor's hall, lifted the hammer off its peg, hid it eight miles under the earth, and asked for
+Freyja as its price. **Nobody helped him.**
+
+**PLACE** *(the child chooses one)*: under Thor's bed · in the dwarves' forge · in Loki's cloak · **eight miles under the
+earth, in Jötunheim** · in the goats' stable
+
+**MINIMAL EVIDENCE SET** (pin three):
+1. **D1** — [c:rime] + [c:rime-lore]: a frost-giant's touch on the peg.
+2. **D2** — [c:thrym-hid] + [c:thrym-price]: the boast gives where and why.
+3. **D4** — [c:peg-under] + [c:soot-stripe] (or [c:roof-creak] + [c:thrym-feet]): the arm through the smoke-hole; the
+   door never opened.
+
+*(D3 is accepted in any slot. Also accepted: [c:freyja], [c:wall-rime], [c:goats-north], [c:thrym-reach].)*
+
+**WRONG-SUSPECT RESPONSES (Quill, through the keyhole)**
+- **Loki:** "Where was Loki from dusk until cockcrow? Read the forge slate. And when did he get his wings?" *(points to
+  [c:slate-loki] and [c:cloak-sunrise])*
+- **Brokkr and Sindri:** "Is there frost in a forge? And two dwarves with a pole: where are their tracks?" *(points to
+  [c:dw-hot] and [c:no-prints])*
+- **The goats:** "Pulling a cart is not carrying. And the latch was down all night." *(points to [c:goats-no] and
+  [c:goats-latched])*
+
+**WRONG-THEORY RESPONSE, "Loki let the giant in" (Quill):** "Show me the door that opened. Thor says the bar was still
+across it at dawn." *(points to [c:bar-still] and [c:soot-stripe])*
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You've shown a giant wanted the hammer. Now show how it left a barred hall with no
+footprints. Look up, {det}. What's in the roof?"
+
+---
+
+### The reveal
+
+**HEIMDALL:** Speak, {det}.
+
+**{det}:** Thrym took it. Nobody helped him.
+
+*(A murmur round the stones. Every head turns to Loki. Loki studies the moon.)*
+
+**{det}:** First, the frost. There was rime on the hammer peg, in a warm hall. Thor's own stave says frost-giants leave
+rime on whatever they touch.
+
+**THOR:** I carved that. Years ago. I'd forgotten.
+
+**{det}:** Second, the boast. Thrym said he hid it eight miles under the earth, and the price was Freyja. "Cleverest giant
+who ever lived" is an opinion. "Eight miles under the earth" is a fact, and a confession.
+
+**DEV:** And the runes on the wall. F-R-E-Y-J-A. He left his price before he asked it.
+
+**{det}:** Then the impossible part. The door was barred all night, and the snow was smooth. Nobody came in. But the hammer
+hangs right under the smoke-hole, and the soot on its rim was wiped in one long stripe. Thrym said, "I never set one foot
+in Asgard." He didn't need to. He leaned over the north wall and reached down through the roof.
+
+**SIF:** The rime on the wall. As long as a tree.
+
+**{det}:** As long as an arm. And it was there from the very first page. Thor wrote: "In the third watch, the roof creaked
+like a sea-steed's mast in a gale."
+
+*(The stave with Thor's account rises beside the moon. The roof line glows. Beside it, Thrym's stretching arms, two pine
+trees long.)*
+
+**THOR:** I thought it was the wind.
+
+**DEV:** It was a giant leaning on your roof.
+
+*(The goats, at the edge of the stones, turn and stare north. Everyone finally understands what they were staring at.)*
+
+**{det}:** And Loki. Loki had no wings until sunrise. He was at the forge from dusk until cockcrow. The cord measured the
+handle for a present.
+
+**BROKKR:** We said no. He was very sad about it. It was almost nice to watch.
+
+**LOKI** *(to Thor, not quite looking at him)*: The short handle was my fault. I wanted to make it up to you. I'd rather
+be suspected than laughed at, usually.
+
+**THOR** *(a long pause; then he holds out the hammer, handle first)*: It's a good handle. I'm used to it.
+
+**THOR** *(turning to Freyja)*: And you were right. Nobody is a thing to trade.
+
+**FREYJA:** I know.
+
+**DEV:** I read every story about Loki. I didn't read the page.
+
+**QUILL** *(through the keyhole, very gently)*: Now you have.
+
+---
+
+### Epilogue
+
+**The souvenir.** By the standing stones, Freyja takes back her cloak and counts the feathers, all of them, while
+everyone waits. Then she plucks one, brown and cream, and gives it to {det}.
+**FREYJA:** Now there's one fewer. I'll know where it went.
+The sky behind the stones is going pale. Sunrise. Dev pulls {det} through the Door.
+
+**The shelf.** The **falcon feather** goes on the shelf by the Door, beside the tortoise-shell plectrum. Two of four
+places are filled. When you tap the feather, it stirs, as if in a wind from the north.
+
+**Dev's thread.** Dev puts *Runes and Riddles of the North* back on the shelf, then takes it down again.
+**DEV:** It's a good book. It just isn't evidence.
+**ASHA:** Whose turn is it to carry the torch?
+**DEV:** There was a whole hall with a fire in it. I didn't need one.
+**ASHA:** *(whispering)* That's not how turns work.
+
+**Hands forward.** Felix reads Loki's two replies from Dev's notebook.
+**FELIX:** "She has eaten nothing for eight nights." Footnote: it fits every fact Thrym had. Footnote to the footnote: none
+of it is true.
+**DEV:** A clever excuse isn't a fact. I'm writing that on my hand.
+
+**Biscuit.** Constable Tully is waiting in the office, out of breath. Biscuit is found in the dumbwaiter, asleep, with a
+white tea-towel over his head like a bridal veil. Nobody can explain the tea-towel.
+
+**The tune on the wind.** As Dev closes the Door, the frost in its keyhole melts. The office is quiet. Then, from somewhere
+out on the dark quay, a violin plays four notes of a tune nobody in the agency knows. It stops before the fifth. The air
+by the window smells, very faintly, of violets.
+**DEV:** Did you hear that?
+*(Nobody answers. Down on the quay, the gas lamps are all lit, and the quay is empty.)*
+
+---
+
+### Detective School drill — *Kenning Cracker*
+
+**Five riddle-names.** Each kenning appears on a carved stave. The child drags it to the picture it names, then taps one
+word that explains the riddle.
+
+| Kenning | Where it comes from | What it names | The word that explains it |
+|---|---|---|---|
+| sea-steed | Old Norse poetry (Thor's account) | a ship | *steed* = a horse; a ship is ridden over the sea |
+| whale-road | Old English (*Beowulf*) | the sea | whales travel on it, as people travel on a road |
+| Freyja's tears | Old Norse (Snorri's *Edda*) | gold | in the stories, Freyja weeps tears of gold |
+| word-hoard | Old English (*Beowulf*) | all the words a person knows | a *hoard* is a treasure store |
+| sky-candle | a modern riddle in the old style, made for this drill 🪔 | the sun | a candle gives light; this one hangs in the sky |
+
+**Make your own.** The child picks two picture-tiles from a tray (a pen, a sea, a book, a cat, a lamp, a road, a cloud,
+a key) and joins them into a kenning for something in the office: e.g. *ink-lake* (an inkwell), *bun-lift* (the
+dumbwaiter), *story-door* (the Door). Dev reads it aloud and guesses. The child confirms or says "Cold. Try again." No
+answer is marked wrong; the drill is play.
+
+---
+
+### Training Desk exercises
+
+*Twelve exercises, four per tier. Tiers: easier = L2, at = L3, harder = L4. Prompt sentences keep to each tier's sentence
+limit. None points at the culprit before chapter 5; exercises about Thrym's boast are fact-opinion sorts, not "who did
+it".*
+
+**e1 · easier (L2) · vocab-in-context · skill vocab · objective null · chapter 1 · source J2.2, span rime**
+- **Prompt:** "There is rime on the hammer peg, white and feathery." What is rime?
+- **Options:** a thin white frost · a kind of rhyme in a poem · a wooden peg
+- **Answer:** a thin white frost
+- **Explain:** "White and feathery" on a cold peg tells you. *Rime* is frost. It sounds like *rhyme*, but it is spelt
+  differently and means something else.
+
+**e2 · easier (L2) · tense-sequence · skill sequence · objective null · chapter 1 · source J2.1, span roof-creak**
+- **Prompt:** Put Thor's night in order, first to last.
+- **Options (to order):** He woke, and the peg was empty. · He barred the door. · The roof creaked in the third watch.
+- **Answer:** He barred the door. → The roof creaked in the third watch. → He woke, and the peg was empty.
+- **Explain:** Thor barred the door "last night", heard the creak in the middle of the night, and woke "before dawn".
+
+**e3 · easier (L2) · figurative · skill figurative · objective null · chapter 3 · source J2.1, span roof-creak**
+- **Prompt:** Old poets called a ship a "sea-steed". A steed is a horse. Why call a ship a horse?
+- **Options:** You ride it across the sea · It eats hay · It has four legs
+- **Answer:** You ride it across the sea
+- **Explain:** A kenning is a riddle-name. A horse carries you over land; a ship carries you over the sea.
+
+**e4 · easier (L2) · fact-opinion · skill factopinion · objective null · chapter 2 · source interview, span thrym-brag**
+- **Prompt:** Fact or opinion? "I am the cleverest giant who ever lived."
+- **Options:** fact · opinion · neither
+- **Answer:** opinion
+- **Explain:** Nobody could check it. It is what Thrym thinks of himself. A fact can be checked; a boast usually can't.
+
+**e5 · at (L3) · fact-opinion · skill factopinion · objective null · chapter 3 · source interview, span thrym-hint**
+- **Prompt:** Thrym says, "Ask Loki. Loki is always telling." Is that a fact about last night, or an attempt to make you
+  think something?
+- **Options:** an attempt to make you think something · a fact about last night · a joke with no meaning
+- **Answer:** an attempt to make you think something
+- **Explain:** He gives no time, no place and no evidence. He wants you to suspect Loki. That is an insinuation, and it
+  is not evidence.
+
+**e6 · at (L3) · inference · skill inference · objective null · chapter 1 · source J2.5, span cloak-once**
+- **Prompt:** Freyja writes: "It has not left my hall all night. It never does." What can you work out about her cloak?
+- **Options:** Nobody flew with it during the night · Freyja flew with it at night · The cloak was lost
+- **Answer:** Nobody flew with it during the night
+- **Explain:** If the cloak stayed in her hall all night, no one wore it to fly anywhere in the dark. Ask what a line
+  rules out, as well as what it says.
+
+**e7 · at (L3) · word-origin · skill vocab · objective la3-old-english · chapter 4 · source J2.1, span null**
+- **Prompt:** *Thursday* is named after a Norse god. In Old English his name was Thunor. Who is he?
+- **Options:** Thor · Loki · Thrym
+- **Answer:** Thor
+- **Explain:** Thursday is "Thor's day". *Thunor* is the Old English form of his name, and the same word as *thunder*.
+
+**e8 · at (L3) · voice · skill voice · objective null · chapter 4 · source J2.8, span slate-loki**
+- **Prompt:** Two notes. A: "Dusk: Loki came. Never once left. Bellows working." B: "I was going to be mysterious!" Which
+  is the dwarves' slate?
+- **Options:** A · B · both
+- **Answer:** A
+- **Explain:** The slate is short, plain and in order, like a work log. B is chatty and talks about the speaker's feelings:
+  that is Loki's voice.
+
+**e9 · harder (L4) · fact-opinion · skill factopinion · objective w8-purpose · chapter 5 · source feast, span null**
+- **Prompt:** The bridesmaid says the bride "has eaten nothing for eight nights, so eager was she to come". It fits every
+  fact Thrym has. Why is it still not true?
+- **Options:** Because the bride is really Thor in disguise · Because Thrym ate the food first · Because eight nights is
+  too short
+- **Answer:** Because the bride is really Thor in disguise
+- **Explain:** An explanation can fit every fact a listener knows and still be invented. Persuasion is built to fit what
+  the listener knows, not what is true.
+
+**e10 · harder (L4) · inference · skill inference · objective null · chapter 5 · source J2.2, span soot-stripe**
+- **Prompt:** "The soot round the rim of the smoke-hole is wiped clean in one long stripe." What does a clean stripe in
+  soot tell a detective?
+- **Options:** Something long rubbed against the rim · The smoke-hole was swept for a feast · The fire went out
+- **Answer:** Something long rubbed against the rim
+- **Explain:** Soot comes off on whatever touches it. One long clean stripe means one long thing pressed along the rim,
+  recently.
+
+**e11 · harder (L4) · word-origin · skill vocab · objective la3-old-english · chapter 5 · source margin note 4, span null**
+- **Prompt:** *Window* comes from Old Norse *vindauga*. What did *vindauga* mean?
+- **Options:** wind-eye · glass door · sky-gate
+- **Answer:** wind-eye
+- **Explain:** *Vindr* is wind and *auga* is eye. Early windows were open holes that let the wind in, like the smoke-hole
+  in Thor's roof.
+
+**e12 · harder (L4) · figurative · skill figurative · objective la7-devices · chapter 5 · source drill, span null**
+- **Prompt:** Make sense of this kenning in the old style: "the hammer-peg's thief reached down with his pine-arms". What
+  are "pine-arms"?
+- **Options:** arms as long as pine trees · arms made of wood · arms holding pine cones
+- **Answer:** arms as long as pine trees
+- **Explain:** Like a kenning, "pine-arms" joins two words into one picture. The arms are not wood; they are as long as
+  pine trees.
+
+---
+
+### Persona block (format 1.3: `journey.persona`)
+
+*One knack line per persona, at the chapter where that Knack helps most. Every candidate set has exactly 3 items and at
+most 1 from `minimalEvidence` (rime, rime-lore, thrym-hid, thrym-price, peg-under, soot-stripe, roof-creak,
+thrym-feet).*
+
+| Persona | Chapter | Knack line | Candidates (3) | In minimalEvidence |
+|---|---|---|---|---|
+| **Thea** (Owl's Eye) | 1, on DOC J2.2 | "What's *not* on this page? Footprints. Not one, in fresh snow." | `gap:no-prints` · `gap:no-time` (Sif gives no hour) · `gap:no-name` (no thief named) | none |
+| **Milo** (Winged Words) | 2, on [c:thrym-hid] | "So what it *actually* says is: 'I hid it myself, deep underground.' That's not a boast. That's a confession." Paraphrase options: *I hid it myself, deep underground* (right) · *Someone else hid it, deep underground* (wrong person) · *I will hide it underground tomorrow* (wrong time) | `span:thrym-hid` · `span:thrym-brag` · `span:loki-everyone` | 1 (`thrym-hid`) |
+| **Oskar** (Two Ravens) | 3, Memory word **"rime"** | "We've seen that word before. *Rime.*" Memory recalls [c:rime], [c:rime-lore], [c:wall-rime]. Thought offers: `link:rime+rime-lore` (real) · `link:rime+cloak-sunrise` (tempting: both found at dawn) · `link:wall-rime+loki-dusk` (tempting: both near the wall) | the three links listed | 1 (`rime`) |
+| **Signe** (The Spindle) | 4, on the timeline | "Something happened *here*, in the middle of the night, and nobody's told us." | `slot:between-3-7` (the third-watch gap, real) · `slot:between-8-9` · `slot:between-1-2` | none |
+| **Hari** (Another's Shoes) | 4, on DOC J2.8, the writer tapped is Loki | "If I were Loki, what would I have seen last night? A forge, and two dwarves saying no." Viewpoint card: *What he knew:* the handle was [his fault / too long / gold] · *What he wanted:* [to say sorry / the hammer / the cloak] · *What he didn't know yet:* [that the hammer was already gone / Thor's address / how to fly] | `span:slate-loki` · `span:loki-cord` · `span:loki-handle` | none |
+| **Vani** (The Tuning Ear) | 4, Voice, at the feast | "Listen to how he *says* it. 'So eager was she.' Loki flatters when he lies." Three word-habits underlined in each: Loki's feast reply (*so eager*, *Jötunheim*, *eight nights*) against his own speech at the Thing (*usually*, *fair*, *mysterious*). Same writer? (Yes: one voice, two purposes.) | `span:loki-cord` · `span:loki-everyone` · `span:thrym-best` | none |
+
+**Origin cards.** Journeys carry no persona hoard card. Every persona receives the **bonus card** below.
+
+---
+
+### Word Hoard — bonus card (all six personas)
+
+- **Word:** kenning
+- **Path:** Old Norse *kenna*, "to know; to call by a name" → Old Norse *kenning*, a poetic name → English *kenning*
+  (scholars' word, 19th century)
+- **Story:** A kenning is a riddle-name in old poetry, like "sea-steed" for a ship. The word comes from Old Norse
+  *kenna*, which is a cousin of the old word *ken*, "knowing", still heard in "beyond my ken".
+- **Question:** "Beyond my ken" means something is… · *beyond what I know* · *beyond my garden* · *beyond my friend
+  Ken* · **Answer:** beyond what I know
+- **Objective:** `la3-old-english` (with `la7-devices`) · **askFamily:** false · **sources:** *Oxford English Dictionary*,
+  "kenning" and "ken"; Merriam-Webster, "kenning"; Etymonline, "kenning"
+
+*(The spec suggests* they, sky, egg *and* window *as bonus words. All four are already cards in Oskar's Word Hoard
+(Cases 1, 2, 3 and 6), so here they appear as the chapter 4 margin note instead, and* kenning *is the bonus card.)*
+
+---
+
+### Story additions 🪔 (labelled, as the badge requires)
+
+Everything below is added for the Journey and is **not in the poem**:
+- Dev, {det}, Quill and the Door.
+- **How the hammer was taken.** The poem never says. The barred door, the smoke-hole, the soot stripe, the rime on the
+  peg and on the wall, the roof creak, Thrym's long arms and "I never set one foot in Asgard" are all this Journey's.
+- **Sif's notes and tally**, **Thor's carved stave** (who can carry the hammer; frost-giants leave rime), the **rune stave
+  on the wall**, and the **stable slate**.
+- **The suspects' interviews**: Loki's night at the forge and his sorry-present; Brokkr and Sindri at the Thing; the
+  goats as suspects. (Brokkr and Sindri come from Snorri's *Prose Edda*, not this poem. Thor's goats appear in this poem,
+  pulling his cart to Jötunheim.)
+- **The Thing** that weighs Loki's name at moonrise, and its threat to send Loki out of Asgard.
+- **Thor's apology to Freyja.**
+- The **feast's "What Thrym knows" list** and the explanations game are a game laid over the poem's own exchange; the
+  two replies the child chooses are the poem's.
+
+**Kept as the poem has it:** Thor wakes without the hammer; Loki borrows Freyja's feather cloak and flies to Giantland;
+Thrym sits on a mound plaiting gold leashes for his dogs; he says he has hidden the hammer eight miles under the earth
+and will return it only for Freyja; Freyja refuses in anger and her necklace breaks; Heimdall proposes the bridal
+disguise; Loki goes as the bridesmaid; at the feast the bride eats an ox and eight salmon and drinks three casks of mead;
+the bridesmaid says she has eaten nothing for eight nights, and, of the fierce eyes, that she has not slept for eight
+nights; the hammer is laid in the bride's lap to bless her.
+
+**Omitted on purpose:** the end of the poem, where Thor strikes Thrym and his kin. It is not shown, named or hinted. The
+chapter says only "the wedding was over very quickly".
+
+---
+
+### Did you know? (chapter 5 margin note, after Case Closed)
+
+Four days of the English week are named after gods of the North. **Tuesday** is Tiw's day, the god the Norse called Týr.
+**Wednesday** is Woden's day, which is Odin. **Thursday** is Thor's day: Thunor in Old English, the same word as
+*thunder*. **Friday** is Frigg's day (some scholars link it to Freyja instead). And **Saturday**? That one is Roman:
+Saturn's day.
+*Sources:* *Oxford English Dictionary*, "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"; Merriam-Webster, same
+entries.
+
+---
+
+### Art and scene notes
+
+**Backgrounds (no lettering in any painting; staves, bark notes and slates are blank shapes, the text is live)**
+- **The office, evening:** snow on the round window though Inkwell is dry; the Door ajar, frost feathering its keyhole;
+  the shelf with the plectrum. The persona sign in panel 1.
+- **Bilskirnir, Thor's hall, before dawn:** a long timber hall, carved posts (knotwork and animal shapes only), a hearth
+  banked high, benches with furs, round shields on the walls painted plain or with simple spirals. **The wooden peg sits
+  directly under a square smoke-hole in the roof**; through the smoke-hole, a square of dark sky with stars. A little
+  drift of snow on the floor beneath it. The door with its heavy bar across.
+- **Outside the hall:** fresh smooth snow to Asgard's north wall, close behind; on the wall's top, a long white patch of
+  rime, arm-shaped if you look for it, never obviously so.
+- **The dwarves' forge:** under a mountain, red light, an anvil, bellows, sparks, steam; not a flake of frost.
+- **The stable:** two goats in warm hay, both noses to the north wall.
+- **Jötunheim:** a white plain, a white sky, a grassy mound blown clear of snow, a grey stone hall; Thrym on the mound
+  with gold leashes and two big shaggy dogs.
+- **Freyja's hall:** warm wood and gold, a falcon-feather cloak on a stand. The necklace breaking is a scatter of gold
+  links in mid-air; Freyja upright and furious, never comic.
+- **The Thing-field:** a ring of standing stones on a white hill, turf benches, moonrise.
+- **Thrym's feast:** long tables, torchlight, giants in furs; the bride veiled at the high table, iron gloves at the
+  cuffs; the bridesmaid beside her.
+- **The walk home:** a white hillside at night, Thor in the veil with the hammer on his shoulder, Loki laughing, the goats
+  and the empty cart, two small sets of footprints following.
+
+**Props:** Thor's wax board and stylus; Sif's birch-bark notes with bone pins; Sif's tally-stick; Thor's ash stave; Freyja's
+falcon-feather cloak with a bark card on a gold thread; the rune stave (six runes); the stable slate with a bitten corner;
+the dwarves' sooty forge slate; Brokkr's knotted cord (carried by Loki); the hammer (a short-handled, heavy iron hammer,
+plain, no symbols); the falcon feather.
+
+**Runes (blocklist, binding).** Only plain Elder Futhark letters, as live text, and only the six in DOC J2.6 (ᚠ ᚱ ᛖ ᛁ ᛃ
+ᚨ) plus, on Thor's stave, ordinary letters with no special meaning. **Never** draw or letter the valknut, the Othala rune
+(ᛟ), the "black sun", the wolfsangel, the sowilo pair, the Tyr rune (ᛏ) used as an emblem, any rune used as a badge, or
+any symbol on a shield, banner or garment. Shields are plain or spiralled. The hammer carries no symbol.
+
+**Portraits**
+- **Thor:** red-bearded, huge, night-cap, iron gloves in his belt. *Worried* is a deep frown; *amused* is a full
+  laugh. Never cruel. In the bridal panels, his veil and the necklace are played as a disguise, and nobody in the
+  painting is laughing at him for wearing it.
+- **Loki:** lean, quick, red-brown hair, green cloak, soot on one sleeve in the opening panel (the plain-sight clue in
+  pictures). *Nervous* is a too-wide grin; *relieved* is the grin gone soft. Charming, never sinister.
+- **Brokkr and Sindri:** broad, short, sooty, singed beards; Brokkr's tiny eyelid scar.
+- **Thrym:** vast, frost-white beard plaited with gold rings, white furs, arms a little too long. *Amused* is smug.
+  He is a vain, comic boaster, **never menacing**, and never drawn with a weapon.
+- **Sif:** golden plait, keys at her belt, steady eyes. Calm and capable.
+- **Freyja:** tall, falcon cloak, a great gold necklace. *Offended* is real anger, drawn with dignity: she is right.
+  Never drawn as a joke, a prize or a pin-up.
+- **Heimdall:** pale, tall, a great horn on a strap, calm.
+- **The goats:** shaggy, grey, one with a sock; poses only.
+- **Dev:** his usual look, a scarf with the end chewed off from chapter 2 onward, frost on his glasses.
+
+**Sensitivity:** these are the Norse stories, told with respect. Some people practise Heathenry today; the comedy comes
+only from the situations the poem already makes funny (a disguise, a hungry bride, a vain giant), never from mocking the
+gods. No violence is shown or named. Thor's hammer is never raised in any panel.
+
+**Comic panels:** opening (5 panels as scripted); Freyja's refusal (2 panels); the feast (5 panels as scripted, ending on
+the black panel and the walk home); reveal (5 panels: the rime on the peg beside Thor's stave; the boast beside the rune
+stave; the roof-creak line glowing beside Thrym's long arms over the wall; the goats staring north; Thor holding the
+hammer out to Loki, handle first); epilogue (3 panels: the feather on the shelf beside the plectrum; Biscuit in the
+dumbwaiter in his tea-towel veil; the empty quay under the gas lamps).
+
+**Souvenir:** a single falcon feather, brown barred with cream, about the length of a child's hand.
+
+---
+
+### [VERIFY] list for this Journey
+
+1. Every Bellows (1923) line quoted: stanza 1 ("Wild was Vingthor when he awoke, / And when his mighty hammer he
+   missed"), the opening panel's "Hear now, Loki, what now I say…", and the feast refrain "So hot was her longing for
+   Jotunheim" (chapter 1 note; chapter 4 feast). The online texts could not be reached when this script was checked.
+2. Snorri, *Skáldskaparmál*, ch. 35, and the Faulkes (Everyman, 1987) page numbers for the short-handle story (chapter 2
+   note).
+3. The *Beowulf* line numbers for *hronrād* (line 10) and *wordhord* (line 259) in *Klaeber's Beowulf*, 4th edition
+   (chapter 3 note).
+4. The four Old Norse borrowings (*they*, *sky*, *egg*, *window* from *vindauga*) against the OED (chapter 4 note; e11).
+5. "Friday is Frigg's day (some scholars link it to Freyja instead)" against the OED's etymology (chapter 5 note).
+6. That the poem says Freyja's necklace "burst" when she refused (the interlude), and that Thrym is plaiting gold leashes
+   for his dogs and smoothing his horses' manes when Loki arrives.
+
+---
+
+## JOURNEY 3 — The Letter That Never Came
+
+*A Bizzing mystery · an Ink Journey through the Reading Door · 🪔 Katha with 📜 notes*
+
+```
+meta:
+  kind: journey · id: J3 · placed after Case 7, before Case 8
+  level: 4 (ages 10–12) · 4 "links" in place of suspects · 10 documents · 5 deductions · one link lies once (Lord Capulet)
+  world: Verona and Shakespeare's London, about 1595 (skin: a prompt book — ruled pages, act and scene in the margin,
+         the board is a playhouse "plot" pinned to a post)
+  companion: Felix Moreno-Lindqvist (his Case 7 speech ended "…next, I'm going to meet someone who wrote speeches for a living")
+  judge: Prince Escalus of Verona
+  badge: 🪔 Katha with 📜 notes. The visit is made up. Every line marked 📜 is the play's own (Romeo and Juliet, about 1595).
+         Every fact in a "Did you know?" note carries its source.
+  source: William Shakespeare, Romeo and Juliet (about 1595; first printed 1597); his own source, Arthur Brooke,
+          The Tragicall Historye of Romeus and Juliet (1562)
+  skills: sequence · inference · contradiction · voice · figurative (literature: theme, genre, dramatic irony, pentameter)
+  objectives touched: li4-theme · li7-genre · li3-mood · la4-shakespeare · la9-pentameter · la9-stress · li1-problem
+  vanished word: none (Journeys add no word to the Blot Ledger; it stays at LIES after Case 7)
+  souvenir (shelf by the Door): Will's quill, a goose-feather pen
+  hands forward: a message that goes wrong; who knew what, and when → Case 8 (the altered map; Crane's "as your own map now shows")
+  clock: Will's candle, twelve hour-marks to the company's reading at noon (moved to first light halfway: the escalation);
+         inside Verona, the Friar's "two and forty hours"
+  impossible thing: the letter left Verona's friary first; the news set out a day later; the news reached Mantua first
+  false solution: Friar John dawdled (Felix is sure by the end of chapter 3); broken in chapter 4 by DOC J3.9 and DOC J3.10
+  hidden in plain sight: the Prince's notice by the city gate, DOC J3.3 ("shut up any house…")
+  culprit: none. The answer is a chain: haste (D1) + a sealed door (D2) + a plan with no spare (D4); D3 and D5 support it
+  documents: DOC J3.1–J3.10 (each ≤140 words, every sentence ≤22 words; quoted verse is set one line per line)
+  glossed words (once marked): banished · post (to take post) · searchers · pestilence · drift · nice (old meaning) ·
+    traffic (old meaning) · star-crossed · vespers
+  grown-up note on the Journey card: "This Journey visits a famous sad story. Nothing upsetting is shown."
+  text: every 📜 line is quoted word for word, with its spelling and punctuation, from the Folger Shakespeare text
+        (ed. Barbara A. Mowat and Paul Werstine, Folger Shakespeare Library; checked 7 Oct 2026 against the Folger
+        plain-text download). Folger's dashes ("--" in the plain text) are set as em dashes. Folger spells the Friar
+        "Lawrence"; this script keeps the more common "Laurence" in its own prose and speech labels only.
+        [VERIFY: the Folger texts are licensed CC BY-NC 3.0; confirm the app's use is allowed, or re-check every line
+        against a public-domain text (the wording is the same in the lines used; punctuation differs).]
+```
+
+---
+
+### Journey card
+
+London, about 1595. A young playwright called Will is stuck. In his story, a letter never reaches Romeo, and everything
+goes wrong. Whose fault was it? His company reads the play at noon tomorrow, and his candle is burning down. Step through
+the Door into Verona, and find out.
+
+*(54 words)*
+
+**Grown-ups:** This Journey visits a famous sad story. Nothing upsetting is shown.
+
+---
+
+### Cast
+
+#### The links (in place of suspects)
+
+*This is the season's first case with no culprit. The four people below are links in a chain. Each has a reason to look
+to blame, and each hides something that is not the harm.*
+
+| Name | Look (one line) | Manner (one line) | Motive · Secret | Portrait expressions |
+|---|---|---|---|---|
+| **Friar John**, a Franciscan friar, about 60 | Grey habit, rope belt, bare feet in sandals, a letter-shaped bulge in his sleeve | Gentle, slow, flustered; answers a question with a sigh first | *Looks to blame:* the letter was in his hands and never left Verona; "detained" and won't say where. · *Secret:* he went into a sick house to fetch a brother who was nursing the sick, and was locked in with him; he is ashamed he could not get out, and ashamed he was frightened | flustered, ashamed, calm, relieved, sad |
+| **Balthasar**, about 17, Romeo's servant | Riding boots grey with road dust, a cap pulled low, saddle-sore and won't sit down | Loyal, quick, blunt; talks while still moving | *Looks to blame:* he carried the news that was wrong. · *Secret:* he rode past Friar Laurence's door without knocking, because the Friar once caught him taking figs from the garden, and he was too embarrassed to face him | defensive, embarrassed, sad, relieved |
+| **Lord Capulet**, Juliet's father, about 50 | Rich black velvet, a heavy gold chain, a list of guests in one fist | Loud, generous, quick to decide and quicker to blame anyone else | *Looks to blame:* he moved the wedding a day earlier. · *Secret:* he hurried it because Juliet had been weeping for days and he thought a wedding would cheer her; he had already hired the cooks to surprise her. The one lie: "It was always to be Wednesday." | jovial, offended, flustered, ashamed, sad |
+| **Friar Laurence**, a Franciscan friar, about 55 | Brown habit, herb basket, earth on his hands, spectacles pushed up | Wise, kind, a little too sure of his own cleverness | *Looks to blame:* it was his plan, and his letter. · *Secret:* he had the coins to send the letter by a post-rider, but gave them that morning to a family at the gate who had nothing; he never told anyone, and so never told himself why his letter went on foot | calm, thoughtful, stricken, ashamed, relieved |
+
+#### Helpers and the world's own people
+
+- **Quill** — deerstalker on; the Door's rules, said once more. Running joke: corrects grammar at the worst moment (even
+  Shakespeare's, which is a mistake).
+- **Felix Moreno-Lindqvist** — the companion. Meets his hero and faints, briefly, from joy. Footnotes everything in
+  Verona. Sneezes at the Friar's dried herbs. *His arc:* he tries to change the story, learns that he cannot, and reads
+  the Prologue aloud at the end without freezing.
+- **Will** — a young playwright in London, about 31. Ink to the wrists. Kind, quick, tired, funny about his own crossings-out.
+  *All his lines are made up for this visit.*
+- **Prince Escalus** — the judge. Tall, grave, weary of quarrels. Speaks the play's verdict.
+- **Lady Capulet** — appears only in the play's own line (DOC J3.6).
+- **Romeo** — appears only in the play's own lines (DOC J3.8). Never drawn in the moment of the news; drawn reading a
+  letter-shaped absence: an empty hand.
+- **Juliet** — never interviewed. Drawn only at her window (Act 2) and, from behind, walking to the Friar's cell. Never drawn
+  asleep.
+- **The gatekeeper of the Mantua gate** — keeps the gate book (DOC J3.7).
+- **The searchers' clerk** — keeps the searchers' book (DOC J3.10).
+- **A boy from the playhouse** — brings Will the message that moves his reading earlier.
+
+---
+
+### Chapter 1 — The scene
+
+**Opening panels (6):**
+1. **The agency, after Case 7.** Night. Felix is still holding his speech cards. The painted Door behind the Casebook Wall
+   has a line of candlelight under it. Somewhere, a smell of ink and wax. *(Persona sign, per the child's detective: the
+   owl's shadow / the laces / the two crows / the strand of wool / the tab / the single note.)* QUILL: "Mind the time. A
+   story keeps its own clock."
+2. **Through the Door: a cramped London room, about 1595.** Rain on a small leaded window. One candle with twelve marks
+   scratched down its side. A floor of crumpled pages. A young man with ink to the wrists looks up. WILL: "Oh, good. Visitors.
+   Are you real, or am I asleep again?"
+3. **Felix sees who it is.** He sways. He sits down on a stool that is not there. *(Will catches him.)* FELIX: "Footnote: I
+   am fine." *(He is not fine. He is delighted.)*
+4. **Will holds up a battered printed book.** WILL: "Arthur Brooke's poem. Romeus and Juliet. I'm turning it into a play.
+   And there's a hole in it I can't fill." He hands {det} the candle. "Go and look."
+5. **The candle flame stretches, and the room becomes a street.** Verona at night: bells, warm stone, a cat on a wall,
+   lanterns swinging. A notice nailed by the city gate flaps in the wind. Nobody reads it.
+6. **Friar Laurence's cell.** Herbs hanging from the beams; jars; a narrow cot; a carved line over the door. A small glass
+   bottle stands on the table. Felix sneezes at the herbs. FELIX: "Rosemary. Footnote: for remembrance."
+
+*Place caption:* Verona. Tuesday, late. The bells of San Francesco ring for the night prayers. Somewhere a dog barks twice,
+and stops.
+
+---
+
+#### DOC J3.1 · note
+- **Author:** Will (made up for this visit) · **Date/time:** London, a night in about 1595 · **Found:** pinned to the candle
+  with a pen-knife · **Picture:** a torn half-page, ink blots, three crossings-out, a tiny drawing of a candle.
+
+> Brooke's poem, 1562. The same hole, page after page.
+>
+> The Friar sends a letter to Romeo in Mantua. [[c:neverarrives|It never arrives.]] Everything after that goes wrong.
+>
+> My audience will ask why. [[c:whosefault|They will ask whose fault it was.]] If I cannot answer, my ending is a cheat.
+>
+> [[c:noon|The company reads the play at noon tomorrow.]]
+>
+> This candle has twelve marks, one for each hour. [[c:lastmark|When it burns to the last mark, I must know.]]
+>
+> Not one villain. I have tried. Every villain I invent makes it smaller.
+>
+> — W.
+
+---
+
+#### DOC J3.2 · prologue (draft)
+- **Author:** Will; the lines are 📜 the play's own (Prologue, Act 1) · **Date/time:** the same night · **Found:** on Will's
+  table under the inkpot · **Picture:** a page of fourteen ruled lines, some written, some crossed out, one with a gap.
+
+> THE PROLOGUE — spoken by the Chorus
+>
+> Two households, both alike in dignity,
+>
+> (In fair Verona, where we lay our scene),
+>
+> From ancient grudge break to new mutiny,
+>
+> …
+>
+> A pair of [[c:starcrossd|star-crossed lovers]] …
+>
+> …
+>
+> [[c:trafficgap|Is now the ________ of our stage;]]
+>
+> In the margin, in Will's hand: [[c:tellsend|The Chorus tells them how it ends before it begins.]] The story ends in sorrow, and the two houses make peace. [[c:watchwhy|So they will watch for WHY, not WHAT.]]
+
+---
+
+#### DOC J3.3 · notice
+- **Author:** the Prince's searchers (made up for this visit; "the searchers of the town" is 📜 the play's phrase, Act 5
+  Scene 2) · **Date/time:** nailed up this week · **Found:** on the Mantua gate, flapping in the wind · **Picture:** a
+  rain-spotted sheet with a red wax seal, one corner torn. *(No lettering in the painting; the words are live text.)*
+
+> BY ORDER OF THE PRINCE
+>
+> A sickness is in some streets of the city. Be calm, and be careful.
+>
+> [[c:searchers|The searchers of the town shall shut up any house where the sickness is suspected.]]
+>
+> [[c:noneforth|None may come forth from a shut house, nor go in, until the searchers open it.]]
+>
+> Letters and parcels may not be passed from a shut house.
+>
+> Food will be brought to the door each morning.
+>
+> The searchers will open each house as soon as all within are found well.
+>
+> God keep Verona.
+>
+> — Escalus, Prince
+
+---
+
+#### DOC J3.4 · the Friar's plan
+- **Author:** Friar Laurence; 📜 the play's own lines (Act 4 Scene 1), cut to L4 length · **Date/time:** Tuesday · **Found:**
+  in Will's copy of the scene, the page folded at the corner · **Picture:** a prompt-book page; the Friar's speech with a
+  candle-wax drip on it; in the margin, a sketch of the small glass bottle.
+
+> FRIAR LAURENCE, to Juliet:
+>
+> [[c:wedtomorrow|Wednesday is tomorrow.]]
+>
+> [[c:tomorrownight|Tomorrow night look that thou lie alone;]]
+>
+> …
+>
+> [[c:twoforty|Thou shalt continue two and forty hours]]
+>
+> And then awake as from a pleasant sleep.
+>
+> …
+>
+> In the meantime, against thou shalt awake,
+>
+> [[c:myletters|Shall Romeo by my letters know our drift,]]
+>
+> And hither shall he come …
+>
+> Will's note in the margin: [[c:sleeplooks|A sleep so deep that all will think the worst. It is only sleep.]] The wedding to the County is on Thursday. So she drinks on Wednesday night.
+
+---
+
+#### DOC J3.5 · day-book
+- **Author:** Friar Laurence (made up for this visit; the carved line is 📜 the play's own, Act 2 Scene 3) · **Date/time:**
+  Tuesday · **Found:** open on the Friar's table beside the small glass bottle · **Picture:** a small leather day-book, herb
+  stains, a pressed sprig of rosemary; above it, the line carved into the door lintel.
+
+> Carved above the door of the cell: [[c:wisely|Wisely and slow. They stumble that run fast.]]
+>
+> Tuesday. Paris came at noon about Thursday. Then the child herself, in tears.
+>
+> I gave her the sleep. She takes it on Wednesday night, before the wedding.
+>
+> [[c:friday|By my reckoning she wakes on Friday, in the afternoon.]]
+>
+> [[c:vespers|At vespers I gave my letter to Brother John, for Mantua.]] He goes on foot, as our order does.
+>
+> [[c:onebrother|One letter, by one brother. Wednesday and Thursday for the road. Time enough.]]
+>
+> Romeo will come by night, and I shall be there when she wakes.
+>
+> Mem.: the poor box is empty again. Gave the last coins at the gate this morning.
+
+---
+
+#### DOC J3.6 · scene (two days in the Capulet house)
+- **Author:** 📜 the play's own lines (Act 3 Scene 4, Monday; Act 4 Scene 2, Tuesday) · **Date/time:** Monday night and
+  Tuesday · **Found:** two prompt-book pages pinned together with a pin · **Picture:** two pages; on the second, a long list
+  of guests in a different, hurried hand.
+
+> MONDAY. CAPULET, to Paris:
+>
+> [[c:toosoon|Well, Wednesday is too soon.]]
+>
+> [[c:othursday|O' Thursday let it be.]]—O' Thursday, tell her,
+>
+> She shall be married to this noble earl.
+>
+> TUESDAY. CAPULET, to his servant:
+>
+> [[c:guests|So many guests invite as here are writ.]]
+>
+> Sirrah, go hire me twenty cunning cooks.
+>
+> TUESDAY, LATER. CAPULET:
+>
+> Send for the County. Go tell him of this.
+>
+> [[c:knotknit|I'll have this knot knit up tomorrow morning.]]
+>
+> LADY CAPULET:
+>
+> [[c:notthursday|No, not till Thursday. There is time enough.]]
+>
+> CAPULET:
+>
+> Go, nurse. Go with her. [[c:tochurch|We'll to church tomorrow.]]
+
+---
+
+#### Did you know? *(margin note, chapter 1)* 📜
+- **Shakespeare did not invent this story.** He took it from a long English poem, Arthur Brooke's *The Tragicall Historye
+  of Romeus and Juliet* (1562), which came from Italian and French tellings. Brooke's story moves slowly; Shakespeare
+  squeezed the action into a few days. [VERIFY: Brooke's poem spans several months — confirm the wording against the Arden
+  introduction.]
+- **The Prologue is a sonnet:** fourteen lines, ending in a rhyming pair. It tells the audience how the story ends before it
+  begins. That is *dramatic irony*: the audience knows what the characters do not.
+- *Sources:* René Weis (ed.), *Romeo and Juliet*, The Arden Shakespeare, Third Series (2012), Introduction; Folger
+  Shakespeare Library, "Romeo and Juliet" (folger.edu).
+
+---
+
+**Chapter-end hook:** As the child turns the Capulet page, the cell's candle gutters. Outside, a cart rattles past toward
+the Tanners' Street, and someone is hammering: three slow knocks, wood on wood. Felix looks up. "That's not a door being
+opened," he says. "That's a door being *shut*."
+
+---
+
+### Chapter 2 — Interviews
+
+*These are not suspects of a crime. They are links in a chain. Each answer arrives as a page in the prompt book. Lines in
+quotation marks with 📜 are the play's own; everything else is made up for this visit.*
+
+**New documents this chapter:** DOC J3.7 (the gate book) and DOC J3.8 (Romeo in Mantua), unlocked by the first Balthasar
+question.
+
+---
+
+#### DOC J3.7 · gate book
+- **Author:** Matteo, keeper of the Mantua gate (made up for this visit) · **Date/time:** Tuesday and Wednesday ·
+  **Found:** on a chain at the gatehouse window · **Picture:** a narrow ledger, a ribbon of tally marks, a dried apple core
+  on the sill.
+
+> MANTUA GATE — who goes out
+>
+> Tuesday. Two carts of wool, at dawn. A pedlar with pans.
+>
+> Tuesday, dusk. Gate shut at the bell, as the Prince orders.
+>
+> [[c:nofriar|No friar went out by this gate, Tuesday or Wednesday.]] I would know. They always bless the gate.
+>
+> [[c:gatebal|Wednesday, at first light. Balthasar, servant to young Montague, on a post-horse, for Mantua.]]
+>
+> [[c:wouldnotwait|He would not wait for the fresh saddle.]] Paid double. Gone like a hare.
+>
+> Wednesday, noon. Nobody. Too hot.
+>
+> — Matteo, his mark
+
+---
+
+#### DOC J3.8 · scene (Mantua)
+- **Author:** 📜 the play's own lines (Act 5 Scene 1) · **Date/time:** Wednesday · **Found:** a prompt-book page; Will has
+  drawn a box round two lines · **Picture:** a Mantua street at noon; an empty hand held out.
+
+> ROMEO, alone:
+>
+> [[c:dreams|If I may trust the flattering truth of sleep,]]
+>
+> My dreams presage some joyful news at hand.
+>
+> Enter BALTHASAR.
+>
+> ROMEO:
+>
+> News from Verona!—How now, Balthasar?
+>
+> [[c:dostthou|Dost thou not bring me letters from the Friar?]]
+>
+> BALTHASAR, telling what he saw:
+>
+> … [[c:tookpost|And presently took post to tell it you]] …
+>
+> ROMEO:
+>
+> [[c:hastthou|Hast thou no letters to me from the Friar?]]
+>
+> BALTHASAR:
+>
+> [[c:nomylord|No, my good lord.]]
+>
+> Will's note in the margin: [[c:twiceasks|He asks for the letter twice.]] Nobody in the whole play answers him.
+
+---
+
+#### SUSPECT Friar John
+*Interviewed in the friary garden. He stands by the well and will not look at the letter-shaped bulge in his sleeve. Felix's
+pencil is already moving.*
+
+##### Q1 · what · "What did Friar Laurence give you?"
+Expression: flustered
+> A letter for Romeo, in Mantua. Sealed with his own seal. He said, "Of dear import." He said it twice. I put it in my sleeve.
+
+##### Q2 · when · "When did you set out?"
+Expression: calm
+> At vespers, on Tuesday, when the bell went. Our order does not travel alone. [[c:findbrother|So first I went to find a brother to walk with me.]]
+
+##### Q3 · why · "Why didn't you reach Mantua?"
+Expression: ashamed
+> [[c:detained|I was… detained.]] I would rather not say where. It is not a thing a friar is proud of. Please. Ask me something else.
+
+##### Q4 · where · "Where is the letter now?"
+Expression: ashamed
+> [[c:sleeve|Here. In my sleeve. Still sealed.]] I have carried it about all day like a stone. I could not bring myself to give it back.
+
+##### Q5 · who · "Who do you think is to blame?"
+Expression: sad
+> Me, I expect. Everyone will say so. A slow old friar with a letter in his sleeve. That is a story people like.
+
+*Felix, writing: "Detained. Footnote: by breakfast?" Quill: "Write what he said, Felix, not what you guess."*
+
+---
+
+#### SUSPECT Balthasar
+*Interviewed in the Montague stable yard. He leans on a post and will not sit down. His boots are grey to the knee.*
+
+##### Q1 · what · "What did you see on Wednesday morning?"
+Expression: defensive
+> The Capulet house in tears. Black cloth at the windows. Everyone saying she was gone. [[c:isaw|I saw what I saw. I did not stop to ask anyone what it meant.]]
+
+##### Q2 · when · "When did you ride for Mantua?"
+Expression: defensive
+> At first light. I took post at the gate, a fast horse, and I rode it hard. My master told me to bring him news of her every day. So I did.
+
+##### Q3 · where · "Did you pass Friar Laurence's cell?"
+Expression: embarrassed
+> I… did. [[c:pastcell|I rode straight past his door.]] I had my reasons. They are not good ones. Do not ask me about figs.
+
+##### Q4 · who · "Did you see Friar John on the way?"
+Expression: defensive
+> [[c:window|I saw him at an upstairs window in the Tanners' Street, at his ease, as cheerful as you like.]] [[c:waved|He waved and shouted something. I waved back.]] I did not stop. I was in a hurry.
+
+##### Q5 · what · "What did Romeo ask you?"
+Expression: sad
+> Whether I had letters from the Friar. I had none. He asked me twice. I did not know there was a letter to bring.
+
+---
+
+#### SUSPECT Lord Capulet
+*Interviewed in his great hall, surrounded by half-unrolled tablecloths and a cook holding a goose. He talks over everyone,
+including himself.*
+
+##### Q1 · why · "Why did you move the wedding?"
+Expression: jovial, then flustered
+> Move it? I moved nothing! A father makes a plan and sticks to it. The cooks were hired, the guests invited. There was no reason to wait.
+
+##### Q2 · when · "Which day was the wedding always meant to be?"
+Expression: offended
+> [[c:caplie|It was always to be Wednesday. I never hurried anything in my life.]] Ask anyone in this house.
+
+##### Q3 · what · "What did Lady Capulet say?"
+Expression: flustered
+> My wife fusses. She fusses about napkins. She fussed about the day. A wife's fussing is not a reason, young person.
+
+##### Q4 · why · "Why so quickly?" *(offered after DOC J3.6 is marked)*
+Expression: ashamed
+> Because… she had been weeping for days. My girl. I thought a wedding, music, a feast, would bring her back to herself. [[c:cheer|I wanted her happy by tomorrow. Not Thursday. Tomorrow.]]
+
+##### Q5 · who · "Who is to blame?"
+Expression: offended
+> [[c:stars|The stars, I tell you! The stars were against us.]] What else could do such a thing to a house like mine?
+
+*QUILL (very quietly to the child): "He said 'never'. Remember that word."*
+
+---
+
+#### SUSPECT Friar Laurence
+*Interviewed in his cell among the herbs. He keeps touching the carved line over the door as if to check it is still there.*
+
+##### Q1 · what · "What was your plan?"
+Expression: calm
+> A sleep so deep that all would think the worst. Two and forty hours. Her family would grieve, and I would be there when she woke. Romeo too.
+
+##### Q2 · how · "How was Romeo to know the plan?"
+Expression: thoughtful
+> By my letter. One letter, by Brother John. A friar's road is a safe road. Nobody robs a man with nothing.
+
+##### Q3 · why · "Why didn't you send a fast rider, too?"
+Expression: ashamed
+> A post-rider costs coins. [[c:coins|I had the coins that morning. Then I didn't.]] There was a family at the gate. It doesn't matter. I chose the slow road, and I told myself slow was wise.
+
+##### Q4 · when · "When did you learn the wedding had moved?"
+Expression: stricken
+> [[c:learned|On Wednesday morning, when I came to the house for the wedding.]] By then she had already drunk the sleep, a night early. Nobody told me. Why would they? I was only the friar.
+
+##### Q5 · what · "What would you do differently?"
+Expression: stricken
+> Two letters. Two roads. A rider and a friar. [[c:spare|A plan should have a spare, like a cart has a spare wheel.]] I wrote a second letter, in the end. Too late.
+
+---
+
+#### Did you know? *(margin note, chapter 2)* 📜
+- **"Pestilence"** was an old word for a deadly spreading sickness such as plague. In Shakespeare's London, houses where
+  plague was found could be shut up with the family inside, and **the playhouses were closed for much of 1592 to 1594**
+  because of it. His first audiences knew exactly what a sealed door meant.
+- **Friars of St Francis** often travelled in pairs. That is why Friar John says he went "to associate me": to find a
+  companion.
+- *Sources:* Andrew Gurr, *The Shakespearean Stage 1574–1642*, 4th edn (Cambridge, 2009); Folger Shakespeare Library,
+  "Shakespeare and the Plague" (folger.edu). [VERIFY: exact closure dates; the gloss on friars travelling in pairs
+  against the Arden note to 5.2.]
+
+---
+
+**Chapter-end hook:** In the friary garden, Friar John's sleeve slips. For a second the child sees the letter: the seal is
+whole, and on the back, in a shaky hand, three words in pencil: *"Shout to him."* Then the sleeve falls, and the bell rings
+for Thursday's first prayers. Felix: "Thursday? We've lost a day." Quill: "No. *Verona* has."
+
+---
+
+### Chapter 3 — The board
+
+*The board is a playhouse "plot": a big sheet pinned to a post backstage, where the actors check who comes on when. Red
+string becomes red thread from Will's sewing kit.*
+
+**Board intro:**
+- **FELIX:** Footnote: a "plot" is also what playhouses called this sheet. It hung backstage so actors knew their entrances.
+- **QUILL:** Then let us see who entered when.
+
+**The escalation (mid-chapter):** a boy from the playhouse bursts into Will's room, back in London, through the Door's
+candle-glow. *BOY: "Master Will! They want the reading at first light, not noon. Sooner's better, they say."* The candle
+has six marks left, not twelve. WILL: "Sooner, sooner. Everybody wants it sooner." *(Felix stops writing. He looks at the
+Capulet page. He looks at Will.)* FELIX: "…That's the whole case, isn't it?" *(He does not yet know how right he is.)*
+
+**The false solution (by the end of the chapter):** Felix pins Friar John's portrait in the centre of the plot with three
+threads: "detained", "no friar went out", "at his ease at a window". FELIX: "He had the letter. He never left the city. He
+was waving from a window, cheerful as you like. He dawdled. Footnote: I'm sorry, Brother John. Footnote to the footnote: I'm
+quite sure." *(The child is never made to agree. The board simply looks that way.)*
+
+#### DEDUCTIONS
+
+**D1 · sequence / timeline — Haste: Capulet's "tomorrow" took a whole day from the Friar's plan.**
+- *Statement the child forms:* "The Friar's plan was for Juliet to drink the sleep on Wednesday night, before a Thursday
+  wedding. On Tuesday, Capulet moved the wedding to Wednesday morning. So she had to drink it on Tuesday night, a night
+  early. Everything after it ran a day ahead of the Friar's letter."
+- *Supporting spans:* [c:wedtomorrow] "Wednesday is tomorrow." · [c:tomorrownight] "Tomorrow night look that thou lie
+  alone;" · [c:othursday] "O' Thursday let it be." · [c:tochurch] "We'll to church tomorrow." · [c:knotknit] "I'll have
+  this knot knit up tomorrow morning." · [c:friday] "By my reckoning she wakes on Friday, in the afternoon."
+- *Also:* [c:twoforty] "Thou shalt continue two and forty hours" is the length of the sleep: it does not change, so moving
+  its start moves its end.
+- *Why it matters:* This is the first link. Without it, the letter has two days of road; with it, it has none.
+- *Sequence note:* "tomorrow" is a moving word. Said on Tuesday, it means Wednesday. The child must anchor every
+  "tomorrow" to the day it was said.
+
+**D2 · inference / vocab — Chance: Friar John was sealed in. Nobody chose it.**
+- *Statement:* "The searchers shut up any house where they suspected the sickness, and nobody could come out. Friar John went
+  to find a brother who was in a sick house. The searchers sealed the doors with both of them inside. The letter could not
+  leave."
+- *Supporting spans:* [c:searchers] "The searchers of the town shall shut up any house where the sickness is suspected." ·
+  [c:noneforth] "None may come forth from a shut house, nor go in, until the searchers open it." · [c:sealed] "Sealed up the
+  doors and would not let us forth," · [c:shutbook] "Tuesday, at dusk. Shut up the house of Widow Pace, Tanners' Street." ·
+  [c:couldnotsend] "I could not send it—here it is again—"
+- *Why it matters:* It is the second link, and it is nobody's choice. It also answers the impossible thing.
+- *Unlocks:* fully in chapter 4, when DOC J3.9 and DOC J3.10 arrive. In chapter 3 the child can pin only [c:searchers] and
+  [c:noneforth] and the slot stays half-lit: "Something shut a door. Whose?"
+
+**D3 · inference — A message can be fast and wrong: Balthasar carried what he saw, not what was true.**
+- *Statement:* "Balthasar saw a house in mourning and rode at once on a post-horse, without stopping to ask the Friar. He
+  reached Romeo with news that was not true, and with no letter."
+- *Supporting spans:* [c:isaw] "I saw what I saw. I did not stop to ask anyone what it meant." · [c:gatebal] "Wednesday, at
+  first light. Balthasar, servant to young Montague, on a post-horse, for Mantua." · [c:tookpost] "And presently took post
+  to tell it you" · [c:hastthou] "Hast thou no letters to me from the Friar?" · [c:nomylord] "No, my good lord." ·
+  [c:pastcell] "I rode straight past his door."
+- *Why it matters:* Supporting evidence. It shows how the wrong news *got there first*. But Balthasar told the truth as he
+  knew it; with the letter delivered, his news would have met the Friar's on the road and lost.
+- *Vocab note:* "presently" in the play means *at once*, not *soon*. "Took post" means hired fast horses at a post-house.
+
+**D4 · inference — A plan with no spare: one letter, one messenger, one road.**
+- *Statement:* "The whole plan rested on one letter carried on foot by one friar. There was no rider and no second copy. The
+  Friar wrote a second letter only after the first had failed."
+- *Supporting spans:* [c:myletters] "Shall Romeo by my letters know our drift," · [c:onebrother] "One letter, by one
+  brother. Wednesday and Thursday for the road. Time enough." · [c:writeagain] "But I will write again to Mantua," ·
+  [c:coins] "I had the coins that morning. Then I didn't." · [c:spare] "A plan should have a spare, like a cart has a spare
+  wheel."
+- *Why it matters:* The third link. Haste and chance would both have failed if the plan had had a second road.
+- *Theme note:* The Friar's own motto is [c:wisely] "Wisely and slow. They stumble that run fast." He chose slow, and
+  slow was not wise when everyone around him ran.
+
+**D5 · contradiction (the lie) — Lord Capulet chose the haste; the stars did not.**
+- *Statement:* "Capulet says it was always to be Wednesday and he never hurried anything. But on Monday he said Wednesday was
+  too soon and chose Thursday. On Tuesday his wife said 'not till Thursday', and he overruled her: 'we'll to church
+  tomorrow'."
+- *Supporting spans:* [c:caplie] "It was always to be Wednesday. I never hurried anything in my life." · [c:toosoon] "Well,
+  Wednesday is too soon." · [c:othursday] "O' Thursday let it be." · [c:notthursday] "No, not till Thursday. There is time
+  enough." · [c:tochurch] "We'll to church tomorrow."
+- *Why it matters:* This is the one lie in the Journey. It shows the haste was a *person's* choice, which is why the stars
+  are not the answer. (His reason, [c:cheer] "I wanted her happy by tomorrow. Not Thursday. Tomorrow.", is kind. It is
+  still haste.)
+
+#### RED HERRINGS AND WRONG THEORIES
+
+**Friar John dawdled** *(the false solution; Felix is sure)* — he had the letter; he was "detained" and won't say where; the
+gate book says no friar went out; Balthasar saw him "at his ease" at a window, waving.
+- *Cleared in chapter 4 by:* [c:sealed] "Sealed up the doors and would not let us forth," · [c:shutbook] "Tuesday, at dusk.
+  Shut up the house of Widow Pace, Tanners' Street." · [c:twofriars] "Within: the widow, her son, and two friars of St
+  Francis." · [c:askedmessenger] "Wednesday, first light. A friar at the upper window begs a passer-by to carry a letter.
+  None will come near." · [c:couldnotsend] "I could not send it—here it is again—"
+- *Re-read:* [c:window] "at his ease, as cheerful as you like" and [c:waved] "He waved and shouted something." The window was
+  the only way out of a shut house. He was not waving. He was calling for a messenger.
+- *And his secret, told kindly:* [c:findbrother] "So first I went to find a brother to walk with me." The brother was nursing
+  the sick. Friar John went in after him, which is brave, and was shut in, which is nobody's fault.
+
+**"The stars did it"** *(a wrong theory; figurative language taken literally)* — the Prologue calls them "star-crossed";
+Capulet blames the stars.
+- *Cleared by:* [c:starcrossd] "star-crossed lovers" is a figure of speech: unlucky, as if the stars were set against them. It
+  says *how it feels*, not *who did it*. [c:tellsend] "The Chorus tells them how it ends before it begins." tells us the
+  ending, not the cause. D5 shows a man chose the day; D2 shows the searchers shut the door.
+
+**Balthasar lied** *(a wrong theory)* — his news was false.
+- *Cleared by:* [c:isaw] "I saw what I saw." He reported truly what he saw; he did not know about the sleep. False news is
+  not always a lie. (Hands forward to Case 8: a message can be *wrong* without anyone in it being a liar — and Crane's letter
+  is the other kind.)
+
+**Friar Laurence planned it to go wrong** *(a wrong theory)* — it was his potion and his plan.
+- *Cleared by:* [c:onebrother] "Time enough." and [c:learned] "On Wednesday morning, when I came to the house for the
+  wedding." He did not know of the change until it was too late. Careless is not the same as cruel.
+
+---
+
+**Chapter-end hook:** Felix's thread is tied, his hunch is a ten, and he is reaching for the Prince's bell. Then the
+cell door creaks, and a grey sleeve comes round it. Friar John is holding out the letter, seal still whole. "You should read
+the back," he says. "I wrote it on Wednesday. At the window."
+
+---
+
+### Chapter 4 — The timeline
+
+*The washing line becomes a prompt-book margin: act and scene on one side, the day on the other. Cards marked ★ are placed by
+the child. The "two and forty hours" are a translucent strip the child can lay over the line.*
+
+**New documents this chapter:** DOC J3.9 (Friar John's account) and DOC J3.10 (the searchers' book). Together they break
+the false solution.
+
+---
+
+#### DOC J3.9 · scene (the friary)
+- **Author:** 📜 the play's own lines (Act 5 Scene 2) · **Date/time:** the friary, after the searchers open the house ·
+  **Found:** Will's prompt-book page, a candle drip on "Unhappy fortune" · **Picture:** two friars in a stone doorway, one
+  holding out a sealed letter.
+
+> FRIAR JOHN:
+>
+> Going to find a barefoot brother out,
+>
+> One of our order, to associate me,
+>
+> Here in this city visiting the sick,
+>
+> And finding him, the searchers of the town,
+>
+> Suspecting that we both were in a house
+>
+> Where the infectious pestilence did reign,
+>
+> [[c:sealed|Sealed up the doors and would not let us forth,]]
+>
+> So that my speed to Mantua there was stayed.
+>
+> FRIAR LAURENCE: Who bare my letter, then, to Romeo?
+>
+> FRIAR JOHN: [[c:couldnotsend|I could not send it—here it is again—]]
+>
+> Nor get a messenger to bring it thee,
+>
+> So fearful were they of infection.
+>
+> FRIAR LAURENCE: Unhappy fortune! …
+>
+> [[c:writeagain|But I will write again to Mantua,]]
+>
+> And keep her at my cell till Romeo come.
+
+---
+
+#### DOC J3.10 · log
+- **Author:** the searchers' clerk (made up for this visit) · **Date/time:** Tuesday to Thursday · **Found:** in a box
+  at the Prince's gate, under a dish of vinegar for wiping coins · **Picture:** a thin ledger, a red seal on every line, a
+  sketch of a door with a plank across it.
+
+> THE SEARCHERS' BOOK
+>
+> [[c:shutbook|Tuesday, at dusk. Shut up the house of Widow Pace, Tanners' Street.]] Cough heard within.
+>
+> [[c:twofriars|Within: the widow, her son, and two friars of St Francis.]] One friar came in at the bell, to fetch the other.
+>
+> Door sealed. Plank nailed. Bread and water at the step.
+>
+> [[c:askedmessenger|Wednesday, first light. A friar at the upper window begs a passer-by to carry a letter. None will come near.]]
+>
+> A young man on a horse waved and rode on.
+>
+> [[c:opened|Thursday, at noon. All within found well. House opened.]] [[c:nosickness|It was a cold, not the sickness.]]
+>
+> The friars went home at once. The older one was weeping.
+
+---
+
+**Signe's slot, Thea's gap** *(Knack hooks; see the Knack table)*: between card 9 and card 11 is the one slot where a missing
+event must go. The Spindle marks it; the Owl's Eye marks the missing time on the Friar's day-book.
+
+#### EVENTS (true order)
+
+| # | Day · Act and scene | Event | Time-word span | Placed by child |
+|---|---|---|---|---|
+| 1 | Sunday · 1.5 | The feast; Romeo and Juliet meet | "Sunday" (prompt-book margin) | |
+| 2 | Sunday night · 2.2 | The window: *"But soft, what light through yonder window breaks?"* | (margin) | |
+| 3 | Monday · 2.6 | The secret wedding at the Friar's cell | (margin) | |
+| 4 | Monday · 3.1 | After trouble in the street, the Prince banishes Romeo to Mantua | (margin) | |
+| 5 | Monday night · 3.4 | Capulet sets the wedding to Paris for Thursday | [c:toosoon] "Well, Wednesday is too soon." · [c:othursday] | ★ |
+| 6 | Tuesday · 4.1 | The Friar's plan: drink on Wednesday night; sleep two and forty hours | [c:wedtomorrow] · [c:tomorrownight] | ★ |
+| 7 | Tuesday, later · 4.2 | Capulet moves the wedding to Wednesday | [c:tochurch] "We'll to church tomorrow." | ★ |
+| 8 | Tuesday, vespers | The Friar gives his letter to Friar John | [c:vespers] "At vespers I gave my letter to Brother John, for Mantua." | ★ |
+| 9 | Tuesday, dusk | The searchers shut up the house in the Tanners' Street, with two friars inside | [c:shutbook] "Tuesday, at dusk." | ★ |
+| 10 | Tuesday night · 4.3 | Juliet drinks the sleep, a night early | (margin; never shown) | ★ |
+| 11 | Wednesday, first light | Friar John at the window, begging for a messenger; Balthasar rides past | [c:askedmessenger] · [c:gatebal] | ★ |
+| 12 | Wednesday morning · 4.5 | The Friar comes for the wedding and learns of the change | [c:learned] "On Wednesday morning, when I came to the house for the wedding." | |
+| 13 | Wednesday · 5.1 | Balthasar reaches Romeo in Mantua: "Hast thou no letters…?" | [c:hastthou] · [c:nomylord] | ★ |
+| 14 | Thursday, noon | The searchers open the house; Friar John brings the letter back | [c:opened] "Thursday, at noon." | ★ |
+| 15 | Thursday · (the day it was meant to be) | — the wedding day that was planned — | [c:othursday] | |
+
+**The forty-two-hour strip.** The child lays the strip twice:
+- **Planned:** starting Wednesday night, it ends on Friday afternoon ([c:friday]). The letter has Wednesday and Thursday:
+  [c:onebrother] "Time enough."
+- **What happened:** starting Tuesday night, it ends on Thursday. The news rides out at first light on Wednesday. The
+  letter is behind a nailed door.
+- *The gap opens on screen:* a shaded day between the two strips, labelled only by the child's own pin.
+
+**The line shakes** (gently) if card 7 is placed after card 10. QUILL: "When did Capulet say 'tomorrow'? Then when must
+she drink?" It shakes again if card 9 is placed after card 11. QUILL: "Read the searchers' book. When was the door shut,
+and when did the horse go by?"
+
+**Breaking the false solution.** When cards 9 and 11 are both pegged, Felix takes his red thread off Friar John's portrait,
+slowly.
+- **FELIX:** He wasn't at his ease. He was at the *window* because the window was the only way out.
+- **{det}:** *(chooses one of three, all fine)* "He was calling for a messenger." / "Balthasar rode right past him." /
+  "Read the back of the letter."
+- **FELIX:** *(turning the letter over)* "Shout to him." He wrote it to himself. To be brave enough to shout. *(He sits
+  down on a real stool this time.)* I called him a dawdler. Footnote: I was wrong. No footnote to that one.
+- **QUILL:** That is the most useful sentence you have said all season.
+
+**Felix tries to change the story** *(a beat, not a puzzle)*. Felix grabs a scrap of paper and starts to copy the
+Friar's letter. "If I run to Mantua myself—" He reaches the Mantua gate. It is open. He cannot step through it: the
+road beyond is only words, and the words do not change. QUILL, gently: "Inside a story, you can find out anything. You can't
+change what the story is." Felix stands at the gate a long moment, then folds his copy and puts it in his pocket.
+
+#### Did you know? *(margin note, chapter 4)* 📜
+- **The play counts its own days.** In Act 3 Scene 4 Capulet asks, "But soft, what day is this?" and Paris answers, "Monday, my lord."
+  From that line you can count forward to Thursday. Readers have noticed for centuries that the play's clock does not
+  *quite* add up everywhere; this Journey uses the usual Sunday-to-Thursday reading.
+- **Shakespeare made it faster on purpose.** Squeezing Brooke's slow story into a few days makes every hurried choice matter
+  more.
+- *Sources:* Romeo and Juliet 3.4 (the play's own text); René Weis (ed.), Arden Third Series (2012), Introduction, on the
+  play's time scheme. [VERIFY: Arden page reference for the time-scheme discussion.]
+
+---
+
+**Chapter-end hook:** The candle in London is down to its last two marks. Through the Door the child can hear Will pacing,
+and the scratch of a pen that keeps stopping. Then a bell, in Verona: not for prayers. The Prince has called the families to
+his hall.
+
+---
+
+### Chapter 5 — The accusation
+
+*The Prince's hall at dusk. Stone, banners of two houses hung on opposite walls, a long table, a single empty chair. The
+Capulets on one side, the Montagues on the other, not looking at each other. Friar Laurence, Friar John and Balthasar stand
+before the Prince. The Knack is greyed out. {det} accuses alone.*
+
+**THE PRINCE:** *(made up for this visit)* Verona has asked me one question all day. Whose fault was it? I have heard every
+answer but the true one. Show me.
+
+**THE ANSWER:** not a culprit, but a **chain**. The child pins **three links** onto the Prince's table: the three without
+which the letter arrives.
+
+**MINIMAL EVIDENCE SET (all three links):**
+1. **D1 — Haste:** [c:tochurch] against [c:tomorrownight] (and [c:othursday]).
+2. **D2 — The sealed door:** [c:sealed] with [c:shutbook] (or [c:searchers] with [c:couldnotsend]).
+3. **D4 — A plan with no spare:** [c:onebrother] with [c:myletters] (or [c:writeagain]).
+
+**ACCEPTABLE AS SUPPORTING EVIDENCE (pinned beside the chain, not in place of a link):**
+- **D3 — Fast and wrong:** [c:isaw] with [c:gatebal] and [c:hastthou].
+- **D5 — The lie:** [c:caplie] against [c:toosoon] / [c:notthursday]. *(Accepted in place of D1 only if paired with
+  [c:tochurch]: it proves the same link from Capulet's side.)*
+
+**WRONG-SUSPECT RESPONSES (Quill)** — if the child names one person as *the* villain:
+- **Friar John:** "Read the searchers' book again. Could he open a door with a plank nailed across it? And what was he doing
+  at that window?"
+- **Balthasar:** "He told what he saw. Was it a lie, or was it wrong? Those are different words."
+- **Lord Capulet:** "His haste is one link. Ask yourself: if Friar John had walked out on Tuesday night, would the letter
+  still have been late?"
+- **Friar Laurence:** "His plan is one link. Was the sealed door his doing? Was the moved wedding?"
+
+**WRONG-THEORY RESPONSE — the stars:** "'Star-crossed' is how it *feels*. Who chose Wednesday? Who sealed the door? A star
+did neither."
+
+**WEAK-EVIDENCE RESPONSE:** "That shows something went wrong. It does not show *why it could not go right*. Find the three
+things without which the letter arrives."
+
+**PARTIAL (two links):** "Two links make a chain that could still have held. Take one away in your head. Does the letter
+arrive? Then you've missed a link."
+
+**THE VERDICT.** When the three links are pinned, the Prince reads them aloud, one by one. Then he speaks the play's own
+line (📜 Act 5 Scene 3):
+
+> **THE PRINCE:** Some shall be pardoned, and some punished.
+
+*He does not say which, and the child is not asked. Quill (aside): "A chain is an answer."*
+
+---
+
+### The reveal
+
+*The Prince's hall. The candles are being lit one by one. The two families stand apart. Felix stands with {det}, holding
+the sealed letter.*
+
+**{det}:** It started with one word. "Tomorrow."
+
+**FELIX:** The Friar planned Wednesday night. Lord Capulet said "We'll to church tomorrow" on Tuesday. So the sleep began a
+night early.
+
+**CAPULET:** It was always to be Wednesday—
+
+**LADY CAPULET:** *(quietly)* "Not till Thursday," I said. "There is time enough."
+
+*(Capulet's face falls. He looks at the guest list in his fist.)*
+
+**CAPULET:** I wanted her happy by tomorrow. I hired twenty cooks. *(A pause.)* I hurried.
+
+**{det}:** Then the door. The Prince's own notice was on the city gate when we arrived. "None may come forth from a shut
+house." It was there from the first page.
+
+**FRIAR JOHN:** I went in to fetch Brother Anselm. He was nursing the widow. They nailed the door behind me.
+
+**{det}:** And on Wednesday at first light, you were at the window.
+
+**BALTHASAR:** *(very slowly)* He waved and shouted something. I waved back.
+
+**FRIAR JOHN:** I was shouting, "Take this to Mantua!" *(He turns the letter over: "Shout to him.")* I did shout. You
+didn't hear.
+
+**BALTHASAR:** I didn't stop. *(He sits down at last.)* I rode past the Friar's door too. Because of figs. I'm sorry.
+
+**FRIAR LAURENCE:** And the third link is mine. One letter, one friar, one road. I had the coins for a rider and gave them
+away at the gate. I wrote a second letter only when the first came back. *(He looks up at nothing, at the carved line he
+cannot see from here.)* "They stumble that run fast." I forgot the other half. Some must not walk too slow.
+
+**FELIX:** Nobody chose all of it. Everybody chose a little of it.
+
+**THE PRINCE:** And the stars?
+
+**{det}:** "Star-crossed" tells us how it ends. It doesn't tell us who moved the wedding.
+
+*(The Prince looks at the two families for a long time.)*
+
+**THE PRINCE:** 📜 Some shall be pardoned, and some punished.
+
+*(Lord Capulet crosses the hall. He holds out his hand to Lord Montague. After a moment, it is taken.)*
+
+---
+
+### Epilogue
+
+#### Verona
+
+*The story ends in sorrow, and Verona learns from it.* The child never sees the end. The last Verona panel is the square at
+dawn: the two families standing side by side for the first time, not speaking, not needing to. Friar John is sitting in the
+sun with his eyes shut. Balthasar brings him water. A cat sleeps on the Prince's notice, which has been taken down.
+
+#### London
+
+*The candle is at its last mark. The rain has stopped. Will is asleep with his cheek on Brooke's poem. Felix coughs,
+politely. Will wakes with ink on his face.*
+
+**WILL:** You're back. Well? Who was it?
+
+*(The child lays the chain on the table: three links, two supports.)*
+
+**WILL:** *(reading)* Haste. A sealed door. A plan with no spare. *(Slowly.)* And nobody a villain. *(He smiles.)* Haste
+and chance. Then that's my play.
+
+**FELIX:** May I… footnote: may I ask why the gap in the Prologue?
+
+**WILL:** Because I didn't know how long it was. The story, I mean. How long it takes to go wrong. *(He dips his pen and
+writes.)* There.
+
+> 📜 Is now the two hours' traffic of our stage;
+
+**FELIX:** "Traffic." Footnote: it meant *business*, or *dealings*. The two hours' business of our stage. Not carts.
+
+**WILL:** Not carts. Read it to me? The whole Prologue. I want to hear it in someone else's mouth.
+
+*(Felix looks at the page. His hand shakes. He looks at {det}, the way he looked at Row A, Seat 1, in Case 7. Then he reads
+it, the whole fourteen lines, clear and steady, to an audience of one playwright, one detective and a sleepy mascot.)*
+
+**WILL:** You'd make a fine Chorus.
+
+**FELIX:** Footnote: no. Footnote to the footnote: *maybe*.
+
+*(Will takes a goose-feather pen from the jar, trims it with his knife, and holds it out to {det}.)*
+
+**WILL:** For the reader who asked *why*. Write something with it that I'd want to steal.
+
+**QUILL:** *(eyeing the pen)* It's a very ordinary quill.
+
+**FELIX:** It's *Shakespeare's*.
+
+**QUILL:** I am also a quill. *(A pause.)* Nobody gives me to anyone.
+
+**WILL:** *(gravely, to Quill)* "What's in a name?"
+
+**QUILL:** *(mollified, a little)* Act 2, Scene 2. Fine.
+
+#### The office
+
+*The Door swings shut behind them. The office is dark and warm. The harbour is quiet. Felix sneezes.*
+
+**FELIX:** Dust. And… *(he sniffs)* violets?
+
+*(Nobody in the agency wears violets. Quill goes to the round window and looks down at the street for a long moment. The
+street is empty. A last breath of the scent fades.)*
+
+**QUILL:** *(lightly, too lightly)* Bed. Case 8 tomorrow.
+
+**Souvenir:** Will's quill goes on the new shelf by the Door, beside the tortoise-shell plectrum and the falcon feather, its
+tip still dark with London ink.
+
+#### Did you know? *(margin note, epilogue)* 📜
+- **"What's in a name?"** is Juliet's question in Act 2 Scene 2. It is this season's question too: pen names, the Blot's
+  cards, and your detective's name all ask it.
+- **The play was printed in 1597** in a shorter version and in **1599** in a longer one. Nobody has found Shakespeare's own
+  handwritten copy.
+- **Quill pens** were usually cut from goose feathers.
+- *Sources:* Folger Shakespeare Library, "Romeo and Juliet: About the play" and "Early modern writing" (folger.edu); Arden
+  Third Series (2012), "The texts". [VERIFY: Folger page titles.]
+
+---
+
+### Persona knacks (one line per persona)
+
+*Each Knack shows exactly three candidates; at most one is in the minimal evidence. No Knack works in chapter 5.*
+
+| Persona | Chapter | Knack line | Candidates (3) | In minimal? |
+|---|---|---|---|---|
+| **Thea** · Owl's Eye | 3 | *"What's not on this page? Romeo asks for a letter twice, and nobody gives one."* | gap: no letter in DOC J3.8 ([c:hastthou]) · gap: no hour after "vespers" in DOC J3.5 · gap: no reason in [c:detained] | none (all supporting) |
+| **Milo** · Winged Words | 1 | *"So what it actually says is: Romeo will learn the plan from my letter."* (on [c:myletters]) | "Romeo will learn the plan from my letter." ✓ · "Romeo will write me a letter about the plan." (wrong direction) · "Romeo learned the plan from my letters yesterday." (wrong time) | [c:myletters] (D4) — the one |
+| **Oskar** · Two Ravens | 2 | *"We've seen that word before. 'Wednesday' — in the Friar's plan, and in Capulet's 'too soon'."* | link [c:wedtomorrow] ↔ [c:toosoon] ✓ · link [c:noon] ↔ [c:vespers] (both times, no link) · link [c:dreams] ↔ [c:sleeplooks] (both "sleep", no link) | [c:wedtomorrow] (D1) — the one |
+| **Signe** · The Spindle | 4 | *"Something happened here, between vespers and first light, and nobody's told us."* | slot between cards 8 and 10 (the searchers shut the house) ✓ · slot between cards 1 and 2 (nothing missing) · two cards in the wrong order: 12 and 13 (they are fine) | slot only; never the event |
+| **Hari** · Another's Shoes | 2 | *"If I were Balthasar, what would I have seen? A house in tears. Nobody told him it was a sleep."* | viewpoint card on Balthasar: knew [c:isaw] · wanted "to bring news every day" · didn't know: "about the Friar's letter" (options drawn from DOC J3.8 and his interview) | none (D3 supporting) |
+| **Vani** · The Tuning Ear | 3 | *"Listen to the root. 'Messenger' — from Latin* mittere*, to send. So are 'mission' and 'transmit'. A messenger is a person a thing is* sent *with."* (Root mode on "messenger", Q4 of Friar John's chapter) | root card: *message* + *-er*; family: mission, transmit, missile — offered beside two distractor words, "message" ✓, "mess" (different root), "messy" (different root) | none |
+
+*Fairness check (§2.4):* no Knack candidate set contains more than one minimal span; Signe marks a slot, never an event;
+Hari's card fills from document options only.
+
+**Bonus origin card (every persona): *tragedy*.**
+- *Path:* Greek *tragōidia* → Latin *tragoedia* → English *tragedy*.
+- *Story:* The Greek word is made of *tragos*, "goat", and *ōidē*, "song": a "goat song". ⚖ Nobody is sure why goats.
+  Scholars still argue: perhaps a goat was a prize for the best play, perhaps the singers dressed as goat-men.
+- *Question:* "The two Greek parts of *tragedy* probably mean…" — goat + song ✓ · sad + ending · stage + play.
+- *Sources:* Oxford English Dictionary, "tragedy, n."; Online Etymology Dictionary, "tragedy". Objective: `la10-world`.
+- *Callback:* the Olympus Journey (J1).
+
+---
+
+### Detective School drill — "The Moving Tomorrow"
+
+**Clue type:** sequence (time words that move). Built from DOC J3.4 against DOC J3.6.
+
+The child reads three short notes, each written on a different day, and pins every "tomorrow" to a real day.
+
+> **Monday's note (Gran):** The cake is for Thursday. Tomorrow I buy flour.
+>
+> **Tuesday's note (Gran):** Flour bought. Tomorrow, eggs.
+>
+> **Tuesday's note, later (Dad):** Change of plan! We'll have the party tomorrow.
+
+- **Answer:** Monday's "tomorrow" = Tuesday. Gran's Tuesday "tomorrow" = Wednesday. Dad's "tomorrow" = Wednesday: the
+  party moved from Thursday to Wednesday, so Gran has no day left to bake.
+- **Quill's follow-up:** "Which word did the damage?" (*tomorrow*, in Dad's note.) "And what must you always ask about a
+  *tomorrow*?" (*When was it written?*)
+
+**Round two — back to Verona.**
+1. The Friar says, on Tuesday: "Wednesday is tomorrow." Which day does "Tomorrow night" mean? **Answer:** Wednesday
+   night. (Options: Tuesday night · Wednesday night · Thursday night.)
+2. Capulet says, on Tuesday: "We'll to church tomorrow." Which day is the wedding now? **Answer:** Wednesday. (Options:
+   Tuesday · Wednesday · Thursday.)
+3. So when must Juliet drink the sleep, to be asleep before the wedding? **Answer:** Tuesday night. (Options: Tuesday
+   night · Wednesday night · Thursday morning.)
+4. The Friar's day-book says she "wakes on Friday, in the afternoon." Is that still true after Capulet's change? **Answer:**
+   No, she wakes a day earlier. (Options: Yes, the sleep is the same length · No, she wakes a day earlier · No, she wakes a
+   day later.)
+
+- **Quill, after round two:** "A *tomorrow* is a pointer. Find what it points from before you trust what it points to."
+
+---
+
+### Training Desk (format 1.2 · 12 exercises · tiers easier L3 / at L4 / harder L5)
+
+*Offered between chapters; never blocking. Quotes from documents are verbatim. No exercise names a link as "the culprit"
+before chapter 5. New types used here: `word-origin` and `stress` (spec §10).*
+
+**x1 · easier (L3) · vocab-in-context · skill vocab · strand word · objective w10-clues · chapter 1 · source DOC J3.3, [c:searchers]**
+- *Prompt:* The notice says: "The searchers of the town shall shut up any house where the sickness is suspected." What does
+  "suspected" mean here?
+- *Options:* thought likely, but not yet proved · proved beyond doubt · cured completely
+- *Answer:* thought likely, but not yet proved
+- *Explain:* To suspect is to think something may be true without proof. Detectives suspect people. Here the searchers only
+  *suspected* the sickness — and in the end, it was a cold.
+
+**x2 · easier (L3) · tense-sequence · skill sequence · strand reading · objective s2-tense · chapter 1 · source DOC J3.6, [c:tochurch]**
+- *Prompt:* Capulet says this on Tuesday: "We'll to church tomorrow." Which day will they go to church?
+- *Options:* Monday · Wednesday · Thursday
+- *Answer:* Wednesday
+- *Explain:* "Tomorrow" means the day after the day it is said. Said on Tuesday, it means Wednesday.
+
+**x3 · easier (L3) · figurative · skill figurative · strand literature · objective li5-simile · chapter 2 · source DOC J3.7, [c:wouldnotwait]**
+- *Prompt:* The gatekeeper writes that Balthasar was "Gone like a hare." What does he mean?
+- *Options:* Balthasar turned into a hare · Balthasar left very fast · Balthasar was hiding in a field
+- *Answer:* Balthasar left very fast
+- *Explain:* "Like a hare" is a simile: it compares Balthasar to a hare, an animal famous for speed. Nobody changed shape.
+
+**x4 · easier (L3) · word-origin · skill vocab · strand word · objective la10-world · chapter 5 · source DOC J3.2, [c:tellsend]**
+- *Prompt:* Romeo and Juliet is a *tragedy*. The Greek word it comes from is made of two parts. What do they probably mean?
+- *Options:* goat + song · sad + ending · stage + play
+- *Answer:* goat + song
+- *Explain:* Greek *tragōidia* = *tragos* (goat) + *ōidē* (song). Scholars still argue about why goats. Sources: OED;
+  Online Etymology Dictionary.
+
+**x5 · at (L4) · inference · skill inference · strand reading · objective li1-problem · chapter 2 · source DOC J3.8, [c:hastthou]**
+- *Prompt:* Romeo asks, "Hast thou no letters to me from the Friar?" Balthasar answers, "No, my good lord." What does Romeo's
+  question tell us he was expecting?
+- *Options:* news of a feast in Verona · a letter from Friar Laurence · a new horse from the post-house
+- *Answer:* a letter from Friar Laurence
+- *Explain:* You only ask "Hast thou no letters…?" if you expected one. Romeo was waiting for the Friar's letter. It never
+  came.
+
+**x6 · at (L4) · vocab-in-context · skill vocab · strand word · objective w10-meanings · chapter 4 · source DOC J3.9, [c:sealed]**
+- *Prompt:* Friar John says the searchers "Sealed up the doors and would not let us forth". What does "forth" mean here?
+- *Options:* the fourth time · out, away from inside · forward in time
+- *Answer:* out, away from inside
+- *Explain:* "Forth" means out or onward. "Would not let us forth" means *would not let us out*. Don't confuse it with "fourth",
+  the number.
+
+**x7 · at (L4) · stress · skill figurative · strand literature · objective la9-pentameter · chapter 3 · source DOC J3.2, null**
+- *Prompt:* Romeo's line is "But soft, what light through yonder window breaks?" It has ten beats, in pairs: da-DUM. Which
+  words are strong?
+- *Options:* soft · light · yon- · win- · breaks (all five) — tap them; distractors: But · what · through · -der · -dow
+- *Answer:* ["soft", "light", "yon", "win", "breaks"]
+- *Explain:* but SOFT / what LIGHT / through YON / der WIN / dow BREAKS. Five pairs of da-DUM is *iambic pentameter*: "penta"
+  means five. It sounds like a heartbeat. (Oskar and Signe: *window* is your Norse wind-eye.)
+
+**x8 · at (L4) · voice · skill voice · strand literature · objective li2-traits · chapter 2 · source DOC J3.6, [c:guests]**
+- *Prompt:* Capulet says, "So many guests invite as here are writ. Sirrah, go hire me twenty cunning cooks." Which word best
+  describes how he sounds?
+- *Options:* hurried and commanding · shy and unsure · bored and sleepy
+- *Answer:* hurried and commanding
+- *Explain:* Two orders in a row, and "twenty" cooks at once: he gives commands and wants everything now. That voice is the
+  haste the case is about.
+
+**x9 · harder (L5) · summarise · skill sequence · strand reading · objective li1-problem · chapter 5 · source DOC J3.5, [c:onebrother]**
+- *Prompt:* Put these four sentences in order to retell why the letter failed.
+- *Options:* "The Friar sent one letter, on foot, with one friar." · "Capulet moved the wedding a day earlier." · "The
+  searchers shut Friar John inside a house." · "Balthasar's fast news reached Romeo first."
+- *Answer:* ["Capulet moved the wedding a day earlier.", "The Friar sent one letter, on foot, with one friar.", "The
+  searchers shut Friar John inside a house.", "Balthasar's fast news reached Romeo first."]
+- *Explain:* The move came on Tuesday, before the Friar gave his letter at vespers. The house was shut at dusk. The news
+  rode out at first light on Wednesday. Order by the time-words, not by importance.
+
+**x10 · harder (L5) · fact-opinion · skill factopinion · strand reading · objective w8-purpose · chapter 3 · source DOC J3.6, [c:notthursday]**
+- *Prompt:* Capulet says, "It was always to be Wednesday." Which line from the play shows that is not a fact?
+- *Options:* "Well, Wednesday is too soon." · "So many guests invite as here are writ." · "Send for the county; go tell him
+  of this:"
+- *Answer:* "Well, Wednesday is too soon."
+- *Explain:* On Monday, Capulet himself said Wednesday was too soon and chose Thursday. A claim is only a fact if the record
+  agrees with it.
+
+**x11 · harder (L5) · vocab-in-context · skill vocab · strand word · objective la4-shakespeare · chapter 5 · source DOC J3.2, [c:trafficgap]**
+- *Prompt:* Will's finished line is "Is now the two hours' traffic of our stage". In Shakespeare's time, what did "traffic"
+  mean?
+- *Options:* carts and crowds in the street · business, or dealings · a quarrel between two families
+- *Answer:* business, or dealings
+- *Explain:* Words change. "Traffic" once meant trade or business. The Chorus means: the story is the two hours' business of
+  our stage.
+
+**x12 · harder (L5) · word-origin · skill vocab · strand word · objective la4-shakespeare · chapter 3 · source DOC J3.1, null**
+- *Prompt:* Some words are first found written down in Shakespeare's plays — as far as we know. What does "as far as we
+  know" warn us?
+- *Options:* Shakespeare made up every English word · someone may have used the word earlier, unrecorded · the word is no
+  longer used
+- *Answer:* someone may have used the word earlier, unrecorded
+- *Explain:* Dictionaries record the earliest use they have *found*. *Eyeball*, *lonely*, *swagger* and *bedazzled* are
+  first found in Shakespeare's plays, but people may have said them before anyone wrote them down. [VERIFY: each word's
+  first citation against the OED.]
+
+*Count: 12 (easier 4 · at 4 · harder 4). Types: vocab-in-context, tense-sequence, figurative, word-origin, inference,
+stress, voice, summarise, fact-opinion (9).*
+
+---
+
+### Did you know? *(margin note, chapter 3 — Words first written down by Shakespeare)* 📜
+
+- As far as we know, these words were **first written down** in Shakespeare's plays: *eyeball* (A Midsummer Night's Dream),
+  *swagger* (A Midsummer Night's Dream), *bedazzled* (The Taming of the Shrew) and *lonely* (Coriolanus).
+- **"As far as we know"** matters. Dictionaries record the earliest use they have found. People often said words long
+  before anyone wrote them down, and earlier examples keep turning up.
+- *Sources:* Oxford English Dictionary, entries for each word; British Library, "Shakespeare's language" (bl.uk).
+  [VERIFY: each first citation and play against the current OED; the OED revises first dates often.]
+
+---
+
+### Art and scene notes
+
+*No lettering in any painting. Every word on every document, notice, page and book is live text set by the app.*
+
+#### Backgrounds
+- **Will's room, London, about 1595 (night):** low beams, a small leaded window with rain, a narrow table buried in pages,
+  one candle with twelve scratched hour-marks, a jar of quills, a printed book open face-down (Brooke). Warm amber, inky
+  blue shadows. Cosy, cramped, never squalid.
+- **Verona street at night:** warm stone, lanterns, a cat on a wall, a bell tower against a deep blue sky. The Prince's
+  notice flapping on the Mantua gate: present in the plate, **never centred, never lit** (the hidden clue).
+- **Friar Laurence's cell:** herbs hanging from beams, jars, a cot, a small glass bottle on the table. The carved line over
+  the door is a plain decorative band in the painting; the words are live text.
+- **The Capulet great hall:** tablecloths half-unrolled, a cook with a goose, garlands stacked, a guest list. Busy and bright.
+- **The Mantua gate and gatehouse:** a narrow arch, a ledger on a chain, an apple core.
+- **The Tanners' Street:** a tall narrow house, an upper window, **a plank across the door**, a dish of bread at the step.
+  Painted in daylight; calm, quiet, not frightening. No signs of illness.
+- **The Prince's hall at dusk:** two sets of banners on opposite walls (plain colours, no lettering, no real coats of
+  arms), a long table, candles being lit.
+- **Verona square at dawn (epilogue):** the two families side by side, small in frame. Pale gold light.
+
+#### What is never drawn
+- The tomb, any resting place, any vial being drunk, Juliet asleep, any weapon, any fight, any illness.
+- Romeo receiving the news: draw only an empty hand.
+- Any attempt at a "true likeness" of Shakespeare. Draw Will as a young writer of the 1590s: a plain doublet, ink-stained
+  cuffs, tired eyes, quick smile. *(The only likely likenesses are the 1623 engraving and the Stratford monument; we
+  borrow neither.)*
+
+#### Props
+- The candle with twelve marks (the clock; it burns down across the chapters, six marks gone at the escalation).
+- Friar Laurence's day-book; the small glass bottle; the sealed letter with "Shout to him" pencilled on the back.
+- The gate book on its chain; the searchers' book with a red seal on every line; the plank.
+- The playhouse "plot" (the board), the red thread, Will's quill (the souvenir: a trimmed goose feather, tip dark with ink).
+
+#### Portraits (new this Journey)
+- **Will:** curious, tired, delighted, amused, moved.
+- **Friar John:** flustered, ashamed, calm, relieved, sad.
+- **Balthasar:** defensive, embarrassed, sad, relieved.
+- **Lord Capulet:** jovial, offended, flustered, ashamed, sad.
+- **Friar Laurence:** calm, thoughtful, stricken, ashamed, relieved.
+- **Prince Escalus:** grave, weary, listening.
+- **Felix:** add *star-struck* (for panel 3) and *steady* (for the Prologue reading).
+
+#### Cutscene panels for the reveal (5)
+1. Lady Capulet's quiet face, turned toward her husband.
+2. The letter turned over in Friar John's hands: the pencilled back, words as live text.
+3. Balthasar sitting down at last, boots grey.
+4. Friar Laurence's hand on his own chest, eyes on the ceiling.
+5. Two hands, one in black velvet, one in blue: the moment before they meet.
+
+#### Sound
+Rain on the London window; Verona bells; three slow hammer knocks at the end of chapter 1; the scratch of Will's pen;
+a lute somewhere far off during the epilogue (recorded live, never synthesised; silent during read-aloud).
+
+---
+
+### [VERIFY] list for this Journey
+
+1. Licence for the Folger text (CC BY-NC 3.0) for this use. Every quoted line was checked word for word against the
+   Folger plain text on 7 Oct 2026; if another edition is chosen, re-check punctuation line by line.
+2. Brooke's poem covers several months (chapter 1 margin note).
+3. London playhouse closures, 1592–1594 (chapter 2 margin note); the gloss on friars travelling in pairs.
+4. Arden page reference for the play's time scheme (chapter 4 margin note).
+5. First-recorded words: *eyeball*, *swagger*, *bedazzled*, *lonely* and the plays named (chapter 3 note; x12).
+6. Folger page titles cited in the epilogue note.
+
+---
+
+## JOURNEY 4 — The Pirated Chapter
+
+*A Bizzing mystery · an Ink Journey through the Reading Door · 🪔 Katha with 📜 notes*
+
+```
+meta:
+  kind: journey · id: J4 · placed after Case 9, before Case 10
+  level: 4 (ages 10–12) · 4 suspects · 10 documents · 5 deductions · one suspect lies once (Mr Brisk: "I never open my
+         guard door"), caught by the steward's morning round (DOC J4.10)
+  world: the Mississippi, spring 1882 (the Margin skin: a pilot's chart; the board is a long river chart pinned to the
+         pilot-house wall, landings for pins, red thread for string)
+  companion: Asha Raman (rowing captain, river sense; her hands are still blistered from the Regatta eights in Case 9)
+  judge: the riverboat's captain, Captain Ezra Mott (made up)
+  badge: 🪔 Katha with 📜 notes. The visit, the boat, every suspect and every line Twain speaks on the boat are made up.
+         Every real fact is marked 📜 and sourced in a "Did you know?" note.
+  source: Mark Twain, Life on the Mississippi (1883, public domain), his letters and published notes, and standard
+          biographies. No line from any of his novels is quoted anywhere in this Journey.
+  real people: Mark Twain (Samuel Clemens) is the client, never a suspect. Every suspect is fictional.
+  skills: voice · inference · contradiction · sequence · punctuation (quoting exactly)
+  objectives touched: la6-dialect · la6-register · s7-name · la10-world · w10-meanings · li2-traits
+  vanished word: none (Journeys add no word to the Blot Ledger; it stays at UNDER THE CLOCK THAT NEVER STRIKES LIES
+                 EVERY WORD… after Case 9)
+  souvenir (shelf by the Door): a leather lead-line marker, the two-fathom tag (the fourth and last place on the shelf)
+  bonus card: fathom (all six personas)
+  hands forward: pen names, voice and quoting exactly → Case 10 (the forged deed; "Miss Delia Nove") and Case 11
+  clock: Memphis landing at noon today, where the copier steps off with the pages (moved to nine, halfway: high water).
+         The Door closes when the boat ties up.
+  impossible thing: Twain's saloon door is locked and watched all night by the watchman; the notebook never leaves his
+         stateroom; yet three nights running the pages are copied and put back out of order
+  false solution: Jem the cub pilot (end of chapter 3: a thirty-minute gap in the leadsman's calls, his bunk next door,
+         ink to the elbows, a copybook of other people's sentences; the captain will put him ashore at Memphis). Broken
+         at the start of chapter 4 by the pilot's remarks, DOC J4.9.
+  wrong theory: Miss Lark, cleared by her autograph book's dates (she boarded at Cairo, after the first copying)
+  hidden in plain sight: the cabin list's last lines, DOC J4.4: "Every stateroom has two doors: one to the saloon, one to
+         the guard." Read as boat furniture; paid off at the reveal.
+  deciding clue: the pirate copy "corrects" every dialect spelling, with the same habits as Mr Brisk's letters
+  culprit: Mr Halloway Brisk, book agent
+  documents: DOC J4.1–J4.10 (each ≤140 words, every sentence ≤22 words); interview answers are transcripts held to the
+         same limits
+  glossed words (once marked): leadsman · fathom · twain · texas (deck) · guard · cub · crossing · subscription ·
+         pirate (edition) · forecastle
+  grown-up note on the Journey card: "This Journey is set on the Mississippi in 1882, seventeen years after slavery was
+         ended in the United States. The river's earlier history, and Mark Twain's novels, include slavery. One margin
+         note says so. Nothing is shown."
+```
+
+**Writer's note on the real man.** Mark Twain is kind, curious, funny and fallible here, as the guardrails ask: he
+blames himself for the lifted hook ("sleepwalking"), and he half-suspects the wrong person and is ashamed of it. Every
+line he speaks on the boat is **made up for this visit**, and the Journey card says so. The only words of his set as 📜
+quotations are from his non-fiction and letters: the 1888 lightning-bug letter and the 1897 note, both of which the
+agency reads *after* the visit, in the office, as things he would write later.
+
+**Writer's note on the dialect.** The river speech in this Journey is the plain speech of white river men and travellers
+of the 1880s (dropped letters, "ain't", "fur", "druther"), written fresh for this Journey. It is never used for a joke
+at the speaker's expense, and no dialect associated with any one community is imitated.
+
+---
+
+### Journey card
+
+> Spring 1882. Mark Twain is back on the river he once piloted.
+> Every night, someone copies his notebook.
+> Every morning, the pages come back out of order.
+> His door is locked, and the watchman never slept.
+> At noon the boat reaches Memphis, and the copier walks off.
+> Find him, {det}.
+> Listen to how people talk.
+
+*(58 words with a six-letter name. Read aloud at the child's choice.)*
+
+**Grown-ups:** This Journey is set on the Mississippi in 1882, seventeen years after slavery was ended in the United
+States. The river's earlier history, and Mark Twain's novels, include slavery. One margin note says so. Nothing is shown.
+Mark Twain was a real person; his words on the boat are made up for this visit, and every real fact is sourced.
+
+---
+
+### Cast
+
+#### Suspects
+
+| Name | Look (one line) | Manner (one line) | Portrait expressions | Motive · Secret |
+|---|---|---|---|---|
+| **Mr Halloway Brisk**, about 40, book agent | A checked travelling coat, a perfect parting, a sample book under his arm, a flat bone folder for creasing order forms | Charming, quick, flatters everyone; his letters are flawless and he says so | jovial, calm, offended, nervous, guilty | A pirate firm pays well for pages of a famous book before it is printed, and he has the room next door to Twain's · he has not sold a single book since Christmas, and his cheerful letters to his company are full of orders that never happened (comes out at the reveal) |
+| **Miss Prudence Lark**, about 30, autograph collector | A grey travelling dress, a red leather autograph book held to her chest, a pencil behind one ear | Breathless, nervous, always somewhere near Twain's door; suspicious because she is obvious | nervous, flustered, embarrassed, relieved, joyful | She has followed him onto two boats, and the watchman saw her at his door on Thursday night · she has never once dared to speak to him; the paper she left was a letter she was too shy to hand over, and one page of her book is kept blank for him |
+| **Jem**, 16, cub pilot | Thin and sunburnt, a cap pushed back, ink to the elbows, a coil of lead line over one shoulder | Eager, talks river all day, reads anything with words on it, including the labels on the coffee | eager, worried, offended, tired, relieved | He wants to be a writer, his bunk is next to Twain's, and a pirate pays more than a cub earns in a year · he copies out sentences he loves into a copybook, to learn how they are built, and is embarrassed by it |
+| **Miss Honora Fitch**, about 55, schoolmistress | Spectacles on a chain, a black bonnet, a small notebook tied with a ribbon | Corrects everyone's grammar, gently and constantly (Quill adores her) | stern, offended, flustered, embarrassed, delighted | She says Twain's spelling is a disgrace to schoolrooms, and "a corrected edition would be a mercy" · secretly, she loves the river talk and is collecting it, spelled exactly, in a word-book for her pupils |
+
+#### Helpers and the world's own people
+
+- **Quill** — deerstalker on; holds the Door on the office side. Running joke: corrects grammar at the worst moment.
+  *This Journey:* he wants to correct the river, and for once he doesn't.
+- **Asha Raman** — the companion. Reads water like a page: where it is fast, where it is shallow, where a boat can cross.
+  Keeps a timeline on everything, including the steward's biscuits. *Her arc:* her timeline "fits" the wrong person to
+  the minute, and she learns that a gap in a timeline is a question, not a person.
+- **Mark Twain** (Samuel Clemens), 46 — the client. 📜 A real person. Reddish hair going grey, a bushy moustache, a dark
+  coat, a notebook clamped under his arm. Drawn kind, dry and curious. *All his lines on the boat are made up for this
+  visit.*
+- **Captain Ezra Mott** — the judge. Broad, grey-whiskered, a brass speaking-trumpet on a cord. Fair, loud, in a hurry.
+- **Mr Caleb Strode** — the pilot. Long, quiet, never takes his eyes off the water. Keeps the pilot-house log.
+- **Dan Keel** — the leadsman, forty years on the river. His calls come up through the mist all night. Appears in
+  Twain's notebook and as a voice.
+- **Mr Lemuel Pryce** — the steward. Keeps a morning round of every stateroom, and a tidy grudge against cinders.
+- **Mr Gus Holt** — the night watchman. Sits in the saloon facing the staterooms, a lamp at his elbow, all night.
+- **Nell, Dev, Felix, Tam, Constable Tully, Biscuit** — in the office for the epilogue.
+
+---
+
+### Chapter 1 — The scene
+
+**Opening panels (5):**
+1. **The office, the morning after the Regatta (Case 9).** Asha's hands are taped from the eights. River mist curls under
+   the painted Door, and somewhere beyond it a steam whistle blows, long and low, twice. *(Persona sign, per the child's
+   detective: the owl's shadow / the laces / the two crows / the strand of wool / the tab / the single note.)*
+   **ASHA:** "That's a riverboat. A big one. Two blasts means she's coming in to land."
+2. **Quill on the desk**, deerstalker on.
+   **QUILL:** "Find out anything. Change nothing. Bring back what you learned. And mind the clock: this one closes when
+   the boat ties up at Memphis."
+3. **Through the Door: the texas deck of the steamer *Delta Wren*, first light.** Mist on a brown river a mile wide. Two
+   tall chimneys breathe sparks, and cinders drift down like black snow. On top of everything, the glass pilot-house
+   sits like a hat. From somewhere forward, a long, sung call: *"Quarter less three!"*
+4. **Mark Twain at the rail**, a notebook clamped under one arm like a cat that wants to leave.
+   **TWAIN:** "You'll be the detective. Good. I've been robbed, and very tidily."
+5. **Twain holds up a half-burnt sheet** between two fingers.
+   **TWAIN:** "The steward found this in the stove. It's my page. Every word of it, and none of it."
+   **ASHA** *(whispering to {det})*: "How can it be his page and not his page?"
+
+*Place caption:* The steamer *Delta Wren*, Saturday, first light, somewhere above Memphis. The river is high and talks to
+itself under the paddle-boxes. Cinders tick on the deck like rain that has forgotten how to be wet.
+
+---
+
+#### DOC J4.1 · notebook page
+- **Author:** Mark Twain (📜 the man is real; this page is made up for this visit) · **Date/time:** Wednesday, the first
+  day out · **Found:** in the notebook, under Twain's hat on the washstand of stateroom 7 · **Picture:** a small
+  notebook page in a quick slanting hand, a tiny sketch of a lead weight in the margin.
+
+> [[c:wed-page|WEDNESDAY. BELOW ST. LOUIS.]] River high and brown as coffee.
+>
+> Dan Keel, leadsman. [[c:keel-40|40 yrs on the river.]] Talked with him on the forecastle.
+>
+> His words, as near exact as I can get them:
+>
+> [[c:keel-words|"I ain't never seen her this high. She's been a-risin' fur three days."]]
+>
+> [[c:keel-corn|"Ef the pilot don't mind his marks, we'll be a-settin' in a cornfield by mornin'."]]
+>
+> [[c:keel-calls|He sings the calls: mark three, quarter less three and mark twain.]]
+>
+> [[c:mem-spell|Mem.: spell it as he says it. Every dropped letter is part of the man.]]
+>
+> Mem.: ask the pilot if they still call the river "she".
+>
+> — S. L. C.
+
+---
+
+#### DOC J4.2 · log
+- **Author:** Mr Caleb Strode, pilot · **Date/time:** last night (Friday into Saturday) · **Found:** on the pilot-house
+  shelf, held open by a spare lead weight · **Picture:** a narrow ruled log, pencil, one corner damp with mist; through
+  the pilot-house glass, dark water and one far light.
+
+> PILOT-HOUSE LOG · FRIDAY NIGHT · COTTONWOOD BAR CROSSING
+>
+> [[c:log-cub|1:40 a.m. Leads going. Calls sung up to me by the cub, from the roof.]]
+>
+> 1:52 "Mark three." 2:01 "Quarter less three." 2:05 "Half twain."
+>
+> [[c:log-marktwain|2:08 "Quarter twain!" 2:10 "M-a-r-k twain!" Two fathoms, and we are over.]]
+>
+> [[c:log-lamp|2:10 A lamp on the texas guard below us, going aft. Spoils my eyes.]]
+>
+> [[c:log-leadsin|2:10 to 2:40 Deep water. Leads in. No calls.]]
+>
+> [[c:log-lamp2|2:40 The lamp again, going forward. Then dark.]]
+>
+> 2:45 Leads going for the next bar. The cub singing again.
+>
+> Mist after 4. Slowed for it.
+>
+> — C. Strode, pilot
+
+---
+
+#### DOC J4.3 · copy-sheet (half-burnt)
+- **Author:** unknown; written in block capitals · **Date/time:** unknown · **Found:** in the texas-deck stove this
+  morning, by the steward, under a heap of ash · **Picture:** a sheet of good white paper, one edge burnt brown and
+  curling, sooty thumb-marks at the corner, every letter a careful capital.
+
+> …LEADSMAN. [[c:copy-forty|FORTY YEARS ON THE RIVER.]]
+>
+> HIS WORDS:
+>
+> [[c:copy-never|"I HAVE NEVER SEEN HER THIS HIGH. SHE HAS BEEN RISING FOR THREE DAYS."]]
+>
+> [[c:copy-shall|"IF THE PILOT DOES NOT MIND HIS MARKS, WE SHALL BE SITTING IN A CORNFIELD BY MORNING."]]
+>
+> [[c:copy-comma|HE SINGS THE CALLS: MARK THREE, QUARTER LESS THREE, AND MARK TWAIN.]]
+>
+> [[c:copy-batch|BATCH THREE. FOR THE PRINTER AT MEMPH…]]
+>
+> *(The rest is ash.)*
+
+*(Asha, holding the two pages side by side: "It's the same page. But the man's gone out of it.")*
+
+---
+
+#### DOC J4.4 · list
+- **Author:** the purser · **Date/time:** made up at St. Louis on Wednesday; added to at Cairo · **Found:** framed on
+  the saloon wall by the purser's office · **Picture:** a printed form filled in by hand, two decks drawn as long boxes,
+  a little brass frame with a cinder caught in its corner.
+
+> CABIN LIST · STEAMER DELTA WREN · ST. LOUIS TO NEW ORLEANS
+>
+> Texas deck (officers, and guests of the Captain):
+>
+> No. 7. Mr S. L. Clemens ("Mark Twain"), to New Orleans.
+>
+> [[c:no8|No. 8. Mr H. Brisk, book agent, to Memphis. Asked for the room next to Mr Clemens.]]
+>
+> [[c:no9|No. 9. Jem, cub pilot (bunk).]]
+>
+> Boiler deck (passengers):
+>
+> No. 14. Miss H. Fitch, schoolmistress, to New Orleans.
+>
+> No. 21. Miss P. Lark, to Memphis.
+>
+> Saloon watchman, all night: Mr G. Holt.
+>
+> [[c:twodoors|Every stateroom has two doors: one to the saloon, one to the guard.]]
+>
+> Kindly keep guard doors hooked at night.
+
+*(The last two lines are the clue hidden in plain sight. They read like the small print on any boat. The child can mark
+them, and they are re-read at the reveal. "Guard" is glossed when marked: the narrow outside walkway round a deck.)*
+
+---
+
+#### DOC J4.5 · note
+- **Author:** Mark Twain (made up for this visit) · **Date/time:** this morning · **Found:** handed to {det} at the rail,
+  folded small · **Picture:** a half-sheet of hotel paper, the ink a little smudged by mist.
+
+> To the detective from the other side of the page:
+>
+> Three nights running, somebody has copied my notebook.
+>
+> [[c:locked|I lock my saloon door at ten. The watchman sits facing it till dawn.]]
+>
+> [[c:hat|The notebook never leaves my stateroom. It sleeps on the washstand, under my hat.]]
+>
+> [[c:outoforder|Each morning the pages are back, a little out of order.]]
+>
+> [[c:first-dawn|I first saw it on Thursday at dawn, before we touched Cairo.]]
+>
+> A pirate printer pays well for a book before its author can print it.
+>
+> [[c:memphis-noon|We tie up at Memphis at noon today. The copier will walk off with my pages.]]
+>
+> Find me the copier. And find out how, so it never happens again.
+>
+> — S. L. Clemens, who writes as Mark Twain
+
+---
+
+#### Did you know? *(margin note, chapter 1)* 📜
+- **Mark Twain was a river pilot before he was a writer.** As a young man, Samuel Clemens trained as a "cub" and became a
+  licensed Mississippi pilot in 1859. He piloted until 1861, when the Civil War stopped the river trade.
+- **In the spring of 1882 he went back**, travelling down the river from St. Louis to New Orleans and up again, filling
+  notebooks for a new book. It came out in 1883 as *Life on the Mississippi*. He even tried to travel under a made-up
+  name, so that nobody would know him. It did not work for long.
+- **The boat in this Journey is made up.** Twain really went south on a steamer called the *Gold Dust*.
+- *Sources:* Mark Twain, *Life on the Mississippi* (1883), chapters 4–21 (learning to pilot) and chapter 22 (the return,
+  and the made-up name); Frederick Anderson, Lin Salamo and Bernard L. Stein (eds), *Mark Twain's Notebooks & Journals,
+  Volume II (1877–1883)* (University of California Press, 1975), the 1882 river notebooks; Ron Powers, *Mark Twain: A
+  Life* (Free Press, 2005). [VERIFY: the licence date (April 1859); the chapter for the assumed name; the *Gold Dust* as
+  the boat south from St. Louis.]
+
+---
+
+**Chapter-end hook.** *(Twain lifts his hat off the washstand to show {det} the notebook. Underneath, the notebook lies
+square and neat. On top of it lies a single black cinder, still faintly warm. Twain's room has no stove.)*
+**ASHA:** "Cinders fall outside, on the deck. So how did one get in *here*?"
+
+---
+
+### Chapter 2 — Interviews
+
+*Every answer arrives as a page torn from a pilot's chart. Lines marked 📜 are real facts, sourced in the margin; every
+word anyone speaks on the boat is made up for this visit. Questions marked ◆ appear only after the child has read the
+document named.*
+
+**New documents this chapter:** DOC J4.6 (Miss Lark's autograph book), DOC J4.7 (Miss Fitch's word-book) and DOC J4.8
+(Mr Brisk's letter-book), each unlocked by an interview question.
+
+---
+
+#### DOC J4.6 · autograph book
+- **Author:** Miss Prudence Lark · **Date/time:** this week · **Found:** handed over by Miss Lark (Q2, below), still warm
+  from being held · **Picture:** a red leather book open on two pages: scrawled signatures, a pressed violet, one page
+  quite empty.
+
+> AUTOGRAPHS · PRUDENCE LARK · SPRING 1882
+>
+> [[c:lark-missed|Wednesday, St. Louis wharf. Missed the Delta Wren by twenty minutes!]]
+>
+> Took the train south, to meet her at Cairo. Signed: the ticket clerk, "to prove you were here".
+>
+> [[c:lark-cairo|Thursday, 8 o'clock, Cairo landing. Boarded at last. Signed: the mate, very muddy.]]
+>
+> [[c:lark-door|Thursday night. His door. I could not knock. I left my letter instead.]]
+>
+> Friday. Signed: the cook; the pilot, Mr Strode; and the cub, "Jem — Mark three!"
+>
+> [[c:lark-blank|One page saved for him. Still blank.]]
+
+---
+
+#### DOC J4.7 · word-book
+- **Author:** Miss Honora Fitch · **Date/time:** this week · **Found:** in Miss Fitch's reticule, tied with a ribbon
+  (Q4, below) · **Picture:** a small notebook in a schoolroom hand, neat columns, a pressed cottonwood leaf.
+
+> RIVER WORDS, FOR MY PUPILS AT HOME · H. F.
+>
+> [[c:fitch-keep|Keep the spelling! It is how they say it.]]
+>
+> "A-goin'" — going. (A deckhand, Wednesday.)
+>
+> [[c:fitch-druther|"I'd druther" — I would rather. (The cook, Thursday.)]]
+>
+> "Snag" — a dead tree in the river, waiting for a boat.
+>
+> "Mark twain" — two fathoms. Twelve feet. Safe, just.
+>
+> [[c:fitch-3|Wednesday 3 new words, Thursday 5, Friday 9!]]
+>
+> [[c:fitch-never|I have not corrected one of them. Mother would faint.]]
+
+---
+
+#### DOC J4.8 · letter-book
+- **Author:** Mr Halloway Brisk · **Date/time:** Friday · **Found:** a page from his copying-book, offered by Mr Brisk
+  himself (Q4, below), "as a sample of a proper letter" · **Picture:** a page of thin copying-paper, the writing a little
+  blurred, as copies were then; a perfect, looping signature.
+
+> COPY · To the Lakeshore Subscription Company, Chicago
+>
+> Steamer Delta Wren, Friday
+>
+> Gentlemen,
+>
+> I write from the river, in the best of spirits.
+>
+> [[c:brisk-forty|I have called at forty houses this spring, and every family was charmed.]]
+>
+> [[c:brisk-comma|I carry the atlas, the almanac, and the family doctor-book.]]
+>
+> [[c:brisk-quote|One farmer told me he "has never seen" so fine a parlor book.]] Those were his very words.
+>
+> [[c:brisk-shall|By Memphis I shall have something very special for you.]]
+>
+> I trust the usual terms.
+>
+> Your obedient servant,
+>
+> H. Brisk
+
+---
+
+#### SUSPECT Mr Halloway Brisk
+*Interviewed in the saloon at breakfast. Long white tablecloths, silver coffee pots that rattle with the engines. Mr Brisk
+has a sample book open beside his eggs and is creasing order forms with a flat bone folder.*
+
+##### Q1 · what · "What do you do?"
+Expression: jovial
+> I sell books by subscription, door to door. [[c:brisk-agent|A family signs my order book and pays a little at a time.]] The finest atlases in the West, and the handsomest almanacs.
+
+##### Q2 · why · "Why did you ask for the room next to Mr Twain's?"
+Expression: jovial
+> To sell him an atlas, of course! A famous author needs to know where he is going. I have not managed it yet. He keeps changing the subject.
+
+##### Q3 · where · "Where were you last night?"
+Expression: calm
+> Asleep by ten, and slept like a stone. [[c:brisk-lie|I never open my guard door. The night air is bad for my chest.]]
+
+##### Q4 · what · "Do you keep copies of your letters?"
+Expression: jovial
+> Every one, in my copying-book. Here, a sample. *(He tears a page out with a flourish.)* [[c:brisk-flawless|My letters are flawless, if I say so myself. Nobody has ever found a mistake in one.]]
+
+##### Q5 · who · "Who do you think is copying the notebook?"
+Expression: calm
+> Not for me to say. Though the cub has ink to the elbows, poor lad. And that Lark woman haunts his door like a ghost in a bonnet.
+
+##### Q6 · what · "What do you make of this copy?" ◆ after DOC J4.3
+Expression: jovial
+> [[c:brisk-tidied|Beautifully done! Somebody has tidied up Mr Twain's grammar. A kindness, really.]] Who wants to read "ain't" in a book?
+
+*(Quill, through the keyhole, very quietly: "Write down exactly what he said. Not what you think he meant.")*
+
+---
+
+#### SUSPECT Miss Prudence Lark
+*Interviewed on the boiler deck, by the rail. She holds her red autograph book to her chest with both arms. Every time a
+door opens on the texas deck above, she looks up.*
+
+##### Q1 · why · "Why are you following Mr Twain?"
+Expression: nervous
+> Following? I... collect. Autographs. I have followed him onto two boats. That sounds worse when I say it out loud.
+
+##### Q2 · when · "When did you come aboard?"
+Expression: flustered
+> At Cairo. I think. I never remember hours when I'm nervous. Ask my book; my book remembers everything. *(She holds it out: DOC J4.6.)*
+
+##### Q3 · what · "The watchman saw you at Mr Twain's door on Thursday night. What were you doing?"
+Expression: flustered
+> Nothing! [[c:lark-letter|I slid a letter under his door. My own letter, not a page of his.]] I asked him to sign my book. I did not sign my name. I was too shy.
+
+##### Q4 · where · "Where were you last night at two o'clock?"
+Expression: embarrassed
+> In my cabin, awake, writing him another letter I shall never send. Nobody saw me. I suppose that's bad.
+
+##### Q5 · who · "Who do you think is doing it?"
+Expression: nervous
+> [[c:lark-love|Someone who doesn't love his writing. If you loved it, you could never bear to change a word.]]
+
+---
+
+#### SUSPECT Jem
+*Interviewed on the hurricane roof beside the pilot-house, coiling a wet lead line. His voice is hoarse from singing calls
+all night. He is so tired he keeps yawning in the middle of words.*
+
+##### Q1 · what · "What do you do on the boat?"
+Expression: eager
+> Cub pilot. I learn the river, every bar and every bend. [[c:jem-sing|At a crossing, I sing the leadsman's calls up to Mr Strode.]] Dan calls them from the bow, and I pass them up.
+
+##### Q2 · why · "Why is there ink on your fingers?"
+Expression: worried
+> I write. Stories, mostly bad. [[c:jem-copybook|I copy out sentences I love, to learn how they're made. Then I try my own.]] Please don't tell the mate.
+
+##### Q3 · where · "Where do you sleep?"
+Expression: tired
+> Bunk No. 9, on the texas, next to Mr Twain. I'm hardly ever in it at night. A cub sleeps when the river lets him.
+
+##### Q4 · how · "How would you write down what Dan says?"
+Expression: eager
+> [[c:jem-river|"Quarter less three! She's a-shoalin'!" I write it the way he sings it. Anything else would be a lie.]]
+
+##### Q5 · when · "Where were you at two o'clock last night?"
+Expression: tired
+> Up top. The crossing, then the bend after. [[c:jem-minutes|I don't know the minutes. I know the water.]] Ask Mr Strode.
+
+##### Q6 · why · "Would you sell Mr Twain's pages?"
+Expression: offended
+> Sell them? I'd give a year's pay just to read them. That's not the same thing at all.
+
+---
+
+#### SUSPECT Miss Honora Fitch
+*Interviewed in the ladies' cabin, which is all mirrors and red plush and smells of lavender water. The engines thud under
+the floor. Miss Fitch sits very straight.*
+
+##### Q1 · who · "Can we ask you some questions?"
+Expression: stern
+> *May* we, dear. Yes, you may. *(Through the keyhole, Quill sighs with happiness.)*
+
+##### Q2 · what · "What do you think of Mr Twain's books?"
+Expression: offended
+> Dreadful spelling! On purpose! [[c:fitch-motive|A corrected edition would be a mercy to every schoolroom in America.]]
+
+##### Q3 · where · "Where were you last night?"
+Expression: stern
+> In No. 14, on the boiler deck, with the engines under me like a bad-tempered dragon. I did not sleep, and nobody came to say goodnight.
+
+##### Q4 · what · "What's in your little book?"
+Expression: flustered
+> Nothing. Words. *(She tries to put it away, and the ribbon comes undone: DOC J4.7.)*
+
+##### Q5 · why · "Why do you keep the spellings?" ◆ after DOC J4.7
+Expression: embarrassed
+> Because... they're beautiful. Because "I'd druther" says something "I would rather" never can. Don't tell the school board.
+
+---
+
+#### WITNESS Mark Twain
+*Interviewed at the rail of the texas deck, with the river going by. All his lines are made up for this visit.*
+
+##### Q1 · why · "Why do you spell Dan Keel's words that way?"
+Expression: amused
+> Because that's how he says them. [[c:twain-voice|A man's voice lives in his spelling. Tidy it up, and you've tidied him away.]]
+
+##### Q2 · how · "Was your guard door hooked?"
+Expression: puzzled
+> Every night. [[c:twain-hook|And three mornings running, the hook was up. I thought I'd done it myself, half asleep.]] I'm told I sleepwalk.
+
+##### Q3 · who · "Do you suspect anyone?"
+Expression: ashamed
+> I suspected the lady who haunts my door. Then I read her letter. It asked for my autograph, and it was the kindest letter I've had all year. I'm ashamed of myself.
+
+##### Q4 · what · "Why does a pirate copy matter?"
+Expression: grave
+> A pirate prints my book cheap, before I can print it at all. Every copy he sells is one of mine nobody buys. I've had it done to me before.
+
+---
+
+#### Did you know? *(margin note, chapter 2)* 📜
+- **Book agents** really did sell books door to door in Twain's time. Many of his books were sold "by subscription": an
+  agent carried a sample, and families signed up and paid for the book when it came.
+- **Pirate editions** were a real problem for him. Before the United States signed an international copyright law in
+  1891, a printer in another country could copy a book and sell it cheaply. A cheap Canadian edition of one of his
+  books, printed in Toronto, cut into his sales in America. He fought piracy all his life.
+- *Sources:* Ron Powers, *Mark Twain: A Life* (2005); Hamlin Hill, *Mark Twain and Elisha Bliss* (University of Missouri
+  Press, 1964), on subscription publishing; the International Copyright Act of 1891 (the Chace Act). [VERIFY: the
+  Belford Brothers' Toronto edition of *The Adventures of Tom Sawyer*, 1876, as the example, before naming it on screen.]
+
+---
+
+**Chapter-end hook.** *(The child turns to go. Mr Brisk calls after them, smiling over his coffee.)*
+**MR BRISK:** "Do give my regards to the cub. Poor boy. Ink to the elbows."
+*(Asha stops on the stair.)*
+**ASHA:** "We never told him we'd seen Jem's hands."
+
+---
+
+### Chapter 3 — The board
+
+*The board is a long river chart pinned along the back wall of the pilot-house: landings for pins, red thread for
+string, and the brown river drawn in pencil, bar by bar. Below the glass, the real river goes by, faster than it did an
+hour ago.*
+
+**Board intro**
+- **ASHA:** "Right. Times." *(She unrolls her own timeline beside the chart, in her rowing-club pencil.)*
+- **QUILL** *(through the keyhole, faint, with the smell of river mist)*: "And voices. You have two pages of the same man.
+  Listen to them."
+
+**The escalation (mid-chapter).** Captain Mott comes up the pilot-house stairs two at a time, speaking-trumpet swinging.
+**CAPTAIN MOTT:** "High water's carrying us. We'll make Memphis by nine, not noon."
+*(The painted clock on the chart's corner jumps. Twain, at the door, takes out his watch and looks at it as if it had
+been rude to him.)*
+**TWAIN:** "Three hours stolen. Our copier's luck is better than mine."
+
+**The false solution (by the end of the chapter).** Asha pins her timeline across the chart.
+**ASHA:** "The lamp goes along the guard at 2:10. The calls stop at 2:10. The lamp comes back at 2:40, and the calls start
+again at 2:45. Jem's bunk is No. 9, right next door. Ink to the elbows. A copybook full of other people's sentences.
+It fits to the *minute*."
+**CAPTAIN MOTT:** "Then the boy goes ashore at Memphis, trunk and all."
+*(Up on the roof, Jem is singing the calls for the next bar. His voice cracks on "twain". Nobody laughs.)*
+
+*(The board lets the child pin Asha's links: [c:log-leadsin] to [c:log-lamp], [c:no9] to [c:jem-copybook]. They stick,
+glowing faintly. Nothing stops the child agreeing with Asha. Chapter 4 breaks it.)*
+
+#### DEDUCTIONS
+
+**D1 · voice (the copier did not understand)**
+- *Statement the child forms:* "The copy changes every dropped letter into 'proper' spelling. 'I ain't never seen her'
+  becomes 'I have never seen her'. The copier did not understand that the spelling *is* the voice. So the copier is
+  someone who writes 'properly' and changes other people's words."
+- *Supporting spans:* [c:keel-words] "\"I ain't never seen her this high. She's been a-risin' fur three days.\"" ·
+  [c:copy-never] "\"I HAVE NEVER SEEN HER THIS HIGH. SHE HAS BEEN RISING FOR THREE DAYS.\"" · [c:mem-spell] "Mem.: spell
+  it as he says it. Every dropped letter is part of the man." · [c:twain-voice] *(also accepted: [c:keel-corn] with
+  [c:copy-shall]; [c:jem-river] and [c:fitch-keep] as the clearing half)*
+- *Minimum link:* [c:keel-words] + [c:copy-never]
+- *Why it matters:* this narrows the field. Jem writes river talk "the way he sings it". Miss Fitch's word-book says "Keep
+  the spelling!" Neither of them would have tidied Dan Keel away.
+
+**D2 · voice (one writer: the deciding clue)**
+- *Statement the child forms:* "The copy and Mr Brisk's letter share three habits. Both write 'shall'. Both spell numbers
+  out in words, even where Twain wrote '40 yrs'. Both put a comma before the last 'and' in a list. And both 'correct'
+  words inside quotation marks. One writer."
+- *Supporting spans:* [c:copy-shall] "WE SHALL BE SITTING" · [c:brisk-shall] "By Memphis I shall have something very
+  special for you." · [c:copy-forty] "FORTY YEARS ON THE RIVER." · [c:brisk-forty] "I have called at forty houses this
+  spring" · [c:copy-comma] "QUARTER LESS THREE, AND MARK TWAIN." · [c:brisk-comma] "the almanac, and the family
+  doctor-book." · [c:brisk-quote] "\"has never seen\"" *(also accepted: [c:keel-40] as the contrast; [c:brisk-tidied])*
+- *Minimum link:* two matched pairs: [c:copy-shall] + [c:brisk-shall], and [c:copy-forty] + [c:brisk-forty]
+- *Board check:* if the child pins only one pair, the thread glows half-red and Quill asks: "One habit, or a voice? Lots
+  of people write 'shall'. Find a second."
+- *Why it matters:* the copy is in block capitals, so the handwriting hides the writer. The *voice* does not hide. Three
+  word-habits are a fingerprint made of words.
+
+**D3 · timeline and contradiction (Jem was working; started in chapter 3, finished in chapter 4)**
+- *Statement the child forms:* "Jem sang every call up to the pilot, before 2:10 and after 2:45. In the quiet half hour
+  between, there were no calls because the water was deep, and the pilot says Jem had the wheel with him. Jem was
+  working, not copying."
+- *Supporting spans:* [c:log-cub] "Calls sung up to me by the cub, from the roof." · [c:log-leadsin] "2:10 to 2:40 Deep
+  water. Leads in. No calls." · [c:watch-wheel] (DOC J4.9) · [c:watch-never] (DOC J4.9) · [c:jem-sing] *(also accepted:
+  [c:log-marktwain], [c:watch-lamp], [c:jem-minutes])*
+- *Minimum link:* [c:log-leadsin] + [c:watch-wheel]
+- *Board note:* in chapter 3 only [c:log-cub] and [c:log-leadsin] can be pinned, and the slot stays half-lit: "No calls.
+  So where was the caller?" It completes when DOC J4.9 arrives.
+- *Why it matters:* a gap in a log is a question, not an answer. Asha's timeline was right about the minutes and wrong
+  about the person.
+
+**D4 · inference (how: the impossible thing)**
+- *Statement the child forms:* "Nobody came past the watchman, because nobody used the saloon door. Every stateroom has a
+  second door, onto the guard outside. A lamp went along the guard at 2:10 and came back at 2:40. Twain's guard-door hook
+  was up three mornings running, and a cinder from the deck was on his notebook. The copier came and went by the guard."
+- *Supporting spans:* [c:twodoors] "Every stateroom has two doors: one to the saloon, one to the guard." · [c:locked] "I
+  lock my saloon door at ten. The watchman sits facing it till dawn." · [c:log-lamp] "2:10 A lamp on the texas guard
+  below us, going aft." · [c:log-lamp2] "2:40 The lamp again, going forward." · [c:twain-hook] "And three mornings
+  running, the hook was up." *(also accepted: [c:outoforder], [c:stew-no7], [c:stew-thu])*
+- *Minimum link:* [c:twodoors] + [c:twain-hook] (or [c:locked] + [c:log-lamp])
+- *Why it matters:* the locked door was never the way in. Everyone watched the front of the room. The thief used the
+  back.
+
+**D5 · contradiction (the one lie; finished in chapter 4)**
+- *Statement the child forms:* "Mr Brisk says he never opens his guard door. The steward found his guard door unhooked
+  and swinging, with wet cinders on the mat, three mornings running."
+- *Supporting spans:* [c:brisk-lie] "I never open my guard door. The night air is bad for my chest." · [c:stew-thu]
+  (DOC J4.10) · [c:stew-sat] (DOC J4.10) · [c:no8] "Asked for the room next to Mr Clemens."
+- *Minimum link:* [c:brisk-lie] + [c:stew-thu]
+- *Why it matters:* this is the one lie in the Journey. It is checkable, and the record does not agree with it.
+
+#### RED HERRINGS AND WRONG THEORIES
+
+**Jem** *(the false solution; Asha's timeline and the captain's trunk)* — the 2:10–2:40 gap, bunk No. 9 next door, ink to
+the elbows, a copybook of other people's sentences, a writer's dream and a cub's pay.
+- *Cleared in chapter 4 by:* [c:watch-wheel] + [c:watch-never] (he had the wheel all through the gap) and [c:log-cub]
+  (he sang every call either side of it). D1 clears him too: [c:jem-river] "I write it the way he sings it."
+- *His secret, told kindly:* [c:jem-copybook]. Copying sentences you love, to learn how they're built, is how a great
+  many writers learned. It is not the same as stealing a book.
+
+**Miss Lark** *(a wrong theory; Twain's own first suspicion, and Brisk's "ghost in a bonnet")* — she followed Twain onto
+two boats, the watchman saw her at his door on Thursday night, and nobody saw her last night.
+- *Cleared by:* [c:first-dawn] "I first saw it on Thursday at dawn, before we touched Cairo." + [c:lark-cairo]
+  "Thursday, 8 o'clock, Cairo landing. Boarded at last." The first pages were copied before she was on the boat. (Also:
+  [c:lark-missed].)
+- *Her secret, told kindly:* [c:lark-letter] and [c:lark-blank]. She was too shy to ask.
+
+**Miss Fitch** *(a red herring; motive in her own words)* — "A corrected edition would be a mercy."
+- *Cleared by:* [c:fitch-keep] "Keep the spelling! It is how they say it." + [c:fitch-never] "I have not corrected one of
+  them." And her voice is not the copy's: she writes numbers as figures ([c:fitch-3] "Wednesday 3 new words").
+- *Her secret, told kindly:* she disapproves of the spelling in public and collects it in private, for her pupils.
+
+**"Mr Twain moved the pages himself, sleepwalking"** *(a wrong theory; Twain's own joke)* — he says he sleepwalks, and
+the hook was up.
+- *Cleared by:* [c:copy-never] and [c:copy-batch]. A sleepwalker does not write out a corrected copy for a printer.
+
+#### Wrong-link hints (Quill, through the keyhole)
+- If the child links [c:lark-door] to [c:outoforder]: "Thursday night is one night. When did Mr Twain *first* find his
+  pages out of order?"
+- If the child links [c:fitch-motive] to [c:copy-never] as proof: "She *says* she'd like a corrected edition. What does
+  her own book *do*?"
+- If the child links [c:no9] to [c:log-lamp]: "Next door to Mr Twain on one side is No. 9. What's on the other side?"
+- If the child links [c:jem-copybook] to [c:copy-batch]: "One copies sentences to learn. One copies pages for a printer.
+  Same word. Same thing?"
+
+---
+
+#### Did you know? *(margin note, chapter 3)* 📜 *Words of the river*
+- **Fathom** comes from the Old English *fæþm*, the span of a man's two arms held out wide. A fathom is six feet: about
+  as far as a grown-up's arms can stretch.
+- **Twain** is an old English word for *two*, from Old English *twegen*. "Cut in twain" means cut in two.
+- **Mark twain** was the leadsman's call for **two fathoms**, twelve feet of water. On the river that was just deep enough
+  for a steamboat to pass safely.
+- **Texas deck**: the deck of the officers' cabins, under the pilot-house. The cabins on river steamboats were often named
+  after states, and the officers' cabins, the biggest, were called "the texas".
+- *Sources:* *Oxford English Dictionary*, "fathom", "twain", "texas"; Merriam-Webster, "fathom", "twain", "texas";
+  Mark Twain, *Life on the Mississippi* (1883), on the leadsmen's calls. [VERIFY: the chapter of *Life on the
+  Mississippi* with the calls; the "named after states" explanation for *texas* against the OED, which may call it
+  uncertain.]
+
+---
+
+**Chapter-end hook.** *(The captain's speaking-trumpet sounds through the boat: "Mr Strode! You'll want to see this. I'm
+putting the cub ashore at Memphis." The pilot-house door bangs open. Mr Strode stands in it, holding his log, and for the
+first time all morning he is not looking at the water.)*
+**MR STRODE:** "No, Captain. You're not."
+
+---
+
+### Chapter 4 — The timeline
+
+*The washing line is a lead line, strung along the texas guard, its leather and cloth marks for pegs. The time-words are
+the river's: **Wednesday, Thursday at dawn, at Cairo, Thursday night, at the crossing, 2:10, 2:40, Saturday at six.***
+
+**New documents this chapter:** DOC J4.9 (the pilot's remarks) and DOC J4.10 (the steward's morning round). Together
+they break the false solution, and catch the lie.
+
+---
+
+#### DOC J4.9 · remarks
+- **Author:** Mr Caleb Strode, pilot · **Date/time:** Saturday, 7 a.m. · **Found:** on the back page of the pilot-house
+  log, written this morning, handed to the captain in front of everyone · **Picture:** the log turned over, a page of
+  hard, upright pencil, pressed so deep it shines.
+
+> REMARKS FOR THE CAPTAIN · C. STRODE, PILOT
+>
+> I hear you mean to put the cub ashore. You are wrong, sir, and I will say why.
+>
+> [[c:watch-wheel|From 2:10 to 2:40 the cub had the wheel, with me at his elbow, learning the bend below the bar.]]
+>
+> [[c:watch-never|He never left the pilot-house. Not for one minute.]]
+>
+> Deep water there, so no calls. That is why the log is quiet.
+>
+> [[c:watch-lamp|It was the cub who saw the lamp on the guard and told me. His eyes are better than mine.]]
+>
+> A boy who reads the water like that is no thief.
+>
+> — C. Strode
+
+**Breaking the false solution.** Asha reads the remarks twice. Then she takes her timeline off the chart and turns it
+over, so the gap shows on the back.
+- **ASHA:** "No calls didn't mean no Jem. It meant deep water." *(She looks at her own pencil.)* "I filled a gap with a
+  person."
+- **{det}:** *(chooses one of three, all fine)* "A gap is a question." / "The log is quiet because the river was deep." /
+  "So who carried the lamp?"
+- **QUILL** *(through the keyhole)*: "Better a question than the wrong answer. Write that down too."
+- *(Up top, Jem goes on singing calls. Captain Mott looks at the roof for a long moment, and puts the trunk-ticket back
+  in his pocket.)*
+
+---
+
+#### DOC J4.10 · log
+- **Author:** Mr Lemuel Pryce, steward · **Date/time:** Thursday to Saturday · **Found:** on a clipboard hung inside the
+  pantry door · **Picture:** a list of stateroom numbers down the side, three columns of ticks and small, cross notes;
+  a cinder ground into the paper.
+
+> STEWARD'S MORNING ROUND · TEXAS DECK
+>
+> [[c:stew-thu|Thursday, 6 a.m. No. 8: guard door unhooked and swinging. Wet cinders on the mat.]]
+>
+> Friday, 6 a.m. No. 8: the same. Ink bottle empty again. Left a fresh one.
+>
+> [[c:stew-sat|Saturday, 6 a.m. No. 8: guard door unhooked again. Cinders. Two candles burnt right down.]]
+>
+> [[c:stew-no7|No. 7, Mr Clemens: guard-door hook found up, three mornings. He says he must be sleepwalking.]]
+>
+> No. 9, the cub: bunk not slept in, Friday. Pilot says he was up top all night.
+>
+> Miss Fitch asks again for a quieter cabin. Miss Lark asks again which is Mr Clemens's door.
+
+*(Asha, very quietly: "An ink bottle a night. Who needs an ink bottle a night?")*
+
+---
+
+#### EVENTS (true order)
+
+| # | Day and time | Event | Time-word span | Placed by child |
+|---|---|---|---|---|
+| 1 | Wednesday, morning | Miss Lark misses the boat at St. Louis | [c:lark-missed] "Wednesday, St. Louis wharf." | ★ |
+| 2 | Wednesday | Twain writes down Dan Keel's words | [c:wed-page] "WEDNESDAY. BELOW ST. LOUIS." | ★ |
+| 3 | Wednesday night | *(the first copying: no time word)* | — | no (the Spindle's slot; pegged for you once found) |
+| 4 | Thursday, dawn | Twain first finds his pages out of order | [c:first-dawn] "on Thursday at dawn, before we touched Cairo" | ★ |
+| 5 | Thursday, 6 a.m. | The steward finds No. 8's guard door swinging | [c:stew-thu] "Thursday, 6 a.m." | ★ (join with 4) |
+| 6 | Thursday, 8 o'clock | Miss Lark boards at Cairo | [c:lark-cairo] "Thursday, 8 o'clock, Cairo landing." | ★ |
+| 7 | Thursday night | Miss Lark leaves her letter at Twain's saloon door | [c:lark-door] "Thursday night." | ★ |
+| 8 | Friday, 1:40 a.m. | Leads going; Jem singing the calls | [c:log-cub] "1:40 a.m." | no (pegged for you) |
+| 9 | Friday, 2:10 a.m. | "Mark twain!" The lamp goes aft along the guard | [c:log-marktwain] · [c:log-lamp] "2:10" | ★ |
+| 10 | 2:10 to 2:40 | Jem at the wheel with the pilot | [c:watch-wheel] "From 2:10 to 2:40" | ★ (join with 9) |
+| 11 | 2:40 | The lamp comes back along the guard | [c:log-lamp2] "2:40" | ★ |
+| 12 | Saturday, 6 a.m. | No. 8 unhooked again; two candles burnt down | [c:stew-sat] "Saturday, 6 a.m." | ★ |
+| 13 | Saturday, first light | The half-burnt copy is found in the stove | *(no time word; Panel 5)* | no (pegged for you) |
+| 14 | Saturday, by nine | Memphis | the captain: "by nine, not noon" | no |
+
+**Timeline joins.** Two documents by two people meet twice: Twain's "Thursday at dawn" and the steward's "Thursday, 6
+a.m." meet on **Thursday morning**, both finding something wrong on the texas deck; the pilot's "2:10 A lamp" and his
+remarks' "From 2:10 to 2:40" meet at **2:10**, and at that moment Jem has his hands on the wheel. The child pegs each
+pair side by side.
+
+**The line's little shake:** if the child pegs Miss Lark boarding (6) before the first finding (4), the line wobbles and
+Quill says: "Read Mr Twain's note again. *Before* we touched Cairo, or after?" If the child pegs the lamp's return (11)
+before 2:10: "Can a lamp come back before it has gone?"
+
+**Signe's slot, Thea's gap** *(Knack hooks; see the persona table)*: between card 2 and card 4 is the one slot where a
+missing event must go. The Spindle marks the slot; it never says what happened in it.
+
+---
+
+#### Did you know? *(margin note, chapter 4)* 📜 *The right word*
+- Six years after this trip, in 1888, Mark Twain wrote to a man collecting advice from authors. He said the difference
+  between "the almost right word & the right word" is like "the difference between the lightning-bug & the lightning".
+- People often quote it a little wrong. Look up the real letter, and you will see why that matters.
+- *Sources:* George Bainton (ed.), *The Art of Authorship* (London, 1890), pp. 87–88, printing Twain's letter of 15
+  October 1888; Fred R. Shapiro (ed.), *The Yale Book of Quotations* (Yale University Press, 2006), "Mark Twain".
+  [VERIFY: exact wording, punctuation and ampersands of the printed letter, and the page numbers.]
+
+---
+
+**Chapter-end hook.** *(Two long blasts of the whistle. Out of the mist, the bluffs of Memphis rise on the left bank, and
+the roofs, and the smoke of the wharf. Captain Mott's trumpet sounds through the boat: "All passengers for Memphis, to the
+saloon. Nobody steps off this boat till I say so." On the texas deck, the guard door of No. 8 swings gently in the wind,
+open.)*
+
+---
+
+### Chapter 5 — The accusation
+
+*The saloon, as the boat swings in to land. Long white tables, chandeliers chiming with the engines, the Memphis wharf
+sliding past the windows. Captain Mott at the head of the room; Twain leaning on a pillar; Mr Brisk with his sample book
+and his trunk; Miss Lark with her autograph book; Miss Fitch, very straight; Jem in the doorway with his cap in his
+hands; Mr Strode; Mr Pryce with his clipboard; Mr Holt the watchman, yawning; Asha and {det}. The Knack is greyed out.
+{det} accuses alone.*
+
+**CAPTAIN MOTT:** "You've got till that rope goes round the post. Who copied Mr Clemens's notebook, and how?"
+
+**CULPRIT:** **Mr Halloway Brisk**, book agent, of stateroom 8. Three nights running, he went out of his own guard door,
+along the texas guard, lifted Twain's guard-door hook with his flat bone folder, took the pages from under the hat,
+copied them by candle in his own room, and put them back before dawn. He wrote the copy in block capitals to hide his
+hand, and "corrected" it as he went, because that is how he writes.
+
+**MINIMAL EVIDENCE SET (pin three):**
+1. **D1** — [c:keel-words] + [c:copy-never]: the copier corrected the voice out of the page.
+2. **D2** — [c:copy-shall] + [c:brisk-shall], [c:copy-forty] + [c:brisk-forty]: the copy and Brisk's letter are one
+   writer.
+3. **D3** — [c:log-leadsin] + [c:watch-wheel]: Jem was at the wheel through the gap.
+
+*(Also accepted in any slot: D4, [c:twodoors] + [c:twain-hook]; D5, [c:brisk-lie] + [c:stew-thu]; [c:brisk-tidied].)*
+
+**WRONG-SUSPECT RESPONSES (Quill, through the keyhole)**
+- **Jem:** "Where was Jem from 2:10 to 2:40? Read the pilot's remarks. And how does Jem write down Dan Keel?" *(points to
+  [c:watch-wheel] and [c:jem-river])*
+- **Miss Lark:** "When did Mr Twain first find his pages out of order? And when did Miss Lark come aboard?" *(points to
+  [c:first-dawn] and [c:lark-cairo])*
+- **Miss Fitch:** "She *says* she wants a corrected edition. What does her own word-book say on its first line?" *(points
+  to [c:fitch-keep])*
+
+**WRONG-THEORY RESPONSE, "Mr Twain did it himself, sleepwalking" (Quill):** "Then who wrote a corrected copy, in
+capitals, for a printer at Memphis?" *(points to [c:copy-batch])*
+
+**WEAK-EVIDENCE RESPONSE (Quill):** "You've shown the copier tidied the voice away. Now show whose voice the tidying is.
+Put the copy beside every letter you've been given."
+
+---
+
+### The reveal
+
+**CAPTAIN MOTT:** Well, young detective?
+
+**{det}:** Mr Brisk.
+
+*(Mr Brisk laughs, a little too long. The rope goes round the first post with a creak.)*
+
+**{det}:** First, the copy. Dan Keel said, "I ain't never seen her this high." The copy says, "I have never seen her this
+high." Every dropped letter has been put back.
+
+**TWAIN:** And Dan Keel taken out.
+
+**{det}:** Jem writes river talk the way it's sung. Miss Fitch keeps every spelling in her word-book.
+
+**MISS FITCH** *(pink to the bonnet)*: For my pupils. Don't tell the school board.
+
+**{det}:** Then the voice. The copy says "we shall". Mr Brisk's letter says "I shall". Both spell out "forty". Both put a
+comma before the last "and". And both correct words inside quotation marks.
+
+**ASHA:** Even a farmer's.
+
+**MR BRISK:** A good letter is not a crime.
+
+**{det}:** No. But you said it this morning. You said, "Somebody has tidied up Mr Twain's grammar. A kindness, really."
+
+*(The copy-sheet and Mr Brisk's breakfast words glow side by side: the two moments, one voice.)*
+
+**{det}:** And the impossible part. Nobody passed the watchman, because nobody used the saloon door. It was there on the
+very first page. "Every stateroom has two doors: one to the saloon, one to the guard."
+
+**MR HOLT** *(the watchman, deeply relieved)*: I never closed my eyes. I *knew* it.
+
+**{det}:** A lamp went aft along the guard at 2:10 and came back at 2:40. Mr Twain's hook was up three mornings. Mr
+Brisk's guard door was swinging three mornings, with cinders on the mat, though he says he never opens it.
+
+**JEM** *(from the doorway)*: I saw the lamp. I didn't know whose it was.
+
+**{det}:** And Jem was at the wheel the whole time.
+
+**MR STRODE:** Learning the bend. He's got it, too.
+
+**MISS LARK** *(very small)*: And I only left a letter.
+
+**TWAIN:** The kindest one I've had all year. *(He takes the red autograph book from her, finds the blank page, and signs
+it with a flourish. Miss Lark has to sit down.)*
+
+**MR BRISK** *(after a long moment; the jovial face goes)*: I haven't sold a book since Christmas. Not one. My letters
+are full of orders that never happened. A Chicago firm offered me more for your pages than I'd make in a year. *(He opens
+his trunk. Three bundles of capitals, tied with string.)* I burned the batch I smudged. I should have burned the lot.
+
+**TWAIN:** You have a lovely hand, Mr Brisk, and a tin ear. *(He takes the bundles.)* Captain, I believe this gentleman
+was getting off at Memphis anyway.
+
+**CAPTAIN MOTT:** With his trunk, and without your pages. And I'll be writing to his company.
+
+*(The rope goes round the second post. The boat is still.)*
+
+---
+
+### Epilogue
+
+#### On the texas deck
+
+*The wharf is full of carts and shouting. Mr Brisk walks down the stage-plank with his trunk and does not look back.
+Up on the texas, the mist has lifted, and the river shines.*
+
+**TWAIN:** *(to Jem)* I'll need someone to read my proofs. Someone who knows how the river talks, and won't tidy it up.
+Interested?
+
+**JEM:** *(cannot speak; nods so hard his cap falls off)*
+
+*(🪔 Made up for this visit: there is no record of a cub called Jem, or of this job.)*
+
+**ASHA:** Can I ask something? Why "Mark Twain"?
+
+**TWAIN:** *(leaning on the rail)* Listen.
+
+*(From the bow, Dan Keel's long call comes back across the water: "M-a-r-k twain!")*
+
+**TWAIN:** Two fathoms. Twelve feet. Just deep enough to be safe. I told people I borrowed it from an old pilot who used
+to sign his river notes with it.
+
+**ASHA:** Did you?
+
+**TWAIN:** *(a long pause, and a smile under the moustache)* It's a good story, isn't it?
+
+*(📜 ⚖ He did tell that story, in Life on the Mississippi. Historians are not sure it is true; see the margin note.)*
+
+*(He unties something from the coil of lead line by the rail: a strip of leather with two tails, dark with river water.)*
+
+**TWAIN:** The two-fathom mark. For the detective who listened. Where there's that much water, you're safe.
+
+**QUILL** *(through the keyhole, as the Door's light begins to flicker)*: Memphis. Time.
+
+*(Asha grabs {det}'s sleeve. The last thing they see is Miss Fitch, on the boiler deck, showing Jem her word-book, and
+Jem showing her his.)*
+
+#### The office
+
+**The shelf.** The **two-fathom marker** goes on the shelf by the Door, beside the tortoise-shell plectrum, the falcon
+feather and Will's quill. The shelf is full: four places, four souvenirs. When you tap the marker, a voice very far off
+sings "Mark twain!" and the leather sways as if the river were under it.
+
+**Asha's thread.**
+**ASHA:** I had the gap right to the minute. I just put the wrong boy in it.
+**NELL:** Hunch-o-meter?
+**ASHA:** *(holding up her timeline, the empty half hour circled)* No hunch. A question. That's what a gap is.
+**NELL:** *(after a moment)* I'm stealing that.
+**DEV:** Whose turn is it to carry the torch on the stairs?
+**ASHA:** *(whispering)* There's a whole river of daylight out there. Yours.
+
+**Felix's footnotes.**
+**FELIX:** Footnote: fifteen years after that boat, in 1897, a newspaper story about him got things badly wrong. He wrote
+back.
+*(He sets two cards side by side on the desk.)*
+> What people say he said: "Reports of my death are greatly exaggerated."
+>
+> 📜 What he wrote: "The report of my death was an exaggeration."
+
+**FELIX:** Footnote to the footnote: everybody quotes the first one. He wrote the second.
+**QUILL:** Then quote the second. *(A pause.)* And I'm not correcting anybody's spelling today. Not even the river's.
+**FELIX:** *(staring)* Are you feeling all right?
+**QUILL:** Never better. Spell it as they say it. Somebody wise said that.
+
+**Biscuit.** Constable Tully puffs up all 39 stairs. "He's gone again." Biscuit is found asleep in the coal scuttle,
+grey with cinders, a strand of wet rope in his mouth. Nobody can work out where the rope came from. It smells of river.
+
+**The crossword.** Dev reaches past the marker to straighten the shelf, and stops. Tucked behind the four souvenirs,
+where nothing was a moment ago, is a newspaper, folded small to the crossword. Every square is empty except one clue,
+filled in neatly in grey pencil:
+
+> 14 across. A name worn like a coat (3, 4). **PEN NAME**
+>
+> —
+
+**DEV:** It's just a dash. No letter.
+**FELIX:** *(sniffing)* Rosin. Like a violin case.
+**ASHA:** *(very quietly)* Somebody likes puzzles. And somebody's been in here while we were on the river.
+*(Down on the quay, the gas lamps are lit. A tall figure with a long grey plait turns the corner and is gone before
+anyone reaches the round window. Nobody is sure they saw it.)*
+
+#### Did you know? *(margin note, epilogue)* 📜 *Pen names*
+- **Samuel Clemens first signed himself "Mark Twain" in 1863**, in a Nevada newspaper, the *Territorial Enterprise*. A
+  name you write under that is not your own is a **pen name**, or **pseudonym** (Greek *pseudo-*, "false", and *onoma*,
+  "name").
+- **Where did it come from?** In *Life on the Mississippi* he said he took it from an old pilot, Captain Isaiah Sellers,
+  who signed his river notes "Mark Twain". ⚖ Historians have looked hard for those notes and not found the name in them,
+  and there is another story, from his Nevada days. Nobody knows for certain. The card says so.
+- **Quoting exactly.** He wrote, in 1897, "The report of my death was an exaggeration." Almost everyone quotes it
+  differently. A detective quotes it the way it was written.
+- *Sources:* Mark Twain, *Life on the Mississippi* (1883), chapter 50; Kevin Mac Donnell, "How Samuel Clemens Found 'Mark
+  Twain' in Carson City", *Mark Twain Journal* 50 (2012); Fred R. Shapiro (ed.), *The Yale Book of Quotations* (2006),
+  "Mark Twain", on the 1897 note (printed in the *New York Journal*, 2 June 1897). [VERIFY: the date of the first "Mark
+  Twain" signature (3 February 1863); the *Mark Twain Journal* article's title, volume and year; the exact 1897 wording
+  and the newspaper date.]
+
+#### Did you know? *(margin note for grown-ups and older readers, epilogue)* 📜 *The river's history*
+- Samuel Clemens grew up in Hannibal, Missouri, a slave state, and the Mississippi he piloted before the Civil War carried
+  enslaved people as well as cotton and passengers. Slavery was ended in the United States in 1865.
+- Several of his novels, written later, deal with slavery and with how people treated one another on the river. They are
+  read and discussed by older students.
+- *Sources:* Ron Powers, *Mark Twain: A Life* (2005); the Thirteenth Amendment to the United States Constitution
+  (ratified December 1865); the Mark Twain Project, University of California, Berkeley (marktwainproject.org).
+
+---
+
+### Persona knacks (one line per persona)
+
+*Each Knack shows exactly three candidates; at most one is in `minimalEvidence` (keel-words, copy-never, copy-shall,
+brisk-shall, copy-forty, brisk-forty, log-leadsin, watch-wheel). No Knack works in chapter 5.*
+
+| Persona | Chapter | Knack line | Candidates (3) | In minimal? |
+|---|---|---|---|---|
+| **Thea** · Owl's Eye | 1, on DOC J4.3 | *"What's not on this page? The 'Mem.' line. Somebody left out 'spell it as he says it'."* | `gap:mem-line` (the copy has no "Mem." line) · `gap:copy-date` (no day written) · `gap:copy-name` (no signature) | none |
+| **Milo** · Winged Words | 1, on [c:mem-spell] | *"So what it actually says is: write his words the way he says them, because the missing letters are part of him."* Paraphrase options: *write his words the way he says them; the missing letters are part of him* (right) · *write his words properly, so readers can follow him* (wrong meaning) · *he wrote my words the way I said them* (wrong pronoun) | `span:mem-spell` · `span:keel-corn` · `span:hat` | none |
+| **Oskar** · Two Ravens | 3, Memory word **"never"** | *"We've seen that word before. 'Never.'"* Memory recalls [c:keel-words], [c:copy-never], [c:brisk-quote], [c:brisk-lie], [c:watch-never]. Thought offers: `link:copy-never+brisk-quote` (real: both correct a quoted "never") · `link:keel-words+jem-river` (tempting: both river talk) · `link:hat+brisk-lie` (tempting: both "never") | the three links listed | 1 (`copy-never`) |
+| **Signe** · The Spindle | 4, on the timeline | *"Something happened here, on Wednesday night, and nobody's told us."* | `slot:between-2-4` (the first copying: real) · `slot:between-6-7` · `slot:between-11-12` | none (a slot, never the event) |
+| **Hari** · Another's Shoes | 2, on DOC J4.6, the writer tapped is Miss Lark | *"If I were Miss Lark, what would I have seen? A door I didn't dare knock on."* Viewpoint card: *What she knew:* she had boarded at [Cairo / St. Louis / Memphis] · *What she wanted:* [his autograph / his pages / a quieter cabin] · *What she didn't know yet:* [that he would read her letter / where Cairo is / the pilot's name] | `span:lark-cairo` · `span:lark-letter` · `span:lark-blank` | none |
+| **Vani** · The Tuning Ear | 3, Voice: DOC J4.3 beside DOC J4.7 | *"Listen to how they write it. 'Forty' in words on one; '3 new words' in figures on the other. 'Keep the spelling!' against a page that keeps nothing."* Three word-habits underlined in each: *FORTY / SHALL / , AND* against *3 / Keep the spelling! / !* Same writer? (No: two voices.) | `span:copy-comma` · `span:fitch-3` · `span:fitch-keep` | none |
+
+*Fairness check (§2.4):* no candidate set holds more than one minimal item; Vani compares the copy with the innocent
+Miss Fitch, so the Knack narrows without naming; Signe marks the slot, never the event; Hari's card fills from document
+options only. The perfect bot solves with each persona and with none.
+
+**Bonus origin card (every persona): *fathom*.**
+- *Path:* Old English *fæþm*, "the outstretched arms; an embrace" → Middle English *fadme* → English *fathom*.
+- *Story:* A fathom was first the stretch of a man's two arms. Sailors measured rope that way, arm-span by arm-span, so
+  it became six feet, and then a measure of deep water. "To fathom" something still means to get to the bottom of it.
+- *Question:* "I can't fathom it" means… · *I can't understand it* ✓ · *I can't lift it* · *I can't swim in it*
+- *Sources:* *Oxford English Dictionary*, "fathom, n." and "fathom, v."; Merriam-Webster, "fathom"; Online Etymology
+  Dictionary, "fathom". Objective: `la10-world` (with `w10-meanings`). askFamily: false.
+- *Callback:* Hari's *dinghy* card (another word that came to English over water).
+
+---
+
+### Detective School drill — "Spell It as They Say It"
+
+**Clue type:** voice. Built from DOC J4.1 against DOC J4.3 (the deciding clue's first half).
+
+**Round one: who's talking?** Three speakers, each line written two ways. The child picks the version that keeps the
+speaker's voice, then taps the one word that proves it.
+
+| Speaker | Version A | Version B | Keeps the voice | The proving word |
+|---|---|---|---|---|
+| a deckhand | "I'm a-goin' ashore." | "I am going ashore." | A | *a-goin'* |
+| Miss Fitch | "May we, dear." | "Can we, love." | A | *May* |
+| a pilot | "She's a-shoalin'!" | "The water is becoming shallow!" | A | *a-shoalin'* |
+
+**Round two: one writer, or two?** Two short notes, three habits underlined in each (*shall*, numbers in words, a comma
+before the last *and*). The child decides, and Quill asks the follow-up: "Is one habit enough?" (*No: find two.*)
+
+> **Note 1:** I shall bring the rope, the lamp, and forty pegs.
+>
+> **Note 2:** I'll bring rope, a lamp and 40 pegs.
+
+- **Answer:** two writers. None of the three habits match.
+
+**Round three: quoting exactly.** Two cards. The child taps the one that is the real 1897 note, then taps every word
+that is different on the other.
+
+> A. "Reports of my death are greatly exaggerated."
+>
+> B. "The report of my death was an exaggeration."
+
+- **Answer:** B. Different in A: *Reports*, *are*, *greatly*, *exaggerated*.
+- **Quill, after round three:** "A quotation is evidence. Change one word and it's somebody else's evidence."
+
+---
+
+### Training Desk (format 1.2 · 12 exercises · tiers easier L3 / at L4 / harder L5)
+
+*Offered between chapters; never blocking. Quotes from documents are verbatim. No exercise points at the culprit before
+chapter 5.*
+
+**x1 · easier (L3) · vocab-in-context · skill vocab · strand word · objective w10-meanings · chapter 1 · source DOC J4.1, [c:keel-calls]**
+- *Prompt:* "Dan Keel, leadsman. He sings the calls: mark three, quarter less three and mark twain." What does a
+  leadsman do?
+- *Options:* drops a weighted line to measure how deep the water is · cooks for the crew · steers the boat
+- *Answer:* drops a weighted line to measure how deep the water is
+- *Explain:* The "lead" is a heavy weight on a marked line. The leadsman drops it, reads the mark, and sings out the
+  depth. The calls are measurements.
+
+**x2 · easier (L3) · word-origin · skill vocab · strand word · objective la10-world · chapter 1 · source DOC J4.2, [c:log-marktwain]**
+- *Prompt:* *Fathom* comes from an Old English word for something you can do with your body. What?
+- *Options:* stretch your arms out wide · stand on tiptoe · take one long step
+- *Answer:* stretch your arms out wide
+- *Explain:* Old English *fæþm* meant the span of two outstretched arms. That span, about six feet, became the fathom.
+
+**x3 · easier (L3) · tense-sequence · skill sequence · strand reading · objective s2-tense · chapter 1 · source DOC J4.2, [c:log-leadsin]**
+- *Prompt:* Put the pilot's night in order: "Leads in. No calls." · "Leads going. Calls sung up by the cub." · "Mark
+  twain! Two fathoms, and we are over."
+- *Options (to order):* the three lines above
+- *Answer:* "Leads going…" → "Mark twain!…" → "Leads in. No calls."
+- *Explain:* The log's times tell you: 1:40, then 2:10, then 2:10 to 2:40. The calls come first, the crossing next, the
+  quiet deep water last.
+
+**x4 · easier (L3) · vocab-in-context · skill vocab · strand word · objective w10-meanings · chapter 1 · source DOC J4.4, [c:twodoors]**
+- *Prompt:* "Every stateroom has two doors: one to the saloon, one to the guard." On a riverboat, the guard is…
+- *Options:* the narrow walkway outside the cabins · a man who keeps watch · a fence round the paddle-wheel
+- *Answer:* the narrow walkway outside the cabins
+- *Explain:* "Guard" usually means a person who watches. Here it is a door *to* something, so it must be a place. The
+  words around a word decide which meaning fits.
+
+**x5 · at (L4) · voice · skill voice · strand literature · objective la6-dialect · chapter 1 · source DOC J4.1 and DOC J4.3, [c:keel-words]**
+- *Prompt:* Which version keeps Dan Keel's own voice? A: "I ain't never seen her this high." B: "I have never seen her this
+  high."
+- *Options:* A · B · both the same
+- *Answer:* A
+- *Explain:* Both say the same thing, but only A sounds like Dan Keel. Spelling and grammar can carry who a person is. B
+  has the meaning and has lost the man.
+
+**x6 · at (L4) · punctuation · skill punctuation · strand writing · objective la6-register · chapter 2 · source DOC J4.6, [c:lark-missed]**
+- *Prompt:* Miss Lark's ticket clerk wrote "to prove you were here" in her book. Which sentence quotes him correctly?
+- *Options:* He wrote, "to prove you were here". · He wrote, to prove you were here. · He wrote, "to prove I was here".
+- *Answer:* He wrote, "to prove you were here".
+- *Explain:* Quotation marks hold someone's exact words. Change "you were" to "I was" and the words are no longer his.
+
+**x7 · at (L4) · inference · skill inference · strand reading · objective li2-traits · chapter 2 · source DOC J4.6, [c:lark-blank]**
+- *Prompt:* "One page saved for him. Still blank." What does this tell you about Miss Lark?
+- *Options:* She hoped to ask him, and hadn't dared · She has run out of ink · She doesn't like his books
+- *Answer:* She hoped to ask him, and hadn't dared
+- *Explain:* She keeps a page ready, so she wants his autograph. It is still empty, so she hasn't asked. Two short facts,
+  one feeling.
+
+**x8 · at (L4) · word-origin · skill vocab · strand word · objective la10-world · chapter 3 · source margin note, chapter 3, null**
+- *Prompt:* *Twain* is an old English word. In "mark twain", what number does it mean?
+- *Options:* two · twelve · twenty
+- *Answer:* two
+- *Explain:* *Twain* means two, as in *twins*. "Mark twain" is the second mark on the lead line: two fathoms, which is
+  twelve feet.
+
+**x9 · harder (L5) · punctuation · skill punctuation · strand writing · objective la6-register · chapter 5 · source epilogue, null**
+- *Prompt:* Which is what Mark Twain actually wrote in 1897?
+- *Options:* "The report of my death was an exaggeration." · "Reports of my death are greatly exaggerated." · "The
+  reports of my death have been exaggerated."
+- *Answer:* "The report of my death was an exaggeration."
+- *Explain:* The other two are how people *remember* it. Inside quotation marks, only the exact words will do. Source:
+  *The Yale Book of Quotations* (2006).
+
+**x10 · harder (L5) · voice · skill voice · strand literature · objective la6-register · chapter 5 · source DOC J4.8, [c:brisk-comma]**
+- *Prompt:* The copy says "MARK THREE, QUARTER LESS THREE, AND MARK TWAIN." Mr Brisk's letter says "the atlas, the
+  almanac, and the family doctor-book." What habit do they share?
+- *Options:* a comma before the last "and" in a list · capital letters for every word · a question at the end
+- *Answer:* a comma before the last "and" in a list
+- *Explain:* Twain's own page has no comma there. One habit could be chance. With "shall" and numbers in words as well,
+  it becomes a voice.
+
+**x11 · harder (L5) · inference · skill figurative · strand literature · objective li5-simile · chapter 5 · source margin note, chapter 4, null**
+- *Prompt:* Twain wrote that the almost right word and the right word differ like "the lightning-bug & the lightning". What
+  does he mean?
+- *Options:* the right word has real power; the almost right one only glows a little · insects are hard to write about ·
+  storms are better at night
+- *Answer:* the right word has real power; the almost right one only glows a little
+- *Explain:* A lightning-bug (a firefly) and lightning both shine. Only one of them lights up the whole sky. It is a
+  comparison, made to stick in your head.
+
+**x12 · harder (L5) · word-origin · skill vocab · strand word · objective s7-name · chapter 5 · source margin note, epilogue, null**
+- *Prompt:* *Pseudonym* comes from two Greek parts: *pseudo-* and *onoma*. What does it mean?
+- *Options:* a false name · a famous name · a long name
+- *Answer:* a false name
+- *Explain:* *Pseudo-* means false and *onoma* means name. A pseudonym, or pen name, is a name you write under that is not
+  your own. Samuel Clemens wrote as Mark Twain.
+
+*Count: 12 (easier 4 · at 4 · harder 4). Types: vocab-in-context, word-origin, tense-sequence, voice, punctuation,
+inference (6).*
+
+---
+
+### Story additions 🪔 (labelled, as the badge requires)
+
+Everything below is **made up for this Journey**:
+- {det}, Asha, Quill and the Door.
+- The steamer *Delta Wren*, Captain Mott, Mr Strode, Mr Pryce, Mr Holt and Dan Keel.
+- **All four suspects**: Mr Brisk, Miss Lark, Jem and Miss Fitch. None of them is a real person.
+- **The copying of Twain's notebook**, the pirate copy, the Chicago firm, and the Cottonwood Bar crossing.
+- **Every word Mark Twain speaks on the boat**, his note to the detective, and the notebook page about Dan Keel.
+- **Jem's job reading Twain's proofs.**
+- The office scenes, the crossword and the souvenir.
+
+**Real, and sourced (📜):** Twain's years as a pilot (1859–1861); his 1882 trip and *Life on the Mississippi* (1883);
+his attempt at a made-up name on that trip; subscription publishing and book agents; piracy of his books and the 1891
+copyright law; the leadsmen's calls and "mark twain" as two fathoms; his own story about the pen name and the doubt
+about it; the 1888 lightning-bug letter; the 1897 note; the end of slavery in 1865.
+
+**Never quoted:** any line from any of his novels.
+
+---
+
+### Did you know? *(chapter 5 margin note, after Case Closed)* 📜
+
+*Life on the Mississippi* is partly memoir and partly travel book. In it, Twain remembers learning the river as a cub
+pilot, and then describes going back in 1882 to see how it had changed. He found the river he knew had moved: bends cut
+through, towns left behind, and railways taking the trade. The book came out in 1883, sold by agents, door to door.
+*Sources:* Mark Twain, *Life on the Mississippi* (1883); Ron Powers, *Mark Twain: A Life* (2005); the Mark Twain
+Project, University of California, Berkeley. [VERIFY: the publisher and subscription sale of the 1883 edition (James
+R. Osgood & Co., Boston).]
+
+---
+
+### Art and scene notes
+
+*No lettering in any painting. Every word on every page, list, log and sign is live text set by the app.*
+
+#### Backgrounds
+- **The office, morning after the Regatta:** the Door ajar, river mist curling under it; Asha's taped hands; the shelf by
+  the Door with three souvenirs and one empty place. The persona sign in panel 1.
+- **The texas deck at first light:** a long white deck with a row of stateroom doors, a narrow guard outside with a
+  rail; two tall black chimneys breathing sparks; the glass pilot-house on top. Mist, a brown river a mile wide, a far
+  wooded bank. Black cinders drifting like snow.
+- **Stateroom 7:** small, white-painted, a washstand with a hat on it, a narrow bunk, **two doors**: one to the saloon
+  (inside), one to the guard (outside) with a slatted window and a small brass hook. The second door is visible but
+  never lit or centred (the hidden clue).
+- **The pilot-house at night:** a great wheel taller than Jem, glass on three sides, one lamp turned low, the log on its
+  shelf; outside, black water and one far light.
+- **The saloon:** long white tables, chandeliers, mirrors, a watchman's chair facing the stateroom doors, a lamp at his
+  elbow.
+- **The ladies' cabin:** red plush, mirrors, lavender light.
+- **The hurricane roof:** coils of lead line, a bell, Jem in the mist.
+- **Memphis from the river:** bluffs on the left bank, roofs and wharf smoke, carts, a stage-plank going down.
+
+#### What is never drawn
+- Any enslaved person, any scene of slavery, any caricature of any group: the Journey's sensitivity note covers this by
+  words, not pictures.
+- A cigar in Twain's hand (a choice for a children's game). No white suit: he wore that later in life; in 1882 he is in
+  a dark coat.
+- Any fall overboard, any danger on the water, any fight.
+
+#### Props
+- Twain's notebook (small, black, an elastic band); his hat; the half-burnt copy-sheet in block capitals; the cabin list
+  in its brass frame; the pilot-house log; the steward's clipboard; Miss Lark's red autograph book with a pressed violet;
+  Miss Fitch's ribboned word-book; Mr Brisk's sample book, order forms and flat bone folder; a lead line with its
+  leather and cloth marks; the two-fathom marker (a strip of dark leather with two tails, the souvenir).
+
+#### Portraits (new this Journey)
+- **Mark Twain:** amused, puzzled, ashamed, grave, delighted. Reddish hair going grey, bushy moustache, dark coat.
+  Drawn kind and dry; never a caricature.
+- **Mr Brisk:** jovial, calm, offended, nervous, guilty (the smile gone, hands on the trunk lid).
+- **Miss Lark:** nervous, flustered, embarrassed, relieved, joyful (at the signed page).
+- **Jem:** eager, worried, offended, tired, relieved.
+- **Miss Fitch:** stern, offended, flustered, embarrassed, delighted.
+- **Captain Mott:** loud, impatient, fair. **Mr Strode:** watchful, firm. **Mr Holt:** sleepy, relieved.
+- **Asha:** add *ashamed* (chapter 4, the timeline turned over) and *thoughtful* (the office).
+
+#### Cutscene panels for the reveal (5)
+1. The two pages side by side: Dan Keel's words in Twain's hand, the same words in capitals.
+2. Mr Brisk's breakfast line and the copy glowing together.
+3. The stateroom's second door, the hook lifted, a cinder on the sill.
+4. Jem at the great wheel at night, Mr Strode at his elbow, a lamp moving on the guard below.
+5. Twain signing the blank page in a red autograph book.
+
+#### Comic panels
+Opening (5 as scripted); reveal (the 5 above); epilogue (4: Jem's cap falling off; Twain untying the two-fathom marker;
+the full shelf by the Door; the folded crossword behind the souvenirs, the round window and the empty quay).
+
+#### Sound
+Paddle-wheels; the engines' thud under the ladies' cabin; the leadsman's long calls through mist (recorded live, never
+synthesised; silent during read-aloud); two whistle blasts for Memphis; cinders ticking on the deck.
+
+---
+
+### [VERIFY] list for this Journey
+
+1. Twain's pilot's licence date (April 1859) and the end of his piloting (1861) (chapter 1 note).
+2. The chapter of *Life on the Mississippi* in which he describes travelling under an assumed name in 1882 (chapter 22?),
+   and that he went south from St. Louis on the *Gold Dust* (chapter 1 note).
+3. The Toronto pirate edition (Belford Brothers, *The Adventures of Tom Sawyer*, 1876) before naming it on screen
+   (chapter 2 note).
+4. The chapter of *Life on the Mississippi* with the leadsmen's calls, and the "named after states" origin of *texas*
+   (chapter 3 note).
+5. The exact wording, punctuation and ampersands of the 15 October 1888 letter to George Bainton ("'tis" or "it's"), and
+   the page numbers in *The Art of Authorship* (1890) (chapter 4 note; x11).
+6. The date of the first "Mark Twain" signature (3 February 1863, *Territorial Enterprise*); Kevin Mac Donnell's article
+   title, volume and year; the exact 1897 wording and the *New York Journal* date (epilogue note; drill round three; x9).
+7. The publisher and subscription sale of the 1883 first edition (James R. Osgood & Co., Boston) (chapter 5 note).
+8. That a Mississippi lead line's two-fathom mark was a strip of leather with two tails (this is the sea-going custom;
+   river lead lines may have been marked differently). If not, draw the souvenir as the river's own two-fathom mark.
+
+---
+
+## Part 10. The interface: best in class, highly graphical
+
+### 10.1 Principles
+- **A detective story you can touch.** Documents are physical props (letters with wax seals, torn notes, ruled ledgers,
+  postcards with stamps), painted, with texture and shadow, never white boxes.
+- **Every screen is a painted place** (the app's six worlds, the agency, Lantern Row). It is symmetric and full-bleed (the
+  stage rules: no flat white, the play object centred and largest).
+- **The interface never does the reading for the child.** Clues are not glowing; the child finds them. Highlights appear
+  only on what the child marks, or as an earned hint.
+- **Calm by default:** ambient motion at rest, still during reading, motion only where the child acts.
+
+### 10.2 The screens
+
+| Screen | What it looks like | Interaction |
+|---|---|---|
+| **The Agency** (hub) | A painted office: the round harbour window (day or night), the Casebook Wall with pinned cases and red string, the shelf of case objects, Quill at the desk, the hat stand with rank hats | Tap the Casebook Wall to choose a case; tap a shelf object to relive a solved case; tap the hat stand to see ranks; Detective School through the side door |
+| **The Town Map** | A painted bird's-eye map of Inkwell (the six districts around the Great Library), with case pins as wax seals | Pins pulse softly where an open case is. Districts show their world palette. The Blot Ledger is a small ribbon-tied notebook in the corner. |
+| **Case opening** | A **comic-panel cutscene** of 3–5 painted panels (characters, place, the problem), with speech in the app's own type, never painted lettering | Tap or swipe through; "Skip" always available; read aloud at levels 1–2 |
+| **The Document Desk** (core) | The document **lies on a painted desk** in the case's world. Left: the **notebook** (pinned clue cards). Right: the **suspects board** (portraits on cork). Equal widths, mirrored. | **Mark a clue:** press and hold a phrase (or select it by keyboard, Space); a magnifying glass sweeps over it and an inked underline appears; a **clue card** flies to the notebook. Unmark by tapping the card. |
+| **The magnifier** | A draggable lens over the document (desktop and phone) | Under the lens, text enlarges ×1.6. It's a reading aid, not a hint. |
+| **Interviews** | A **portrait conversation**: the suspect's painted portrait (6 expressions: calm, nervous, offended, amused, guilty, relieved), with question cards fanned below | Choose a question card. The answer arrives as a new document (a typed transcript on the desk). The portrait's expression changes with the answer. |
+| **The Casebook Board** | A full-screen **cork board** in lamplight. Clue cards and suspect portraits pinned; red string links them. | **Drag one clue card onto another:** a string draws between them, then a small wheel offers what they show (contradiction · timeline · who "she" is · meaning · fact/opinion · figurative · voice). A valid link turns the string gold with a satisfying pin-tap; an invalid one slackens and Quill asks "What do these two *really* say?" |
+| **The Timeline** | A **washing line** strung across the agency, with events as postcards pegged on it | Drag event cards onto the line; time-word spans glow when hovered; contradictions shake the line gently |
+| **The Accusation** | A **drawing-room reveal**: all suspects in a painted room, facing the child | Choose a suspect, then pin 3 pieces of evidence onto them. Quill reads them back. A right accusation plays **the reveal scene** as a short comic sequence, then the confession. |
+| **Case solved** | The office scene: the case's object placed on the shelf with a little light; the Casebook Wall stamp "SOLVED"; Blot Ledger word added with ink | Shows the skills used, what the child practised, and coins earned (equal to the ledger) |
+| **Detective School** | A painted classroom at the agency's back: three drills as chalkboard tiles | Timeline · Who Wrote This? · Clue Spotter |
+
+### 10.3 Art direction
+- **Style:**
+  - **painted storybook noir:** warm, textured gouache with ink line work;
+  - golden lamplight against deep teal and indigo shadows;
+  - each district in its world's palette (`WORLDS[].hue`).
+- **Day and night:** every scene is painted twice. Night cases are lamplit and cosier, not scarier.
+- **Characters:**
+  - a consistent **model sheet** per character (front, three-quarter, six expressions);
+  - painted portraits for interviews;
+  - small figures for map pins and cutscenes.
+  - **Diverse, ordinary, warm, nobody a caricature.**
+- **Documents:**
+  - each type has a painted template: letter, note, diary, notice, report, log, postcard, list, poster, transcript;
+  - **the text is set live in the app's typefaces**, never painted;
+  - handwriting is a handwriting *font* chosen per character, always legible, with dyslexia-friendly alternatives in
+    Settings.
+- **No lettering in any painting.** All words are live text. Signs in backgrounds are blank or symbolic.
+- **Motion:**
+  - the string tightening;
+  - paper sliding onto the desk;
+  - the magnifier's lens shimmer;
+  - the stamp coming down;
+  - ink spreading into the Ledger;
+  - comic panels sliding in.
+  - **Under reduced motion, all of these become fades.**
+- **Sound** (light): paper rustle, pin-tap, pen scratch, a soft chime for a gold link, district ambience at low volume.
+  Never during read-aloud.
+
+### 10.4 Phone (390×844)
+- **The document fills the play area.**
+- **A centred segmented control** at the bottom switches views (Notebook · Document · Suspects · Board), with equal
+  segments.
+- **Marking:** phrase-level spans are at least 44 px tall.
+- **The Board** is a pannable cork surface with pinch zoom; dragging a card to the edge pans.
+- **Comic cutscenes** show one panel per screen.
+
+### 10.5 Accessibility
+- **Every document can be read aloud** (narration where recorded, otherwise device text-to-speech labelled as a computer
+  voice). Always on at levels 1–2.
+- **Keyboard:** Tab or arrows by phrase · Space to mark · B for the board · T for the timeline · A to accuse · Esc to go back.
+- **Colour is never the only signal:** gold links also thicken and show a ✓ pin.
+- **Text size** up to 150% with the layout reflowing.
+- **A dyslexia-friendly font option** for document text.
+
+### 10.6 Performance
+- **Painted plates** at 1600 px (desktop) and 720 px (phone) WebP, lazy-loaded per case.
+- **Budget:** at most 1.2 MB per case's art.
+- **The board** uses DOM plus SVG strings (no canvas needed); 60 fps target.
+
+---
+
+## Appendix A. Supporting cast introduced in the scripts
+
+| Case | Characters |
+|---|---|
+| 0 | Mrs Rosa Bellweather (Tam's mother, the bakery hatch) |
+| 1 | Grandpa Okoro and his granddaughter Zuri (rows in Asha's club) · Mrs Pell · Kip · Sami Haddad (gardener) · Mr Hamish Puddle (Chief Gnome) |
+| 2 | Lamplighters Ivy, Rafi and Moss |
+| 3 | Juniper and her frogs · Mr Grail (park keeper) · the Fountain Restoration Committee |
+| 4 | Mr Osei (Forum clerk, later Registry clerk) · Councillors Bright and Mbeki |
+| 5 | Celeste Fairweather · Hugo · Petra Nwosu (stage manager) · Encore (the stage-door cat) · Rosalind Ashe (the Playhouse's writer) |
+| 6 | Dot Harkness |
+| 7 | Sunny Marchetti (lighting) · Gus Dunmore (props) · Mr Hale (Crane's "inspector") · Wilhelmina Thorne (the Playhouse's founder) |
+| 8 | Mr R. Swale (Deputy Keeper) · Ms K. Ito (map restorer) · the night porter |
+| 9 | Mrs Quayle (lighthouse keeper) · Lyle Asante (poet) · Mr Fosse (Regatta organiser) |
+| 10–11 | Hannah Lark (first Keeper; Charter dated 1726) · Odile's three disguises, all anagrams of her name: Mrs Olive Dean (Case 3), Mme Elodie Van (Case 7), Miss Delia Nove (Case 10) |
+
+## Appendix B. Continuity ledger (checked across all twelve scripts)
+
+| Thread | Where it is planted | Where it pays off |
+|---|---|---|
+| The vanished words (UNDER … EVERYONE) | One per case, 1–11 | Case 11: the full sentence |
+| Blot calling cards | Case 0 "Read carefully." · Case 1 "Every gap has a word." · Case 3 "Look below the surface. Read on forthwith." · Case 6 "Count the words, not the names." · Case 7 "A word can fall through a gap and still be there." · Case 9 "Look where the light falls." · Case 10 "A word for a word… Read on, forthwith." | Case 11: the voice match ("forthwith", the long-dash sign-off) |
+| Odile's disguises | Case 3 guest book (Mrs Olive Dean) · Case 7 programme credit and opening panel (Mme Elodie Van) · Case 10 (Miss Delia Nove) | Case 11: the three-appearance timeline and Dev's anagrams |
+| Ada remembers Odile's "forthwith" | Case 8 | Case 11 |
+| Raman postcards | Case 2 Lisbon (CRANE acrostic) · Case 5 Nairobi (two libraries closed) · Case 8 Singapore (PET-TI-GREW rebus) · Case 10 Reykjavík (dates two ways) | Case 10: the impossible deed date |
+| Crane's documents | Case 2 tape measure · Case 3 "IMPROVED!" notice · Case 4 petition in one hand · Case 6 forgery proved · Case 7 Hale measuring · Case 8 the map · Case 10 the deed | Case 10: sale void; a year of volunteering |
+| Marlowe Finch (he/him) | Suspected and cleared in Cases 4, 6, 8, 11 | Case 11: helps restore the words |
+| Felix's stage fright | Case 5 (happy in the prompt corner) | Case 7 reveal speech; Case 11 unveiling speech |
+| Nell's application | Every case (hunch-o-meter) · Case 9 (stops rating hunches without evidence) | Case 10 sent; Case 11 "Junior Inspector" |
+| The handless painted clock | Case 8 art note (the Seal Room ceiling, never pointed at); Ada: all 41 Library clocks strike | Case 11: "the clock that never strikes" |
+| Case 6 timeline | Bright copied the names the Thursday before the Case 4 vote | Case 4's petition is that copy |
+
+## Appendix C. Checks run on the compiled scripts
+- **Clue spans:** every clue cited by a deduction, red herring, timeline or accusation exists, quoted word for word. There are no duplicate IDs and no missing IDs, across 436 spans in 12 cases.
+- **Level limits:** words per document and words per sentence are within each level's limits (Part 7), checked by each writer's script and by a second pass.
+- **Marlowe:** he/him everywhere. No character uses they/them (owner, 6 Oct 2026).
+- **Content:** kid-safe; no violence; every ending kind; all poems, plays, mottos and proverbs original; no words put in a real author's mouth.

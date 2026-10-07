@@ -23,7 +23,7 @@ import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, symlinkSync, rmSync } from 'node:fs';
 
-const BUILD = new URL('../build', import.meta.url).pathname, SITE = '/tmp/bz-english-panel-site', PORT = 8900 + Math.floor(Math.random() * 90);
+const BUILD = process.env.BZ_BUILD || new URL('../build', import.meta.url).pathname, SITE = '/tmp/bz-english-panel-site' + (process.env.BZ_BUILD ? '-' + process.pid : ''), PORT = 8900 + Math.floor(Math.random() * 90);
 if (!existsSync(BUILD)) { console.log('story-panel: run `npm run build` first'); process.exit(1); }
 const arg = (k) => (process.argv.find((a) => a.startsWith(`--${k}`)) || '').split('=')[1] ?? (process.argv.includes(`--${k}`) ? true : null);
 const SHOTS = arg('shots'), MEASURE_ONLY = !!arg('measure');

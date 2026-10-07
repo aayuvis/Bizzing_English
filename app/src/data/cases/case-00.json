@@ -1,0 +1,2121 @@
+{
+  "format": 1.1,
+  "id": "case-00",
+  "number": 0,
+  "title": "The Goose That Didn't Honk",
+  "label": "A Bizzing mystery",
+  "level": 1,
+  "world": "quayside",
+  "setting": "Quayside, the agency above Bellweather's Bakery",
+  "skills": [
+    "detail",
+    "sequence",
+    "inference"
+  ],
+  "vanishedWord": null,
+  "ledgerIndex": null,
+  "officeObject": {
+    "id": "goose-feather",
+    "name": "Admiral's white goose feather",
+    "art": "Admiral's white feather: long, clean, slightly curled; the shelf model"
+  },
+  "arc": [
+    {
+      "thread": "C",
+      "beat": "the child joins the agency and chooses a detective (persona choice on step 39)",
+      "docs": []
+    },
+    {
+      "thread": "A",
+      "beat": "the first Blot calling card, \"Read carefully. — B.\", pinned inside the empty kennel; Tam: \"There was no card when I took him\"",
+      "docs": [
+        "0.5"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "why there are 39 steps",
+      "docs": [
+        "0.1"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Nell's hunch-o-meter, Felix's footnotes, Asha's timelines and Dev's codes all introduced",
+      "docs": [
+        "0.2",
+        "0.3",
+        "0.5"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Biscuit's running joke begins: \"He'll never get lost again.\" \"Hmm.\"",
+      "docs": []
+    },
+    {
+      "thread": "C",
+      "beat": "the painted Reading Door: Nell has tried it with every key in town",
+      "docs": []
+    },
+    {
+      "thread": "A",
+      "beat": "Quill looks at the card a moment too long",
+      "docs": []
+    }
+  ],
+  "tutorial": [
+    {
+      "step": "choose-persona",
+      "trigger": "on step 39, before the first document; six detective cards fan out",
+      "quill": "Every detective here reads in their own way. Which one are you?"
+    },
+    {
+      "step": "choose-persona-confirm",
+      "trigger": "on choosing (the child may rename the detective)",
+      "quill": "{det}. Good. Now, about this dog."
+    },
+    {
+      "step": "read-aloud",
+      "trigger": "the first document slides onto the desk-lid; the speaker icon pulses once",
+      "quill": "This is a document. Every word in it can help you. Tap the speaker to hear it read."
+    },
+    {
+      "step": "magnifier",
+      "trigger": "after the reading",
+      "quill": "Now drag the glass over the words. It makes them bigger. It does not make them easier. Only you can do that."
+    },
+    {
+      "step": "mark",
+      "trigger": "DOC 0.1, practice: nothing can go wrong",
+      "quill": "Which steps creak? The note tells you. Press and hold the words that say so.",
+      "span": "creak"
+    },
+    {
+      "step": "mark-success",
+      "trigger": "on a correct mark",
+      "quill": "That is a clue card. It lives in your notebook now. To take it back, tap the card."
+    },
+    {
+      "step": "mark-miss",
+      "trigger": "the child marks \"I counted them while thinking\"",
+      "quill": "True words. But do they say which steps creak? Look again."
+    },
+    {
+      "step": "mark-hint",
+      "trigger": "after 2 misses (earned hint)",
+      "quill": "The answer has a number in it. A long number word."
+    },
+    {
+      "step": "mark-more",
+      "trigger": "after DOC 0.3 and the capital-letter joke",
+      "quill": "Mark the words that say what the writer did. There may be more than one."
+    },
+    {
+      "step": "knack",
+      "trigger": "on DOC 0.3, once; the chosen detective's Knack button glows (keyboard: K, then arrows and Enter)",
+      "quill": "Every detective has a knack. Yours works once in each chapter. It points; it never tells. Try it on this note.",
+      "span": "tookin",
+      "variants": {
+        "thea": {
+          "knack": "Owl's Eye",
+          "line": "What's not on this page? No name. No capital letters. No time.",
+          "candidates": [
+            "gap:no-name",
+            "gap:no-capital-B",
+            "gap:no-time"
+          ]
+        },
+        "milo": {
+          "knack": "Winged Words",
+          "line": "So what it actually says is… somebody carried Biscuit indoors. But in where?",
+          "candidates": [
+            "para:somebody carried Biscuit indoors",
+            "para:somebody took Biscuit up to the agency",
+            "para:Biscuit took somebody in"
+          ]
+        },
+        "oskar": {
+          "knack": "Two Ravens",
+          "line": "We've seen that word before. Cold. It's in Constable Tully's report too.",
+          "candidates": [
+            "link:crying+0.2 cold and windy",
+            "link:tookin+still",
+            "link:bed+creak"
+          ]
+        },
+        "signe": {
+          "knack": "The Spindle",
+          "line": "Something happened between took him in and went up to bed. Nobody's told us where.",
+          "candidates": [
+            "slot:after-tookin",
+            "slot:before-crying",
+            "slot:after-bed"
+          ]
+        },
+        "hari": {
+          "knack": "Another's Shoes",
+          "line": "If I were the writer, what would I have seen? A little dog, crying in the wind.",
+          "candidates": [
+            "knew:Biscuit was cold|Biscuit was hungry|Biscuit was lost",
+            "wanted:to make him warm|to win the Dog Show|to hide him",
+            "didntKnow:that Tully would worry|that it would rain|that it was Wednesday"
+          ]
+        },
+        "vani": {
+          "knack": "The Tuning Ear",
+          "line": "Listen to how it says it. No capitals. No full stops. Wory with one r. Somebody sleepy, in a hurry.",
+          "candidates": [
+            "habit:no-capitals",
+            "habit:no-full-stops",
+            "habit:wory"
+          ]
+        }
+      }
+    },
+    {
+      "step": "interview",
+      "trigger": "Mrs Prout arrives (HONK!); the question cards appear",
+      "quill": "Now we ask questions. Pick a question card. The answer comes as a new document. Mark it like any other."
+    },
+    {
+      "step": "interview-faces",
+      "trigger": "after the first answer",
+      "quill": "Watch the face too. Faces are clues. Words are better ones."
+    },
+    {
+      "step": "link",
+      "trigger": "the board opens with the clue cards pinned",
+      "quill": "Two clues together can say more than each alone. Drag one clue card onto another."
+    },
+    {
+      "step": "link-wheel",
+      "trigger": "as the string draws; the wheel opens (timeline and meaning glow brighter)",
+      "quill": "Now tell me what they show together."
+    },
+    {
+      "step": "link-gold",
+      "trigger": "a gold link",
+      "quill": "Yes. The string goes gold when two clues truly belong together."
+    },
+    {
+      "step": "link-slack",
+      "trigger": "a slack link",
+      "quill": "What do these two really say? Read them out loud to me."
+    },
+    {
+      "step": "timeline",
+      "trigger": "the washing line opens; Quill pegs the first card",
+      "quill": "Put things in the order they happened. Look for times and time words: nine, ten, then, five. I will peg the first card to show you.",
+      "span": "sailed"
+    },
+    {
+      "step": "timeline-wrong",
+      "trigger": "wrong order; the line shakes gently",
+      "quill": "Which word says when? Show me."
+    },
+    {
+      "step": "accuse",
+      "trigger": "the reveal room opens; the Knack is greyed out",
+      "quill": "Now the big moment. Choose who took Biscuit. Then pin three pieces of evidence to the portrait. A good detective never accuses empty-handed."
+    },
+    {
+      "step": "accuse-readback",
+      "trigger": "reading the pins back",
+      "quill": "You say… let me hear it."
+    }
+  ],
+  "card": {
+    "text": "It is your first morning at the Inkwell Detective Agency. Fog lies on the quay. Constable Tully is already waiting on step 39. His dog Biscuit has vanished from a shut kennel! Dog Show judging is at eleven. Nobody heard a thing. Not even Admiral, the goose who honks at every stranger. Why didn't the goose honk?",
+    "readAloud": true
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "Quayside, eight o'clock. Fog on the water.",
+      "picture": "Grey fog curls round the masts; gulls cry somewhere above it; the air smells of salt and warm buns. The child stands at a green door beside a bakery window glowing with buns. A big white goose on the bakery step stretches out his neck. Nell leans out of a high round window.",
+      "lines": [
+        {
+          "who": "ADMIRAL",
+          "text": "HONK! HONK! HONK!"
+        },
+        {
+          "who": "NELL",
+          "text": "Don't mind Admiral! He honks at anyone new. Come up! All of them!"
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "The stairs.",
+      "picture": "A narrow, crooked staircase rising and rising. Every so often a step is drawn with little wavy lines (a creak).",
+      "lines": [
+        {
+          "who": "CAPTION",
+          "text": "Up, and up, and up."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "Step 39. Three hours to judging.",
+      "picture": "Constable Tully sits on the top step with an empty lead and a dog brush. Through the little round window, the harbour clock says eight; Biscuit's show number pokes out of his pocket. The agency door is open; Nell, Asha, Dev and Felix peer out.",
+      "lines": [
+        {
+          "who": "CAPTION",
+          "text": "Dog Show judging: eleven o'clock."
+        },
+        {
+          "who": "TULLY",
+          "text": "Biscuit's gone! And judging is at eleven!"
+        },
+        {
+          "who": "ASHA",
+          "text": "Constable Tully got here first?"
+        },
+        {
+          "who": "DEV",
+          "text": "Then something is very wrong."
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "place": "Close on Quill.",
+      "picture": "Quill putting on a tiny deerstalker.",
+      "lines": [
+        {
+          "who": "QUILL",
+          "text": "Good. A case. Sit down, Constable. Detectives do not guess. They read."
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": "the app's mascot, a tiny deerstalker put on the moment Tully says \"gone\"",
+      "manner": "short, warm, exact; corrects grammar at the worst moments",
+      "expressions": [
+        "calm",
+        "amused",
+        "thoughtful"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "nell",
+      "name": "Nell Okafor-Hart",
+      "role": "agency",
+      "look": "13; cherry-red bicycle The Comet chained at the bottom; basket of torches, string, a folded form she never mentions",
+      "manner": "fast, kind, sure; the hunch-o-meter",
+      "expressions": [
+        "calm",
+        "amused",
+        "nervous"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha Raman",
+      "role": "agency",
+      "look": "12; rowing-club jacket, a pencil behind each ear",
+      "manner": "brisk; writes a timeline of everything, including breakfast",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "dev",
+      "name": "Dev Raman",
+      "role": "agency",
+      "look": "11; biscuit-tin periscope on a string round his neck",
+      "manner": "quiet; lights up at a pattern",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix Moreno-Lindqvist",
+      "role": "agency",
+      "look": "12; neat cardigan, too many pens, a handkerchief",
+      "manner": "footnotes himself out loud; footnotes the footnotes",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "player",
+      "name": "the new detective",
+      "role": "agency",
+      "look": "the child's chosen detective, a blank notebook, a borrowed magnifying glass",
+      "manner": "the one who marks, links and accuses",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "client",
+      "look": "Biscuit's owner; big, slow, kind; helmet slightly too small; an empty lead and a dog brush",
+      "manner": "for once, first up the stairs; worried, honest",
+      "expressions": [
+        "calm",
+        "nervous",
+        "offended",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "biscuit",
+      "name": "Biscuit",
+      "role": "client",
+      "look": "the missing dog; small, brown, very fluffy, one ear up",
+      "manner": "(a dog)",
+      "expressions": [
+        "calm",
+        "asleep"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "prout",
+      "name": "Mrs Delphine Prout",
+      "role": "suspect",
+      "look": "dog-show rival, came yesterday on the ferry; tall, a big tartan coat, a velvet bag of brushes, Duchess the white poodle under one arm",
+      "manner": "grand and sniffy; talks to Duchess more than to people; kinder than she sounds",
+      "expressions": [
+        "calm",
+        "offended",
+        "nervous",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "Duchess must win, and fluffy Biscuit is her only real rival",
+      "secret": "the treats in her velvet bag are for Biscuit; she thinks he is a very handsome dog, and would never tell Duchess"
+    },
+    {
+      "id": "sully",
+      "name": "Mr Ned Sully",
+      "role": "suspect",
+      "look": "the fishmonger, owns the boat The Sea Pie; rubber boots, a striped jumper, a bucket of fish scraps, one gull that follows him everywhere",
+      "manner": "loud, cheerful, calls everyone \"shipmate\"",
+      "expressions": [
+        "calm",
+        "amused",
+        "nervous"
+      ],
+      "unlockedBy": null,
+      "motive": "Biscuit loves his fish scraps and would follow him anywhere",
+      "secret": "he leaves Biscuit scraps by the kennel every night at half past eight, although Tully has put him on a show diet"
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "role": "suspect",
+      "look": "10, the baker's youngest; leads the Lamplighters; flour on her nose, an apron with too many pockets, a bicycle bell",
+      "manner": "cheerful, kind, always in a hurry; brings home every lost thing",
+      "expressions": [
+        "calm",
+        "amused",
+        "nervous",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "none but kindness; she brings home every lost thing",
+      "secret": "she carried Biscuit in out of the cold, then forgot to sign her note"
+    },
+    {
+      "id": "rosa",
+      "name": "Mrs Rosa Bellweather",
+      "role": "witness",
+      "look": "the baker, Tam's mother; sleeves rolled, a tray on each hand, steam behind her",
+      "manner": "busy, fond, talks while working",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "admiral",
+      "name": "Admiral",
+      "role": "witness",
+      "look": "the bakery's goose (does not speak); big, white, orange beak, one feather that sticks up",
+      "manner": "honks at strangers; never at friends",
+      "expressions": [
+        "calm",
+        "honking",
+        "asleep"
+      ],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "0.1",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Why are there 39 steps?",
+      "author": "Quill",
+      "when": "years ago",
+      "where": "framed on the wall beside step 39",
+      "picture": "a small framed note in neat ink, a sketch of a staircase with three steps drawn wobbly",
+      "readAloud": true,
+      "body": "Why are there 39 steps?\nI counted them while thinking.\n[[c:creak|Every thirteenth step creaks]].\nSo three steps creak on the way.\nThree creaks mean a friend is coming.\n— Q.",
+      "talk": [
+        {
+          "who": "DEV",
+          "text": "Thirteen, twenty-six, thirty-nine. Every thirteenth. It's a code! The stairs tell you someone's coming."
+        },
+        {
+          "who": "FELIX",
+          "text": "Footnote: thirteen is called a baker's dozen. Footnote to the footnote: so these are three baker's dozens of steps. Very fitting, above a bakery."
+        },
+        {
+          "who": "ASHA",
+          "text": "I'm starting a timeline. Seven o'clock: porridge. Eight o'clock: Constable Tully, early. Eight-oh-one: amazed."
+        }
+      ]
+    },
+    {
+      "id": "0.2",
+      "chapter": "scene",
+      "type": "report",
+      "title": "Constable Tully's report",
+      "author": "Constable Tully",
+      "when": "written at five this morning",
+      "where": "handed over on step 39 before anyone asks",
+      "picture": "a page torn from a black police notebook, big careful capitals, a cocoa ring in one corner",
+      "readAloud": true,
+      "body": "Constable Tully's Report\nWednesday night, cold and windy.\n[[c:ten|I last saw Biscuit at ten]].\n[[c:latch|I shut his latch from outside]].\n[[c:still|At five, the latch was still shut]].\n[[c:empty|But the kennel was empty]]!\n[[c:nohonk|Not one honk all night]].",
+      "talk": [
+        {
+          "who": "NELL",
+          "text": "A stranger crept up in the night and took him! Hunch-o-meter: ten."
+        },
+        {
+          "who": "QUILL",
+          "text": "Ten already? You have read one report."
+        },
+        {
+          "who": "NELL",
+          "text": "Fine. Nine. Nine and a half."
+        },
+        {
+          "who": "TULLY",
+          "text": "Or he got out by himself! He's very clever, Biscuit."
+        },
+        {
+          "who": "QUILL",
+          "text": "Then the new detective will read about the latch."
+        },
+        {
+          "who": "FELIX",
+          "text": "Ah. Then I should mention this. It was under the door this morning. I thought it was a poem."
+        }
+      ]
+    },
+    {
+      "id": "0.3",
+      "chapter": "scene",
+      "type": "note",
+      "title": "The note under the door",
+      "author": "unknown (no name)",
+      "when": "none written",
+      "where": "pushed under the agency door in the night",
+      "picture": "a crumpled paper bun bag, flattened out; round, hurried pencil; no capital letters and no full stops",
+      "readAloud": true,
+      "body": "[[c:crying|biscuit was crying in the cold]]\n[[c:tookin|i took him in]]\n[[c:bed|then i went up to bed]]\ndont wory",
+      "talk": [
+        {
+          "who": "FELIX",
+          "text": "A biscuit, crying in the cold. I thought it was very sad poetry."
+        },
+        {
+          "who": "QUILL",
+          "text": "Look at the first word, Felix. What is missing?"
+        },
+        {
+          "who": "DEV",
+          "text": "A capital letter! It's not a biscuit. It's Biscuit!"
+        },
+        {
+          "who": "TULLY",
+          "text": "Somebody has my dog!"
+        },
+        {
+          "who": "NELL",
+          "text": "'I took him in.' In where?"
+        },
+        {
+          "who": "ASHA",
+          "text": "Everybody on the quay has a bun bag. That doesn't tell us who."
+        },
+        {
+          "who": "QUILL",
+          "text": "Mark the words that say what the writer did. There may be more than one."
+        }
+      ]
+    },
+    {
+      "id": "0.4",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "BEWARE OF THE GOOSE",
+      "author": "Mrs Rosa Bellweather",
+      "when": "painted years ago",
+      "where": "on the bakery yard gate, beside the kennel",
+      "picture": "a white-painted board, a big goose drawn in one corner, its beak open",
+      "readAloud": true,
+      "body": "BEWARE OF THE GOOSE!\nHis name is Admiral.\nHe guards the quay all night.\n[[c:strangers|He honks at strangers]].\nVery, very loudly.\nPlease do not feed him cake.",
+      "talk": [
+        {
+          "who": "FELIX",
+          "text": "Footnote: geese have guarded things for thousands of years. Footnote to the footnote: very loudly."
+        }
+      ]
+    },
+    {
+      "id": "0.5",
+      "chapter": "scene",
+      "type": "list",
+      "title": "Asha's kennel notes",
+      "author": "Asha Raman",
+      "when": "this morning, eight o'clock",
+      "where": "Asha's pocket notebook, written at the kennel",
+      "picture": "a ruled notebook page, two pencils' worth of handwriting, a tiny drawing of a kennel with its door shut; the straw damp with fog",
+      "readAloud": true,
+      "body": "The kennel, eight o'clock\nLatch: shut.\nBiscuit's bowl: empty.\nStraw: cold.\n[[c:fishy|A smell of fish]].\n[[c:flour|White flour on the straw]].\n[[c:card|A small card, pinned inside]].\n— A. Raman",
+      "talk": [
+        {
+          "who": "NELL",
+          "text": "B? B for Biscuit! He left us a note!"
+        },
+        {
+          "who": "DEV",
+          "text": "Biscuit can't write, Nell."
+        },
+        {
+          "who": "ASHA",
+          "text": "And why does it smell of fish?"
+        },
+        {
+          "who": "STAGE",
+          "text": "The fog thickens. The gulls go quiet. Far across the harbour, a violin plays four slow notes. Then nothing."
+        },
+        {
+          "who": "DEV",
+          "text": "Who plays a violin on the water at eight in the morning?"
+        },
+        {
+          "who": "QUILL",
+          "text": "Leave the card for now. A dog first."
+        }
+      ]
+    },
+    {
+      "id": "0.6",
+      "chapter": "interview",
+      "type": "log",
+      "title": "Boat log: The Sea Pie",
+      "author": "Mr Ned Sully",
+      "when": "Wednesday night to Thursday morning",
+      "where": "handed over by Mr Sully",
+      "picture": "a damp, salty logbook with a fish drawn on the cover, times written in thick pencil",
+      "readAloud": true,
+      "body": "Boat Log: The Sea Pie\nWednesday night\n[[c:sailed|9.00 Sailed out with the tide]].\n1.00 Fish! Lots of fish.\nThursday morning\n[[c:back|6.00 Back at the quay]]."
+    },
+    {
+      "id": "0.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Constable Tully: When did you last see Biscuit?",
+      "author": "Constable Tully",
+      "when": "",
+      "where": "",
+      "picture": "Constable Tully's portrait on cork: big, slow, kind, helmet slightly too small, an empty lead in one hand.",
+      "readAloud": true,
+      "body": "At ten. I gave him his biscuit.\n[[c:cried|He cried a bit in the wind]].\nThen I shut his latch.\nThen I went home to bed."
+    },
+    {
+      "id": "0.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Constable Tully: Could Biscuit get out by himself?",
+      "author": "Constable Tully",
+      "when": "",
+      "where": "",
+      "picture": "Constable Tully's portrait on cork: big, slow, kind, helmet slightly too small, an empty lead in one hand.",
+      "readAloud": true,
+      "body": "Biscuit? He's very clever.\nBut [[c:paws|he can't work a latch]].\nHe can't even open his biscuit tin."
+    },
+    {
+      "id": "0.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Constable Tully: Do you hear Admiral at night?",
+      "author": "Constable Tully",
+      "when": "",
+      "where": "",
+      "picture": "Constable Tully's portrait on cork: big, slow, kind, helmet slightly too small, an empty lead in one hand.",
+      "readAloud": true,
+      "body": "Every honk.\nI live next door to the bakery.\n[[c:hearall|He honks, I wake up]].\nLast night I slept like a baby."
+    },
+    {
+      "id": "0.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Prout: Who are you?",
+      "author": "Mrs Delphine Prout",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Prout's portrait on cork: tall and grand in a tartan coat, Duchess the white poodle under one arm.",
+      "readAloud": true,
+      "body": "Delphine Prout. This is Duchess.\n[[c:ferry|We came yesterday, on the ferry]].\nDuchess has won nine cups.\nShe will win ten today."
+    },
+    {
+      "id": "0.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Prout: Why do you want to win so much?",
+      "author": "Mrs Delphine Prout",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Prout's portrait on cork: tall and grand in a tartan coat, Duchess the white poodle under one arm.",
+      "readAloud": true,
+      "body": "Want to? [[c:win|Duchess must win]].\nShe always wins.\nThat fluffy brown dog had no chance anyway.\nNot that I took him!"
+    },
+    {
+      "id": "0.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Prout: Where were you last night?",
+      "author": "Mrs Delphine Prout",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Prout's portrait on cork: tall and grand in a tartan coat, Duchess the white poodle under one arm.",
+      "readAloud": true,
+      "body": "In the Harbour Hotel, room nine.\nDuchess snores, so I hardly slept.\nNobody saw me.\nIs that a crime?\nWe sail home at noon, anyway."
+    },
+    {
+      "id": "0.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Prout: Does Admiral know you?",
+      "author": "Mrs Delphine Prout",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Prout's portrait on cork: tall and grand in a tartan coat, Duchess the white poodle under one arm.",
+      "readAloud": true,
+      "body": "Know me? That goose!\n[[c:honked|He honked at me all the way up the quay]].\nTwice.\nDuchess has not recovered."
+    },
+    {
+      "id": "0.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Prout: What is in your velvet bag?",
+      "author": "Mrs Delphine Prout",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Prout's portrait on cork: tall and grand in a tartan coat, Duchess the white poodle under one arm.",
+      "readAloud": true,
+      "body": "Brushes. Combs. Ribbons.\n[[c:treats|And dog treats. Not for Duchess]].\nDuchess only eats chicken.\nThat is all I will say."
+    },
+    {
+      "id": "0.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Sully: Does Biscuit know you?",
+      "author": "Mr Ned Sully",
+      "when": "",
+      "where": "",
+      "picture": "Mr Sully's portrait on cork: rubber boots, a striped jumper, a gull on his shoulder.",
+      "readAloud": true,
+      "body": "Know me? Best friends!\n[[c:scraps|He loves my fish scraps]].\nHe'd follow me to the moon for a sardine."
+    },
+    {
+      "id": "0.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Sully: Where were you last night?",
+      "author": "Mr Ned Sully",
+      "when": "",
+      "where": "",
+      "picture": "Mr Sully's portrait on cork: rubber boots, a striped jumper, a gull on his shoulder.",
+      "readAloud": true,
+      "body": "Out at sea, shipmate.\nIt's all in my boat log.\nAsk the fish. They saw me."
+    },
+    {
+      "id": "0.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Sully: When did you get back?",
+      "author": "Mr Ned Sully",
+      "when": "",
+      "where": "",
+      "picture": "Mr Sully's portrait on cork: rubber boots, a striped jumper, a gull on his shoulder.",
+      "readAloud": true,
+      "body": "Six this morning.\nThe quay was quiet.\nI thought Biscuit was asleep in his straw.\nPoor old Biscuit."
+    },
+    {
+      "id": "0.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Sully: Why does the kennel smell of fish?",
+      "author": "Mr Ned Sully",
+      "when": "",
+      "where": "",
+      "picture": "Mr Sully's portrait on cork: rubber boots, a striped jumper, a gull on his shoulder.",
+      "readAloud": true,
+      "body": "Ah. You noticed.\n[[c:everynight|I leave him scraps every night]].\nBefore I sail, at half past eight.\nDon't tell the Constable.\nBiscuit is on a show diet.",
+      "talk": [
+        {
+          "who": "TULLY",
+          "text": "A show diet is a show diet, Ned!"
+        }
+      ]
+    },
+    {
+      "id": "0.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Bellweather: Where is Tam now?",
+      "author": "Mrs Rosa Bellweather",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Bellweather at the bakery hatch, a tray in each hand, steam behind her.",
+      "readAloud": true,
+      "body": "Out on the bread round, love.\nShe rides all over the harbour.\nBack by nine, I hope."
+    },
+    {
+      "id": "0.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Bellweather: Does Admiral honk at you?",
+      "author": "Mrs Rosa Bellweather",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Bellweather at the bakery hatch, a tray in each hand, steam behind her.",
+      "readAloud": true,
+      "body": "Admiral? Bless him.\n[[c:us|He never honks at us. Or at Mr Sully]].\nHe knows us."
+    },
+    {
+      "id": "0.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Bellweather: What is Tam like?",
+      "author": "Mrs Rosa Bellweather",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Bellweather at the bakery hatch, a tray in each hand, steam behind her.",
+      "readAloud": true,
+      "body": "Kind! Tam brings home every lost thing.\nGulls, kittens, a boot.\n[[c:upstairs|She sleeps up over the kitchen]].\nWith her music on."
+    },
+    {
+      "id": "0.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Bellweather: When did you go to bed?",
+      "author": "Mrs Rosa Bellweather",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Bellweather at the bakery hatch, a tray in each hand, steam behind her.",
+      "readAloud": true,
+      "body": "Nine, like always.\nI sleep like a log.\n[[c:oven|The oven stays warm all night]].\n[[c:basket|The big bun basket sits right by it]]."
+    },
+    {
+      "id": "0.S4.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Bellweather: What did you hear this morning?",
+      "author": "Mrs Rosa Bellweather",
+      "when": "",
+      "where": "",
+      "picture": "Mrs Bellweather at the bakery hatch, a tray in each hand, steam behind her.",
+      "readAloud": true,
+      "body": "Only my oven.\n[[c:snore|It made a funny new noise. A sort of snore]].\nThe kitchen is all steam.\nI can hardly see my own buns."
+    },
+    {
+      "id": "0.S5.Q0",
+      "chapter": "interview",
+      "type": "other",
+      "title": "Ask Admiral",
+      "author": "",
+      "when": "",
+      "where": "",
+      "picture": "Admiral's portrait: a big white goose on the bakery gate post.",
+      "readAloud": true,
+      "body": "Admiral looks at Nell.\nNo honk.\nHe looks at Constable Tully.\nNo honk.\nHe looks at you.\n[[c:honkyou|HONK! HONK! HONK!]]"
+    },
+    {
+      "id": "0.7",
+      "chapter": "scene",
+      "type": "log",
+      "title": "The Harbour Hotel night book",
+      "author": "Mr J. Pike, night porter",
+      "when": "Wednesday night",
+      "where": "brought up the 39 steps by Constable Tully",
+      "picture": "a page from a big leather hotel book, a brass key drawn in the margin, a tea ring",
+      "readAloud": true,
+      "body": "Harbour Hotel night book\nWednesday\n[[c:roomin|8.00 Room nine in]]. Lady and poodle.\n[[c:locked|Front door locked from nine till six]].\n11.00 Room nine wants warm milk.\nRoom nine snores. Or the poodle does.\n— J. Pike, night porter",
+      "talk": [
+        {
+          "who": "STAGE",
+          "text": "It is not Mrs Prout. It is Constable Tully, puffing, a mug of cocoa in one hand and a page in the other. Ten minutes behind, as usual, with the paperwork, as usual."
+        },
+        {
+          "who": "TULLY",
+          "text": "Nine o'clock already! Judging is at eleven. I asked at the Harbour Hotel. The night porter gave me this."
+        },
+        {
+          "who": "ASHA",
+          "text": "Room nine. That's Mrs Prout's room."
+        },
+        {
+          "who": "NELL",
+          "text": "Locked from nine till six? Then she never went out at all."
+        },
+        {
+          "who": "NELL",
+          "text": "Hunch-o-meter for Mrs Prout… one. Maybe zero."
+        },
+        {
+          "who": "FELIX",
+          "text": "Footnote: the warm milk was for Duchess. Footnote to the footnote: Duchess snores."
+        },
+        {
+          "who": "QUILL",
+          "text": "Then who did Admiral let by, without one honk?"
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "tully",
+      "questions": [
+        {
+          "id": "tully-q1",
+          "type": "when",
+          "q": "When did you last see Biscuit?",
+          "answerDoc": "0.S1.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "tully-q2",
+          "type": "how",
+          "q": "Could Biscuit get out by himself?",
+          "answerDoc": "0.S1.Q2",
+          "expression": "offended"
+        },
+        {
+          "id": "tully-q3",
+          "type": "what",
+          "q": "Do you hear Admiral at night?",
+          "answerDoc": "0.S1.Q3",
+          "expression": "calm"
+        }
+      ]
+    },
+    {
+      "suspect": "prout",
+      "talk": [
+        {
+          "who": "NELL",
+          "text": "She wanted Biscuit gone. She has secret treats. And nobody saw her. Hunch-o-meter: ten!"
+        },
+        {
+          "who": "ASHA",
+          "text": "You said nine and a half for 'a stranger'."
+        },
+        {
+          "who": "NELL",
+          "text": "She is a stranger. So it's the same hunch. Bigger."
+        },
+        {
+          "who": "NELL",
+          "text": "And she sails at noon! With Biscuit in that bag!"
+        },
+        {
+          "who": "TULLY",
+          "text": "On the noon ferry? But judging is at eleven!"
+        }
+      ],
+      "questions": [
+        {
+          "id": "prout-q1",
+          "type": "who",
+          "q": "Who are you?",
+          "answerDoc": "0.S2.Q1",
+          "expression": "calm"
+        },
+        {
+          "id": "prout-q2",
+          "type": "why",
+          "q": "Why do you want to win so much?",
+          "answerDoc": "0.S2.Q2",
+          "expression": "offended"
+        },
+        {
+          "id": "prout-q3",
+          "type": "where",
+          "q": "Where were you last night?",
+          "answerDoc": "0.S2.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "prout-q4",
+          "type": "what",
+          "q": "Does Admiral know you?",
+          "answerDoc": "0.S2.Q4",
+          "expression": "offended"
+        },
+        {
+          "id": "prout-q5",
+          "type": "what",
+          "q": "What is in your velvet bag?",
+          "answerDoc": "0.S2.Q5",
+          "expression": "nervous"
+        }
+      ]
+    },
+    {
+      "suspect": "sully",
+      "questions": [
+        {
+          "id": "sully-q0",
+          "type": "what",
+          "q": "Mr Sully's boat log",
+          "answerDoc": "0.6",
+          "expression": "amused"
+        },
+        {
+          "id": "sully-q1",
+          "type": "what",
+          "q": "Does Biscuit know you?",
+          "answerDoc": "0.S3.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "sully-q2",
+          "type": "where",
+          "q": "Where were you last night?",
+          "answerDoc": "0.S3.Q2",
+          "expression": "amused"
+        },
+        {
+          "id": "sully-q3",
+          "type": "when",
+          "q": "When did you get back?",
+          "answerDoc": "0.S3.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "sully-q4",
+          "type": "why",
+          "q": "Why does the kennel smell of fish?",
+          "answerDoc": "0.S3.Q4",
+          "expression": "nervous"
+        }
+      ]
+    },
+    {
+      "suspect": "tam",
+      "answeredBy": "rosa",
+      "questions": [
+        {
+          "id": "tam-q1",
+          "type": "where",
+          "q": "Where is Tam now?",
+          "answerDoc": "0.S4.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "tam-q2",
+          "type": "what",
+          "q": "Does Admiral honk at you?",
+          "answerDoc": "0.S4.Q2",
+          "expression": "amused"
+        },
+        {
+          "id": "tam-q3",
+          "type": "who",
+          "q": "What is Tam like?",
+          "answerDoc": "0.S4.Q3",
+          "expression": "amused"
+        },
+        {
+          "id": "tam-q4",
+          "type": "when",
+          "q": "When did you go to bed?",
+          "answerDoc": "0.S4.Q4",
+          "expression": "calm"
+        },
+        {
+          "id": "tam-q5",
+          "type": "what",
+          "q": "What did you hear this morning?",
+          "answerDoc": "0.S4.Q5",
+          "expression": "calm"
+        }
+      ]
+    },
+    {
+      "suspect": "admiral",
+      "talk": [
+        {
+          "who": "QUILL",
+          "text": "A goose is a very honest witness. He says the same thing every time."
+        },
+        {
+          "who": "NELL",
+          "text": "Then why didn't he honk at Mrs Prout last night?"
+        },
+        {
+          "who": "QUILL",
+          "text": "Good. Hold on to that question. It is the whole case."
+        }
+      ],
+      "questions": [
+        {
+          "id": "admiral-q0",
+          "type": "who",
+          "q": "Ask Admiral",
+          "answerDoc": "0.S5.Q0",
+          "expression": "honking"
+        }
+      ]
+    }
+  ],
+  "boardIntro": [
+    {
+      "who": "QUILL",
+      "text": "Two clues together can say more than each alone."
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "inference",
+      "skill": "inference",
+      "label": "the goose that didn't honk",
+      "statement": "Admiral honks at strangers. But he did not honk once all night. So whoever took Biscuit was someone Admiral knows: a Bellweather, or Mr Sully. Not Mrs Prout, who came yesterday on the ferry.",
+      "spans": [
+        "strangers",
+        "nohonk",
+        "us",
+        "ferry",
+        "honked",
+        "honkyou",
+        "hearall"
+      ],
+      "required": [
+        "strangers",
+        "nohonk",
+        "us"
+      ],
+      "why": "the clue is a thing that did not happen. A goose who honks at every stranger stayed quiet, so no stranger came.",
+      "hints": [
+        "Admiral is a noisy goose. What did he do last night?",
+        "Nothing. Not one honk. Now, who does Admiral never honk at?",
+        "Link 'He honks at strangers' to 'Not one honk all night'."
+      ],
+      "talk": [
+        {
+          "who": "FELIX",
+          "text": "Footnote: a famous detective once solved a case because a dog did nothing in the night. Ours is a goose. Footnote to the footnote: Sherlock Holmes, in Silver Blaze, by Arthur Conan Doyle. 1892."
+        },
+        {
+          "who": "QUILL",
+          "text": "Everyone heard nothing. You noticed the nothing. That is the difference between seeing and observing."
+        },
+        {
+          "who": "NELL",
+          "text": "Unless she fed him! The sign says don't feed him cake. So people do. And she has treats!"
+        },
+        {
+          "who": "NELL",
+          "text": "Hunch-o-meter for Mrs Prout: still ten."
+        },
+        {
+          "who": "QUILL",
+          "text": "A goose who honked at her twice this morning? Hm. A hunch is a question, Nell. Not an answer."
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "timeline",
+      "skill": "sequence",
+      "label": "nine before ten, and flour on the straw",
+      "statement": "Mr Sully sailed at nine, and Biscuit was still in his kennel at ten. So Mr Sully was out at sea. The writer took Biscuit in, then went up to bed. And there is flour on the straw. Flour means the bakery.",
+      "spans": [
+        "sailed",
+        "ten",
+        "flour",
+        "tookin",
+        "bed",
+        "upstairs",
+        "back",
+        "crying"
+      ],
+      "required": [
+        "sailed",
+        "ten",
+        "flour"
+      ],
+      "why": "nine comes before ten. Mr Sully had gone before Biscuit went missing, so the person Admiral knew was a Bellweather, and the flour says baker.",
+      "hints": [
+        "Mr Sully's boat log has times. When did he sail?",
+        "Nine. When did Constable Tully last see Biscuit?",
+        "Link '9.00 Sailed out with the tide' to 'I last saw Biscuit at ten'. Then find who leaves flour behind."
+      ]
+    },
+    {
+      "id": "D3",
+      "type": "inference",
+      "skill": "inference",
+      "optional": true,
+      "label": "a dog can't shut a latch",
+      "statement": "Biscuit did not get out by himself. The latch was shut from outside at ten, and still shut at five. A dog cannot shut a latch behind him.",
+      "spans": [
+        "latch",
+        "still",
+        "empty",
+        "paws"
+      ],
+      "why": "it clears the last easy answer. Somebody opened the latch, lifted Biscuit out, and shut it again."
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "prout",
+      "clearedBy": [
+        "strangers",
+        "nohonk",
+        "ferry",
+        "honked",
+        "roomin",
+        "locked"
+      ],
+      "suspicion": [
+        "win",
+        "treats"
+      ],
+      "note": "The false solution: Nell's ten. She is a stranger to Admiral, and he honked at her all the way up the quay; last night he never honked at all. And the hotel night book (Chapter 4) says she never went out. \"Duchess must win\" and \"And dog treats. Not for Duchess\" are what make her look guilty. Wanting is not doing, and the treats were for Biscuit, given kindly by daylight: her secret."
+    },
+    {
+      "suspect": "sully",
+      "clearedBy": [
+        "sailed",
+        "ten",
+        "back",
+        "everynight"
+      ],
+      "suspicion": [
+        "scraps",
+        "us",
+        "fishy"
+      ],
+      "note": "He was at sea from nine till six. Biscuit loves his fish scraps, the kennel smells of his fish, and Admiral knows him, which is why he looks possible. The fish smell is his secret: scraps at half past eight, before he sailed."
+    }
+  ],
+  "wrongLinks": [
+    {
+      "spans": [
+        "win",
+        "empty"
+      ],
+      "quill": "She wants to win. Show me where she took him."
+    },
+    {
+      "spans": [
+        "scraps",
+        "tookin"
+      ],
+      "quill": "Biscuit loves his scraps. But where was Mr Sully at ten?"
+    }
+  ],
+  "timeline": {
+    "talk": [
+      {
+        "who": "QUILL",
+        "text": "Which word says when? Show me."
+      },
+      {
+        "who": "ASHA",
+        "text": "Ooh. That is a good timeline. Better than my porridge one."
+      },
+      {
+        "who": "STAGE",
+        "text": "The washing line stops swinging. From the bakery's open window, through the steam, comes a small, slow sound. A snore."
+      },
+      {
+        "who": "FELIX",
+        "text": "Was that… the oven?"
+      }
+    ],
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "Mr Sully sails out with the tide",
+        "spans": [
+          "sailed"
+        ],
+        "placedByChild": false,
+        "placedBy": "quill"
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "Tully says goodnight to Biscuit and shuts the latch",
+        "spans": [
+          "ten",
+          "latch"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "Biscuit cries in the cold wind",
+        "spans": [
+          "crying",
+          "cried"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Someone takes Biscuit in",
+        "spans": [
+          "tookin"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "The note-writer goes up to bed",
+        "spans": [
+          "bed"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "The latch is still shut, but the kennel is empty",
+        "spans": [
+          "still",
+          "empty"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Mr Sully comes back to the quay",
+        "spans": [
+          "back"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Asha finds flour on the straw",
+        "spans": [
+          "flour"
+        ],
+        "placedByChild": false
+      }
+    ]
+  },
+  "accusation": {
+    "question": "Who took Biscuit, and where is he now?",
+    "culprit": "tam",
+    "place": {
+      "prompt": "Where is Biscuit now?",
+      "answer": "the bun basket by the oven",
+      "options": [
+        "Mrs Prout's hotel",
+        "the bun basket by the oven",
+        "Mr Sully's boat",
+        "step 39"
+      ],
+      "wrong": {
+        "Mrs Prout's hotel": "Would Admiral let a stranger by without one honk? Read the goose sign again.",
+        "Mr Sully's boat": "Where was The Sea Pie at ten o'clock? Read the boat log again.",
+        "step 39": "We started up there. The note says in. In where? Listen to what Mrs Bellweather heard this morning."
+      }
+    },
+    "minimalEvidence": [
+      "D1",
+      "D2",
+      "basket"
+    ],
+    "acceptableEvidence": [
+      "upstairs",
+      "snore",
+      "oven",
+      "tookin"
+    ],
+    "wrongSuspect": {
+      "prout": "Admiral honks at strangers. Did anybody hear a honk last night? Read the goose sign and Constable Tully's report again. Then read the hotel night book.",
+      "sully": "Look at the boat log. Where was Mr Sully at ten o'clock?"
+    },
+    "wrongSuspectPoints": {
+      "prout": [
+        "strangers",
+        "nohonk",
+        "locked"
+      ],
+      "sully": [
+        "sailed",
+        "ten"
+      ]
+    },
+    "wrongTheory": {
+      "escaped": "Biscuit can't shut a latch. Read the report: how was the latch at five?"
+    },
+    "weakEvidence": "That is true. But does it show who carried Biscuit, and where? Pin the words about the goose, the times and the flour.",
+    "weakExamples": [
+      "scraps",
+      "creak"
+    ]
+  },
+  "revealSetting": "The bakery hatch on the foggy quay, just after nine. Everyone gathers: Constable Tully, Mrs Prout with Duchess, Mr Sully with his gull, and Mrs Bellweather in the hatch with steam behind her. Inside, beside the big black oven, a bun basket under a checked cloth goes up… and down… and up.",
+  "reveal": [
+    {
+      "who": "QUILL",
+      "text": "Everyone is here. Detective, show them what you read."
+    },
+    {
+      "who": "QUILL",
+      "text": "First, the kennel. Shut from outside, still shut at five, and empty. So somebody lifted him out, and shut it again."
+    },
+    {
+      "who": "QUILL",
+      "text": "Next, the goose sign. It was on the gate from the very first page. 'He honks at strangers.'"
+    },
+    {
+      "who": "QUILL",
+      "text": "Now read the report again. 'Not one honk all night.' And Mrs Bellweather: 'He never honks at us.'"
+    },
+    {
+      "who": "FELIX",
+      "text": "So no stranger came. Footnote: the nothing was the clue."
+    },
+    {
+      "who": "NELL",
+      "text": "And your treats were for Biscuit, Mrs Prout."
+    },
+    {
+      "who": "MRS PROUT",
+      "text": "He is a very handsome dog. Do not tell Duchess."
+    },
+    {
+      "who": "QUILL",
+      "text": "Then the boat log. Mr Sully sailed at nine. Biscuit was still home at ten."
+    },
+    {
+      "who": "MR SULLY",
+      "text": "The fish smell was my scraps. Sorry, Constable!"
+    },
+    {
+      "who": "QUILL",
+      "text": "That leaves the flour, the word 'in', and a snoring oven."
+    },
+    {
+      "who": "NELL",
+      "text": "He's in the oven!"
+    },
+    {
+      "who": "QUILL",
+      "text": "By the oven, Nell. One small word. A very different morning."
+    },
+    {
+      "who": "STAGE",
+      "text": "The child lifts the cloth. Curled in the bun basket, white with flour from nose to tail, Biscuit is fast asleep. He snores."
+    },
+    {
+      "who": "MRS BELLWEATHER",
+      "text": "So that's my snoring oven!"
+    },
+    {
+      "who": "TULLY",
+      "text": "Biscuit!"
+    },
+    {
+      "who": "STAGE",
+      "text": "A bicycle bell in the fog. Tam rolls up to the hatch, flour on her nose. Admiral waddles behind her. Not a honk."
+    },
+    {
+      "who": "TAM",
+      "text": "Morning! Why is everyone here? Oh! You found my note!"
+    },
+    {
+      "who": "TAM",
+      "text": "Took? No! I rescued him! He was crying in the cold wind. So I wrapped him in a flour sack and carried him in."
+    },
+    {
+      "who": "TAM",
+      "text": "I shut the latch, like Mum says. Then I wrote my note."
+    },
+    {
+      "who": "TAM",
+      "text": "Admiral knows me. I feed him every day."
+    },
+    {
+      "who": "QUILL",
+      "text": "Your note said 'I took him in'. In is a very small word with a very big job. In where?"
+    },
+    {
+      "who": "TAM",
+      "text": "Oh! It could have been in the agency. Or in the sea!"
+    },
+    {
+      "who": "TAM",
+      "text": "Sorry, everyone. Next time I'll write it all. And sign it. Have a bun?"
+    },
+    {
+      "who": "TULLY",
+      "text": "Sorry? You kept him warm all night. Thank you, Tam. And judging isn't till eleven!"
+    },
+    {
+      "who": "NELL",
+      "text": "Hunch-o-meter for Mrs Prout: ten. Wrong."
+    },
+    {
+      "who": "ASHA",
+      "text": "Tens are hard."
+    },
+    {
+      "who": "DEV",
+      "text": "Wait. What about the card? The blot card in the kennel."
+    },
+    {
+      "who": "TAM",
+      "text": "What card? There was no card when I took him."
+    },
+    {
+      "who": "FELIX",
+      "text": "So someone came after Tam. Footnote: and someone played a violin on the water."
+    },
+    {
+      "who": "ASHA",
+      "text": "Admiral didn't honk all night. But he honked all morning. At the ferry, the gulls and me."
+    },
+    {
+      "who": "QUILL",
+      "text": "Not spooky. Careful. Someone wants us to read."
+    },
+    {
+      "who": "STAGE",
+      "text": "Out in the fog, one gull cries. Then the whole quay is very quiet."
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "STAGE",
+      "text": "The Harbour Dog Show, eleven o'clock, bunting along the quay. The fog lifts at last. Duchess wins first prize. Biscuit, still floury, wins a ribbon for Whitest Brown Dog."
+    },
+    {
+      "who": "NELL",
+      "text": "I'm sorry, Mrs Prout. My hunch was wrong."
+    },
+    {
+      "who": "MRS PROUT",
+      "text": "Duchess forgives you. I am still deciding."
+    },
+    {
+      "who": "STAGE",
+      "text": "She pats Biscuit anyway, slips him a treat, and some of the flour comes off on her glove."
+    },
+    {
+      "who": "STAGE",
+      "text": "Back up the 39 steps. Three creaks."
+    },
+    {
+      "who": "DEV",
+      "text": "Three creaks. A friend is coming."
+    },
+    {
+      "who": "STAGE",
+      "text": "It is Admiral, waddling up behind the new detective. He honks, once, small. Then he drops a white feather at the new detective's feet and waddles away."
+    },
+    {
+      "who": "TAM",
+      "text": "That means you're not a stranger any more."
+    },
+    {
+      "who": "STAGE",
+      "text": "Admiral's white feather goes on the empty shelf, the first object there. A little light comes on above it."
+    },
+    {
+      "who": "STAGE",
+      "text": "The calling card is pinned to the Casebook Wall, in the very middle. Read carefully. — B."
+    },
+    {
+      "who": "NELL",
+      "text": "B for Bellweather!"
+    },
+    {
+      "who": "TAM",
+      "text": "I sign with a T!"
+    },
+    {
+      "who": "FELIX",
+      "text": "When you remember."
+    },
+    {
+      "who": "DEV",
+      "text": "B for Biscuit?"
+    },
+    {
+      "who": "STAGE",
+      "text": "Quill says nothing. Quill looks at the card for a moment too long, then turns away."
+    },
+    {
+      "who": "STAGE",
+      "text": "Behind the Casebook Wall is a door painted on the wall, with a painted keyhole. Nell rattles its handle on her way past, out of habit."
+    },
+    {
+      "who": "NELL",
+      "text": "Every key in town. Nothing."
+    },
+    {
+      "who": "ASHA",
+      "text": "She's tried the bakery key, the boat key and Constable Tully's whole ring."
+    },
+    {
+      "who": "QUILL",
+      "text": "Some doors are not waiting for a key."
+    },
+    {
+      "who": "STAGE",
+      "text": "Biscuit, washed, asleep in Tully's helmet."
+    },
+    {
+      "who": "TULLY",
+      "text": "He'll never get lost again."
+    },
+    {
+      "who": "QUILL",
+      "text": "Hmm."
+    },
+    {
+      "who": "STAGE",
+      "text": "Quill takes down the smallest hat and puts it on the new detective's head."
+    },
+    {
+      "who": "QUILL",
+      "text": "Trainee Detective. Welcome to the agency. Your notebook is not blank any more."
+    },
+    {
+      "who": "STAGE",
+      "text": "Asha's timeline, pinned by the window: 8.00 Tully on step 39. 9.10 Biscuit found. 9.11 Biscuit snores. 9.12 more buns."
+    },
+    {
+      "who": "STAGE",
+      "text": "Case solved. Skills used: finding a detail · putting events in order · working out what isn't said. A new page appears in the notebook: The Blot Ledger, empty, with one line written in Quill's hand: \"Collect the missing words here.\""
+    }
+  ],
+  "drill": {
+    "kind": "timeline",
+    "title": "Then what?",
+    "instructions": "Four cards, shuffled. Put them in order:",
+    "items": [
+      {
+        "prompt": "First, Biscuit cried in the cold wind.",
+        "answer": "1",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "prompt": "Then I wrapped him in a flour sack.",
+        "answer": "2",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "prompt": "Then I carried him in, by the oven.",
+        "answer": "3",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "prompt": "Last of all, I went up to bed.",
+        "answer": "4",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    ],
+    "feedback": {
+      "right": "First, then, then, last of all. Little words that hold a story in order.",
+      "wrong": "Find the word that says first. Start there."
+    }
+  },
+  "art": {
+    "backgrounds": [
+      "Quayside exterior, morning: harbour, masts, gulls, pink-gold sky; a bakery window glowing with buns; a narrow green door beside it; The Comet (cherry-red bicycle) chained to a lamp post; Admiral on the bakery step.",
+      "The staircase: narrow, crooked, warm wood, rising out of frame; three steps (13, 26, 39) slightly darker and worn, with tiny wavy creak lines in the animation only, never painted text.",
+      "Step 39 landing: the agency door open; morning light from a little round window; Tully filling the top step.",
+      "The quay by the bakery yard: a small blue kennel with a latched door, straw inside; the yard gate with a blank white board on it (the goose sign); a gate post for Admiral; the fishing boat The Sea Pie moored beyond, its name board blank.",
+      "Bakery kitchen: copper pans, a big black oven, steam curling, the big round bun basket beside the oven under a checked cloth; Biscuit inside, visible only after the tap.",
+      "The Dog Show (epilogue): bunting, a small judges' table, dogs and owners of every kind; faces small.",
+      "The office (epilogue): round harbour window, empty cork Casebook Wall, a door painted on the wall behind it (a painted keyhole, no handle text), hat stand with hats in a row from small to tall, Quill's desk with a tower of dictionaries, the dumbwaiter hatch, the brass speaking-tube.",
+      "The bakery hatch, foggy quay (the reveal): the hatch open, steam rolling out into grey fog, the suspects gathered in a half-circle, gulls on the bollards, the warm kitchen glowing behind."
+    ],
+    "props": [
+      "Admiral's white feather (long, clean, slightly curled; the shelf model)",
+      "the calling card (small, cream, one perfect round ink blot in the middle)",
+      "the flattened paper bun bag",
+      "the flour sack",
+      "Tully's empty lead and dog brush",
+      "Mr Sully's fish bucket",
+      "Mrs Prout's velvet brush bag",
+      "the Whitest Brown Dog ribbon",
+      "a paper twist of dog treats in Mrs Prout's velvet bag",
+      "Mr Sully's scrap tin",
+      "Tully's cocoa mug",
+      "the Harbour Hotel night book page (blank template, a brass key in the margin)"
+    ],
+    "portraits": [
+      "Tully (large, gentle, moustache optional, helmet slightly too small; calm, nervous, offended, relieved)",
+      "Mrs Prout (sixties, tall, grand, tartan coat, Duchess under one arm; calm, offended, nervous, relieved; never a caricature)",
+      "Mr Sully (fifties, weathered, striped jumper, a gull on his shoulder; calm, amused, nervous)",
+      "Tam (10, any background, flour on her nose, short practical hair, apron with pockets; calm, amused, nervous, relieved)",
+      "Mrs Bellweather (forties, strong arms, sleeves rolled, kind tired eyes; calm, amused)",
+      "Admiral (a real white farmyard goose, orange beak, one feather sticking up; calm, honking, asleep)",
+      "Biscuit (fluffy, one ear up; asleep and floury in the bun basket)"
+    ],
+    "notes": "No lettering in any painting: the goose sign, the boat log, the report, Asha's notes, the bun-bag note and the calling card are painted as blank templates; their words are set live in the app. Document templates: framed note (0.1), police notebook page (0.2), flattened bun bag (0.3), painted gate board (0.4), ruled pocket notebook (0.5), salty logbook (0.6). Motion: Admiral's neck stretching to honk; the checked cloth rising and falling with Biscuit's snores; the card fluttering in the kennel; reduced motion makes all of these fades. Sound: gulls, honks (never under read-aloud), a bicycle bell, three creaks (only on 13, 26, 39), oven hum, one small snore. Credit: the \"dog in the night-time\" idea is credited to Arthur Conan Doyle, Silver Blaze (1892), in Felix's footnote; Quill's \"seeing and observing\" line adapts Holmes in A Scandal in Bohemia (1891). Both public domain; no line is quoted. Atmosphere: fog on the quay from the first panel until it lifts at the Dog Show; a far foghorn; water slapping the quay wall; spooky but safe, warm windows always glowing somewhere in frame. Once only, at the end of Chapter 1: four slow violin notes far across the harbour, faint and sweet, never loud (the season's first trace of the Blot; nobody sees who plays)."
+  },
+  "aside": [
+    {
+      "where": "Chapter 1, down to the quay",
+      "text": "Everyone clatters down the 39 steps and out onto the quay. Admiral looks at Nell: nothing. He looks at Tully: nothing. He looks at the new detective: HONK!"
+    },
+    {
+      "where": "Chapter 2, opening",
+      "text": "Mrs Prout comes along the quay with Duchess. Admiral: HONK! HONK! HONK! A moment later Mr Sully walks by with his fish bucket. Admiral does not even look up."
+    },
+    {
+      "where": "accusation",
+      "text": "Tam is out on the bread round, so Mrs Bellweather answers for her through the bakery hatch: asking Tam cannot short-cut the case. The note is unsigned (Tam forgot), so who wrote it stays open until the goose and the boat log."
+    },
+    {
+      "where": "persona (format 1.3 draft)",
+      "text": "Persona choice and the six Knack variants live in tutorial[] until the validator knows case.persona. Word Hoard words hiding in this case's documents: Wednesday (0.2, 0.6), cake and name (0.4), music (Mrs Bellweather); mentor (Quill) and avatar (the face chosen in the app) come from the frame."
+    },
+    {
+      "where": "Chapter 1, end (hook)",
+      "text": "The fog thickens. The gulls go quiet. Far across the harbour, a violin plays four slow notes. Then nothing. Dev: \"Who plays a violin on the water at eight in the morning?\""
+    },
+    {
+      "where": "Chapter 2, end (hook)",
+      "text": "Nell: \"Then why didn't he honk at Mrs Prout last night?\" Quill: \"Good. Hold on to that question. It is the whole case.\""
+    },
+    {
+      "where": "Chapter 3, board opening",
+      "text": "Fog presses on the round window; somewhere out on the water a foghorn sounds. Nell has already pinned a red string from Mrs Prout's portrait to the empty kennel."
+    },
+    {
+      "where": "Chapter 3, end (hook)",
+      "text": "The board is done. Nell's red string still runs from Mrs Prout to the kennel. Then, from the stairs below: Creak. … Creak. … Creak. Dev: \"Three creaks. Someone is coming up.\" Nell: \"Mrs Prout! Come to confess!\""
+    },
+    {
+      "where": "Chapter 4, end (hook)",
+      "text": "The washing line stops swinging. From the bakery's open window, through the steam, comes a small, slow sound. A snore. Felix: \"Was that… the oven?\""
+    },
+    {
+      "where": "accusation room",
+      "text": "The reveal room is the bakery hatch on the foggy quay, the warm kitchen glowing behind it, the three suspect portraits on easels."
+    }
+  ],
+  "arcMarks": [
+    {
+      "span": "card",
+      "note": "the first Blot calling card: \"Read carefully. — B.\" Tam says there was no card when she took Biscuit, so someone came after her; Admiral honked all morning, so it came in the busy morning."
+    }
+  ],
+  "extraMarks": [
+    {
+      "span": "creak",
+      "note": "markable, not needed to solve (the tutorial's practice mark)"
+    }
+  ],
+  "source": {
+    "script": "case-00.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "at",
+      "level": 1,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "0.1",
+        "span": "creak"
+      },
+      "prompt": "Welcome to my Training Desk, detective! I wrote: \"Every thirteenth step creaks\". What does \"creaks\" mean here?",
+      "options": [
+        "wobbles and falls down",
+        "squeaks",
+        "shines"
+      ],
+      "answer": "squeaks",
+      "explain": "A step that creaks makes a squeaky sound when you stand on it. The note is about sounds on the stairs, so \"squeaks\" fits."
+    },
+    {
+      "id": "x2",
+      "tier": "at",
+      "level": 1,
+      "type": "punctuation",
+      "skill": "detail",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "0.3",
+        "span": "crying"
+      },
+      "prompt": "The note says: \"biscuit was crying in the cold\". Which word needs a capital letter?",
+      "options": [
+        "the cold",
+        "biscuit",
+        "was"
+      ],
+      "answer": "biscuit",
+      "explain": "Names start with a capital letter. Biscuit is the dog's name, so it needs a capital B. Without it, Felix thought it was a biscuit you eat!"
+    },
+    {
+      "id": "x3",
+      "tier": "at",
+      "level": 1,
+      "type": "spelling",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "0.3",
+        "span": null
+      },
+      "prompt": "The note ends: \"dont wory\". How do you spell \"wory\" correctly?",
+      "options": [
+        "worry",
+        "wory",
+        "whorry"
+      ],
+      "answer": "worry",
+      "explain": "Worry has a double r: w-o-r-r-y. The writer was in a hurry and left one r out."
+    },
+    {
+      "id": "x4",
+      "tier": "at",
+      "level": 1,
+      "type": "pronoun",
+      "skill": "detail",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "0.4",
+        "span": "strangers"
+      },
+      "prompt": "The sign says: \"His name is Admiral\". Then: \"He honks at strangers\". Who is \"He\"?",
+      "options": [
+        "Constable Tully",
+        "Biscuit",
+        "Admiral"
+      ],
+      "answer": "Admiral",
+      "explain": "\"He\" points back to the name just before it. The sign has just named Admiral, so \"He\" is Admiral the goose."
+    },
+    {
+      "id": "x5",
+      "tier": "at",
+      "level": 1,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 2,
+      "source": {
+        "doc": "0.4",
+        "span": "strangers"
+      },
+      "prompt": "The sign says: \"He honks at strangers\". What is a stranger?",
+      "options": [
+        "a person you don't know",
+        "someone who is lost at sea",
+        "a very odd goose"
+      ],
+      "answer": "a person you don't know",
+      "explain": "A stranger is someone you have never met. Admiral honks at people he does not know, like the new detective on the first morning."
+    },
+    {
+      "id": "x6",
+      "tier": "at",
+      "level": 1,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "0.6",
+        "span": "sailed"
+      },
+      "prompt": "Read Mr Sully's boat log. Put these in order, first to last.",
+      "options": [
+        "Back at the quay",
+        "Sailed out with the tide",
+        "Lots of fish"
+      ],
+      "answer": [
+        "Sailed out with the tide",
+        "Lots of fish",
+        "Back at the quay"
+      ],
+      "explain": "The times show the order: 9.00 comes first, then 1.00 in the night, then 6.00 in the morning. He sailed, he fished, he came back."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 1,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 2,
+      "source": {
+        "doc": "0.S4.Q5",
+        "span": null
+      },
+      "prompt": "Mrs Bellweather says: \"I can hardly see my own buns\". What does \"hardly\" mean here?",
+      "options": [
+        "almost not",
+        "very well",
+        "in a hard way"
+      ],
+      "answer": "almost not",
+      "explain": "\"Hardly\" means only just, or almost not. The kitchen is full of steam, so she can almost not see. It has nothing to do with being hard."
+    },
+    {
+      "id": "h1",
+      "tier": "harder",
+      "level": 2,
+      "type": "punctuation",
+      "skill": "detail",
+      "strand": "sentence",
+      "objective": "s5-apostrophe",
+      "chapter": 1,
+      "source": {
+        "doc": "0.2",
+        "span": null
+      },
+      "prompt": "The report is headed \"Constable Tully's Report\". What does the apostrophe in \"Tully's\" show?",
+      "options": [
+        "A letter has been left out of it",
+        "It is Constable Tully's report",
+        "There are lots of Tullys in town"
+      ],
+      "answer": "It is Constable Tully's report",
+      "explain": "An apostrophe and s after a name shows that something belongs to that person. Tully's report is the report that belongs to Constable Tully."
+    },
+    {
+      "id": "h2",
+      "tier": "harder",
+      "level": 2,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 1,
+      "source": {
+        "doc": "0.4",
+        "span": null
+      },
+      "prompt": "The sign says Admiral honks \"Very, very loudly\". Loudly is loud with -ly added. What does -ly do to the word?",
+      "options": [
+        "It shows how a thing is done",
+        "It makes the word mean 'not loud'",
+        "It means 'more than one'"
+      ],
+      "answer": "It shows how a thing is done",
+      "explain": "Adding -ly to a describing word tells you how something is done. Loud becomes loudly: Admiral honks in a loud way. Think of slow and slowly, or quick and quickly."
+    },
+    {
+      "id": "h3",
+      "tier": "harder",
+      "level": 2,
+      "type": "fact-opinion",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "0.S2.Q2",
+        "span": "win"
+      },
+      "prompt": "Mrs Prout says: \"Duchess must win\". She also says: \"We came yesterday, on the ferry\". Which one is an opinion?",
+      "options": [
+        "Duchess must win",
+        "We came yesterday, on the ferry",
+        "Both are facts"
+      ],
+      "answer": "Duchess must win",
+      "explain": "A fact can be checked: the ferry has a list of who came yesterday. An opinion is what someone thinks or wants. \"Duchess must win\" is what Mrs Prout wants, not something that happened."
+    },
+    {
+      "id": "h4",
+      "tier": "harder",
+      "level": 2,
+      "type": "figurative",
+      "skill": "inference",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "0.S3.Q1",
+        "span": null
+      },
+      "prompt": "Mr Sully says: \"He'd follow me to the moon for a sardine\". What does he really mean?",
+      "options": [
+        "Biscuit really went to the moon once",
+        "He would go anywhere for fish",
+        "Mr Sully's boat can reach the moon"
+      ],
+      "answer": "He would go anywhere for fish",
+      "explain": "This is a figure of speech. Nobody can walk to the moon. Mr Sully means Biscuit loves fish so much he would follow him anywhere to get some."
+    },
+    {
+      "id": "h5",
+      "tier": "harder",
+      "level": 2,
+      "type": "sentence-combine",
+      "skill": "inference",
+      "strand": "sentence",
+      "objective": "s6-join",
+      "chapter": 2,
+      "source": {
+        "doc": "0.S2.Q3",
+        "span": null
+      },
+      "prompt": "Mrs Prout says: \"Duchess snores, so I hardly slept\". Which word joins the two parts and tells you why?",
+      "options": [
+        "snores",
+        "hardly",
+        "so"
+      ],
+      "answer": "so",
+      "explain": "\"So\" joins two ideas and shows that the first one caused the second. Duchess snored, so Mrs Prout hardly slept."
+    },
+    {
+      "id": "h6",
+      "tier": "harder",
+      "level": 2,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 3,
+      "source": {
+        "doc": "0.2",
+        "span": "nohonk"
+      },
+      "prompt": "Constable Tully writes: \"Not one honk all night\". The sign says Admiral honks at strangers. What can you work out?",
+      "options": [
+        "Admiral was asleep in the kennel",
+        "Admiral had lost his voice",
+        "No stranger came near Admiral"
+      ],
+      "answer": "No stranger came near Admiral",
+      "explain": "Admiral honks at every stranger, and Tully hears every honk. So if there was no honk, no stranger came by. Sometimes the clue is what did not happen."
+    },
+    {
+      "id": "h7",
+      "tier": "harder",
+      "level": 2,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "0.S4.Q5",
+        "span": "snore"
+      },
+      "prompt": "Case closed! Mrs Bellweather heard her oven make \"A sort of snore\". What was really snoring?",
+      "options": [
+        "the hot oven, cooling down",
+        "Biscuit",
+        "Admiral the goose"
+      ],
+      "answer": "Biscuit",
+      "explain": "Ovens hum, but they do not snore. Biscuit was fast asleep in the bun basket right by the oven, so the snore was his."
+    },
+    {
+      "id": "h8",
+      "tier": "harder",
+      "level": 2,
+      "type": "punctuation",
+      "skill": "detail",
+      "strand": "sentence",
+      "objective": "s5-apostrophe",
+      "chapter": 4,
+      "source": {
+        "doc": "0.3",
+        "span": null
+      },
+      "prompt": "The note says \"dont wory\". Where should the apostrophe go in \"dont\"?",
+      "options": [
+        "dont'",
+        "do'nt",
+        "don't"
+      ],
+      "answer": "don't",
+      "explain": "Don't is short for do not. The apostrophe goes where the letter o was left out: don't."
+    }
+  ]
+}

@@ -1,0 +1,2234 @@
+{
+  "format": 1.1,
+  "id": "case-09",
+  "number": 9,
+  "title": "The Bottle on the Lake",
+  "label": "A Bizzing mystery",
+  "level": 4,
+  "world": "lakeside",
+  "setting": "the slipway, the boathouse, the island lighthouse, the Regatta office",
+  "skills": [
+    "figurative",
+    "voice",
+    "inference",
+    "punctuation"
+  ],
+  "vanishedWord": "WORD",
+  "ledgerIndex": 9,
+  "officeObject": {
+    "id": "bottle",
+    "name": "the message bottle",
+    "art": "brown glass, a cork, black wax pressed into a perfect round blot, the poem rolled and tied with plain string; on the shelf beside the map-maker's compass."
+  },
+  "arc": [
+    {
+      "thread": "A",
+      "beat": "The Blot's riddle-poem: the Blot is now known to be a puzzle-maker, not a vandal",
+      "docs": [
+        "9.1"
+      ],
+      "in": "epilogue"
+    },
+    {
+      "thread": "A",
+      "beat": "The Blot Ledger reads UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD…",
+      "docs": [],
+      "in": "epilogue"
+    },
+    {
+      "thread": "A",
+      "beat": "A lady with a violin case visits the lighthouse; a lady paints the boathouse roof (a seed for Case 11; never named)",
+      "docs": [
+        "9.4",
+        "9.8",
+        "9.S1.Q4"
+      ]
+    },
+    {
+      "thread": "A",
+      "beat": "Someone plays a fiddle on the dark shore on Friday night, and again when the word shines (the Blot is close; never seen)",
+      "docs": [
+        "9.11"
+      ]
+    },
+    {
+      "thread": "B",
+      "beat": "Crane pulled his sponsorship from the Regatta (\"not a good fit for the Experience\")",
+      "docs": [
+        "9.S3.Q4"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Ada writes a letter \"to an old address\" (her first step back towards Odile)",
+      "docs": [
+        "9.9"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Asha's case: she finds the bottle, and races in the eights the next afternoon",
+      "docs": [
+        "9.10"
+      ],
+      "in": "epilogue"
+    },
+    {
+      "thread": "C",
+      "beat": "Nell keeps her Case 8 promise to wait for the evidence, almost",
+      "docs": [],
+      "in": "epilogue"
+    }
+  ],
+  "tutorial": [],
+  "card": {
+    "text": "At dawn, an oar knocks a bottle in the mist. Inside is a poem, sealed with a perfect ink blot. It says the lighthouse will go dark on Regatta night. The fireworks are cancelled. At seven tonight, the committee decides if there is a Regatta at all. A poem is not a newspaper. Read it the way it was written.",
+    "readAloud": false
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The slipway at dawn",
+      "picture": "Mist lies on the lake so thick that the oars vanish into it. Asha's rowing eight glides in, eight breaths and one creak. An oar goes *clunk*, on something that is not wood.",
+      "lines": [
+        {
+          "who": "ASHA",
+          "text": "Easy all. What was that?"
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "The slipway at dawn",
+      "picture": "Asha leans over and lifts a brown bottle, cold and dripping, its cork sealed with black wax pressed into a perfect blot. Somewhere out in the mist, the lighthouse lamp sweeps by, a pale smear.",
+      "lines": [
+        {
+          "who": "ASHA",
+          "mode": "whispering",
+          "text": "The Blot. On our lake."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "The boathouse noticeboard, 10 am",
+      "picture": "Mr Fosse, clipboard under one arm, pins a typed notice to the board with a red crayon box round three lines. A small crowd reads it. Somebody gasps.",
+      "lines": [
+        {
+          "who": "MR FOSSE",
+          "text": "Committee at seven tonight! If this isn't settled, there's no Regatta at all. Safety first!"
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "place": "The agency's round window, afternoon",
+      "picture": "Rain begins to tick on the glass. Quill reads the Gazette's front page. Nell is already pulling on her jacket.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "Me and Asha will take the lighthouse."
+        },
+        {
+          "who": "QUILL",
+          "text": "Asha and *I*. Take it anyway. Seven o'clock is not far off."
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "place": "The island lighthouse",
+      "picture": "White and calm across the grey water, a single gull on its gallery rail. On the near shore, the long grey boathouse roof, in plain view of the whole lawn. Nothing on it at all.",
+      "lines": []
+    }
+  ],
+  "cast": [
+    {
+      "id": "quayle",
+      "name": "Mrs Morwenna Quayle",
+      "age": 62,
+      "title": "keeper of the island lighthouse",
+      "role": "suspect",
+      "look": "Weathered and broad-shouldered, a cable-knit jumper, oilskin hat, reading glasses on a cord, a tin of lamp oil never far away",
+      "manner": "Blunt, warm, says exactly what she means; counts everything",
+      "expressions": [
+        "calm",
+        "offended",
+        "amused",
+        "relieved",
+        "thoughtful"
+      ],
+      "expressionNotes": {
+        "thoughtful": "for Q5: glasses pushed up, looking out to the water"
+      },
+      "unlockedBy": null,
+      "motive": "the fireworks frighten her swallows, and she holds the only shutters on the lake",
+      "secret": "on Friday night she rowed out and fished one of Lyle's green bottles from the water, because the poem inside was written for her, and she wanted to keep it (\"Private\" in her log)"
+    },
+    {
+      "id": "asante",
+      "name": "Mr Lyle Asante",
+      "age": 29,
+      "title": "Poet in Residence at the Lakeside Café",
+      "role": "suspect",
+      "look": "Tall and thin, a long striped scarf even in summer, ink on one cuff, a satchel of green bottles that clink",
+      "manner": "Gentle and dramatic; rhymes without meaning to when he is nervous (running joke)",
+      "expressions": [
+        "calm",
+        "nervous",
+        "offended",
+        "amused",
+        "relieved"
+      ],
+      "expressionNotes": {
+        "nervous": "tugging his scarf"
+      },
+      "unlockedBy": null,
+      "motive": "a threat in a bottle made the front page; his twelve poems in bottles made nothing",
+      "secret": "all week he has been trying, in secret, to write a poem without rhyme, like the Blot's, and every attempt rhymes by the second line"
+    },
+    {
+      "id": "fosse",
+      "name": "Mr Barnaby Fosse",
+      "age": 55,
+      "title": "Regatta Secretary (the organiser)",
+      "role": "suspect",
+      "look": "Round, pink-cheeked, a blazer with brass buttons, a clipboard, a whistle on a lanyard",
+      "manner": "Fussy, cheerful in a hurry; says \"budget-wise\" and \"safety first\"",
+      "expressions": [
+        "calm",
+        "nervous",
+        "offended",
+        "guilty",
+        "relieved"
+      ],
+      "expressionNotes": {
+        "guilty": "hat in hands, sitting on the box of whistles"
+      },
+      "unlockedBy": null,
+      "motive": "the Regatta cannot pay for the fireworks, and a \"threat\" would hide it",
+      "secret": "he sold his own sailing dinghy to pay for the prize cups, and told nobody"
+    },
+    {
+      "id": "blot",
+      "name": "\"The Blot\"",
+      "role": "suspect",
+      "look": "No face: a white calling card with a perfect ink blot, painted as a portrait on cork",
+      "manner": "Answers only through the agency's own records (the Ledger, Quill)",
+      "expressions": [
+        "card-turns"
+      ],
+      "expressionNotes": {
+        "card-turns": "one image; the card turns in the light"
+      },
+      "unlockedBy": null,
+      "motive": "a word must be found, and only a careful reader will find it",
+      "secret": "the poem is not a warning at all, but a set of instructions"
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": "",
+      "manner": "deerstalker on, a small life-jacket over it (Constable Tully insisted). Running joke: grammar at the worst moment.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha Raman",
+      "role": "agency",
+      "look": "",
+      "manner": "rowing captain; finds the bottle at practice; races in the eights on Sunday.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "dev",
+      "name": "Dev Raman",
+      "role": "agency",
+      "look": "",
+      "manner": "reads the Blot's cards as patterns; keeps the Ledger. The torch argument happens on the lighthouse stair.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "nell",
+      "name": "Nell Okafor-Hart",
+      "role": "agency",
+      "look": "",
+      "manner": "hunch-o-meter: Mrs Quayle, 9, then 10. Wrong about the tens, again; this time she says so out loud.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix Moreno-Lindqvist",
+      "role": "agency",
+      "look": "",
+      "manner": "footnotes *regatta*, *metaphor* and *slipway*. Not allergic to lakes. Finally, a case without sneezing. (He sneezes once, at the fireworks.)",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "helper",
+      "look": "",
+      "manner": "brings the original poem from Mr Fosse's drawer, and cocoa in a flask; is sent, very unwillingly, to collect Mrs Quayle's lighthouse keys for the Harbour Master; finds Biscuit.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "otterburn",
+      "name": "Mr Gil Otterburn",
+      "role": "witness",
+      "look": "",
+      "manner": "the boathouse keeper; a man of few words, all of them written in his boathouse book.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "pyke",
+      "name": "Mrs Dolores Pyke",
+      "role": "witness",
+      "look": "",
+      "manner": "of Pyke and Daughters, firework makers; appears in her letter, and on Regatta night.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "ada",
+      "name": "Inspector Ada Holloway",
+      "role": "helper",
+      "look": "",
+      "manner": "by note only (DOC 9.9).",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "achterberg",
+      "name": "Mrs Achterberg",
+      "role": "helper",
+      "look": "",
+      "manner": "by note only (DOC 9.9).",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "role": "helper",
+      "look": "",
+      "manner": "delivers Ada's note; is first in the queue for buns on Regatta night.",
+      "expressions": [],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "9.1",
+      "chapter": "scene",
+      "type": "other",
+      "scriptType": "poem (the original)",
+      "title": "Poem (the original) — signed \"— B.\"",
+      "author": "signed \"— B.\"",
+      "when": "found Saturday, twenty past six in the morning",
+      "where": "in a brown bottle at the slipway, by Asha Raman; later kept in Mr Fosse's office drawer",
+      "picture": "thick cream paper, curling at the edges, written in a careful upright hand; a perfect ink blot below the last line; a small white calling card curled in the bottle's neck.",
+      "readAloud": false,
+      "body": "The swallows will fold their wings.\n[[c:lastoar|The last oar will lie on the grass like a spoon beside a plate.]]\nThen [[c:eye|the eye of the island will close to see]].\nDo not be afraid when the lighthouse [[c:godark|goes dark]].\n[[c:origcomma|No boats will be out, when the eye of the island closes]].\n[[c:knot|One knot in its eyelid will stay open.]]\nThrough it, [[c:finger|one long finger of light]] will cross the water.\nIt will touch [[c:roof|the sleeping back of the house where boats sleep]].\nThere, [[c:waited|a word has waited all summer, invisible as breath]].\n[[c:tenthbell|At the tenth bell]], it will shine.\nRead it, and keep it. It is the next one.\n[[c:blotsign|— B.]]\nTucked into the bottle's neck, a small white card with a perfect ink blot: [[c:card9|\"Look where the light falls. — B.\"]]"
+    },
+    {
+      "id": "9.2",
+      "chapter": "scene",
+      "type": "notice",
+      "scriptType": "notice",
+      "title": "Notice — Mr Barnaby Fosse, Regatta Secretary",
+      "author": "Mr Barnaby Fosse, Regatta Secretary",
+      "when": "Saturday, 10:00 am",
+      "where": "pinned to the boathouse noticeboard",
+      "picture": "a typed sheet with a red-crayon box drawn round three lines; four drawing pins, one missing.",
+      "readAloud": false,
+      "body": "REGATTA WARNING\n[[c:threathead|A THREAT has been found in a bottle on our lake.]]\nHere are the important lines, [[c:exactly|typed exactly as written]]:\n\"Then the eye of the island will close to see.\nDo not be afraid when the lighthouse goes dark.\n[[c:typedcomma|No, boats will be out when the eye of the island closes]].\"\n[[c:fosseopinion|This is plainly a threat to put out the light while our boats are racing.]]\n[[c:cancelnote|For everyone's safety, the fireworks are cancelled.]] All crews must keep close to the shore.\n[[c:committee|The committee meets at 7 pm tonight to decide if the Regatta goes ahead at all.]]\nThe original is locked in my office for the constable.\nB. Fosse, Regatta Secretary"
+    },
+    {
+      "id": "9.3",
+      "chapter": "scene",
+      "type": "letter",
+      "scriptType": "letter",
+      "title": "Letter — Mrs Dolores Pyke, Pyke and Daughters, Firework Makers",
+      "author": "Mrs Dolores Pyke, Pyke and Daughters, Firework Makers",
+      "when": "dated Friday",
+      "where": "opened, on Mr Fosse's desk in the Regatta office, under a tide table",
+      "picture": "a cheerful letterhead of painted rockets (no lettering in the painting), a coffee ring.",
+      "readAloud": false,
+      "body": "Dear Mr Fosse,\n[[c:thursday|Thank you for your letter of Thursday]].\nWe are sorry to hear that [[c:afford|the Regatta cannot afford fireworks this year]]. We have unpacked your rockets and put them back on the shelf.\nIf the money turns up, we could still fire on Sunday night. Rockets are patient. They will keep.\nThis year we also made a quiet display, all colour and very little bang. It was for the swallows, as Mrs Quayle once asked. What a pity.\nWith good wishes to the Regatta,\nDolores Pyke\nFriday"
+    },
+    {
+      "id": "9.4",
+      "chapter": "scene",
+      "type": "log",
+      "scriptType": "log",
+      "title": "Log — Mrs Morwenna Quayle, lighthouse keeper",
+      "author": "Mrs Morwenna Quayle, lighthouse keeper",
+      "when": "Thursday and Friday",
+      "where": "on the lamp-room table in the island lighthouse",
+      "picture": "a salt-stained logbook, columns of numbers, a pencil tied on with string.",
+      "readAloud": false,
+      "body": "ISLAND LIGHT — KEEPER'S LOG\nThursday. Lit 7:52 pm. Out 6:31 am. Wind south-west, 3. Oil, 4 pints.\n[[c:violin|3 pm: a visitor, a lady with a violin case. Asked how the fog shutters work.]] Showed her. Good manners. Gave no name.\nFriday. Lit 7:50 pm. Out 6:33 am. Wind west, 2. Oil, 4 pints.\n[[c:greenbottles|Sunset: twelve green bottles bobbing past the island.]] The poet's nonsense again.\n[[c:private|10 pm: took the dinghy out, towards the slipway. Back 10:40. Private.]]\nShutters: eight wooden panels round the lamp. [[c:fogonly|Closed only in fog.]]\n[[c:knothole|Panel 3 has a knot-hole the size of a coin.]] [[c:faces|It faces the boathouse.]] Must mend it.\n[[c:nevermissed|This light has not missed a night in thirty-one years.]]\nM. Quayle"
+    },
+    {
+      "id": "9.5",
+      "chapter": "scene",
+      "type": "other",
+      "scriptType": "poems",
+      "title": "Poems — Mr Lyle Asante",
+      "author": "Mr Lyle Asante",
+      "when": "from his pamphlet *Lakeside Lines*, printed in June",
+      "where": "a pile of them on the café counter",
+      "picture": "a small stapled pamphlet, two poems, each ending in a tiny drawn swallow.",
+      "readAloud": false,
+      "body": "Swallow Song\nAbove the lake the swallows fly\nand stitch a seam across the sky.\nThey hem the cloud and mend the blue,\nthen fold the evening up for you.\n— L.A. (a little drawn swallow)\nThe Island Lamp\n(for Mrs Quayle)\nEach night she climbs the curling stair\nto light the lamp and leave it there.\n[[c:neversleeps|It turns all night, it never sleeps]],\na golden promise that she keeps.\n[[c:lasign|— L.A. (a little drawn swallow)]]"
+    },
+    {
+      "id": "9.6",
+      "chapter": "scene",
+      "type": "poster",
+      "scriptType": "flyer",
+      "title": "Flyer — Mr Lyle Asante",
+      "author": "Mr Lyle Asante",
+      "when": "Friday",
+      "where": "taped to the café window",
+      "picture": "a hand-drawn flyer, green ink, a border of tiny bottles and swallows.",
+      "readAloud": false,
+      "body": "MESSAGES ON THE WATER\nA gift for Regatta weekend!\n[[c:twelve|On Friday at sunset, I will set twelve green bottles on the lake.]] Each holds a poem for a child to find.\n[[c:rhymes|Every one has a title, every one rhymes, and every one is signed with my little swallow.]]\nIf you find one, keep it. Or write your own and send it back to the water.\n[[c:boatnooars|In my opinion, a poem that does not rhyme is a boat without oars.]]\nLyle Asante\nPoet in Residence, the Lakeside Café"
+    },
+    {
+      "id": "9.7",
+      "chapter": "scene",
+      "type": "programme",
+      "scriptType": "programme",
+      "title": "Programme — the Regatta committee (organiser: B. Fosse)",
+      "author": "the Regatta committee (organiser: B. Fosse)",
+      "when": "printed two weeks ago",
+      "where": "a stack on the boathouse table",
+      "picture": "a folded card programme with a painted rowing eight on the front (no lettering in the painting).",
+      "readAloud": false,
+      "body": "THE INKWELL REGATTA — Sunday\n2:00 pm · Junior sculls\n4:30 pm · Rowing club eights (captain: A. Raman)\n7:45 pm · Lantern parade of boats\n[[c:lasthome|8:30 pm · Last boats home]]\n[[c:closes9|9:00 pm · The lake closes to all boats. No exceptions.]]\n9:30 pm · Fireworks over the water\n10:00 pm · Prizes, on the lawn opposite the boathouse\nTea and buns all day by Bellweather's Bakery.\nOrganiser: B. Fosse, Regatta Secretary"
+    },
+    {
+      "id": "9.8",
+      "chapter": "scene",
+      "type": "log",
+      "scriptType": "book",
+      "title": "Book — Mr Gil Otterburn, boathouse keeper",
+      "author": "Mr Gil Otterburn, boathouse keeper",
+      "when": "May to July",
+      "where": "hanging on a nail inside the boathouse door",
+      "picture": "a damp-cornered notebook, a pencil stub, a sketch of a swallow's nest.",
+      "readAloud": false,
+      "body": "BOATHOUSE BOOK — summer notes\nMay. Roof re-tarred. [[c:heron|Grey as a heron.]]\n[[c:june|June. A lady offered to paint the roof for nothing.]] Said she liked heights and owed the town a kindness.\nShe brought [[c:silver|a tin of silver-grey paint]] and a ladder. Worked one whole night, by lantern.\n[[c:cantsee|Next morning I couldn't see what she'd done.]] Roof as grey as before. Odd.\nShe left a tin of toffees and a note: [[c:keeptill|\"It will keep till it's needed.\"]]\nJuly. Swallows nesting under the eaves. Doors to stay open.\n[[c:viewpoint|From the lawn opposite you can see the whole roof, end to end.]]\nG. Otterburn"
+    },
+    {
+      "id": "9.9",
+      "chapter": "scene",
+      "type": "note",
+      "scriptType": "note",
+      "title": "Note — Inspector Ada Holloway (retired)",
+      "author": "Inspector Ada Holloway (retired)",
+      "when": "Saturday, 4 pm",
+      "where": "delivered by Tam Bellweather, out of breath, with a bun",
+      "picture": "blue writing paper, a faint teacup ring, a small pressed violet tucked in the fold.",
+      "readAloud": false,
+      "body": "My dear detectives,\nConstable Tully tells me there is a poem in a bottle, and half the town is frightened of it.\nTwo things.\nFirst, [[c:original|always read the original. A copy is only as good as the hands that made it.]]\nSecond, Winifred says, [[c:keyhole|\"Close the curtain, and the keyhole shines.\"]] She will not explain. She never does.\n[[c:asapoem|Read a poem as a poem, not as a newspaper.]]\nI have written a letter tonight, to an old address. It will very likely come back.\nMy tea has gone cold again. Semicolon sends his regards; therefore.\nA.H."
+    },
+    {
+      "id": "9.10",
+      "chapter": "scene",
+      "type": "other",
+      "scriptType": "newspaper",
+      "title": "Newspaper — the *Lakeside Gazette*, Regatta Special",
+      "author": "the *Lakeside Gazette*, Regatta Special",
+      "when": "Saturday afternoon",
+      "where": "a copy on every café table",
+      "picture": "a folded newspaper with a painted photograph of the bottle on a jetty (headline set live by the app).",
+      "readAloud": false,
+      "body": "THREAT IN A BOTTLE?\nA poem found on the lake has alarmed the Regatta.\n[[c:fossesaid|\"It is a threat, plain and simple,\" said Regatta Secretary Barnaby Fosse.]] [[c:thismorning|\"I cancelled the fireworks this morning, the moment I read it.\"]]\nLighthouse keeper Morwenna Quayle disagreed. [[c:quaylesaid|\"Nobody darkens my light while a boat is on the water. Nobody.\"]]\nPoet Lyle Asante denied writing it. \"It doesn't even rhyme,\" he said, looking hurt.\nThe bottle was found [[c:found|at twenty past six on Saturday morning]] by rowing captain Asha Raman, 12.\nMrs Quayle has complained about the fireworks before. [[c:stiffletter|Last year she wrote that they 'frighten the swallows out of their feathers'.]]\n\"Safety first, budget second,\" said Mr Fosse."
+    },
+    {
+      "id": "9.11",
+      "chapter": "scene",
+      "type": "note",
+      "scriptType": "note (arrives in chapter 4)",
+      "title": "Note — Mrs Morwenna Quayle",
+      "author": "Mrs Morwenna Quayle",
+      "when": "Saturday, 5 pm",
+      "where": "brought across the lake by Mrs Quayle herself, rowing in the rain",
+      "picture": "a page torn from the back of the keeper's log, salt-stained, a column of numbers showing through from the other side; beside it, a green bottle with a blue ribbon and a little paper swallow.",
+      "readAloud": false,
+      "arrivesInChapter": 4,
+      "body": "Detectives,\nYou read \"Private\" in my log. Here is private.\n[[c:greenone|On Friday night I rowed after one green bottle, nearly to the slipway, and fished it out.]]\n[[c:forme|Inside was \"The Island Lamp\". It is a poem about my light, written for me.]]\nNobody has written me a poem in sixty-two years. I did not want a child to find it first. Soppy. I know.\nI never touched a brown bottle. Don't tell the poet I kept it.\n[[c:fiddle|P.S. Someone was on the shore by the slipway, playing a fiddle in the dark. I saw no face.]]\nWind west, 2. Oil, 4 pints.\nM. Quayle"
+    },
+    {
+      "id": "9.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q1",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "With the fog shutters, yes. Eight wooden panels round the lamp. I close them only in thick fog, so the light won't dazzle the crews. Panel 3 has that knot-hole. [[c:onebeam|With the shutters closed, it throws one thin beam, straight across to the boathouse.]]"
+    },
+    {
+      "id": "9.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q2",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Me? I write numbers. Wind, oil, hours. [[c:numbers|I couldn't write a poem if you paid me in kippers.]] Ask that poet. He rhymes at the breakfast table."
+    },
+    {
+      "id": "9.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q3",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "No, I don't. The swallows nest under my gallery, and the bangs send them flapping. I wrote Barnaby a stiff letter last year. [[c:notthreat|But a stiff letter isn't a threat. It's a stiff letter.]]"
+    },
+    {
+      "id": "9.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q4",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "A lady came on Thursday afternoon, with a violin case. She asked lovely questions. I showed her the knot-hole. [[c:useful|She said, 'Leave that one. Some holes are useful.']] I thought it was a joke."
+    },
+    {
+      "id": "9.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q5",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Not while a single boat is on the water. Never. But the lake closes at nine. After that, the water's empty. Show me it's safe, and I'll listen."
+    },
+    {
+      "id": "9.S1.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mrs Morwenna Quayle, Q6",
+      "author": "Mrs Morwenna Quayle",
+      "when": "",
+      "where": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "picture": "",
+      "readAloud": false,
+      "body": "[[c:privatemeans|It says \"Private\", and private is what it means.]] I was back by twenty to eleven. My light was never alone longer than a kettle takes to cool. That's all you're getting, young lady, and you can stop writing it down."
+    },
+    {
+      "id": "9.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q1",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Mine are green, and this is brown. / Mine wear ribbons; this has none. / Oh dear. I'm rhyming. I do that when I'm worried. No. It isn't mine."
+    },
+    {
+      "id": "9.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q2",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Asleep, at twenty past six! Poets don't do dawn. I launched my twelve on Friday at sunset, from the café jetty. Mrs Quayle saw them go by. She called them nonsense, I expect. [[c:elevenback|Eleven children have brought me thank-you notes. One green bottle is still out there somewhere.]]"
+    },
+    {
+      "id": "9.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q3",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "It's good. Annoyingly good. [[c:riddle|It's not a threat, it's a riddle.]] Threats are plain. They want to be understood. [[c:eyelamp|'The eye of the island' isn't an eye at all. It's the lamp.]]"
+    },
+    {
+      "id": "9.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q4",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Because whoever wrote it isn't me! [[c:alwaysrhyme|I always rhyme. I've rhymed since I was four.]] My first poem was about a cat who sat. It was very short, and very good."
+    },
+    {
+      "id": "9.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q5",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Everyone's heard of the Blot. The words that go missing in the Library. I've never met the Blot. But I'd like to. Anyone who writes \"invisible as breath\" is worth a cup of tea."
+    },
+    {
+      "id": "9.S2.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Lyle Asante, Q6",
+      "author": "Mr Lyle Asante",
+      "when": "",
+      "where": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Oh no. Those are private. Oh, you've already smoothed one out. [[c:norhyme|All week I've been trying to write a poem with no rhyme at all, like the Blot's.]] Attempt number nine. [[c:attempt9|\"The lake is grey. The boats are still. / The swallows sleep upon the hill.\"]] It rhymed! [[c:linetwo|They always rhyme by the second line.]] I'm hopeless. Please don't tell the café."
+    },
+    {
+      "id": "9.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Barnaby Fosse, Q1",
+      "author": "Mr Barnaby Fosse",
+      "when": "",
+      "where": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "picture": "",
+      "readAloud": false,
+      "body": "So everyone could read it on the board! The original is in spidery handwriting. I typed the important lines. Two fingers, very fast. I'm a busy man, Regatta weekend."
+    },
+    {
+      "id": "9.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Barnaby Fosse, Q2",
+      "author": "Mr Barnaby Fosse",
+      "when": "",
+      "where": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "picture": "",
+      "readAloud": false,
+      "body": "[[c:everyword|Every word the same! I checked.]] Well. I checked the words."
+    },
+    {
+      "id": "9.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Barnaby Fosse, Q3",
+      "author": "Mr Barnaby Fosse",
+      "when": "",
+      "where": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "picture": "",
+      "readAloud": false,
+      "body": "As I told the Gazette. Now, let's talk about safety, shall we? Safety is what matters. Safety first."
+    },
+    {
+      "id": "9.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Barnaby Fosse, Q4",
+      "author": "Mr Barnaby Fosse",
+      "when": "",
+      "where": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Budget-wise? Tight as a reef knot. [[c:sponsor|Our big sponsor pulled out in September.]] A Mr Crane. He said a regatta was \"not a good fit for the Experience\". Whatever that means."
+    },
+    {
+      "id": "9.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — Mr Barnaby Fosse, Q5",
+      "author": "Mr Barnaby Fosse",
+      "when": "",
+      "where": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Locked in my desk drawer, for the constable. Nobody has touched it since I typed it out. Except me. And the drawer."
+    },
+    {
+      "id": "9.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — \"The Blot\", Q1",
+      "author": "\"The Blot\"",
+      "when": "",
+      "where": "There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and Quill.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Blot Ledger, notes by Dev. Eight cases, eight words, one card each time. Words hidden, never torn out. [[c:noharm|Nobody hurt. Nothing broken. Not one page torn.]] Every card is a puzzle, not a warning."
+    },
+    {
+      "id": "9.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — \"The Blot\", Q2",
+      "author": "\"The Blot\"",
+      "when": "",
+      "where": "There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and Quill.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Notes by Dev. [[c:blotstyle|Always signs '— B.' with a dash. Never a title. Never a rhyme.]] Short sentences. Felix says the Blot writes like someone who expects to be read twice."
+    },
+    {
+      "id": "9.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — \"The Blot\", Q3",
+      "author": "\"The Blot\"",
+      "when": "",
+      "where": "There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and Quill.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Quill: Not found yet. The poem says a word has waited all summer. So it is already somewhere. Somewhere we can't see it yet. Somewhere a light could show us."
+    },
+    {
+      "id": "9.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "scriptType": "interview answer",
+      "title": "Interview — \"The Blot\", Q4",
+      "author": "\"The Blot\"",
+      "when": "",
+      "where": "There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and Quill.",
+      "picture": "",
+      "readAloud": false,
+      "body": "Quill: Show me the line that says anyone will be hurt. Then read the original, not the copy. Then tell me again."
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "quayle",
+      "setting": "Interviewed in the lamp room at the top of the lighthouse, 112 steps up. (Dev counted. Asha checked.) The great lamp ticks as it turns, and the wind hums in the gallery rail. The room smells of paraffin and wet wool. The Ramans argue, in whispers, about whose turn it was to carry the torch on the stair. Nell's hunch-o-meter reads 9. She does not cross it out.",
+      "questions": [
+        {
+          "id": "quayle-q1",
+          "type": "what",
+          "q": "Could the lighthouse really go dark?",
+          "answerDoc": "9.S1.Q1",
+          "expression": "calm"
+        },
+        {
+          "id": "quayle-q2",
+          "type": "who",
+          "q": "Did you write the poem?",
+          "answerDoc": "9.S1.Q2",
+          "expression": "amused"
+        },
+        {
+          "id": "quayle-q3",
+          "type": "why",
+          "q": "You don't like the fireworks, do you?",
+          "answerDoc": "9.S1.Q3",
+          "expression": "offended"
+        },
+        {
+          "id": "quayle-q4",
+          "type": "when",
+          "q": "Who has seen the shutters lately?",
+          "answerDoc": "9.S1.Q4",
+          "expression": "calm"
+        },
+        {
+          "id": "quayle-q5",
+          "type": "where",
+          "q": "Would you ever close the shutters on Regatta night?",
+          "answerDoc": "9.S1.Q5",
+          "expression": "calm",
+          "thenExpression": "thoughtful"
+        },
+        {
+          "id": "quayle-q6",
+          "type": "where",
+          "q": "Your log says you took the dinghy out on Friday night. Where did you go?",
+          "answerDoc": "9.S1.Q6",
+          "expression": "offended",
+          "after": "Nell writes it down. Under the table, the hunch-o-meter creeps up to 10."
+        }
+      ]
+    },
+    {
+      "suspect": "asante",
+      "setting": "Interviewed at the café, among clinking empty bottles. Rain runs down the windows in green ribbons. He is wearing his scarf twice round. By the counter, a wastepaper basket is full to the brim with crumpled paper.",
+      "questions": [
+        {
+          "id": "asante-q1",
+          "type": "what",
+          "q": "Is this your bottle?",
+          "answerDoc": "9.S2.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "asante-q2",
+          "type": "when",
+          "q": "Where were you when the bottle was found?",
+          "answerDoc": "9.S2.Q2",
+          "expression": "amused"
+        },
+        {
+          "id": "asante-q3",
+          "type": "what",
+          "q": "What do you think the poem means?",
+          "answerDoc": "9.S2.Q3",
+          "expression": "calm"
+        },
+        {
+          "id": "asante-q4",
+          "type": "why",
+          "q": "Why doesn't the poem rhyme?",
+          "answerDoc": "9.S2.Q4",
+          "expression": "offended"
+        },
+        {
+          "id": "asante-q5",
+          "type": "who",
+          "q": "Do you know who 'B.' is?",
+          "answerDoc": "9.S2.Q5",
+          "expression": "calm"
+        },
+        {
+          "id": "asante-q6",
+          "type": "what",
+          "q": "What's in your wastepaper basket?",
+          "answerDoc": "9.S2.Q6",
+          "expression": "nervous"
+        }
+      ]
+    },
+    {
+      "suspect": "fosse",
+      "setting": "Interviewed in the Regatta office, behind a desk of programmes, whistles and unpaid bills. Rain drums on the tin roof. The clock above the door ticks loudly, and Mr Fosse looks at it every time it does.",
+      "questions": [
+        {
+          "id": "fosse-q1",
+          "type": "why",
+          "q": "Why did you type a copy of the poem?",
+          "answerDoc": "9.S3.Q1",
+          "expression": "calm"
+        },
+        {
+          "id": "fosse-q2",
+          "type": "what",
+          "q": "Is your copy exactly the same as the original?",
+          "answerDoc": "9.S3.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "fosse-q3",
+          "type": "when",
+          "q": "When did you cancel the fireworks?",
+          "answerDoc": "9.S3.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "fosse-q4",
+          "type": "what",
+          "q": "How is the Regatta's money?",
+          "answerDoc": "9.S3.Q4",
+          "expression": "guilty"
+        },
+        {
+          "id": "fosse-q5",
+          "type": "where",
+          "q": "Where is the original poem now?",
+          "answerDoc": "9.S3.Q5",
+          "expression": "calm"
+        }
+      ]
+    },
+    {
+      "suspect": "blot",
+      "setting": "There is no one to interview. The questions are answered from the agency's own records: the Blot Ledger, kept by Dev, and Quill.",
+      "questions": [
+        {
+          "id": "blot-q1",
+          "type": "what",
+          "q": "What has the Blot done before?",
+          "answerDoc": "9.S4.Q1",
+          "expression": "card-turns",
+          "expressionNote": "the card turns in the light"
+        },
+        {
+          "id": "blot-q2",
+          "type": "what",
+          "q": "How does the Blot write?",
+          "answerDoc": "9.S4.Q2",
+          "expression": "card-turns",
+          "expressionNote": "the card turns"
+        },
+        {
+          "id": "blot-q3",
+          "type": "where",
+          "q": "Where is this case's word?",
+          "answerDoc": "9.S4.Q3",
+          "expression": "card-turns",
+          "expressionNote": "the card turns"
+        },
+        {
+          "id": "blot-q4",
+          "type": "why",
+          "q": "Is the poem a threat?",
+          "answerDoc": "9.S4.Q4",
+          "expression": "card-turns",
+          "expressionNote": "the card turns"
+        }
+      ],
+      "answeredBy": "the agency's own records: the Blot Ledger, kept by Dev, and Quill"
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "meaning",
+      "skill": "punctuation",
+      "statement": "The original says 'No boats will be out', which means zero boats. The copy says 'No, boats will be out', which means 'No! There will be boats out.' Mr Fosse checked the words but not the commas.",
+      "spans": [
+        "origcomma",
+        "typedcomma",
+        "exactly",
+        "everyword",
+        "original"
+      ],
+      "why": "The \"threat\" lives only in the copy. The poem as the Blot wrote it says the lighthouse will go dark when *no* boats are out. (Ada's note, [c:original] \"always read the original. A copy is only as good as the hands that made it.\", points the child here.)",
+      "label": "The typed copy moved one comma, and it turned the poem upside down.",
+      "required": [
+        "origcomma",
+        "typedcomma",
+        "exactly",
+        "everyword"
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "inference",
+      "skill": "inference",
+      "alsoSkills": [
+        "factopinion"
+      ],
+      "statement": "The poem says the word will shine at the tenth bell: ten o'clock. The programme says the last boats come home at 8:30 and the lake closes to all boats at nine. So at ten, no boat can be on the water.",
+      "spans": [
+        "tenthbell",
+        "closes9",
+        "lasthome",
+        "quaylesaid",
+        "fosseopinion",
+        "lastoar"
+      ],
+      "why": "Even read as plainly as possible, the poem cannot put a boat in danger. It was timed for when the water is empty. Mr Fosse's claim, [c:fosseopinion] \"This is plainly a threat to put out the light while our boats are racing.\", is an opinion, and the facts disagree with it.",
+      "label": "When the light goes dark, the lake will be empty.",
+      "required": [
+        "tenthbell",
+        "closes9",
+        "lasthome",
+        "quaylesaid"
+      ],
+      "alsoAccepted": "lastoar: the poem's own order: the oars are out of the water first, and *then* the eye closes."
+    },
+    {
+      "id": "D3",
+      "type": "figurative",
+      "skill": "figurative",
+      "statement": "The eye of the island is the lighthouse lamp. Its eyelid is the shutters. The knot in the eyelid is the knot-hole in panel 3, which faces the boathouse. The long finger of light is the one beam. The sleeping back of the house where boats sleep is the boathouse roof.",
+      "spans": [
+        "eye",
+        "knot",
+        "finger",
+        "roof",
+        "knothole",
+        "faces",
+        "onebeam",
+        "keyhole",
+        "card9"
+      ],
+      "why": "Taken literally, \"an eye that closes to see\" is nonsense, and nonsense sounds frightening. Taken as figurative language, it is a set of instructions. Mrs Achterberg's proverb, [c:keyhole] \"Close the curtain, and the keyhole shines.\", says the same thing in a different picture, and the Blot's own card, [c:card9] \"Look where the light falls. — B.\", tells the reader where to stand.",
+      "label": "\"The eye of the island will close to see\" means the lamp will be shuttered so one beam can show something.",
+      "required": [
+        "eye",
+        "knot",
+        "finger",
+        "roof",
+        "knothole",
+        "faces",
+        "onebeam"
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "voice",
+      "skill": "voice",
+      "statement": "Lyle's poems always have a title, always rhyme, and are signed with a little swallow. The bottle poem has no title, does not rhyme, and is signed '— B.' with a blot. Lyle even thinks the lamp never sleeps. Mrs Quayle writes numbers, not poems.",
+      "spans": [
+        "rhymes",
+        "alwaysrhyme",
+        "lasign",
+        "blotsign",
+        "blotstyle",
+        "neversleeps",
+        "numbers"
+      ],
+      "why": "The poem's voice matches the Blot's eight earlier cards, and nobody else's. The Blot wrote it. So the question is no longer *who wrote it*, but *who turned it into a threat*.",
+      "note": "the child may notice that Lyle and the Blot both write about swallows folding. That is the lake, not the writer: everyone at Poet's Lakeside writes about swallows. Rhyme, title and sign-off are the voice.",
+      "label": "The poem is not Lyle Asante's, and not Mrs Quayle's."
+    },
+    {
+      "id": "D5",
+      "type": "contradiction",
+      "skill": "contradiction",
+      "isTheLie": true,
+      "statement": "Mr Fosse told the Gazette he cancelled the fireworks this morning, the moment he read the poem. But the firework maker's letter, dated Friday, thanks him for his letter of Thursday, and says the Regatta cannot afford them. The bottle was only found on Saturday.",
+      "spans": [
+        "thismorning",
+        "thursday",
+        "afford",
+        "found",
+        "sponsor"
+      ],
+      "why": "The fireworks were cancelled for money, not for safety. The \"threat\" arrived just in time to take the blame. This is the one lie in the case.",
+      "label": "Mr Fosse cancelled the fireworks two days before the bottle was found."
+    },
+    {
+      "id": "D6",
+      "type": "inference",
+      "skill": "inference",
+      "optional": true,
+      "statement": "The roof was tarred in May, grey as a heron. In June a lady painted it with silver-grey paint, and next morning it looked as grey as before. Grey on grey: by day, the word disappears into the roof. It can only shine when the lake is dark and one thin beam falls on it.",
+      "spans": [
+        "waited",
+        "silver",
+        "cantsee",
+        "heron",
+        "viewpoint"
+      ],
+      "why": "It answers *how could it?* without magic. Nobody has seen the word because nobody has ever looked at that roof in the dark with only one beam on it. It does not count toward the accusation, but the Ledger needs it.",
+      "label": "The impossible thing: a word on a roof everyone can see, that nobody has seen."
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "asante",
+      "clearedBy": [
+        "twelve",
+        "greenbottles",
+        "rhymes",
+        "lasign",
+        "attempt9",
+        "linetwo",
+        "boatnooars"
+      ],
+      "note": "Suspicious because: he put bottles on the lake on Friday; he writes poems; he wrote a poem about the lighthouse; and his wastepaper basket is full of poems without rhyme, like the Blot's. His are green; the Blot's is brown. His secret clears him: he tried to write like the Blot all week, and every attempt rhymed by the second line. And his own opinion: [c:boatnooars] \"In my opinion, a poem that does not rhyme is a boat without oars.\" A poet who believes that does not write a poem without rhyme.",
+      "suspicion": [
+        "norhyme"
+      ]
+    },
+    {
+      "suspect": "quayle",
+      "clearedBy": [
+        "numbers",
+        "quaylesaid",
+        "nevermissed",
+        "fogonly",
+        "greenone",
+        "forme",
+        "elevenback",
+        "stiffletter",
+        "notthreat"
+      ],
+      "note": "Suspicious because: she controls the shutters; she does not like the fireworks; the Gazette reminds everyone of her letter; and her own log says she rowed towards the slipway on Friday night, the night before the bottle came ashore. Her secret clears her (DOC 9.11, chapter 4): she rowed out to fish one of Lyle's green bottles from the water, because the poem in it, \"The Island Lamp\", was written for her. Lyle's twelfth bottle is the one still missing ([c:elevenback]). The figurative trap: [c:stiffletter] \"Last year she wrote that they 'frighten the swallows out of their feathers'.\" No swallow has ever lost a feather to a firework. It is figurative, and so is \"stiff letter\" ([c:notthreat] \"But a stiff letter isn't a threat. It's a stiff letter.\").",
+      "hunch": {
+        "nell": 10,
+        "crossedOut": true,
+        "crossedOutIn": "chapter 4, after DOC 9.11",
+        "quill": "Good. What made you cross it out?",
+        "nellReply": "A green bottle. And she talks in numbers. The poem doesn't have a single one."
+      },
+      "suspicion": [
+        "private",
+        "privatemeans",
+        "stiffletter"
+      ]
+    },
+    {
+      "suspect": "blot",
+      "clearedBy": [
+        "origcomma",
+        "noharm",
+        "riddle",
+        "eyelamp"
+      ],
+      "note": "Suspicious because: wrote the poem, signed it, sealed it with a blot. Cleared of making a threat (the original says no boats will be out). Seeds for Case 11, not clues here: the lady with the violin case, the lady who painted the roof, and a fiddle on the dark shore. Nobody in the case names her."
+    }
+  ],
+  "arcMarks": [
+    {
+      "span": "violin",
+      "note": "Seed for Case 11 (not a clue here). Nobody in the case names her. The child may wonder."
+    },
+    {
+      "span": "useful",
+      "note": "Seed for Case 11 (not a clue here). Nobody in the case names her. The child may wonder."
+    },
+    {
+      "span": "june",
+      "note": "Seed for Case 11 (not a clue here). Nobody in the case names her. The child may wonder."
+    },
+    {
+      "span": "keeptill",
+      "note": "Seed for Case 11 (not a clue here). Nobody in the case names her. The child may wonder."
+    },
+    {
+      "span": "fiddle",
+      "note": "Seed for Case 11 (not a clue here): someone playing a fiddle on the dark shore by the slipway on Friday night. Nobody in the case names her. The child may wonder."
+    },
+    {
+      "span": "godark",
+      "note": "Also unmarked by the deductions, but markable."
+    },
+    {
+      "span": "threathead",
+      "note": "Also unmarked by the deductions, but markable."
+    },
+    {
+      "span": "cancelnote",
+      "note": "Also unmarked by the deductions, but markable."
+    },
+    {
+      "span": "fossesaid",
+      "note": "Also unmarked by the deductions, but markable."
+    },
+    {
+      "span": "asapoem",
+      "note": "Also unmarked by the deductions, but markable."
+    }
+  ],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "The boathouse roof is re-tarred",
+        "spans": [],
+        "timeWords": "\"May. Roof re-tarred.\" (DOC 9.8)",
+        "placedByChild": false
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "A lady paints the boathouse roof with silver-grey paint, overnight",
+        "spans": [
+          "june"
+        ],
+        "timeWords": "\"June. A lady offered to paint the roof for nothing.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "Mr Crane's company pulls its Regatta sponsorship",
+        "spans": [
+          "sponsor"
+        ],
+        "timeWords": "\"Our big sponsor pulled out in September.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Mr Fosse writes to Pyke and Daughters, cancelling the fireworks",
+        "spans": [
+          "thursday"
+        ],
+        "timeWords": "\"Thank you for your letter of Thursday\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "A lady with a violin case asks Mrs Quayle about the fog shutters",
+        "spans": [
+          "violin"
+        ],
+        "timeWords": "\"3 pm: a visitor, a lady with a violin case.\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "Mrs Pyke replies: rockets back on the shelf",
+        "spans": [],
+        "timeWords": "DOC 9.3, dated \"Friday\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Lyle sets twelve green bottles on the lake",
+        "spans": [
+          "twelve"
+        ],
+        "timeWords": "\"On Friday at sunset\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Mrs Quayle rows towards the slipway and fishes out one green bottle",
+        "spans": [
+          "private",
+          "greenone"
+        ],
+        "timeWords": "\"10 pm\" · \"On Friday night\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "Asha finds the brown bottle at the slipway",
+        "spans": [
+          "found"
+        ],
+        "timeWords": "\"at twenty past six on Saturday morning\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "text": "Mr Fosse pins up the REGATTA WARNING",
+        "spans": [],
+        "timeWords": "DOC 9.2, \"Saturday, 10:00 am\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "text": "Mr Fosse tells the Gazette he cancelled \"this morning\"",
+        "spans": [
+          "thismorning"
+        ],
+        "timeWords": "[c:thismorning]",
+        "placedByChild": true
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "text": "Ada's note arrives",
+        "spans": [],
+        "timeWords": "DOC 9.9, \"Saturday, 4 pm\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T13",
+        "order": 13,
+        "text": "Sunday: last boats home; the lake closes",
+        "spans": [
+          "lasthome",
+          "closes9"
+        ],
+        "timeWords": "\"8:30 pm\" · \"9:00 pm\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T14",
+        "order": 14,
+        "text": "The lamp is shuttered; one beam crosses the water",
+        "spans": [
+          "tenthbell"
+        ],
+        "timeWords": "\"At the tenth bell\"",
+        "placedByChild": true
+      }
+    ],
+    "shake": {
+      "if": "T4 placed after T9",
+      "quill": "Read the date at the top of Mrs Pyke's letter. Can you thank someone for a letter they have not written yet?"
+    },
+    "setting": "The washing line, strung across the café's back room between a coat hook and a lamp."
+  },
+  "accusation": {
+    "question": "Who made the Regatta afraid, and why?",
+    "culprit": "fosse",
+    "place": null,
+    "minimalEvidence": [
+      "D5",
+      "D1",
+      "D2"
+    ],
+    "evidenceRule": {
+      "count": 3,
+      "required": [
+        "D5",
+        "D1"
+      ],
+      "oneOf": [
+        [
+          "D2",
+          "D3"
+        ]
+      ],
+      "text": "three pieces: D5 and D1 both, plus D2 or D3. D5 proves why he did it; D1 proves how the threat was made; D2 or D3 proves there never was a threat."
+    },
+    "acceptableEvidence": [
+      "D3",
+      "thismorning",
+      "thursday",
+      "found",
+      "origcomma",
+      "typedcomma",
+      "tenthbell",
+      "closes9",
+      "eye",
+      "knothole",
+      "faces",
+      "fossesaid",
+      "threathead",
+      "cancelnote"
+    ],
+    "wrongSuspect": {
+      "quayle": "Mrs Quayle was on the water on Friday night, true, and she doesn't like fireworks. But what colour was the bottle she fished out? Count the numbers in her log. Then count the numbers in the poem.",
+      "asante": "What colour are his bottles? And look in his wastepaper basket: how far does he get before a poem rhymes?",
+      "blot": "The Blot wrote the poem. Read the Blot's line again, the *original*, comma and all. Does it say a boat will be out, or that none will?"
+    },
+    "partialEvidence": {
+      "suspect": "fosse",
+      "with": [
+        "D1"
+      ],
+      "quill": "A comma in the wrong place can be an accident. Two fingers, very fast. What did he *do* with the accident? Look at his dates."
+    },
+    "weakEvidence": "That proves the poem is not dangerous. It does not prove who made the town think it was. Find the person who said one thing to the Gazette, while a letter on their own desk said another.",
+    "note": "Mr Barnaby Fosse, Regatta Secretary. He cancelled the fireworks on Thursday because the Regatta could not pay for them. On Saturday he typed the poem in a hurry and moved a comma, and the copy read like a threat. Then he let the \"threat\" take the blame for the cancelled fireworks, and told the Gazette he had cancelled them \"this morning\". The question on the drawing-room card is not \"Who wrote the poem?\" (the board has answered that: the Blot).",
+    "wrongSuspectPoints": {
+      "quayle": [
+        "greenone",
+        "numbers"
+      ],
+      "asante": [
+        "twelve",
+        "linetwo"
+      ],
+      "blot": [
+        "origcomma"
+      ]
+    }
+  },
+  "revealSetting": "The Regatta office, Saturday, six o'clock: the committee's hour. Rain drums on the tin roof, and the clock above the door ticks loud enough to count. Mr Fosse, Mrs Quayle, Lyle and Mr Otterburn squeeze in among the whistle boxes. Constable Tully holds the original poem in an evidence bag, and Mrs Quayle's keys in his other hand. The Blot's card is pinned to the noticeboard, turning slightly in the draught. The child pins the evidence, one card at a time.",
+  "reveal": [
+    {
+      "who": "QUILL",
+      "text": "Six o'clock. Before anyone decides anything, we read the poem. Properly."
+    },
+    {
+      "who": "NELL",
+      "text": "First: was it ever a threat? *(She holds the original and the typed copy side by side.)* The original says \"No boats will be out.\" The copy says \"No, boats will be out.\" One comma moved, and a riddle became a threat."
+    },
+    {
+      "who": "ASHA",
+      "text": "And it was timed for an empty lake. Last boats home at half past eight. Lake shut at nine. The light goes out \"at the tenth bell\"."
+    },
+    {
+      "who": "DEV",
+      "text": "It was there from the very first page. *(He reads.)* \"The last oar will lie on the grass like a spoon beside a plate.\" The oars are put away. *Then* the eye closes."
+    },
+    {
+      "who": "FELIX",
+      "text": "Second: who wrote it? Not Mr Asante. Footnote: nine attempts in his bin, and every one rhymed by line two."
+    },
+    {
+      "who": "LYLE",
+      "text": "*(scarlet)* It's a small, rhyming curse."
+    },
+    {
+      "who": "NELL",
+      "text": "Not Mrs Quayle. I gave her a ten, and I was wrong. On Friday night she rowed out for a green bottle, because the poem in it was written for her."
+    },
+    {
+      "who": "MRS QUAYLE",
+      "text": "*(not looking at Lyle)* It's on my lamp-room shelf. Don't let it go to your head."
+    },
+    {
+      "who": "LYLE",
+      "text": "*(beaming)* Too late."
+    },
+    {
+      "who": "QUILL",
+      "text": "Then who turned a riddle into a threat?"
+    },
+    {
+      "who": "ASHA",
+      "text": "*(holding up two papers)* Here is the Gazette: \"I cancelled the fireworks this morning, the moment I read it.\" Here is Mrs Pyke, on Friday: \"Thank you for your letter of Thursday.\" Two days before I found the bottle."
+    },
+    {
+      "who": "DEV",
+      "text": "The fireworks were cancelled for money. The threat just arrived in time to take the blame."
+    },
+    {
+      "who": "MR FOSSE",
+      "text": "*(sitting down heavily on a box of whistles)* I didn't move the comma on purpose. Two fingers, ten in the morning. But when I read it back… nobody would ask about the money now. Mr Crane pulled out in September. I sold my own dinghy to pay for the cups, and it still wasn't enough for rockets."
+    },
+    {
+      "who": "MRS QUAYLE",
+      "text": "You let them think I'd put my light out on a lake full of children."
+    },
+    {
+      "who": "MR FOSSE",
+      "text": "*(quietly)* Yes. I'm sorry, Morwenna. Truly."
+    },
+    {
+      "who": "CONSTABLE TULLY",
+      "text": "*(holding out the keys, very relieved)* These are yours, Mrs Quayle."
+    },
+    {
+      "who": "FELIX",
+      "text": "And the roof the whole town can see, where nobody has ever seen a word? Mr Otterburn's book: \"Grey as a heron.\" The paint: silver-grey. Grey on grey, by day."
+    },
+    {
+      "who": "MR OTTERBURN",
+      "text": "*(the most words anyone has heard him say)* Couldn't see it. Thought I'd dreamt her."
+    },
+    {
+      "who": "QUILL",
+      "text": "Then tomorrow, at the tenth bell, we read the roof."
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "NARRATOR",
+      "text": "The committee votes in four minutes flat, which Mr Fosse says is a record. The Regatta goes ahead. The Harbour Master's form goes into the stove.",
+      "section": "The money"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Tam Bellweather, who has been listening from the doorway with a bun, runs home through the rain. Ten minutes later the speaking-tube in the agency whistles, and Mrs Bellweather's voice comes up it.",
+      "section": "The money"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"The bakery has had its best Regatta weekend in twenty years,\" she says. \"We'll pay for the rockets. On one condition. The quiet ones. For the swallows.\"",
+      "section": "The money"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Mrs Pyke, it turns out, has them on the shelf already. Rockets are patient.",
+      "section": "The money"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The eights race at half past four. Asha's crew comes second by the length of a nose, because the captain kept looking at the lighthouse. \"Worth it,\" she says, and writes \"4:52 pm, second, worth it\" in her timeline.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "At 8:30 the last boats come home in a lantern parade. At nine, Mr Fosse blows his whistle, and the lake closes. Not a single boat is out. Asha checks twice.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "At 9:30, Pyke and Daughters' quiet fireworks bloom over the water: gold and green and silver, and almost no bang at all. The swallows under the lighthouse gallery shuffle, and go back to sleep. Mrs Quayle, on the lighthouse rail, nods once, which from her is a standing ovation. Felix sneezes, once, from the smoke.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Then the town gathers on the lawn opposite the boathouse for the prizes, and the clock on the café wall strikes ten.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Out on the island, Mrs Quayle closes the fog shutters, one by one. *Clack. Clack. Clack.* Eight panels. The great lamp disappears.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The lighthouse goes dark.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Nobody screams. Nobody even gasps. Everyone on the lawn has read the original, pinned up beside Mr Fosse's apology on the boathouse board, comma and all.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "And through the knot-hole in panel 3, one long finger of light reaches out across the water. It touches the boathouse roof.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The grey roof glitters. Across it, in silver letters taller than a rowing boat, one word shines out:",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**WORD**",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "It has been there since June. Invisible as breath.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Somewhere along the dark shore, beyond the last lantern, a fiddle plays four slow notes, and stops. Asha swings her torch that way. There is only the wet path, an empty bench, and the faint, sweet smell of violets.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The whole lawn goes quiet. Then Tam starts clapping, and everyone joins in, and Lyle Asante has to sit down.",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"It's a riddle,\" he says to no one in particular. \"And it's a good one. Oh, I wish I'd written it.\"",
+      "section": "Regatta night"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Back at the agency, very late, Dev unties the Blot Ledger and writes the ninth word. The ink spreads into the page.",
+      "section": "The Ledger"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD…**",
+      "section": "The Ledger"
+    },
+    {
+      "who": "DEV",
+      "text": "The Blot didn't break anything. Not even a scratch in the tar. Just a word that could only be read once, by one beam, by people who'd read the poem properly.",
+      "section": "The Ledger"
+    },
+    {
+      "who": "ASHA",
+      "text": "That's not a vandal. That's a puzzle-maker.",
+      "section": "The Ledger"
+    },
+    {
+      "who": "NELL",
+      "text": "A puzzle-maker who wants something found.",
+      "section": "The Ledger"
+    },
+    {
+      "who": "FELIX",
+      "text": "\"Every word…\" Footnote: I've read that somewhere. Somewhere I walk past every day. Footnote to the footnote: it's on the tip of my—",
+      "section": "The Ledger"
+    },
+    {
+      "who": "STAGE",
+      "text": "(A last, late rocket goes up over the harbour: quiet, gold. Everyone turns to watch it. Felix never finishes the footnote.)",
+      "section": "The Ledger"
+    },
+    {
+      "who": "QUILL",
+      "text": "*(looking at the child)* He'll get there. So will you.",
+      "section": "The Ledger"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**Biscuit** is found by Constable Tully in the cox's seat of the winning boat, wearing a laurel wreath somebody had hung on the bow. Tully: \"Who's boat is this, then?\" Quill: \"*Whose*. Whose boat. *Who's* means *who is*.\" Tully: \"Well, who is it? Because he's not getting out.\"",
+      "section": "The running jokes"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**Nell's hunch-o-meter:** at the reveal, Asha asks for a rating on Mr Fosse. Nell: \"No hunch. I had evidence. It felt strange. Good strange.\"",
+      "section": "The running jokes"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**Lyle**, walking home along the shore, is heard working on a poem with no rhymes at all. He gets as far as two lines before one rhymes by accident. Attempt number ten.",
+      "section": "The running jokes"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**Ada's letter** to the old address has not come back yet. Mrs Achterberg, when asked, says only: \"A letter that does not return has found a door.\"",
+      "section": "The running jokes"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The brown bottle, with its black wax blot and the poem curled inside, goes on the shelf beside the map-maker's compass. When the evening light comes through the round window, it throws one small brown shadow across the Casebook Wall, like a finger pointing.",
+      "section": "The office object"
+    }
+  ],
+  "drill": {
+    "kind": "other",
+    "clueType": "punctuation",
+    "title": "One Comma",
+    "builtFrom": "DOC 9.1 against DOC 9.2",
+    "instructions": "The child sees a pair of sentences, the same words in the same order, and chooses which one means what the card says.",
+    "items": [
+      {
+        "prompt": "\"There will be no cake.\"",
+        "answer": "C. No cake will be left on the plate, when the party ends.",
+        "options": [
+          "A. No cake, will be left on the plate when the party ends.",
+          "B. No, cake will be left on the plate when the party ends.",
+          "C. No cake will be left on the plate, when the party ends."
+        ],
+        "explain": "C (and A is a trap: the comma there does nothing useful, but it does not change who has cake).",
+        "followUp": {
+          "quill": "Which word did the comma turn into a whole answer by itself?",
+          "answer": "No."
+        }
+      },
+      {
+        "round": 2,
+        "prompt": "Match each to a picture.",
+        "pairs": [
+          {
+            "text": "Let's paint, Granny.",
+            "picture": "a grandmother holding a brush"
+          },
+          {
+            "text": "Let's paint Granny.",
+            "picture": "a grandmother looking alarmed at a brush"
+          }
+        ],
+        "note": "The child matches each to a picture (painted, never lettered)."
+      },
+      {
+        "round": 3,
+        "kind": "voice",
+        "note": "Two short verses about the lake. One rhymes and ends with a little swallow; one does not and ends \"— B.\" The child says which is Lyle's and points to the two things that prove it. (Round text added 5 Oct 2026, owner-approved; for sign-off with the case.)",
+        "verses": [
+          {
+            "label": "Verse A",
+            "title": "Swallow Song",
+            "text": "Above the lake the swallows fly\nand stitch a seam across the sky.\n— L.A. (a little drawn swallow)",
+            "source": "DOC 9.5"
+          },
+          {
+            "label": "Verse B",
+            "title": null,
+            "text": "The swallows will fold their wings.\nThe last oar will lie on the grass like a spoon beside a plate.\n— B.",
+            "source": "DOC 9.1"
+          }
+        ],
+        "items": [
+          {
+            "prompt": "Which verse is Lyle's?",
+            "answer": "Verse A",
+            "options": [
+              "Verse A",
+              "Verse B",
+              "Both of them"
+            ],
+            "explain": "Lyle always rhymes, always gives a title, and always signs with a little swallow. Verse A does all three."
+          },
+          {
+            "prompt": "Proof one: which two words in Verse A rhyme?",
+            "answer": "fly and sky",
+            "options": [
+              "lake and swallows",
+              "fly and sky",
+              "stitch and seam"
+            ],
+            "explain": "\"Fly\" and \"sky\" end with the same sound. Lyle says, \"I always rhyme.\""
+          },
+          {
+            "prompt": "Proof two: how does each verse end?",
+            "answer": "A with a swallow, B with \"— B.\"",
+            "options": [
+              "Both with a swallow",
+              "A with a swallow, B with \"— B.\"",
+              "Both with \"— B.\""
+            ],
+            "explain": "The sign-off is a writer's mark. Lyle draws a little swallow; the Blot \"Always signs '— B.' with a dash.\""
+          },
+          {
+            "prompt": "Which verse has a title?",
+            "answer": "Verse A",
+            "options": [
+              "Verse A",
+              "Verse B",
+              "Neither"
+            ],
+            "explain": "Lyle's flyer says, \"Every one has a title\". The Blot's notes say: \"Never a title.\""
+          },
+          {
+            "prompt": "Both verses are about swallows. Does that prove one person wrote both?",
+            "answer": "No. Everyone at the lake writes about swallows.",
+            "options": [
+              "Yes. Same birds, same writer.",
+              "No. Everyone at the lake writes about swallows.",
+              "Yes, because both are about the lake."
+            ],
+            "explain": "The subject is the lake, not the writer. Rhyme, title and sign-off are the voice."
+          }
+        ],
+        "quill": "The subject is the lake, not the writer. Rhyme, title and sign-off are the voice."
+      }
+    ]
+  },
+  "art": {
+    "backgrounds": [
+      "The slipway at dawn: mist on the water, a rowing eight with its oars feathered, the island lighthouse faint across the lake, swallows skimming low. Soft pink and pearl-grey.",
+      "The boathouse: long, low and wooden, with a broad grey roof that runs nearly to the water like the back of a sleeping animal. Swallows' nests under the eaves. A noticeboard by the door (sheets on it blank in the painting).",
+      "The lighthouse lamp room: a great glass lamp in the middle, eight wooden shutter panels hinged round it. Panel 3 has a visible knot-hole, about the size of a coin, which must be readable in the close-up. A logbook with a pencil on a string. Oil cans. A view of the lake through the gallery door.",
+      "The Regatta office: a tin roof, rain, boxes of whistles, cups on a shelf, a typewriter, programmes in stacks, a tide table pinned over a letter.",
+      "The Lakeside Café: green bottles in every window, a counter piled with pamphlets, a long striped scarf on a hook, a wastepaper basket overflowing with crumpled paper.",
+      "The café's back room (chapters 3 and 4): the agency's borrowed base for the day. A cork board propped on a chair, a washing line strung from a coat hook to a lamp, rain on a wide window that looks across the cove to the boathouse and the island. At dusk, painted twice: the grey roof, and the same roof catching one blink of silver as the beam swings by (a glint only; never letters).",
+      "Regatta night (the key plate), before ten: the lawn full of townspeople (mixed ages and families, nobody a type, faces small), lanterns, the lighthouse lamp shining, quiet fireworks fading overhead.",
+      "Regatta night (the key plate), at ten: the lighthouse dark except for one narrow beam from the island to the boathouse roof. The roof glitters silver where the beam lands. The app sets the word on the roof in live type, with a slow shimmer (a fade under reduced motion). The painting itself carries only the glitter, never letters."
+    ],
+    "props": [
+      "The message bottle (office object): brown glass, a cork, black wax pressed into a perfect round blot, the poem rolled and tied with plain string.",
+      "Lyle's bottles: green glass, blue ribbon on the neck, a small paper swallow tied to each.",
+      "The typed REGATTA WARNING with a red-crayon box.",
+      "Mrs Pyke's letter under the tide table; Mrs Pyke herself on Regatta night, small, grey-haired, ear defenders round her neck, delighted.",
+      "Ada's note on blue paper, with a pressed violet.",
+      "Mrs Quayle's green bottle (one of Lyle's twelve, blue ribbon, paper swallow) and her note on a torn log page.",
+      "The Harbour Master's form, and Mrs Quayle's ring of lighthouse keys in Constable Tully's large hand."
+    ],
+    "portraits": [
+      "Mrs Quayle: calm, offended, amused, relieved (add thoughtful for Q5: glasses pushed up, looking out to the water).",
+      "Lyle Asante: calm, nervous, offended, amused, relieved. Nervous shows him tugging his scarf.",
+      "Mr Fosse: calm, nervous, offended, guilty, relieved. Guilty: hat in hands, sitting on the box of whistles.",
+      "The Blot: one image only: the calling card on cork. It turns slightly in the light when the child chooses a question."
+    ],
+    "revealPanels": [
+      "Two sheets side by side under Nell's hands: the cream original and the typed copy. The app sets their text; the painting shows only paper.",
+      "Mrs Pyke's letter and its date, under Asha's finger.",
+      "Mr Fosse on the box of whistles, clipboard on his knees.",
+      "Mrs Quayle at the window of the office, looking across at her lighthouse."
+    ],
+    "sound": "Water lapping; an oar's clunk on glass; rain on a tin roof; the Regatta office clock ticking; the clack of eight shutters; a hush; four slow notes on a fiddle, far off, and then nothing; the quiet fireworks (soft pops, never a big bang); applause on the lawn; a pen scratch as Dev writes WORD into the Ledger. None of it during read-aloud.",
+    "notes": "No lettering in any painting. Every word on every document, notice, programme, newspaper and roof is live text set by the app, including WORD itself, which is drawn over the night plate by the app at the reveal. Regatta night is painted twice, as the scene changes."
+  },
+  "aside": [
+    {
+      "where": "meta",
+      "text": "Vanished word: WORD (painted on the boathouse roof; seen only when the shuttered lighthouse sends one beam onto it)"
+    },
+    {
+      "where": "meta",
+      "text": "Glossed words (once marked): slipway · knot-hole · shutter · eyelid (figurative) · decline (from Case 8, revisited) · \"stiff letter\" · reef knot"
+    },
+    {
+      "where": "meta",
+      "text": "One suspect lies once: fosse"
+    },
+    {
+      "where": "meta",
+      "text": "The clock: the Regatta committee meets at seven tonight to decide if there is a Regatta at all (moved to six, halfway)"
+    },
+    {
+      "where": "meta",
+      "text": "The impossible thing: a word painted on a roof the whole town can see, all summer, and nobody has seen it"
+    },
+    {
+      "where": "meta",
+      "text": "The false solution: Mrs Quayle (motive, shutters, and \"Private\" in her own log); broken by DOC 9.11 in chapter 4"
+    },
+    {
+      "where": "meta",
+      "text": "Hidden in plain sight: the poem's second line, \"The last oar will lie on the grass like a spoon beside a plate.\""
+    },
+    {
+      "where": "Chapter 1 — hook",
+      "text": "stage directions: the lawn opposite the boathouse, late afternoon, the rain easing to drizzle *The detectives stand on the wet lawn and look across at the boathouse. Its long grey roof is in plain view, end to end, streaked with rain. There is nothing on it at all. Gulls. Tar. A drip from the gutter.* QUILL: A word has waited all summer, the poem says. On a roof the whole town can see from here. DEV: Then why has nobody ever seen it?"
+    },
+    {
+      "where": "Chapter 2 — hook (escalation)",
+      "text": "stage directions: the Lakeside Café steps, where the detectives meet after the interviews; Constable Tully arrives, dripping, with cocoa and bad news CONSTABLE TULLY: The Harbour Master's read the Gazette. The committee's moved to six o'clock, so he can be there. CONSTABLE TULLY: *(holding up a form, unhappily)* And he wants Mrs Quayle's lighthouse keys. Tonight. I'm to fetch them. ASHA: Thirty-one years without missing a night. And they'll take her keys for a poem? QUILL: Six o'clock. Then we read faster."
+    },
+    {
+      "where": "Chapter 3 — the board's wrong answer and hook",
+      "text": "*The cork board in lamplight, propped against the wall of the Lakeside Café's back room, which Lyle has lent the agency for the day. Rain on the window. Across the cove: the boathouse, the island, the lighthouse. Nell pins Mrs Quayle's portrait in the middle and runs red string to four cards: the stiff letter, the shutters, the Gazette, and \"Private\".* NELL: Hunch-o-meter: ten. She doesn't like the fireworks. She holds the only shutters on the lake. On Friday night she rowed towards the slipway in the dark, and wrote \"Private\". In the morning, there's a bottle at the slipway, and the fireworks are cancelled. Exactly what she wanted. CONSTABLE TULLY: *(turning the Harbour Master's form over and over)* I'd rather not take her keys. But it does look bad. QUILL: Ten. You were wrong about the last ten, Nell. NELL: Not this one. *Through the rain on the window, a small boat is crossing the grey lake, rowed hard. Mrs Quayle is in it, oilskin hat pulled down. On the seat beside her, wrapped in a jumper, is a green bottle.*"
+    },
+    {
+      "where": "Chapter 4 — after DOC 9.11",
+      "text": "*Nell reads it twice. Then she takes out her pencil and crosses out the ten, slowly, so that everyone can see.* QUILL: Good. What made you cross it out? NELL: A green bottle. And she talks in numbers. The poem doesn't have a single one. *(To Mrs Quayle.)* I'm sorry. I gave you a ten. MRS QUAYLE: I've had worse marks. Now find out who frightened my town, before six, or I'll be handing my keys to a man who doesn't know which end of a lamp is hot. DEV: *(very quietly, holding up the note)* A fiddle. On the shore. In the dark. The night before the bottle came in. *Nobody answers him. The rain ticks on the window.*"
+    },
+    {
+      "where": "Chapter 4 — opening",
+      "text": "*Mrs Quayle ties up at the café jetty in the rain and climbs the steps to the back room, dripping, which she says is nothing after 112. She puts a green bottle on the table in front of Quill, and a folded page beside it, and will not sit down.*"
+    },
+    {
+      "where": "Chapter 4 — hook",
+      "text": "*Asha pegs the last card. The café clock says ten to six.* ASHA: Ten minutes. *Through the café window, across the darkening cove, the lighthouse beam swings past the boathouse. For one blink, no longer, the grey roof winks silver. Then it is grey again.* FELIX: Did anyone else see that? QUILL: Later. Six o'clock first."
+    }
+  ],
+  "source": {
+    "script": "case-09.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "exercises": [
+    {
+      "id": "y1",
+      "tier": "easier",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "9.4",
+        "span": "knothole"
+      },
+      "prompt": "Mrs Quayle's log says: \"Panel 3 has a knot-hole the size of a coin.\" The panels are wooden. What is a knot-hole?",
+      "options": [
+        "a hole in wood where a knot was",
+        "a hole tied in a rope",
+        "a hole for a door key"
+      ],
+      "answer": "a hole in wood where a knot was",
+      "explain": "A knot is a hard, dark ring in wood, where a branch once grew. Sometimes it falls out and leaves a hole. \"Wooden\" panels is the clue."
+    },
+    {
+      "id": "y2",
+      "tier": "easier",
+      "level": 3,
+      "type": "spelling",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.2",
+        "span": "threathead"
+      },
+      "prompt": "Mr Fosse pins up a notice called \"REGATTA WARNING\". Which spelling is right?",
+      "options": [
+        "reggata",
+        "regata",
+        "regatta"
+      ],
+      "answer": "regatta",
+      "explain": "A regatta is a day of boat races. It has one g and a double t: re-ga-tta. Say \"re-GAT-ta\" to hear where the double letters sit."
+    },
+    {
+      "id": "y3",
+      "tier": "easier",
+      "level": 3,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.7",
+        "span": "closes9"
+      },
+      "prompt": "Put these Regatta events in order, earliest first. Use the programme.",
+      "options": [
+        "Fireworks over the water",
+        "Prizes on the lawn",
+        "Last boats home",
+        "The lake closes to all boats"
+      ],
+      "answer": [
+        "Last boats home",
+        "The lake closes to all boats",
+        "Fireworks over the water",
+        "Prizes on the lawn"
+      ],
+      "explain": "The programme lists times: \"8:30 pm · Last boats home\", \"9:00 pm · The lake closes\", \"9:30 pm · Fireworks\", \"10:00 pm · Prizes\". Times on a list help you put events in order."
+    },
+    {
+      "id": "y4",
+      "tier": "easier",
+      "level": 3,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.3",
+        "span": null
+      },
+      "prompt": "Mrs Pyke writes: \"Rockets are patient. They will keep.\" Can a rocket really be patient?",
+      "options": [
+        "Yes. Rockets can choose to wait.",
+        "No. It means they can wait on the shelf.",
+        "No. It means they fly slowly and very quietly."
+      ],
+      "answer": "No. It means they can wait on the shelf.",
+      "explain": "Only people can be patient. Mrs Pyke writes about rockets as if they were people. This is called personification. She means the rockets will be fine until Sunday."
+    },
+    {
+      "id": "y5",
+      "tier": "easier",
+      "level": 3,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "literature",
+      "objective": "li5-sound",
+      "chapter": 1,
+      "source": {
+        "doc": "9.5",
+        "span": null
+      },
+      "prompt": "Read the first two lines of \"Swallow Song\": \"Above the lake the swallows fly / and stitch a seam across the sky\". Which two words rhyme?",
+      "options": [
+        "lake and swallows",
+        "stitch and seam",
+        "fly and sky"
+      ],
+      "answer": "fly and sky",
+      "explain": "Rhyming words end with the same sound. \"Fly\" and \"sky\" both end in \"-y\". Lyle rhymes at the end of every pair of lines."
+    },
+    {
+      "id": "y6",
+      "tier": "easier",
+      "level": 3,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.1",
+        "span": "origcomma"
+      },
+      "prompt": "The poem in the bottle says: \"No boats will be out, when the eye of the island closes\". How many boats will be out?",
+      "options": [
+        "none",
+        "all of them",
+        "some"
+      ],
+      "answer": "none",
+      "explain": "\"No boats\" means zero boats. Read the words before the comma together: \"No boats will be out.\" The comma only comes after that."
+    },
+    {
+      "id": "y7",
+      "tier": "at",
+      "level": 4,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 2,
+      "source": {
+        "doc": "9.1",
+        "span": "eye"
+      },
+      "prompt": "The poem says: \"Then the eye of the island will close to see.\" What is \"the eye of the island\"?",
+      "options": [
+        "Mrs Quayle's reading glasses",
+        "the lighthouse lamp",
+        "a hole in the boathouse roof"
+      ],
+      "answer": "the lighthouse lamp",
+      "explain": "This is a metaphor: the poem calls one thing by another name. The lamp sits high on the island and shines out like a bright eye. Lyle says it too: \"It's the lamp.\""
+    },
+    {
+      "id": "y8",
+      "tier": "at",
+      "level": 4,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "9.1",
+        "span": "knot"
+      },
+      "prompt": "The poem says: \"One knot in its eyelid will stay open.\" If the eye is the lamp, what is its eyelid?",
+      "options": [
+        "the gallery rail",
+        "the curling stair",
+        "the fog shutters round the lamp"
+      ],
+      "answer": "the fog shutters round the lamp",
+      "explain": "An eyelid closes over an eye. The shutters close round the lamp. And the \"knot\" is the knot-hole in panel 3, which lets one beam through."
+    },
+    {
+      "id": "y9",
+      "tier": "at",
+      "level": 4,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.6",
+        "span": "rhymes"
+      },
+      "prompt": "Lyle's flyer says: \"Every one has a title, every one rhymes, and every one is signed with my little swallow\". Which of these does the bottle poem have?",
+      "options": [
+        "a title",
+        "rhyming lines",
+        "none of them",
+        "a swallow at the end"
+      ],
+      "answer": "none of them",
+      "explain": "A writer's voice is the way they always write. The bottle poem has no title and no rhyme. It is signed \"— B.\", not with a swallow. It is not in Lyle's voice."
+    },
+    {
+      "id": "y10",
+      "tier": "at",
+      "level": 4,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.6",
+        "span": "boatnooars"
+      },
+      "prompt": "Lyle writes: \"In my opinion, a poem that does not rhyme is a boat without oars.\" Is this a fact or an opinion?",
+      "options": [
+        "An opinion, and he says so.",
+        "A fact, because boats need oars.",
+        "A fact, because every good poem must rhyme."
+      ],
+      "answer": "An opinion, and he says so.",
+      "explain": "A fact can be checked. An opinion is what someone thinks or feels. Lyle starts with \"In my opinion\", so he tells you himself. Many good poems do not rhyme."
+    },
+    {
+      "id": "y11",
+      "tier": "at",
+      "level": 4,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 2,
+      "source": {
+        "doc": "9.S1.Q3",
+        "span": "notthreat"
+      },
+      "prompt": "Mrs Quayle says: \"But a stiff letter isn't a threat. It's a stiff letter.\" What is a \"stiff letter\"?",
+      "options": [
+        "a letter on thick card",
+        "a firm, unfriendly letter",
+        "a letter that is hard to fold"
+      ],
+      "answer": "a firm, unfriendly letter",
+      "explain": "\"Stiff\" usually means hard to bend. Here it describes the tone of the letter: firm and cross, but polite. A complaint is not a threat."
+    },
+    {
+      "id": "y12",
+      "tier": "at",
+      "level": 4,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 1,
+      "source": {
+        "doc": "9.1",
+        "span": "waited"
+      },
+      "prompt": "The poem says: \"a word has waited all summer, invisible as breath\". Invisible is \"in-\" + \"visible\". What does \"in-\" mean here?",
+      "options": [
+        "into",
+        "inside",
+        "not"
+      ],
+      "answer": "not",
+      "explain": "The prefix \"in-\" can mean \"not\": invisible means not able to be seen. Compare \"incorrect\" and \"incomplete\". Be careful: in \"inside\", it means \"in\"."
+    },
+    {
+      "id": "y13",
+      "tier": "harder",
+      "level": 5,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "9.2",
+        "span": "typedcomma"
+      },
+      "prompt": "The original says: \"No boats will be out, when the eye of the island closes\". The typed copy says: \"No, boats will be out when the eye of the island closes\". What did moving the comma do?",
+      "options": [
+        "It changed \"zero boats\" into \"there will be boats\".",
+        "Nothing, because the words are the same.",
+        "It made the sentence a question."
+      ],
+      "answer": "It changed \"zero boats\" into \"there will be boats\".",
+      "explain": "In the original, \"No boats\" means zero boats. In the copy, \"No,\" stands alone, like an answer. The rest then says boats will be out. One comma flips the meaning."
+    },
+    {
+      "id": "y14",
+      "tier": "harder",
+      "level": 5,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "9.10",
+        "span": "thismorning"
+      },
+      "prompt": "Mr Fosse told the Gazette: \"I cancelled the fireworks this morning, the moment I read it.\" Mrs Pyke's letter, dated Friday, says: \"Thank you for your letter of Thursday\". What does the order of events show?",
+      "options": [
+        "He cancelled them on Saturday, as he said.",
+        "He cancelled them two days before the bottle was found.",
+        "Mrs Pyke wrote the wrong date on her letter."
+      ],
+      "answer": "He cancelled them two days before the bottle was found.",
+      "explain": "Mrs Pyke cannot thank him for a letter he had not written yet. So his letter came on Thursday. The bottle was found on Saturday. His \"this morning\" is false."
+    },
+    {
+      "id": "y15",
+      "tier": "harder",
+      "level": 5,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 1,
+      "source": {
+        "doc": "9.1",
+        "span": "waited"
+      },
+      "prompt": "The poem says: \"a word has waited all summer, invisible as breath\". Breath is usually invisible. What does the simile tell you about the word?",
+      "options": [
+        "It is very quiet and small.",
+        "It will blow away with the very next gust of wind.",
+        "It is already there, but nobody can see it."
+      ],
+      "answer": "It is already there, but nobody can see it.",
+      "explain": "A simile compares with \"as\" or \"like\". Your breath is all around you, yet you cannot see it. So the word exists, and has done \"all summer\". It just cannot be seen yet."
+    },
+    {
+      "id": "y16",
+      "tier": "harder",
+      "level": 5,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.10",
+        "span": "stiffletter"
+      },
+      "prompt": "The Gazette says: \"Last year she wrote that they 'frighten the swallows out of their feathers'.\" Is this literal or figurative?",
+      "options": [
+        "Figurative: it means they scare the birds badly.",
+        "Literal: the birds really lose feathers.",
+        "Literal: the bangs knock the birds right out of their nests."
+      ],
+      "answer": "Figurative: it means they scare the birds badly.",
+      "explain": "No swallow has ever lost a feather to a firework. Mrs Quayle uses an exaggeration to show how frightened the birds get. Read it as feeling, not as fact."
+    },
+    {
+      "id": "y17",
+      "tier": "harder",
+      "level": 5,
+      "type": "summarise",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "9.9",
+        "span": "original"
+      },
+      "prompt": "Ada writes: \"always read the original. A copy is only as good as the hands that made it\". She also writes: \"Read a poem as a poem, not as a newspaper\". Which sentence sums up her advice?",
+      "options": [
+        "Poems are more important than newspapers.",
+        "Check the first version, and read it the way it was written.",
+        "Never trust anything that is typed."
+      ],
+      "answer": "Check the first version, and read it the way it was written.",
+      "explain": "Ada gives two pieces of advice. First, go back to the original, because copies can have mistakes. Second, a poem uses pictures, so do not read it as plain news. A summary keeps both."
+    },
+    {
+      "id": "y18",
+      "tier": "harder",
+      "level": 5,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "9.S4.Q2",
+        "span": "blotstyle"
+      },
+      "prompt": "Dev's notes say the Blot \"Always signs '— B.' with a dash. Never a title. Never a rhyme.\" Felix says the Blot writes \"like someone who expects to be read twice.\" Why would a puzzle-maker write that way?",
+      "options": [
+        "Because the Blot forgets what was written.",
+        "Because the poems are far too long to read in one go.",
+        "Because the meaning shows only on a careful second read."
+      ],
+      "answer": "Because the meaning shows only on a careful second read.",
+      "explain": "A riddle hides its meaning on the first read. Short lines with no rhyme make you slow down. Read twice, \"the eye of the island\" turns into a set of instructions."
+    },
+    {
+      "id": "y19",
+      "tier": "at",
+      "level": 4,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 3,
+      "source": {
+        "doc": "9.1",
+        "span": "lastoar"
+      },
+      "prompt": "The poem begins: \"The last oar will lie on the grass like a spoon beside a plate.\" Only then does the eye of the island close. Where are the boats when the light goes dark?",
+      "options": [
+        "Still racing in the middle of the lake",
+        "Out of the water, put away",
+        "Waiting by the lighthouse"
+      ],
+      "answer": "Out of the water, put away",
+      "explain": "An oar lying on the grass is not rowing. Like a spoon put down after dinner, it means the racing is finished. The poem says this first, and then says \"Then\" the eye closes."
+    }
+  ],
+  "extraMarks": [
+    {
+      "span": "committee",
+      "note": "The clock: the committee meets at seven tonight (moved to six at the end of chapter 2) to decide if there is a Regatta at all."
+    }
+  ]
+}

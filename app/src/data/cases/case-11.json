@@ -1,0 +1,2654 @@
+{
+  "format": 1.1,
+  "id": "case-11",
+  "number": 11,
+  "title": "The Clock That Never Strikes",
+  "label": "A Bizzing mystery",
+  "level": 5,
+  "world": "scriptorium",
+  "setting": "the Scriptorium, the Seal Room",
+  "skills": [
+    "voice",
+    "sequence",
+    "punctuation",
+    "figurative",
+    "detail",
+    "inference",
+    "vocab",
+    "contradiction",
+    "pronoun",
+    "factopinion"
+  ],
+  "vanishedWord": "EVERYONE",
+  "ledgerIndex": 11,
+  "officeObject": {
+    "id": "charter-ribbon",
+    "name": "the Charter's ribbon",
+    "art": "faded blue silk, frayed at both ends",
+    "placement": "pinned above the Casebook Wall, not on the shelf",
+    "onTap": "the whole wall lights softly, case by case, from the goose feather to the red pencil",
+    "card": "You have read it. You have seen it. Now go and read something else.",
+    "cardSignedBy": "A.H."
+  },
+  "arc": [
+    {
+      "thread": "A",
+      "beat": "the Blot unmasked as Odile Vane",
+      "docs": [
+        "11.4",
+        "11.5",
+        "11.6"
+      ]
+    },
+    {
+      "thread": "A",
+      "beat": "the full message read",
+      "docs": [
+        "11.3",
+        "11.11"
+      ]
+    },
+    {
+      "thread": "A",
+      "beat": "the Founding Charter found under the Seal Room floor; the Library can never be sold",
+      "docs": [
+        "11.E1"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Odile and Ada reconciled",
+      "docs": [
+        "11.4"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Felix's unveiling speech",
+      "docs": [
+        "11.E2"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Nell made Junior Inspector",
+      "docs": [
+        "11.E3"
+      ]
+    },
+    {
+      "thread": "B",
+      "beat": "Crane, grudgingly, enjoying a book",
+      "docs": []
+    },
+    {
+      "thread": "C",
+      "beat": "Biscuit found",
+      "docs": []
+    },
+    {
+      "thread": "C",
+      "beat": "Quill pins the ribbon",
+      "docs": []
+    },
+    {
+      "thread": "C",
+      "beat": "the Reading Door's story told, and the Door left ajar for Season Two",
+      "docs": []
+    }
+  ],
+  "tutorial": [],
+  "card": {
+    "text": "The last calling card says only: *\"Now read it all.\"* The Ledger has ten words and one empty line. At midnight, when the Clock Tower strikes twelve, the agency must enter the Seal Room, locked since autumn, where a fresh card already waits. On Monday at nine, the Library's future goes to a vote. Five suspects. One last word.",
+    "readAloud": false
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The agency, Saturday 21 March, morning.",
+      "picture": "Fog on the harbour; the masts are only pencil lines. The dumbwaiter rattles up. On the plate: two cinnamon buns and a small cream card with a perfect blot. Tam, at the speaking-tube.",
+      "lines": [
+        {
+          "who": "TAM",
+          "text": "wasn't me! i only put the buns in!"
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "Close on the card.",
+      "picture": "Four words. The whole agency leans in so far that Felix's hat falls off.",
+      "lines": [
+        {
+          "who": "DEV",
+          "text": "That's it?"
+        },
+        {
+          "who": "NELL",
+          "text": "That's everything."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "The Casebook Wall.",
+      "picture": "Eleven pinned cases, red string, a ribbon-tied notebook: the Blot Ledger, one line empty. Behind the wall, the painted Reading Door, shut. The child's hand hovers over the Ledger with a pen.",
+      "lines": [
+        {
+          "who": "QUILL",
+          "text": "Not yet. You don't write a word you haven't found."
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "place": "No. 9 Lantern Row.",
+      "picture": "Ada at the window, cello case open, holding a bundle of old letters tied with a faded ribbon. Semicolon on her shoulder. Down in the foggy street, unnoticed, a tall figure in a green coat stops under the window, listens, and walks on.",
+      "lines": [
+        {
+          "who": "ADA",
+          "text": "I have kept these for forty years. I think, this morning, I must let someone else read them."
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "place": "The Great Library's door at dusk",
+      "picture": "the carved motto above it catching the last light. Across Lamplit Row, the Clock Tower's hands stand at six. The detectives run underneath the motto without looking up. Hold on the motto for one beat after they've gone.",
+      "lines": [
+        {
+          "who": "QUILL",
+          "text": "Six hours to midnight. Walk. Read. Don't rush."
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "finch",
+      "name": "Marlowe Finch",
+      "role": "suspect",
+      "look": "Too many books, inky fingers, a cardigan buttoned wrong",
+      "manner": "Nervous, brilliant, apologises in writing as well as aloud",
+      "expressions": [
+        "nervous",
+        "guilty",
+        "relieved",
+        "calm",
+        "amused",
+        "offended"
+      ],
+      "unlockedBy": null,
+      "note": "16, assistant archivist",
+      "motive": "loves the Library's oldest wing; the Blot's game keeps its press alive.",
+      "secret": "he wipes the press clean for a stranger, three times a week, so the Keeper won't close the alcove."
+    },
+    {
+      "id": "achterberg",
+      "name": "Mrs Winifred Achterberg",
+      "role": "suspect",
+      "look": "Flour on her sleeves, a basket on one arm, very upright",
+      "manner": "Speaks only in proverbs; looks at you until you understand them",
+      "expressions": [
+        "calm",
+        "amused",
+        "offended",
+        "nervous",
+        "relieved",
+        "guilty"
+      ],
+      "unlockedBy": null,
+      "note": "Ada's housekeeper",
+      "motive": "loyal to Ada, and to the old days, and would do much to bring them back.",
+      "secret": "she recognised Odile at the plum stall in October, and kept quiet so as not to break Ada's heart a second time."
+    },
+    {
+      "id": "penhallow",
+      "name": "Professor Orla Penhallow",
+      "role": "suspect",
+      "look": "Grey bun, the keys on their ribbon, a pencil in the bun",
+      "manner": "Crisp and fair; has relaxed a little since Case 10, but only a little",
+      "expressions": [
+        "calm",
+        "offended",
+        "nervous",
+        "relieved",
+        "amused",
+        "guilty"
+      ],
+      "unlockedBy": null,
+      "note": "the Keeper",
+      "motive": "the Review Committee votes on Monday; only the Charter can save her Library, and she holds one of the two Seal Room keys.",
+      "secret": "she leaves the Nave door on the latch every night for the unknown printer, against her own rules."
+    },
+    {
+      "id": "odile",
+      "name": "\"Miss Delia Nove\"",
+      "trueName": "Odile Vane",
+      "role": "suspect",
+      "look": "Tall, a long grey plait, a green coat, a violin case that never leaves her hand",
+      "manner": "Courteous, amused, answers questions with better questions",
+      "expressions": [
+        "amused",
+        "calm",
+        "nervous",
+        "guilty",
+        "relieved",
+        "offended"
+      ],
+      "unlockedBy": null,
+      "note": "visiting puzzle-setter (Odile Vane)",
+      "motive": "to finish the sentence she began reading forty years ago, before the Library can be sold.",
+      "secret": "every night at eleven she plays the other half of Ada's duet from the Nave alcove, and Ada's letter to the old address is in her violin case."
+    },
+    {
+      "id": "ada",
+      "name": "Inspector Ada Holloway (retired)",
+      "role": "suspect",
+      "look": "Shawl, cardigan, reading spectacles on a chain, a cello case",
+      "manner": "Teaches by riddle; never gives an answer; tea forever cold",
+      "expressions": [
+        "calm",
+        "amused",
+        "offended",
+        "nervous",
+        "relieved",
+        "guilty"
+      ],
+      "unlockedBy": null,
+      "motive": "the Charter is her one unsolved case; she could stage a hunt to make the children find what she could not.",
+      "secret": "she kept the old Seal Room key for forty years and told the Keeper she had lost it; and she plays at eleven with the window open, in case Odile is near enough to hear."
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": null,
+      "manner": "deerstalker on; one grammar correction, at exactly the wrong moment.",
+      "expressions": [
+        "laughing"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "nell",
+      "name": "Nell Okafor-Hart",
+      "role": "agency",
+      "look": null,
+      "manner": "hunch-o-meter at \"Ada, 10\". Waiting for a letter from the Constabulary.",
+      "expressions": [
+        "reading a letter, mouth open"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha Raman",
+      "role": "agency",
+      "look": null,
+      "manner": "Asha's timeline; Dev's cipher notebook; the torch, as ever, disputed. Their mother comes home.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "dev",
+      "name": "Dev Raman",
+      "role": "agency",
+      "look": null,
+      "manner": "Asha's timeline; Dev's cipher notebook; the torch, as ever, disputed. Their mother comes home.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix Moreno-Lindqvist",
+      "role": "agency",
+      "look": null,
+      "manner": "sneezes in the Scriptorium; gives the unveiling speech.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "helper",
+      "look": null,
+      "manner": "keys, cocoa, a pair of small silver handcuffs he has never used; Biscuit missing again.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "role": "witness",
+      "look": null,
+      "manner": "and the Lamplighters: the comma whistle.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "crane",
+      "name": "Silas Crane",
+      "role": "helper",
+      "look": null,
+      "manner": "in a volunteer's apron, shelving",
+      "expressions": [
+        "absorbed in a book, very slightly smiling, pretending not to be"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "pettigrew",
+      "name": "Mr Pettigrew",
+      "role": "helper",
+      "look": null,
+      "manner": "the Library's new unpaid lawyer.",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "semicolon",
+      "name": "Semicolon",
+      "role": "helper",
+      "look": null,
+      "manner": "the parrot.",
+      "expressions": [],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "11.1",
+      "chapter": "scene",
+      "type": "card",
+      "title": "The last calling card, and the folded slip",
+      "author": "\"B.\"",
+      "when": "Saturday 21 March, delivered at 7 a.m.",
+      "where": "the agency dumbwaiter, between two buns",
+      "picture": "a cream card with one perfect blot, a folded slip of thinner paper tucked behind it.",
+      "readAloud": false,
+      "body": "**On the card:**\n\n[[c:readAll|Now read it all.]]\n— B.\n\n**On the folded slip:**\n\nYou are invited to the Seal Room of the Scriptorium at midnight tonight. [[c:forthMidnight|Come forthwith when the\nClock Tower strikes twelve]], and bring the Ledger. Ask the Keeper to bring her key.\n\nBring the newest detective, who reads slowly and well. Bring Inspector Holloway, if she will come. She will know why.\n\nDo not be late. If nobody comes by the last stroke, I shall take it that nobody reads any more, and I shall leave\nInkwell on the first boat.\n\nNothing will be taken from anyone tonight. Something will be given back.\n— B."
+    },
+    {
+      "id": "11.2",
+      "chapter": "scene",
+      "type": "list",
+      "title": "The Blot's cards (Dev's copy)",
+      "author": "Dev Raman",
+      "when": "copied Saturday morning",
+      "where": "Dev's biscuit tin of evidence",
+      "picture": "a page of squared paper, each card's words copied in Dev's careful capitals, a blot drawn beside each.",
+      "readAloud": false,
+      "body": "**THE BLOT'S CARDS (my copy, the important ones)**\n\nCase 0, the kennel: \"Read carefully. — B.\"\n\nCase 3, the fountain: \"[[c:cardFountain|Look below the surface. Read on forthwith. — B.]]\"\n\nCase 6, the petition: \"Count the words, not the names. — B.\"\n\nCase 7, the Playhouse: \"[[c:cardGap|A word can fall through a gap and still be there.]] — B.\"\n\nCase 9, the bottle: \"Look where the light falls. — B.\"\n\nCase 10, Crane's deed: \"[[c:cardDeed|A word for a word. After this, only one is left. Read on, forthwith. — B.]]\"\n\nCase 11: \"Now read it all. — B.\"\n\n**Notes.** [[c:dashB|Every card ends the same way: a long dash, a space, then the letter.]] Never a short dash. Never\njust the letter.\n\n\"Forthwith\" turns up on three different notes now, counting tonight's invitation.\n[[c:felixForth|Felix says nobody under seventy says \"forthwith\".]] Felix says a lot of things. He is usually right,\nwhich is annoying."
+    },
+    {
+      "id": "11.3",
+      "chapter": "scene",
+      "type": "log",
+      "title": "The Blot Ledger",
+      "author": "the newest detective (the child)",
+      "when": "kept all season",
+      "where": "the ribbon-tied notebook on the Casebook Wall",
+      "picture": "a small notebook, ten words inked in, one line ruled and empty, with a tiny blot beside each word.",
+      "readAloud": false,
+      "body": "**THE BLOT LEDGER**\n\n1 · UNDER · a sign in the Story Garden\n2 · THE · a bookshop window, Lamplit Row\n3 · CLOCK · the fountain plaque\n4 · THAT · the Forum's carved motto\n5 · NEVER · a Playhouse poster\n6 · STRIKES · the Forum clock's notice\n7 · LIES · the Playhouse motto\n8 · EVERY · the Scriptorium copy-book\n9 · WORD · painted on the boathouse roof\n10 · FOR · Mr Crane's own deed\n11 · ______\n\n[[c:ledgerLine|Read in order so far: UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD FOR]]\n\n*Asha's note in the margin:* [[c:notDestroyed|Ten words, ten cases, and not one of them was torn out or scratched\naway.]] Every gap is neat. Where did they go?"
+    },
+    {
+      "id": "11.4",
+      "chapter": "scene",
+      "type": "letter",
+      "title": "Odile's letter to Ada",
+      "author": "\"O.\"",
+      "when": "forty years ago, undated",
+      "where": "Ada's cello case, in a bundle tied with faded ribbon",
+      "picture": "a thin, much-folded letter in violet ink, a pencilled note on the envelope.",
+      "readAloud": false,
+      "body": "*On the envelope, in pencil:* [[c:vaneName|Odile Vane's last letter. Do not lose. A.H.]]\n\nDear Ada,\n\n[[c:odileForth|I am going away, and I am going forthwith]], before you can talk me out of it.\n\nYou say the Charter is a legend. I say it is a sentence that nobody has finished reading. You told me to stop looking.\nI cannot stop; you know I cannot.\n\n[[c:odileViolin|I am taking my violin.]] One day I shall play it with your cello again, if you will let me. Do not wait\nfor me. Do look for me.\n\nYou taught me to read. One day I'll show you what it's for. When I come back, I shall bring the whole sentence, or I\nshall not come back at all.\n\nForgive me if you can.\n\n[[c:dashO|— O.]]"
+    },
+    {
+      "id": "11.5",
+      "chapter": "scene",
+      "type": "log",
+      "title": "Asha's timeline",
+      "author": "Asha Raman",
+      "when": "compiled Saturday morning, from four old case files",
+      "where": "Asha's timeline notebook, the one with breakfast in it",
+      "picture": "a ruled notebook, a long line drawn across two pages, pegs inked on it.",
+      "readAloud": false,
+      "body": "**ASHA'S TIMELINE: THE PUZZLE-SETTER, FOUR TIMES**\n\n**Case 3, the Fountain.** [[c:olive|Tuesday, 6 p.m.: \"Mrs Olive Dean, visiting puzzle-setter\" signs the Fountain\nCommittee's guest book.]] Wednesday, 7 a.m.: CLOCK gone from the plaque.\n\n**Case 7, the Playhouse.** [[c:elodie|Dress rehearsal, 7 p.m.: \"Mme Elodie Van, puzzle page\" is listed in the\nprogramme.]] Same night, after the lantern fell: LIES gone from the motto.\n\n**Case 9, the Lighthouse.** Thursday, 3 p.m.: a lady with a violin case asks how the fog shutters work. No name at all.\n\n**Case 10, the Registry.** [[c:delia|Saturday, 8.50 a.m.: \"Miss Delia Nove, puzzle-setter\" holds Mr Crane's\nenvelope.]] 9.05 a.m.: FOR found gone from his deed.\n\nThree names. Four hats. [[c:sameLady|Every witness says the same: tall, a grey plait, a violin case.]]\n\nEach time, she arrives *before* the word goes, and nobody sees her after.\n\nBreakfast today: toast, 7.10. Argued with Dev about the torch, 7.12. Still my turn."
+    },
+    {
+      "id": "11.6",
+      "chapter": "scene",
+      "type": "diary",
+      "title": "Dev's cipher notebook",
+      "author": "Dev Raman",
+      "when": "Friday night and Saturday morning",
+      "where": "Dev's cipher notebook, lemon-juice stains on the cover",
+      "picture": "a notebook page with letters written in a circle, arrows between them, a little ladder drawn in the margin.",
+      "readAloud": false,
+      "body": "**DEV'S CIPHER NOTEBOOK**\n\nThe cards are printed, not written. Under Felix's magnifying glass, every small \"e\" has the same tiny chip in its top\nloop.\n\n[[c:press|I found the same chipped \"e\" on the old hand press in the Scriptorium's Nave alcove.]] Somebody prints there.\nThe ink on the rollers is fresh.\n\n[[c:ladder|There is a step-ladder in the corner of the alcove, under a little brass grille, with ink on the top step.]]\nWhy does a printing press need a ladder?\n\nNAVE. Four letters. I always try them backwards and round about: E-V-A-N. A-V-E-N. V-A-N-E.\n\n[[c:naveVane|Turn NAVE round and it spells VANE.]] I don't know anyone called Vane. Asha says a vane is the thing on a\nroof that shows which way the wind blows. She says that's not a clue, that's weather.\n\nI think it's both.\n\nP.S. I owe Asha the torch on Tuesday. She says Monday. She has written it on her timeline, which is cheating."
+    },
+    {
+      "id": "11.7",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Marlowe's note and the key log",
+      "author": "Marlowe Finch",
+      "when": "pinned this week",
+      "where": "on the old hand press in the Nave alcove, with the key log below it",
+      "picture": "a note on lined paper pinned to a wooden press; below it, a ruled key log in a brass frame.",
+      "readAloud": false,
+      "body": "**Library key log, Nave alcove, this week:**\n[[c:keyLog|M. Finch: Monday, Wednesday, Friday, 5 p.m., returned 5.30.]]\n\n**Note pinned to the press:**\n\nTo whoever keeps using this press: hello! Sorry!\n\n[[c:marloweClean|I clean the ink off the rollers every Monday, Wednesday and Friday]], so the Keeper won't close the\nalcove. That's why my fingers are always blue. People keep asking.\n\n[[c:marloweKind|I don't know who you are, but you never break anything, so I'm covering for you a little.]] Please wipe\nthe rollers when you've finished. Please also don't tell anyone I wrote this.\n\nAlso, the alcove smells of violets every morning. Is that you? It's nice.\n\nSorry again!\nM.F. (sorry!)"
+    },
+    {
+      "id": "11.8",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "The Keeper's staff memo",
+      "author": "Professor O. Penhallow",
+      "when": "Monday 16 March",
+      "where": "the staff-room board",
+      "picture": "a typed memo on Library paper, four drawing pins, one of them crooked.",
+      "readAloud": false,
+      "body": "**GREAT LIBRARY · STAFF MEMO · from the Keeper**\n\n1. [[c:banForth|The word \"forthwith\" is banned from all Library notes. It is pompous. Say \"now\".]]\n\n2. The Seal Room stays locked. [[c:onlyKey|My key stays on my ribbon, and I have not opened that door since the autumn.]]\n\n3. Whoever is printing in the Nave alcove: I know about it, and I am pretending I don't. Do not make me stop pretending.\n\n4. Mr Crane will shelve Poetry and Plays on Tuesdays. He will not \"reorganise\" them. He will not \"improve\" them.\n\n5. [[c:reviewVote|The Review Committee meets on Monday 23 March at nine, to vote on charging a fee at the door.]] Without\nthe Founding Charter, I have no answer for it. If anyone has one, my door is open.\n\n6. The Keeper's biscuits are NOT for volunteers, however charming.\n\nO.P."
+    },
+    {
+      "id": "11.9",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Mrs Achterberg's note",
+      "author": "Mrs W. Achterberg",
+      "when": "Saturday 21 March",
+      "where": "in the agency's basket of buns, under a cloth",
+      "picture": "a recipe card, flour fingerprints, a tiny drawing of a teapot.",
+      "readAloud": false,
+      "body": "For the young detectives, with the scones.\n\nA riddle is only a question in its Sunday coat.\n\nThe kettle you watch boils for somebody else.\n\n[[c:achterHands|My hands are for bread, not for printing presses]], and my evenings are for my bed. [[c:achterMarket|On\nthe Saturday of Mr Crane's deed, at nine o'clock, I was at the market with the Inspector, weighing plums.]]\n\nThe plums were sour. So was the Inspector, until we found a ripe one.\n\nOld bread makes the best toast.\n\nW.A."
+    },
+    {
+      "id": "11.10",
+      "chapter": "scene",
+      "type": "diary",
+      "title": "Nell's casebook",
+      "author": "Nell Okafor-Hart",
+      "when": "Friday night, late",
+      "where": "Nell's casebook, the hunch-o-meter page, left open on the agency desk",
+      "picture": "a page of fast, slanting handwriting, a dial drawn in the corner with its needle at 10.",
+      "readAloud": false,
+      "body": "**NELL'S CASEBOOK · private · HUNCH-O-METER PAGE**\n\nSuspect: Inspector Ada Holloway. Hunch: 10 out of 10.\n\n1. Ada knows more about the Founding Charter than anyone alive.\n\n2. [[c:nellCello|Tam saw a lady with a case going in at the Nave door. Ada carries a cello case everywhere.]] Obviously!\n\n3. The cards say \"read carefully\". Ada says \"You have read it. Now see it.\" Same idea. Same person.\n\n4. [[c:nellO|The old letter is signed \"O.\" That's an O for HollOway!]] Two of them, even.\n\n5. She has never once told us an answer. That is exactly what the Blot does.\n\n6. She plays at eleven with her window wide open. In MARCH. That's a signal to somebody.\n\nConclusion: it's Ada. I just feel it.\n\n*Underneath, in Quill's small, exact writing:* [[c:quillShow|Show me where it says that.]]"
+    },
+    {
+      "id": "11.11",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "A visitor's guide to the Great Library",
+      "author": "the Great Library",
+      "when": "the current leaflet",
+      "where": "the rack inside the Library's great door",
+      "picture": "a folded leaflet with a painted drawing of the Library's dome; no words in the drawing.",
+      "readAloud": false,
+      "body": "**WELCOME TO THE GREAT LIBRARY · A VISITOR'S GUIDE**\n\n**The Great Door.** [[c:motto|Carved in oak above the door you came in by: \"Every word, for everyone.\"]] The first\nKeeper chose the words in 1726. You have probably walked under them a hundred times without looking up. Most people do.\n\n**The Scriptorium.** Candlelit copying rooms, old maps, and the Nave alcove with its antique hand press.\n\n**The Seal Room.** A vaulted stone room with a long oak table, where the seals and the Harbour Map are kept.\n[[c:noHands|Its ceiling vault is painted with a great clock face, with all twelve numbers but no hands.]] Nobody knows\nwhy. [[c:rings|The floor is laid in old square tiles, in rings like ripples, around a single tile in the very middle.]]\n[[c:grille|Its tall windows are leaded shut. High in the wall it shares with the Nave alcove is a round brass grille.]]\n\n**The Inkwell Clock Tower** (not part of the Library). [[c:towerStrikes|It strikes every hour, loudly]], as everyone on\nLamplit Row will tell you.\n\nThe Library is free, and always has been."
+    },
+    {
+      "id": "11.12",
+      "chapter": "scene",
+      "type": "note",
+      "title": "The Lamplighters' note",
+      "author": "Tam Bellweather",
+      "when": "Friday 20 March, late",
+      "where": "pushed under the agency door",
+      "picture": "a torn paper bag, flour on it, pencil, the first line with three neat little ticks added later.",
+      "readAloud": false,
+      "body": "every night this week 11 oclock a lady goes in the nave door on cobble lane tall grey plait\n\n[[c:tamCase|she had a case not a cello case a violin one]] we checked twice\n\n[[c:tamAda|the inspector was home every night at 11 playing her cello]] you can hear it all down lantern row its the sad\none\n\n[[c:echo|then lantern row does its echo from the library end only higher and the tune comes out different]] spooky\n\nmrs a lamp goes out at 10 every night like a clock\n\nno biscuit again tully is looking in the bins\n\ntam\n\nps we used the comma whistle on the second line it helps"
+    },
+    {
+      "id": "11.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Why are your fingers always blue?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "Ink! From the press in the Nave alcove! I clean it. Somebody keeps using it and leaving the rollers sticky, and the Keeper\nhates mess. If she found it, she'd lock the alcove. So I wipe it, three times a week."
+    },
+    {
+      "id": "11.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Do you know who uses the press?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "No. Honestly no. I left a note. I said I'd cover for them a little. That was probably wrong. I just thought, whoever it\nis, they never break anything. They even put the type back in the right order. Nobody does that."
+    },
+    {
+      "id": "11.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"When are you in the alcove?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "Five o'clock, Monday, Wednesday and Friday. It's in the key log. I'm always out by half past five, because the Keeper\nlocks the Scriptorium at six. At eleven at night I'm asleep. I have to be. I'm sixteen."
+    },
+    {
+      "id": "11.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Have you ever written the word 'forthwith'?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "Forthwith? *(He laughs.)* I've never even *said* it. It sounds like a sneeze in a wig. Sorry. That was rude. Sorry."
+    },
+    {
+      "id": "11.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Winifred Achterberg: \"Do you write riddles?\"",
+      "author": "Mrs Winifred Achterberg",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "A riddle is only a question in its Sunday coat. I ask my questions in their aprons."
+    },
+    {
+      "id": "11.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Winifred Achterberg: \"Where were you at nine o'clock on the morning of Crane's deed?\"",
+      "author": "Mrs Winifred Achterberg",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "At the market with the Inspector. Plums. If you doubt a woman, ask the fruit seller; she remembers every complaint."
+    },
+    {
+      "id": "11.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Winifred Achterberg: \"Where are you at eleven at night?\"",
+      "author": "Mrs Winifred Achterberg",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "The early bird has the warm side of the bed. My lamp goes out at ten. Ask the boy with the flour on him."
+    },
+    {
+      "id": "11.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Winifred Achterberg: \"Who do you think the Blot is?\"",
+      "author": "Mrs Winifred Achterberg",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "A lost sheep often follows the old path home. She has been gone a long time, that one. I have kept her teacup.",
+      "talk": [
+        {
+          "who": "FELIX",
+          "text": "Footnote: she said 'she'. And 'her teacup'. And 'gone a long time'."
+        }
+      ],
+      "pinnable": true
+    },
+    {
+      "id": "11.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Winifred Achterberg: \"Have you seen her, the one whose teacup you kept?\"",
+      "author": "Mrs Winifred Achterberg",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "[[c:plumStall|At the plum stall, in October. She looked at me over the plums and put one finger to her lips.]] A secret\nkept for a friend is a loaf kept warm. I have not told the Inspector. Hope is heavy to carry twice."
+    },
+    {
+      "id": "11.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Professor Orla Penhallow: \"Are you the Blot?\"",
+      "author": "Professor Orla Penhallow",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "I am the Keeper. If I wanted to hide a word in this Library, I would shelve it under Grammar. Nobody would find it for\na century."
+    },
+    {
+      "id": "11.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Professor Orla Penhallow: \"Why did you ban the word 'forthwith'?\"",
+      "author": "Professor Orla Penhallow",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "Because Library staff kept using it to sound important. \"Please return the atlas forthwith.\" Say *now*. Children\nunderstand *now*. I sign my memos with my initials, and I have never in my life signed anything with a dash."
+    },
+    {
+      "id": "11.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Professor Orla Penhallow: \"Who has been into the Seal Room?\"",
+      "author": "Professor Orla Penhallow",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "Nobody, since the autumn. My key never leaves my ribbon. This morning, after your invitation, I unlocked the door for one\nminute.\n[[c:noPrints|The dust on the floor is as thick as felt, and there is not one footprint in it.]] Yet by the far wall lies\na cream card with a blot, and the ink is fresh. I did not step in. I did not want to be the first footprint.\n[[c:secondKey|After Mr Swale and the map, I had the lock changed. The locksmith cut two keys. The spare went to Inspector\nHolloway, sealed, in case anything happened to me.]]"
+    },
+    {
+      "id": "11.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Professor Orla Penhallow: \"Will you bring your key tonight?\"",
+      "author": "Professor Orla Penhallow",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "I will bring it, and I will bring a torch, and I will bring Constable Tully. I have been frightened for this Library for\nsix years. Tonight I would like to be something else."
+    },
+    {
+      "id": "11.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Professor Orla Penhallow: \"If you lock the Scriptorium at six, how does anyone get in at eleven?\"",
+      "author": "Professor Orla Penhallow",
+      "when": null,
+      "where": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "picture": null,
+      "readAloud": false,
+      "body": "*(A long pause. The pencil comes out of her bun and goes back in.)* [[c:latch|Because every night since February, I have\nleft the Nave door on the latch.]] A Keeper should not. I know. But whoever prints in there puts the type back in the\nright order. For six years I have wanted somebody to love this place the way I do. I did not want to know who. I wanted it\nto go on."
+    },
+    {
+      "id": "11.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "\"Miss Delia Nove\": \"Who are you?\"",
+      "author": "\"Miss Delia Nove\"",
+      "when": null,
+      "where": "Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.",
+      "picture": null,
+      "readAloud": false,
+      "body": "A puzzle-setter. I set crosswords for anyone who will pay, and for some who won't. I am staying at the harbour\nguesthouse. The breakfasts are excellent and the gulls are rude."
+    },
+    {
+      "id": "11.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "\"Miss Delia Nove\": \"Were you at the Registry on the morning of Mr Crane's deed?\"",
+      "author": "\"Miss Delia Nove\"",
+      "when": null,
+      "where": "Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.",
+      "picture": null,
+      "readAloud": false,
+      "body": "I was. A man dropped his gloves. I held his envelope while he picked them up. One should always help a man with his\nenvelope. You never know what's in it."
+    },
+    {
+      "id": "11.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "\"Miss Delia Nove\": \"What's in the violin case?\"",
+      "author": "\"Miss Delia Nove\"",
+      "when": null,
+      "where": "Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.",
+      "picture": null,
+      "readAloud": false,
+      "body": "A violin. What else would you keep in a violin case? *(A pause.)* It has not been played with anyone else for a long\ntime. It is out of practice at duets."
+    },
+    {
+      "id": "11.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "\"Miss Delia Nove\": \"Why are you in Inkwell?\"",
+      "author": "\"Miss Delia Nove\"",
+      "when": null,
+      "where": "Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.",
+      "picture": null,
+      "readAloud": false,
+      "body": "To finish something I started a long time ago. And now, if you'll excuse me, it is getting dark.\n[[c:slip|I shall go forthwith.]]\n\n*(She stops at the door. She looks back, very directly, at the child. She smiles as if she has been waiting for someone\nto notice.)*"
+    },
+    {
+      "id": "11.S5.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Inspector Ada Holloway: \"Nell thinks you're the Blot.\"",
+      "author": "Inspector Ada Holloway",
+      "when": null,
+      "where": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "picture": null,
+      "readAloud": false,
+      "body": "Nell thinks with her whole heart, which is the right organ for courage and the wrong one for evidence. Has she read\nwhat Tam wrote? Slowly? With the whistle?"
+    },
+    {
+      "id": "11.S5.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Inspector Ada Holloway: \"Who was Odile?\"",
+      "author": "Inspector Ada Holloway",
+      "when": null,
+      "where": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "picture": null,
+      "readAloud": false,
+      "body": "My apprentice. The quickest mind I ever taught, and the most stubborn. We looked for the Charter together, she and I and\nQuill. We failed. I said, \"Enough.\" She said, \"Never.\" Then she left. I was wrong to say enough. I have known it for\nforty years."
+    },
+    {
+      "id": "11.S5.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Inspector Ada Holloway: \"How did Odile sign her letters?\"",
+      "author": "Inspector Ada Holloway",
+      "when": null,
+      "where": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "picture": null,
+      "readAloud": false,
+      "body": "With a dash and her initial. Always a long dash. She said a short dash was a hyphen with ideas above its station. And\nshe said *forthwith*, even at twenty. She thought it was funny. So did I, secretly."
+    },
+    {
+      "id": "11.S5.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Inspector Ada Holloway: \"Where were you at eleven o'clock this week?\"",
+      "author": "Inspector Ada Holloway",
+      "when": null,
+      "where": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "picture": null,
+      "readAloud": false,
+      "body": "Here, playing the slow piece. The one with two parts, of which I can only play one. Lantern Row has heard it every night.\nI'm told it is very sad. It is meant to be waiting."
+    },
+    {
+      "id": "11.S5.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Inspector Ada Holloway: \"Do you have a Seal Room key?\"",
+      "author": "Inspector Ada Holloway",
+      "when": null,
+      "where": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "picture": null,
+      "readAloud": false,
+      "body": "*(She unties the bundle of letters. An old iron key hangs from the faded ribbon, and with it a small envelope.)* Two, in\nfact. This old one I told Orla I had lost. That was a lie, a small and sentimental one. It was the last thing the three of\nus shared, and it opens nothing now. [[c:lockChanged|The new one is still in Orla's envelope, and her wax seal on it has\nnever been broken.]] Ask her to look."
+    },
+    {
+      "id": "11.E1",
+      "chapter": "arc",
+      "type": "other",
+      "title": "The Founding Charter",
+      "author": "Hannah Lark, first Keeper of the Great Library of Inkwell",
+      "when": "1726",
+      "where": "under the middle tile of the Seal Room floor, beneath the painted clock",
+      "picture": "a sheet of heavy parchment, the ink gone the brown of tea, the writing still perfectly clear",
+      "readAloud": false,
+      "body": "*Every word, for everyone.*\n\n*This Library shall belong to no one, so that it may belong to everyone. It shall not be sold, nor let, nor shut against\nany reader, for any price, in any year. Whoever keeps it, keeps it for the next reader, and the next.*\n\n*Set under the clock that never strikes, because a library has no closing time.*\n\n*— Hannah Lark, first Keeper of the Great Library of Inkwell, 1726*"
+    },
+    {
+      "id": "11.E2",
+      "chapter": "arc",
+      "type": "transcript",
+      "title": "Felix's speech",
+      "author": "Felix Moreno-Lindqvist",
+      "when": "the following Saturday, at the unveiling",
+      "where": "the top of the Great Library steps",
+      "picture": null,
+      "readAloud": false,
+      "body": "**Felix's speech**\n\nGood afternoon. My name is Felix, and I am allergic to dust, which has made this a very difficult year.\n\n*(Laughter. He looks surprised, then pleased.)*\n\nI want to tell you about eleven words.\n\nAll year, words went missing from this town. A word from a garden sign. A word from a fountain. A word from a poster,\na motto, a copy-book, and one from a man's own deed of sale. *(Mr Crane looks at his shoes.)* One word was even painted\non a boathouse roof, where only a lighthouse could read it. People said someone was stealing them. Nobody was. Someone\nwas *lending* them to us, one at a time, to see if we would read carefully enough to give them back.\n\nWe nearly didn't. We got things wrong. Nell got Marlowe wrong, four times. *(Nell: \"Three!\" Marlowe: \"Four.\")* I got\nstage fright on a stage. Asha argued with Dev about a torch for an entire year, and I still don't know whose turn it\nis.\n\nBut here is what we learned. You can't solve anything by guessing. You solve it by reading what's actually there: the\ncomma, the tense, the date, the word somebody chose. You have to read slowly, and then you have to read the door over\nyour head, which nobody ever looks at.\n\nI'd like to give you a footnote.\n\n*(Groans. Laughter.)*\n\nThe word *library* comes from the Latin *liber*, which meant the inner bark of a tree, the thing people first wrote on.\nFootnote to the footnote: there was another Latin word, *liber*, which sounds exactly the same and means something\ndifferent. It means *free*.\n\nI checked. They're two different words. But I don't think it's an accident that they sound the same here.\n\nThe first Keeper wrote, \"This Library shall belong to no one, so that it may belong to everyone.\" That isn't a rule\nabout a building. It's a promise to the next person who walks through that door. Maybe that's you. Maybe it's\nsomeone who has nowhere else to go on a wet Tuesday afternoon, who comes in and is warm.\n\nEvery word, for everyone.\n\nThat's all. Thank you. *(A pause.)* I didn't freeze. Footnote: I did, a bit, at the start. But I didn't stay frozen.\nThat's the important part."
+    },
+    {
+      "id": "11.E3",
+      "chapter": "arc",
+      "type": "letter",
+      "title": "A letter from the Constabulary",
+      "author": "Chief Constable Imogen Strand",
+      "when": "the afternoon after the unveiling",
+      "where": "the post, up the thirty-nine steps of Bellweather's",
+      "picture": "a long envelope with the Constabulary's crest; a Junior Inspector badge enclosed",
+      "readAloud": false,
+      "body": "**THE INKWELL CONSTABULARY**\n\nDear Miss Okafor-Hart,\n\nThank you for your application to be made an Inspector of the Inkwell Constabulary.\n\nI must tell you, honestly, that you are too young. Our rules say an Inspector must be twenty-one. They have said so for\na hundred and forty years.\n\nHowever, I have read your application, and I have read the reports of Constable Tully, Professor Penhallow and\nInspector Holloway (retired). I have also read the Registry's day book for 14 March, which I understand you read first.\n\nRules are made of words, and you have shown this town what careful readers can do with words. So we have added one.\n\nFrom today, you are the Inkwell Constabulary's first **Junior Inspector**.\n\nYou will need a badge. It is enclosed. You will also need patience, which cannot be enclosed. I am told you are\nworking on it.\n\nWith respect and real pleasure,\n\nChief Constable Imogen Strand"
+    },
+    {
+      "id": "11.E4",
+      "chapter": "arc",
+      "type": "note",
+      "title": "One more letter",
+      "author": "\"O.\"",
+      "when": "the afternoon after the unveiling",
+      "where": "in the dumbwaiter under a bun, no stamp",
+      "picture": "printed capitals with a chip in every e",
+      "readAloud": false,
+      "body": "Thank you for reading.\n— O."
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "finch",
+      "setting": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "questions": [
+        {
+          "id": "finch-q1",
+          "type": "what",
+          "q": "Why are your fingers always blue?",
+          "answerDoc": "11.S1.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "finch-q2",
+          "type": "who",
+          "q": "Do you know who uses the press?",
+          "answerDoc": "11.S1.Q2",
+          "expression": "guilty"
+        },
+        {
+          "id": "finch-q3",
+          "type": "when",
+          "q": "When are you in the alcove?",
+          "answerDoc": "11.S1.Q3",
+          "expression": "calm"
+        },
+        {
+          "id": "finch-q4",
+          "type": "why",
+          "q": "Have you ever written the word 'forthwith'?",
+          "answerDoc": "11.S1.Q4",
+          "expression": "amused",
+          "expressionNote": "amused, then offended"
+        }
+      ]
+    },
+    {
+      "suspect": "achterberg",
+      "setting": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "questions": [
+        {
+          "id": "achterberg-q1",
+          "type": "what",
+          "q": "Do you write riddles?",
+          "answerDoc": "11.S2.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "achterberg-q2",
+          "type": "where",
+          "q": "Where were you at nine o'clock on the morning of Crane's deed?",
+          "answerDoc": "11.S2.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "achterberg-q3",
+          "type": "when",
+          "q": "Where are you at eleven at night?",
+          "answerDoc": "11.S2.Q3",
+          "expression": "offended"
+        },
+        {
+          "id": "achterberg-q4",
+          "type": "who",
+          "q": "Who do you think the Blot is?",
+          "answerDoc": "11.S2.Q4",
+          "expression": "relieved"
+        },
+        {
+          "id": "achterberg-q5",
+          "type": "when",
+          "q": "Have you seen her, the one whose teacup you kept?",
+          "answerDoc": "11.S2.Q5",
+          "expression": "guilty",
+          "expressionNote": "guilty, then calm"
+        }
+      ]
+    },
+    {
+      "suspect": "penhallow",
+      "setting": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly.",
+      "questions": [
+        {
+          "id": "penhallow-q1",
+          "type": "what",
+          "q": "Are you the Blot?",
+          "answerDoc": "11.S3.Q1",
+          "expression": "offended",
+          "expressionNote": "offended, then amused"
+        },
+        {
+          "id": "penhallow-q2",
+          "type": "what",
+          "q": "Why did you ban the word 'forthwith'?",
+          "answerDoc": "11.S3.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "penhallow-q3",
+          "type": "where",
+          "q": "Who has been into the Seal Room?",
+          "answerDoc": "11.S3.Q3",
+          "expression": "nervous"
+        },
+        {
+          "id": "penhallow-q4",
+          "type": "why",
+          "q": "Will you bring your key tonight?",
+          "answerDoc": "11.S3.Q4",
+          "expression": "relieved"
+        },
+        {
+          "id": "penhallow-q5",
+          "type": "how",
+          "q": "If you lock the Scriptorium at six, how does anyone get in at eleven?",
+          "answerDoc": "11.S3.Q5",
+          "expression": "guilty",
+          "expressionNote": "guilty, then relieved"
+        }
+      ]
+    },
+    {
+      "suspect": "odile",
+      "setting": "Found in the Scriptorium's map room at dusk, studying the Harbour Map from Case 8. A violin case at her feet. The room smells faintly of violets, and of something sharp and piney, like a pencil freshly sharpened.",
+      "questions": [
+        {
+          "id": "odile-q1",
+          "type": "who",
+          "q": "Who are you?",
+          "answerDoc": "11.S4.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "odile-q2",
+          "type": "where",
+          "q": "Were you at the Registry on the morning of Mr Crane's deed?",
+          "answerDoc": "11.S4.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "odile-q3",
+          "type": "what",
+          "q": "What's in the violin case?",
+          "answerDoc": "11.S4.Q3",
+          "expression": "nervous",
+          "expressionNote": "nervous, for the first time"
+        },
+        {
+          "id": "odile-q4",
+          "type": "why",
+          "q": "Why are you in Inkwell?",
+          "answerDoc": "11.S4.Q4",
+          "expression": "guilty",
+          "expressionNote": "guilty, then relieved"
+        }
+      ]
+    },
+    {
+      "suspect": "ada",
+      "setting": "No. 9 Lantern Row. The cello is out of its case. The tea is cold. The window is open, although it is March and the fog comes in and sits on the piano. Semicolon: \"Elementary; therefore!\"",
+      "questions": [
+        {
+          "id": "ada-q1",
+          "type": "what",
+          "q": "Nell thinks you're the Blot.",
+          "answerDoc": "11.S5.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "ada-q2",
+          "type": "who",
+          "q": "Who was Odile?",
+          "answerDoc": "11.S5.Q2",
+          "expression": "nervous"
+        },
+        {
+          "id": "ada-q3",
+          "type": "how",
+          "q": "How did Odile sign her letters?",
+          "answerDoc": "11.S5.Q3",
+          "expression": "calm"
+        },
+        {
+          "id": "ada-q4",
+          "type": "where",
+          "q": "Where were you at eleven o'clock this week?",
+          "answerDoc": "11.S5.Q4",
+          "expression": "relieved"
+        },
+        {
+          "id": "ada-q5",
+          "type": "what",
+          "q": "Do you have a Seal Room key?",
+          "answerDoc": "11.S5.Q5",
+          "expression": "nervous",
+          "expressionNote": "nervous, then relieved",
+          "chapter": 4,
+          "appearsAfter": "chapter-3-false-solution",
+          "note": "offered at the start of Chapter 4, on Ada's doorstep; it breaks the false solution"
+        }
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "voice",
+      "skill": "voice",
+      "label": "voice",
+      "statement": "The Blot writes like Odile Vane: the same old-fashioned word, the same long-dash sign-off.",
+      "spans": [
+        "cardDeed",
+        "forthMidnight",
+        "odileForth",
+        "dashB",
+        "dashO",
+        "slip",
+        "cardFountain",
+        "felixForth"
+      ],
+      "why": "\"forthwith\" is rare (\"nobody under seventy says 'forthwith'\"), and the Keeper has banned it from her staff. The Blot uses it three times; so did Odile, forty years ago; so does \"Miss Delia Nove\", leaving the map room. The sign-off is the same shape: a long dash, a space, one letter. **This is the deciding clue:** two lines, forty years apart, \"I am going forthwith\" and \"I shall go forthwith\".",
+      "hints": [
+        "Some words are fingerprints. Find a word that only one kind of person uses, then find every place it turns up."
+      ],
+      "hintBy": "FELIX",
+      "required": [
+        "odileForth",
+        "cardDeed"
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "timeline",
+      "skill": "sequence",
+      "label": "timeline",
+      "statement": "The 'visiting puzzle-setter' is one woman under three names, and she arrives just before each word vanishes.",
+      "spans": [
+        "olive",
+        "elodie",
+        "delia",
+        "sameLady"
+      ],
+      "why": "three names, one description, and each visit comes just *before* a vanishing (CLOCK, LIES, FOR). The puzzle-setter is the Blot.",
+      "hints": [
+        "Don't read the names. Read the descriptions. And read *when*."
+      ],
+      "hintBy": "ASHA"
+    },
+    {
+      "id": "D3",
+      "type": "meaning",
+      "skill": "inference",
+      "label": "meaning (anagram)",
+      "statement": "The cards are printed in the Nave alcove, and NAVE is VANE turned round.",
+      "spans": [
+        "press",
+        "naveVane",
+        "vaneName"
+      ],
+      "why": "Dev doesn't know anyone called Vane. The child does, from the envelope in Ada's cello case. The place where the cards are made carries Odile's own name, back to front: a puzzle-setter's signature.",
+      "hints": [
+        "I've done the hard part. Somebody in this case knows a Vane. It's written on an envelope."
+      ],
+      "hintBy": "DEV",
+      "required": [
+        "naveVane",
+        "vaneName"
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "contradiction",
+      "skill": "punctuation",
+      "label": "punctuation",
+      "statement": "Tam's note, read with its commas, says *violin*, not cello. It wasn't Ada.",
+      "spans": [
+        "tamCase",
+        "nellCello",
+        "tamAda",
+        "odileViolin",
+        "echo"
+      ],
+      "why": "with the comma whistle, Tam's line reads *\"she had a case, not a cello case, a violin one.\"* Nell read \"a case\" and stopped. Ada was at home playing at eleven; the lady at the Nave door carried a violin, and Odile took hers when she left. And the \"echo\" that comes back *higher* and *different* is no echo: an echo repeats. It is a second instrument, answering. Nell's casebook is the unreliable narrator: a hunch written down as if it were evidence.",
+      "hints": [
+        "blow the whistle at every gap where you'd breathe. go on. *phweet.*"
+      ],
+      "hintBy": "TAM",
+      "hintNote": "through the speaking-tube"
+    },
+    {
+      "id": "D5",
+      "type": "inference",
+      "skill": "detail",
+      "label": "detail and inference",
+      "statement": "The last word was never hidden. It's carved above the door: EVERYONE.",
+      "spans": [
+        "ledgerLine",
+        "motto",
+        "readAll"
+      ],
+      "why": "the Ledger ends EVERY · WORD · FOR, and the motto runs \"Every word, for everyone\". \"Now read it all\" means read *everything*, including the words over your own head. The last word is **EVERYONE**. The message reads: *Under the clock that never strikes lies \"Every word, for everyone.\"*",
+      "hints": [
+        "The thing you walk under every day is the thing you never see."
+      ],
+      "hintBy": "ACHTERBERG"
+    },
+    {
+      "id": "D6",
+      "type": "figurative",
+      "skill": "figurative",
+      "label": "figurative to literal (the two-step inference)",
+      "statement": "The clock that never strikes is the painted clock with no hands; the Charter lies under the middle tile beneath it.",
+      "spans": [
+        "noHands",
+        "towerStrikes",
+        "rings",
+        "ledgerLine"
+      ],
+      "twoStep": true,
+      "why": "**step one:** \"the clock that never strikes\" sounds like a riddle, but it is literal. Not the Clock Tower, which strikes every hour; a clock with no hands, which cannot. That is the Seal Room ceiling. **Step two:** \"under ... lies\" is literal too: *lies* means *rests*, not *tells untruths* (the word that vanished from the Playhouse motto in Case 7). Under a ceiling clock is the floor, and the tile under the clock's centre is the one in the middle of the rings. *\"Every word, for everyone\"* is not a place. It is a document's first line: the Founding Charter.",
+      "hints": [
+        "A riddle is a sentence that means exactly what it says, read by someone who expected it to mean something else."
+      ],
+      "hintBy": "ADA"
+    },
+    {
+      "id": "D7",
+      "type": "inference",
+      "skill": "inference",
+      "label": "the impossible thing",
+      "optional": true,
+      "statement": "Nobody walked into the locked Seal Room. The card fell in through the grille from the Nave alcove.",
+      "spans": [
+        "noPrints",
+        "grille",
+        "ladder",
+        "cardGap"
+      ],
+      "required": [
+        "noPrints",
+        "grille",
+        "ladder"
+      ],
+      "why": "a locked door and unbroken dust mean nobody came in by the floor. But a room with a grille has a second way in, for anything flat and light. The ladder stands under that grille on the alcove side, with a printer's ink on its top step, and the Blot told the town the trick in Case 7. It does not count toward the six, but the reveal explains it with exactly these lines.",
+      "hints": [
+        "Doors aren't the only holes in a room."
+      ],
+      "hintBy": "DEV"
+    }
+  ],
+  "redHerrings": [
+    {
+      "id": "RH1",
+      "suspect": "ada",
+      "title": "Ada Holloway (Nell's hunch, 10/10; the false solution).",
+      "raisedBy": "She knows the Charter's story, carries a big case, never gives answers, plays at eleven with her window open, and holds the only other key to the new Seal Room lock.",
+      "clearedBy": [
+        "tamCase",
+        "tamAda",
+        "vaneName",
+        "lockChanged"
+      ],
+      "note": "Ada signs \"A.H.\", with no dash; she was heard playing at home at the hour the lady entered the Nave door; the \"O.\" on the old letter is not \"an O for Holloway\", it is Odile; her old key opens nothing, and the Keeper's seal on her new one has never been broken. Her secret is only sentiment: she kept the old key, and the window open, for Odile.",
+      "talk": [
+        {
+          "who": "NELL",
+          "note": "Hunch-o-meter",
+          "text": "10. Wrong. Again. But in a nice direction."
+        }
+      ],
+      "suspicion": [
+        "nellCello",
+        "nellO",
+        "secondKey"
+      ]
+    },
+    {
+      "id": "RH2",
+      "suspect": "finch",
+      "title": "Marlowe Finch (the season's red herring, for the last time).",
+      "raisedBy": "Blue-inked fingers, the alcove key, a note admitting he covers for the Blot, and ink on the ladder's top step.",
+      "clearedBy": [
+        "marloweClean",
+        "keyLog",
+        "marloweKind"
+      ],
+      "note": "His ink is from cleaning; he is in the alcove at five, not eleven; he signs \"M.F. (sorry!)\", never \"— B.\"; and his kindness to a stranger he has never met is, once more, the thing that clears him.",
+      "suspicion": [
+        "ladder"
+      ]
+    },
+    {
+      "id": "RH3",
+      "suspect": "penhallow",
+      "title": "Professor Penhallow.",
+      "clearedBy": [
+        "banForth",
+        "grille"
+      ],
+      "note": "Nobody needed her key; the Keeper hates the Blot's favourite word; and she signs with initials, never a dash. (Her \"O.P.\" is a second red letter \"O\" for anyone who reads initials too fast.) Her secret, the latch, is kindness to a stranger, like Marlowe's.",
+      "raisedBy": "She holds the one Seal Room key in use, the card appeared in her locked room, she leaves the Nave door open at night, and on Monday she needs the Charter more than anyone.",
+      "suspicion": [
+        "onlyKey",
+        "latch",
+        "reviewVote"
+      ]
+    },
+    {
+      "id": "RH4",
+      "suspect": "achterberg",
+      "title": "Mrs Achterberg.",
+      "clearedBy": [
+        "achterMarket",
+        "achterHands"
+      ],
+      "note": "At nine she was at the market stalls with Ada, while \"Miss Delia Nove\" was still in the Registry holding Crane's envelope until he lodged it at 9.05; and Tam sees her lamp out at ten, an hour before the lady goes in at the Nave door. She riddles; the Blot riddles; but a proverb is not a calling card. Her secret is a kept secret, not a crime: she would not raise Ada's hopes until they were sure.",
+      "raisedBy": "She riddles like the Blot, she knows who the Blot is, and she has said nothing.",
+      "suspicion": [
+        "plumStall"
+      ]
+    }
+  ],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "The first Keeper carves the motto and hides the Charter",
+        "when": "in 1726",
+        "spans": [],
+        "placedByChild": false
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "Odile leaves Ada, \"forthwith\", taking her violin",
+        "when": "forty years ago",
+        "spans": [
+          "odileForth"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "\"Mrs Olive Dean\" at the Fountain; CLOCK vanishes",
+        "when": "Tuesday, 6 p.m.",
+        "spans": [
+          "olive"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "\"Mme Elodie Van\" at the Playhouse; LIES vanishes",
+        "when": "Dress rehearsal, 7 p.m.",
+        "spans": [
+          "elodie"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "After Mr Swale and the map, the Seal Room lock is changed; the spare key goes to Ada, sealed",
+        "when": "After Mr Swale and the map",
+        "spans": [
+          "secondKey"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "\"Miss Delia Nove\" holds Crane's envelope; FOR vanishes",
+        "when": "Saturday, 8.50 a.m.",
+        "spans": [
+          "delia"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Ada and Mrs Achterberg weigh plums at the market",
+        "when": "at nine o'clock",
+        "spans": [
+          "achterMarket"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "The Keeper bans \"forthwith\"; the Review Committee is set for Monday 23 March",
+        "when": "Monday 16 March",
+        "spans": [
+          "reviewVote"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "A lady with a violin case enters the Nave door; Ada plays at home; the \"echo\" answers",
+        "when": "every night this week 11 oclock",
+        "spans": [
+          "tamCase",
+          "tamAda",
+          "echo"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "text": "The last card arrives with the buns",
+        "when": "7 a.m.",
+        "spans": [],
+        "placedByChild": false
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "text": "The Keeper finds a card in the locked Seal Room",
+        "when": "This morning",
+        "spans": [
+          "noPrints"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "text": "The Clock Tower strikes twelve; the agency enters the Seal Room",
+        "when": "Come forthwith when the Clock Tower strikes twelve",
+        "spans": [
+          "forthMidnight"
+        ],
+        "placedByChild": true
+      }
+    ],
+    "note": "When all ★ cards are pegged, the line glows faintly along its whole length and a small blot appears on every peg from 3 to 6, then on the last. The washing line is one story now.",
+    "setting": "No. 9 Lantern Row, a quarter past ten. Fog round the gas lamps like wool. Nell knocks. Tully stands behind her, holding the handcuffs behind his back, very badly. The Keeper has come too, with her key and her torch. Ada opens the door before the second knock.",
+    "talk": [
+      {
+        "who": "STAGE",
+        "text": "(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away and looks enormously relieved. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?)"
+      }
+    ]
+  },
+  "accusation": {
+    "culprit": "odile",
+    "place": {
+      "prompt": "Where is the Charter?",
+      "answer": "Under the painted clock's centre tile",
+      "options": [
+        "Behind the Seal Room door",
+        "Under the painted clock's centre tile",
+        "Inside the Clock Tower"
+      ],
+      "wrong": {
+        "Behind the Seal Room door": "Behind a door isn't under anything. Read the Ledger again: 'Under the clock that never strikes…' Then look up. Which clock has no hands?",
+        "Inside the Clock Tower": "That clock strikes every hour, loudly. The Ledger wants the clock that never strikes: twelve numbers, no hands. Now look under it."
+      },
+      "points": [
+        "ledgerLine",
+        "noHands",
+        "towerStrikes",
+        "rings"
+      ],
+      "note": "Added 5 Oct 2026, owner-approved; for sign-off with the case."
+    },
+    "minimalEvidence": [
+      "D1",
+      "D2",
+      "D3",
+      "D6"
+    ],
+    "evidenceSpans": {
+      "D1": [
+        "odileForth",
+        "cardDeed",
+        "slip"
+      ],
+      "D2": [
+        "sameLady",
+        "olive",
+        "elodie",
+        "delia"
+      ],
+      "D3": [
+        "naveVane",
+        "vaneName"
+      ],
+      "D6": [
+        "noHands",
+        "towerStrikes",
+        "rings",
+        "ledgerLine"
+      ]
+    },
+    "acceptableEvidence": [
+      "D4",
+      "D5",
+      "D7"
+    ],
+    "wrongSuspect": {
+      "ada": "Nell's hunch, ten out of ten. Now read Tam's note with the comma whistle. What kind of case? Where was Ada at eleven? And whose seal is still unbroken on her key?",
+      "finch": "Blue fingers, yes. Now read *when* he's in the alcove, and *why*. And show me one card he signed with a dash.",
+      "penhallow": "She banned the Blot's favourite word. Would you ban your own fingerprint? And nobody needed her key. Look up at the wall.",
+      "achterberg": "Where was she at nine on the morning of Crane's deed? Keeping a secret isn't making one. And look again at who she says the Blot is. She told you, in a proverb."
+    },
+    "weakEvidence": "You've found a woman who likes puzzles. So does half this town. Show me *her* words on the Blot's cards, or show me the Blot's place carrying her name.",
+    "wrongSuspectPoints": {
+      "ada": [
+        "tamCase",
+        "tamAda",
+        "lockChanged"
+      ],
+      "finch": [
+        "keyLog",
+        "marloweClean",
+        "dashB"
+      ],
+      "penhallow": [
+        "banForth",
+        "grille"
+      ],
+      "achterberg": [
+        "achterMarket",
+        "plumStall"
+      ]
+    },
+    "wrongTheory": {
+      "nobody could have done it": "A locked door is only one of a room's holes. What is high in the wall, and what stands under it on the other side?"
+    },
+    "note": "D4 is accepted in place of D2 or D3. D7, the impossible thing, is accepted as extra evidence."
+  },
+  "reveal": [
+    {
+      "who": "NELL",
+      "text": "*(quietly)* Hunch-o-meter: zero. Evidence: everything. *(To the child)* Go on. You found it."
+    },
+    {
+      "who": "STAGE",
+      "text": "(Asha reads the timeline: three names, one grey plait. Dev holds up NAVE, then turns it round.)"
+    },
+    {
+      "who": "DEV",
+      "text": "V-A-N-E."
+    },
+    {
+      "who": "QUILL",
+      "text": "And the voice. Today: \"I shall go forthwith.\" Forty years ago: \"I am going away, and I am going forthwith.\" Same word. Same long dash."
+    },
+    {
+      "who": "ADA",
+      "text": "*(very still)* Odile."
+    },
+    {
+      "who": "ODILE",
+      "text": "*(taking off her hat; the grey plait falls down her back)* Hello, Ada. You've let your tea go cold again."
+    },
+    {
+      "who": "PENHALLOW",
+      "text": "You've been taking words all over this town for a year. Signs, posters, mottoes. My own copy-book."
+    },
+    {
+      "who": "ODILE",
+      "text": "Never taking. Hiding. Paper patches the colour of the page. Grey card on stone. Wax on bronze. On Mr Crane's typed deed, a white slip over one short word, so it read as a gap. One word I never hid: I painted it on a boathouse roof, for a lighthouse to read. Warm water undoes the rest."
+    },
+    {
+      "who": "DEV",
+      "text": "And the locked room?"
+    },
+    {
+      "who": "ODILE",
+      "text": "I never set foot in it. A grille in the wall, a ladder on my side. A word can fall through a gap and still be there. I told you so at the Playhouse."
+    },
+    {
+      "who": "MARLOWE",
+      "text": "*(faintly)* It was *you*. You put the type back in order."
+    },
+    {
+      "who": "ODILE",
+      "text": "Somebody has to. And somebody wiped my rollers, and somebody left my door on the latch. *(Marlowe goes pink. The Keeper goes pinker.)* Thank you, both."
+    },
+    {
+      "who": "ADA",
+      "text": "Why, Odile? Why not just *come home* and tell me?"
+    },
+    {
+      "who": "ODILE",
+      "text": "Because forty years ago I found the trail, and you told me puzzles were for children. *(Gently.)* You were right. They are. So I set the sentence out again, one word a case, for a careful reader the town would believe. Then Mr Crane arrived with his tape measure."
+    },
+    {
+      "who": "CRANE",
+      "text": "*(from the back, in his apron)* I *did* bring a tape measure."
+    },
+    {
+      "who": "ODILE",
+      "text": "*(She opens the violin case. Beside the violin lies a letter in Ada's hand.)* Your letter found me, Ada. Every night you played your half at eleven, with the window open. Tam called my half the echo. I'm sorry. For leaving. For the silence. For being right in the rudest possible way."
+    },
+    {
+      "who": "ADA",
+      "text": "*(after a long moment)* You were right. I was rude first. Forty years first. *(She holds out her hand.)* Come here, you impossible girl."
+    },
+    {
+      "who": "STAGE",
+      "text": "(Semicolon: \"Elementary; therefore!\" Nobody can tell if Ada is laughing or crying. Both, says Felix later. Footnote: both.)"
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "SCENE",
+      "text": "I. The Seal Room, a quarter past midnight"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Professor Penhallow crosses the dust at last and picks up the card from under the grille. It says, in printed capitals with a chip in every *e*: *Look up. Then look down. — B.*"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Well,\" says the Keeper, still holding the key that opened the door. \"I suppose somebody had better read the floor.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Everyone looks at the child."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Tully and Marlowe lift the long oak table, map, dust cloth and all, and carry it to the wall."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Asha takes the map-maker's compass from Case 8 out of her pocket. She sets its point on the edge of the outermost ring of tiles and swings it, slow and careful, until the pencil meets itself. The middle tile sits exactly under the painted clock's centre, where the hands would be if there were any."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Torch,\" says Dev."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"*My* turn,\" says Asha."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"It's Tuesday's torch,\" hisses Dev. \"This is Saturday.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"It's *Sunday*,\" says Asha. \"Since midnight. I wrote it down.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Constable Tully holds the torch. Nobody argues with Constable Tully."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Felix sneezes, three times, so hard that the lantern flame bows. Dust rises off the floor in a little cloud and settles again, and in the settling the child sees it: a thin line round the middle tile, cleaner than the rest, as if someone, once, very long ago, had lifted it and put it back."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Tully kneels. He has brought the old handle of the town gavel from the shelf at the agency, the one Mr Osei sent to be mended in Case 4. He slides its flat end into the gap. The tile shifts."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Gently,\" says Penhallow."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Gently,\" says Ada."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Lift it,\" says Nell. \"It's laid there for three hundred years—\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"*Lain*,\" says Quill. \"It has *lain* there. Hens lay; charters lie. Now, *lift!*\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The tile comes up."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Underneath is a hollow the size of a large book, cool and dry, and in it is a bundle wrapped in brown oilskin, tied with a ribbon that was once blue. Tully lifts it out as if it were a sleeping kitten. Penhallow unties the ribbon with fingers that won't keep still. The oilskin opens like a leaf."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Inside is a sheet of heavy parchment, the ink gone the brown of tea, the writing still perfectly clear. The Keeper reads the first line aloud, and her voice breaks halfway through, and she reads it again."
+    },
+    {
+      "who": "DOC",
+      "doc": "11.E1",
+      "text": "The Founding Charter"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Nobody says anything for a long time."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"She signed with a dash,\" says Dev at last, in a whisper. \"A long one.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Where do you think I learned it?\" says Odile."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The child opens the Ledger, on the floor, in the lantern light, and writes the last word in ink:"
+    },
+    {
+      "who": "LEDGER",
+      "text": "UNDER · THE · CLOCK · THAT · NEVER · STRIKES · LIES · EVERY · WORD · FOR · **EVERYONE**"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Above them, the Clock Tower across Lamplit Row strikes one. The painted clock, with no hands, says nothing at all."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Ada unties the faded ribbon from her letters and slides the old iron key off it. She puts it in the Keeper's hand. \"For your museum drawer, Orla. Forty years late.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"I'll label it,\" says Penhallow. \"*Kept for sentiment.*\" She closes her fingers round it. \"The only good reason.\""
+    },
+    {
+      "who": "SCENE",
+      "text": "II. Odile and Ada"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "They walk back to No. 9 Lantern Row together at half past one in the morning, the whole agency trailing behind like a procession, because nobody can bear to go home. The fog has lifted. Every gas lamp on the Row has a halo."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Halfway down Lamplit Row, Dev stops dead under a gas lamp with his notebook open."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Olive Dean,\" he says. \"Elodie Van. Delia Nove.\" He counts letters on his fingers. \"O-D-I-L-E-V-A-N-E. They're *all* you. Every one of them is your name, mixed up.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"I wondered which of you would notice,\" says Odile. \"I thought it might be you. You turn things round.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"You signed every disguise,\" says Dev, outraged and delighted at once."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"A puzzle-setter always signs her work,\" says Odile. \"Otherwise it's just a mess.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Nell walks beside Ada for a while without saying anything, which, for Nell, is a kind of speech."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"I had you at ten,\" she says at last."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"I have been a ten before,\" says Ada. \"It is very tiring. I recommend two.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "On the way, Odile gives the child a folded list in violet ink: nine hiding places, from the Story Garden Guide to Mr Crane's deed, and at the bottom, *warm water, a soft brush, patience*. \"They're yours to lift,\" she says. \"Marlowe will help. He's very good with rollers. The tenth word stays on the boathouse roof. I'm rather proud of that one.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Your boat goes at six,\" says Ada."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Let it,\" says Odile."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "At the door of No. 9, Mrs Achterberg is waiting in her dressing gown with the kettle already on. She looks at Odile for a long time. Then she takes a teacup down from the very top shelf, a blue one with a chip in the handle, dusts it with her apron, and fills it."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"An old cup holds the tea best,\" she says."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"You kept it,\" says Odile."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Forty years,\" says Mrs Achterberg. \"A cup does not care how long. It only cares who drinks.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"You knew,\" says Ada, looking at her housekeeper."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Since the plums in October,\" says Mrs Achterberg. \"Hope is heavy to carry twice. I carried it a little way for you.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Ada sits by the fire. She doesn't say anything. She picks up her cello, tunes the A string, and waits."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Odile opens the violin case."
+    },
+    {
+      "who": "SCENE",
+      "text": "III. The unveiling"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "On Monday at nine, the Review Committee meets for eleven minutes. Councillor Mbeki reads the Charter's second line aloud, closes the file marked *REVIEW*, and moves that the committee never meet again. It is the first vote in Inkwell's history that nobody argues about."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "The following Saturday, the Founding Charter goes on show in a glass case under the Library's great door, directly beneath the motto it explains."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Half of Inkwell comes. Grandpa Okoro brings a pot of marrow soup made from the second-prize marrow's sister, and Mrs Pell brings the bowls. Juniper brings a stone frog from the new pond and sets it, very seriously, beside the glass case \"to keep an eye on things\". Celeste Fairweather signs the visitors' book in green ink, with \"—C.\" at the end. Dot Harkness lends the Keeper her fountain pen to sign the Library's new register. Mr Osei opens the ceremony with three taps of the mended gavel. The Lamplighters stand in a row along the steps, and every time someone in the speeches pauses for breath, Tam blows the comma whistle, very softly, until Constable Tully gently confiscates it."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Dr Leela Raman is there, home at last, with a suitcase covered in stickers and a puffin in a paper bag for Dev. \"Is it a real one?\" says Dev. \"It's a cake,\" says his mother. \"Check the dates on everything, Asha. Even the cake.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Silas Crane is there, in his volunteer's apron. He has shelved Poetry and Plays three times this week. He has not reorganised them. Mr Pettigrew stands beside him, holding a file marked *Library: pro bono*, looking taller than anyone has ever seen him."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Then the Keeper says, \"And now, a speech from one of our detectives,\" and Felix Moreno-Lindqvist walks to the top of the steps."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Two hundred faces look up at him."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "He freezes."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "For three seconds, which is a very long time on a step, nothing happens. Then he finds the child in the crowd, and the child nods, and Felix takes a breath, and begins."
+    },
+    {
+      "who": "DOC",
+      "doc": "11.E2",
+      "text": "Felix's speech"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "There is a silence, the good kind. Then the whole of the Forum steps is clapping, and Semicolon, on Ada's shoulder, shrieks \"Elementary; therefore!\" so loudly that a gull drops a chip."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Later, when the crowd has gone home, the child finds Silas Crane in the Library window seat above the harbour. His trolley of books stands abandoned beside him. He is reading a book of sea stories, and his lips are very slightly moving. He notices the child, scowls, turns a page, and goes on reading."
+    },
+    {
+      "who": "SCENE",
+      "text": "IV. Letters"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "That afternoon the post comes up the thirty-nine steps of Bellweather's. On the thirteenth step it creaks, and on the twenty-sixth, and on the thirty-ninth, as it always does."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "There is a letter for Nell, in a long envelope with the Constabulary's crest."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "She doesn't open it. She hands it to the child. \"You read it,\" she says. \"I'll only rush.\""
+    },
+    {
+      "who": "DOC",
+      "doc": "11.E3",
+      "text": "A letter from the Constabulary"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Nell reads it twice. Then she takes out her hunch-o-meter page, crosses out every number on it, and writes at the bottom: *\"10/10. Evidence: a letter.\"*"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"First time you've been right about a ten,\" says Dev."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"I wasn't guessing,\" says Nell, and pins the badge on The Comet's basket, where the application used to be."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "There is one more letter, with no stamp, in the dumbwaiter under a bun. It says, in printed capitals with a chip in every *e*:"
+    },
+    {
+      "who": "DOC",
+      "doc": "11.E4",
+      "text": "One more letter"
+    },
+    {
+      "who": "SCENE",
+      "text": "V. Biscuit"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "That evening, Marlowe goes back to the Seal Room to return the floor tile to its place, now that the Charter has a glass case instead of a hole. He comes running up to the reading room ten minutes later, out of breath, with too many books."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Constable! Constable, you need to see this.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "In the hollow under the painted clock, curled up on the folded oilskin, warm and dusty and snoring gently, is Biscuit."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Nobody knows how he got in. The door had been open for exactly ten minutes. Constable Tully sits down on the floor beside the hole and laughs until he has to wipe his eyes."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Three hundred years,\" he says, \"and the first thing to lie under the clock after the Charter is my dog.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"*Lie*,\" says Quill, from the doorway. \"Correct.\""
+    },
+    {
+      "who": "SCENE",
+      "text": "VI. The Casebook Wall"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Late that night, the agency is quiet. The round window over the harbour is full of stars. Downstairs, the bakery ovens tick as they cool."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "On the shelf above Quill's desk sit eleven things: Admiral's white feather, the rosette, the lamplighter's pole tip, the stone frog, the gavel's old handle, the green pen, the fountain pen, the small brass lantern, the map-maker's compass, the message bottle, and Crane's red pencil. There is a space at the end."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Quill takes the Charter's ribbon, faded blue, three hundred years old, given by the Keeper \"to the detectives, from everyone\", and climbs the Casebook Wall. Every case is there: twelve of them now, joined by red string, and in the middle the Blot Ledger, every line full."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Quill pins the ribbon above them all, so that its two ends hang down over the whole wall like a bookmark."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Then Quill climbs down, takes off the tiny deerstalker, and hangs it on the hat stand, on the peg beside a hat that is the child's size."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Forty years,\" says Quill, to nobody in particular, looking out at the dark shape of the Library across the water. \"We stood on that tile, Ada and I. We stood right on it.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"You *read* it,\" says the child. \"You just hadn't *seen* it.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Quill looks at the child for a long moment, and then does something nobody at the agency has ever seen before. Quill laughs."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Across the rooftops, from the open window of No. 9 Lantern Row, comes music. A cello, low and warm, and above it, a violin, a little out of practice at duets and getting better with every bar. It is not the sad piece. It is the one with two parts, played, for the first time in forty years, by both."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Behind the Casebook Wall, the painted Reading Door gives a small creak. It has opened four times this year, each time onto somebody else's story, and the four souvenirs it sent home sit on the new shelf beside it. Tonight nobody has touched it. It opens an inch on its own, and a draught comes through that smells of old paper and rain."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"We went through that door once,\" says Quill. \"Ada and I. Forty years ago, looking for the Charter in every story but our own. It's how I know the rules.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "\"Why does it open at all?\" says the child."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "Quill looks up at the ribbon. \"Read the first line again.\""
+    },
+    {
+      "who": "NARRATOR",
+      "text": "*Every word, for everyone.* Every story in every book belongs to whoever opens it. The door is only the Charter, keeping its promise."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "In the Library, under the great door, a single lamp burns all night beside the Charter. It always will. A library has no closing time."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "And at the agency, behind the Casebook Wall, the painted door stands ajar."
+    },
+    {
+      "who": "STAGE",
+      "text": "Case closed. Season closed. The door is open."
+    },
+    {
+      "who": "NARRATOR",
+      "text": "*The Casebook Wall shows: **The Vanishing Words · solved · by everyone**.*"
+    },
+    {
+      "who": "SCENE",
+      "text": "The office object"
+    },
+    {
+      "who": "NARRATOR",
+      "text": "**The Charter's ribbon** is pinned above the Casebook Wall, not on the shelf. When the child taps it, the whole wall lights softly, case by case, from the goose feather to the red pencil, and a small card appears: *\"You have read it. You have seen it. Now go and read something else.\"* — A.H."
+    }
+  ],
+  "drill": {
+    "kind": "clue-spotter",
+    "title": "Read It All",
+    "tile": "Clue Spotter",
+    "description": "Six short sentences appear on painted signs, each with a figure of speech: \"the clock that never strikes\"; \"the eye of the island will close\"; \"it went down like a stone\"; \"dry as dust\"; \"lies under the oak\"; \"a library has no closing time\". For each, the child chooses **literal**, **figurative** or **both**, and then taps the word that decides it. A second round gives three sign-offs (\"— B.\", \"—C.\", \"M.F. (sorry!)\") and three sentences, and the child matches each sentence to its writer by one word or one dash.",
+    "why": "the finale was solved by taking a riddle literally and a sign-off seriously.",
+    "answersNeedSignOff": true,
+    "items": [
+      {
+        "round": 1,
+        "prompt": "the clock that never strikes",
+        "answer": "literal",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-11 D6"
+      },
+      {
+        "round": 1,
+        "prompt": "the eye of the island will close",
+        "answer": "figurative",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-09 D3"
+      },
+      {
+        "round": 1,
+        "prompt": "it went down like a stone",
+        "answer": "both",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-07 drill: literal or figurative by context"
+      },
+      {
+        "round": 1,
+        "prompt": "dry as dust",
+        "answer": "figurative",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-03"
+      },
+      {
+        "round": 1,
+        "prompt": "lies under the oak",
+        "answer": "literal",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-01 (Big Bertha lies in the shed under the oak); case-11 D6 (lies means rests)"
+      },
+      {
+        "round": 1,
+        "prompt": "a library has no closing time",
+        "answer": "both",
+        "options": [
+          "literal",
+          "figurative",
+          "both"
+        ],
+        "answerFrom": "case-11 Charter (figurative) and Epilogue VI (a lamp burns all night)"
+      },
+      {
+        "round": 2,
+        "prompt": "Come forthwith when the Clock Tower strikes twelve",
+        "answer": "— B.",
+        "options": [
+          "M.F. (sorry!)",
+          "— B.",
+          "—C.",
+          "O.P."
+        ],
+        "decidedBy": "forthwith",
+        "answerFrom": "DOC 11.1; the Keeper bans the word (11.8); Marlowe has never said it (11.S1.Q4)"
+      },
+      {
+        "round": 2,
+        "prompt": "I clean the ink off the rollers every Monday, Wednesday and Friday",
+        "answer": "M.F. (sorry!)",
+        "options": [
+          "— B.",
+          "—C.",
+          "M.F. (sorry!)",
+          "W.A."
+        ],
+        "decidedBy": "rollers",
+        "answerFrom": "DOC 11.7"
+      },
+      {
+        "round": 2,
+        "prompt": "My hands are for bread, not for printing presses",
+        "answer": "W.A.",
+        "options": [
+          "W.A.",
+          "— B.",
+          "M.F. (sorry!)",
+          "—C."
+        ],
+        "decidedBy": "bread",
+        "answerFrom": "DOC 11.9"
+      },
+      {
+        "round": 2,
+        "prompt": "I am taking my violin.",
+        "answer": "— O.",
+        "options": [
+          "A.H.",
+          "—C.",
+          "— O.",
+          "M.F. (sorry!)"
+        ],
+        "decidedBy": "violin",
+        "answerFrom": "DOC 11.4; Ada plays the cello (11.12)"
+      },
+      {
+        "round": 2,
+        "prompt": "Which of these could end one of the Blot's cards?",
+        "answer": "— B.",
+        "options": [
+          "—C.",
+          "- B.",
+          "B.",
+          "— B."
+        ],
+        "decidedBy": "the long dash and the space",
+        "answerFrom": "DOC 11.2 (\"a long dash, a space, then the letter. Never a short dash. Never just the letter.\")"
+      }
+    ],
+    "round2": "Five lines from this case's own documents, each offered with four sign-offs. The child picks the writer, then taps the word or the dash that decides it. \"—C.\" (a short dash and no space) is a trap: the Blot never uses a short dash.",
+    "round2Note": "Added 5 Oct 2026, owner-approved; for sign-off with the case."
+  },
+  "art": {
+    "backgrounds": [
+      "The Seal Room, midnight: Case 8's vaulted stone room: candle sconces, a long oak table with the Harbour Map under a linen dust cloth, shelves of seal boxes, tall narrow leaded windows, and the ceiling vault painted with a huge pale-gold clock face: twelve numerals rendered as simple marks or dots, not lettering or digits, and no hands (this must be unmistakable). The floor: square tiles laid in rings, a single tile at the centre, a faintly cleaner line around it, and a soft unbroken skin of dust. High in one wall, a round brass grille; under it, on the floor, a small cream card. Lit warm by the brass lantern; deep teal shadows. Cosy, not eerie.",
+      "The Seal Room, Charter found: the same, the centre tile lifted, the oilskin bundle in a hollow, the faded blue ribbon across the tiles.",
+      "The Nave alcove: a narrow vaulted alcove, an antique wooden hand press, rollers glossy with fresh ink, a pinned note, a brass-framed key log, and in the corner a small wooden step-ladder under a round brass grille.",
+      "The Great Door at dusk and in daylight: the carved motto rendered as carved texture only (live text on tap). In the unveiling it is in full sun, with the Charter's glass case beneath it and the crowd on the steps.",
+      "Lamplit Row in fog, Saturday: gas lamps haloed, the Clock Tower a dark shape with a pale face; for the cutscene, a tall figure in a green coat under No. 9's window, seen from behind, a violin case in hand.",
+      "No. 9 Lantern Row, half past one in the morning: fire, cello and violin, a blue teacup with a chipped handle, Semicolon asleep on a lampshade.",
+      "The agency at night: the round window full of stars, the shelf of eleven objects lit by a desk lamp, the Casebook Wall with the ribbon pinned over it, the hat stand with the child's hat. Behind the wall, the painted Reading Door stands ajar, a thread of warm light along its edge: the season's last panel.",
+      "Crane's panel (Epilogue III): the Library window seat above the harbour, late afternoon. Silas Crane in his apron, a trolley of books beside him, has stopped shelving. He is reading a book of sea stories with his mouth very slightly moving. When he notices the viewer, he scowls, turns a page, and goes on reading."
+    ],
+    "props": [
+      "the last calling card and folded invitation; Dev's squared-paper copy of the cards; the Blot Ledger",
+      "Odile's violet-ink letter and its envelope; Asha's timeline; Dev's cipher notebook (letters in a circle, a little ladder)",
+      "Marlowe's note on the press; the Keeper's memo; Mrs Achterberg's recipe card; Nell's casebook with the hunch dial",
+      "the visitor's guide (a painted dome, no lettering); Tam's flour-bag note",
+      "the card under the grille; Tully's small silver handcuffs (never used); Ada's old iron key on its faded ribbon",
+      "Ada's letter to the old address, in the violin case; Odile's violet-ink list of nine hiding places",
+      "the oilskin bundle; the Founding Charter (brown ink on heavy parchment; set live, never painted); the Charter's ribbon (faded blue silk, frayed at both ends: the office object)",
+      "Nell's Junior Inspector badge."
+    ],
+    "portraits": [
+      "Odile Vane: the season's most important new portrait. Tall, 58, a long grey plait, a green coat, a violin case. Kind, quick eyes. She must read as *warm and clever*, never sinister. Her \"guilty\" expression is rueful; her \"relieved\" is the one used at the duet. Draw her three disguises as small variations: a straw hat (Olive Dean), a beret (Elodie Van), a felt hat and newspaper (Delia Nove). Same plait in all three.",
+      "Ada: her \"relieved\" expression in this case should be the warmest face she has worn all season.",
+      "Quill: a laughing expression, used **once**, in Epilogue VI.",
+      "Crane: a seventh, bonus expression for the epilogue: absorbed in a book, very slightly smiling, pretending not to be.",
+      "Nell: a new expression: reading a letter, mouth open."
+    ],
+    "notes": "No lettering in any painting. Every word, including the motto, the Charter and every letter, is set live in the app's type."
+  },
+  "source": {
+    "script": "case-11.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "arcMarks": [
+    {
+      "span": "notDestroyed",
+      "note": "Asha's margin note on the Ledger: every gap is neat; the reveal answers it (\"Never taking. Hiding.\")."
+    }
+  ],
+  "revealSetting": "The Seal Room. The last stroke of twelve still hums in the stones. The lantern flickers. The child holds up three cards. \"Miss Delia Nove\" sets down her violin case.",
+  "aside": [
+    {
+      "where": "Meta",
+      "text": "the season finale; skills: every skill, led by voice, sequence, punctuation, figurative, detail, and a two-step inference; vanished word: EVERYONE (never hidden: the motto above the Library door)"
+    },
+    {
+      "where": "The full message",
+      "text": "Under the clock that never strikes lies \"Every word, for everyone\"."
+    },
+    {
+      "where": "Chapter 2 — Interviews (setting)",
+      "text": "The Scriptorium reading room, Saturday afternoon. Candles, dust in the light, the fog pressing grey against the tall windows. Somewhere a clock ticks that nobody can find. Felix sneezes every four minutes, exactly."
+    },
+    {
+      "where": "Chapter 2 — Mrs Achterberg Q4",
+      "text": "The child may pin this answer."
+    },
+    {
+      "where": "Chapter 5 — The accusation (setting)",
+      "text": "The Seal Room, a minute after midnight. The Keeper's new key turns with a sound like a knuckle cracking. The vaulted room, cold and dusty, the long oak table under its cloth, lit by the brass lantern from Case 7. Above, in the ceiling vault, the painted clock: twelve gold numerals, no hands. The tiles spread in rings across the floor, and the dust lies on them unbroken, except where the agency now stands. By the far wall, under the high brass grille, the card lies where the Keeper saw it. All five suspects stand in the lamplight. \"Miss Delia Nove\" stands nearest the door, violin case in hand. Nobody saw her arrive."
+    },
+    {
+      "where": "Chapter 5 — The accusation (culprit)",
+      "text": "\"Miss Delia Nove\" is **Odile Vane**, and Odile Vane is the Blot."
+    },
+    {
+      "where": "Chapter 5 — The accusation (minimal evidence rule)",
+      "text": "three, including D1 (D4 is accepted in place of D2 or D3; D7, the impossible thing, is accepted as extra evidence); plus D6, the two-step inference, which finds where the Charter lies"
+    },
+    {
+      "where": "meta: mystery pass (6 Oct 2026) — clock",
+      "text": "midnight, when the Clock Tower strikes twelve; miss it and the Blot leaves on the first boat. On Monday at nine the Review Committee votes on a fee at the Library door, and only the Charter can stop it.",
+      "kind": "mystery"
+    },
+    {
+      "where": "meta: mystery pass — impossible",
+      "text": "a fresh calling card lies on the floor of the Seal Room, a room locked since the autumn. The Keeper's key never leaves her ribbon, and there is not one footprint in the dust.",
+      "kind": "mystery"
+    },
+    {
+      "where": "meta: mystery pass — false solution",
+      "text": "Ada. She has the cello case, the \"O.\", the Charter story, and the only other key to the new lock, cut after Mr Swale and the map (Case 8). Nell is at ten and Tully has the handcuffs out by the end of Chapter 3. Ada's own answer at the start of Chapter 4 breaks it.",
+      "kind": "mystery"
+    },
+    {
+      "where": "meta: mystery pass — hidden clue",
+      "text": "Tam's \"echo\" on Lamplit Row in Chapter 1. It was never an echo. It was the other half of the duet.",
+      "kind": "mystery"
+    },
+    {
+      "where": "Chapter 1 — hook",
+      "text": "As the child sets Tam's note down, the speaking-tube whistles. It is not Tam. It is Professor Penhallow, who has never once used it before. \"Detectives. Somebody has been inside my Seal Room. It is locked. My key has not left my ribbon. And there is a card on the floor.\""
+    },
+    {
+      "where": "Chapter 2 — hook (escalation)",
+      "text": "At six the Scriptorium bell rings for closing. The speaking-tube whistles again. TAM: \"the guesthouse lady with the violin has paid her bill. she asked when the first boat goes. six oclock tomorrow morning. then she went out in the fog and nobody saw where.\" Felix: \"Footnote: the invitation says the Blot leaves on the first boat too.\" Nobody says anything for a while."
+    },
+    {
+      "where": "Chapter 3 — the board's wrong answer and hook",
+      "text": "Ten o'clock. Nell pins Ada's portrait in the middle of the board and ties every red string she has to it. \"The second key. The cello case. The O. The open window. Hunch-o-meter: ten.\" Constable Tully unclips the little silver handcuffs he has never once used, and looks at them as if they might bite. Across the harbour, the Clock Tower strikes ten. Two hours."
+    },
+    {
+      "where": "Chapter 4 — opening (the false solution breaks)",
+      "text": "No. 9 Lantern Row, a quarter past ten. Fog round the gas lamps like wool. Nell knocks. Tully stands behind her, holding the handcuffs behind his back, very badly. The Keeper has come too, with her key and her torch. Ada opens the door before the second knock. **Ada's Q5 is offered now.*** *(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away and looks enormously relieved. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?"
+    },
+    {
+      "where": "Chapter 4 — hook",
+      "text": "Eleven fifty-five. The Scriptorium is dark except for the Keeper's torch, and very cold. The agency stands outside the Seal Room door. Then, from somewhere beyond it, a violin plays four slow notes, and stops. Felix does not sneeze. Nobody breathes. Across Lamplit Row, the Clock Tower begins to strike."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "easier",
+      "level": 4,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 3,
+      "source": {
+        "doc": "11.12",
+        "span": "tamCase"
+      },
+      "prompt": "Tam writes: \"she had a case not a cello case a violin one\". Blow the comma whistle where you would breathe. Which version is right?",
+      "options": [
+        "she had a case not a cello, case a violin one",
+        "she had a case, not a cello case, a violin one",
+        "she had a case not a cello case, a violin, one"
+      ],
+      "answer": "she had a case, not a cello case, a violin one",
+      "explain": "Commas mark the pauses a reader needs. With them, Tam says one thing clearly: a case, and not a cello case, but a violin one. Stop after \"she had a case\" and you miss the most important words in the line."
+    },
+    {
+      "id": "x2",
+      "tier": "easier",
+      "level": 4,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 1,
+      "source": {
+        "doc": "11.9",
+        "span": null
+      },
+      "prompt": "Mrs Achterberg writes: \"A riddle is only a question in its Sunday coat.\" What does she mean?",
+      "options": [
+        "Riddles are only ever asked on a Sunday morning",
+        "A plain question dressed up to look grand",
+        "Questions are kept in coat pockets",
+        "A riddle is harder than any question"
+      ],
+      "answer": "A plain question dressed up to look grand",
+      "explain": "This is a metaphor: it says a riddle IS a question in its best clothes, with no \"like\" or \"as\". Underneath the fine words, a riddle is just a question. Take its coat off and answer it."
+    },
+    {
+      "id": "x3",
+      "tier": "easier",
+      "level": 4,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "11.8",
+        "span": "banForth"
+      },
+      "prompt": "The Keeper's memo says: \"The word \"forthwith\" is banned from all Library notes. It is pompous. Say \"now\".\" What does \"pompous\" mean here?",
+      "options": [
+        "Very old",
+        "Old-fashioned and hard for children to spell",
+        "Trying too hard to sound important",
+        "Rude"
+      ],
+      "answer": "Trying too hard to sound important",
+      "explain": "The clue is the next sentence: \"Say now.\" The Keeper wants a plain word instead of a grand one. Pompous means puffed up, trying to sound important. In her interview she says staff used \"forthwith\" \"to sound important\"."
+    },
+    {
+      "id": "x4",
+      "tier": "easier",
+      "level": 4,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.7",
+        "span": "keyLog"
+      },
+      "prompt": "The key log says: \"M. Finch: Monday, Wednesday, Friday, 5 p.m., returned 5.30.\" Tam saw a lady go in at 11 o'clock. Was Marlowe in the alcove then?",
+      "options": [
+        "Yes, from five until eleven",
+        "No, he gave the key back hours before",
+        "The log does not say"
+      ],
+      "answer": "No, he gave the key back hours before",
+      "explain": "Put the times in order: 5 p.m., in; 5.30, key returned; 11 p.m., the lady goes in. Marlowe's visit ends five and a half hours before the lady arrives. The times clear him."
+    },
+    {
+      "id": "x5",
+      "tier": "easier",
+      "level": 4,
+      "type": "summarise",
+      "skill": "detail",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.7",
+        "span": "marloweKind"
+      },
+      "prompt": "Which sentence best sums up Marlowe's note on the press?",
+      "options": [
+        "Marlowe uses the press every night",
+        "Marlowe cleans up after an unknown printer and covers for them",
+        "Marlowe wants the Keeper to close the alcove",
+        "Marlowe asks the printer to pay him back for all the ink and the rags"
+      ],
+      "answer": "Marlowe cleans up after an unknown printer and covers for them",
+      "explain": "A good summary keeps the main points and drops the \"sorry\"s. Marlowe cleans the rollers, does not know who prints, and covers for them so the Keeper will not close the alcove."
+    },
+    {
+      "id": "x6",
+      "tier": "easier",
+      "level": 4,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "11.S3.Q1",
+        "span": null
+      },
+      "prompt": "The Keeper says: \"If I wanted to hide a word in this Library, I would shelve it under Grammar. Nobody would find it for a century.\" What is she joking about?",
+      "options": [
+        "That hardly anyone reads the Grammar shelves",
+        "That the Grammar books are lost",
+        "That she has hidden a word there",
+        "That Grammar is a hundred years old"
+      ],
+      "answer": "That hardly anyone reads the Grammar shelves",
+      "explain": "She does not mean it literally. The joke is that nobody looks in the Grammar section, so it would be the perfect hiding place. Readers have to notice when a speaker is joking."
+    },
+    {
+      "id": "x7",
+      "tier": "easier",
+      "level": 4,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 3,
+      "source": {
+        "doc": "11.3",
+        "span": "ledgerLine"
+      },
+      "prompt": "The Ledger reads: \"UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY WORD FOR\". What does \"lies\" mean in this sentence?",
+      "options": [
+        "Tells something untrue",
+        "Rests or is placed",
+        "Lies down to sleep"
+      ],
+      "answer": "Rests or is placed",
+      "explain": "\"Lies\" has two meanings. It can mean tells something untrue, as in the Playhouse motto. Here it says where a thing is: something rests under the clock. Ask which meaning fits the rest of the sentence."
+    },
+    {
+      "id": "x8",
+      "tier": "at",
+      "level": 5,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "11.6",
+        "span": "naveVane"
+      },
+      "prompt": "Dev writes: \"Turn NAVE round and it spells VANE.\" Which name on Ada's envelope uses the same four letters?",
+      "options": [
+        "Dean",
+        "Nove",
+        "Vane",
+        "Van"
+      ],
+      "answer": "Vane",
+      "explain": "An anagram uses exactly the same letters in a new order. N-A-V-E turned round is E-V-A-N; shuffled, it is V-A-N-E. The envelope says \"Odile Vane's last letter\". The press in the Nave alcove carries her name back to front."
+    },
+    {
+      "id": "x9",
+      "tier": "at",
+      "level": 5,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "language",
+      "objective": "w8-formal",
+      "chapter": 5,
+      "source": {
+        "doc": "11.2",
+        "span": "felixForth"
+      },
+      "prompt": "Dev's notes say: \"Felix says nobody under seventy says \"forthwith\".\" Why does that make \"forthwith\" a useful clue?",
+      "options": [
+        "It is a long word that the Keeper finds hard to spell",
+        "It is rare and old-fashioned, so few writers use it",
+        "It is spelt in an odd way",
+        "Everybody in Inkwell uses it"
+      ],
+      "answer": "It is rare and old-fashioned, so few writers use it",
+      "explain": "A writer's voice shows in the words they choose. A common word could come from anyone; a rare, formal one like \"forthwith\" points to one person. It is on the Blot's cards, in Odile's old letter, and in Miss Nove's goodbye."
+    },
+    {
+      "id": "x10",
+      "tier": "at",
+      "level": 5,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.2",
+        "span": "dashB"
+      },
+      "prompt": "Dev notes: \"Every card ends the same way: a long dash, a space, then the letter.\" Which sign-off fits that rule?",
+      "options": [
+        "—B.",
+        "- B.",
+        "— B.",
+        "B."
+      ],
+      "answer": "— B.",
+      "explain": "A long dash (—) is not a hyphen (-). Dev's rule has three parts: the long dash, a space, then the letter. \"—B.\" has no space; \"- B.\" uses a short hyphen; \"B.\" has no dash. Small marks can be a fingerprint."
+    },
+    {
+      "id": "x11",
+      "tier": "at",
+      "level": 5,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 3,
+      "source": {
+        "doc": "11.11",
+        "span": "noHands"
+      },
+      "prompt": "The Ledger speaks of \"THE CLOCK THAT NEVER STRIKES\". The visitor's guide describes two clocks. Read literally, which one never strikes?",
+      "options": [
+        "The Clock Tower",
+        "The painted clock with no hands",
+        "Neither: it is only a riddle"
+      ],
+      "answer": "The painted clock with no hands",
+      "explain": "It sounds like a riddle, but read it literally. The Clock Tower \"strikes every hour, loudly\". The Seal Room ceiling is a clock face \"with all twelve numbers but no hands\", and it can never strike at all."
+    },
+    {
+      "id": "x12",
+      "tier": "at",
+      "level": 5,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.10",
+        "span": "quillShow"
+      },
+      "prompt": "Quill writes under Nell's casebook: \"Show me where it says that.\" Which line from Nell's page reports something someone saw?",
+      "options": [
+        "Ada knows more about the Founding Charter than anyone alive.",
+        "Conclusion: it's Ada. I just feel it.",
+        "Tam saw a lady with a case going in at the Nave door.",
+        "Same idea. Same person."
+      ],
+      "answer": "Tam saw a lady with a case going in at the Nave door.",
+      "explain": "Evidence is something seen or written down that you can check, like Tam's sighting. \"I just feel it\" is a hunch; \"than anyone alive\" cannot be checked. A hunch written in a casebook is still a hunch."
+    },
+    {
+      "id": "x13",
+      "tier": "at",
+      "level": 5,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "11.S2.Q4",
+        "span": null
+      },
+      "prompt": "Asked who the Blot is, Mrs Achterberg says: \"A lost sheep often follows the old path home. She has been gone a long time, that one. I have kept her teacup.\" What is she telling you?",
+      "options": [
+        "The Blot is someone from the past who has come home",
+        "The Blot has taken her teacup",
+        "The Blot is a farmer from the hills",
+        "She does not know who the Blot is, and does not care to"
+      ],
+      "answer": "The Blot is someone from the past who has come home",
+      "explain": "The proverb is figurative: a \"lost sheep\" is a person who went away. \"She\", \"gone a long time\" and \"her teacup\" add the facts: a woman who once lived here and has come back. Odile left forty years ago."
+    },
+    {
+      "id": "x14",
+      "tier": "at",
+      "level": 5,
+      "type": "summarise",
+      "skill": "detail",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.4",
+        "span": "odileForth"
+      },
+      "prompt": "Which sentence best sums up the letter signed \"— O.\"?",
+      "options": [
+        "O. is leaving to keep searching for the Charter, and hopes to return with it",
+        "O. is angry with Ada for giving up and never wants to see or hear from her again",
+        "O. has found the Charter and is sending it to Ada",
+        "O. is giving Ada her violin"
+      ],
+      "answer": "O. is leaving to keep searching for the Charter, and hopes to return with it",
+      "explain": "The letter says O. is going away, cannot stop looking for the Charter, and will come back \"with the whole sentence\". It asks Ada to forgive her and to look for her. A summary keeps that, and leaves out the details."
+    },
+    {
+      "id": "x15",
+      "tier": "at",
+      "level": 5,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 1,
+      "source": {
+        "doc": "11.1",
+        "span": "forthMidnight"
+      },
+      "prompt": "The invitation says: \"Come forthwith when the Clock Tower strikes twelve\". \"Forthwith\" joins two small words. What does it mean?",
+      "options": [
+        "Forth + with: at once",
+        "For + thwith: for ever",
+        "Fort + with: with a guard"
+      ],
+      "answer": "Forth + with: at once",
+      "explain": "\"Forth\" means forward or out; \"forthwith\" means at once, straight away. It is an old, formal word. The Keeper's memo gives a modern word for it: \"now\"."
+    },
+    {
+      "id": "x16",
+      "tier": "at",
+      "level": 5,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "language",
+      "objective": "w8-formal",
+      "chapter": 5,
+      "source": {
+        "doc": "11.E1",
+        "span": null
+      },
+      "prompt": "The Charter says: \"This Library shall belong to no one, so that it may belong to everyone.\" What kind of writing is this?",
+      "options": [
+        "A riddle to be solved",
+        "A solemn promise written as a rule",
+        "A newspaper report",
+        "A friendly note"
+      ],
+      "answer": "A solemn promise written as a rule",
+      "explain": "\"Shall\" is the formal word of rules and promises. The Charter is not describing the Library; it is binding every Keeper after Hannah Lark. That is why no one can sell it."
+    },
+    {
+      "id": "x17",
+      "tier": "at",
+      "level": 5,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "11.3",
+        "span": "notDestroyed"
+      },
+      "prompt": "Asha notes: \"Ten words, ten cases, and not one of them was torn out or scratched away.\" What might the neat gaps suggest?",
+      "options": [
+        "The words were removed with care, perhaps to be kept",
+        "The words were never there at all",
+        "Someone tore them out in a hurry and threw the pieces away"
+      ],
+      "answer": "The words were removed with care, perhaps to be kept",
+      "explain": "Someone who wants to destroy a word does not bother to be neat. Neat gaps suggest care, as if the words might be put back. Asha asks the right question: where did they go?"
+    },
+    {
+      "id": "x18",
+      "tier": "at",
+      "level": 5,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "11.12",
+        "span": "echo"
+      },
+      "prompt": "Tam writes: \"then lantern row does its echo from the library end only higher and the tune comes out different\". Why can't this be a real echo?",
+      "options": [
+        "An echo only works in fog",
+        "An echo repeats a sound; it does not change the tune or the pitch",
+        "Lantern Row is too short for an echo",
+        "Echoes only happen in the daytime"
+      ],
+      "answer": "An echo repeats a sound; it does not change the tune or the pitch",
+      "explain": "An echo sends the same sound back. Tam hears something higher, with a different tune, from the Library end. That is a second instrument answering Ada's cello: a violin, playing the other half of the duet."
+    },
+    {
+      "id": "x19",
+      "tier": "easier",
+      "level": 4,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 4,
+      "source": {
+        "doc": "11.11",
+        "span": "grille"
+      },
+      "prompt": "The Seal Room is locked, and the dust has no footprints. How could a card get in? The guide says: \"Its tall windows are leaded shut. High in the wall it shares with the Nave alcove is a round brass grille.\"",
+      "options": [
+        "Someone walked in on tiptoe",
+        "It was dropped through the grille from the other side",
+        "The card was there since the autumn",
+        "It came up through the floor tiles"
+      ],
+      "answer": "It was dropped through the grille from the other side",
+      "explain": "A door is not the only way into a room. A flat, light card can pass through a grille. Dev found a ladder under a grille in the Nave alcove, with ink on its top step."
+    }
+  ],
+  "extraMarks": [
+    {
+      "span": "quillShow",
+      "note": "Quill's line under Nell's hunch (the unreliable narrator): a hunch written down is still a hunch. Not needed to solve."
+    }
+  ]
+}

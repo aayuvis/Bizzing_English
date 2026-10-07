@@ -1,0 +1,1750 @@
+{
+  "format": 1.1,
+  "id": "case-02",
+  "number": 2,
+  "title": "The Lamplighter's Wrong Turn",
+  "label": "A Bizzing mystery",
+  "level": 1,
+  "world": "study",
+  "setting": "Lamplit Row",
+  "skills": [
+    "sequence",
+    "detail",
+    "punctuation"
+  ],
+  "vanishedWord": "THE",
+  "ledgerIndex": 2,
+  "officeObject": {
+    "id": "pole-tip",
+    "name": "a lamplighter's pole tip",
+    "art": "Ivy's old brass hook: a curved brass hook from the end of a lamplighter's pole, slightly worn, on a small wooden stand."
+  },
+  "arc": [
+    {
+      "thread": "A",
+      "beat": "THE vanishes from \"This way to the Great Library\", a sign in Pollard's Books' window; a Blot calling card behind the sign: \"Small words carry big loads. — B.\"",
+      "docs": [
+        "2.4"
+      ]
+    },
+    {
+      "thread": "B",
+      "beat": "Silas Crane seen measuring the Library steps with a tape, smiling",
+      "docs": [
+        "2.S3.Q2"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "the first Raman postcard (Lisbon; an acrostic whose first letters spell CRANE)",
+      "docs": [
+        "2.5"
+      ]
+    }
+  ],
+  "tutorial": [],
+  "card": {
+    "text": "It was the darkest night of the year.\nOn Lamplit Row, the tall lamp by the bridge stayed dark.\nA visitor stepped into the canal. She is safe, just soggy.\nThree Lamplighters walk that way every night.\nEach says, \"I did my job!\"\nOne says her lamp lit itself.\nSolve it by six tonight, or the Lamplighters lose their lamps.",
+    "readAloud": true
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The agency, morning.",
+      "picture": "Rain on the round window; fog sitting on the harbour like a grey cat. Constable Tully puffs up the 39 stairs with a cocoa flask.",
+      "lines": [
+        {
+          "who": "TULLY",
+          "text": "A lamp went dark last night. A visitor went *splash*. And Biscuit has gone missing. Again."
+        },
+        {
+          "who": "TULLY",
+          "text": "The Council says: explain it by six tonight. Or the lamps go to grown-ups, and the Lamplighters hang up their poles."
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "The agency, morning.",
+      "picture": "Nell grabs her coat.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "A dark lamp on the darkest night? Somebody skipped it. Hunch-o-meter: ten!"
+        },
+        {
+          "who": "QUILL",
+          "text": "A hunch is not a clue. Bring me words."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "The agency, morning.",
+      "picture": "Asha opens her notebook.",
+      "lines": [
+        {
+          "who": "ASHA",
+          "text": "Timeline. Breakfast, eight o'clock. Toast. Now, the lamp."
+        },
+        {
+          "who": "DEV",
+          "direction": "whispering",
+          "text": "My turn to carry the torch."
+        },
+        {
+          "who": "ASHA",
+          "direction": "whispering",
+          "text": "It's *daytime*."
+        },
+        {
+          "who": "DEV",
+          "text": "Still my turn."
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "place": "The agency, morning.",
+      "picture": "Felix, already at the door.",
+      "lines": [
+        {
+          "who": "FELIX",
+          "text": "Footnote: a *lamplighter* is a person who lights lamps. Footnote to the footnote: I knew you knew that."
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "place": "Lamplit Row, by the bridge.",
+      "picture": "Wet cobbles, the canal black and quiet, the tall lamp dark against the fog. Tam on the bakery step with a tray of buns nobody is eating.",
+      "lines": [
+        {
+          "who": "TAM",
+          "text": "We light up at six. If nobody knows what happened by then… no more Lamplighters."
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "ivy",
+      "name": "Ivy Larkin",
+      "age": 9,
+      "role": "suspect",
+      "note": "Lamplighter",
+      "look": "Tallest of the six; two long plaits; carries the only long pole, taller than a door",
+      "manner": "Proud, quick, talks fast, finishes your sentence for you",
+      "expressions": [
+        "calm",
+        "offended",
+        "nervous",
+        "guilty",
+        "relieved",
+        "amused"
+      ],
+      "unlockedBy": null,
+      "motive": "she lends Tam her long pole every single night, and grumbles that it is her pole",
+      "secret": "she is saving her pocket money to buy Tam a long pole of her own, for her birthday"
+    },
+    {
+      "id": "rafi",
+      "name": "Rafi Bose",
+      "age": 10,
+      "role": "suspect",
+      "note": "Lamplighter",
+      "look": "Small, round glasses, a short pole with a tidy brass hook",
+      "manner": "Careful; counts things; tells you exactly what happened, in order",
+      "expressions": [
+        "calm",
+        "nervous",
+        "offended",
+        "amused",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "the bridge lamp is the best lamp, and he is always told he is too short for it",
+      "secret": "he crosses the bridge at six every night with his pockets full of crumbs, to feed the ducks under it"
+    },
+    {
+      "id": "moss",
+      "name": "Moss Kettle",
+      "age": 8,
+      "role": "suspect",
+      "note": "Lamplighter",
+      "look": "Woolly hat with a stitched star; a toy telescope on a string",
+      "manner": "Dreamy; loves the dark; says \"boo\" when it is cloudy",
+      "expressions": [
+        "calm",
+        "amused",
+        "offended",
+        "nervous",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "she loves the dark and wishes every lamp were off",
+      "secret": "at seven she was up on Gran's roof with her telescope, where she is not allowed, so she fibbed and said \"indoors\""
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "age": 10,
+      "role": "witness",
+      "note": "leader of the Lamplighters",
+      "look": "Flour on her nose and sleeves; pencil behind one ear",
+      "manner": "Always in a hurry; tells jokes; writes notes on bun bags",
+      "expressions": [
+        "calm",
+        "amused",
+        "nervous",
+        "guilty",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "gundersen",
+      "name": "Mrs Ingrid Gundersen",
+      "role": "witness",
+      "note": "the visitor",
+      "look": "Bright raincoat, a very soggy paper map, wet to the knees",
+      "manner": "Cheerful about everything, including canals",
+      "expressions": [
+        "amused",
+        "calm",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "helper",
+      "look": "Big, slow, kind; a cocoa flask; a notebook with a dog-shaped doodle",
+      "manner": "\"Ten minutes behind, but I always get there\"; counts everything, even matches",
+      "expressions": [
+        "calm",
+        "worried",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "crane",
+      "name": "Silas Crane",
+      "role": "witness",
+      "note": "Arc cameo",
+      "look": "Long grey coat, a silver tape measure, a wide smile",
+      "manner": "Smooth and pleasant; calls everything \"lovely\"",
+      "expressions": [
+        "amused"
+      ],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "2.1",
+      "type": "report",
+      "title": "Constable Tully's notebook",
+      "author": "Constable Bram Tully",
+      "when": "Tuesday night, quarter past seven",
+      "where": "Tully's notebook",
+      "picture": "a page from a constable's notebook, a cocoa ring on one corner, a little doodle of a dog in the margin.",
+      "chapter": "scene",
+      "readAloud": true,
+      "body": "[[c:at-seven|At seven]], a visitor stepped into the canal.\nIt was by the bridge.\nThe water came to her knees.\nShe is safe. Her map is soggy.\n[[c:bridge-dark|The lamp by the bridge was dark.]]\n[[c:two-matches|Under the bakery lamp: two burnt matches.]]",
+      "talk": [
+        {
+          "who": "TULLY",
+          "text": "I always count the matches. Tidy street, tidy mind."
+        },
+        {
+          "who": "NELL",
+          "direction": "already reading the next page",
+          "text": "Very tidy, Constable."
+        }
+      ]
+    },
+    {
+      "id": "2.2",
+      "type": "note",
+      "title": "Tam's note on a bun bag",
+      "author": "Tam Bellweather",
+      "when": "Tuesday, about five o'clock",
+      "where": "in Ivy's coat pocket (she hands it over proudly: \"See? I did what it said!\")",
+      "picture": "a crumpled paper bun bag with a floury thumbprint, pencil words sloping downhill.",
+      "chapter": "scene",
+      "readAloud": true,
+      "body": "ivy\ni have to help dad bake tonite\n[[c:note|light the lamp by the bridge not\nthe one by the bakery]]\nthanks\ntam"
+    },
+    {
+      "id": "2.3",
+      "type": "list",
+      "title": "The Round",
+      "author": "Tam Bellweather (written slowly, on a Sunday, in her best handwriting)",
+      "when": "a Sunday",
+      "where": "pinned inside the Lamplighters' lamp shed",
+      "picture": "a neat chart on a wooden board; three poles hang beside it, short, middle and long, each on its own peg. The shed smells of matches and wet wool.",
+      "chapter": "scene",
+      "readAloud": true,
+      "body": "THE ROUND\nRafi: Canal Street. Short pole.\nMoss: Ink Street. Middle pole.\nIvy: Lantern Row. Long pole.\nTam: [[c:tam-six|the bakery lamp at six]], then the bridge lamp.\n[[c:long-pole|The bridge lamp needs the long pole.]]\n[[c:lend|Ivy lends Tam the long pole.]]",
+      "talk": [
+        {
+          "who": "ASHA",
+          "text": "So on a normal night, Ivy finishes her round at the bridge and hands Tam the long pole. And Tam lights the bridge lamp."
+        },
+        {
+          "who": "DEV",
+          "text": "But last night Tam was baking."
+        }
+      ]
+    },
+    {
+      "id": "2.4",
+      "type": "other",
+      "title": "The sign in Pollard's window, with a calling card",
+      "author": "unknown",
+      "when": null,
+      "where": "the window of Pollard's Books, on the corner by the bridge",
+      "picture": "an old painted street sign propped in a bookshop window, an arrow pointing right, towards the bridge. A small white card is tucked behind it, with one perfect round ink blot. On the door, a small closed sign (blank in the painting; the word is live).",
+      "chapter": "scene",
+      "readAloud": true,
+      "body": "The sign in the window says:\n[[c:sign|This way to ____ Great Library →]]\nOne word is gone. The gap is neat.\nBehind the sign is a little card.\nIt has a perfect ink blot.\n[[c:card|Small words carry big loads.]] — B.",
+      "talk": [
+        {
+          "who": "DEV",
+          "direction": "rattling the shop door",
+          "text": "Locked. Mr Pollard's been away all week. And that card wasn't there when we came past this morning."
+        },
+        {
+          "who": "FELIX",
+          "direction": "nose to the glass",
+          "text": "Footnote: the window smells of rosin. Rosin is what you rub on a violin bow. Footnote to the footnote: why would a locked bookshop smell of violins?"
+        }
+      ]
+    },
+    {
+      "id": "2.5",
+      "type": "postcard",
+      "title": "Mum's postcard from Lisbon",
+      "author": "Dr Leela Raman",
+      "when": "Postmark: Lisbon, Friday",
+      "where": "on the agency doormat, delivered with the buns",
+      "picture": "a postcard of a yellow tram climbing a steep hill of red roofs; a stamp with a sailing ship.",
+      "chapter": "scene",
+      "readAloud": true,
+      "body": "Dear Asha and Dev,\n[[c:pc-c|Cobbled hills go up and down.]]\n[[c:pc-r|Red roofs and yellow trams.]]\n[[c:pc-a|A rich man buys old buildings here.]]\n[[c:pc-n|Next he wants to buy in Inkwell.]]\n[[c:pc-e|Every first letter spells his name.]]\nLove, Mum",
+      "aside": [
+        {
+          "who": "STAGE",
+          "text": "The postcard is an arc clue, not a case clue. Dev reads the first letters down the side: C · R · A · N · E. Asha checks the postmark: \"Friday to Tuesday. Four days. Mum's cards always take four days. Breakfast took nine minutes.\""
+        }
+      ],
+      "talk": [
+        {
+          "who": "STAGE",
+          "text": "Chapter end. The agency walks back along the canal. The fog has come up thick and white; the lamps are only gold smudges in it. Somewhere in the fog, a violin plays four slow notes. Then stops."
+        },
+        {
+          "who": "DEV",
+          "direction": "whispering",
+          "text": "Who plays a violin on Lamplit Row?"
+        },
+        {
+          "who": "STAGE",
+          "text": "Quill says nothing at all, for a long moment, and looks into the fog."
+        }
+      ]
+    },
+    {
+      "id": "2.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Ivy Larkin: Did you light your lamps last night?",
+      "author": "Ivy Larkin",
+      "readAloud": true,
+      "body": "Yes! All my high lamps on Lantern Row.\nThen I did Tam's extra one.\n[[c:ivy-bakery|I went to the lamp by the bakery.]]\nJust like the note said!"
+    },
+    {
+      "id": "2.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Ivy Larkin: When did you get to that lamp?",
+      "author": "Ivy Larkin",
+      "readAloud": true,
+      "body": "[[c:ivy-half|At half past six.]]\nI know, because the Clock Tower bonged once.\nOne bong means half past."
+    },
+    {
+      "id": "2.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Ivy Larkin: Was the lamp dark when you got there?",
+      "author": "Ivy Larkin",
+      "readAloud": true,
+      "body": "Um.\n[[c:already-lit|It was already lit.]]\nI struck my match anyway.\nI thought, wow, that was fast!"
+    },
+    {
+      "id": "2.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Ivy Larkin: Why the bakery lamp, and not the bridge?",
+      "author": "Ivy Larkin",
+      "readAloud": true,
+      "body": "Read Tam's note!\n[[c:not-joke|Tam always does the NOT joke.]]\n\"Light the bridge one… NOT!\"\nSo I lit the bakery one."
+    },
+    {
+      "id": "2.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Ivy Larkin: Who has the long pole?",
+      "author": "Ivy Larkin",
+      "readAloud": true,
+      "body": "[[c:ivy-pole|Me. I have the only long pole.]]\nTam borrows it every single night.\n[[c:ivy-mine|It's MY pole, you know.]]\nI didn't need it last night, though.\nThe bakery lamp is short."
+    },
+    {
+      "id": "2.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Rafi Bose: Where were you at half past six?",
+      "author": "Rafi Bose",
+      "readAloud": true,
+      "body": "On Canal Street. I light the low lamps.\n[[c:rafi-short|My pole is short.]]\nIt only reaches low lamps."
+    },
+    {
+      "id": "2.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Rafi Bose: Did you see the bridge lamp?",
+      "author": "Rafi Bose",
+      "readAloud": true,
+      "body": "Yes. [[c:rafi-six|I crossed the bridge at six.]]\nThe lamp was dark then.\nThat is normal.\nTam lights it at half past.\nIvy brings her the long pole."
+    },
+    {
+      "id": "2.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Rafi Bose: Could you reach the bridge lamp?",
+      "author": "Rafi Bose",
+      "readAloud": true,
+      "body": "No. I tried once, last winter.\nI jumped very high.\nI landed in a puddle.\nNot a canal. A puddle."
+    },
+    {
+      "id": "2.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Rafi Bose: Why do you cross the bridge every night?",
+      "author": "Rafi Bose",
+      "when": null,
+      "where": null,
+      "picture": null,
+      "readAloud": true,
+      "body": "Every night, at six.\nIt's on my way.\n[[c:rafi-pockets|My pockets? Nothing in them.]]\nJust… nothing."
+    },
+    {
+      "id": "2.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Rafi Bose: Who did you see?",
+      "author": "Rafi Bose",
+      "readAloud": true,
+      "body": "Ivy, at half past six.\n[[c:rafi-saw|She was by the bakery with the long pole.]]\nShe looked very proud."
+    },
+    {
+      "id": "2.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Moss Kettle: Do you like the dark?",
+      "author": "Moss Kettle",
+      "readAloud": true,
+      "body": "I love it!\nOn dark nights you see more stars.\n[[c:moss-stars|I wish every lamp was off!]]\nOh. Should I not say that?"
+    },
+    {
+      "id": "2.S3.Q2",
+      "chapter": "interview",
+      "type": "note",
+      "title": "Moss's sighting note",
+      "author": "Moss Kettle",
+      "readAloud": true,
+      "body": "[[c:moss-ink|half past six ink street]]\nall my lamps lit\na man in a grey coat\n[[c:crane-tape|measring the libary steps with a tape]]\nhe smild\nlovely steps he said lovely",
+      "aside": [
+        {
+          "who": "STAGE",
+          "text": "Moss hands over her sighting note, written in a hurry."
+        }
+      ]
+    },
+    {
+      "id": "2.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Moss Kettle: Where were you at seven?",
+      "author": "Moss Kettle",
+      "when": null,
+      "where": null,
+      "picture": null,
+      "readAloud": true,
+      "body": "Indoors. Having tea.\n[[c:moss-tea|Definitely indoors.]]\nWhy are you looking at my knees?"
+    },
+    {
+      "id": "2.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Moss Kettle: Moss, where were you really at seven?",
+      "author": "Moss Kettle",
+      "readAloud": true,
+      "body": "Every lamp was lit. Seven on Ink Street.\nThen I climbed up to Gran's roof.\nI took my telescope.\nNo stars. Too cloudy. Boo.\n[[c:moss-roof|I'm not allowed up there. Sorry I fibbed.]]",
+      "unlockedIn": "chapter 4"
+    },
+    {
+      "id": "2.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Moss Kettle: Which lamps can you reach?",
+      "author": "Moss Kettle",
+      "readAloud": true,
+      "body": "[[c:moss-middle|I use the middle pole.]]\nIt reaches the Ink Street lamps.\nThe bridge lamp is a giant!"
+    },
+    {
+      "id": "2.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Tam Bellweather: Who did you write the note to?",
+      "author": "Tam Bellweather",
+      "readAloud": true,
+      "body": "To Ivy.\n[[c:tam-ivy|Only Ivy's pole reaches the bridge lamp.]]\nMost nights she lends it to me.\nI had to bake buns with Dad.\nTwo hundred buns!"
+    },
+    {
+      "id": "2.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Tam Bellweather: When did you write it?",
+      "author": "Tam Bellweather",
+      "readAloud": true,
+      "body": "[[c:tam-five|At five.]] I was in a big hurry.\nThere was flour everywhere.\nI wrote it on a bun bag."
+    },
+    {
+      "id": "2.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Tam Bellweather: Which lamp did you light last night?",
+      "author": "Tam Bellweather",
+      "readAloud": true,
+      "body": "[[c:tam-lit|Our bakery lamp, at six, like always.]]\nI light it from our step.\nOne match. Whoosh.\nIt's my favourite lamp."
+    },
+    {
+      "id": "2.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Tam Bellweather: Do you tell NOT jokes?",
+      "author": "Tam Bellweather",
+      "readAloud": true,
+      "body": "All the time!\n\"Rafi, your hat is lovely… NOT!\"\nWhy?"
+    },
+    {
+      "id": "2.S5.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Ingrid Gundersen: Why were you by the bridge?",
+      "author": "Mrs Ingrid Gundersen",
+      "readAloud": true,
+      "body": "I followed the sign in the bookshop window.\n[[c:sign-way|It pointed over the bridge.]]\nTo the Library! I wanted to see it at night."
+    },
+    {
+      "id": "2.S5.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mrs Ingrid Gundersen: What happened?",
+      "author": "Mrs Ingrid Gundersen",
+      "readAloud": true,
+      "body": "It was very dark.\nI stepped a little to the left.\nSplash! Only up to my knees.\nVery cold. Very Inkwell. I loved it."
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "ivy",
+      "questions": [
+        {
+          "id": "ivy-q1",
+          "type": "what",
+          "q": "Did you light your lamps last night?",
+          "answerDoc": "2.S1.Q1",
+          "portrait": "proud → calm",
+          "expression": "calm"
+        },
+        {
+          "id": "ivy-q2",
+          "type": "when",
+          "q": "When did you get to that lamp?",
+          "answerDoc": "2.S1.Q2"
+        },
+        {
+          "id": "ivy-q3",
+          "type": "what",
+          "q": "Was the lamp dark when you got there?",
+          "answerDoc": "2.S1.Q3",
+          "portrait": "amused → nervous",
+          "expression": "nervous"
+        },
+        {
+          "id": "ivy-q4",
+          "type": "why",
+          "q": "Why the bakery lamp, and not the bridge?",
+          "answerDoc": "2.S1.Q4"
+        },
+        {
+          "id": "ivy-q5",
+          "type": "who",
+          "q": "Who has the long pole?",
+          "answerDoc": "2.S1.Q5",
+          "expression": "offended"
+        }
+      ]
+    },
+    {
+      "suspect": "rafi",
+      "questions": [
+        {
+          "id": "rafi-q1",
+          "type": "where",
+          "q": "Where were you at half past six?",
+          "answerDoc": "2.S2.Q1"
+        },
+        {
+          "id": "rafi-q2",
+          "type": "when",
+          "q": "Did you see the bridge lamp?",
+          "answerDoc": "2.S2.Q2"
+        },
+        {
+          "id": "rafi-q3",
+          "type": "what",
+          "q": "Could you reach the bridge lamp?",
+          "answerDoc": "2.S2.Q3",
+          "portrait": "offended → amused",
+          "expression": "amused"
+        },
+        {
+          "id": "rafi-q5",
+          "type": "why",
+          "q": "Why do you cross the bridge every night?",
+          "answerDoc": "2.S2.Q5",
+          "portrait": "nervous; his coat pockets are very lumpy",
+          "expression": "nervous"
+        },
+        {
+          "id": "rafi-q4",
+          "type": "who",
+          "q": "Who did you see?",
+          "answerDoc": "2.S2.Q4"
+        }
+      ]
+    },
+    {
+      "suspect": "moss",
+      "questions": [
+        {
+          "id": "moss-q1",
+          "type": "why",
+          "q": "Do you like the dark?",
+          "answerDoc": "2.S3.Q1",
+          "portrait": "amused → nervous",
+          "expression": "nervous"
+        },
+        {
+          "id": "moss-q2",
+          "type": "where",
+          "q": "Where were you at half past six?",
+          "answerDoc": "2.S3.Q2"
+        },
+        {
+          "id": "moss-q5",
+          "type": "where",
+          "q": "Where were you at seven?",
+          "answerDoc": "2.S3.Q5",
+          "portrait": "nervous",
+          "expression": "nervous"
+        },
+        {
+          "id": "moss-q4",
+          "type": "who",
+          "q": "Which lamps can you reach?",
+          "answerDoc": "2.S3.Q4"
+        },
+        {
+          "id": "moss-q3",
+          "type": "where",
+          "q": "Moss, where were you really at seven?",
+          "answerDoc": "2.S3.Q3",
+          "portrait": "nervous → relieved",
+          "expression": "relieved",
+          "chapter": 4,
+          "note": "appears in chapter 4: Moss owns up"
+        }
+      ],
+      "talk": [
+        {
+          "who": "STAGE",
+          "text": "Chapter 2 end. Moss tugs her coat down over her knees. Too late. They are grey with soot, the kind you only get from chimneys and roofs."
+        },
+        {
+          "who": "NELL",
+          "direction": "whispering",
+          "text": "Indoors? Since when is indoors sooty?"
+        }
+      ],
+      "chapter4Talk": [
+        {
+          "who": "ASHA",
+          "text": "Gran's roof is on Ink Street. Nowhere near the bridge."
+        },
+        {
+          "who": "DEV",
+          "text": "And her pole is the middle one. It can't reach."
+        },
+        {
+          "who": "NELL",
+          "text": "Hunch-o-meter: …one. Sorry, Moss."
+        },
+        {
+          "who": "MOSS",
+          "text": "I did see the bridge lamp from the roof. All dark. I thought it looked lovely. Sorry about that too."
+        }
+      ]
+    },
+    {
+      "suspect": "tam",
+      "questions": [
+        {
+          "id": "tam-q1",
+          "type": "who",
+          "q": "Who did you write the note to?",
+          "answerDoc": "2.S4.Q1"
+        },
+        {
+          "id": "tam-q2",
+          "type": "when",
+          "q": "When did you write it?",
+          "answerDoc": "2.S4.Q2"
+        },
+        {
+          "id": "tam-q3",
+          "type": "what",
+          "q": "Which lamp did you light last night?",
+          "answerDoc": "2.S4.Q3"
+        },
+        {
+          "id": "tam-q4",
+          "type": "what",
+          "q": "Do you tell NOT jokes?",
+          "answerDoc": "2.S4.Q4",
+          "portrait": "amused → nervous: she has just begun to wonder",
+          "expression": "nervous"
+        }
+      ]
+    },
+    {
+      "suspect": "gundersen",
+      "questions": [
+        {
+          "id": "gundersen-q1",
+          "type": "why",
+          "q": "Why were you by the bridge?",
+          "answerDoc": "2.S5.Q1"
+        },
+        {
+          "id": "gundersen-q2",
+          "type": "what",
+          "q": "What happened?",
+          "answerDoc": "2.S5.Q2",
+          "portrait": "amused",
+          "expression": "amused"
+        }
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "timeline",
+      "skill": "sequence",
+      "statement": "Ivy went to the bakery lamp, not the bridge lamp. Tam had already lit the bakery lamp at six, so Ivy found it lit at half past six.",
+      "spans": [
+        "tam-lit",
+        "ivy-half",
+        "already-lit",
+        "ivy-bakery",
+        "tam-six",
+        "rafi-saw",
+        "two-matches"
+      ],
+      "minimumLink": [
+        [
+          "tam-lit",
+          "already-lit"
+        ]
+      ],
+      "alsoAccepted": [
+        "tam-six",
+        "rafi-saw",
+        "two-matches"
+      ],
+      "why": "nobody \"skipped\" a lamp. Ivy did a job, just at the wrong lamp. Six o'clock comes *before* half past six, so a lamp lit at six is *already* lit at half past. That is the lamp that \"lit itself\", and that is why Tully found two matches under it."
+    },
+    {
+      "id": "D2",
+      "type": "meaning",
+      "skill": "punctuation",
+      "statement": "Tam's note has no comma, so it can be read two ways. Tam meant \"Light the lamp by the bridge, not the one by the bakery.\" Ivy read the \"not\" as one of Tam's NOT jokes.",
+      "spans": [
+        "note",
+        "not-joke",
+        "tam-ivy",
+        "long-pole",
+        "ivy-pole",
+        "lend"
+      ],
+      "minimumLink": [
+        [
+          "note",
+          "tam-ivy"
+        ],
+        [
+          "note",
+          "not-joke"
+        ]
+      ],
+      "alsoAccepted": [
+        "long-pole",
+        "ivy-pole",
+        "lend"
+      ],
+      "why": "this is the deciding clue. The words did not change; only the missing mark did. Tam chose Ivy *because* only Ivy's long pole reaches the tall bridge lamp, so Tam must have meant the bridge."
+    },
+    {
+      "id": "A1",
+      "optional": true,
+      "arcThread": "A",
+      "type": "inference",
+      "skill": "detail",
+      "statement": "Why the visitor was on the bridge: the sign with the missing word points over the bridge.",
+      "spans": [
+        "sign",
+        "sign-way"
+      ],
+      "why": "Arc clue: optional mark, logged in the notebook's back pages, never needed to solve the case."
+    },
+    {
+      "id": "A2",
+      "optional": true,
+      "arcThread": "B",
+      "type": "inference",
+      "skill": "inference",
+      "statement": "Crane arrives: a man measuring the Library steps; a rich man who buys old buildings and wants Inkwell next.",
+      "spans": [
+        "crane-tape",
+        "pc-a",
+        "pc-n"
+      ],
+      "why": "Arc clue: optional mark, logged in the notebook's back pages, never needed to solve the case."
+    },
+    {
+      "id": "A3",
+      "optional": true,
+      "arcThread": "C",
+      "type": "inference",
+      "skill": "detail",
+      "statement": "The acrostic: the first letters spell C R A N E, confirmed by the card's own advice that small things (first letters, too) carry big loads.",
+      "spans": [
+        "pc-c",
+        "pc-r",
+        "pc-a",
+        "pc-n",
+        "pc-e",
+        "card"
+      ],
+      "why": "Arc clue: optional mark, logged in the notebook's back pages, never needed to solve the case."
+    }
+  ],
+  "wrongLinks": [
+    {
+      "spans": [
+        "moss-stars",
+        "bridge-dark"
+      ],
+      "quill": "She *wishes* it. Show me where she *did* it."
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "rafi",
+      "clearedBy": [
+        "rafi-short",
+        "long-pole"
+      ],
+      "note": "Rafi was on the bridge at six, his pockets are lumpy, and he won't say why. His short pole cannot light a lamp that needs the long pole, and it was never his lamp. Secret: crumbs, for the ducks under the bridge.",
+      "suspicion": [
+        "rafi-six",
+        "rafi-pockets"
+      ]
+    },
+    {
+      "suspect": "moss",
+      "clearedBy": [
+        "moss-ink",
+        "moss-middle",
+        "long-pole",
+        "moss-roof"
+      ],
+      "suspicion": [
+        "moss-stars",
+        "moss-tea"
+      ],
+      "note": "Moss wishes every lamp were off, and fibbed about where she was at seven. At half past six she was on Ink Street, by the Library; at seven she was on Gran's roof; and her middle pole cannot reach the bridge lamp anyway. *Wishing* is not *doing*."
+    }
+  ],
+  "timeline": {
+    "from": "five o'clock",
+    "to": "quarter past seven",
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "Tam writes the note to Ivy on a bun bag",
+        "spans": [
+          "tam-five"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "Rafi crosses the bridge; the bridge lamp is dark, as it always is then",
+        "spans": [
+          "rafi-six"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "Tam lights the bakery lamp from her step: one match",
+        "spans": [
+          "tam-lit"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Ivy reaches the bakery lamp, finds it already lit, and strikes a second match",
+        "spans": [
+          "ivy-half"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "Moss, on Ink Street, sees a man measuring the Library steps",
+        "spans": [
+          "moss-ink"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "Moss climbs up to Gran's roof with her telescope",
+        "spans": [
+          "moss-roof"
+        ],
+        "placedByChild": false
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Mrs Gundersen follows the sign, crosses in the dark and steps into the canal",
+        "spans": [
+          "at-seven"
+        ],
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Constable Tully finds the bridge lamp dark, and two matches under the bakery lamp",
+        "spans": [
+          "bridge-dark",
+          "two-matches"
+        ],
+        "doc": "2.1",
+        "timeWord": "quarter past seven",
+        "placedByChild": false
+      }
+    ],
+    "shake": {
+      "when": "T4 before T3",
+      "quill": "Can a lamp be *already* lit before anyone lights it?"
+    },
+    "talk": [
+      {
+        "who": "STAGE",
+        "text": "Chapter end. Dev holds Tully's notebook open under the shed's one bulb."
+      },
+      {
+        "who": "DEV",
+        "text": "Two matches. Under one lamp."
+      },
+      {
+        "who": "ASHA",
+        "text": "And none under the bridge lamp."
+      },
+      {
+        "who": "STAGE",
+        "text": "The Clock Tower bongs five. One hour."
+      }
+    ]
+  },
+  "accusation": {
+    "culprit": "ivy",
+    "place": null,
+    "minimalEvidence": [
+      "already-lit",
+      "tam-lit",
+      "note"
+    ],
+    "acceptableEvidence": [
+      "ivy-bakery",
+      "not-joke",
+      "tam-ivy",
+      "two-matches"
+    ],
+    "wrongSuspect": {
+      "rafi": "Rafi's pole is short. The bridge lamp needs the long pole. Who carries it?",
+      "moss": "Moss loves the dark. But where was she at half past six? Read her note again.",
+      "tam": "Tam wrote the note. She did not go to any lamp but her own. Who *carried* the note?"
+    },
+    "wrongSuspectPoints": {
+      "rafi": [
+        "rafi-short",
+        "long-pole"
+      ],
+      "moss": [
+        "moss-ink"
+      ]
+    },
+    "weakEvidence": "You have shown *where* Ivy went. Now show me *why*. Read Tam's note out loud. Where would you take a breath?",
+    "question": "Who left the bridge lamp dark?",
+    "questionAfterReveal": "…and why?",
+    "note": "Ivy went to the wrong lamp *by mistake*, because Tam's note had no comma."
+  },
+  "revealSetting": "The bakery step, quarter to six. Fog on the canal, gold light in the bakery window, the smell of hot buns. All three Lamplighters (Ivy too, arms folded, no pole), Tam with a tray, Mrs Gundersen in borrowed socks, and the agency. Across the street, the shed door stands open on one long pole.",
+  "reveal": [
+    {
+      "who": "QUILL",
+      "text": "Fifteen minutes to six. New detective. Who left the bridge lamp dark?"
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Ivy. But not on purpose."
+    },
+    {
+      "who": "IVY",
+      "direction": "offended",
+      "text": "I did NOT skip a lamp! I lit one!"
+    },
+    {
+      "who": "NELL",
+      "text": "You did. Just not the right one. But first, the others."
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Rafi's pole is short. The bridge lamp needs the long pole."
+    },
+    {
+      "who": "RAFI",
+      "direction": "turning out his lumpy pockets: crumbs",
+      "text": "And these are for the ducks under the bridge. Every night at six. Ducks are not on my round."
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Moss wished the lamps off. But wishing is not doing. She was on Gran's roof, on Ink Street."
+    },
+    {
+      "who": "MOSS",
+      "text": "Gran knows now. She says next time, ask."
+    },
+    {
+      "who": "QUILL",
+      "text": "Now the lamp that lit itself."
+    },
+    {
+      "who": "ASHA",
+      "text": "Tam lit the bakery lamp at six. Ivy got there at half past six. So when Ivy arrived…"
+    },
+    {
+      "who": "IVY",
+      "direction": "slowly",
+      "text": "…it was already lit. I thought my match was magic."
+    },
+    {
+      "who": "DEV",
+      "text": "Tully wrote it on the very first page. Two burnt matches, under one lamp."
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote: matches are not magic. Footnote to the footnote: I checked."
+    },
+    {
+      "who": "QUILL",
+      "text": "Now the note. Ivy told us, \"Tam always does the NOT joke.\" New detective, read the note with a breath in it."
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "\"Light the lamp by the bridge, *(breath)* not the one by the bakery.\""
+    },
+    {
+      "who": "DEV",
+      "text": "Ivy read it like this: \"Light the lamp by the bridge… NOT! The one by the bakery.\" Look where Tam's line ends. Right on *not*. Like the end of a joke."
+    },
+    {
+      "who": "TAM",
+      "direction": "covering her face with a floury hand",
+      "text": "My NOT joke. Oh no. I forgot the comma. Ivy, I'm sorry."
+    },
+    {
+      "who": "IVY",
+      "text": "I should have asked. Why would you need my long pole for a short lamp?"
+    },
+    {
+      "who": "TAM",
+      "text": "And I'm sorry I borrow your pole every night."
+    },
+    {
+      "who": "IVY",
+      "direction": "very fast, on the last part",
+      "text": "I don't mind. Not really. I'm saving up. For your birthday. Your own long pole."
+    },
+    {
+      "who": "STAGE",
+      "text": "Tam hugs her. There is flour on Ivy's coat for a week."
+    },
+    {
+      "who": "NELL",
+      "direction": "whispering to the new detective",
+      "text": "I said someone skipped it. Hunch-o-meter: ten. Wrong again."
+    },
+    {
+      "who": "MRS GUNDERSEN",
+      "text": "Nobody be sad! I have a story to tell at home now. And these socks are lovely."
+    },
+    {
+      "who": "TULLY",
+      "direction": "arriving, puffing",
+      "text": "I worked it out! It was… oh. You've done it."
+    },
+    {
+      "who": "QUILL",
+      "text": "Ten minutes behind, Constable. Right on time."
+    },
+    {
+      "who": "STAGE",
+      "text": "The Clock Tower bongs six. Rafi runs the long pole across the street."
+    },
+    {
+      "who": "IVY",
+      "direction": "lifting the long pole",
+      "text": "Bridge lamp. *Now.* Not the bakery one."
+    },
+    {
+      "who": "TAM",
+      "text": "With a comma!"
+    },
+    {
+      "who": "ALL",
+      "text": "With a comma!"
+    },
+    {
+      "who": "STAGE",
+      "text": "Ivy reaches up. The tall lamp by the bridge glows gold through the fog."
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "HEADING",
+      "text": "The comma whistle."
+    },
+    {
+      "who": "STAGE",
+      "text": "By the next evening, the Lamplighters have invented it. When anyone reads a note aloud, a Lamplighter gives one short *peep* wherever a comma should be. Tam blows it at every comma for a week, including in the middle of \"Pass, *peep*, the buns, *peep*, please.\" Her dad buys earmuffs."
+    },
+    {
+      "who": "HEADING",
+      "text": "The vanished word."
+    },
+    {
+      "who": "STAGE",
+      "text": "Felix stands in front of Pollard's window."
+    },
+    {
+      "who": "FELIX",
+      "text": "\"This way to Great Library.\" It sounds like a robot."
+    },
+    {
+      "who": "DEV",
+      "text": "Because *the* is missing. The smallest word."
+    },
+    {
+      "who": "ASHA",
+      "text": "*Small words carry big loads.* Like a comma."
+    },
+    {
+      "who": "STAGE",
+      "text": "The new detective writes **THE** into the Blot Ledger, under **UNDER**. The ink spreads."
+    },
+    {
+      "who": "NELL",
+      "text": "Under the. Under the *what*?"
+    },
+    {
+      "who": "QUILL",
+      "text": "Patience, Nell. A sentence takes its time."
+    },
+    {
+      "who": "HEADING",
+      "text": "The postcard."
+    },
+    {
+      "who": "STAGE",
+      "text": "At the agency, Dev runs his finger down the left edge of Mum's card."
+    },
+    {
+      "who": "DEV",
+      "text": "C… R… A… N… E. Crane!"
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote: a crane is a long-necked bird. The lifting machine is named after the bird. Footnote to the footnote: this one appears to be a man."
+    },
+    {
+      "who": "ASHA",
+      "text": "\"A rich man buys old buildings.\" And Moss saw a man measuring the Library steps."
+    },
+    {
+      "who": "NELL",
+      "text": "With a smile."
+    },
+    {
+      "who": "STAGE",
+      "text": "Through the round window, far below, a man in a long grey coat walks past the bakery. He looks up, sees them, and tips his hat. Then he takes out a silver tape measure and measures the bakery door."
+    },
+    {
+      "who": "QUILL",
+      "text": "Hm.",
+      "direction": "quietly"
+    },
+    {
+      "who": "HEADING",
+      "text": "Biscuit."
+    },
+    {
+      "who": "STAGE",
+      "text": "Constable Tully finds Biscuit at last, fast asleep in a rowing boat under the bridge, wearing Mrs Gundersen's woolly hat, with three ducks asleep beside him."
+    },
+    {
+      "who": "RAFI",
+      "text": "Oh! So that's who's been eating half the crumbs."
+    },
+    {
+      "who": "STAGE",
+      "text": "Nobody knows how Biscuit got the hat. Mrs Gundersen says he can keep it."
+    },
+    {
+      "who": "HEADING",
+      "text": "The office object."
+    },
+    {
+      "who": "STAGE",
+      "text": "Ivy's long pole gets a shiny new hook. She brings the old brass one up all 39 stairs and gives it to the agency."
+    },
+    {
+      "who": "IVY",
+      "text": "So you remember the comma."
+    },
+    {
+      "who": "QUILL",
+      "text": "We will."
+    },
+    {
+      "who": "STAGE",
+      "text": "The **lamplighter's pole tip** goes on the shelf. When you tap it, it glows, just for a moment."
+    },
+    {
+      "who": "HEADING",
+      "text": "Quill, last word:"
+    },
+    {
+      "who": "STAGE",
+      "text": "The new detective pins the case to the Casebook Wall. Nell reads the label aloud: \"Solved, *peep*, by all of us.\""
+    },
+    {
+      "who": "QUILL",
+      "text": "\"By all of us\" needs no comma. But I liked the whistle."
+    },
+    {
+      "who": "HEADING",
+      "text": "The last chill."
+    },
+    {
+      "who": "STAGE",
+      "text": "That night every lamp on Lamplit Row is lit, the tall one by the bridge brightest of all. Down the misty canal, from somewhere past the bookshop, come four slow notes on a violin: the same four as before. Then nothing. Pollard's Books is still locked. Nobody on Lamplit Row plays the violin."
+    }
+  ],
+  "drill": {
+    "kind": "clue-spotter",
+    "title": "Where Does the Comma Go?",
+    "intro": "Clue Spotter, comma edition. One hurried note at a time. The child drags a comma into the note, then taps the lamp (or bun, or door) the note now means. Each note is read aloud twice: once flat, once with the comma's breath.",
+    "items": [
+      {
+        "prompt": "light the lamp by the bridge not the one by the bakery",
+        "commaAfter": "bridge",
+        "answer": "the bridge lamp"
+      },
+      {
+        "prompt": "Rafi eat your bun",
+        "commaAfter": "Rafi",
+        "answer": "Rafi is told to eat his bun",
+        "note": "not someone eating Rafi!"
+      },
+      {
+        "prompt": "open the red door not the blue one",
+        "commaAfter": "door",
+        "answer": "the red door"
+      },
+      {
+        "prompt": "Which one calls Moss to tea?",
+        "options": [
+          "time to eat Moss",
+          "time to eat, Moss"
+        ],
+        "answer": "time to eat, Moss",
+        "note": "laughs at the picture for the other one: Moss on a plate, looking very surprised"
+      }
+    ],
+    "bonus": {
+      "title": "The NOT joke twist",
+      "line": "\"Your hat is lovely… NOT!\"",
+      "quill": "Is this a joke or an instruction? How do you know?",
+      "answer": "The dots and the exclamation mark tell you. Tam's note had neither."
+    }
+  },
+  "art": {
+    "backgrounds": [
+      "Lamplit Row at dusk: wet cobbles, a hump-backed stone bridge over a narrow canal, gas lamps in three heights (low, middle, tall). The tall lamp by the bridge is the tallest thing on the street. Teal fog, gold lamplight.",
+      "The same street at night, one lamp dark: cosy, not scary. Bellweather's Bakery glows warm; the bridge is in soft indigo shadow. A small, cheerful figure in a bright raincoat on the bridge, mid-step.",
+      "Lamplit Row in thick fog (chapter 1 end, the last chill): lamps as soft gold smudges, the canal a pale ribbon, the bookshop window dark. Eerie, never frightening: the warm bakery light is always somewhere in frame.",
+      "The lamp shed: a wooden shed with three poles on pegs (short, middle, long), a chart board (blank in the painting; the text is live), coils of wick, a tin of matches, rain on a tin roof, one bare bulb.",
+      "Pollard's Books window: stacked books, a cat-shaped bookend, an old painted arrow sign (blank board, arrow only) pointing towards the bridge. A small white card with a round ink blot tucked behind it. The door shut, a blank hanging sign on it.",
+      "Bellweather's Bakery step: the bakery lamp beside the door, short enough for a child to reach with a hook from the top step. Two burnt matches on the cobbles beneath it (a small, fair detail in the painting).",
+      "Gran's roof, Ink Street: chimney pots, a small figure with a toy telescope, cloud where the stars should be; far off, the bridge and its one dark lamp."
+    ],
+    "props": [
+      "a crumpled paper bun bag with pencil writing (live text) and a floury thumbprint",
+      "Tully's notebook with a cocoa ring",
+      "a postcard of a yellow tram on a steep street",
+      "Moss's toy telescope",
+      "a silver tape measure",
+      "a new hook and an old brass hook for the long pole",
+      "a tin whistle (the comma whistle)",
+      "two burnt matches",
+      "Rafi's crumbs"
+    ],
+    "portraits": [
+      "Ivy: tall, two long plaits, dark green coat, the long pole held upright like a flag. Six expressions; guilty is small and embarrassed, never sad.",
+      "Rafi: small, round glasses, tidy scarf, short pole, lumpy coat pockets. Offended is a puffed-up chin; amused is a big grin.",
+      "Moss: woolly hat with a stitched star, freckles, a telescope on a string, sooty knees in chapters 2–4. Nervous is hands over her mouth.",
+      "Tam (10): apron, flour on nose and sleeves, pencil behind her ear. Guilty is a floury hand over her face.",
+      "Mrs Gundersen: older visitor, silver hair, bright raincoat, wet knees, enormous smile. Borrowed striped socks in the reveal.",
+      "Silas Crane: long grey coat, neat grey hair, wide smile, silver tape measure. One expression only: amused. Never menacing; he looks like someone who is enjoying a lovely day."
+    ],
+    "notes": "No lettering in any painting; every sign is blank or symbolic. Comic panels: opening (5 panels as scripted); reveal (5 panels: bakery step; Ivy reading the note \"NOT!\"; Tam's floury face-palm; the tall lamp lit in the fog; Biscuit in the boat in the hat, ducks asleep beside him). Sound: rain on glass, the canal lapping, the hiss of gas, the Clock Tower's bongs, four violin notes (twice only); silent under read-aloud. Office object: a curved brass hook from the end of a lamplighter's pole, slightly worn, on a small wooden stand. Writer's note: lamplighters do not punctuate; their notes are set on short lines, and the missing comma in Tam's note is never \"corrected\" anywhere a child can see it until the reveal."
+  },
+  "source": {
+    "script": "case-02.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "at",
+      "level": 1,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "2.1",
+        "span": null
+      },
+      "prompt": "Constable Tully writes: \"Her map is soggy.\"\nWhat does soggy mean?",
+      "options": [
+        "very old",
+        "very wet",
+        "torn in two"
+      ],
+      "answer": "very wet",
+      "explain": "Look for clues near the word. The visitor stepped into the canal, and the water came to her knees. So her map got very wet. Soggy means wet right through."
+    },
+    {
+      "id": "x2",
+      "tier": "at",
+      "level": 1,
+      "type": "pronoun",
+      "skill": "pronoun",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "2.1",
+        "span": null
+      },
+      "prompt": "\"The water came to her knees.\"\nWho is \"her\"?",
+      "options": [
+        "Constable Tully",
+        "the visitor",
+        "Tam"
+      ],
+      "answer": "the visitor",
+      "explain": "\"Her\" points back to someone named before it. The line before says a visitor stepped into the canal. So \"her\" is the visitor."
+    },
+    {
+      "id": "x3",
+      "tier": "at",
+      "level": 1,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 1,
+      "source": {
+        "doc": "2.2",
+        "span": null
+      },
+      "prompt": "Tam wrote \"tonite\".\nIt is two small words joined. Which two?",
+      "options": [
+        "ton + ite",
+        "tone + it",
+        "to + night"
+      ],
+      "answer": "to + night",
+      "explain": "Tonight is to + night. In a book we spell it \"tonight\", with igh, like light and night. Tam was in a hurry!"
+    },
+    {
+      "id": "x4",
+      "tier": "at",
+      "level": 1,
+      "type": "spelling",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "2.S3.Q2",
+        "span": "crane-tape"
+      },
+      "prompt": "Moss wrote \"measring the libary steps\".\nWhich is the right way to spell the place?",
+      "options": [
+        "libary",
+        "library",
+        "liberry"
+      ],
+      "answer": "library",
+      "explain": "Say it slowly: li-bra-ry. There is an r after the b, and another before the y. Moss writes fast, so letters fall out."
+    },
+    {
+      "id": "x5",
+      "tier": "at",
+      "level": 1,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "2.S4.Q2",
+        "span": "tam-five"
+      },
+      "prompt": "Put these in time order, first to last.",
+      "options": [
+        "Tam lights the bakery lamp.",
+        "The visitor steps into the canal.",
+        "Tam writes the note on a bun bag.",
+        "The Clock Tower bongs once."
+      ],
+      "answer": [
+        "Tam writes the note on a bun bag.",
+        "Tam lights the bakery lamp.",
+        "The Clock Tower bongs once.",
+        "The visitor steps into the canal."
+      ],
+      "explain": "Look for the times. Tam wrote the note at five. She lit the bakery lamp at six. One bong means half past six. The visitor fell in at seven."
+    },
+    {
+      "id": "x6",
+      "tier": "at",
+      "level": 1,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "2.S5.Q1",
+        "span": "sign-way"
+      },
+      "prompt": "Why did Mrs Gundersen walk over the bridge?",
+      "options": [
+        "She was looking for the canal.",
+        "She followed the sign to the Library.",
+        "She wanted to see the stars."
+      ],
+      "answer": "She followed the sign to the Library.",
+      "explain": "She says she followed the sign in the bookshop window. It pointed over the bridge, to the Library. She wanted to see it at night."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 1,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 3,
+      "source": {
+        "doc": "2.2",
+        "span": "note"
+      },
+      "prompt": "Tam's note:\nlight the lamp by the bridge not\nthe one by the bakery\nWhere should a comma go?",
+      "options": [
+        "after \"bakery\"",
+        "after \"bridge\"",
+        "after \"lamp\""
+      ],
+      "answer": "after \"bridge\"",
+      "explain": "A comma is a little pause. \"Light the lamp by the bridge, not the one by the bakery.\" With the comma, \"not\" belongs to the bakery lamp. Without it, the note can be read two ways."
+    },
+    {
+      "id": "h1",
+      "tier": "harder",
+      "level": 2,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "2.4",
+        "span": "card"
+      },
+      "prompt": "The calling card says: \"Small words carry big loads.\"\nWhat does \"big loads\" mean here?",
+      "options": [
+        "heavy sacks on a cart",
+        "a lot of meaning",
+        "piles of buns"
+      ],
+      "answer": "a lot of meaning",
+      "explain": "Words cannot carry sacks, so this is not meant as it looks. It means tiny words do big jobs. Take \"the\" off a sign, and the sign stops making sense."
+    },
+    {
+      "id": "h2",
+      "tier": "harder",
+      "level": 2,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 1,
+      "source": {
+        "doc": "2.1",
+        "span": null
+      },
+      "prompt": "Tully writes, \"At seven, a visitor stepped into the canal.\"\nThe ending -or can mean \"a person who\". So a visitor is…",
+      "options": [
+        "a place people go to visit",
+        "a person who visits",
+        "a short visit"
+      ],
+      "answer": "a person who visits",
+      "explain": "Visit + or = visitor, a person who visits. The same ending makes actor and sailor. Spot the ending and you can work out a new word."
+    },
+    {
+      "id": "h3",
+      "tier": "harder",
+      "level": 2,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": "s5-apostrophe",
+      "chapter": 4,
+      "source": {
+        "doc": "2.S3.Q3",
+        "span": null
+      },
+      "prompt": "Moss says, \"Then I climbed up to Gran's roof.\"\nWhy is there an apostrophe in \"Gran's\"?",
+      "options": [
+        "There is more than one Gran.",
+        "The roof belongs to Gran.",
+        "A letter is missing from Gran."
+      ],
+      "answer": "The roof belongs to Gran.",
+      "explain": "Apostrophe + s shows that something belongs to someone. Gran's roof is the roof that belongs to Gran. For more than one gran, we write grans, with no apostrophe."
+    },
+    {
+      "id": "h4",
+      "tier": "harder",
+      "level": 2,
+      "type": "sentence-combine",
+      "skill": "punctuation",
+      "strand": "writing",
+      "objective": "s6-join",
+      "chapter": 1,
+      "source": {
+        "doc": "2.1",
+        "span": null
+      },
+      "prompt": "Tully wrote two sentences:\nAt seven, a visitor stepped into the canal.\nIt was by the bridge.\nWhich joins them best?",
+      "options": [
+        "At seven, a visitor stepped into the canal, it was by the bridge.",
+        "At seven, a visitor stepped into the canal by the bridge.",
+        "By the bridge it was, at seven, a visitor stepped into the canal."
+      ],
+      "answer": "At seven, a visitor stepped into the canal by the bridge.",
+      "explain": "When the second sentence only says where, tuck the place onto the end: \"into the canal by the bridge\". Joining two sentences with only a comma is a mistake, and the third one is muddled."
+    },
+    {
+      "id": "h5",
+      "tier": "harder",
+      "level": 2,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "2.S4.Q3",
+        "span": "tam-lit"
+      },
+      "prompt": "Which line from the interviews is an opinion, not a fact?",
+      "options": [
+        "\"My pole is short.\"",
+        "\"I crossed the bridge at six.\"",
+        "\"It's my favourite lamp.\""
+      ],
+      "answer": "\"It's my favourite lamp.\"",
+      "explain": "A fact can be checked: you can measure a pole or ask who saw Rafi at six. \"Favourite\" is how Tam feels. Nobody can prove a feeling wrong."
+    },
+    {
+      "id": "h6",
+      "tier": "harder",
+      "level": 2,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "2.5",
+        "span": "pc-e"
+      },
+      "prompt": "Mum's postcard says: \"Every first letter spells his name.\"\nRead the first letter of each line from \"Cobbled\" to \"Every\". What is his name?",
+      "answer": "CRANE",
+      "explain": "C for Cobbled, R for Red, A for A rich man, N for Next, E for Every. A puzzle where first letters spell a word is called an acrostic. Mum hid a name in plain sight."
+    },
+    {
+      "id": "h7",
+      "tier": "harder",
+      "level": 2,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "sentence",
+      "objective": "s2-tense",
+      "chapter": 2,
+      "source": {
+        "doc": "2.S2.Q2",
+        "span": "rafi-six"
+      },
+      "prompt": "Rafi says, \"The lamp was dark then.\" Then he says, \"Tam lights it at half past.\"\nWhy does he change from \"was\" to \"lights\"?",
+      "options": [
+        "\"Lights\" means Tam will light it tomorrow.",
+        "\"Was\" is about last night; \"lights\" is what Tam always does.",
+        "He forgot the rule, so both words should really say \"was\" or \"is\"."
+      ],
+      "answer": "\"Was\" is about last night; \"lights\" is what Tam always does.",
+      "explain": "The past tense \"was\" tells what Rafi saw last night. The present tense \"lights\" tells a habit: what Tam does every night. Both are right."
+    }
+  ],
+  "boardIntro": [
+    {
+      "who": "STAGE",
+      "text": "The cork board, set up in the lamp shed. Rain ticks on the tin roof. Three poles on their pegs. Fog creeps up the canal outside the door."
+    },
+    {
+      "who": "TAM",
+      "text": "It's three o'clock. Three hours till six."
+    }
+  ],
+  "aside": [
+    {
+      "where": "Chapter 3 end (the false solution)",
+      "text": "Nell's hunch-o-meter hits ten for Moss; Ivy quits and hangs up the only long pole; the Clock Tower bongs four.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "Moss wants every lamp off. Moss fibbed about seven o'clock. Moss has sooty knees! Hunch-o-meter: ten!"
+        },
+        {
+          "who": "STAGE",
+          "text": "Moss puts both hands over her mouth."
+        },
+        {
+          "who": "IVY",
+          "text": "Everyone's blaming Lamplighters. Fine. I quit."
+        },
+        {
+          "who": "STAGE",
+          "text": "Ivy hangs the long pole on its peg and walks out into the fog without looking back."
+        },
+        {
+          "who": "RAFI",
+          "text": "But… nobody else can reach the bridge lamp."
+        },
+        {
+          "who": "TAM",
+          "direction": "very quietly",
+          "text": "Then tonight it stays dark again."
+        },
+        {
+          "who": "STAGE",
+          "text": "Far off, the Clock Tower bongs four."
+        }
+      ]
+    },
+    {
+      "where": "Chapter 4 opening",
+      "text": "Moss, red to the ears, comes back with a new question card in her hand (moss-q3)."
+    },
+    {
+      "where": "meta (mystery pass)",
+      "text": "Clock: explain it by six tonight, or the Lamplighters lose their lamps. Impossible thing: the lamp that lit itself (two burnt matches under the bakery lamp). False solution: Moss, broken in chapter 4 when she owns up to Gran's roof. Hidden clue: Tully's two matches, on the very first page. Escalation: Ivy quits and hangs up the only long pole. Continuity: on a normal night Ivy lends Tam the long pole for the bridge lamp. The Blot: a card in a locked shop, rosin, four violin notes in the fog."
+    }
+  ],
+  "extraMarks": [
+    {
+      "span": "ivy-mine",
+      "note": "Ivy's grumble (her motive, and the cover for her secret: she is saving to buy Tam a pole of her own)"
+    }
+  ]
+}

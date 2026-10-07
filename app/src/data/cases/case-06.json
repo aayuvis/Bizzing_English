@@ -1,0 +1,2474 @@
+{
+  "format": 1.1,
+  "id": "case-06",
+  "number": 6,
+  "title": "Forty-Two Signatures",
+  "label": "A Bizzing mystery",
+  "level": 3,
+  "world": "forum",
+  "setting": "the Forum: the Town Hall steps, the Forum office, the clock tower",
+  "skills": [
+    "vocab",
+    "factopinion",
+    "punctuation",
+    "contradiction",
+    "sequence"
+  ],
+  "vanishedWord": "STRIKES",
+  "ledgerIndex": 6,
+  "officeObject": {
+    "id": "fountain-pen",
+    "name": "a fountain pen",
+    "note": "Dot Harkness's green one, \"the pen that signs what it means\"",
+    "art": "Dot's green fountain pen (the office object, with a small tram-shaped clip)"
+  },
+  "arc": [
+    {
+      "thread": "A",
+      "beat": "a Blot calling card behind the clock notice: \"Count the words, not the names. — B.\"",
+      "docs": [
+        "6.7"
+      ]
+    },
+    {
+      "thread": "B",
+      "beat": "Crane's petition (first seen in Case 4) and Crane's flyer: an opinion dressed as a fact, and a title with a moved \"!\"",
+      "docs": [
+        "6.1",
+        "6.3"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "Marlowe suspected and cleared (second time); Nell's hunch-o-meter: \"Ten. Wrong again.\"",
+      "docs": [
+        "6.6",
+        "6.S1.Q1"
+      ]
+    },
+    {
+      "thread": "C",
+      "beat": "INSPECTOR ADA HOLLOWAY'S FIRST APPEARANCE: \"You have read it. Now see it.\" (and the first hint that Quill and Ada know each other very well)",
+      "docs": []
+    },
+    {
+      "thread": "B",
+      "beat": "Continuity (resolved). This case happens on the Thursday after the Case 4 vote. The forgery is older: Dot collected her forty-two names from Monday to Friday of the week before, Bright copied them that Friday night and posted the copy to Mr Crane, who gave it \"already full\" to Mr Pettigrew for Tuesday (Case 4, where the \"Collected by\" line is still blank). After the vote failed, Bright wrote Dot's name on the blank line and sent the petition to the Review Committee.",
+      "docs": [
+        "6.1",
+        "6.4"
+      ],
+      "kind": "continuity"
+    },
+    {
+      "thread": "A",
+      "beat": "The Blot is closer than you think: the calling card is inside the glass where none was at noon, and one violin note sounds from the locked clock tower. In the last scene, a blank blot card behind Ada's knocker.",
+      "docs": [
+        "6.7"
+      ]
+    }
+  ],
+  "tutorial": [],
+  "card": {
+    "text": "Mr Crane's petition hangs in the Town Hall.\nIt says forty-two neighbours want the Great Library sold.\nThe Review Committee votes on it tomorrow at noon.\nAnd Dot Harkness is furious, because her name is on it.\n\"I never collected a single name for that man!\"\nWho really signed? And what did they think they were signing?",
+    "readAloud": false,
+    "readAloudNote": "Read aloud at the child's choice.",
+    "clock": "Tomorrow at noon (shown as a small clock face in the card's corner)"
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The Forum steps, Thursday noon.",
+      "picture": "Wind off the harbour, pigeons, oranges on the market stalls. A crowd round the Town Hall noticeboard. Silas Crane pins up a bright flyer and beams. Above them all, the Forum clock tower.",
+      "lines": [
+        {
+          "who": "CRANE",
+          "text": "Forty-two of your neighbours agree! Lovely, isn't it? Lovely."
+        }
+      ],
+      "caption": "Thursday, the day after the vote that never started."
+    },
+    {
+      "panel": 2,
+      "place": "The agency stairs.",
+      "picture": "A small woman in a many-pocketed cardigan takes the 39 steps two at a time and arrives at the top not even puffed.",
+      "lines": [
+        {
+          "who": "DOT",
+          "text": "My name's on that thing! *Collected by D. Harkness!* I drove the harbour tram for forty years. I never collected a single name for *that man*."
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "The agency.",
+      "picture": "Professor Penhallow lays a folder on Quill's desk as if it might bite.",
+      "lines": [
+        {
+          "who": "PENHALLOW",
+          "text": "I believe this petition is forged. Believing is not proving. Tomorrow at noon the Review Committee votes on it. If it stands, the Library may be sold."
+        },
+        {
+          "who": "QUILL",
+          "text": "Then we have until noon tomorrow."
+        }
+      ],
+      "caption": "The Review Committee votes tomorrow at noon."
+    },
+    {
+      "panel": 4,
+      "place": "The agency.",
+      "picture": "Nell, already pulling on her coat.",
+      "lines": [
+        {
+          "who": "NELL",
+          "text": "Tam told me she saw Marlowe at the Forum office last Friday, with a pen. *Again*, Marlowe. Hunch-o-meter: ten."
+        },
+        {
+          "who": "QUILL",
+          "text": "Show me where it says that."
+        },
+        {
+          "who": "NELL",
+          "text": "She wrote it down! Somewhere. I haven't read it yet."
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "place": "The agency.",
+      "picture": "Dev, at the round window with a biscuit-tin telescope pointed at the Forum clock tower.",
+      "lines": [
+        {
+          "who": "DEV",
+          "text": "Something else. The notice under the Forum clock has a hole in it. A neat one."
+        },
+        {
+          "who": "ASHA",
+          "text": "Timeline: Blot cards in five of our six cases. Breakfast at seven. Porridge."
+        },
+        {
+          "who": "DEV",
+          "direction": "whispering",
+          "text": "My turn with the torch."
+        },
+        {
+          "who": "ASHA",
+          "direction": "whispering",
+          "text": "It's *noon*."
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "bright",
+      "name": "Councillor Hector Bright",
+      "role": "suspect",
+      "look": "Tall, a mustard waistcoat, very shiny shoes, a pocket watch he checks far too often",
+      "manner": "Warm, grand and wordy; says \"frankly\" before saying something that isn't; when nervous, goes quiet and polishes his watch",
+      "expressions": [
+        "calm",
+        "amused",
+        "offended",
+        "nervous",
+        "guilty",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "Mr Crane asked him to find supporters, and he wants the Library's roof mended at any price",
+      "secret": "he has emptied the leak buckets in the reading room every wet night this year, and told nobody"
+    },
+    {
+      "id": "pettigrew",
+      "name": "Mr Septimus Pettigrew",
+      "role": "suspect",
+      "roleNote": "Silas Crane's lawyer, whom Crane calls \"my assistant\" (the agency learns he is a lawyer in Case 8)",
+      "look": "Short and round, a brown suit one size too big, round spectacles he polishes when anxious",
+      "manner": "Apologises before every answer; cannot tell a lie without his ears going pink",
+      "expressions": [
+        "calm",
+        "nervous",
+        "guilty",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "age": 34,
+      "motive": "he works for Mr Crane, and he carried the petition in on Tuesday",
+      "secret": "he keeps one hand over his coat pocket, because in it is a brand-new Library card, made out on Tuesday afternoon"
+    },
+    {
+      "id": "dot",
+      "name": "Dot Harkness",
+      "age": 74,
+      "role": "suspect",
+      "roleNote": "the petition's collector",
+      "look": "Small, a cardigan with eleven pockets, a voice like a tram bell (she drove the harbour tram for forty years)",
+      "manner": "Short and loud; proud of everything she does, especially punctuation",
+      "expressions": [
+        "offended",
+        "amused",
+        "calm",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "her name is on the petition, and she would love to see Mr Crane shamed",
+      "secret": "she walked past the petition twice on Tuesday and never read it, because she will not wear her reading glasses"
+    },
+    {
+      "id": "marlowe",
+      "name": "Marlowe Finch",
+      "age": 16,
+      "role": "suspect",
+      "roleNote": "red herring",
+      "look": "Assistant archivist; a long scarf, arms full of books up to the chin, ink on one thumb",
+      "manner": "Nervous, brilliant, kind; apologises to doors he bumps into",
+      "expressions": [
+        "nervous",
+        "calm",
+        "offended",
+        "relieved"
+      ],
+      "unlockedBy": null,
+      "motive": "he loves the Library, and a petition proved false would sink Mr Crane",
+      "secret": "he runs the children's story hour on Fridays at a quarter past six, does all the voices, and is too shy to tell anyone"
+    },
+    {
+      "id": "penhallow",
+      "name": "Professor Orla Penhallow",
+      "role": "witness",
+      "roleNote": "the Keeper",
+      "look": "Upright, iron-grey bun, half-moon spectacles on a chain",
+      "manner": "Strict and fair; labels her own opinions as opinions",
+      "expressions": [
+        "calm",
+        "worried",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "tully",
+      "name": "Constable Bram Tully",
+      "role": "helper",
+      "roleNote": "signer No. 9",
+      "look": "Big, slow, kind; cocoa flask; notebook with a dog doodle",
+      "manner": "Ten minutes behind, never jealous",
+      "expressions": [
+        "calm",
+        "worried",
+        "amused",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "tam",
+      "name": "Tam Bellweather",
+      "age": 10,
+      "role": "helper",
+      "roleNote": "leader of the Lamplighters",
+      "look": "Flour on her nose; pencil behind one ear",
+      "manner": "Always in a hurry; writes notes on bun bags",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "ada",
+      "name": "Inspector Ada Holloway (retired)",
+      "age": 78,
+      "role": "helper",
+      "roleNote": "Mentor · FIRST APPEARANCE",
+      "look": "Tall, a moth-eaten velvet jacket, a cello bow tucked behind one ear like a pencil",
+      "manner": "Speaks in riddles; never gives an answer, only a page to read again",
+      "expressions": [
+        "amused",
+        "calm",
+        "thoughtful"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "achterberg",
+      "name": "Mrs Winifred Achterberg",
+      "role": "helper",
+      "roleNote": "Ada's housekeeper",
+      "look": "Round, apron with a pocket of clothes pegs, flour to the elbows",
+      "manner": "Speaks only in proverbs",
+      "expressions": [
+        "calm",
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "semicolon",
+      "name": "Semicolon",
+      "role": "helper",
+      "roleNote": "Ada's parrot",
+      "look": "Grey, a red tail, one feather that sticks up like a question mark",
+      "manner": "Says only \"Elementary; therefore!\"",
+      "expressions": [],
+      "portraitNote": "one painted pose; a head-tilt animation",
+      "unlockedBy": null
+    },
+    {
+      "id": "crane",
+      "name": "Silas Crane",
+      "role": "witness",
+      "roleNote": "Arc cameo",
+      "look": "Long grey coat, silver tape measure, a wide smile",
+      "manner": "Calls everything \"lovely\"",
+      "expressions": [
+        "amused"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": null,
+      "manner": null,
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "nell",
+      "name": "Nell",
+      "role": "agency",
+      "look": null,
+      "manner": null,
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha",
+      "role": "agency",
+      "look": null,
+      "manner": null,
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "dev",
+      "name": "Dev",
+      "role": "agency",
+      "look": null,
+      "manner": null,
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix",
+      "role": "agency",
+      "look": null,
+      "manner": null,
+      "expressions": [],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "6.1",
+      "chapter": "scene",
+      "type": "other",
+      "title": "Mr Crane's petition",
+      "author": "not signed (the handwriting is studied in DOC 6.2)",
+      "when": "handed in on Tuesday by Mr Pettigrew; sent to the Review Committee on Thursday morning",
+      "where": "pinned to the Review Committee's noticeboard inside the Town Hall",
+      "picture": "the long cream scroll from Case 4, Town Hall paper, a wax seal with a crane bird; forty-two names in one curly hand, the same loops and the same tail on every \"y\". The title runs across the top; the last three words look a slightly different colour of ink, and the \"Collected by\" line is fresher than the rest (painted as soft colour shifts only, no lettering in the painting).",
+      "readAloud": false,
+      "body": "[[c:pet-title|SAVE OUR LIBRARY]]~~!~~ [[c:pet-added|BY SELLING IT!]]\n[[c:pet-ask|We, the people of Inkwell, ask the council to vote at once.]]\nSell the Great Library to Crane and Co.\nIt will reopen as \"The Inkwell Experience\", with tickets.\nSigned:\nRuth Annan · Billy Coe · Mira Das · Tom Ferris · Jo Haddad\n… and thirty-seven more.\n[[c:pet-collector|Collected by: D. Harkness]]\nHanded in by S. Pettigrew, for Crane and Co.",
+      "subtype": "petition",
+      "note": "The clue in plain sight. Everyone, Nell included, reads \"Collected by: D. Harkness\" as the line that makes Dot look guilty. It is the line that says the copier knew whose names these were. It pays off in the reveal."
+    },
+    {
+      "id": "6.2",
+      "chapter": "scene",
+      "type": "report",
+      "title": "The Keeper's report",
+      "author": "Professor Orla Penhallow, Keeper of the Great Library",
+      "when": "Thursday, eleven o'clock",
+      "where": "handed to Quill in a buff folder",
+      "picture": "a typed report on Library paper with a small wax seal (an open book, no letters), a magnifying glass resting across one corner.",
+      "readAloud": false,
+      "body": "Examination of the petition. Facts, not feelings.\n[[c:rep-hand|All forty-two names are written in the same hand.]]\n[[c:rep-collector|At Wednesday's vote the \"Collected by\" line was blank. Today it is filled in, in that same hand.]]\n[[c:rep-ink|\"SAVE OUR LIBRARY\" is in black ink. \"BY SELLING IT!\" is in blue ink.]]\n[[c:rep-scrape|After the word \"LIBRARY\" there is a scratched-out mark.]] It is shaped like an exclamation mark.\n[[c:rep-blue|The blue ink matches the pen in the Forum office's petitions tray.]]\nMy feeling is that somebody has been very foolish. That is an opinion. I have labelled it as one.\n— O. Penhallow, Keeper"
+    },
+    {
+      "id": "6.3",
+      "chapter": "scene",
+      "type": "poster",
+      "title": "Crane's flyer",
+      "author": "Silas Crane",
+      "when": "pinned up Thursday, noon",
+      "where": "the Forum noticeboard, outside the Town Hall",
+      "picture": "a glossy flyer with a painted picture of the Library with a ticket booth at its door and balloons on the steps (no lettering in the painting; the words are live text). One corner flaps in the wind.",
+      "readAloud": false,
+      "body": "GOOD NEWS FOR INKWELL!\n[[c:fly-agree|Forty-two of your neighbours agree: the Library must be sold.]]\n[[c:fly-love|Everybody loves a fresh start.]]\nCrane and Co will turn the dusty old Library into The Inkwell Experience.\nThere will be tickets, a gift shop and a café!\n[[c:fly-save|Selling it is the only way to save it.]]\nHave your say at the Review Committee, Friday at noon.\nWith warm regards,\nSilas Crane"
+    },
+    {
+      "id": "6.4",
+      "chapter": "scene",
+      "type": "diary",
+      "title": "Dot Harkness's diary",
+      "author": "Dot Harkness",
+      "when": "Monday to Friday of last week, the week before the vote",
+      "where": "Dot takes it out of pocket number seven",
+      "picture": "a small diary with a tram ticket as a bookmark; big, round handwriting; one tiny drawing of a dog with a line through it.",
+      "readAloud": false,
+      "body": "Monday. Started my petition on the Forum steps.\n[[c:dot-title|I wrote the title at the top of every sheet: \"SAVE OUR LIBRARY!\"]] Short and loud, like me.\n[[c:dot-why|Every signer writes why they signed, in their own words.]]\nWednesday. Bram Tully signed, then signed for his dog. I crossed the dog out. Dogs cannot vote.\nFriday. [[c:dot-count|Forty-two names!]]\n[[c:dot-tray|I left the sheets in the petitions tray in the Forum office.]]\n[[c:dot-six|Mr Osei locked the office door as the clock struck six.]]\n[[c:dot-pen|On the way home I found I'd dropped my good green pen.]] Bother."
+    },
+    {
+      "id": "6.5",
+      "chapter": "scene",
+      "type": "letter",
+      "title": "Councillor Bright's letter",
+      "author": "Councillor Hector Bright",
+      "when": "Thursday, eight o'clock in the morning",
+      "where": "clipped to the petition when it reached the Review Committee",
+      "picture": "thick cream paper with a council crest (a ship and an open book, no lettering); handwriting in tidy, sloping black ink.",
+      "readAloud": false,
+      "body": "To my fellow members of the Review Committee,\nYesterday's vote could not be called. So I send you Mr Crane's petition instead, now complete.\n[[c:bri-trans|I have transcribed the forty-two names faithfully, so that every one is clear.]]\n[[c:bri-proud|Frankly, it is a proud day for Inkwell.]]\nThe people have spoken.\n[[c:bri-people|They want to save their Library, and Mr Crane's offer will save it.]]\nI shall vote with the people tomorrow.\nYours, in the service of the town,\nCouncillor Hector Bright\nThursday, 8 a.m."
+    },
+    {
+      "id": "6.6",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Tam's note (a Lamplighters' sighting)",
+      "author": "Tam Bellweather",
+      "when": "written last Friday night, sent up with Saturday's buns, and never read",
+      "where": "at the bottom of the dumbwaiter's bun basket, under a cinnamon bun nobody ate (it is now as hard as a doorstop)",
+      "picture": "a floury paper bun bag, pencil words sloping downhill, a thumbprint of icing.",
+      "readAloud": false,
+      "body": "to nell friday\nlit the forum lamps like always\n[[c:tam-marlowe|marlowe at the forum office door just after the six bongs]]\n[[c:tam-pen|had a pen and was poking at the letterbox]]\n[[c:tam-papers|went off quick with a big pile of papers]]\n[[c:tam-bright|after the one bong councillor bright went in the office with a key]]\n[[c:tam-lamp|lamp on in there for ages]]\nnobody else\ntam\nps bun is for the new one",
+      "talk": [
+        {
+          "who": "STAGE",
+          "text": "Dev taps the bun on the desk. It goes *clonk*."
+        },
+        {
+          "who": "FELIX",
+          "text": "Footnote: a bun this hard is technically a brick."
+        }
+      ]
+    },
+    {
+      "id": "6.7",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "The Forum clock notice, with a calling card",
+      "author": "R. Osei, Town Clerk",
+      "when": null,
+      "where": "in a little glass frame at the foot of the Forum clock tower, beside the tower's locked door",
+      "picture": "a small brass-framed notice on old stone; above it, the clock tower climbing out of the picture. Tucked in the frame's corner, under the glass, a white card with one perfect round ink blot.",
+      "readAloud": false,
+      "body": "NOTICE: THE FORUM CLOCK\n[[c:clk-half|The Forum clock _______ once at each half hour.]]\n[[c:clk-hour|On the hour it rings the full count, so six rings at six o'clock.]]\nPlease do not climb the tower to wind it.\nI wind it myself on Sundays.\n— R. Osei, Town Clerk\n\n*The card in the corner of the frame:*\n[[c:card|Count the words, not the names.]] — B.",
+      "talk": [
+        {
+          "who": "STAGE",
+          "text": "Dev measures the gap with a ruler from his pocket."
+        },
+        {
+          "who": "DEV",
+          "text": "Seven letters wide. Not *rings*. That's five. Not *chimes*. Six."
+        },
+        {
+          "who": "FELIX",
+          "text": "Footnote: a clock *strikes* because a little hammer strikes a bell. Footnote to the footnote: seven letters. S, T, R, I, K, E, S."
+        },
+        {
+          "who": "DEV",
+          "direction": "crossly",
+          "text": "I was about to say that."
+        },
+        {
+          "who": "STAGE",
+          "text": "Dev looks at the card, then at his telescope."
+        },
+        {
+          "who": "DEV",
+          "text": "That card wasn't there at noon. I looked right at this frame."
+        },
+        {
+          "who": "STAGE",
+          "text": "The glass is whole. The little brass catch is stiff with old paint. The tower door beside it is locked, and Mr Osei, who has the only key, is away at his sister's until Friday. A faint smell of violets hangs in the cold air. Then, high above them, the clock strikes the half hour: one deep bong. And after it, from somewhere up inside the locked tower, a single long note on a violin holds, and fades, and is gone. The pigeons lift off the steps all at once."
+        },
+        {
+          "who": "TULLY",
+          "text": "Pigeons. They do that."
+        },
+        {
+          "who": "QUILL",
+          "text": "Pigeons do not play the violin. Asha, write down the time."
+        },
+        {
+          "who": "ASHA",
+          "direction": "writing",
+          "text": "Half past four."
+        }
+      ]
+    },
+    {
+      "id": "6.8",
+      "chapter": "scene",
+      "type": "report",
+      "title": "Signers' statements",
+      "author": "Constable Bram Tully",
+      "when": "Thursday afternoon",
+      "where": "Tully brings it up the 39 steps with the cocoa",
+      "picture": "a page from a constable's notebook; a cocoa ring; a little doodle of a dog with a question mark.",
+      "readAloud": false,
+      "body": "Statements from three signers. Taken by Constable B. Tully.\nRuth Annan, teacher: [[c:sig-ruth|\"I was first on Dot's sheet. I signed to keep it open.\"]]\nTom Ferris, ferryman: [[c:sig-ferris|\"Sell it? Never! I wrote 'for my grandchildren'.\"]]\nMyself, constable: [[c:sig-tully|\"I signed on Wednesday. I signed to keep the doors open.\"]]\n[[c:sig-none|All three say they never signed anything for Mr Crane.]]\nAlso asked: [[c:tully-wife|Mrs Bright says the councillor was home by six last Friday, for leek soup.]]\nBiscuit is still missing."
+    },
+    {
+      "id": "6.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Why were you at the Forum office last Friday?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Oh. Was I seen? I'm always seen. It's the books.\n[[c:mar-found|I found a green fountain pen on the Forum steps.]]\nEverybody knows Dot's pen. She signs everything with it.\n[[c:mar-letterbox|I pushed it through the office letterbox for her.]]"
+    },
+    {
+      "id": "6.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Did you go inside the office?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "No! [[c:mar-locked|The door was locked, and I don't have a key.]]\nI'm only an assistant archivist.\nI have a key to the mop cupboard. That's all.\nSometimes I'm not trusted with the mop."
+    },
+    {
+      "id": "6.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"What was the big pile of papers you carried away?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Papers? Oh! [[c:mar-books|Books. Fourteen picture books from the reading room.]]\nBooks are made of paper, so Tam isn't wrong.\nI'm never not carrying fourteen books."
+    },
+    {
+      "id": "6.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Did you see anyone else?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Someone tall was coming up the steps as I went down.\n[[c:mar-keys|I heard keys jingle.]] I didn't see a face.\nI was looking at my feet. Fourteen books, steps, it's a whole thing."
+    },
+    {
+      "id": "6.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"When was this?\"",
+      "author": "Marlowe Finch",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "[[c:mar-when|Just after the clock rang six.]] I counted the rings.\nI always count. It's an archivist thing."
+    },
+    {
+      "id": "6.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"Did you collect names for Mr Crane's petition?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "For HIM? I'd sooner collect wasps.\nMy petition was to keep the Library open and free.\n[[c:dot-mark|My title had one exclamation mark, right after \"LIBRARY\".]]\nShort and loud. I'm proud of that mark."
+    },
+    {
+      "id": "6.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"Where are your sheets now?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "That's what I want to know!\n[[c:dot-gone|They were not in the tray on Monday morning.]]\nMr Osei looked everywhere, even in the biscuit tin."
+    },
+    {
+      "id": "6.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"Who knew your sheets were in the tray?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Half the town. I'm loud.\nI said it on the steps on Friday, at the top of my voice.\n[[c:dot-heard|Councillor Bright was walking past when I said it.]] He tipped his hat."
+    },
+    {
+      "id": "6.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"What did your signers write, beside their names?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Why they signed. \"To keep it open.\" \"For my grandchildren.\" \"I learned to read there.\"\n[[c:dot-reasons|Not one of them wrote \"sell it\".]] Not one."
+    },
+    {
+      "id": "6.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"Why is your name on Mr Crane's petition?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Because somebody copied it! Look at that list.\n[[c:dot-order|Ruth first, then Billy, then Mira, then Tom. That's MY order.]]\nRuth was first because Ruth is first at everything."
+    },
+    {
+      "id": "6.S2.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Dot Harkness: \"Why didn't you say anything on Tuesday?\"",
+      "author": "Dot Harkness",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Tuesday? I walked past that thing twice.\n[[c:dot-specs|I didn't read it. I'd left my reading glasses at home.]]\nI always leave them at home. I don't like them.\nAnd on Tuesday there was no name on the bottom line.\nToday there's mine. That's why I'm shouting.",
+      "talk": [
+        {
+          "who": "NELL",
+          "direction": "under her breath",
+          "text": "She saw it on Tuesday and said nothing for two days."
+        },
+        {
+          "who": "ASHA",
+          "text": "She saw a *sheet*. Read the second line."
+        }
+      ]
+    },
+    {
+      "id": "6.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Septimus Pettigrew: \"Did Crane and Co send signed sheets to Councillor Bright?\"",
+      "author": "Mr Septimus Pettigrew",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Oh dear. I'm sorry. No.\n[[c:pett-none|We sent no sheets at all.]]\n[[c:pett-letter|Mr Crane only wrote to the councillor, two weeks ago.]]\nThe letter asked him to find supporters by Friday."
+    },
+    {
+      "id": "6.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Septimus Pettigrew: \"When did you first see the forty-two names?\"",
+      "author": "Mr Septimus Pettigrew",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "[[c:pett-tuesday|On Tuesday morning, when Mr Crane gave me the petition to carry here.]]\n[[c:pett-post|It came to him by post on Saturday, in the councillor's envelope. One sheet, nothing else.]]\nMr Crane was very pleased. I was less pleased. I don't know why. I'm sorry."
+    },
+    {
+      "id": "6.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Septimus Pettigrew: \"Where were you last Friday evening?\"",
+      "author": "Mr Septimus Pettigrew",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "At my chess club, two towns away, losing.\n[[c:pett-chess|Eleven people watched me lose, from six until nine.]]\nI first came to Inkwell on Tuesday's noon train.\nI am very good at losing. I have had practice."
+    },
+    {
+      "id": "6.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Septimus Pettigrew: \"Does the town agree with Mr Crane?\"",
+      "author": "Mr Septimus Pettigrew",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Mr Crane says so. Mr Crane says so very often.\n[[c:pett-asked|I'm afraid nobody has asked the town.]]\nI only carry the papers. I'm sorry."
+    },
+    {
+      "id": "6.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Septimus Pettigrew: \"Why do you keep your hand on your pocket?\"",
+      "author": "Mr Septimus Pettigrew",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Do I? Oh. I'm sorry.\nIt's nothing. It's nothing to do with Mr Crane.\n[[c:pett-pocket|Please don't make me show you. He mustn't know.]]"
+    },
+    {
+      "id": "6.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Where were you last Friday evening?\"",
+      "author": "Councillor Hector Bright",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "At home, frankly. [[c:bri-home|I left the Forum at half past five and was home by six.]]\n[[c:bri-never|I did not go back.]]\nMy wife made soup. Leek. It was excellent. Ask her."
+    },
+    {
+      "id": "6.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Where did the forty-two names come from?\"",
+      "author": "Councillor Hector Bright",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Mr Crane's office sent the signed sheets to me.\n[[c:bri-muddy|The originals were rather muddy, so I copied them out neatly.]]\nThen I returned the originals to Mr Crane. Faithfully."
+    },
+    {
+      "id": "6.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Do you know Dot Harkness?\"",
+      "author": "Councillor Hector Bright",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "The lady who shouts on the steps? Everyone knows her.\n[[c:bri-notseen|Frankly, I have never seen her list.]]\nI don't look at other people's petitions. It would be rude."
+    },
+    {
+      "id": "6.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Why do you want the Library sold?\"",
+      "author": "Councillor Hector Bright",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "Want? I love the Library. I learned to read there.\nBut the roof leaks, and the town cannot pay.\n[[c:bri-roof|Mr Crane will pay. That will save it.]]\nYou see? We all want to save it."
+    },
+    {
+      "id": "6.S4.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Councillor Hector Bright: \"Who has a key to the Forum office?\"",
+      "author": "Councillor Hector Bright",
+      "when": null,
+      "where": "a typed transcript on the desk",
+      "picture": null,
+      "readAloud": false,
+      "body": "The town clerk, Mr Osei. And the chair of the Review Committee.\n[[c:bri-key|I have one, naturally.]] I am the chair."
+    },
+    {
+      "id": "6.S1.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Marlowe Finch: \"Why did you go off so quickly?\"",
+      "author": "Marlowe Finch (with Constable Tully)",
+      "when": "Thursday night",
+      "where": "the agency office",
+      "picture": "a typed transcript; a lost-property label tied to a green fountain pen.",
+      "readAloud": false,
+      "body": "MARLOWE: Friday is story hour, in the Library's children's corner.\n[[c:mar-story|It starts at a quarter past six. Twelve small children saw me run in.]]\nI do the voices. All of them. Please don't tell anyone.\nTULLY: And this was in Mr Osei's lost-property box.\n[[c:tully-pen|A green fountain pen. His label says: \"Found Monday, on the office mat, under the letterbox.\"]]",
+      "talk": [
+        {
+          "who": "ASHA",
+          "text": "On the mat. Under the letterbox. Exactly where a pen lands when you post it."
+        },
+        {
+          "who": "STAGE",
+          "text": "Nell looks at the board for a long time."
+        },
+        {
+          "who": "NELL",
+          "text": "Ten. Wrong again."
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "marlowe",
+      "questions": [
+        {
+          "id": "marlowe-q1",
+          "type": "why",
+          "q": "Why were you at the Forum office last Friday?",
+          "expression": "nervous",
+          "expressionThen": "calm",
+          "portrait": "nervous → calm",
+          "answerDoc": "6.S1.Q1"
+        },
+        {
+          "id": "marlowe-q2",
+          "type": "what",
+          "q": "Did you go inside the office?",
+          "expression": "offended",
+          "expressionThen": "amused",
+          "portrait": "offended → amused",
+          "answerDoc": "6.S1.Q2"
+        },
+        {
+          "id": "marlowe-q3",
+          "type": "what",
+          "q": "What was the big pile of papers you carried away?",
+          "expression": null,
+          "answerDoc": "6.S1.Q3"
+        },
+        {
+          "id": "marlowe-q4",
+          "type": "who",
+          "q": "Did you see anyone else?",
+          "expression": null,
+          "answerDoc": "6.S1.Q4"
+        },
+        {
+          "id": "marlowe-q5",
+          "type": "when",
+          "q": "When was this?",
+          "expression": null,
+          "answerDoc": "6.S1.Q5"
+        },
+        {
+          "id": "marlowe-q6",
+          "type": "why",
+          "q": "Why did you go off so quickly?",
+          "expression": "nervous",
+          "expressionThen": "relieved",
+          "answerDoc": "6.S1.Q6",
+          "unlockedAt": "chapter 4",
+          "unlockedBy": "the end of chapter 3 (Nell's case against Marlowe)"
+        }
+      ],
+      "note": "the agency goes to Marlowe first: Nell insists"
+    },
+    {
+      "suspect": "dot",
+      "questions": [
+        {
+          "id": "dot-q1",
+          "type": "what",
+          "q": "Did you collect names for Mr Crane's petition?",
+          "expression": "offended",
+          "expressionThen": "amused",
+          "portrait": "offended → amused",
+          "answerDoc": "6.S2.Q1"
+        },
+        {
+          "id": "dot-q2",
+          "type": "where",
+          "q": "Where are your sheets now?",
+          "expression": null,
+          "answerDoc": "6.S2.Q2"
+        },
+        {
+          "id": "dot-q3",
+          "type": "who",
+          "q": "Who knew your sheets were in the tray?",
+          "expression": null,
+          "answerDoc": "6.S2.Q3"
+        },
+        {
+          "id": "dot-q4",
+          "type": "what",
+          "q": "What did your signers write, beside their names?",
+          "expression": null,
+          "answerDoc": "6.S2.Q4"
+        },
+        {
+          "id": "dot-q5",
+          "type": "why",
+          "q": "Why is your name on Mr Crane's petition?",
+          "expression": null,
+          "unlockedAfterDoc": "6.1",
+          "answerDoc": "6.S2.Q5"
+        },
+        {
+          "id": "dot-q6",
+          "type": "why",
+          "q": "Why didn't you say anything on Tuesday?",
+          "unlockedAfterDoc": "6.2",
+          "answerDoc": "6.S2.Q6",
+          "expression": "offended",
+          "expressionThen": "relieved",
+          "portrait": "offended → a little pink"
+        }
+      ]
+    },
+    {
+      "suspect": "pettigrew",
+      "questions": [
+        {
+          "id": "pettigrew-q1",
+          "type": "what",
+          "q": "Did Crane and Co send signed sheets to Councillor Bright?",
+          "expression": "nervous",
+          "expressionThen": "guilty",
+          "portraitNote": "ears pink, although he is not",
+          "portrait": "nervous → guilty, ears pink, although he is not",
+          "answerDoc": "6.S3.Q1"
+        },
+        {
+          "id": "pettigrew-q2",
+          "type": "when",
+          "q": "When did you first see the forty-two names?",
+          "expression": null,
+          "answerDoc": "6.S3.Q2"
+        },
+        {
+          "id": "pettigrew-q3",
+          "type": "where",
+          "q": "Where were you last Friday evening?",
+          "expression": "nervous",
+          "expressionThen": "amused",
+          "portrait": "nervous → amused",
+          "answerDoc": "6.S3.Q3"
+        },
+        {
+          "id": "pettigrew-q4",
+          "type": "what",
+          "q": "Does the town agree with Mr Crane?",
+          "expression": null,
+          "answerDoc": "6.S3.Q4"
+        },
+        {
+          "id": "pettigrew-q5",
+          "type": "why",
+          "q": "Why do you keep your hand on your pocket?",
+          "expression": "guilty",
+          "answerDoc": "6.S3.Q5",
+          "portrait": "guilty, ears very pink; he polishes his spectacles until they squeak"
+        }
+      ],
+      "note": "He sits on the very edge of his chair, one hand pressed flat over his coat pocket, and polishes his spectacles with the other."
+    },
+    {
+      "suspect": "bright",
+      "questions": [
+        {
+          "id": "bright-q1",
+          "type": "where",
+          "q": "Where were you last Friday evening?",
+          "expression": "calm",
+          "expressionThen": "amused",
+          "portrait": "calm → amused",
+          "answerDoc": "6.S4.Q1"
+        },
+        {
+          "id": "bright-q2",
+          "type": "what",
+          "q": "Where did the forty-two names come from?",
+          "expression": "calm",
+          "expressionThen": "nervous",
+          "portraitNote": "a flicker of nervous",
+          "portrait": "calm → a flicker of nervous; he checks his watch",
+          "answerDoc": "6.S4.Q2"
+        },
+        {
+          "id": "bright-q3",
+          "type": "who",
+          "q": "Do you know Dot Harkness?",
+          "expression": null,
+          "answerDoc": "6.S4.Q3"
+        },
+        {
+          "id": "bright-q4",
+          "type": "why",
+          "q": "Why do you want the Library sold?",
+          "expression": null,
+          "answerDoc": "6.S4.Q4"
+        },
+        {
+          "id": "bright-q5",
+          "type": "who",
+          "q": "Who has a key to the Forum office?",
+          "expression": null,
+          "answerDoc": "6.S4.Q5"
+        }
+      ]
+    }
+  ],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "meaning",
+      "skill": "punctuation",
+      "label": "meaning (punctuation)",
+      "statement": "The petition's title began as Dot's title, \"SAVE OUR LIBRARY!\". Someone scratched out the exclamation mark and added \"BY SELLING IT!\" in a different ink. Same words, opposite meaning.",
+      "spans": [
+        "pet-title",
+        "pet-added",
+        "rep-scrape",
+        "rep-ink",
+        "dot-title",
+        "dot-mark"
+      ],
+      "why": "this is the \"see it\" clue. With its \"!\", *SAVE OUR LIBRARY!* is a whole cry: keep it. Moved to the end, the words become the first half of a different sentence that means sell it. One small mark, moved, turns Dot's petition inside out. It proves the copier started from Dot's sheet.",
+      "required": [
+        "rep-scrape",
+        "dot-title"
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "label": "fact-opinion",
+      "statement": "Crane's flyer says forty-two neighbours \"agree\" the Library must be sold. That is a claim about what people think, and the people say the opposite. What they actually did was sign Dot's sheet to keep it open.",
+      "spans": [
+        "fly-agree",
+        "sig-ruth",
+        "sig-tully",
+        "sig-ferris",
+        "dot-reasons",
+        "dot-order",
+        "pett-asked",
+        "fly-save"
+      ],
+      "why": "the flyer is written to *sound* like a fact. The only facts in this case are what people did and wrote, and they wrote \"to keep it open\". The forty-two are Dot's forty-two, in Dot's order.",
+      "required": [
+        "fly-agree",
+        "sig-ruth"
+      ]
+    },
+    {
+      "id": "D3",
+      "type": "meaning",
+      "skill": "vocab",
+      "label": "meaning (vocab)",
+      "statement": "To \"transcribe\" means to copy out by hand. The councillor's own letter says he transcribed the forty-two names, and every name is in one hand. He says he copied them from Crane's sheets, but Crane's office sent no sheets. The only forty-two names he could have copied are Dot's.",
+      "spans": [
+        "bri-trans",
+        "rep-hand",
+        "pett-none",
+        "bri-muddy",
+        "pett-post",
+        "pett-tuesday",
+        "rep-blue",
+        "pet-collector",
+        "rep-collector",
+        "bri-notseen"
+      ],
+      "why": "Bright chose a grand word to sound official, and the grand word is a confession. He did not collect, receive or check the names. He *copied* them, and he says so in ink.",
+      "required": [
+        "bri-trans",
+        "rep-hand"
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "contradiction",
+      "skill": "contradiction",
+      "label": "contradiction (with the clock)",
+      "statement": "The councillor says he was home by six and did not go back. But Tam saw him go into the Forum office with a key after the one bong. The clock rings once at each half hour, so that was half past six, after Dot's sheets were locked in.",
+      "spans": [
+        "bri-never",
+        "bri-home",
+        "tam-bright",
+        "clk-half",
+        "dot-six",
+        "bri-key",
+        "mar-keys",
+        "tam-lamp",
+        "dot-heard",
+        "tully-wife"
+      ],
+      "why": "both cannot be true. Tam's note runs in order: the six bongs, then the one bong, so the one bong is half past six. The clock's notice, with its missing word, still tells you what one ring means. Bright knew where the sheets were (Dot told the whole steps), had a key, and went in, after six, for ages.",
+      "required": [
+        "bri-never",
+        "tam-bright",
+        "clk-half"
+      ],
+      "impossible": {
+        "question": "Dot's sheets were locked in the Forum office at six. The only person seen at the door after six, Marlowe, had no key and never went in. Mr Osei, who locked it, went home. The only other key-holder, Councillor Bright, was home by six, and Mrs Bright says so too. So who sat in a locked office copying forty-two names, with the lamp on for ages?",
+        "answer": "Home by six was true, but he went back. Tam saw him go in \"after the one bong\", and the clock strikes once at each half hour: half past six. Forty-two names take ages.",
+        "spans": [
+          "tully-wife",
+          "bri-home",
+          "tam-bright",
+          "clk-half"
+        ],
+        "answeredIn": "the reveal"
+      }
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "marlowe",
+      "clearedBy": [
+        "mar-letterbox",
+        "tully-pen",
+        "dot-pen",
+        "mar-story",
+        "mar-locked",
+        "mar-books"
+      ],
+      "note": "Marlowe Finch was \"at the forum office door\" with a pen, \"poking at the letterbox\", and \"went off quick with a big pile of papers\". The pen is exactly where a letterbox would drop it. Marlowe never went in: he posted back a lost pen, and the \"papers\" were fourteen picture books for story hour. His kindness is the clue.",
+      "suspicion": [
+        "tam-marlowe",
+        "tam-pen",
+        "tam-papers"
+      ],
+      "falseSolution": true,
+      "secret": "he does all the voices at the children's story hour, and is too shy to say so."
+    },
+    {
+      "suspect": "dot",
+      "clearedBy": [
+        "dot-title",
+        "rep-collector",
+        "dot-specs"
+      ],
+      "note": "Her name is on it, and she said nothing on Tuesday. Her own title had the \"!\" that someone scratched out; the \"Collected by\" line was written after the vote, in the copier's hand; and she never read the petition on Tuesday.",
+      "suspicion": [
+        "pet-collector"
+      ],
+      "secret": "she will not wear her reading glasses, and the tram drivers must never know."
+    },
+    {
+      "suspect": "pettigrew",
+      "clearedBy": [
+        "pett-chess",
+        "pett-none"
+      ],
+      "note": "He works for Crane, he carried the petition in, and he is hiding something in his pocket. He was two towns away, losing at chess, on the night of the copying; and Crane's office sent no sheets.",
+      "suspicion": [
+        "pett-tuesday",
+        "pett-pocket"
+      ],
+      "secret": "a brand-new Library card, made out on Tuesday afternoon. Mr Crane must not know."
+    }
+  ],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "Mr Crane writes to Bright, asking him to find supporters by Friday",
+        "spans": [
+          "pett-letter"
+        ],
+        "placedByChild": false,
+        "when": "two weeks ago"
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "Dot starts her petition and writes \"SAVE OUR LIBRARY!\" on every sheet",
+        "spans": [
+          "dot-title"
+        ],
+        "placedByChild": true,
+        "when": "Monday, last week"
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "Dot leaves the forty-two names in the petitions tray; the office is locked as six strikes",
+        "spans": [
+          "dot-six",
+          "dot-count",
+          "dot-tray"
+        ],
+        "placedByChild": true,
+        "when": "Friday, six"
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Marlowe posts Dot's pen through the letterbox and runs to story hour with fourteen books",
+        "spans": [
+          "mar-when",
+          "tam-marlowe",
+          "mar-found",
+          "mar-letterbox",
+          "tam-papers",
+          "mar-story"
+        ],
+        "placedByChild": true,
+        "when": "just after six"
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "Bright goes into the office with his key; the lamp stays on \"for ages\"",
+        "spans": [
+          "tam-bright",
+          "tam-lamp"
+        ],
+        "placedByChild": true,
+        "when": "half past six"
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "Bright posts one full sheet to Mr Crane",
+        "spans": [
+          "pett-post"
+        ],
+        "placedByChild": true,
+        "when": "Saturday"
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Dot's sheets are missing from the tray; Mr Osei finds the pen on the mat",
+        "spans": [
+          "dot-gone",
+          "tully-pen"
+        ],
+        "placedByChild": false,
+        "when": "Monday morning"
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Mr Pettigrew carries the full petition in (Case 4)",
+        "spans": [
+          "pett-tuesday"
+        ],
+        "placedByChild": false,
+        "when": "Tuesday"
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "After the vote fails, the \"Collected by\" line is filled in, and Bright sends the petition to the Review Committee",
+        "spans": [
+          "rep-collector",
+          "bri-trans"
+        ],
+        "placedByChild": true,
+        "when": "Thursday, 8 a.m."
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "text": "Crane pins up his flyer",
+        "spans": [
+          "fly-agree"
+        ],
+        "placedByChild": false,
+        "when": "Thursday, noon"
+      }
+    ],
+    "intro": "The washing line runs from two weeks ago to Thursday noon. Asha calls the time as the pegs go on: \"Twelve hours to nine.\"",
+    "shake": {
+      "before": "T3",
+      "after": [
+        "T5"
+      ],
+      "who": "QUILL",
+      "text": "One bong. What does one ring mean on that clock? Read the notice, gap and all."
+    }
+  },
+  "accusation": {
+    "culprit": "bright",
+    "place": null,
+    "minimalEvidence": [
+      "D3",
+      "D1",
+      "D4"
+    ],
+    "acceptableEvidence": [
+      "D2"
+    ],
+    "wrongSuspect": {
+      "marlowe": "Marlowe posted a pen. Where did the pen land? Read Mr Osei's label. And where was he at a quarter past six?",
+      "dot": "Dot's name is on it, in someone else's hand. Would Dot scratch out her own exclamation mark? Read her diary.",
+      "pettigrew": "Mr Pettigrew was two towns away, losing at chess in front of eleven people. And he says Crane sent no sheets. Who said Crane *did*?"
+    },
+    "weakEvidence": "You have shown me that someone copied Dot's list. Now show me who *says* he copied it. A grand word can be a confession. Felix, the dictionary.",
+    "wrongSuspectPoints": {
+      "marlowe": [
+        "tully-pen",
+        "mar-story"
+      ],
+      "dot": [
+        "dot-title",
+        "dot-mark"
+      ],
+      "pettigrew": [
+        "pett-chess",
+        "bri-muddy"
+      ]
+    },
+    "wrongTheory": {
+      "the Blot": "The Blot takes one word and leaves a tidy gap. Forty-two names in one hand is not tidy. Whose word is *transcribed*?"
+    },
+    "question": "Who made the forty-two signatures?"
+  },
+  "reveal": [
+    {
+      "who": "QUILL",
+      "text": "New detective. Who made the forty-two signatures?"
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Councillor Bright. He copied them from Dot's petition."
+    },
+    {
+      "who": "BRIGHT",
+      "direction": "offended",
+      "text": "Frankly, that is absurd. I have never seen her list."
+    },
+    {
+      "who": "FELIX",
+      "direction": "holding up the letter",
+      "text": "Your own letter: \"I have *transcribed* the forty-two names faithfully.\" Footnote: *transcribe* means to copy out by hand."
+    },
+    {
+      "who": "ASHA",
+      "text": "And all forty-two are in one hand. You said Crane's office sent you sheets."
+    },
+    {
+      "who": "PETTIGREW",
+      "direction": "ears pink",
+      "text": "I'm sorry. We sent none. One sheet came to us, in your envelope."
+    },
+    {
+      "who": "DOT",
+      "direction": "jabbing the scratched-out mark",
+      "text": "And that's MY exclamation mark. You copied my title before you'd thought about it. Then you scratched me out."
+    },
+    {
+      "who": "BRIGHT",
+      "text": "I was home by six! Ask my wife!"
+    },
+    {
+      "who": "NELL",
+      "text": "We did. You were. *(She holds up Tam's bun bag.)* But Tam saw you go back in, \"after the one bong\"."
+    },
+    {
+      "who": "DEV",
+      "text": "And the notice says the clock strikes once at each half hour. Gap and all. One bong is half past six."
+    },
+    {
+      "who": "NELL",
+      "text": "\"Home by six\" was true. \"I did not go back\" wasn't. The lamp was on for ages because forty-two names take ages."
+    },
+    {
+      "who": "QUILL",
+      "text": "And it was there from the very first page. *(He taps the petition.)* \"Collected by: D. Harkness.\" Blank at Wednesday's vote. Who knew whose names these were?"
+    },
+    {
+      "who": "NEW DETECTIVE",
+      "text": "Only someone who had seen her list."
+    },
+    {
+      "who": "STAGE",
+      "text": "A long silence. Bright takes out his pocket watch, and does not polish it. His shoulders come down."
+    },
+    {
+      "who": "BRIGHT",
+      "direction": "quietly",
+      "text": "Yes."
+    },
+    {
+      "who": "PENHALLOW",
+      "text": "Why, Hector?"
+    },
+    {
+      "who": "BRIGHT",
+      "text": "Mr Crane wanted supporters by Friday. Nobody would sign. Then I heard Mrs Harkness on the steps, with forty-two. They all wanted to *save* the Library. Mr Crane would save it. The same thing, I told myself. *(He stops.)* It isn't. I knew it as I scratched out that mark. After the vote, Mr Crane said a blank line looked odd. So I wrote her name. Frankly, it was the only true thing on the page."
+    },
+    {
+      "who": "DOT",
+      "text": "Where are my sheets?"
+    },
+    {
+      "who": "BRIGHT",
+      "text": "In the committee drawer. I'm sorry, Mrs Harkness. I'm sorry, all forty-two of you."
+    },
+    {
+      "who": "NELL",
+      "direction": "gently, round the table",
+      "text": "Marlowe was doing the voices at story hour. Dot left her glasses at home. And Mr Pettigrew?"
+    },
+    {
+      "who": "PETTIGREW",
+      "direction": "taking a brand-new Library card from his pocket",
+      "text": "I joined on Tuesday. I'm sorry."
+    },
+    {
+      "who": "CRANE",
+      "direction": "from the window, smoothly",
+      "text": "Well! A misunderstanding. Lovely. Come along, my assistant. *(He leaves, a little faster than he came. Mr Pettigrew stays in his chair.)*"
+    },
+    {
+      "who": "SEMICOLON",
+      "text": "Elementary; therefore!"
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "STAGE",
+      "heading": "Forty-three.",
+      "text": "Constable Tully finds Dot's real sheets in the committee drawer under a folder called *Matters Arising*. At nine they are read to the committee, reasons and all. Then Councillor Bright stands up, resigns from the Review Committee, borrows Dot's green pen and signs her petition, number forty-three. In the \"why\" column he writes: *Because I learned to read there, and forgot what reading is for.* The review is postponed again. Mr Crane catches his train. Mr Pettigrew catches the next one, reading."
+    },
+    {
+      "who": "STAGE",
+      "heading": "What Bright does next.",
+      "text": "He volunteers to copy out the Library's water-damaged catalogue cards by hand. \"I have, it turns out, a gift for transcribing.\" He also admits he has emptied the leak buckets in the reading room every wet night this year. Professor Penhallow labels both of these, out loud, \"a fact\", and gives him a better bucket."
+    },
+    {
+      "who": "STAGE",
+      "heading": "The pen.",
+      "text": "Dot gives the agency her green fountain pen. \"Every name I collected was written with it. It signs what it means. I've a new one for signing now. This one has done its job.\" It goes on the shelf, uncapped, beside the stone frog from Case 3. She is wearing her reading glasses. Nobody mentions it."
+    },
+    {
+      "who": "STAGE",
+      "heading": "Marlowe.",
+      "text": "Nell climbs to the Library's mop cupboard to say sorry. Marlowe is inside, reading."
+    },
+    {
+      "who": "NELL",
+      "text": "I rated you a ten. Twice now."
+    },
+    {
+      "who": "MARLOWE",
+      "text": "That's very flattering. As a suspect."
+    },
+    {
+      "who": "NELL",
+      "text": "I'm going to start waiting for the evidence."
+    },
+    {
+      "who": "MARLOWE",
+      "direction": "holding out the top book of fourteen",
+      "text": "It helps if you read it first."
+    },
+    {
+      "who": "STAGE",
+      "heading": "The vanished word.",
+      "text": "At the clock tower, the agency reads the notice again."
+    },
+    {
+      "who": "DEV",
+      "text": "\"The Forum clock *strikes* once at each half hour.\" Seven letters."
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote: *strike* has more meanings than almost any word in English. A clock strikes. An idea strikes. A match strikes. Footnote to the footnote: today, a councillor was struck out."
+    },
+    {
+      "who": "ASHA",
+      "text": "That's not a footnote. That's a pun."
+    },
+    {
+      "who": "STAGE",
+      "text": "The new detective writes **STRIKES** in the Blot Ledger. The ink spreads into the page.",
+      "ledger": "STRIKES"
+    },
+    {
+      "who": "DEV",
+      "direction": "reading the Ledger aloud",
+      "text": "Under the clock that never strikes. *(He frowns.)* Never strikes. A clock that never strikes isn't much of a clock."
+    },
+    {
+      "who": "QUILL",
+      "direction": "looking at nothing in particular",
+      "text": "Isn't it?"
+    },
+    {
+      "who": "STAGE",
+      "heading": "The running joke.",
+      "text": "Biscuit is found by Mr Osei on Sunday when he climbs the tower to wind the clock: asleep in the bell chamber, in a nest of old bunting, with his ears folded flat. \"He's slept through the strikes all week,\" says Mr Osei. \"Every half hour. Not a twitch.\" Tully carries him down all two hundred steps."
+    },
+    {
+      "who": "TULLY",
+      "text": "I signed for him, you know. On Dot's petition."
+    },
+    {
+      "who": "DOT",
+      "text": "And I crossed him out."
+    },
+    {
+      "who": "TULLY",
+      "text": "He'd have wanted it kept open too."
+    },
+    {
+      "who": "STAGE",
+      "heading": "The last scene.",
+      "text": "Back at No. 9 Lantern Row, Ada's tea has gone cold again. She does not notice. She is looking at a photograph on the mantelpiece: two young people on the Library steps, forty years ago. One of them is wearing a very small deerstalker. When the agency leaves, Quill sees a small white card tucked behind the door knocker of No. 9. A perfect round ink blot, and no words at all. Ada turns it over, puts it in her pocket, and says nothing. Down the foggy street, nobody is walking away."
+    }
+  ],
+  "drill": {
+    "kind": "clue-spotter",
+    "skill": "punctuation",
+    "title": "Move the mark.",
+    "instructions": "Five short titles on chalkboard tiles. Drag one punctuation mark to make each title mean the opposite, then say what changed.",
+    "items": [
+      {
+        "prompt": "\"Save Our Library!\"",
+        "answer": "\"Save Our Library? By Selling It!\"",
+        "note": "model answer; shown first",
+        "model": true
+      },
+      {
+        "prompt": "\"Stop! Painting the fence.\"",
+        "answer": "\"Stop painting the fence.\"",
+        "note": "a sign that asks you to stop, against one that tells you off"
+      },
+      {
+        "prompt": "\"Let's eat, Grandma!\"",
+        "answer": "\"Let's eat Grandma!\"",
+        "note": "the family favourite; Felix's footnote is three footnotes long and is asked to save it for later"
+      },
+      {
+        "prompt": "\"No dogs allowed, Biscuit.\"",
+        "answer": "\"No dogs allowed? Biscuit!\"",
+        "note": "Tully disagrees with both"
+      },
+      {
+        "prompt": "\"Keep the Library open!\"",
+        "answer": "\"Keep the Library? Open it!\"",
+        "note": "the child explains: the first wants it to stay open; the second asks a question and then orders it opened, as if it were shut."
+      },
+      {
+        "kind": "fact-opinion",
+        "prompt": "\"Forty-two of your neighbours agree.\"",
+        "answer": "opinion dressed as a fact",
+        "options": [
+          "fact",
+          "opinion dressed as a fact"
+        ],
+        "quill": "Who asked them?",
+        "note": "Then one fact or opinion tile from the flyer. The child sorts it."
+      }
+    ]
+  },
+  "art": {
+    "backgrounds": [
+      "The Forum steps: broad pale stone steps, the Town Hall's columns, the market behind, the speakers' corner box, pigeons. Day: brisk wind, flyers flapping. Night: two gas lamps lit by the Lamplighters, rain on the stone, the office window glowing amber high on the left.",
+      "The Forum office: a small panelled room; a wire petitions tray, a blue pen on a chain, a brass letterbox flap on the inside of the door with a doormat below; one desk lamp.",
+      "The clock tower foot: old stone, a small brass frame on the wall beside a locked oak door. The clock face high above has hands (it does strike). Contrast this deliberately with the handless painted clock seen in Case 11.",
+      "The Review Committee room: green baize table, a water jug, a tall rain-streaked window over the harbour.",
+      "No. 9 Lantern Row: Ada's sitting room. Book towers, a cello on a stand, a cold teacup, a fire that has gone to embers, a parrot on a fringed lampshade. A photograph on the mantel of two figures on the Library steps; one is small and wears a tiny deerstalker. Paint it softly; it should be noticed only by children who look. Outside: fog, gas lamps with haloes."
+    ],
+    "props": [
+      "Crane's petition (the Case 4 scroll, crane-bird seal)",
+      "the Keeper's report with a book-shaped wax seal",
+      "Crane's glossy flyer",
+      "Dot's diary with a tram ticket bookmark",
+      "Bright's crested letter",
+      "Tam's bun bag and the rock-hard bun",
+      "the clock notice in its brass frame",
+      "Tully's notebook",
+      "Mr Osei's lost-property box with a handwritten label",
+      "Mr Pettigrew's new Library card",
+      "Bright's pocket watch",
+      "Dot's green fountain pen (the office object, with a small tram-shaped clip)"
+    ],
+    "portraits": [
+      "NEW: Councillor Bright (six expressions; the same model as Case 4)",
+      "NEW: Dot Harkness",
+      "NEW: Mr Pettigrew (the Case 8 model: short and round, brown suit one size too big, round spectacles; his \"guilty\" is pink ears and a polished lens, never real guilt)",
+      "NEW: Ada Holloway (amused, calm, thoughtful; her model sheet is used all season)",
+      "NEW: Mrs Achterberg",
+      "NEW: Semicolon",
+      "RETURNING: Marlowe",
+      "RETURNING: Penhallow",
+      "RETURNING: Tully",
+      "RETURNING: Tam",
+      "RETURNING: Crane (amused only)"
+    ],
+    "notes": "Lettering: none in any painting. The petition title, the flyer, the clock notice and every name are live text. The struck-out \"!\" is live text with a strikethrough, never drawn. Diversity check: the forty-two signers include young and old, families of every kind and background; when the petition is read aloud at the end, the crowd on the steps is painted as ordinary and various, camera high, faces small. Writer's note on the petition (DOC 6.1). The struck-out exclamation mark after LIBRARY is set as live text with a strikethrough (~~!~~), never painted. It is small on purpose. Ada's line exists because careful readers read that title and do not see it. Do not enlarge it, colour it or animate it. The child must find it. Writer's note on Tam's note (DOC 6.6). Lamplighters do not punctuate. The note is set on short lines, and each line keeps to the level's eighteen-word limit. Tam's word for the clock's strikes is \"bongs\", as in Case 2. The Blot beat: never painted as a figure. The violin note is sound only, with pigeons lifting from the steps; the card behind Ada's knocker is a small white shape, nobody in the street."
+  },
+  "source": {
+    "script": "case-06.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  },
+  "wrongLinks": [
+    {
+      "spans": [
+        "tam-pen",
+        "rep-blue"
+      ],
+      "quill": "Which pen? What colour? Read Dot's diary again."
+    },
+    {
+      "spans": [
+        "pet-collector",
+        "dot-count"
+      ],
+      "quill": "Her name is on it. Did *she* put it there? Ask who copies a name."
+    },
+    {
+      "spans": [
+        "pett-pocket",
+        "pett-tuesday"
+      ],
+      "quill": "A pocket is a secret, not a sentence. Where was he on Friday night?"
+    }
+  ],
+  "arcMarks": [
+    {
+      "span": "card",
+      "note": "Blot calling card (arc A): \"Count the words, not the names. — B.\""
+    }
+  ],
+  "aside": [
+    {
+      "where": "meta: vanished word",
+      "text": "from the Forum clock's notice: \"The Forum clock _______ once at each half hour.\""
+    },
+    {
+      "where": "meta: skills",
+      "text": "sequence carried lightly by the clock"
+    },
+    {
+      "where": "Chapter 2 — Interviews",
+      "text": "Every answer arrives as a typed transcript on the desk. Questions marked ◆ appear only after the child has read the document named. Rain begins as the interviews start, drumming on the Town Hall's high windows; the corridors echo, and somewhere a radiator knocks like someone asking to come in."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "stage",
+      "who": "STAGE",
+      "text": "Constable Tully squelches in from the rain, ten minutes behind, with the cocoa and a dripping notice."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "hook",
+      "who": "TULLY",
+      "text": "The Review Committee's moved. Mr Crane asked. It's nine tomorrow morning now, not noon."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "hook",
+      "who": "ASHA",
+      "text": "But his own flyer says noon!"
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "hook",
+      "who": "TULLY",
+      "text": "He has a train at ten. He said waiting was \"not lovely\"."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "hook",
+      "who": "PETTIGREW",
+      "direction": "from the doorway, very quietly",
+      "text": "I'm sorry. I did tell him people might want to come."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "stage",
+      "who": "STAGE",
+      "text": "The Forum clock strikes once over the wet square. Half past five."
+    },
+    {
+      "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
+      "kind": "hook",
+      "who": "QUILL",
+      "text": "Fifteen and a half hours. Read faster. No. Read *better*."
+    },
+    {
+      "where": "Chapter 3 — the impossible thing",
+      "kind": "impossible",
+      "text": "Dot's sheets were locked in the Forum office at six. The only person seen at the door after six, Marlowe, had no key and never went in. Mr Osei, who locked it, went home. The only other key-holder, Councillor Bright, was home by six, and Mrs Bright says so too. So who sat in a locked office copying forty-two names, with the lamp on for ages? (Home by six does not cover half past six. Answered in the reveal.)"
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "stage",
+      "who": "STAGE",
+      "text": "Nell stands back from the board with her arms folded."
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "hook",
+      "who": "NELL",
+      "text": "Look at it. Marlowe, at the office door just after six, with a pen, poking at the letterbox. Then off he goes, quick, with a big pile of papers. He fished Dot's sheets out through the letterbox! With the pen! Hunch-o-meter: ten."
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "hook",
+      "who": "ASHA",
+      "text": "And Councillor Bright going in after the one bong?"
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "hook",
+      "who": "NELL",
+      "text": "He's a councillor with a key. He was fetching his umbrella."
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "hook",
+      "who": "TULLY",
+      "direction": "reaching for his notebook",
+      "text": "Shall I go and fetch Marlowe?"
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "hook",
+      "who": "QUILL",
+      "text": "Fetch his *answers*. He has one we have not heard."
+    },
+    {
+      "where": "End of chapter 3 (hook; the false solution)",
+      "kind": "stage",
+      "who": "STAGE",
+      "text": "Across the harbour, the Forum clock strikes once. Half past seven. In thirteen and a half hours, the Committee sits."
+    },
+    {
+      "where": "Chapter 4 — The timeline (stage direction)",
+      "kind": "stage",
+      "text": "Marlowe arrives at the agency soaked, with fourteen books under his coat to keep them dry. His sixth question unlocks (doc 6.S1.Q6), and it breaks the false solution."
+    },
+    {
+      "where": "Chapter 1 — The scene (stage direction)",
+      "kind": "stage",
+      "text": "Thursday afternoon. A cold wind comes up from the harbour and rattles the flyers on the noticeboard. The Town Hall corridors smell of floor polish and wet umbrellas, and every half hour the Forum clock drops one deep note over the square, so low you feel it in your shoes."
+    },
+    {
+      "where": "End of chapter 1 (hook; the Blot is closer than you think)",
+      "kind": "hook",
+      "text": "The calling card is inside the glass, where none was at noon, and one violin note sounds from the locked tower. Played as the clock notice's talk (doc 6.7)."
+    },
+    {
+      "where": "after DOC 6.7",
+      "text": "The word is not logged until the case is solved."
+    },
+    {
+      "where": "Chapter 4 — Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Plays here, after Marlowe's sixth answer, every time. If the child has already made D1 and D3, Ada's lines are the same; the child simply knows what she means.",
+      "kind": "unlock"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Lamplit Row, after dark. The rain has stopped and left the fog behind. The gas lamps wear haloes, a clock somewhere ticks too slowly, and a tall thin house has books stacked in the windows like bricks. The agency climbs the steps. Nell is quiet for once.",
+      "kind": "stage"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "It wasn't Marlowe.",
+      "who": "NELL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Marlowe pushed a pen through a letterbox. The pen's on the mat. The door was locked.",
+      "who": "ASHA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "I know. I *know.* *(to the new detective)* Hunch-o-meter: ten. Wrong again. I keep rating him ten. Why do I keep rating him ten?",
+      "who": "NELL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Footnote: because it's the biggest number on the meter. Footnote to the footnote: you could make a bigger meter. *(Nell glares.)* Or not.",
+      "who": "FELIX"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "We are stuck. When I am stuck, I come here.",
+      "who": "QUILL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "The door opens before anyone knocks. MRS ACHTERBERG, flour to the elbows, looks at them all.",
+      "who": "STAGE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "A crooked line is straight until you look along it.",
+      "who": "MRS ACHTERBERG"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "What does that mean?",
+      "who": "DEV",
+      "direction": "whispering"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "I think it means come in.",
+      "who": "ASHA",
+      "direction": "whispering"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Inside: books in towers, a cello, a teacup with a skin on it. INSPECTOR ADA HOLLOWAY sits by a cold fire with a cello bow behind her ear. A grey parrot on the lampshade tilts its head.",
+      "who": "STAGE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Elementary; therefore!",
+      "who": "SEMICOLON"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Quill.",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Ada.",
+      "who": "QUILL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "(A long pause. Nobody in the agency has ever seen Quill pause.)",
+      "who": "STAGE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Still correcting people's grammar?",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Still forgetting your tea?",
+      "who": "QUILL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Always. *(to the new detective)* You're the new one. Show me what you have.",
+      "who": "ADA",
+      "direction": "picking up the cup, finding it cold, putting it down"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "The child lays the petition on the table. Ada does not touch it. She reads it once, lips moving. Then she looks at the child over her spectacles.",
+      "who": "STAGE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Read me the title.",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "\"Save Our Library by Selling It.\"",
+      "who": "NEW DETECTIVE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Mm. You have *read* it. *(She taps the paper once, nowhere in particular.)* Now *see* it.",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "See what?",
+      "who": "NELL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "If I told you, you would have heard it. That is not the same. *(to the child)* Read the title again with your finger under every mark, not every word. Then read the Keeper's report. Then read the councillor's letter with a dictionary at your elbow. Felix will do.",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "I'm — thank you. Footnote: I am, technically, a dictionary at an elbow.",
+      "who": "FELIX"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "Elementary; therefore!",
+      "who": "SEMICOLON"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "He says that about everything. He is usually right. *(She lifts the cello bow from behind her ear and begins, very softly, to play.)* Off you go. Nine o'clock is coming.",
+      "who": "ADA"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "On the stairs down, Nell catches Quill's eye.",
+      "who": "STAGE"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "You *know* her. Properly.",
+      "who": "NELL"
+    },
+    {
+      "where": "Interlude — No. 9 Lantern Row (Ada's first appearance)",
+      "text": "I knew her. *(A beat.)* \"Know\" is present tense. It may be both. Mind the bottom step.",
+      "who": "QUILL"
+    },
+    {
+      "where": "notebook gloss (D3)",
+      "text": "transcribe (verb): to write out a copy of something, word for word. Felix's footnote: from Latin *trans*, across, and *scribere*, to write. \"Writing across, from one page to another.\"",
+      "kind": "gloss",
+      "word": "transcribe"
+    },
+    {
+      "where": "Chapter 4 — The timeline",
+      "text": "The washing line runs from two weeks ago to Thursday noon."
+    },
+    {
+      "where": "timeline: Asha's peg",
+      "text": "Breakfast, Thursday: porridge — she insists on adding an eleventh card, \"Breakfast, Thursday: porridge\", which the line politely accepts and shows in grey.",
+      "kind": "peg"
+    },
+    {
+      "where": "timeline: the line's little shake",
+      "text": "One bong. What does one ring mean on that clock? Read the notice, gap and all.",
+      "kind": "shake",
+      "who": "QUILL",
+      "condition": "the child pegs event 5 before event 3",
+      "events": [
+        "T5",
+        "T3"
+      ]
+    },
+    {
+      "where": "End of chapter 4 (hook)",
+      "kind": "stage",
+      "who": "STAGE",
+      "text": "The last peg goes on. Quill looks at the line for a long time. \"Every peg is where it belongs,\" he says. \"Now we find out whether anyone will say so.\" Across the harbour, through the fog, the Forum clock strikes once. Half past nine. And high on the left of the dark Town Hall, a light comes on in the window of the Forum office."
+    },
+    {
+      "where": "End of chapter 4 (hook)",
+      "kind": "hook",
+      "who": "DEV",
+      "direction": "at the telescope",
+      "text": "Someone's in there. Right now."
+    },
+    {
+      "where": "End of chapter 4 (hook)",
+      "kind": "hook",
+      "who": "ASHA",
+      "text": "The only key in town is the councillor's."
+    },
+    {
+      "where": "accusation: scene",
+      "text": "The Review Committee room in the Town Hall, Friday, a quarter to nine. Rain again, ticking on the tall window over the harbour. Long table, green baize, a jug of water nobody drinks. All four suspects seated. Crane by the window with his coat on and his train ticket in his glove, smiling at the harbour. Tully, yawning, explains last night's light: \"That was me. Looking for Biscuit in the petitions tray. He wasn't there.\""
+    },
+    {
+      "where": "accusation: culpritNote",
+      "text": "Councillor Hector Bright, who went back into the Forum office at half past six last Friday, copied the forty-two names from Dot's petition onto Town Hall paper, turned her title inside out with a moved \"!\", sent it to Mr Crane, and after the vote wrote Dot's name on the blank line."
+    },
+    {
+      "where": "accusation: minimalEvidenceNotes",
+      "text": "D3 — [c:bri-trans] + [c:rep-hand]: he *transcribed* them; one hand wrote every name."
+    },
+    {
+      "where": "accusation: minimalEvidenceNotes",
+      "text": "D1 — [c:rep-scrape] + [c:dot-title]: the title started as Dot's, \"!\" and all."
+    },
+    {
+      "where": "accusation: minimalEvidenceNotes",
+      "text": "D4 — [c:bri-never] + [c:tam-bright]: he said he did not go back; he went back."
+    },
+    {
+      "where": "accusation: acceptableNote",
+      "text": "D2 is accepted in any slot."
+    },
+    {
+      "where": "accusation: wrong suspect marlowe — points to",
+      "text": "tully-pen, mar-story",
+      "kind": "points"
+    },
+    {
+      "where": "accusation: wrong suspect dot — points to",
+      "text": "dot-title, dot-mark",
+      "kind": "points"
+    },
+    {
+      "where": "accusation: wrong suspect pettigrew — points to",
+      "text": "pett-chess, bri-muddy",
+      "kind": "points"
+    },
+    {
+      "where": "accusation: grammar beat (before the reveal)",
+      "text": "Between you and I, this is all a misunderstanding.",
+      "who": "BRIGHT"
+    },
+    {
+      "where": "accusation: grammar beat (before the reveal)",
+      "text": "Between you and *me*. Carry on.",
+      "who": "QUILL"
+    },
+    {
+      "where": "accusation: grammarBeatNote",
+      "text": "during the accusation, before the reveal"
+    },
+    {
+      "where": "Mystery pass (6 Oct 2026)",
+      "kind": "note",
+      "text": "Stakes and clock: the Review Committee votes tomorrow at noon, moved by Mr Crane to nine. Impossible thing: an alibi that seems perfect (home by six, and his wife says so), broken by the one bong at half past six. False solution: Marlowe fished the sheets out through the letterbox (Nell: ten), broken by his story hour and Mr Osei's lost-property label. Clue in plain sight: \"Collected by: D. Harkness\". Blot: a card inside the glass where none was at noon, a violin note from the locked tower, a blank card behind Ada's knocker. Continuity: the day after the Case 4 vote; Pettigrew as in Case 8."
+    }
+  ],
+  "extraMarks": [
+    {
+      "span": "pet-ask",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "fly-love",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "dot-why",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "bri-proud",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "bri-people",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "clk-hour",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "sig-none",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    },
+    {
+      "span": "bri-roof",
+      "note": "markable, not needed to solve (texture, motive or a pin that leads nowhere)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "easier",
+      "level": 2,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "6.5",
+        "span": "bri-trans"
+      },
+      "prompt": "Read this line from the councillor's letter.\n\"I have transcribed the forty-two names faithfully, so that every one is clear.\"\nWhat does \"transcribed\" mean here?",
+      "options": [
+        "copied out in writing",
+        "read out to a crowd",
+        "crossed out",
+        "counted up"
+      ],
+      "answer": "copied out in writing",
+      "explain": "\"Trans\" means across and \"scribe\" means write. To transcribe is to write words across from one page onto another. The clue is \"so that every one is clear\": he says he made a neat copy."
+    },
+    {
+      "id": "x2",
+      "tier": "easier",
+      "level": 2,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.3",
+        "span": "fly-love"
+      },
+      "prompt": "Mr Crane's flyer says:\n\"Everybody loves a fresh start.\"\nIs this a fact or an opinion?",
+      "options": [
+        "A fact",
+        "A question",
+        "An opinion"
+      ],
+      "answer": "An opinion",
+      "explain": "Nobody could ask everybody, so nobody can check it. A fact can be checked. An opinion is what someone thinks or feels. Words like \"everybody loves\" often hide an opinion."
+    },
+    {
+      "id": "x3",
+      "tier": "easier",
+      "level": 2,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.6",
+        "span": null
+      },
+      "prompt": "Tam never uses capital letters.\nHere is one line of her note:\n\"lit the forum lamps like always\"\nWhich word is the name of a place?",
+      "options": [
+        "lamps",
+        "forum",
+        "always"
+      ],
+      "answer": "forum",
+      "explain": "The Forum is the name of one special place in Inkwell, so it needs a capital letter: the Forum. \"Lamps\" is an ordinary thing, so it does not."
+    },
+    {
+      "id": "x4",
+      "tier": "easier",
+      "level": 2,
+      "type": "pronoun",
+      "skill": "pronoun",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "6.S1.Q1",
+        "span": "mar-found"
+      },
+      "prompt": "Marlowe says:\n\"Everybody knows Dot's pen. She signs everything with it.\"\nWho is \"she\"?",
+      "options": [
+        "Dot Harkness",
+        "Tam Bellweather",
+        "Professor Penhallow"
+      ],
+      "answer": "Dot Harkness",
+      "explain": "A pronoun like \"she\" points back to someone already named. The last woman Marlowe named is Dot, in \"Dot's pen\". So \"she\" is Dot, and \"it\" is her pen."
+    },
+    {
+      "id": "x5",
+      "tier": "easier",
+      "level": 2,
+      "type": "spelling",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.3",
+        "span": "fly-agree"
+      },
+      "prompt": "Mr Crane's flyer says: \"Forty-two of your ___ agree.\"\nWhich spelling is right?",
+      "options": [
+        "nieghbours",
+        "neighbours",
+        "neibours",
+        "naybours"
+      ],
+      "answer": "neighbours",
+      "explain": "Neighbour has \"ei\" saying \"ay\", like eight and weigh. Then comes \"gh\", which you cannot hear. In Inkwell, as in Britain, it ends in \"our\"."
+    },
+    {
+      "id": "x6",
+      "tier": "easier",
+      "level": 2,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "sentence",
+      "objective": "s2-tense",
+      "chapter": 1,
+      "source": {
+        "doc": "6.4",
+        "span": "dot-pen"
+      },
+      "prompt": "Dot wrote in her diary:\n\"On the way home I found I'd dropped my good green pen.\"\nWhich happened first?",
+      "options": [
+        "Dot dropped her pen.",
+        "Dot got home.",
+        "Dot saw her pen was gone."
+      ],
+      "answer": "Dot dropped her pen.",
+      "explain": "\"I'd\" is short for \"I had\". \"Had dropped\" tells you the dropping happened earlier. First she dropped it, then later she found it was gone."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 3,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "6.S2.Q1",
+        "span": "dot-mark"
+      },
+      "prompt": "Dot says her title had \"one exclamation mark, right after \"LIBRARY\"\".\nThe Keeper found a scratched-out mark in the same place.\nWhich title did Dot write?",
+      "options": [
+        "SAVE OUR LIBRARY BY SELLING IT!",
+        "SAVE OUR LIBRARY! BY SELLING IT",
+        "SAVE OUR LIBRARY!"
+      ],
+      "answer": "SAVE OUR LIBRARY!",
+      "explain": "An exclamation mark ends a sentence, so nothing belongs after it. Dot's title stopped at \"LIBRARY!\". The mark was scratched out and more words were added after it. Read every mark, not just every word."
+    },
+    {
+      "id": "x8",
+      "tier": "at",
+      "level": 3,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.3",
+        "span": "fly-save"
+      },
+      "prompt": "Mr Crane's flyer says:\n\"Selling it is the only way to save it.\"\nIt is written like a fact. What is it really?",
+      "options": [
+        "An opinion dressed up as a fact",
+        "A fact the Keeper has checked",
+        "A rule of the Review Committee"
+      ],
+      "answer": "An opinion dressed up as a fact",
+      "explain": "Nobody has checked that there is no other way to pay for the roof. \"The only way\" sounds certain, but it is what Mr Crane wants you to think. An opinion does not become a fact by sounding sure."
+    },
+    {
+      "id": "x9",
+      "tier": "at",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 2,
+      "source": {
+        "doc": "6.S4.Q2",
+        "span": "bri-muddy"
+      },
+      "prompt": "The councillor says:\n\"The originals were rather muddy, so I copied them out neatly.\"\nWhat does he mean by \"the originals\"?",
+      "options": [
+        "the first sheets, before any copy was made",
+        "the new neat copies",
+        "the people who signed",
+        "Mr Crane's letters"
+      ],
+      "answer": "the first sheets, before any copy was made",
+      "explain": "An original is the first one, the one a copy is made from. The clue is in the same sentence: he \"copied them out\", so they must have come first."
+    },
+    {
+      "id": "x10",
+      "tier": "at",
+      "level": 3,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "6.S1.Q3",
+        "span": "mar-books"
+      },
+      "prompt": "Tam saw Marlowe go \"off quick with a big pile of papers\".\nMarlowe says: \"Books are made of paper, so Tam isn't wrong.\"\nWhat was Marlowe really carrying?",
+      "options": [
+        "Dot's petition sheets",
+        "Fourteen library books",
+        "Mr Crane's bright flyers"
+      ],
+      "answer": "Fourteen library books",
+      "explain": "Tam wrote what she saw from outside: a pile of paper. Marlowe tells us what it was. Both can be true at once. A good detective asks what a witness could really see."
+    },
+    {
+      "id": "x11",
+      "tier": "at",
+      "level": 3,
+      "type": "word-parts",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w6-build",
+      "chapter": 2,
+      "source": {
+        "doc": "6.S4.Q2",
+        "span": null
+      },
+      "prompt": "The councillor says he returned the originals \"Faithfully.\"\nWhich shows the parts of \"faithfully\"?",
+      "options": [
+        "fai + thful + ly",
+        "faith + fully + y",
+        "faith + ful + ly"
+      ],
+      "answer": "faith + ful + ly",
+      "explain": "\"Faith\" means trust. \"-ful\" means full of, and it has only one l. \"-ly\" turns a describing word into a \"how\" word. So faithfully means in a way you can trust."
+    },
+    {
+      "id": "x12",
+      "tier": "at",
+      "level": 3,
+      "type": "sentence-combine",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": "s6-join",
+      "chapter": 1,
+      "source": {
+        "doc": "6.4",
+        "span": null
+      },
+      "prompt": "Dot wrote two short sentences: \"I crossed the dog out. Dogs cannot vote.\"\nWhich one sentence joins them and keeps the meaning?",
+      "options": [
+        "I crossed the dog out because dogs cannot vote.",
+        "I crossed the dog out, but dogs cannot vote.",
+        "Although I crossed the dog out, dogs cannot vote."
+      ],
+      "answer": "I crossed the dog out because dogs cannot vote.",
+      "explain": "\"Because\" joins a thing that happened to the reason for it. \"But\" would mean the second idea is a surprise, and \"although\" turns the meaning upside down."
+    },
+    {
+      "id": "x13",
+      "tier": "harder",
+      "level": 4,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.2",
+        "span": null
+      },
+      "prompt": "The Keeper ends her report: \"My feeling is that somebody has been very foolish. That is an opinion. I have labelled it as one.\"\nWhy does she label it?",
+      "options": [
+        "Because a report may never contain any feelings at all, so she has to say sorry for it",
+        "So the Review Committee will agree with her",
+        "So readers can tell her feelings apart from what she has checked"
+      ],
+      "answer": "So readers can tell her feelings apart from what she has checked",
+      "explain": "Her report begins \"These are facts, not feelings.\" Everything above the last lines can be checked: ink, hand, paper. She is allowed an opinion, but an honest writer says which is which."
+    },
+    {
+      "id": "x14",
+      "tier": "harder",
+      "level": 4,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "sentence",
+      "objective": "s5-speech",
+      "chapter": 1,
+      "source": {
+        "doc": "6.8",
+        "span": "sig-ferris"
+      },
+      "prompt": "Tom Ferris told the constable:\n\"Sell it? Never! I wrote 'for my grandchildren'.\"\nWhy are there single quotation marks inside the double ones?",
+      "options": [
+        "They show the constable does not believe him",
+        "They show words he wrote, inside the words he said",
+        "They mark that he is asking a question"
+      ],
+      "answer": "They show words he wrote, inside the words he said",
+      "explain": "Double marks hold what Tom said. Inside that, he quotes what he once wrote on Dot's sheet. A quote inside a quote takes the other kind of mark, so the reader can tell the two apart."
+    },
+    {
+      "id": "x15",
+      "tier": "harder",
+      "level": 4,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": null,
+      "chapter": 2,
+      "source": {
+        "doc": "6.S2.Q1",
+        "span": null
+      },
+      "prompt": "Asked about Mr Crane's petition, Dot says: \"For HIM? I'd sooner collect wasps.\"\nWhat does she mean?",
+      "options": [
+        "She would never help Mr Crane",
+        "She is afraid of being stung on the steps",
+        "She thinks Mr Crane keeps wasps"
+      ],
+      "answer": "She would never help Mr Crane",
+      "explain": "Dot does not really want wasps. She picks the worst job she can think of, and says she would rather do that. It is an exaggeration that shows how strongly she feels."
+    },
+    {
+      "id": "x16",
+      "tier": "harder",
+      "level": 4,
+      "type": "summarise",
+      "skill": "detail",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 1,
+      "source": {
+        "doc": "6.2",
+        "span": null
+      },
+      "prompt": "Which sentence best sums up the Keeper's report?",
+      "options": [
+        "The Keeper is mostly upset about the leaking roof and writes about her worries for the Library's future.",
+        "One hand wrote every name, the last words of the title are in different ink, and her opinion is kept apart.",
+        "The \"Collected by\" line was blank at Wednesday's vote.",
+        "Forty-two neighbours signed to save the Library."
+      ],
+      "answer": "One hand wrote every name, the last words of the title are in different ink, and her opinion is kept apart.",
+      "explain": "A good summary keeps the main points and drops the small ones. The blank line and the foolish feeling are true, but they are not the heart of the report. \"Forty-two neighbours signed\" is the petition's claim, which her report questions."
+    },
+    {
+      "id": "x17",
+      "tier": "harder",
+      "level": 4,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "6.6",
+        "span": "tam-bright"
+      },
+      "prompt": "The clock notice says it sounds \"once at each half hour\" and \"six rings at six o'clock\".\nTam wrote: \"after the one bong councillor bright went in the office with a key\".\nThe six bongs came first. So when did he go in?",
+      "options": [
+        "At about half past six",
+        "Just before six o'clock",
+        "At eight on Friday morning"
+      ],
+      "answer": "At about half past six",
+      "explain": "Six bongs mean six o'clock. The next sound, one bong, is the half hour, so it was half past six. The councillor said he was home by six and did not go back. The clock tells the order of events, and it cannot be talked round."
+    },
+    {
+      "id": "x18",
+      "tier": "harder",
+      "level": 4,
+      "type": "inference",
+      "skill": "contradiction",
+      "strand": "reading",
+      "objective": null,
+      "chapter": 5,
+      "source": {
+        "doc": "6.S3.Q1",
+        "span": "pett-none"
+      },
+      "prompt": "The councillor wrote that he \"transcribed\" sheets that Mr Crane's office sent him.\nMr Pettigrew says: \"We sent no sheets at all.\"\nWhat did the councillor really copy from?",
+      "options": [
+        "Muddy sheets from Mr Crane's office",
+        "A list Mr Crane read out at breakfast",
+        "Dot's sheets, taken from the petitions tray"
+      ],
+      "answer": "Dot's sheets, taken from the petitions tray",
+      "explain": "To transcribe you need something to copy from. Crane's office sent nothing, yet the names run in Dot's own order. The only sheets with those names were Dot's, left in the tray. A copy needs an original."
+    }
+  ],
+  "boardIntro": [
+    {
+      "who": "STAGE",
+      "text": "The agency office after dark. Rain runs down the round window and blurs the harbour lights. The lamp on Quill's desk makes a small gold room inside the room, and the cork board creaks a little every time a pin goes in."
+    },
+    {
+      "who": "STAGE",
+      "text": "Asha chalks *9 a.m.* at the top of the board and underlines it twice."
+    }
+  ],
+  "revealSetting": "The Review Committee room, ten to nine. Rain on the tall window. Ada has slipped into the back row, Semicolon on her shoulder. Mr Crane checks the clock and smiles."
+}
