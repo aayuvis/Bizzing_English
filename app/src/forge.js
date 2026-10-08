@@ -131,7 +131,7 @@ export function forgeOf(lex, wp) {
     let out = null; const ps = ids.map((id) => byId.get(id));
     if (ids.length >= 2 && ids.length <= MAX_SLOTS && new Set(ids).size === ids.length && ps.every(Boolean) && shapeOk(ps)) {
       const sp = spelt(ids);
-      if (sp) {
+      if (sp && !FALSE_FRIENDS.has(sp.word)) {
         const roots = ids.filter((id) => byId.get(id).kind === 'root');
         if (ids.length === 2) { if (roots.length ? roots.some((id) => rootWords.get(id)?.has(sp.word)) && ps.every((p) => p.kind !== 'base' || names(sp.word, p.t)) : transparent(sp.word, ps)) out = sp; }
         else if ((ps[0].kind === 'prefix' && made(ids.slice(1))) || (ps[ps.length - 1].kind === 'suffix' && made(ids.slice(0, -1)))) out = sp;
