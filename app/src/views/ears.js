@@ -183,8 +183,8 @@ function titleView(r) {
     <div class="se-hud"><span class="se-stat"><b>${fr}</b><small>stories heard</small></span><span class="se-mid"><span class="se-lv">Level ${L}</span></span><span class="se-stat"><b>${gold}</b><small>golden</small></span></div>
     <div class="se-treebox">${treeSVG(rec)}<img class="se-quill" src="${mascot('point')}" alt=""><img class="se-me" src="${avatarOf(k)}" alt=""></div>
     <p class="se-says">${r.drop ? `Let’s warm up on Level ${L}. You can move back up any time.` : `Level ${L}: ${esc(LEVELS[L].says)}. Listen to the story, then tap the picture.`}</p>
-    ${levelChips(rec)}
     <div class="se-controls">${btn('Listen', 'se-start', { ic: 'speaker', cls: 'se-big' })}</div>
+    ${levelChips(rec)}
     <p class="se-note">Every story is from a book in the Library, read by the narrator. ${LEVELS[L].stories} stories a round; a coin for each picture right first time when you get half or more.</p>
   </section></div>`;
 }

@@ -17,6 +17,9 @@ import { stageView, openAloud, aloudView, STAGE_ACTIONS, aloudPick, isLive, micS
 let PLAY = null, TOOLS = null;
 const loadPlay = async () => PLAY || (PLAY = await import('./views/play.js').then((m) => (Object.assign(ACTIONS, m.PLAY_ACTIONS), m)));
 const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js').then((m) => (Object.assign(ACTIONS, m.TOOL_ACTIONS), m)));
+/* Inkwell Detective loads on its own route too (views/inkwell.js; its cases are lazy chunks of their own) */
+let INK = null;
+const loadInk = async () => INK || (INK = await import('./views/inkwell.js').then((m) => (Object.assign(ACTIONS, m.INK_ACTIONS), m)));
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
   settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet, avDeckSheet, avOneSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
@@ -52,7 +55,7 @@ const TABS = [
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
   { id: 'feed', label: 'My Feed', icon: 'feed', href: '#/feed', color: '#6C4FE0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', feed: 'feed' };
+const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', inkwell: 'play', feed: 'feed' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -65,6 +68,7 @@ async function route() {
   stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' || S.sheet?.kind === 'cert' ? S.sheet : null;
   if (prev === 'play' && S.run?.mode === 'game') PLAY?.leaveGame();
   if (prev === 'tools') TOOLS?.leaveTools();
+  if (prev === 'inkwell') INK?.leaveInkwell();
   if (r.name === 'myths' || r.name === 'author') { location.replace(`#/library/${r.parts.map(encodeURIComponent).join('/')}`); return; }   // the Library's deep dives (views/deep.js)
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
@@ -96,6 +100,7 @@ async function route() {
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
   else if (r.name === 'play') { await loadPlay(); if (r.parts[1]) PLAY.openGame(r.parts[1], r.parts[2]); else S.run = null; }   // #/play/<game> · #/play/<hub>[/<mode>] (views/hubs.js)
   else if (r.name === 'feed') { S.run = null; await openFeed(); }
+  else if (r.name === 'inkwell') { await loadInk(); await INK.openInkwell(r.parts); }
   else if (r.name === 'place') { S.run = null; await openPlace(r.parts[1] === 'first'); }   // Find my starting place (views/placement.js)
   else if (r.name === 'tools') { S.run = null; await loadTools(); await TOOLS.openTool(r.parts); }
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
@@ -124,6 +129,7 @@ function screen() {
     case 'recordings': return recordingsView();
     case 'play': return !PLAY ? '' : p[1] ? PLAY.gameView() : PLAY.playView();
     case 'feed': return feedView();
+    case 'inkwell': return INK ? INK.inkwellView() : '';
     case 'place': return placeView();
     case 'tools': return TOOLS ? TOOLS.toolsView() : '';
     case 'me': return meView();
@@ -201,6 +207,7 @@ document.addEventListener('input', (e) => {
   if (t.dataset.act === 'desk-type') deskInput(t);
   else if (t.dataset.act === 'sp-plan') speakInput(t);
   else if (t.dataset.act === 'tl-q') TOOLS?.toolsInput(t);
+  else if (t.dataset.act === 'ink-name') INK?.inkInput(t);
 });
 document.addEventListener('change', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
@@ -221,8 +228,9 @@ document.addEventListener('keydown', (e) => {
   if (S.sheet?.kind === 'avdeck' && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { ACTIONS['deck-go'](e.key === 'ArrowLeft' ? -1 : 1); e.preventDefault(); return; }
   if (e.key === 'Escape') { if (S.wordcard) { S.wordcard = null; render(); return; } if (S.sheet) { ACTIONS['sheet-close'](); return; } }
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
+  if (e.key === 'Enter' && e.target.id === 'ink-name') { ACTIONS['ink-name-go']?.(); e.preventDefault(); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
+  if (INK?.inkKey(e) || TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 
@@ -242,5 +250,5 @@ route().then(() => { if (parse().name === 'settings') { S.sheet = { kind: 'setti
 if ('serviceWorker' in navigator && !DEMO && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 /* idle: warm the lexicon so the first tapped word is instant */
 setTimeout(() => { if (kid()) loadLexicon(); }, 3000);
-setTimeout(() => { if (kid()) { loadPlay(); loadTools(); } }, 6000);   // fetched when idle, so Play and Tools work offline too
+setTimeout(() => { if (kid()) { loadPlay(); loadTools(); loadInk(); } }, 6000);   // fetched when idle, so Play and Tools work offline too
 window.__bz = { S, render, checkMedals };   // the browser check reads state (and asks for a ceremony) through this; nothing else does

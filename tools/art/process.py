@@ -166,6 +166,26 @@ def cast_cut(src, W=600, H=800, fill=0.92):
     `fill` of the canvas, its bottom on the bottom edge, centred — so every character and every expression stands at
     the same size, head at the same height, as they are composited over changing plates."""
     im = key(src)
+    # a half-body figure is cut by the bottom edge, so a pocket of ground between an arm (or a pole) and the body can
+    # meet the bottom edge where key() never seeded its flood: key those pockets from every bottom-edge pixel too
+    a = np.asarray(im).astype(np.float32)
+    mag = (a[:, :, 0] > 150) & (a[:, :, 2] > 110) & (a[:, :, 1] < 110) & (np.abs(a[:, :, 0] - a[:, :, 2]) < 90)
+    m = Image.fromarray(np.where(mag, 255, 0).astype(np.uint8), 'L').copy()
+    for y in range(m.height - 1, max(m.height - 40, 0), -1):          # the bottom rows (under the white border's end)
+        for x in range(0, m.width, 2):
+            if m.getpixel((x, y)) == 255: ImageDraw.floodfill(m, (x, y), 128)
+    # …and pockets fully enclosed (an arm on a hip, a pole beside a coat): a solid blob of ground colour, found by
+    # eroding the mask so only real ground (not a purple outline's anti-aliasing) seeds the fill
+    from PIL import ImageFilter
+    g = (a[:, :, 3] > 100) & (a[:, :, 0] > 170) & (a[:, :, 2] > 140) & (a[:, :, 1] < 130) & (np.abs(a[:, :, 0] - a[:, :, 2]) < 60)
+    gm = Image.fromarray(np.where(g, 255, 0).astype(np.uint8), 'L').copy()
+    core = np.asarray(gm.filter(ImageFilter.MinFilter(9)))
+    ys, xs = np.nonzero(core == 255)
+    for y, x in zip(ys[::25], xs[::25]):
+        if gm.getpixel((int(x), int(y))) == 255: ImageDraw.floodfill(gm, (int(x), int(y)), 128)
+    pocket = (np.asarray(m) == 128) | (np.asarray(gm) == 128)
+    if pocket.any():
+        a[:, :, 3][pocket] = 0; im = Image.fromarray(a.astype(np.uint8), 'RGBA')
     s = min(H * fill / im.height, W * 0.98 / im.width)
     im = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.LANCZOS)
     c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -179,6 +199,7 @@ def inkwell():
     for f in sorted(os.listdir(RAW)):
         if not (f.startswith('ink-') and f.endswith('.png')): continue
         name = f[4:-4]; src = os.path.join(RAW, f)
+        if os.environ.get('INK_ONLY') and not name.startswith(os.environ['INK_ONLY']): continue   # e.g. INK_ONLY=cast-
         if name.startswith(('obj-', 'emb-', 'ui-')):
             t += save(square(key(src), 320), os.path.join(out, name + '.webp'), 86)
         elif name.startswith('quill-'):

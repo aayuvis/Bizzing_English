@@ -112,7 +112,7 @@ ok('the keyboard way toggles the gap under the cursor', r2.sel.length === 1 && r
 let r3 = rushNew('t', 3); const w3 = r3.cur, wr = [...Array(r3.cur.words.length - 1).keys()].find((i) => !r3.cur.commas.includes(i));
 if (wr != null) { r3 = rushStep(r3, { type: 'toggle', i: wr }); r3 = rushStep(r3, { type: 'submit' }); ok('a wrong comma costs, never below zero', r3.score === 0 && r3.misses[r3.flash.rule] === 1);
   ok('T3 Comma Rush: a wrong sentence holds — the item stays, with the commas chosen kept for the miss card', r3.hold && r3.cur === w3 && r3.hold.sel.join() === String(wr) && rushStep(r3, { type: 'toggle', i: 0 }) === r3 && rushStep(r3, { type: 'tick', dt: 4000 }) === r3 && rushStep(r3, { type: 'submit' }) === r3);
-  const m = missCard({ type: 'commas', words: w3.words, commas: w3.commas, rule: w3.rule }, r3.hold.sel);
+  const m = missCard({ type: 'commas', words: w3.words, commas: w3.commas, rule: w3.rule }, r3.hold?.sel || []);
   ok('T3 the miss card: the missed commas inserted in green, the extra one struck out, in the sentence itself', (m.match(/class="miss-fix"/g) || []).length === w3.commas.length && (m.match(/class="miss-del"/g) || []).length === 1 && /data-act="miss-go"/.test(m) && w3.words.every((x) => m.includes(x.replace(/&/g, '&amp;').replace(/'/g, '&#39;').replace(/"/g, '&quot;'))));
   const r4 = rushStep(r3, { type: 'continue' }); ok('T3: Continue moves on to a fresh sentence', !r4.hold && r4.cur !== w3 && r4.sel.length === 0); }
 { let rr = rushNew('rp', 3); const cur = rr.cur; for (const i of cur.commas) rr = rushStep(rr, { type: 'toggle', i }); const extra = [...Array(cur.words.length - 1).keys()].find((i) => !cur.commas.includes(i)); rr = rushStep(rr, { type: 'toggle', i: extra }); rr = rushStep(rr, { type: 'submit' });

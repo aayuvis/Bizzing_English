@@ -39,6 +39,7 @@ function wav() {
   return b;
 }
 const WAV = wav();
+const ONLY = process.env.BZ_ONLY ? process.env.BZ_ONLY.split(',').map(Number) : null, want = (k) => !ONLY || ONLY.includes(k);   // BZ_ONLY=3,4 runs those sections
 
 async function ctxFor({ phone = false, dark = false, realVoice = false } = {}) {
   const ctx = await browser.newContext({ viewport: phone ? { width: 390, height: 844 } : { width: 1280, height: 800 }, isMobile: phone, hasTouch: phone, deviceScaleFactor: 1, colorScheme: dark ? 'dark' : 'light' });
@@ -83,7 +84,7 @@ async function playRun(page, { how = 'right', touch = false, onMiss = null } = {
       await answer(page, { right: how === 'right' || (how === 'random' && asked++ % 4 === 0), touch });   // the random tapper: right one time in four, chance with four pictures
       await page.waitForTimeout(250);
       const t = await G(page);
-      if (t.gp === 'miss') { if (onMiss) await onMiss(page, t); if (touch) await page.tap('[data-act=se-next]'); else await page.keyboard.press('Enter'); await page.waitForTimeout(200); }
+      if (t.gp === 'miss') { if (onMiss) await onMiss(page, t); if ((await G(page)).gp === 'miss') { if (touch) await page.tap('[data-act=se-next]'); else await page.keyboard.press('Enter'); } await page.waitForTimeout(200); }
       else await until(page, (x) => x.gp !== 'right', 3000);
       continue;
     }
@@ -93,7 +94,7 @@ async function playRun(page, { how = 'right', touch = false, onMiss = null } = {
 }
 
 /* ---------- 1. the screen, desktop and phone, light and dark ---------- */
-for (const phone of [false, true]) for (const dark of [false, true]) {
+if (want(1)) for (const phone of [false, true]) for (const dark of [false, true]) {
   const tag = `${phone ? 'phone' : 'desktop'} ${dark ? 'dark' : 'light'}`;
   const { ctx, page } = await ctxFor({ phone, dark });
   await makeKid(page, 'Mira');
@@ -144,7 +145,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 }
 
 /* ---------- 2. a whole run by KEYBOARD: paid what the finish card says; the level moves up ---------- */
-{
+if (want(2)) {
   const { ctx, page } = await ctxFor();
   await makeKid(page, 'Ravi');
   await go(page, '#/ears'); await page.focus('#main').catch(() => {});
@@ -174,7 +175,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 }
 
 /* ---------- 3. TOUCH on a phone: a miss holds and teaches; wrong earns nothing; random earns nothing ---------- */
-{
+if (want(3)) {
   const { ctx, page } = await ctxFor({ phone: true });
   await makeKid(page, 'Asha');
   await go(page, '#/ears');
@@ -212,7 +213,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 }
 
 /* ---------- 4. the voice: a real clip plays; it stops on leaving and when hidden; Calm slows it ---------- */
-{
+if (want(4)) {
   const { ctx, page } = await ctxFor({ realVoice: true });
   await makeKid(page, 'Leo');
   await go(page, '#/ears'); await page.click('[data-act=se-start]'); await page.waitForTimeout(250);
@@ -245,7 +246,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 }
 
 /* ---------- 5. the Play tab carries the card ---------- */
-{
+if (want(5)) {
   const { ctx, page } = await ctxFor();
   await makeKid(page, 'Zoe');
   await go(page, '#/play');
@@ -254,7 +255,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
 }
 
 /* ---------- 6. the Typing Trainer (HANDOVER C §4.4), here because it shipped with Story Ears ---------- */
-{
+if (want(6)) {
   const { ctx, page } = await ctxFor({ phone: true });
   await makeKid(page, 'Tara');
   await go(page, '#/tools/typing/home1'); await page.waitForTimeout(300);

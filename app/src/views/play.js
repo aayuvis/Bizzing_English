@@ -12,9 +12,9 @@ import '../../styles/stage.css';
 import '../../styles/hubs.css';
 import { S, kid, save, render, pay, checkMedals, isDark, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot } from '../ui.js';
-import { builderNew, builderStep, clauseText, rushNew, rushStep, whoRound, figureRound, figureStep, figurePhase, quizNew, quizStep, plotRound, plotNew, plotStep, forgeRound, forgeFamilyRound, duelRound, duelNew, duelStep, duelRival, duelTally, duelBuilt,
+import { builderNew, builderStep, rushNew, rushStep, whoRound, figureRound, figureStep, figurePhase, quizNew, quizStep, plotRound, plotNew, plotStep, forgeRound, forgeFamilyRound, duelRound, duelNew, duelStep, duelRival, duelTally,
   CHANCE, accuracy, mostMissed, starsFor, runNew, runAdd, runScore, runPct, runPay, runStarPct, roundPay, isFinal, memOf, memRecord, memCounts, memDraw, roundLog, huntsFrom, huntable, figurePool, itemKey,
-  builderLevelPool, rushLevelPool, whoLevelPool, plotPool, duelLevelPool, forgePools, FORGE_LEVELS, FIGURE_LEVELS, FIGURE_KINDS, ROUND_OF, ROUND_MS, RUN_ROUNDS, PAY_LINE, STAR_LINE, GAMES } from '../games.js';
+  builderLevelPool, rushLevelPool, whoLevelPool, plotPool, duelLevelPool, forgePools, FORGE_LEVELS, FIGURE_LEVELS, FIGURE_KINDS, ROUND_OF, ROUND_MS, RUN_ROUNDS, STAR_LINE, GAMES } from '../games.js';
 import { HUBS, isHub, hubOf, playLevel, setPick, settleLevel } from '../hubs.js';
 import { missCard } from '../miss.js';
 import { stage, plateUrl, afterRender, stillScene, onHidden } from '../stage.js';
@@ -408,16 +408,18 @@ function figureStage(g) {
     tray: `<div class="opts stg-opts">${q.options.map((o, i) => optBtn('q-pick', i, esc(o), st, q.answer)).join('')}</div>` };
 }
 function duelStage(g) {
-  const q = g.rounds[g.i], st = g.state, wt = WORKS.find((x) => x.id === q.work), who = wt ? `${wt.author}, ${wt.title}` : '';
+  const q = g.rounds[g.i], st = g.state, wt = WORKS.find((x) => x.id === q.work), who = wt ? `${wt.author}, ${wt.title}` : '', rv = g.rival;
+  /* the rival is said to be what it is: one of Bee's made-up rivals, its points the app's own (never a real child) */
+  const rvNote = rv ? `<p class="subp gb-rival-note">${esc(rv.name)}, ${rv.age}, is one of Bizzing Bee’s made-up rivals; the points are the app’s own.${st ? ` <b class="gb-rvline">${esc(rv.name)}: ${rv.pts[g.i] ? 'made this one strong' : 'missed this one'}</b>` : ''}</p>` : '';
   const gloss = `${q.device.charAt(0).toUpperCase() + q.device.slice(1)}: ${DEVICE_GLOSS[q.device] || ''}.`;
-  if (g.stage === 'which') return { main: `<p class="prompt">Which line is stronger?</p><div class="gb-duel" data-play>${q.versions.map((v, i) => `<button class="stg-paper gb-version" data-act="du-pick" data-arg="${i}">${kb(i + 1)}<span class="gb-vtext">${esc(v)}</span></button>`).join('')}</div>` };
+  if (g.stage === 'which') return { main: `<p class="prompt">Which line is stronger?</p><div class="gb-duel" data-play>${q.versions.map((v, i) => `<button class="stg-paper gb-version" data-act="du-pick" data-arg="${i}">${kb(i + 1)}<span class="gb-vtext">${esc(v)}</span></button>`).join('')}</div>${rvNote}` };
   const whichNote = g.which ? `<p class="subp gb-which ${g.which.ok ? 'ok' : 'no'}">${g.which.ok ? 'Yes — that was the original.' : 'The other one was the original.'}</p>` : '';
-  if (st && !st.ok) return { main: `${whichNote}<div class="stg-paper strip held" data-play>${missCard({ type: 'line', right: q.original, why: `${st.buildOk ? 'You built it — but picked the plain line first. ' : ''}${gloss} — ${who}` }, st.buildOk ? '' : st.built, { title: st.buildOk ? 'Built — the pick was the plain one' : 'Here is the line as it was written' })}</div>` };
-  if (st?.ok) return { main: `<div class="stg-paper strip" data-play><p class="built-line done">${esc(q.original)}</p></div>${okNote(`Strong! That is ${q.device}`, `${esc(gloss)} <small>— ${esc(who)}</small>`)}` };
+  if (st && !st.ok) return { main: `${whichNote}<div class="stg-paper strip held" data-play>${missCard({ type: 'line', right: q.original, why: `${st.buildOk ? 'You built it — but picked the plain line first. ' : ''}${gloss} — ${who}` }, st.buildOk ? '' : st.built, { title: st.buildOk ? 'Built — the pick was the plain one' : 'Here is the line as it was written' })}</div>${rvNote}` };
+  if (st?.ok) return { main: `<div class="stg-paper strip" data-play><p class="built-line done">${esc(q.original)}</p></div>${okNote(`Strong! That is ${q.device}`, `${esc(gloss)} <small>— ${esc(who)}</small>`)}${rvNote}` };
   return {
     main: `${whichNote}<p class="prompt">Make it strong: build the line as the author wrote it. One piece is plain and does not belong.</p>
       <p class="subp gb-plain"><span>The plain version</span> ${esc(q.plain)}</p>
-      <div class="stg-paper strip" data-play><div class="built-line">${g.picks.map((i, j) => `<span class="piece${j === g.picks.length - 1 ? ' gb-slide' : ''}">${esc(q.tiles[i].text)}</span>`).join('') || '<span class="muted">tap the pieces in order</span>'}</div></div>`,
+      <div class="stg-paper strip" data-play><div class="built-line">${g.picks.map((i, j) => `<span class="piece${j === g.picks.length - 1 ? ' gb-slide' : ''}">${esc(q.tiles[i].text)}</span>`).join('') || '<span class="muted">tap the pieces in order</span>'}</div></div>${rvNote}`,
     tray: `<div class="tiles stg-tiles">${q.tiles.map((t, i) => `<button class="tile" data-act="du-tile" data-arg="${i}" ${g.picks.includes(i) ? 'disabled' : ''}>${kb(i + 1)}${esc(t.text)}</button>`).join('')}</div>`,
     controls: `${btn('Undo', 'du-undo', { ic: 'undo', cls: 'out stg-pair', dis: !g.picks.length })}${btn('Check', 'du-check', { ic: 'check', cls: 'stg-pair', dis: !g.picks.length })}`,
   };

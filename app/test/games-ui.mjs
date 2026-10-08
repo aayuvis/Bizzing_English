@@ -122,6 +122,7 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
   ok('T13: Auto goes back to the game’s own level', (await rec(page, 'builder')).pick === null && /Level 1/.test(await page.$eval('[data-mode=builder] .ht-lv', (e) => e.textContent)));
   await page.click('[data-mode=builder] [data-arg="builder:2"]'); await page.waitForTimeout(100);
 
+  try {
   /* Clause Builder: by touch and by keys */
   await page.click('[data-mode=builder] .ht-play'); await phase(page, 'title'); await page.waitForTimeout(400);
   ok('a hub mode has its own route and its own title on the stage', /#\/play\/studio\/builder$/.test(page.url()) && !!(await page.$('.stg [data-act=game-start]')));
@@ -133,14 +134,14 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
   const tiles = await page.evaluate(() => window.__bz.S.run.g.cur.tiles.map((t) => t.k));
   ok('Clause Builder: phrase tiles, all lower-case where the book allows, one decoy, the joining word', tiles.filter((k) => k === 'decoy').length === 1 && tiles.filter((k) => k === 'sub').length === 1 && tiles.length >= 5 && tiles.length <= 9);
   /* build the end order right, by touch: main pieces, sub, dep pieces, then the capital */
-  const buildRight = async (how) => {
-    const g = (await R(page)).g, c = g.cur, end = c.right[1], words = (i) => c.tiles[i].text;
-    const want = end.replace(/[.!?]$/, '').toLowerCase(); const order = [];
-    let rest = want; const used = new Set();
-    while (rest.length) { const i = c.tiles.findIndex((t, j) => !used.has(j) && t.k !== 'decoy' && (rest === t.text.toLowerCase() || rest.startsWith(t.text.toLowerCase() + ' '))); if (i < 0) break; used.add(i); order.push(i); rest = rest.slice(words(i).length).trim(); }
-    for (const i of order) { if (how === 'keys') await page.keyboard.press(String(i + 1)); else await page.click(`[data-act=b-pick][data-arg="${i}"]`); }
-    if (end.charAt(0) !== words(order[0]).charAt(0)) { if (how === 'keys') await page.keyboard.press('c'); else await page.click('[data-act=b-cap]'); }
-    if (how === 'keys') await page.keyboard.press('Enter'); else await page.click('[data-act=b-check]');
+  const solve = (c, sentence) => { const bare = (x) => x.toLowerCase().replace(/[,.!?]/g, '').replace(/\s+/g, ' ').trim(), want = bare(sentence);
+    const go = (rest, used) => { if (!rest) return []; for (let i = 0; i < c.tiles.length; i++) { const t = bare(c.tiles[i].text); if (used.includes(i) || c.tiles[i].k === 'decoy' || !(rest === t || rest.startsWith(t + ' '))) continue; const r = go(rest.slice(t.length).trim(), [...used, i]); if (r) return [i, ...r]; } return null; };
+    return go(want, []) || []; };
+  const buildRight = async (how) => {   /* the end order: its pieces, then the capital if the first piece lacks it */
+    const c = (await R(page)).g.cur, end = c.right[1], order = solve(c, end);
+    for (const i of order) { if (how === 'keys') await page.keyboard.press(String(i + 1)); else await page.click(`[data-act=b-pick][data-arg="${i}"]`, { timeout: 3000 }); }
+    if (end.charAt(0) !== c.tiles[order[0]].text.charAt(0)) { if (how === 'keys') await page.keyboard.press('c'); else await page.click('[data-act=b-cap]', { timeout: 3000 }); }
+    if (how === 'keys') await page.keyboard.press('Enter'); else await page.click('[data-act=b-check]', { timeout: 3000 });
     await page.waitForTimeout(150);
   };
   await buildRight('touch');
@@ -156,7 +157,7 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
     ok('T3 Clause Builder: a miss holds on the item — the right sentence in place, the attempt struck out, Continue', held.miss && held.fix >= 1 && held.given && held.go, JSON.stringify(held));
     ok('T3: …it is still there after 2.6 s, and the clock stood still while it held', (await R(page)).g.hold && t1 === t0);
     { const f = flatness(await shot(page, 'builder-miss-desktop', '.stg')); ok(`T14 Clause Builder miss card (${(f.flat * 100).toFixed(1)}%)`, f.flat <= 0.06 && f.white <= 0.02 && f.black <= 0.02); }
-    await page.click('[data-act=miss-go]'); await page.waitForTimeout(150);
+    if (await page.$('[data-act=miss-go]')) await page.click('[data-act=miss-go]'); await page.waitForTimeout(150);
     ok('T3: Continue clears the board for the next sentence', await page.evaluate(() => !document.querySelector('.miss') && !window.__bz.S.run.g.hold && window.__bz.S.run.g.picks.length === 0)); }
 
   /* T4: a hidden tab stops the clock; real time under a 4× CPU throttle */
@@ -170,11 +171,13 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
     const t0 = (await R(page)).g.t, w0 = Date.now(); await page.waitForTimeout(6000); const t1 = (await R(page)).g.t, w1 = Date.now();
     await cdp.send('Emulation.setCPUThrottlingRate', { rate: 1 });
     const drift = Math.abs((t1 - t0) - (w1 - w0)) / (w1 - w0);
-    ok(`T4: under a 4× CPU throttle the clock keeps real time ± 3% (${(drift * 100).toFixed(1)}%)`, drift <= 0.03 || (t1 === 60000 && t0 < 60000)); }
+    ok(`T4: under a 4× CPU throttle the clock keeps real time ± 3% (${(drift * 100).toFixed(1)}%)`, drift <= 0.03 && t1 < 60000); }
   await page.evaluate(() => { const g = window.__bz.S.run.g; g.t = 59900; });
   await phase(page, 'between', 6000);
   ok('the round ends and the between screen stands on the stage, coins waiting named', await page.evaluate(() => !!document.querySelector('.stg-between [data-banked]')));
 
+  } catch (e) { ok(`a section crashed: ${e.message.split('\n')[0]}`, false); }
+  try {
   /* Comma Rush: by touch and by keys, and T3 */
   await go(page, '#/play/studio/rush'); await page.waitForSelector('.stg [data-act=game-start]'); await page.click('[data-act=game-start]'); await phase(page, 'play');
   { const g = (await R(page)).g; for (const i of g.cur.commas) await page.click(`[data-act=r-gap][data-arg="${i}"]`); await page.click('[data-act=r-submit]'); await page.waitForTimeout(150); }
@@ -186,8 +189,10 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
     const held = await page.evaluate(() => ({ fix: document.querySelectorAll('.miss ins.miss-fix').length, del: document.querySelectorAll('.miss del.miss-del').length, why: document.querySelector('.miss-why')?.textContent || '' }));
     ok('T3 Comma Rush: a wrong sentence holds with the missed commas in green and the extra one struck out, and the rule', (await R(page)).g.hold && held.fix >= 1 && held.del === 1 && held.why.length > 10, JSON.stringify(held));
     await shot(page, 'rush-miss-desktop', '.stg');
-    await page.keyboard.press('Enter'); await page.waitForTimeout(150); ok('T3: Enter continues', !(await R(page)).g.hold); }
+    if ((await R(page)).g.hold) { await page.keyboard.press('Enter'); await page.waitForTimeout(150); } ok('T3: Enter continues', !(await R(page)).g.hold); }
 
+  } catch (e) { ok(`a section crashed: ${e.message.split('\n')[0]}`, false); }
+  try {
   /* Writer's Craft: Figure Hunt — spot, words, name; glosses hidden until after */
   await go(page, '#/play/craft'); await phase(page, 'hub');
   ok('Writer’s Craft opens its two modes', await page.evaluate(() => [...document.querySelectorAll('.htile')].map((t) => t.dataset.mode).join() === 'figure,duel'));
@@ -207,6 +212,8 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
   ok('Figure Hunt: a hunt and a words step met, played by touch and keys', sawHunt && sawWords && keysUsed);
   ok('Figure Hunt: every item right when every step is', await phase(page, 'between') && (await R(page)).run.right === (await R(page)).run.total);
 
+  } catch (e) { ok(`a section crashed: ${e.message.split('\n')[0]}`, false); }
+  try {
   /* Rhetoric Duel — make it strong: build the line; a wrong build holds with the line in place */
   await go(page, '#/play/craft/duel'); await page.waitForSelector('.stg [data-act=game-start]'); await page.click('[data-act=game-start]'); await phase(page, 'play');
   { let built = 0, missed = false;
@@ -220,7 +227,9 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
       else { for (const i of order) await page.keyboard.press(String(i + 1)); await page.keyboard.press('Enter'); }
       built++; await page.waitForTimeout(200);
     }
-    ok('Rhetoric Duel: lines built by touch and by keys, the device named after', built >= 3 && missed); }
+    ok('Rhetoric Duel: lines built by touch and by keys, the device named after', built >= 3 && missed);
+    ok('the duel’s rival is one of Bee’s, labelled made-up, its points the app’s own', await page.evaluate(() => /made-up rivals/.test(document.querySelector('.gb-rival-note')?.textContent || '') && /the app’s own/.test(document.querySelector('.gb-rival-note')?.textContent || '') && /rivals\/\w+\.webp/.test(document.querySelector('.stg-pod.stg-r img')?.getAttribute('src') || '')) || (await R(page)).phase !== 'play'); }
+  } catch (e) { ok(`a section crashed: ${e.message.split('\n')[0]}`, false); }
   ok('no page errors (desktop)', !page.errs.length, page.errs.join('; '));
   await ctx.close();
 }

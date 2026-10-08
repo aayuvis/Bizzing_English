@@ -38,7 +38,7 @@ html[data-bz-dark] .stg {
 .stg-track .gb-pips { flex: none; justify-content: center; padding: 6px 12px; border-radius: 999px; background: var(--stg-glass); }
 
 /* the play: centred, and the largest thing on the stage */
-.stg-main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; overflow: auto; text-align: center; padding: 2px; }
+.stg-main { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; justify-content: center; justify-content: safe center; align-items: center; gap: 10px; overflow: auto; text-align: center; padding: 2px; }
 .stg-main > * { width: min(100%, 780px); margin: 0; flex: none; }
 .stg-main > .prompt, .stg-main > .subp, .stg-main > .note { width: auto; max-width: min(100%, 780px); padding: 5px 14px; border-radius: 999px; background: var(--stg-glass); color: var(--stg-glass-ink); font: 650 15px/1.35 var(--bz-body); }
 .stg-main > .subp { font-size: 13px; font-weight: 600; }
@@ -163,3 +163,5 @@ html.bz-playing .scene * { animation-play-state: paused !important; }
   .stg .opt { min-height: 46px; font-size: 15.5px; padding: 8px 12px; }
   .stg .finish img { width: 60px; height: 60px; }
 }
+.stg-main > .gb-rival-note { font-size: 11.5px; font-weight: 500; opacity: .92; border-radius: 12px; }
+.gb-rvline { font-weight: 800; color: #ffd08a; }

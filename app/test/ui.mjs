@@ -182,67 +182,14 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const KID = () => page.evaluate(() => { const h = window.__bz.S.h; return JSON.parse(JSON.stringify(h.kids.find((k) => k.id === h.active).games)); });
   const phase = async (want, ms = 4000) => { for (let t = 0; t < ms; t += 100) { if ((await G()).phase === want) return true; await page.waitForTimeout(100); } return false; };
   const titleReady = () => page.waitForFunction(() => /new to you/.test(document.querySelector('[data-mem]')?.textContent || ''), null, { timeout: 15000 });
-  await go(page, '#/play/builder'); await titleReady();
+  /* Sentence Studio and Writer's Craft (the old Sentence Builder, Punctuation Rush, Figure Hunt and Rhetoric Duel boards) are
+     checked in test/games-ui.mjs on their new stage: chips, holds, pay, the hidden-tab pause, symmetry, phone fit. */
+  await go(page, '#/play/who'); await titleReady();
   ok('a game with no Challenge bought shows its printed price, held back when the wallet is short', await page.evaluate(() => { const b = document.querySelector('[data-act=game-mode-buy]'); return !!b && /150 coins/.test(b.textContent) && b.disabled; }));
-  await page.evaluate(() => { const h = window.__bz.S.h, k = h.kids.find((x) => x.id === h.active); k.modes = ['challenge-builder']; window.__bz.render(); });
+  await page.evaluate(() => { const h = window.__bz.S.h, k = h.kids.find((x) => x.id === h.active); k.modes = ['challenge-who']; window.__bz.render(); });
   await page.click('[data-act=game-challenge]'); await phase('play');
   ok('a bought Challenge starts at the final straight away, and is marked a challenge', await page.evaluate(() => { const r = window.__bz.S.run; return r.challenge === true && r.run.round === 3 && r.phase === 'play'; }));
-  await go(page, '#/play'); await go(page, '#/play/builder'); await titleReady();
-  ok('the title card shows the level map: five levels with stars, the ones not reached locked', await page.evaluate(() => { const l = [...document.querySelectorAll('.gb-map .gb-lv')]; return l.length === 5 && l[0].classList.contains('on') && l.slice(1).every((b) => b.disabled) && l.every((b) => b.querySelectorAll('.gb-stars i').length === 3); }));
-  ok('the title card says what is new: "N new to you · M to win back · pool P"', /\d+ new to you · \d+ to win back · pool \d+/.test(await page.$eval('[data-mem]', (e) => e.textContent)));
-  await page.click('[data-act=game-start]');
-  ok('a game is played on a board: plate, frame, track, avatar, Quill and the round', await page.evaluate(() => { const b = document.querySelector('.gboard'); return !!b && /url\(/.test(b.style.getPropertyValue('--plate')) && !!b.querySelector('.gb-frame') && !!b.querySelector('.gb-time') && !!b.querySelector('.gb-ava') && !!b.querySelector('.gb-quill') && /Level \d/.test(b.textContent) && /Round 1 of 3/.test(b.querySelector('.gb-round').textContent); }));
-  const play = async (how) => { const t = await page.evaluate(() => window.__bz.S.run.g.cur.tiles.map((x) => x.k)); for (const k of ['sub', 'dep', 'main']) { const i = t.indexOf(k); if (how === 'keys') await page.keyboard.press(String(i + 1)); else await page.click(`[data-act=b-pick][data-arg="${i}"]`); } await page.waitForTimeout(120); };
-  await play('touch');
-  ok('a right answer moves: the frame pops and "+N" flies up', await page.evaluate(() => !!document.querySelector('.gb-frame.gb-ok') && !!document.querySelector('.gb-fly')));
-  await play('keys');
-  ok('Sentence Builder plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.built === 2));
-  await page.evaluate(() => { const r = window.__bz.S.run; r.g = { ...r.g, t: 59900 }; });
-  ok('Sentence Builder: when the clock ends the round, the run goes on to round 2', await phase('between') && /Round 1 done/.test(await page.$eval('.gb-between', (e) => e.textContent)) && /new to you/.test(await page.$eval('.gb-between', (e) => e.textContent)));
-  ok('…and the items met are remembered for next time', await KID().then((g) => g.builder.rounds === 1 && Object.keys(g.builder.seen).length >= 3));
-  await page.keyboard.press('Enter');
-  ok('Enter starts round 2', await phase('play') && /Round 2 of 3/.test(await page.$eval('.gb-round', (e) => e.textContent)));
-  await go(page, '#/play/rush'); await titleReady(); await page.click('[data-act=game-start]'); await phase('play');
-  const commas = await page.evaluate(() => window.__bz.S.run.g.cur.commas);
-  for (const i of commas) await page.click(`[data-act=r-gap][data-arg="${i}"]`); await page.keyboard.press('Enter'); await page.waitForTimeout(150);
-  const c2 = await page.evaluate(() => window.__bz.S.run.g.cur.commas);
-  await page.keyboard.press('ArrowRight'); for (let k = 0; k < 40; k++) { const cur = await page.evaluate(() => window.__bz.S.run.g.cursor); if (cur === c2[0]) break; await page.keyboard.press(cur < c2[0] ? 'ArrowRight' : 'ArrowLeft'); }
-  for (const [j, i] of c2.entries()) { if (j) for (let k = 0; k < 40; k++) { const cur = await page.evaluate(() => window.__bz.S.run.g.cursor); if (cur === i) break; await page.keyboard.press('ArrowRight'); } await page.keyboard.press(' '); }
-  await page.keyboard.press('Enter'); await page.waitForTimeout(150);
-  ok('Punctuation Rush plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.clean === 2));
-  await page.evaluate(() => { const r = window.__bz.S.run; r.g = { ...r.g, t: 59900 }; });
-  ok('Punctuation Rush: a round ends into the run', await phase('between'));
-
-  /* Figure Hunt at level 3: a line, then a passage hunt — tap the sentence, then name the figure; a wrong spot holds */
-  await go(page, '#/play/figure'); await titleReady(); await page.click('[data-act=game-start]'); await phase('play');
-  ok('an untimed game shows one pip per item', await page.evaluate(() => document.querySelectorAll('.gb-pips .pip').length === window.__bz.S.run.g.rounds.length));
-  let fq = (await G()).q; await page.click(`[data-act=q-pick][data-arg="${fq.answer}"]`); await page.waitForTimeout(1300);
-  fq = (await G()).q; await page.keyboard.press(String(fq.answer + 1)); await page.waitForTimeout(200);
-  ok('Figure Hunt plays by touch and by keys', (await G()).score === 2);
-  await page.waitForTimeout(1200); fq = (await G()).q; await page.keyboard.press(String(((fq.answer + 1) % fq.options.length) + 1)); await page.waitForTimeout(200);
-  ok('a wrong answer shakes, holds and explains on the item', await page.evaluate(() => !!document.querySelector('.gb-frame.gb-no') && !!document.querySelector('.feedback.no [data-act=q-next]')));
-  await page.waitForTimeout(1500); ok('…and is still held a moment later', await page.evaluate(() => !!window.__bz.S.run.g.state && !window.__bz.S.run.g.state.ok));
-  await page.keyboard.press('Enter'); await page.waitForTimeout(150); ok('Enter dismisses it', await page.evaluate(() => !window.__bz.S.run.g.state));
-  await page.evaluate(() => { const h = window.__bz.S.h, k = h.kids.find((x) => x.id === h.active); k.games.figure = { ...k.games.figure, level: 3, top: 3 }; });
-  await go(page, '#/play/plot'); await go(page, '#/play/figure'); await titleReady();
-  ok('a level reached opens on the map', await page.evaluate(() => [...document.querySelectorAll('.gb-map .gb-lv')].filter((b) => !b.disabled).length === 3));
-  await page.click('[data-act=game-start]'); await phase('play', 15000);
-  let hunts = 0, wrongSpot = false;
-  for (let k = 0; k < 12 && (await G()).phase === 'play'; k++) {
-    const s = await G(), q = s.q;
-    if (q.hunt && !s.found && !s.spot) {
-      hunts++;
-      if (hunts === 1) { await page.click(`[data-act=fig-spot][data-arg="${q.at}"]`); await page.waitForTimeout(150); ok('the passage hunt: a tap on the sentence that holds the figure lights it and asks for its name', await page.evaluate(() => !!document.querySelector('.gb-sent.right') && window.__bz.S.run.g.found === true && document.querySelectorAll('[data-act=q-pick]').length === 4)); }
-      else { await page.keyboard.press(String(((q.at + 1) % q.sentences.length) + 1)); await page.waitForTimeout(150); wrongSpot = await page.evaluate(() => !!document.querySelector('.gb-sent.wrong') && !!document.querySelector('.gb-sent.right') && !window.__bz.S.run.g.found); await page.keyboard.press('Enter'); await page.waitForTimeout(150); }
-      continue;
-    }
-    if (s.state && !s.state.ok) { await page.keyboard.press('Enter'); await page.waitForTimeout(150); continue; }
-    if (s.state) { await page.waitForTimeout(400); continue; }
-    await page.keyboard.press(String(q.answer + 1)); await page.waitForTimeout(1250);
-  }
-  ok(`Figure Hunt level 3 hunts in passages (${hunts} this round)`, hunts >= 2);
-  ok('the passage hunt by keys: a wrong sentence holds and shows the right one; Enter goes on to naming', wrongSpot);
-  ok('Figure Hunt: the round ends into the run', await phase('between'));
+  await go(page, '#/play');
 
   /* Who Said It? — the Detective: a clue costs a point (3 → 2 → 1), by touch and by the C key */
   await go(page, '#/play/who'); await titleReady(); await page.click('[data-act=game-start]'); await phase('play');
@@ -290,27 +237,6 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await page.evaluate(() => { window.__bz.S.run.run.round = 3; }); await page.click('[data-act=game-round]'); await page.waitForSelector('.gb-family', { timeout: 15000 });
   ok('Root Forge’s final forges a family: three words from one base', await page.evaluate(() => { const g = window.__bz.S.run.g; return /Forge a family/.test(document.querySelector('.gb-family').textContent) && g.rounds.length === 6 && g.rounds.slice(0, 3).every((q) => q.base === g.rounds[0].base); }));
 
-  /* Rhetoric Duel: against one of Bee's rivals, best of five — stronger version, then the reason, by touch and by keys */
-  await go(page, '#/play/duel'); await titleReady(); await page.click('[data-act=game-start]'); await phase('play');
-  ok('the duel’s rival is one of Bee’s, with the score of the duel, labelled as the app’s own', await page.evaluate(() => { const r = document.querySelector('.gb-rival'); return !!r && /rivals\/\w+\.webp/.test(r.querySelector('img').getAttribute('src')) && /You 0 · \w+ 0/.test(r.textContent) && /made-up rivals/.test(r.textContent) && /the app’s own/.test(r.textContent); }));
-  let dq = (await G()).q; await page.click(`[data-act=du-pick][data-arg="${dq.strong}"]`); await page.waitForTimeout(150);
-  ok('Rhetoric Duel names the original and labels the plain version as written for the game', await page.evaluate(() => /The original/.test(document.querySelector('.gb-duel').textContent) && /written for this game/.test(document.querySelector('.gb-duel').textContent)));
-  await page.click(`[data-act=q-pick][data-arg="${dq.answer}"]`); await page.waitForTimeout(200);
-  ok('after the reason, the rival’s line is shown too', await page.evaluate(() => /got this reason|missed this one/.test(document.querySelector('.gb-rvline')?.textContent || '')));
-  await page.waitForTimeout(1200);
-  dq = (await G()).q; await page.keyboard.press(String(dq.strong + 1)); await page.waitForTimeout(150); await page.keyboard.press(String(dq.answer + 1)); await page.waitForTimeout(250);
-  ok('Rhetoric Duel plays by touch and by keys', await page.evaluate(() => window.__bz.S.run.g.score >= 2 && window.__bz.S.run.g.strongRight === 2 && /You 2 ·/.test(document.querySelector('.gb-rival').textContent)));
-  for (let k = 0; k < 8 && (await G()).phase === 'play'; k++) { await page.waitForTimeout(1200); const s = await G(); if (s.phase !== 'play') break; await page.keyboard.press(String(s.q.strong + 1)); await page.waitForTimeout(100); await page.keyboard.press(String(s.q.answer + 1)); await page.waitForTimeout(150); }
-  ok('a duel ends with its result against the rival', await phase('between') && /won the duel|won this one|A draw/.test(await page.$eval('.gb-between', (e) => e.textContent)));
-  /* the final: the strongest rival of the field; then the finish */
-  await page.evaluate(() => { window.__bz.S.run.run.round = 3; }); await page.click('[data-act=game-round]'); await phase('play');
-  ok('the final is marked, against the strongest rival in the field', await page.evaluate(() => !!document.querySelector('.gboard.gb-final') && /Final/.test(document.querySelector('.gb-round').textContent) && window.__bz.S.run.g.rival?.id));
-  for (let k = 0; k < 30 && (await G()).phase === 'play'; k++) { const s = await G(); if (s.state && !s.state.ok) { await page.keyboard.press('Enter'); await page.waitForTimeout(150); continue; } if (s.state) { await page.waitForTimeout(400); continue; } await page.keyboard.press(String(s.q.strong + 1)); await page.waitForTimeout(100); await page.keyboard.press(String(((s.q.answer + (k === 0 ? 1 : 0)) % 4) + 1)); await page.waitForTimeout(300); }
-  await phase('done');
-  ok('the finish shows the run’s stars, score, best, accuracy, new items met and the level', await page.evaluate(() => { const t = document.querySelector('.gb-done')?.textContent || ''; return /You practised/.test(t) && /accuracy/.test(t) && /best/.test(t) && /Level \d/.test(t) && /new items met/.test(t) && document.querySelectorAll('.gb-done .gb-stars i').length === 3; }));
-  const nx = await page.evaluate(() => document.querySelector('.gb-done [data-next]')?.getAttribute('href'));
-  ok('the finish names one next step: the stop that teaches what was missed', nx === '#/stop/la7-devices' || nx === '#/stop/la7-antithesis', nx);
-  ok('the level, the stars and the memory are kept per game', await KID().then((g) => g.duel.level >= 1 && g.duel.stars?.[1] >= 1 && g.duel.rounds === 2 && Object.keys(g.duel.seen).length >= 5 && g.duel.plays === 2 && g.duel.runs === 1));
   /* by touch on a phone: a Plot Line story tapped in order; nothing scrolls sideways */
   { const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Ivo', '8–10'); await go(P.page, '#/play/plot');
     await P.page.waitForFunction(() => /new to you/.test(document.querySelector('[data-mem]')?.textContent || ''), null, { timeout: 15000 });
