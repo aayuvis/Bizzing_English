@@ -14,7 +14,7 @@
    Quotes & Poems is English's own: held, checked lines only (Bee's quotes are unsourced and never imported). */
 
 import { permute, rng, shuffle } from './rand.js';
-import { kidSafe, lineSafe } from './safe.js';
+import { kidSafe, lineSafe, defSafe, BLOCK } from './safe.js';
 
 export const BEE_COMMIT = '2f74e99d76723aca80040ccf549c933c38a2cd47';
 
@@ -202,25 +202,76 @@ export const TY_FINGER = { q: 'p', a: 'p', z: 'p', w: 'r', s: 'r', x: 'r', e: 'm
 export const TY_FCOLOR = { p: '#E8458C', r: '#F0A82A', m: '#13A892', i: '#3D7DF0', I: '#7B52E0', M: '#13A892', R: '#F0A82A', P: '#E8458C' };
 export const TY_ROWS = ['qwertyuiop', 'asdfghjkl;', 'zxcvbnm,.'];
 export const TEST_SECS = 60;
+export const TY_PASS = 90;                                   // a lesson pays only at 90% accuracy or better (HANDOVER C §1.3, §4.4)
 export const tyClean = (t) => String(t || '').replace(/[‘’]/g, "'").replace(/[“”"]/g, '').replace(/[^a-zA-Z ,.;']/g, ' ').replace(/\s+/g, ' ').trim();
-/* the words a drill may use: Bee's lexicon at the child's band, plain letters, nine or fewer */
+
+/* THE POOLS ARE CURATED (§1.2, §4.4). A Bee word reaches a drill only when it is kid-safe (safe.js), a real
+   word of English's own clean corpus — it appears, in lower case, in a passage the Library holds (so a
+   fragment, an abbreviation or a name never does: "col", "doc", "Mrs") — long enough for its band, and not
+   on the purge list below. The purge list is kept here so it stays purged when Bee's lexicon is
+   re-imported: junk fragments, and old or double-meaning words that read wrongly on their own (period
+   language stays in the stories, in context, never in a typing drill). */
+export const TY_PURGE = new Set(('col doc wont mrs ben bob ken meg gay oft ere wee thee thou thy hath doth nay aye ye tis twas ' +
+  'ads app atm cos cox dec der des gen jan les mac max non pic pre rep rev rex sam ted cps gis hrs ids rpm sos yrs ver vis mer mon mos dat ars alt lac roc sic wen tor ems dal pap').split(' '));
+export const TY_MIN = { 1: 3, 2: 3, 3: 4 };
+/* the corpus: every word that appears in lower case in the held passages (texts: strings) */
+export function tyCorpus(texts) {
+  const c = new Set();
+  for (const t of texts) for (const w of String(t || '').replace(/[’]/g, "'").split(/[^A-Za-z']+/)) if (w && /^[a-z]+$/.test(w)) c.add(w);
+  return c;
+}
+/* the words a drill may use: Bee's lexicon at the child's band, plain letters, nine or fewer, curated as above */
 const BAND_Y = { 1: [1, 1], 2: [1, 2], 3: [2, 4] };
-export function tyWords(lex, band) { const [lo, hi] = BAND_Y[band] || BAND_Y[2]; return Object.entries(lex?.words || {}).filter(([w, r]) => /^[a-z]+$/.test(w) && w.length <= 9 && r[3] >= lo && r[3] <= hi && kidSafe(w, r[0])).map(([w, r]) => ({ w, d: r[0] })); }
-/* Bee's tySeqFor, with English's held sentences for the sentence drill. */
-export function tySeqFor(l, { lex, band = 2, sentences = [], seed = 'x' } = {}) {
+const memo = new WeakMap();   // a pool is drawn many times: each is worked out once per lexicon (or deck list), band and corpus
+const memoOf = (o, key, f) => { if (!o || typeof o !== 'object') return f(); let m = memo.get(o); if (!m) memo.set(o, (m = new Map())); if (!m.has(key)) m.set(key, f()); return m.get(key); };
+const corpusIds = new WeakMap(); let corpusN = 0; const cid = (c) => (c ? corpusIds.get(c) || (corpusIds.set(c, ++corpusN), corpusN) : 0);
+export function tyWords(lex, band, corpus) { return memoOf(lex, `w:${band}:${cid(corpus)}`, () => tyWordsOf(lex, band, corpus)); }
+function tyWordsOf(lex, band, corpus) {
+  const [lo, hi] = BAND_Y[band] || BAND_Y[2], min = TY_MIN[band] || 3;
+  return Object.entries(lex?.words || {}).filter(([w, r]) => /^[a-z]+$/.test(w) && w.length >= min && w.length <= 9 && r[3] >= lo && r[3] <= hi && !TY_PURGE.has(w)
+    && (!corpus || corpus.has(w)) && kidSafe(w, r[0])).map(([w, r]) => ({ w, d: r[0] }));
+}
+/* every word of a meaning a child types passes the headword list too ("usually drunk hot", "to retard growth" are not typed) */
+const wordsSafe = (d) => lineSafe(d) && !String(d).toLowerCase().split(/[^a-z]+/).some((w) => w && BLOCK.test(w));
+/* "Type the meaning" uses English's own vocabulary decks (vocDecks: plain, kid-safe meanings), never raw dictionary text */
+const MEAN_DECKS = { 1: ['easy'], 2: ['easy', 'medium', 'vocab26'], 3: ['medium', 'hard', 'vocab26', 'nsf500'] };
+export function tyMeanings(decks, band) { return memoOf(decks, `m:${band}`, () => tyMeaningsOf(decks, band)); }
+function tyMeaningsOf(decks, band) {
+  const ids = MEAN_DECKS[band] || MEAN_DECKS[2], seen = new Set(), out = [];
+  for (const d of decks || []) if (ids.includes(d.id)) for (const e of d.words) {
+    if (seen.has(e.w) || !/^[a-z]+$/.test(e.w) || TY_PURGE.has(e.w) || e.d.length < 20 || e.d.length > 110 || !defSafe(`${e.w} ${e.d}`) || !kidSafe(e.w, e.d) || !wordsSafe(`${e.w} ${e.d}`)) continue;
+    seen.add(e.w); out.push({ w: e.w, d: e.d });
+  }
+  return out;
+}
+/* Bee's tySeqFor, with English's held sentences for the sentence drill and its own decks for the meanings. */
+export function tySeqFor(l, { lex, band = 2, sentences = [], seed = 'x', corpus, decks } = {}) {
   if (!l.dyn) return l.seq;
   const r = rng(`ty:${l.id}:${seed}`);
   if (l.dyn === 'sent') { const picked = shuffle(r, sentences.map(tyClean).filter((x) => x.length >= 25 && x.length <= 130 && lineSafe(x))).slice(0, 2); if (picked.length) return picked.join(' '); }
-  const ws = tyWords(lex, band);
-  if (l.dyn === 'mean') { const picked = shuffle(r, ws.filter((w) => w.d.length >= 20 && w.d.length <= 110 && plainDef(w.w, w.d))).slice(0, 2).map((w) => tyClean(w.w + ', ' + w.d)); if (picked.length) return picked.join('. ') + '.'; }
-  return shuffle(r, ws).slice(0, 8).map((w) => w.w).join(' ') || 'bee hive honey spell word queen';
+  if (l.dyn === 'mean') { const picked = shuffle(r, tyMeanings(decks, band)).slice(0, 2).map((w) => tyClean(w.w + ', ' + w.d)); if (picked.length) return picked.join('. ') + '.'; }
+  return shuffle(r, tyWords(lex, band, corpus)).slice(0, 8).map((w) => w.w).join(' ') || 'bee hive honey spell word queen';
 }
-export function tyTestSeq(lex, band, seed) { return shuffle(rng(`tytest:${seed}`), tyWords(lex, band).filter((w) => w.w.length <= 10)).slice(0, 90).map((w) => w.w).join(' ') || 'the quick brown fox jumps over the lazy dog'; }
+export function tyTestSeq(lex, band, seed, corpus) { return shuffle(rng(`tytest:${seed}`), tyWords(lex, band, corpus)).slice(0, 90).map((w) => w.w).join(' ') || 'the quick brown fox jumps over the lazy dog'; }
 /* Bee's tyFinish maths: a word is five keystrokes; only correct keystrokes count towards speed. */
 export function typingScore({ typed, errors, ms }) {
   const mins = Math.max(0.05, ms / 60000), correct = Math.max(0, typed - errors);
   return { wpm: Math.max(0, Math.round(correct / 5 / mins)), acc: typed ? Math.round((correct / typed) * 100) : 0 };
 }
+/* A lesson pays once, and only at TY_PASS or better: finishing at any accuracy earns nothing. */
+export const tyPays = (st, lesson, acc) => acc >= TY_PASS && !st?.paid?.[lesson];
+/* What a lesson or test practised, for the finish: the keys it used and the words with a slip in them. */
+export function tyPractised(seq, marks = [], upTo = seq.length) {
+  const keys = [...new Set([...seq.toLowerCase()].filter((c) => c !== ' '))].sort((a, b) => TY_ROWS.join('').indexOf(a) - TY_ROWS.join('').indexOf(b));
+  const missed = []; let at = 0;
+  for (const w of seq.split(' ')) { if (at < upTo && w && [...w].some((_, i) => at + i < upTo && marks[at + i] === false)) { const c = w.replace(/[^A-Za-z']/g, ''); if (c && !missed.includes(c)) missed.push(c); } at += w.length + 1; }
+  return { keys, missed };
+}
+/* The clock, with the time the tab was hidden taken out: `paused` is when it was hidden, `pausedMs` the total. */
+export const tyElapsed = (t, now = Date.now()) => (t.startT ? Math.max(0, (t.paused || now) - t.startT - (t.pausedMs || 0)) : 0);
+export const tyTimeLeft = (t, now = Date.now()) => Math.max(0, TEST_SECS - Math.floor(tyElapsed(t, now) / 1000));
+export function tyPause(t, now = Date.now()) { if (t.startT && !t.paused && !t.done) t.paused = now; return t; }
+export function tyResume(t, now = Date.now()) { if (t.paused) { t.pausedMs = (t.pausedMs || 0) + (now - t.paused); t.paused = 0; } return t; }
 export function tyStats(k) { const g = (k.games ||= {}); const t = (g.typing ||= { bestWpm: 0, bestAcc: 0, tests: 0, lessons: {}, paid: {} }); t.lessons ||= {}; t.paid ||= {}; return t; }
 
 /* ---------- Quotes & Poems: English's held lines only ---------- */

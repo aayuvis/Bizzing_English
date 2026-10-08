@@ -2,7 +2,7 @@
 """process.py — size the raw paintings for the app (look at every one in raw/ first).
 
     python3 tools/art/process.py --all
-    python3 tools/art/process.py --avatars | --mascot | --worlds | --medals | --icon | --tools
+    python3 tools/art/process.py --avatars | --mascot | --worlds | --medals | --icon | --tools | --inkwell
 
 Avatars and mascot poses are keyed off their flat magenta ground to alpha (Bizzing Maths'
 keying, after Bee's champions-pack.py), trimmed and centred. The key fails LOUDLY on a ghost:
@@ -152,6 +152,53 @@ def tools():
     print(f'tools: {t // 1024} KB')
 
 
+# ── INKWELL ── Inkwell Detective (gen.py INKWELL section) → app/public/art/inkwell/
+def save_under(im, path, cap=200 * 1024, q=80):
+    """WebP at the highest quality that keeps the file under `cap` (the case budget: Part 10.6)."""
+    while True:
+        n = save(im, path, q)
+        if n <= cap or q <= 50: return n
+        q -= 4
+
+
+def cast_cut(src, W=600, H=800, fill=0.92):
+    """A cast member: keyed like the avatars, then set on ONE canvas for everyone — the figure's height scaled to
+    `fill` of the canvas, its bottom on the bottom edge, centred — so every character and every expression stands at
+    the same size, head at the same height, as they are composited over changing plates."""
+    im = key(src)
+    s = min(H * fill / im.height, W * 0.98 / im.width)
+    im = im.resize((max(1, round(im.width * s)), max(1, round(im.height * s))), Image.LANCZOS)
+    c = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    c.paste(im, ((W - im.width) // 2, H - im.height), im)
+    return c
+
+
+def inkwell():
+    out = os.path.join(PUB, 'art', 'inkwell'); os.makedirs(os.path.join(out, 'cast'), exist_ok=True)
+    t = 0; n = 0
+    for f in sorted(os.listdir(RAW)):
+        if not (f.startswith('ink-') and f.endswith('.png')): continue
+        name = f[4:-4]; src = os.path.join(RAW, f)
+        if name.startswith(('obj-', 'emb-', 'ui-')):
+            t += save(square(key(src), 320), os.path.join(out, name + '.webp'), 86)
+        elif name.startswith('quill-'):
+            t += save(square(key(src), 400, 1.02), os.path.join(out, name + '.webp'), 86)
+        elif name.startswith('cast-'):
+            animal = name[5:].split('-')[0] in ('biscuit', 'admiral', 'encore', 'semicolon', 'cat')   # creatures sit smaller
+            t += save(cast_cut(src, fill=0.55 if animal else 0.92), os.path.join(out, 'cast', name[5:] + '.webp'), 84)
+        elif name.startswith('mat-'):
+            im = Image.open(src).convert('RGB'); w = 1600 if name in ('mat-cork', 'mat-desk') else 960
+            inset = {'mat-letter': 0.055, 'mat-notice': 0.03}.get(name, 0)   # the model left the sheet's edge showing: trim it off
+            if inset: im = im.crop((round(im.width * inset), round(im.height * inset), round(im.width * (1 - inset)), round(im.height * (1 - inset))))
+            t += save_under(im.resize((w, round(im.height * w / im.width)), Image.LANCZOS), os.path.join(out, name + '.webp'), q=78)
+        else:                                            # plates: 1600 for desktop, 720 for the phone (Part 10.6)
+            im = Image.open(src).convert('RGB')
+            t += save_under(im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS), os.path.join(out, name + '.webp'))
+            t += save_under(im.resize((720, round(im.height * 720 / im.width)), Image.LANCZOS), os.path.join(out, name + '-720.webp'), 90 * 1024, 76)
+        n += 1
+    print(f'inkwell: {n} paintings, {t // 1024} KB')
+
+
 a = sys.argv
 if '--all' in a or '--avatars' in a: avatars()
 if '--all' in a or '--mascot' in a: mascot()
@@ -161,5 +208,6 @@ if '--all' in a or '--icon' in a: icon()
 if '--all' in a or '--atlas' in a: atlas()
 if '--all' in a or '--stories' in a: stories()
 if '--all' in a or '--tools' in a: tools()
+if '--all' in a or '--inkwell' in a: inkwell()
 if GHOSTS:
     print('REPAINT — the key failed on:\n  ' + '\n  '.join(GHOSTS)); sys.exit(1)

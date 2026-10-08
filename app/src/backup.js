@@ -3,7 +3,8 @@
    in the file (restore asks for it again), and nothing spoken is ever stored, so none can leak. */
 
 export const KID_FIELDS = ['id', 'band', 'avatar', 'created', 'owned', 'worlds', 'world', 'stops', 'mastery', 'misses', 'bank', 'reading', 'book',
-  'medals', 'seen', 'games', 'stage', 'contests', 'extras', 'copy', 'days', 'targets', 'prefs', 'milestones', 'feed', 'place', 'modes', 'certsSeen'];
+  'medals', 'seen', 'games', 'stage', 'contests', 'extras', 'copy', 'days', 'targets', 'prefs', 'milestones', 'feed', 'place', 'modes', 'certsSeen',
+  'inkwell'];   // Inkwell Detective progress (cases, casebook, Word Hoard); never k.inkwellName, the persona's typed name
 export const PARENT_FIELDS = ['plan'];
 
 export function makeBackup(h) {

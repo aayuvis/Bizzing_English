@@ -127,7 +127,7 @@ ok('straight after the welcome, the start is what the check showed', k5.place.wo
 
 /* 7. the store and the backup */
 const old = migrate({ v: 2, parent: { plan: 'free' }, kids: [{ id: 'a', stops: {}, reading: {}, writing: {} }] });
-ok('store v2 → v3 gives every child an empty place', VERSION === 3 && old.v === 3 && old.kids[0].place === null);
+ok('store v2 → v3 gives every child an empty place', VERSION >= 3 && old.v === VERSION && old.kids[0].place === null);
 ok('a backup carries the place (progress, not a name)', KID_FIELDS.includes('place') && makeBackup({ v: 3, parent: {}, kids: [k3] }).kids[0].place.word === 4);
 ok('a new child has no place until the check is taken', newKid('Z', 2, 'x').place === null);
 

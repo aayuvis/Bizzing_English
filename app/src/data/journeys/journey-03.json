@@ -1,0 +1,2097 @@
+{
+  "format": 1.3,
+  "kind": "journey",
+  "id": "journey-03",
+  "number": 103,
+  "title": "The Letter That Never Came",
+  "label": "A Bizzing mystery",
+  "level": 4,
+  "world": "verona",
+  "setting": "Romeo and Juliet: Will's room in London, about 1595, and Verona",
+  "skills": [
+    "sequence",
+    "inference",
+    "contradiction",
+    "voice",
+    "figurative"
+  ],
+  "vanishedWord": null,
+  "ledgerIndex": null,
+  "officeObject": null,
+  "souvenir": {
+    "id": "wills-quill",
+    "name": "Will's quill, a goose-feather pen"
+  },
+  "companion": "felix",
+  "judge": "prince",
+  "badge": "katha-notes",
+  "after": "case-07",
+  "sourceText": "William Shakespeare, Romeo and Juliet (about 1595); his source, Arthur Brooke, The Tragicall Historye of Romeus and Juliet (1562)",
+  "grownUps": "This Journey visits a famous sad story. Nothing upsetting is shown.",
+  "arc": [],
+  "tutorial": [],
+  "card": {
+    "text": "London, about 1595. A young playwright called Will is stuck. In his story, a letter never reaches Romeo, and everything goes wrong. Whose fault was it? His company reads the play at noon tomorrow, and his candle is burning down. Step through the Door into Verona, and find out.",
+    "readAloud": true
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The agency, after Case 7",
+      "picture": "The agency, after Case 7. Night. Felix is still holding his speech cards. The painted Door behind the Casebook Wall has a line of candlelight under it. Somewhere, a smell of ink and wax. (Persona sign, per the child's detective: the owl's shadow / the laces / the two crows / the strand of wool / the tab / the single note.)",
+      "lines": [
+        {
+          "who": "QUILL",
+          "text": "Mind the time. A story keeps its own clock."
+        }
+      ]
+    },
+    {
+      "panel": 2,
+      "place": "Through the Door: a cramped London room, about 1595",
+      "picture": "Through the Door: a cramped London room, about 1595. Rain on a small leaded window. One candle with twelve marks scratched down its side. A floor of crumpled pages. A young man with ink to the wrists looks up.",
+      "lines": [
+        {
+          "who": "WILL",
+          "text": "Oh, good. Visitors. Are you real, or am I asleep again?"
+        }
+      ]
+    },
+    {
+      "panel": 3,
+      "place": "Felix sees who it is",
+      "picture": "Felix sees who it is. He sways. He sits down on a stool that is not there. (Will catches him.)",
+      "lines": [
+        {
+          "who": "FELIX",
+          "text": "Footnote: I am fine."
+        }
+      ]
+    },
+    {
+      "panel": 4,
+      "place": "Will holds up a battered printed book",
+      "picture": "Will holds up a battered printed book.",
+      "lines": [
+        {
+          "who": "WILL",
+          "text": "Arthur Brooke's poem. Romeus and Juliet. I'm turning it into a play. And there's a hole in it I can't fill."
+        }
+      ]
+    },
+    {
+      "panel": 5,
+      "place": "The candle flame stretches, and the room becomes a street",
+      "picture": "The candle flame stretches, and the room becomes a street. Verona at night: bells, warm stone, a cat on a wall, lanterns swinging. A notice nailed by the city gate flaps in the wind. Nobody reads it.",
+      "lines": []
+    },
+    {
+      "panel": 6,
+      "place": "Friar Laurence's cell",
+      "picture": "Friar Laurence's cell. Herbs hanging from the beams; jars; a narrow cot; a carved line over the door. A small glass bottle stands on the table. Felix sneezes at the herbs.",
+      "lines": [
+        {
+          "who": "FELIX",
+          "text": "Rosemary. Footnote: for remembrance."
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "friar-john",
+      "name": "Friar John, a Franciscan friar, about 60",
+      "role": "suspect",
+      "look": "Grey habit, rope belt, bare feet in sandals, a letter-shaped bulge in his sleeve",
+      "manner": "Gentle, slow, flustered; answers a question with a sigh first",
+      "note": "Looks to blame: the letter was in his hands and never left Verona; \"detained\" and won't say where. · Secret: he went into a sick house to fetch a brother who was nursing the sick, and was locked in with him; he is ashamed he could not get out, and ashamed he was frightened",
+      "expressions": [
+        "flustered",
+        "ashamed",
+        "calm",
+        "relieved",
+        "sad"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "balthasar",
+      "name": "Balthasar, about 17, Romeo's servant",
+      "role": "suspect",
+      "look": "Riding boots grey with road dust, a cap pulled low, saddle-sore and won't sit down",
+      "manner": "Loyal, quick, blunt; talks while still moving",
+      "note": "Looks to blame: he carried the news that was wrong. · Secret: he rode past Friar Laurence's door without knocking, because the Friar once caught him taking figs from the garden, and he was too embarrassed to face him",
+      "expressions": [
+        "defensive",
+        "embarrassed",
+        "sad",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "capulet",
+      "name": "Lord Capulet, Juliet's father, about 50",
+      "role": "suspect",
+      "look": "Rich black velvet, a heavy gold chain, a list of guests in one fist",
+      "manner": "Loud, generous, quick to decide and quicker to blame anyone else",
+      "note": "Looks to blame: he moved the wedding a day earlier. · Secret: he hurried it because Juliet had been weeping for days and he thought a wedding would cheer her; he had already hired the cooks to surprise her. The one lie: \"It was always to be Wednesday.\"",
+      "expressions": [
+        "jovial",
+        "offended",
+        "flustered",
+        "ashamed",
+        "sad"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "laurence",
+      "name": "Friar Laurence, a Franciscan friar, about 55",
+      "role": "suspect",
+      "look": "Brown habit, herb basket, earth on his hands, spectacles pushed up",
+      "manner": "Wise, kind, a little too sure of his own cleverness",
+      "note": "Looks to blame: it was his plan, and his letter. · Secret: he had the coins to send the letter by a post-rider, but gave them that morning to a family at the gate who had nothing; he never told anyone, and so never told himself why his letter went on foot",
+      "expressions": [
+        "calm",
+        "thoughtful",
+        "stricken",
+        "ashamed",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "chain",
+      "name": "A chain of three links: nobody a villain",
+      "role": "answer",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "will",
+      "name": "Will",
+      "role": "client",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "prince",
+      "name": "Prince Escalus",
+      "role": "helper",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "felix",
+      "name": "Felix Moreno-Lindqvist",
+      "role": "agency",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "J3.1",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Note",
+      "author": "Will (made up for this visit)",
+      "when": "London, a night in about 1595",
+      "where": "pinned to the candle with a pen-knife",
+      "picture": "a torn half-page, ink blots, three crossings-out, a tiny drawing of a candle.",
+      "readAloud": false,
+      "body": "Brooke's poem, 1562. The same hole, page after page.\nThe Friar sends a letter to Romeo in Mantua. [[c:neverarrives|It never arrives.]] Everything after that goes wrong.\nMy audience will ask why. [[c:whosefault|They will ask whose fault it was.]] If I cannot answer, my ending is a cheat.\n[[c:noon|The company reads the play at noon tomorrow.]]\nThis candle has twelve marks, one for each hour. [[c:lastmark|When it burns to the last mark, I must know.]]\nNot one villain. I have tried. Every villain I invent makes it smaller.\n— W."
+    },
+    {
+      "id": "J3.2",
+      "chapter": "scene",
+      "type": "prologue",
+      "title": "Prologue (draft)",
+      "author": "Will; the lines are 📜 the play's own (Prologue, Act 1)",
+      "when": "the same night",
+      "where": "on Will's table under the inkpot",
+      "picture": "a page of fourteen ruled lines, some written, some crossed out, one with a gap.",
+      "readAloud": false,
+      "body": "THE PROLOGUE — spoken by the Chorus\nTwo households, both alike in dignity,\n(In fair Verona, where we lay our scene),\nFrom ancient grudge break to new mutiny,\n…\nA pair of [[c:starcrossd|star-crossed lovers]] …\n…\n[[c:trafficgap|Is now the ________ of our stage;]]\nIn the margin, in Will's hand: [[c:tellsend|The Chorus tells them how it ends before it begins.]] The story ends in sorrow, and the two houses make peace. [[c:watchwhy|So they will watch for WHY, not WHAT.]]",
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.3",
+      "chapter": "scene",
+      "type": "notice",
+      "title": "Notice",
+      "author": "the Prince's searchers (made up for this visit; \"the searchers of the town\" is 📜 the play's phrase, Act 5 Scene 2)",
+      "when": "nailed up this week",
+      "where": "on the Mantua gate, flapping in the wind",
+      "picture": "a rain-spotted sheet with a red wax seal, one corner torn. (No lettering in the painting; the words are live text.)",
+      "readAloud": false,
+      "body": "BY ORDER OF THE PRINCE\nA sickness is in some streets of the city. Be calm, and be careful.\n[[c:searchers|The searchers of the town shall shut up any house where the sickness is suspected.]]\n[[c:noneforth|None may come forth from a shut house, nor go in, until the searchers open it.]]\nLetters and parcels may not be passed from a shut house.\nFood will be brought to the door each morning.\nThe searchers will open each house as soon as all within are found well.\nGod keep Verona.\n— Escalus, Prince"
+    },
+    {
+      "id": "J3.4",
+      "chapter": "scene",
+      "type": "the-friar-s-plan",
+      "title": "The Friar's plan",
+      "author": "Friar Laurence; 📜 the play's own lines (Act 4 Scene 1), cut to L4 length",
+      "when": "Tuesday",
+      "where": "in Will's copy of the scene, the page folded at the corner",
+      "picture": "a prompt-book page; the Friar's speech with a candle-wax drip on it; in the margin, a sketch of the small glass bottle.",
+      "readAloud": false,
+      "body": "FRIAR LAURENCE, to Juliet:\n[[c:wedtomorrow|Wednesday is tomorrow.]]\n[[c:tomorrownight|Tomorrow night look that thou lie alone;]]\n…\n[[c:twoforty|Thou shalt continue two and forty hours]]\nAnd then awake as from a pleasant sleep.\n…\nIn the meantime, against thou shalt awake,\n[[c:myletters|Shall Romeo by my letters know our drift,]]\nAnd hither shall he come …\nWill's note in the margin: [[c:sleeplooks|A sleep so deep that all will think the worst. It is only sleep.]] The wedding to the County is on Thursday. So she drinks on Wednesday night.",
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.5",
+      "chapter": "scene",
+      "type": "day-book",
+      "title": "Day-book",
+      "author": "Friar Laurence (made up for this visit; the carved line is 📜 the play's own, Act 2 Scene 3)",
+      "when": "Tuesday",
+      "where": "open on the Friar's table beside the small glass bottle",
+      "picture": "a small leather day-book, herb stains, a pressed sprig of rosemary; above it, the line carved into the door lintel.",
+      "readAloud": false,
+      "body": "Carved above the door of the cell: [[c:wisely|Wisely and slow. They stumble that run fast.]]\nTuesday. Paris came at noon about Thursday. Then the child herself, in tears.\nI gave her the sleep. She takes it on Wednesday night, before the wedding.\n[[c:friday|By my reckoning she wakes on Friday, in the afternoon.]]\n[[c:vespers|At vespers I gave my letter to Brother John, for Mantua.]] He goes on foot, as our order does.\n[[c:onebrother|One letter, by one brother. Wednesday and Thursday for the road. Time enough.]]\nRomeo will come by night, and I shall be there when she wakes.\nMem.: the poor box is empty again. Gave the last coins at the gate this morning.",
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.6",
+      "chapter": "scene",
+      "type": "scene",
+      "title": "Scene (two days in the Capulet house)",
+      "author": "📜 the play's own lines (Act 3 Scene 4, Monday; Act 4 Scene 2, Tuesday)",
+      "when": "Monday night and Tuesday",
+      "where": "two prompt-book pages pinned together with a pin",
+      "picture": "two pages; on the second, a long list of guests in a different, hurried hand.",
+      "readAloud": false,
+      "body": "MONDAY. CAPULET, to Paris:\n[[c:toosoon|Well, Wednesday is too soon.]]\n[[c:othursday|O' Thursday let it be.]]—O' Thursday, tell her,\nShe shall be married to this noble earl.\nTUESDAY. CAPULET, to his servant:\n[[c:guests|So many guests invite as here are writ.]]\nSirrah, go hire me twenty cunning cooks.\nTUESDAY, LATER. CAPULET:\nSend for the County. Go tell him of this.\n[[c:knotknit|I'll have this knot knit up tomorrow morning.]]\nLADY CAPULET:\n[[c:notthursday|No, not till Thursday. There is time enough.]]\nCAPULET:\nGo, nurse. Go with her. [[c:tochurch|We'll to church tomorrow.]]",
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.7",
+      "chapter": "scene",
+      "type": "gate-book",
+      "title": "Gate book",
+      "author": "Matteo, keeper of the Mantua gate (made up for this visit)",
+      "when": "Tuesday and Wednesday",
+      "where": "on a chain at the gatehouse window",
+      "picture": "a narrow ledger, a ribbon of tally marks, a dried apple core on the sill.",
+      "readAloud": false,
+      "body": "MANTUA GATE — who goes out\nTuesday. Two carts of wool, at dawn. A pedlar with pans.\nTuesday, dusk. Gate shut at the bell, as the Prince orders.\n[[c:nofriar|No friar went out by this gate, Tuesday or Wednesday.]] I would know. They always bless the gate.\n[[c:gatebal|Wednesday, at first light. Balthasar, servant to young Montague, on a post-horse, for Mantua.]]\n[[c:wouldnotwait|He would not wait for the fresh saddle.]] Paid double. Gone like a hare.\nWednesday, noon. Nobody. Too hot.\n— Matteo, his mark",
+      "unlockedBy": "balthasar-q1"
+    },
+    {
+      "id": "J3.8",
+      "chapter": "scene",
+      "type": "scene",
+      "title": "Scene (Mantua)",
+      "author": "📜 the play's own lines (Act 5 Scene 1)",
+      "when": "Wednesday",
+      "where": "a prompt-book page; Will has drawn a box round two lines",
+      "picture": "a Mantua street at noon; an empty hand held out.",
+      "readAloud": false,
+      "body": "ROMEO, alone:\n[[c:dreams|If I may trust the flattering truth of sleep,]]\nMy dreams presage some joyful news at hand.\nEnter BALTHASAR.\nROMEO:\nNews from Verona!—How now, Balthasar?\n[[c:dostthou|Dost thou not bring me letters from the Friar?]]\nBALTHASAR, telling what he saw:\n… [[c:tookpost|And presently took post to tell it you]] …\nROMEO:\n[[c:hastthou|Hast thou no letters to me from the Friar?]]\nBALTHASAR:\n[[c:nomylord|No, my good lord.]]\nWill's note in the margin: [[c:twiceasks|He asks for the letter twice.]] Nobody in the whole play answers him.",
+      "unlockedBy": "balthasar-q1",
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.9",
+      "chapter": "scene",
+      "type": "scene",
+      "title": "Scene (the friary)",
+      "author": "📜 the play's own lines (Act 5 Scene 2)",
+      "when": "the friary, after the searchers open the house",
+      "where": "Will's prompt-book page, a candle drip on \"Unhappy fortune\"",
+      "picture": "two friars in a stone doorway, one holding out a sealed letter.",
+      "readAloud": false,
+      "body": "FRIAR JOHN:\nGoing to find a barefoot brother out,\nOne of our order, to associate me,\nHere in this city visiting the sick,\nAnd finding him, the searchers of the town,\nSuspecting that we both were in a house\nWhere the infectious pestilence did reign,\n[[c:sealed|Sealed up the doors and would not let us forth,]]\nSo that my speed to Mantua there was stayed.\nFRIAR LAURENCE: Who bare my letter, then, to Romeo?\nFRIAR JOHN: [[c:couldnotsend|I could not send it—here it is again—]]\nNor get a messenger to bring it thee,\nSo fearful were they of infection.\nFRIAR LAURENCE: Unhappy fortune! …\n[[c:writeagain|But I will write again to Mantua,]]\nAnd keep her at my cell till Romeo come.",
+      "arrivesInChapter": 4,
+      "quoted": {
+        "work": "Romeo and Juliet",
+        "held": false,
+        "needsReview": true
+      }
+    },
+    {
+      "id": "J3.10",
+      "chapter": "scene",
+      "type": "log",
+      "title": "Log",
+      "author": "the searchers' clerk (made up for this visit)",
+      "when": "Tuesday to Thursday",
+      "where": "in a box at the Prince's gate, under a dish of vinegar for wiping coins",
+      "picture": "a thin ledger, a red seal on every line, a sketch of a door with a plank across it.",
+      "readAloud": false,
+      "body": "THE SEARCHERS' BOOK\n[[c:shutbook|Tuesday, at dusk. Shut up the house of Widow Pace, Tanners' Street.]] Cough heard within.\n[[c:twofriars|Within: the widow, her son, and two friars of St Francis.]] One friar came in at the bell, to fetch the other.\nDoor sealed. Plank nailed. Bread and water at the step.\n[[c:askedmessenger|Wednesday, first light. A friar at the upper window begs a passer-by to carry a letter. None will come near.]]\nA young man on a horse waved and rode on.\n[[c:opened|Thursday, at noon. All within found well. House opened.]] [[c:nosickness|It was a cold, not the sickness.]]\nThe friars went home at once. The older one was weeping.",
+      "arrivesInChapter": 4
+    },
+    {
+      "id": "J3.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar John: What did Friar Laurence give you?",
+      "author": "Friar John",
+      "readAloud": false,
+      "body": "A letter for Romeo, in Mantua. Sealed with his own seal. He said, \"Of dear import.\" He said it twice. I put it in my sleeve."
+    },
+    {
+      "id": "J3.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar John: When did you set out?",
+      "author": "Friar John",
+      "readAloud": false,
+      "body": "At vespers, on Tuesday, when the bell went. Our order does not travel alone. [[c:findbrother|So first I went to find a brother to walk with me.]]"
+    },
+    {
+      "id": "J3.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar John: Why didn't you reach Mantua?",
+      "author": "Friar John",
+      "readAloud": false,
+      "body": "[[c:detained|I was… detained.]] I would rather not say where. It is not a thing a friar is proud of. Please. Ask me something else."
+    },
+    {
+      "id": "J3.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar John: Where is the letter now?",
+      "author": "Friar John",
+      "readAloud": false,
+      "body": "[[c:sleeve|Here. In my sleeve. Still sealed.]] I have carried it about all day like a stone. I could not bring myself to give it back."
+    },
+    {
+      "id": "J3.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar John: Who do you think is to blame?",
+      "author": "Friar John",
+      "readAloud": false,
+      "body": "Me, I expect. Everyone will say so. A slow old friar with a letter in his sleeve. That is a story people like."
+    },
+    {
+      "id": "J3.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Balthasar: What did you see on Wednesday morning?",
+      "author": "Balthasar",
+      "readAloud": false,
+      "body": "The Capulet house in tears. Black cloth at the windows. Everyone saying she was gone. [[c:isaw|I saw what I saw. I did not stop to ask anyone what it meant.]]"
+    },
+    {
+      "id": "J3.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Balthasar: When did you ride for Mantua?",
+      "author": "Balthasar",
+      "readAloud": false,
+      "body": "At first light. I took post at the gate, a fast horse, and I rode it hard. My master told me to bring him news of her every day. So I did."
+    },
+    {
+      "id": "J3.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Balthasar: Did you pass Friar Laurence's cell?",
+      "author": "Balthasar",
+      "readAloud": false,
+      "body": "I… did. [[c:pastcell|I rode straight past his door.]] I had my reasons. They are not good ones. Do not ask me about figs."
+    },
+    {
+      "id": "J3.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Balthasar: Did you see Friar John on the way?",
+      "author": "Balthasar",
+      "readAloud": false,
+      "body": "[[c:window|I saw him at an upstairs window in the Tanners' Street, at his ease, as cheerful as you like.]] [[c:waved|He waved and shouted something. I waved back.]] I did not stop. I was in a hurry."
+    },
+    {
+      "id": "J3.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Balthasar: What did Romeo ask you?",
+      "author": "Balthasar",
+      "readAloud": false,
+      "body": "Whether I had letters from the Friar. I had none. He asked me twice. I did not know there was a letter to bring."
+    },
+    {
+      "id": "J3.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Lord Capulet: Why did you move the wedding?",
+      "author": "Lord Capulet",
+      "readAloud": false,
+      "body": "Move it? I moved nothing! A father makes a plan and sticks to it. The cooks were hired, the guests invited. There was no reason to wait."
+    },
+    {
+      "id": "J3.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Lord Capulet: Which day was the wedding always meant to be?",
+      "author": "Lord Capulet",
+      "readAloud": false,
+      "body": "[[c:caplie|It was always to be Wednesday. I never hurried anything in my life.]] Ask anyone in this house."
+    },
+    {
+      "id": "J3.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Lord Capulet: What did Lady Capulet say?",
+      "author": "Lord Capulet",
+      "readAloud": false,
+      "body": "My wife fusses. She fusses about napkins. She fussed about the day. A wife's fussing is not a reason, young person."
+    },
+    {
+      "id": "J3.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Lord Capulet: Why so quickly?",
+      "author": "Lord Capulet",
+      "readAloud": false,
+      "body": "Because… she had been weeping for days. My girl. I thought a wedding, music, a feast, would bring her back to herself. [[c:cheer|I wanted her happy by tomorrow. Not Thursday. Tomorrow.]]"
+    },
+    {
+      "id": "J3.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Lord Capulet: Who is to blame?",
+      "author": "Lord Capulet",
+      "readAloud": false,
+      "body": "[[c:stars|The stars, I tell you! The stars were against us.]] What else could do such a thing to a house like mine?"
+    },
+    {
+      "id": "J3.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar Laurence: What was your plan?",
+      "author": "Friar Laurence",
+      "readAloud": false,
+      "body": "A sleep so deep that all would think the worst. Two and forty hours. Her family would grieve, and I would be there when she woke. Romeo too."
+    },
+    {
+      "id": "J3.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar Laurence: How was Romeo to know the plan?",
+      "author": "Friar Laurence",
+      "readAloud": false,
+      "body": "By my letter. One letter, by Brother John. A friar's road is a safe road. Nobody robs a man with nothing."
+    },
+    {
+      "id": "J3.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar Laurence: Why didn't you send a fast rider, too?",
+      "author": "Friar Laurence",
+      "readAloud": false,
+      "body": "A post-rider costs coins. [[c:coins|I had the coins that morning. Then I didn't.]] There was a family at the gate. It doesn't matter. I chose the slow road, and I told myself slow was wise."
+    },
+    {
+      "id": "J3.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar Laurence: When did you learn the wedding had moved?",
+      "author": "Friar Laurence",
+      "readAloud": false,
+      "body": "[[c:learned|On Wednesday morning, when I came to the house for the wedding.]] By then she had already taken the sleep, a night early. Nobody told me. Why would they? I was only the friar."
+    },
+    {
+      "id": "J3.S4.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Friar Laurence: What would you do differently?",
+      "author": "Friar Laurence",
+      "readAloud": false,
+      "body": "Two letters. Two roads. A rider and a friar. [[c:spare|A plan should have a spare, like a cart has a spare wheel.]] I wrote a second letter, in the end. Too late."
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "friar-john",
+      "questions": [
+        {
+          "id": "friar-john-q1",
+          "type": "what",
+          "q": "What did Friar Laurence give you?",
+          "answerDoc": "J3.S1.Q1",
+          "expression": "flustered"
+        },
+        {
+          "id": "friar-john-q2",
+          "type": "when",
+          "q": "When did you set out?",
+          "answerDoc": "J3.S1.Q2",
+          "expression": "calm"
+        },
+        {
+          "id": "friar-john-q3",
+          "type": "why",
+          "q": "Why didn't you reach Mantua?",
+          "answerDoc": "J3.S1.Q3",
+          "expression": "ashamed"
+        },
+        {
+          "id": "friar-john-q4",
+          "type": "where",
+          "q": "Where is the letter now?",
+          "answerDoc": "J3.S1.Q4",
+          "expression": "ashamed"
+        },
+        {
+          "id": "friar-john-q5",
+          "type": "who",
+          "q": "Who do you think is to blame?",
+          "answerDoc": "J3.S1.Q5",
+          "expression": "sad"
+        }
+      ]
+    },
+    {
+      "suspect": "balthasar",
+      "questions": [
+        {
+          "id": "balthasar-q1",
+          "type": "what",
+          "q": "What did you see on Wednesday morning?",
+          "answerDoc": "J3.S2.Q1",
+          "expression": "defensive"
+        },
+        {
+          "id": "balthasar-q2",
+          "type": "when",
+          "q": "When did you ride for Mantua?",
+          "answerDoc": "J3.S2.Q2",
+          "expression": "defensive"
+        },
+        {
+          "id": "balthasar-q3",
+          "type": "where",
+          "q": "Did you pass Friar Laurence's cell?",
+          "answerDoc": "J3.S2.Q3",
+          "expression": "embarrassed"
+        },
+        {
+          "id": "balthasar-q4",
+          "type": "who",
+          "q": "Did you see Friar John on the way?",
+          "answerDoc": "J3.S2.Q4",
+          "expression": "defensive"
+        },
+        {
+          "id": "balthasar-q5",
+          "type": "what",
+          "q": "What did Romeo ask you?",
+          "answerDoc": "J3.S2.Q5",
+          "expression": "sad"
+        }
+      ]
+    },
+    {
+      "suspect": "capulet",
+      "questions": [
+        {
+          "id": "capulet-q1",
+          "type": "why",
+          "q": "Why did you move the wedding?",
+          "answerDoc": "J3.S3.Q1",
+          "expression": "jovial"
+        },
+        {
+          "id": "capulet-q2",
+          "type": "when",
+          "q": "Which day was the wedding always meant to be?",
+          "answerDoc": "J3.S3.Q2",
+          "expression": "offended"
+        },
+        {
+          "id": "capulet-q3",
+          "type": "what",
+          "q": "What did Lady Capulet say?",
+          "answerDoc": "J3.S3.Q3",
+          "expression": "flustered"
+        },
+        {
+          "id": "capulet-q4",
+          "type": "why",
+          "q": "Why so quickly?",
+          "answerDoc": "J3.S3.Q4",
+          "expression": "ashamed",
+          "unlockedAfterDoc": "J3.6"
+        },
+        {
+          "id": "capulet-q5",
+          "type": "who",
+          "q": "Who is to blame?",
+          "answerDoc": "J3.S3.Q5",
+          "expression": "offended"
+        }
+      ]
+    },
+    {
+      "suspect": "laurence",
+      "questions": [
+        {
+          "id": "laurence-q1",
+          "type": "what",
+          "q": "What was your plan?",
+          "answerDoc": "J3.S4.Q1",
+          "expression": "calm"
+        },
+        {
+          "id": "laurence-q2",
+          "type": "how",
+          "q": "How was Romeo to know the plan?",
+          "answerDoc": "J3.S4.Q2",
+          "expression": "thoughtful"
+        },
+        {
+          "id": "laurence-q3",
+          "type": "why",
+          "q": "Why didn't you send a fast rider, too?",
+          "answerDoc": "J3.S4.Q3",
+          "expression": "ashamed"
+        },
+        {
+          "id": "laurence-q4",
+          "type": "when",
+          "q": "When did you learn the wedding had moved?",
+          "answerDoc": "J3.S4.Q4",
+          "expression": "stricken"
+        },
+        {
+          "id": "laurence-q5",
+          "type": "what",
+          "q": "What would you do differently?",
+          "answerDoc": "J3.S4.Q5",
+          "expression": "stricken"
+        }
+      ]
+    }
+  ],
+  "boardIntro": [],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "timeline",
+      "skill": "sequence",
+      "label": "haste",
+      "statement": "The Friar's plan was for Juliet to drink the sleep on Wednesday night, before a Thursday wedding. On Tuesday, Capulet moved the wedding to Wednesday morning. So she had to drink it on Tuesday night, a night early. Everything after it ran a day ahead of the Friar's letter.",
+      "spans": [
+        "wedtomorrow",
+        "tomorrownight",
+        "othursday",
+        "tochurch",
+        "knotknit",
+        "friday",
+        "twoforty"
+      ],
+      "why": "This is the first link. Without it, the letter has two days of road; with it, it has none.",
+      "required": [
+        "tochurch",
+        "tomorrownight"
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "inference",
+      "skill": "inference",
+      "label": "chance: the sealed door",
+      "statement": "The searchers shut up any house where they suspected the sickness, and nobody could come out. Friar John went to find a brother who was in a sick house. The searchers sealed the doors with both of them inside. The letter could not leave.",
+      "spans": [
+        "searchers",
+        "noneforth",
+        "sealed",
+        "shutbook",
+        "couldnotsend"
+      ],
+      "why": "It is the second link, and it is nobody's choice. It also answers the impossible thing.",
+      "minimumLink": [
+        [
+          "sealed",
+          "shutbook"
+        ],
+        [
+          "searchers",
+          "couldnotsend"
+        ]
+      ],
+      "alsoKinds": [
+        "meaning"
+      ],
+      "finishIn": 4
+    },
+    {
+      "id": "D3",
+      "type": "inference",
+      "skill": "inference",
+      "label": "fast and wrong",
+      "statement": "Balthasar saw a house in mourning and rode at once on a post-horse, without stopping to ask the Friar. He reached Romeo with news that was not true, and with no letter.",
+      "spans": [
+        "isaw",
+        "gatebal",
+        "tookpost",
+        "hastthou",
+        "nomylord",
+        "pastcell"
+      ],
+      "why": "Supporting evidence. It shows how the wrong news got there first. But Balthasar told the truth as he knew it; with the letter delivered, his news would have met the Friar's on the road and lost.",
+      "required": [
+        "isaw",
+        "gatebal"
+      ]
+    },
+    {
+      "id": "D4",
+      "type": "inference",
+      "skill": "inference",
+      "label": "a plan with no spare",
+      "statement": "The whole plan rested on one letter carried on foot by one friar. There was no rider and no second copy. The Friar wrote a second letter only after the first had failed.",
+      "spans": [
+        "myletters",
+        "onebrother",
+        "writeagain",
+        "coins",
+        "spare"
+      ],
+      "why": "The third link. Haste and chance would both have failed if the plan had had a second road.",
+      "minimumLink": [
+        [
+          "onebrother",
+          "myletters"
+        ],
+        [
+          "onebrother",
+          "writeagain"
+        ]
+      ]
+    },
+    {
+      "id": "D5",
+      "type": "contradiction",
+      "skill": "contradiction",
+      "label": "the lie",
+      "statement": "Capulet says it was always to be Wednesday and he never hurried anything. But on Monday he said Wednesday was too soon and chose Thursday. On Tuesday his wife said 'not till Thursday', and he overruled her: 'we'll to church tomorrow'.",
+      "spans": [
+        "caplie",
+        "toosoon",
+        "othursday",
+        "notthursday",
+        "tochurch"
+      ],
+      "why": "This is the one lie in the Journey. It shows the haste was a person's choice, which is why the stars are not the answer. (His reason, [c:cheer] \"I wanted her happy by tomorrow. Not Thursday. Tomorrow.\", is kind. It is still haste.)",
+      "minimumLink": [
+        [
+          "caplie",
+          "toosoon"
+        ],
+        [
+          "caplie",
+          "notthursday"
+        ]
+      ],
+      "isTheLie": true
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "friar-john",
+      "clearedBy": [
+        "sealed",
+        "shutbook",
+        "twofriars",
+        "askedmessenger",
+        "couldnotsend"
+      ],
+      "suspicion": [
+        "detained",
+        "nofriar",
+        "window",
+        "waved"
+      ]
+    },
+    {
+      "suspect": "balthasar",
+      "clearedBy": [
+        "isaw"
+      ]
+    },
+    {
+      "suspect": "laurence",
+      "clearedBy": [
+        "onebrother",
+        "learned"
+      ]
+    }
+  ],
+  "wrongLinks": [],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "The feast; Romeo and Juliet meet",
+        "when": "Sunday · 1.5",
+        "spans": [],
+        "timeWords": "\"Sunday\" (prompt-book margin)",
+        "placedByChild": false
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "The window: \"But soft, what light through yonder window breaks?\"",
+        "when": "Sunday night · 2.2",
+        "spans": [],
+        "timeWords": "(margin)",
+        "placedByChild": false
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "The secret wedding at the Friar's cell",
+        "when": "Monday · 2.6",
+        "spans": [],
+        "timeWords": "(margin)",
+        "placedByChild": false
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "After trouble in the street, the Prince banishes Romeo to Mantua",
+        "when": "Monday · 3.1",
+        "spans": [],
+        "timeWords": "(margin)",
+        "placedByChild": false
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "Capulet sets the wedding to Paris for Thursday",
+        "when": "Monday night · 3.4",
+        "spans": [
+          "toosoon",
+          "othursday"
+        ],
+        "timeWords": "[c:toosoon] \"Well, Wednesday is too soon.\" · [c:othursday]",
+        "placedByChild": true
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "The Friar's plan: drink on Wednesday night; sleep two and forty hours",
+        "when": "Tuesday · 4.1",
+        "spans": [
+          "wedtomorrow",
+          "tomorrownight"
+        ],
+        "timeWords": "[c:wedtomorrow] · [c:tomorrownight]",
+        "placedByChild": true
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Capulet moves the wedding to Wednesday",
+        "when": "Tuesday, later · 4.2",
+        "spans": [
+          "tochurch"
+        ],
+        "timeWords": "[c:tochurch] \"We'll to church tomorrow.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "The Friar gives his letter to Friar John",
+        "when": "Tuesday, vespers",
+        "spans": [
+          "vespers"
+        ],
+        "timeWords": "[c:vespers] \"At vespers I gave my letter to Brother John, for Mantua.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "The searchers shut up the house in the Tanners' Street, with two friars inside",
+        "when": "Tuesday, dusk",
+        "spans": [
+          "shutbook"
+        ],
+        "timeWords": "[c:shutbook] \"Tuesday, at dusk.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "text": "Juliet drinks the sleep, a night early",
+        "when": "Tuesday night · 4.3",
+        "spans": [],
+        "timeWords": "(margin; never shown)",
+        "placedByChild": true
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "text": "Friar John at the window, begging for a messenger; Balthasar rides past",
+        "when": "Wednesday, first light",
+        "spans": [
+          "askedmessenger",
+          "gatebal"
+        ],
+        "timeWords": "[c:askedmessenger] · [c:gatebal]",
+        "placedByChild": true
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "text": "The Friar comes for the wedding and learns of the change",
+        "when": "Wednesday morning · 4.5",
+        "spans": [
+          "learned"
+        ],
+        "timeWords": "[c:learned] \"On Wednesday morning, when I came to the house for the wedding.\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T13",
+        "order": 13,
+        "text": "Balthasar reaches Romeo in Mantua: \"Hast thou no letters…?\"",
+        "when": "Wednesday · 5.1",
+        "spans": [
+          "hastthou",
+          "nomylord"
+        ],
+        "timeWords": "[c:hastthou] · [c:nomylord]",
+        "placedByChild": true
+      },
+      {
+        "id": "T14",
+        "order": 14,
+        "text": "The searchers open the house; Friar John brings the letter back",
+        "when": "Thursday, noon",
+        "spans": [
+          "opened"
+        ],
+        "timeWords": "[c:opened] \"Thursday, at noon.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T15",
+        "order": 15,
+        "text": "— the wedding day that was planned —",
+        "when": "Thursday · (the day it was meant to be)",
+        "spans": [
+          "othursday"
+        ],
+        "timeWords": "[c:othursday]",
+        "placedByChild": false
+      }
+    ],
+    "shake": [
+      {
+        "quill": "When did Capulet say 'tomorrow'? Then when must\nshe drink?"
+      },
+      {
+        "quill": "Read the searchers' book. When was the door shut,\nand when did the horse go by?"
+      }
+    ]
+  },
+  "accusation": {
+    "question": "Verona has asked me one question all day. Whose fault was it? I have heard every answer but the true one. Show me.",
+    "culprit": "chain",
+    "place": null,
+    "minimalEvidence": [
+      "D1",
+      "D2",
+      "D4"
+    ],
+    "acceptableEvidence": [
+      "D3",
+      "D5",
+      "isaw",
+      "gatebal",
+      "hastthou",
+      "caplie",
+      "toosoon",
+      "notthursday",
+      "tochurch"
+    ],
+    "wrongSuspect": {
+      "friar-john": "Read the searchers' book again. Could he open a door with a plank nailed across it? And what was he doing at that window?",
+      "balthasar": "He told what he saw. Was it a lie, or was it wrong? Those are different words.",
+      "capulet": "His haste is one link. Ask yourself: if Friar John had walked out on Tuesday night, would the letter still have been late?",
+      "laurence": "His plan is one link. Was the sealed door his doing? Was the moved wedding?"
+    },
+    "wrongSuspectPoints": {},
+    "wrongTheory": {
+      "the-stars": {
+        "quill": "'Star-crossed' is how it feels. Who chose Wednesday? Who sealed the door? A star did neither.",
+        "name": "the stars",
+        "points": [
+          "starcrossd",
+          "tellsend"
+        ]
+      }
+    },
+    "weakEvidence": "That shows something went wrong. It does not show why it could not go right. Find the three things without which the letter arrives.",
+    "partialEvidence": "Two links make a chain that could still have held. Take one away in your head. Does the letter arrive? Then you've missed a link.",
+    "note": "not a culprit, but a chain. The child pins three links onto the Prince's table: the three without which the letter arrives."
+  },
+  "reveal": [
+    {
+      "who": "STAGE",
+      "text": "The Prince's hall. The candles are being lit one by one. The two families stand apart. Felix stands with {det}, holding the sealed letter."
+    },
+    {
+      "who": "{det}",
+      "text": "It started with one word. \"Tomorrow.\""
+    },
+    {
+      "who": "FELIX",
+      "text": "The Friar planned Wednesday night. Lord Capulet said \"We'll to church tomorrow\" on Tuesday. So the sleep began a night early."
+    },
+    {
+      "who": "CAPULET",
+      "text": "It was always to be Wednesday—"
+    },
+    {
+      "who": "LADY CAPULET",
+      "text": "\"Not till Thursday,\" I said. \"There is time enough.\"",
+      "direction": "quietly"
+    },
+    {
+      "who": "STAGE",
+      "direction": "Capulet's face falls. He looks at the guest list in his fist.",
+      "text": ""
+    },
+    {
+      "who": "CAPULET",
+      "text": "I wanted her happy by tomorrow. I hired twenty cooks. I hurried.",
+      "direction": "A pause."
+    },
+    {
+      "who": "{det}",
+      "text": "Then the door. The Prince's own notice was on the city gate when we arrived. \"None may come forth from a shut house.\" It was there from the first page."
+    },
+    {
+      "who": "FRIAR JOHN",
+      "text": "I went in to fetch Brother Anselm. He was nursing the widow. They nailed the door behind me."
+    },
+    {
+      "who": "{det}",
+      "text": "And on Wednesday at first light, you were at the window."
+    },
+    {
+      "who": "BALTHASAR",
+      "text": "He waved and shouted something. I waved back.",
+      "direction": "very slowly"
+    },
+    {
+      "who": "FRIAR JOHN",
+      "text": "I was shouting, \"Take this to Mantua!\" I did shout. You didn't hear.",
+      "direction": "He turns the letter over: \"Shout to him.\""
+    },
+    {
+      "who": "BALTHASAR",
+      "text": "I didn't stop. I rode past the Friar's door too. Because of figs. I'm sorry.",
+      "direction": "He sits down at last."
+    },
+    {
+      "who": "FRIAR LAURENCE",
+      "text": "And the third link is mine. One letter, one friar, one road. I had the coins for a rider and gave them away at the gate. I wrote a second letter only when the first came back. \"They stumble that run fast.\" I forgot the other half. Some must not walk too slow.",
+      "direction": "He looks up at nothing, at the carved line he cannot see from here."
+    },
+    {
+      "who": "FELIX",
+      "text": "Nobody chose all of it. Everybody chose a little of it."
+    },
+    {
+      "who": "THE PRINCE",
+      "text": "And the stars?"
+    },
+    {
+      "who": "{det}",
+      "text": "\"Star-crossed\" tells us how it ends. It doesn't tell us who moved the wedding."
+    },
+    {
+      "who": "STAGE",
+      "direction": "The Prince looks at the two families for a long time.",
+      "text": ""
+    },
+    {
+      "who": "THE PRINCE",
+      "text": "📜 Some shall be pardoned, and some punished."
+    },
+    {
+      "who": "STAGE",
+      "direction": "Lord Capulet crosses the hall. He holds out his hand to Lord Montague. After a moment, it is taken.",
+      "text": ""
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "STAGE",
+      "text": "Verona",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "The story ends in sorrow, and Verona learns from it. The child never sees the end. The last Verona panel is the square at dawn: the two families standing side by side for the first time, not speaking, not needing to. Friar John is sitting in the sun with his eyes shut. Balthasar brings him water. A cat sleeps on the Prince's notice, which has been taken down."
+    },
+    {
+      "who": "STAGE",
+      "text": "London",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "The candle is at its last mark. The rain has stopped. Will is asleep with his cheek on Brooke's poem. Felix coughs, politely. Will wakes with ink on his face."
+    },
+    {
+      "who": "WILL",
+      "text": "You're back. Well? Who was it?"
+    },
+    {
+      "who": "STAGE",
+      "direction": "The child lays the chain on the table: three links, two supports.",
+      "text": ""
+    },
+    {
+      "who": "WILL",
+      "text": "Haste. A sealed door. A plan with no spare. And nobody a villain. Haste and chance. Then that's my play.",
+      "direction": "reading; Slowly.; He smiles."
+    },
+    {
+      "who": "FELIX",
+      "text": "May I… footnote: may I ask why the gap in the Prologue?"
+    },
+    {
+      "who": "WILL",
+      "text": "Because I didn't know how long it was. The story, I mean. How long it takes to go wrong. There.",
+      "direction": "He dips his pen and writes."
+    },
+    {
+      "who": "STAGE",
+      "text": "📜 Is now the two hours' traffic of our stage;",
+      "quote": true
+    },
+    {
+      "who": "FELIX",
+      "text": "\"Traffic.\" Footnote: it meant business, or dealings. The two hours' business of our stage. Not carts."
+    },
+    {
+      "who": "WILL",
+      "text": "Not carts. Read it to me? The whole Prologue. I want to hear it in someone else's mouth."
+    },
+    {
+      "who": "STAGE",
+      "direction": "Felix looks at the page. His hand shakes. He looks at {det}, the way he looked at Row A, Seat 1, in Case 7. Then he reads it, the whole fourteen lines, clear and steady, to an audience of one playwright, one detective and a sleepy mascot.",
+      "text": ""
+    },
+    {
+      "who": "WILL",
+      "text": "You'd make a fine Chorus."
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote: no. Footnote to the footnote: maybe."
+    },
+    {
+      "who": "STAGE",
+      "direction": "Will takes a goose-feather pen from the jar, trims it with his knife, and holds it out to {det}.",
+      "text": ""
+    },
+    {
+      "who": "WILL",
+      "text": "For the reader who asked why. Write something with it that I'd want to steal."
+    },
+    {
+      "who": "QUILL",
+      "text": "It's a very ordinary quill.",
+      "direction": "eyeing the pen"
+    },
+    {
+      "who": "FELIX",
+      "text": "It's Shakespeare's."
+    },
+    {
+      "who": "QUILL",
+      "text": "I am also a quill. Nobody gives me to anyone.",
+      "direction": "A pause."
+    },
+    {
+      "who": "WILL",
+      "text": "\"What's in a name?\"",
+      "direction": "gravely, to Quill"
+    },
+    {
+      "who": "QUILL",
+      "text": "Act 2, Scene 2. Fine.",
+      "direction": "mollified, a little"
+    },
+    {
+      "who": "STAGE",
+      "text": "The office",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "The Door swings shut behind them. The office is dark and warm. The harbour is quiet. Felix sneezes."
+    },
+    {
+      "who": "FELIX",
+      "text": "Dust. And… violets?",
+      "direction": "he sniffs"
+    },
+    {
+      "who": "STAGE",
+      "direction": "Nobody in the agency wears violets. Quill goes to the round window and looks down at the street for a long moment. The street is empty. A last breath of the scent fades.",
+      "text": ""
+    },
+    {
+      "who": "QUILL",
+      "text": "Bed. Case 8 tomorrow.",
+      "direction": "lightly, too lightly"
+    },
+    {
+      "who": "STAGE",
+      "text": "Souvenir: Will's quill goes on the new shelf by the Door, beside the tortoise-shell plectrum and the falcon feather, its tip still dark with London ink."
+    },
+    {
+      "who": "STAGE",
+      "text": "Did you know? (margin note, epilogue) 📜",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "- \"What's in a name?\" is Juliet's question in Act 2 Scene 2. It is this season's question too: pen names, the Blot's cards, and your detective's name all ask it. - The play was printed in 1597 in a shorter version and in 1599 in a longer one. Nobody has found Shakespeare's own handwritten copy. - Quill pens were usually cut from goose feathers. - Sources: Folger Shakespeare Library, \"Romeo and Juliet: About the play\" and \"Early modern writing\" (folger.edu); Arden Third Series (2012), \"The texts\". [VERIFY: Folger page titles.]"
+    }
+  ],
+  "drill": {
+    "kind": "timeline",
+    "title": "The Moving Tomorrow",
+    "intro": "Clue type: sequence (time words that move). Built from DOC J3.4 against DOC J3.6. The child reads three short notes, each written on a different day, and pins every \"tomorrow\" to a real day.",
+    "items": [
+      {
+        "prompt": "The Friar says, on Tuesday: \"Wednesday is tomorrow.\" Which day does \"Tomorrow night\" mean?",
+        "answer": "Wednesday night",
+        "options": [
+          "Tuesday night",
+          "Wednesday night",
+          "Thursday night"
+        ]
+      },
+      {
+        "prompt": "Capulet says, on Tuesday: \"We'll to church tomorrow.\" Which day is the wedding now?",
+        "answer": "Wednesday",
+        "options": [
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ]
+      },
+      {
+        "prompt": "So when must Juliet drink the sleep, to be asleep before the wedding?",
+        "answer": "Tuesday night",
+        "options": [
+          "Tuesday night",
+          "Wednesday night",
+          "Thursday morning"
+        ]
+      },
+      {
+        "prompt": "The Friar's day-book says she \"wakes on Friday, in the afternoon.\" Is that still true after Capulet's change?",
+        "answer": "No, she wakes a day earlier",
+        "options": [
+          "Yes, the sleep is the same length",
+          "No, she wakes a day earlier",
+          "No, she wakes a day later"
+        ]
+      }
+    ],
+    "rounds": "**Monday's note (Gran):** The cake is for Thursday. Tomorrow I buy flour.\n**Tuesday's note (Gran):** Flour bought. Tomorrow, eggs.\n**Tuesday's note, later (Dad):** Change of plan! We'll have the party tomorrow."
+  },
+  "marginNotes": [
+    {
+      "chapter": 1,
+      "where": "chapter 1",
+      "text": "- Shakespeare did not invent this story. He took it from a long English poem, Arthur Brooke's The Tragicall Historye of Romeus and Juliet (1562), which came from Italian and French tellings. Brooke's story moves slowly; Shakespeare squeezed the action into a few days. [VERIFY: Brooke's poem spans several months — confirm the wording against the Arden introduction.] - The Prologue is a sonnet: fourteen lines, ending in a rhyming pair. It tells the audience how the story ends before it begins. That is dramatic irony: the audience knows what the characters do not.",
+      "source": "René Weis (ed.), Romeo and Juliet, The Arden Shakespeare, Third Series (2012), Introduction; Folger Shakespeare Library, \"Romeo and Juliet\" (folger.edu).",
+      "verify": true
+    },
+    {
+      "chapter": 2,
+      "where": "chapter 2",
+      "text": "- \"Pestilence\" was an old word for a deadly spreading sickness such as plague. In Shakespeare's London, houses where plague was found could be shut up with the family inside, and the playhouses were closed for much of 1592 to 1594 because of it. His first audiences knew exactly what a sealed door meant. - Friars of St Francis often travelled in pairs. That is why Friar John says he went \"to associate me\": to find a companion.",
+      "source": "Andrew Gurr, The Shakespearean Stage 1574–1642, 4th edn (Cambridge, 2009); Folger Shakespeare Library, \"Shakespeare and the Plague\" (folger.edu). [VERIFY: exact closure dates; the gloss on friars travelling in pairs against the Arden note to 5.2.]",
+      "verify": true
+    },
+    {
+      "chapter": 4,
+      "where": "chapter 4",
+      "text": "- The play counts its own days. In Act 3 Scene 4 Capulet asks, \"But soft, what day is this?\" and Paris answers, \"Monday, my lord.\" From that line you can count forward to Thursday. Readers have noticed for centuries that the play's clock does not quite add up everywhere; this Journey uses the usual Sunday-to-Thursday reading. - Shakespeare made it faster on purpose. Squeezing Brooke's slow story into a few days makes every hurried choice matter more.",
+      "source": "Romeo and Juliet 3.4 (the play's own text); René Weis (ed.), Arden Third Series (2012), Introduction, on the play's time scheme. [VERIFY: Arden page reference for the time-scheme discussion.]",
+      "verify": true
+    },
+    {
+      "chapter": 5,
+      "where": "epilogue",
+      "text": "- \"What's in a name?\" is Juliet's question in Act 2 Scene 2. It is this season's question too: pen names, the Blot's cards, and your detective's name all ask it. - The play was printed in 1597 in a shorter version and in 1599 in a longer one. Nobody has found Shakespeare's own handwritten copy. - Quill pens were usually cut from goose feathers.",
+      "source": "Folger Shakespeare Library, \"Romeo and Juliet: About the play\" and \"Early modern writing\" (folger.edu); Arden Third Series (2012), \"The texts\". [VERIFY: Folger page titles.]",
+      "verify": true
+    },
+    {
+      "chapter": 3,
+      "where": "chapter 3 — Words first written down by Shakespeare",
+      "text": "- As far as we know, these words were first written down in Shakespeare's plays: eyeball (A Midsummer Night's Dream), swagger (A Midsummer Night's Dream), bedazzled (The Taming of the Shrew) and lonely (Coriolanus). - \"As far as we know\" matters. Dictionaries record the earliest use they have found. People often said words long before anyone wrote them down, and earlier examples keep turning up.",
+      "source": "Oxford English Dictionary, entries for each word; British Library, \"Shakespeare's language\" (bl.uk). [VERIFY: each first citation and play against the current OED; the OED revises first dates often.]",
+      "verify": true
+    }
+  ],
+  "persona": {
+    "thea": {
+      "line": {
+        "chapter": 3,
+        "text": "What's not on this page? Romeo asks for a letter twice, and nobody gives one."
+      },
+      "knack": {
+        "chapter": 3,
+        "candidates": [
+          "gap:no-letter-in-J3.8",
+          "gap:no-hour-after-vespers",
+          "gap:no-reason-for-detained"
+        ]
+      },
+      "origin": "bonus-journey-03"
+    },
+    "milo": {
+      "line": {
+        "chapter": 1,
+        "text": "So what it actually says is: Romeo will learn the plan from my letter."
+      },
+      "knack": {
+        "chapter": 1,
+        "candidates": [
+          "para:Romeo will learn the plan from my letter.",
+          "para:Romeo will write me a letter about the plan.",
+          "para:Romeo learned the plan from my letters yesterday."
+        ],
+        "on": "myletters"
+      },
+      "origin": "bonus-journey-03"
+    },
+    "oskar": {
+      "line": {
+        "chapter": 2,
+        "text": "We've seen that word before. 'Wednesday' — in the Friar's plan, and in Capulet's 'too soon'."
+      },
+      "knack": {
+        "chapter": 2,
+        "candidates": [
+          "link:wedtomorrow+toosoon",
+          "link:noon+vespers",
+          "link:dreams+sleeplooks"
+        ],
+        "memory": "Wednesday"
+      },
+      "origin": "bonus-journey-03"
+    },
+    "signe": {
+      "line": {
+        "chapter": 4,
+        "text": "Something happened here, between vespers and first light, and nobody's told us."
+      },
+      "knack": {
+        "chapter": 4,
+        "candidates": [
+          "slot:between-8-10",
+          "slot:between-1-2",
+          "pair:12+13"
+        ]
+      },
+      "origin": "bonus-journey-03"
+    },
+    "hari": {
+      "line": {
+        "chapter": 2,
+        "text": "If I were Balthasar, what would I have seen? A house in tears. Nobody told him it was a sleep."
+      },
+      "knack": {
+        "chapter": 2,
+        "candidates": [
+          "knew:isaw",
+          "wanted:to bring news every day",
+          "didntKnow:about the Friar's letter"
+        ],
+        "writer": "balthasar"
+      },
+      "origin": "bonus-journey-03"
+    },
+    "vani": {
+      "line": {
+        "chapter": 3,
+        "text": "Listen to the root. 'Messenger' — from Latin mittere, to send. So are 'mission' and 'transmit'. A messenger is a person a thing is sent with."
+      },
+      "knack": {
+        "chapter": 3,
+        "candidates": [
+          "root:message",
+          "root:mess",
+          "root:messy"
+        ],
+        "word": "messenger"
+      },
+      "origin": "bonus-journey-03"
+    }
+  },
+  "bonusCard": {
+    "id": "bonus-journey-03",
+    "persona": null,
+    "case": "journey-03",
+    "word": "tragedy",
+    "bonus": true,
+    "path": [
+      "Greek tragōidia",
+      "Latin tragoedia",
+      "English tragedy"
+    ],
+    "story": "The Greek word is made of tragos, \"goat\", and ōidē, \"song\": a \"goat song\". ⚖ Nobody is sure why goats. Scholars still argue: perhaps a goat was a prize for the best play, perhaps the singers dressed as goat-men.",
+    "question": {
+      "prompt": "The two Greek parts of tragedy probably mean…",
+      "options": [
+        "goat + song",
+        "sad + ending",
+        "stage + play"
+      ],
+      "answer": "goat + song",
+      "explain": "The Greek word is made of tragos, \"goat\", and ōidē, \"song\": a \"goat song\". ⚖ Nobody is sure why goats. Scholars still argue: perhaps a goat was a prize for the best play, perhaps the singers dressed as goat-men."
+    },
+    "objective": "la10-world",
+    "sources": [
+      "Oxford English Dictionary, \"tragedy, n.\"",
+      "Online Etymology Dictionary, \"tragedy\""
+    ],
+    "askFamily": false,
+    "needsReview": true
+  },
+  "quotes": [
+    {
+      "text": "Two households, both alike in dignity,",
+      "where": "DOC J3.2",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "(In fair Verona, where we lay our scene),",
+      "where": "DOC J3.2",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "From ancient grudge break to new mutiny,",
+      "where": "DOC J3.2",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "A pair of star-crossed lovers",
+      "where": "DOC J3.2",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Is now the ________ of our stage;",
+      "where": "DOC J3.2",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Wednesday is tomorrow.",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Tomorrow night look that thou lie alone;",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Thou shalt continue two and forty hours",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "And then awake as from a pleasant sleep.",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "In the meantime, against thou shalt awake,",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Shall Romeo by my letters know our drift,",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "And hither shall he come",
+      "where": "DOC J3.4",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Wisely and slow. They stumble that run fast.",
+      "where": "DOC J3.5",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Well, Wednesday is too soon.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "O' Thursday let it be.—O' Thursday, tell her,",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "She shall be married to this noble earl.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "So many guests invite as here are writ.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Sirrah, go hire me twenty cunning cooks.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Send for the County. Go tell him of this.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "I'll have this knot knit up tomorrow morning.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "No, not till Thursday. There is time enough.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Go, nurse. Go with her. We'll to church tomorrow.",
+      "where": "DOC J3.6",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "If I may trust the flattering truth of sleep,",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "My dreams presage some joyful news at hand.",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "News from Verona!—How now, Balthasar?",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Dost thou not bring me letters from the Friar?",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "And presently took post to tell it you",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Hast thou no letters to me from the Friar?",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "No, my good lord.",
+      "where": "DOC J3.8",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Going to find a barefoot brother out,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "One of our order, to associate me,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Here in this city visiting the sick,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "And finding him, the searchers of the town,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Suspecting that we both were in a house",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Where the infectious pestilence did reign,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Sealed up the doors and would not let us forth,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "So that my speed to Mantua there was stayed.",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "Nor get a messenger to bring it thee,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "So fearful were they of infection.",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "But I will write again to Mantua,",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "And keep her at my cell till Romeo come.",
+      "where": "DOC J3.9",
+      "work": "William Shakespeare, Romeo and Juliet",
+      "held": false,
+      "needsReview": true
+    }
+  ],
+  "art": {
+    "notes": "See the script's \"Art and scene notes\"; no lettering in any painting."
+  },
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "easier",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-clues",
+      "chapter": 1,
+      "source": {
+        "doc": "J3.3",
+        "span": "searchers"
+      },
+      "prompt": "The notice says: \"The searchers of the town shall shut up any house where the sickness is suspected.\" What does \"suspected\" mean here?",
+      "options": [
+        "thought likely, but not yet proved",
+        "proved beyond doubt",
+        "cured completely"
+      ],
+      "answer": "thought likely, but not yet proved",
+      "explain": "To suspect is to think something may be true without proof. Detectives suspect people. Here the searchers only suspected the sickness — and in the end, it was a cold."
+    },
+    {
+      "id": "x2",
+      "tier": "easier",
+      "level": 3,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": "s2-tense",
+      "chapter": 1,
+      "source": {
+        "doc": "J3.6",
+        "span": "tochurch"
+      },
+      "prompt": "Capulet says this on Tuesday: \"We'll to church tomorrow.\" Which day will they go to church?",
+      "options": [
+        "Monday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "answer": "Wednesday",
+      "explain": "\"Tomorrow\" means the day after the day it is said. Said on Tuesday, it means Wednesday."
+    },
+    {
+      "id": "x3",
+      "tier": "easier",
+      "level": 3,
+      "type": "figurative",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 2,
+      "source": {
+        "doc": "J3.7",
+        "span": "wouldnotwait"
+      },
+      "prompt": "The gatekeeper writes that Balthasar was \"Gone like a hare.\" What does he mean?",
+      "options": [
+        "Balthasar turned into a hare",
+        "Balthasar left very fast",
+        "Balthasar was hiding in a field"
+      ],
+      "answer": "Balthasar left very fast",
+      "explain": "\"Like a hare\" is a simile: it compares Balthasar to a hare, an animal famous for speed. Nobody changed shape."
+    },
+    {
+      "id": "x4",
+      "tier": "easier",
+      "level": 3,
+      "type": "word-origin",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "la10-world",
+      "chapter": 5,
+      "source": {
+        "doc": "J3.2",
+        "span": "tellsend"
+      },
+      "prompt": "Romeo and Juliet is a tragedy. The Greek word it comes from is made of two parts. What do they probably mean?",
+      "options": [
+        "goat + song",
+        "sad + ending",
+        "stage + play"
+      ],
+      "answer": "goat + song",
+      "explain": "Greek tragōidia = tragos (goat) + ōidē (song). Scholars still argue about why goats. Sources: OED; Online Etymology Dictionary."
+    },
+    {
+      "id": "x5",
+      "tier": "at",
+      "level": 4,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": "li1-problem",
+      "chapter": 2,
+      "source": {
+        "doc": "J3.8",
+        "span": "hastthou"
+      },
+      "prompt": "Romeo asks, \"Hast thou no letters to me from the Friar?\" Balthasar answers, \"No, my good lord.\" What does Romeo's question tell us he was expecting?",
+      "options": [
+        "news of a feast in Verona",
+        "a letter from Friar Laurence",
+        "a new horse from the post-house"
+      ],
+      "answer": "a letter from Friar Laurence",
+      "explain": "You only ask \"Hast thou no letters…?\" if you expected one. Romeo was waiting for the Friar's letter. It never came."
+    },
+    {
+      "id": "x6",
+      "tier": "at",
+      "level": 4,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 4,
+      "source": {
+        "doc": "J3.9",
+        "span": "sealed"
+      },
+      "prompt": "Friar John says the searchers \"Sealed up the doors and would not let us forth\". What does \"forth\" mean here?",
+      "options": [
+        "the fourth time",
+        "out, away from inside",
+        "forward in time"
+      ],
+      "answer": "out, away from inside",
+      "explain": "\"Forth\" means out or onward. \"Would not let us forth\" means would not let us out. Don't confuse it with \"fourth\", the number."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 4,
+      "type": "stress",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "la9-pentameter",
+      "chapter": 3,
+      "source": {
+        "doc": "J3.2",
+        "span": null
+      },
+      "prompt": "Romeo's line is \"But soft, what light through yonder window breaks?\" It has ten beats, in pairs: da-DUM. Which words are strong?",
+      "options": [
+        "But",
+        "soft",
+        "what",
+        "light",
+        "through",
+        "yon-",
+        "-der",
+        "win-",
+        "-dow",
+        "breaks"
+      ],
+      "answer": [
+        "soft",
+        "light",
+        "yon-",
+        "win-",
+        "breaks"
+      ],
+      "select": "many",
+      "explain": "but SOFT / what LIGHT / through YON / der WIN / dow BREAKS. Five pairs of da-DUM is iambic pentameter: \"penta\" means five. It sounds like a heartbeat. (Oskar and Signe: window is your Norse wind-eye.)"
+    },
+    {
+      "id": "x8",
+      "tier": "at",
+      "level": 4,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "literature",
+      "objective": "li2-traits",
+      "chapter": 2,
+      "source": {
+        "doc": "J3.6",
+        "span": "guests"
+      },
+      "prompt": "Capulet says, \"So many guests invite as here are writ. Sirrah, go hire me twenty cunning cooks.\" Which word best describes how he sounds?",
+      "options": [
+        "hurried and commanding",
+        "shy and unsure",
+        "bored and sleepy"
+      ],
+      "answer": "hurried and commanding",
+      "explain": "Two orders in a row, and \"twenty\" cooks at once: he gives commands and wants everything now. That voice is the haste the case is about."
+    },
+    {
+      "id": "x9",
+      "tier": "harder",
+      "level": 5,
+      "type": "summarise",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": "li1-problem",
+      "chapter": 5,
+      "source": {
+        "doc": "J3.5",
+        "span": "onebrother"
+      },
+      "prompt": "Put these four sentences in order to retell why the letter failed.",
+      "options": [
+        "The Friar sent one letter, on foot, with one friar.",
+        "Capulet moved the wedding a day earlier.",
+        "The searchers shut Friar John inside a house.",
+        "Balthasar's fast news reached Romeo first."
+      ],
+      "answer": [
+        "Capulet moved the wedding a day earlier.",
+        "The Friar sent one letter, on foot, with one friar.",
+        "The searchers shut Friar John inside a house.",
+        "Balthasar's fast news reached Romeo first."
+      ],
+      "explain": "The move came on Tuesday, before the Friar gave his letter at vespers. The house was shut at dusk. The news rode out at first light on Wednesday. Order by the time-words, not by importance."
+    },
+    {
+      "id": "x10",
+      "tier": "harder",
+      "level": 5,
+      "type": "fact-opinion",
+      "skill": "factopinion",
+      "strand": "reading",
+      "objective": "w8-purpose",
+      "chapter": 3,
+      "source": {
+        "doc": "J3.6",
+        "span": "notthursday"
+      },
+      "prompt": "Capulet says, \"It was always to be Wednesday.\" Which line from the play shows that is not a fact?",
+      "options": [
+        "Well, Wednesday is too soon.",
+        "So many guests invite as here are writ.",
+        "Send for the county; go tell him of this:"
+      ],
+      "answer": "Well, Wednesday is too soon.",
+      "explain": "On Monday, Capulet himself said Wednesday was too soon and chose Thursday. A claim is only a fact if the record agrees with it."
+    },
+    {
+      "id": "x11",
+      "tier": "harder",
+      "level": 5,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "la4-shakespeare",
+      "chapter": 5,
+      "source": {
+        "doc": "J3.2",
+        "span": "trafficgap"
+      },
+      "prompt": "Will's finished line is \"Is now the two hours' traffic of our stage\". In Shakespeare's time, what did \"traffic\" mean?",
+      "options": [
+        "carts and crowds in the street",
+        "business, or dealings",
+        "a quarrel between two families"
+      ],
+      "answer": "business, or dealings",
+      "explain": "Words change. \"Traffic\" once meant trade or business. The Chorus means: the story is the two hours' business of our stage."
+    },
+    {
+      "id": "x12",
+      "tier": "harder",
+      "level": 5,
+      "type": "word-origin",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "la4-shakespeare",
+      "chapter": 3,
+      "source": {
+        "doc": "J3.1",
+        "span": null
+      },
+      "prompt": "Some words are first found written down in Shakespeare's plays — as far as we know. What does \"as far as we know\" warn us?",
+      "options": [
+        "Shakespeare made up every English word",
+        "someone may have used the word earlier, unrecorded",
+        "the word is no longer used"
+      ],
+      "answer": "someone may have used the word earlier, unrecorded",
+      "explain": "Dictionaries record the earliest use they have found. Eyeball, lonely, swagger and bedazzled are first found in Shakespeare's plays, but people may have said them before anyone wrote them down. [VERIFY: each word's first citation against the OED.] Count: 12 (easier 4 · at 4 · harder 4). Types: vocab-in-context, tense-sequence, figurative, word-origin, inference, stress, voice, summarise, fact-opinion (9)."
+    }
+  ],
+  "source": {
+    "script": "journey-03.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  }
+}

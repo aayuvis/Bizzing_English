@@ -13,26 +13,45 @@
 
    A RUN (every game). A level is played as three rounds and a FINAL — the level's top ramp; the timed
    games add a time bonus there (time adds points, never removes one earned). The run's accuracy gives
-   the level 1–3 stars (`starsFor`) and moves the level: up one at 80% or better, down one below 40%
-   (`nextLevel`, never below 1). A COMBO counts right answers in a row; every third in a row is worth
-   one point more. It rewards accuracy only — a wrong answer resets it, and nothing about it is chance.
+   the level 0–3 stars (`starsFor`: none under 50%, one at 50%, two at 70%, three at 90%) and moves the
+   level by the owner's rule (`nextLevel`): up one at 80% or better, down one under 50% (never below 1),
+   otherwise it holds. A COMBO counts right answers in a row; every third in a row is worth one point
+   more. It rewards accuracy only — a wrong answer resets it, and nothing about it is chance.
 
-   Sentence Builder (60 s a round) — join a main clause and a dependent clause with their subordinator,
-     in either order; building the other order earns a variety bonus. The final is rush hour: the
-     level's longest sentences, +1 for each built inside 8 seconds.
-   Punctuation Rush (60 s a round) — tap the gaps that need commas. +1 a right comma, −1 a wrong one
-     (never below zero), a clean sentence +1. Final: the most commas, +1 a clean one inside 10 s.
+   PAY (handover C §1.3, §6) is for learning only, counted per round by `roundPay` and paid at the finish
+   by `runPay` — and only when the whole run is 50% or better, the line under which no star is earned
+   either, so a random tapper earns nothing (test/games.mjs T1). Clause Builder: a sentence right first
+   try. Comma Rush: a clean sentence (never a right comma beside wrong ones). Figure Hunt, Rhetoric Duel,
+   Root Forge, Who Said It?: an item right first try, in a round of 50% or better. Plot Line: a story
+   wholly in order at its first check. At most ROUND_PAY_CAP a round; the wallet keeps the day's lid.
+
+   A MISS HOLDS (C §1.6). A wrong answer stops the item — the clock too — until the child presses
+   Continue; the screen shows the answer in place (src/miss.js). Every item gets one try.
+
+   Clause Builder (Sentence Studio, 60 s a round) — the two clauses come as PHRASE tiles, all lower-case,
+     with the joining word and one decoy that cannot join a clause ("despite", "during", "because of":
+     words that need a noun, never a second subordinator that would make a second right answer). The
+     child builds the sentence in either order, adds the capital, and adds the comma when the dependent
+     clause comes first; building the other order next earns a variety bonus (score, never coins). The
+     final is rush hour: the level's longest sentences, +1 for each built inside 8 seconds.
+   Comma Rush (Sentence Studio, 60 s a round) — tap the gaps that need commas. +1 a right comma, −1 a
+     wrong one (never below zero), a clean sentence +1. A wrong sentence holds with the commas missed in
+     green and the extra ones struck out. Final: the most commas, +1 a clean one inside 10 s.
    Who Said It? — Detective: a line from a held text; up to three clues on request (the kind of book
      and its year, what the book is, its title). Answering before any clue scores 3, after one 2, after
      more 1 — still one right answer among four.
-   Figure Hunt — which figure of speech is this real line? From level 3 half the round is a hunt: a few
-     sentences of a held passage; tap the one that holds the figure, then name it (both scored).
+   Figure Hunt (Writer's Craft) — from level 1, half the round is a hunt: a few sentences of a held
+     passage; tap the one that holds the figure. A simile or alliteration then asks for the WORDS that
+     make it (the comparison word; the words that share a sound). Then name it. The glosses wait until
+     after the answer. An item is right only when every step was.
    Plot Line — the opening sentence of each scene of a story, shuffled: place them on the line (drag,
      tap or keys). 4, then 5, then 6 scenes; the final from level 3 asks which scene is missing.
    Root Forge — a base word (or a Latin root) and four pieces: forge the one REAL word. The final forges
      a family: three words from one base or root.
-   Rhetoric Duel — a duel against one of Bee's rivals, best of five: pick the stronger of two versions,
-     then say WHY (the reason scores). The rival's points are the app's own, seeded, and say so. */
+   Rhetoric Duel (Writer's Craft), "make it strong" — against one of Bee's rivals, best of five. Where the
+     plain version is as long as the original (±10%) and a question only when it is, the child first
+     picks the stronger (scored); then BUILDS the strong line from its own tiles and one plain decoy, and
+     the device is named after the build. The rival's points are the app's own, seeded, and say so. */
 
 import { rng, shuffle, sample, permute, hash } from './rand.js';
 import { kidSafe } from './safe.js';
@@ -42,15 +61,15 @@ import { MAIN_CLAUSE, COMMAS } from './data/sentences.js';
    a three-second how-to, its keys, and what each of its five levels means. */
 const LV = (a) => Object.fromEntries(a.map((t, i) => [i + 1, t]));
 export const GAMES = {
-  builder: { name: 'Sentence Builder', world: 'scriptorium', music: 'games-sentence', timed: true, practises: 'main and dependent clauses, in both orders', how: 'Tap the three parts in an order that makes a sentence. Build it the other way round next time for a bonus.', keys: '1 2 3 pick · Backspace undo',
+  builder: { name: 'Clause Builder', hub: 'studio', world: 'scriptorium', music: 'games-sentence', timed: true, practises: 'main and dependent clauses, the capital and the comma', promise: 'Build a sentence from its pieces — you add the capital and the comma.', how: 'Tap the pieces in an order that makes one sentence. One piece does not belong. Add the capital, and a comma when the joining part comes first.', keys: '1–9 piece · , comma · C capital · Backspace undo · Enter check',
     final: 'Rush hour — the longest sentences; +1 for each built inside 8 seconds',
-    levels: LV(['short sentences, first-band words', 'longer clauses from the second band', 'every band, starting a little further along', 'longer sentences from the start', 'the longest clauses first']) },
-  rush: { name: 'Punctuation Rush', world: 'study', music: 'games-sentence', timed: true, practises: 'where commas go — lists, openings, names and asides', how: 'Tap every gap that needs a comma, then Enter. Right commas score; wrong ones cost a point.', keys: '← → move · Space comma · Enter next',
+    levels: LV(['short sentences, first-band words', 'longer clauses from the second band', 'every band, smaller pieces', 'longer sentences from the start', 'the longest clauses first']) },
+  rush: { name: 'Comma Rush', hub: 'studio', world: 'study', music: 'games-sentence', timed: true, practises: 'where commas go — lists, openings, names and asides', promise: 'Tap every gap that needs a comma. Only clean sentences count.', how: 'Tap every gap that needs a comma, then Next. A sentence with every comma right — and no extra — is clean.', keys: '← → move · Space comma · Enter next',
     final: 'Rush hour — the most commas; +1 for each clean sentence inside 10 seconds',
     levels: LV(['one comma a sentence', 'one comma, then a few with two', 'one comma, then lists and asides', 'mostly two commas or more', 'lists and asides first']) },
-  figure: { name: 'Figure Hunt', world: 'lakeside', music: 'games-word', practises: 'similes, metaphors, personification and alliteration in real lines', how: 'Read the line from a classic. Which figure of speech is it — or is it none?', more: 'From level 3, half the round is a hunt: tap the sentence of a passage that holds the figure, then name it.', keys: '1–5 choose · Enter next',
+  figure: { name: 'Figure Hunt', hub: 'craft', world: 'lakeside', music: 'games-word', practises: 'similes, metaphors, personification and alliteration in real lines', promise: 'Find the figure of speech, tap the words that make it, then name it.', how: 'Find the sentence that holds a figure of speech, tap the words that make it, then name it.', more: 'Every item is from a real book, exactly as written.', keys: '1–5 choose · Enter check or next',
     final: 'The figures of the level above',
-    levels: LV(['simile, alliteration or none', 'metaphor joins in', 'all five, and hunts in passages', 'more metaphor and personification', 'the subtle ones, mostly']) },
+    levels: LV(['similes and alliteration — or none', 'metaphor joins in', 'all five', 'more metaphor and personification', 'the subtle ones, mostly']) },
   who: { name: 'Who Said It?', world: 'playhouse', music: 'games-reading', practises: 'famous lines from the books in the Library', how: 'Read the line. Who said it — or wrote it?', more: 'You are the detective: answer with no clue for 3 points; each clue you open costs one.', keys: '1–4 choose · C clue · Enter next',
     final: 'The hardest lines of the level, rivals from the level above',
     levels: LV(['famous lines from children’s books', 'poems, plays and novels join in', 'every shelf; rivals from the same shelf', 'rivals from the same author’s books', 'poems, plays, essays and speeches']) },
@@ -60,7 +79,7 @@ export const GAMES = {
   root: { name: 'Root Forge', world: 'scriptorium', music: 'games-word', practises: 'prefixes, suffixes and roots that make real words', how: 'One word part and four pieces. Forge the one that makes a real word.', keys: '1–4 forge · Enter next',
     final: 'Forge a family — three real words from one base or root',
     levels: LV(['first prefixes and endings', 'more prefixes and endings', 'every prefix and ending', 'Latin roots join in', 'mostly roots and harder parts']) },
-  duel: { name: 'Rhetoric Duel', world: 'forum', music: 'games-sentence', practises: 'why a sentence is strong — the devices great writers use', how: 'Two versions of one sentence. Pick the stronger — then say why. The reason scores.', more: 'A duel with one of Bee’s rivals, best of five.', keys: '1 2 pick · 1–4 why · Enter next',
+  duel: { name: 'Rhetoric Duel', hub: 'craft', world: 'forum', music: 'games-sentence', practises: 'what makes a line strong — the devices great writers use', promise: 'Make it strong: build the great line from its pieces, then meet its device.', how: 'Pick the stronger of two lines; then build the strong one from its pieces — one piece is plain and does not belong.', more: 'A duel with one of Bee’s rivals, best of five.', keys: '1 2 pick · 1–5 piece · Backspace undo · Enter check',
     final: 'The strongest rival and the hardest lines',
     levels: LV(['alliteration and questions', 'groups of three and repeated openings', 'every device', 'every device, longer lines', 'antithesis and the hardest lines']) },
 };
@@ -70,7 +89,7 @@ export const MAX_LEVEL = 5;
 export const RUN_ROUNDS = 3;                 // + the final
 export const ROUND_OF = { who: 5, figure: 6, plot: 3, root: 6, duel: 5 };
 const SUBS = /^(when|because|if|although|after|before|while|until|since|as|unless|once|whenever|though)\b/i;
-const clampLevel = (l) => Math.max(1, Math.min(MAX_LEVEL, Math.round(+l || 1)));
+export const clampLevel = (l) => Math.max(1, Math.min(MAX_LEVEL, Math.round(+l || 1)));
 const bump = (o, k) => ({ ...o, [k]: (o[k] || 0) + 1 });
 const comboOf = (s, ok) => { const combo = ok ? s.combo + 1 : 0; return { combo, bestCombo: Math.max(s.bestCombo || 0, combo), comboBonus: ok && combo > 0 && combo % 3 === 0 ? 1 : 0 }; };
 const sp = (s) => String(s).replace(/\s+/g, ' ').trim();
@@ -116,43 +135,70 @@ export function memCounts(items, keyOf, mem = EMPTY) {
 /* What a finished round met, for memRecord: [{ key, ok }]. */
 export function roundLog(g) {
   if (g.kind === 'builder' || g.kind === 'rush') {
-    const cur = g.cur ? [{ key: g.kind === 'builder' ? g.cur.it.key : g.cur.key, ok: g.curWrong ? false : null }] : [];
+    const cur = g.cur && !g.hold ? [{ key: g.kind === 'builder' ? g.cur.it.key : g.cur.key, ok: null }] : [];   // held: already logged as missed
     return [...g.log, ...cur];
   }
   return g.rounds.slice(0, g.results.length).map((q, j) => ({ key: q.key, ok: g.results[j] }));
 }
 
 /* ---------- levels, runs, stars ---------- */
-/* ≥ 80% → up one, < 40% → down one, never below 1 or above MAX_LEVEL; a run with no attempts moves nothing. */
+/* The owner's rule (handover C §1.4): ≥ 80% → up one, < 50% → down one, never below 1 or above MAX_LEVEL;
+   50–79% holds; a run with no attempts moves nothing. */
 export function nextLevel(level, pct) {
   const l = clampLevel(level);
   if (pct == null || Number.isNaN(pct)) return l;
   if (pct >= 0.8) return Math.min(MAX_LEVEL, l + 1);
-  if (pct < 0.4) return Math.max(1, l - 1);
+  if (pct < 0.5) return Math.max(1, l - 1);
   return l;
 }
-/* A finished run at 40% or better earns 1 star (the line the level falls below); 70% earns 2; 90% earns 3.
-   Nothing right earns nothing — a run once gave '1 star, your most yet' with 0 right (brief v4). */
-export const starsFor = (pct) => (pct == null || pct < 0.4 ? 0 : pct >= 0.9 ? 3 : pct >= 0.7 ? 2 : 1);
-/* What a finished round got right, out of how many decisions it asked for. */
+/* A finished run at 50% or better earns 1 star (the line the level falls below); 70% earns 2; 90% earns 3.
+   Under 50% earns none — a run once gave '1 star, your most yet' with 0 right (brief v4). */
+export const STAR_LINE = 0.5;
+export const starsFor = (pct) => (pct == null || pct < STAR_LINE ? 0 : pct >= 0.9 ? 3 : pct >= 0.7 ? 2 : 1);
+/* What a finished round got right, out of how many it asked for. Figure Hunt and the duel count ITEMS (an
+   item is right only when every step of it was); the others count their decisions. */
 export function accuracy(g) {
   let right = 0, total = 0;
   if (g.kind === 'builder') { right = g.built; total = g.built + g.wrong; }
   else if (g.kind === 'rush') { right = g.right; total = g.right + g.wrongs; }
   else if (g.kind === 'plot') { right = g.right; total = g.total; }
+  else if (g.kind === 'figure' || g.kind === 'duel') { right = g.results.filter(Boolean).length; total = g.results.length; }
   else { right = g.right; total = g.answered ?? g.rounds.length; }
   return { right, total, pct: total ? right / total : null };
 }
+/* ---------- pay (handover C §1.3, §6): learning only ---------- */
+export const ROUND_PAY_CAP = 10, PAY_LINE = 0.5;
+/* The `answer` coins a finished round has earned (banked; runPay decides at the finish). */
+export function roundPay(g) {
+  const a = accuracy(g), p = fairPct(g.kind, a.pct), half = p != null && p >= PAY_LINE;
+  let n = 0;
+  if (g.kind === 'builder') n = g.built;                       // one try an item: every sentence built is right first try
+  else if (g.kind === 'rush') n = g.clean;                     // a clean sentence — never a right comma beside wrong ones
+  else if (g.kind === 'plot') n = half ? g.perfect : 0;        // a story wholly in order at its first check
+  else n = half ? (g.results || []).filter(Boolean).length : 0; // right first try, in a round of 50% or better
+  return Math.max(0, Math.min(ROUND_PAY_CAP, n));
+}
+/* BEYOND CHANCE. Where a guess is right one time in four — Who Said It? and Root Forge (four options),
+   Plot Line (a lucky pair, a missing scene among four) — stars and coins are measured on accuracy beyond
+   chance, the exam's correction (right − wrong / 3) / all: a random tapper scores 0 and a child who knows
+   it all still scores 100%. Without it a random tapper reached the 50% line in about one run in forty
+   (test/games.mjs T1). The level still moves on the plain accuracy, by the owner's rule. */
+export const CHANCE = { who: 0.25, root: 0.25, plot: 0.25 };
+export const fairPct = (kind, pct) => (pct == null ? null : CHANCE[kind] ? Math.max(0, (pct - CHANCE[kind]) / (1 - CHANCE[kind])) : pct);
+/* What the finish pays: the banked coins, only when the whole run is 50% or better (no star, no coin). */
+export const runPay = (run) => { const p = fairPct(run.kind, runPct(run)); return p != null && p >= PAY_LINE ? run.banked || 0 : 0; };
+/* the run's accuracy for its stars: beyond chance where a guess pays one time in four */
+export const runStarPct = (run) => fairPct(run.kind, runPct(run));
 /* The thing missed most (a category key), or null for a clean round. */
 export function mostMissed(g) {
   const e = Object.entries(g.misses || {}).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
   return e.length ? e[0][0] : null;
 }
 /* A run: three rounds and a final, added up as they finish. */
-export function runNew(level) { return { level: clampLevel(level), round: 0, scores: [], right: 0, total: 0, misses: {}, met: 0, bestCombo: 0, bonus: 0 }; }
+export function runNew(level) { return { level: clampLevel(level), round: 0, scores: [], right: 0, total: 0, misses: {}, met: 0, bestCombo: 0, bonus: 0, banked: 0 }; }
 export function runAdd(run, g, met = 0) {
   const a = accuracy(g), misses = { ...run.misses }; for (const [k, v] of Object.entries(g.misses || {})) misses[k] = (misses[k] || 0) + v;
-  return { ...run, round: run.round + 1, scores: [...run.scores, g.score], right: run.right + a.right, total: run.total + a.total, misses, met: run.met + met, bestCombo: Math.max(run.bestCombo, g.bestCombo || 0), bonus: run.bonus + (g.speed || 0) };
+  return { ...run, kind: run.kind || g.kind, round: run.round + 1, scores: [...run.scores, g.score], right: run.right + a.right, total: run.total + a.total, misses, met: run.met + met, bestCombo: Math.max(run.bestCombo, g.bestCombo || 0), bonus: run.bonus + (g.speed || 0), banked: (run.banked || 0) + roundPay(g) };
 }
 export const runScore = (run) => run.scores.reduce((a, b) => a + b, 0);
 export const runPct = (run) => (run.total ? run.right / run.total : null);
@@ -192,23 +238,56 @@ export function builderRoad(level = 1, o = {}) {
   return [...order.slice(0, 20).sort(byBuild), ...order.slice(20)];
 }
 export function builderNew(seed, level = 1, o = {}) {
-  const pool = builderRoad(level, { ...o, seed });
-  return { kind: 'builder', level: clampLevel(level), final: !!o.final, t: 0, over: false, score: 0, built: 0, wrong: 0, lastOrder: null, variety: 0, speed: 0, combo: 0, bestCombo: 0, misses: {}, seq: 0,
-    pool, n: 0, picks: [], flash: null, itemT: 0, curWrong: false, log: [], cur: tilesFor(pool[0], seed) };
+  const pool = builderRoad(level, { ...o, seed }), L = clampLevel(level);
+  return { kind: 'builder', level: L, final: !!o.final, t: 0, over: false, score: 0, built: 0, wrong: 0, lastOrder: null, variety: 0, speed: 0, combo: 0, bestCombo: 0, misses: {}, seq: 0,
+    pool, n: 0, picks: [], commas: [], cap: false, flash: null, hold: null, itemT: 0, log: [], cur: tilesFor(pool[0], seed, L) };
 }
-function tilesFor(it, seed) {
+/* A clause as 1–3 phrase tiles, cut at word boundaries as evenly as its words allow. */
+export function phrases(text, n) {
+  const w = sp(text).split(' ').filter(Boolean), k = Math.max(1, Math.min(n, w.length)), out = []; let at = 0;
+  for (let j = 0; j < k; j++) { const end = Math.round(((j + 1) * w.length) / k); if (end > at) out.push(w.slice(at, end).join(' ')); at = end; }
+  return out;
+}
+/* The decoy: a word that looks like a joining word but needs a noun after it — "despite the rain stopped"
+   is not English — so the book's sentence stays the one right answer (CLAUDE.md hard rule 6; a second
+   subordinator such as "when" for "because" would often make a second grammatical sentence). */
+const DECOY = { because: 'because of', although: 'despite', though: 'despite', if: 'in case of', unless: 'without' };
+export const decoyFor = (sub) => DECOY[sub] || 'during';
+const cap1s = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+function tilesFor(it, seed, L = 1) {
   if (!it) return null;
-  const subWord = it.sub.charAt(0).toUpperCase() + it.sub.slice(1);
-  let tiles = shuffle(rng('t:' + seed + it.key), [{ k: 'sub', text: it.sub }, { k: 'dep', text: it.dep }, { k: 'main', text: it.main }]);
-  if (tiles.map((t) => t.k).join() === 'sub,dep,main' || tiles.map((t) => t.k).join() === 'main,sub,dep') tiles = [tiles[1], tiles[0], tiles[2]];   // never dealt already built
-  return { it, tiles, subWord };
+  const words = (t) => sp(t).split(' ').length, main = lowerFirst(it.main);
+  const dep = phrases(it.dep, Math.min(words(it.dep), L <= 1 ? 2 : 3)), mn = phrases(main, Math.min(words(main), 3));
+  const front = builderSentence({ it }, 'front'), end = builderSentence({ it }, 'end');
+  let tiles = shuffle(rng('t:' + seed + it.key), [{ k: 'sub', text: it.sub }, ...dep.map((text) => ({ k: 'dep', text })), ...mn.map((text) => ({ k: 'main', text })), { k: 'decoy', text: decoyFor(it.sub) }]);
+  const flat = (ts) => bare(ts.filter((t) => t.k !== 'decoy').map((t) => t.text).join(' '));
+  if ([front, end].some((x) => bare(x) === flat(tiles))) tiles = [...tiles.slice(1), tiles[0]];   // never dealt already built
+  return { it, tiles, right: [front, end] };
 }
-/* The two right orders: [sub, dep, main] (front-loaded, comma) or [main, sub, dep] (end-loaded). */
-export function builderJudge(cur, picks) {
-  const ks = picks.map((i) => cur.tiles[i].k).join(',');
-  if (ks === 'sub,dep,main') return 'front';
-  if (ks === 'main,sub,dep') return 'end';
-  return null;
+/* The sentence the child has built: the pieces in order, a comma after each marked piece (a comma after
+   the last piece is pending, not yet shown), the capital if added, the book's end mark. */
+export function clauseText(cur, picks, commas = [], cap = false) {
+  if (!cur || !picks.length) return '';
+  let s = picks.map((i, j) => cur.tiles[i].text + (j < picks.length - 1 && commas.includes(j) ? ',' : '')).join(' ');
+  if (cap) s = cap1s(s);
+  return s + cur.it.end;
+}
+const bare = (s) => String(s).toLowerCase().replace(/[,.!?]/g, '').replace(/\s+/g, ' ').trim();
+/* Which right order a build is: 'front', 'end' — or null. Exact: the capital and the comma count. */
+export function builderJudge(cur, picks, commas = [], cap = false) {
+  const t = clauseText(cur, picks, commas, cap);
+  return t === cur.right[0] ? 'front' : t === cur.right[1] ? 'end' : null;
+}
+/* Why a build is not the sentence, most important first: a piece that does not belong, the order, the
+   capital, the comma. */
+export function builderWhy(cur, picks, commas = [], cap = false) {
+  const it = cur.it, ks = picks.map((i) => cur.tiles[i].k), dec = cur.tiles.find((t) => t.k === 'decoy').text;
+  if (ks.includes('decoy')) return { k: 'decoy', text: `“${dec}” cannot join two clauses — it needs a noun after it. The joining word here is “${it.sub}”.` };
+  const flat = bare(picks.map((i) => cur.tiles[i].text).join(' ')), order = flat === bare(cur.right[0]) ? 'front' : flat === bare(cur.right[1]) ? 'end' : null;
+  if (!order) return { k: 'order', text: picks.length < cur.tiles.length - 1 ? 'Every piece but one belongs in the sentence.' : `Keep each clause together: “${it.sub}” opens the part that cannot stand alone.` };
+  const t = clauseText(cur, picks, commas, cap);
+  if (t.charAt(0) !== cur.right[order === 'front' ? 0 : 1].charAt(0)) return { k: 'capital', text: 'A sentence starts with a capital letter.' };
+  return order === 'front' ? { k: 'comma', text: `When the “${it.sub}” part comes first, a comma ends it.` } : { k: 'comma', text: 'When the main clause comes first, no comma is needed before the joining word.' };
 }
 export function builderSentence(cur, order) {
   const { it } = cur; const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
@@ -220,22 +299,35 @@ const OPENERS = /^(The|A|An|My|Our|Your|His|Her|Its|Their|We|They|He|She|It|You|
 const lowerFirst = (s) => (OPENERS.test(s) && !/^(Grandma|Grandpa|Mum|Dad)\b/.test(s) ? s.charAt(0).toLowerCase() + s.slice(1) : s);
 export const BUILD_FAST = 8000, RUSH_FAST = 10000;
 
+/* the next item: the board clears */
+const builderNext = (s, extra = {}) => { const n = s.n + 1, next = s.pool[n % s.pool.length]; return { ...s, ...extra, n, picks: [], commas: [], cap: false, hold: null, itemT: s.t, cur: tilesFor(next, 'r' + n, s.level) }; };
 export function builderStep(s, a) {
   if (s.over) return s;
-  if (a.type === 'tick') { const t = s.t + a.dt; return t >= ROUND_MS ? { ...s, t: ROUND_MS, over: true } : { ...s, t }; }
+  if (a.type === 'tick') { if (s.hold) return s; const t = s.t + a.dt; return t >= ROUND_MS ? { ...s, t: ROUND_MS, over: true } : { ...s, t }; }
   if (!s.cur) return { ...s, over: true };
+  if (s.hold) return a.type === 'continue' ? builderNext(s, { seq: s.seq + 1, flash: null }) : s;   // a miss holds until Continue
   if (a.type === 'pick') {
-    if (a.i < 0 || a.i >= s.cur.tiles.length || s.picks.includes(a.i)) return s;
-    const picks = [...s.picks, a.i];
-    if (picks.length < 3) return { ...s, picks };
-    const order = builderJudge(s.cur, picks);
-    if (!order) return { ...s, ...comboOf(s, false), picks: [], wrong: s.wrong + 1, curWrong: true, misses: bump(s.misses, 'clause'), seq: s.seq + 1, flash: { ok: false, text: 'Not a sentence yet — which part could stand alone?' } };
-    const bonus = s.lastOrder && s.lastOrder !== order ? 1 : 0, c = comboOf(s, true), fast = s.final && s.t - s.itemT <= BUILD_FAST ? 1 : 0;
-    const n = s.n + 1, next = s.pool[n % s.pool.length], gain = 2 + bonus + c.comboBonus + fast;
-    return { ...s, ...c, picks: [], score: s.score + gain, built: s.built + 1, variety: s.variety + bonus, speed: s.speed + fast, lastOrder: order, n, seq: s.seq + 1, cur: tilesFor(next, 'r' + n),
-      itemT: s.t, curWrong: false, log: [...s.log, { key: s.cur.it.key, ok: !s.curWrong }], flash: { ok: true, text: builderSentence(s.cur, order), bonus, combo: c.comboBonus, fast, gain } };
+    if (!(a.i >= 0 && a.i < s.cur.tiles.length) || s.picks.includes(a.i)) return s;
+    return { ...s, picks: [...s.picks, a.i] };
   }
-  if (a.type === 'undo') return s.picks.length ? { ...s, picks: s.picks.slice(0, -1) } : s;
+  if (a.type === 'undo') { if (!s.picks.length) return s; const picks = s.picks.slice(0, -1); return { ...s, picks, commas: s.commas.filter((j) => j < picks.length) }; }
+  if (a.type === 'comma') {
+    const at = a.at ?? s.picks.length - 1; if (!(at >= 0 && at < s.picks.length)) return s;
+    return { ...s, commas: s.commas.includes(at) ? s.commas.filter((j) => j !== at) : [...s.commas, at] };
+  }
+  if (a.type === 'cap') return s.picks.length ? { ...s, cap: !s.cap } : s;
+  if (a.type === 'check') {
+    if (s.picks.length < 2) return s;
+    const order = builderJudge(s.cur, s.picks, s.commas, s.cap), given = clauseText(s.cur, s.picks, s.commas, s.cap);
+    if (!order) {
+      const why = builderWhy(s.cur, s.picks, s.commas, s.cap);
+      return { ...s, ...comboOf(s, false), wrong: s.wrong + 1, misses: bump(s.misses, 'clause'), seq: s.seq + 1, log: [...s.log, { key: s.cur.it.key, ok: false }],
+        hold: { given, right: s.cur.right, why, picks: s.picks, commas: s.commas, cap: s.cap }, flash: { ok: false, gain: 0 } };
+    }
+    const bonus = s.lastOrder && s.lastOrder !== order ? 1 : 0, c = comboOf(s, true), fast = s.final && s.t - s.itemT <= BUILD_FAST ? 1 : 0, gain = 2 + bonus + c.comboBonus + fast;
+    return builderNext(s, { ...c, score: s.score + gain, built: s.built + 1, variety: s.variety + bonus, speed: s.speed + fast, lastOrder: order, seq: s.seq + 1,
+      log: [...s.log, { key: s.cur.it.key, ok: true }], flash: { ok: true, text: given, bonus, combo: c.comboBonus, fast, gain } });
+  }
   return s;
 }
 
@@ -269,22 +361,24 @@ export function rushRoad(level = 1, o = {}) {
 export function rushNew(seed, level = 1, o = {}) {
   const pool = rushRoad(level, { ...o, seed });
   return { kind: 'rush', level: clampLevel(level), final: !!o.final, t: 0, over: false, score: 0, right: 0, wrongs: 0, clean: 0, speed: 0, combo: 0, bestCombo: 0, misses: {}, seq: 0, pool, n: 0, sel: [], cursor: 0, flash: null,
-    itemT: 0, curWrong: false, log: [], cur: pool[0] || null };
+    hold: null, itemT: 0, log: [], cur: pool[0] || null };
 }
+const rushNext = (s, extra = {}) => { const n = s.n + 1; return { ...s, ...extra, n, sel: [], cursor: 0, hold: null, itemT: s.t, cur: s.pool[n % s.pool.length] }; };
 export function rushStep(s, a) {
   if (s.over) return s;
-  if (a.type === 'tick') { const t = s.t + a.dt; return t >= ROUND_MS ? { ...s, t: ROUND_MS, over: true } : { ...s, t }; }
+  if (a.type === 'tick') { if (s.hold) return s; const t = s.t + a.dt; return t >= ROUND_MS ? { ...s, t: ROUND_MS, over: true } : { ...s, t }; }
   if (!s.cur) return { ...s, over: true };
+  if (s.hold) return a.type === 'continue' ? rushNext(s, { seq: s.seq + 1, flash: null }) : s;   // a wrong sentence holds until Continue
   const gaps = s.cur.words.length - 1;
   if (a.type === 'toggle') { if (!(a.i >= 0 && a.i < gaps)) return s; return { ...s, cursor: a.i, sel: s.sel.includes(a.i) ? s.sel.filter((x) => x !== a.i) : [...s.sel, a.i] }; }
   if (a.type === 'move') return { ...s, cursor: Math.max(0, Math.min(gaps - 1, s.cursor + (a.d || 0))) };
   if (a.type === 'submit') {
     const want = new Set(s.cur.commas), right = s.sel.filter((i) => want.has(i)).length, wrong = s.sel.length - right, missed = s.cur.commas.length - right;
     const clean = !wrong && !missed ? 1 : 0, c = comboOf(s, !!clean), fast = clean && s.final && s.t - s.itemT <= RUSH_FAST ? 1 : 0;
-    const n = s.n + 1, gain = right - wrong + clean + c.comboBonus + fast;
-    return { ...s, ...c, score: Math.max(0, s.score + gain), right: s.right + right, wrongs: s.wrongs + wrong + missed, clean: s.clean + clean, speed: s.speed + fast, n, sel: [], cursor: 0, seq: s.seq + 1,
-      itemT: s.t, log: [...s.log, { key: s.cur.key, ok: !!clean }],
-      misses: clean ? s.misses : bump(s.misses, s.cur.rule), cur: s.pool[n % s.pool.length], flash: { ok: !!clean, text: s.cur.s, rule: s.cur.rule, gain, combo: c.comboBonus, fast } };
+    const gain = right - wrong + clean + c.comboBonus + fast;
+    const t = { ...s, ...c, score: Math.max(0, s.score + gain), right: s.right + right, wrongs: s.wrongs + wrong + missed, clean: s.clean + clean, speed: s.speed + fast, seq: s.seq + 1,
+      log: [...s.log, { key: s.cur.key, ok: !!clean }], misses: clean ? s.misses : bump(s.misses, s.cur.rule), flash: { ok: !!clean, text: s.cur.s, rule: s.cur.rule, gain, combo: c.comboBonus, fast } };
+    return clean ? rushNext(t) : { ...t, hold: { item: s.cur, sel: s.sel, right, wrong, missed } };
   }
   return s;
 }
@@ -403,8 +497,8 @@ export function figureRound(figures, works, seed, level = 3, n = 10, o = {}) {
   /* the hunts: from level 3, half the round, the kinds taken in turn so the naming slot cannot lean */
   const hunts = [];
   const place = Math.floor(R() * 4);
-  if (ML >= 3 && o.hunts?.length) {
-    const kinds = HUNT_KINDS.filter((k) => o.hunts.some((x) => x.figure === k)), want = Math.floor(n / 2), rot = Math.floor(R() * kinds.length), used = new Set(), at = (h, a) => (h.windows || [h]).some((w) => w.at === a);
+  if (o.hunts?.length) {   // hunts from level 1 (handover C §4.2), of the kinds the level offers
+    const kinds = HUNT_KINDS.filter((k) => FIGURE_LEVELS[ML][k] && o.hunts.some((x) => x.figure === k)), want = Math.floor(n / 2), rot = Math.floor(R() * kinds.length), used = new Set(), at = (h, a) => (h.windows || [h]).some((w) => w.at === a);
     for (let j = 0; hunts.length < want && j < want * 3; j++) {
       const k = kinds[(rot + hunts.length) % kinds.length], a = (place + hunts.length) % 4, free = o.hunts.filter((x) => !used.has(x.key));
       /* the kind the naming slot wants and the place the spot slot wants, as near as the pool allows */
@@ -415,8 +509,11 @@ export function figureRound(figures, works, seed, level = 3, n = 10, o = {}) {
   }
   const huntKeys = new Set(hunts.map((h) => h.key)), want = figureWant(ML, n - hunts.length, R), out = [];
   for (const [k] of kinds) out.push(...memDraw(pool.filter((f) => f.figure === k && !huntKeys.has(figKey(f))), figKey, o.mem, 'fk:' + seed + k, want[k] || 0, o.now));
-  const lines = out.map((f) => ({ text: f.text, work: title(f.work), workId: f.work, kinds: kinds.map(([k]) => k), options: kinds.map(([, name]) => name), answer: kinds.findIndex(([k]) => k === f.figure), cat: f.figure, key: figKey(f) }));
-  const hunted = hunts.map((h, j) => ({ hunt: true, text: h.text, ...(({ sentences, at }) => ({ sentences, at }))(huntWindow(h, (place + j) % 4)), work: title(h.work), workId: h.work, kinds: HUNT_KINDS, options: HUNT_KINDS.map((k) => FIGURE_KINDS.find(([x]) => x === k)[1]), answer: HUNT_KINDS.indexOf(h.figure), cat: h.figure, key: h.key }));
+  const lines = out.map((f) => ({ text: f.text, work: title(f.work), workId: f.work, kinds: kinds.map(([k]) => k), options: kinds.map(([, name]) => name), answer: kinds.findIndex(([k]) => k === f.figure), cat: f.figure, key: figKey(f), ...figureWords(f.text, f.figure) }));
+  /* a hunt is named from four (C §4.2); the names' order is permuted from the item, the right one's slot
+     rotating, because below level 3 a hunt is only ever a simile or alliteration and a fixed order would lean */
+  const hunted = hunts.map((h, j) => { const p = permute(`hunt:${hash(String(seed))}:${j}`, [h.figure, ...HUNT_KINDS.filter((k) => k !== h.figure)]);
+    return { hunt: true, text: h.text, ...(({ sentences, at }) => ({ sentences, at }))(huntWindow(h, (place + j) % 4)), work: title(h.work), workId: h.work, kinds: p.options, options: p.options.map((k) => FIGURE_KINDS.find(([x]) => x === k)[1]), answer: p.answer, cat: h.figure, key: h.key, ...figureWords(h.text, h.figure) }; });
   return [...lines, ...hunted].sort((a, b) => FIG_HARD[a.cat] - FIG_HARD[b.cat] || hash(seed + a.text) - hash(seed + b.text)).slice(0, n);
 }
 /* The passage hunt's passages: a figure found inside a held prose passage (data/passages.json or a whole
@@ -459,25 +556,84 @@ export function huntsFrom(figures, sources, works = []) {
   for (const f of pool) { const src = flat.find((s) => s.work === f.work && s.text.includes(sp(f.text))); const h = src && huntOf(f, src.text, others); if (h) out.push(h); }
   return out;
 }
-/* A hunt is two decisions: SPOT the sentence (1 point), then NAME the figure (1 point, the quiz). A wrong
-   spot holds, showing the right sentence, until 'next' moves on to naming. */
+/* THE WORDS THAT MAKE IT — computed from the line itself, so nothing is typed from memory: a simile's
+   comparison word ("like", "as if", "as … as", "as a") with the thing it compares to; alliteration's
+   words that share a first sound (three or more). Metaphor and personification are named only — which
+   words make them is a judgement, and no one has marked it yet. tokens are the line split at spaces. */
+const ALLIT_STOP = new Set('a an the and or but of to in on at by for with from as is was are were be been it its his her him he she we i you your my our their they them this that these those so not no nor do did does had has have will would shall should can could may might must there here then than when what who whom which whose where while if into upon out up all me us o oh'.split(' '));
+const wordOf = (t) => t.toLowerCase().replace(/[’]/g, "'").replace(/[^a-z']/g, '').replace(/^'+|'+$/g, '');
+export function soundOf(w) {
+  if (/^(ph)/.test(w)) return 'f'; if (/^kn/.test(w)) return 'n'; if (/^wr/.test(w)) return 'r'; if (/^wh/.test(w)) return 'w';
+  if (/^(ch|sh|th)/.test(w)) return w.slice(0, 2); if (/^c[eiy]/.test(w)) return 's'; if (/^[cq]/.test(w)) return 'k';
+  return w.charAt(0);
+}
+const ENDS = /[,.;:!?—–)"”’]$/;
+export function figureWords(text, figure) {
+  const tokens = sp(text).split(' '), w = tokens.map(wordOf);
+  const after = (i) => { const out = []; if (ENDS.test(tokens[i])) return out; for (let j = i + 1; j < tokens.length; j++) { out.push(j); if (ENDS.test(tokens[j])) break; } return out; };
+  if (figure === 'simile') {
+    const groups = [];
+    w.forEach((x, i) => {
+      if (x === 'like') groups.push({ m: [i], a: after(i) });
+      else if (x === 'as' && (w[i + 1] === 'if' || w[i + 1] === 'though')) groups.push({ m: [i, i + 1], a: after(i + 1) });
+      else if (x === 'as' && w[i - 2] !== 'as' && w[i - 3] !== 'as') { const k = [i + 2, i + 3].find((j) => w[j] === 'as'); if (k) groups.push({ m: [i, k], a: [...Array.from({ length: k - i - 1 }, (_, j) => i + 1 + j), ...after(k)] }); else if (/^(a|an|the)$/.test(w[i + 1] || '')) groups.push({ m: [i], a: after(i) }); }
+    });
+    if (!groups.length) return { tokens };
+    const want = [...new Set(groups.flatMap((g) => g.m))].sort((a, b) => a - b), allow = [...new Set(groups.flatMap((g) => [...g.m, ...g.a]))].sort((a, b) => a - b);
+    return { tokens, want, allow, marks: groups.map((g) => g.m), wordRule: 'simile' };
+  }
+  if (figure === 'alliteration') {
+    const by = new Map();
+    w.forEach((x, i) => { if (x.length >= 2 && !ALLIT_STOP.has(x)) { const k = soundOf(x); if (!by.has(k)) by.set(k, []); by.get(k).push(i); } });
+    const groups = [...by.values()].filter((g) => g.length >= 3).sort((a, b) => b.length - a.length || (a[a.length - 1] - a[0]) - (b[b.length - 1] - b[0]));
+    if (!groups.length || (groups[1] && groups[1].length === groups[0].length)) return { tokens };   // none, or two equal runs: no fair word step
+    return { tokens, want: groups[0], allow: groups[0], wordRule: 'alliteration' };
+  }
+  return { tokens };
+}
+/* Is a tap of these words right? A simile: the comparison word(s) of one of its comparisons, and nothing
+   outside its comparisons.
+   Alliteration: two or more of the words that share the sound, and no other word. */
+export function wordsRight(q, sel) {
+  if (!q.want || !sel?.length) return false;
+  const S = new Set(sel), allow = new Set(q.allow);
+  if (sel.some((i) => !allow.has(i))) return false;
+  return q.wordRule === 'alliteration' ? sel.length >= 2 : (q.marks || [q.want]).some((m) => m.every((i) => S.has(i)));
+}
+/* The phase of the item in hand: SPOT the sentence (a hunt), tap the WORDS (a simile or alliteration),
+   NAME the figure. Each scores a point; the item is right only when every step was. A wrong spot or a
+   wrong tap holds, showing the answer in place, until 'next' moves on to the next step. */
+export const figurePhase = (s, q = s.rounds[s.i]) => (q.hunt && !s.found ? 'spot' : q.want && !s.wpass ? 'words' : 'name');
 export function figureStep(s, a) {
   if (s.over) return s;
-  const q = s.rounds[s.i];
-  if (q.hunt && !s.found) {
+  const q = s.rounds[s.i], ph = figurePhase(s, q);
+  if (ph === 'spot') {
     if (a.type === 'spot') {
       if (s.spot || !(a.i >= 0 && a.i < q.sentences.length)) return s;
       const ok = a.i === q.at, c = comboOf(s, ok);
-      return { ...s, ...c, spot: { pick: a.i, ok, gain: ok ? 1 + c.comboBonus : 0, combo: c.comboBonus }, found: ok, score: s.score + (ok ? 1 + c.comboBonus : 0), right: s.right + (ok ? 1 : 0), answered: s.answered + 1,
-        misses: ok ? s.misses : bump(s.misses, q.cat), seq: s.seq + 1 };
+      return { ...s, ...(ok ? {} : c), spot: { pick: a.i, ok, gain: ok ? 1 : 0 }, found: ok, score: s.score + (ok ? 1 : 0), answered: s.answered + 1, seq: s.seq + 1 };
     }
     if (a.type === 'next' && s.spot && !s.spot.ok) return { ...s, found: true };
     return s;
   }
+  if (ph === 'words') {
+    if (s.wres) return a.type === 'next' && !s.wres.ok ? { ...s, wpass: true } : s;   // a wrong tap holds
+    if (a.type === 'tap') { if (!(a.i >= 0 && a.i < q.tokens.length)) return s; const sel = s.wsel || []; return { ...s, wsel: sel.includes(a.i) ? sel.filter((x) => x !== a.i) : [...sel, a.i] }; }
+    if (a.type === 'words') {
+      if (!s.wsel?.length) return s;
+      const ok = wordsRight(q, s.wsel), c = comboOf(s, ok);
+      return { ...s, ...(ok ? {} : c), wres: { ok, sel: s.wsel }, wpass: ok, score: s.score + (ok ? 1 : 0), answered: s.answered + 1, seq: s.seq + 1 };
+    }
+    return s;
+  }
   const t = quizStep(s, a);
   if (t === s) return s;
-  if (a.type === 'pick' && q.hunt) return { ...t, results: [...t.results.slice(0, -1), !!(s.spot?.ok && t.state.ok)] };
-  if (a.type === 'next') return { ...t, spot: null, found: false };
+  if (a.type === 'pick') {
+    const whole = (!q.hunt || !!s.spot?.ok) && (!q.want || !!s.wres?.ok) && t.state.ok;
+    const c = comboOf(s, whole), gain = (t.state.ok ? 1 : 0) + c.comboBonus;
+    return { ...t, ...c, score: s.score + gain, state: { ...t.state, gain, combo: c.comboBonus, whole }, right: s.right + (whole ? 1 : 0), misses: whole ? s.misses : bump(s.misses, q.cat), results: [...s.results, whole] };
+  }
+  if (a.type === 'next') return { ...t, spot: null, found: false, wsel: null, wres: null, wpass: false };
   return t;
 }
 
@@ -629,42 +785,86 @@ export function forgeFamilyRound(lex, wp, seed, level = 1, k = 2, o = {}) {
 }
 
 /* ---------- Rhetoric Duel ---------- */
-const DEVICES = ['anaphora', 'tricolon', 'antithesis', 'rhetorical question', 'alliteration', 'simile'];
 const DUEL_HARD = { alliteration: 1, 'rhetorical question': 1, tricolon: 2, anaphora: 2, antithesis: 3 };
 const duelHard = (r) => DUEL_HARD[r.device] || 2;
 /* rhetoric: data/language.js RHETORIC (+ rhetoric-more.js); plain: data/duel.js PLAIN (+ PLAIN_MORE). */
+/* Stage one is scored only where it is fair: the plain version as long as the original (±10%), and a
+   question only when the original is one — otherwise the length or the "?" gives it away (C §4.2). */
+export const duelFair = (orig, plain) => !!plain && plain.length >= orig.length * 0.9 && plain.length <= orig.length * 1.1 && /\?\s*$/.test(orig) === /\?\s*$/.test(plain);
+/* "Make it strong": the original cut into three of its own pieces — at its commas and stops where it has
+   them, else at its thirds — and one decoy, a run of the plain version's words; joined with spaces the
+   pieces ARE the original, character for character. null when a line is too short to build. */
+export function duelPieces(orig, plain, seed = '') {
+  const w = orig.split(' '); if (w.length < 3) return null;
+  const n = w.length, punct = w.map((x, i) => (i < n - 1 && /[,;:.!?—–]$/.test(x) ? i + 1 : -1)).filter((i) => i > 0);
+  const near = (t, opts) => opts.slice().sort((x, y) => Math.abs(x - t) - Math.abs(y - t) || x - y)[0];
+  let cuts = [];
+  for (const t of [n / 3, (2 * n) / 3]) { const free = punct.filter((c) => !cuts.includes(c)); const c = free.length ? near(t, free) : null; if (c != null && Math.abs(c - t) <= n / 4) cuts.push(c); }
+  for (const t of [n / 3, (2 * n) / 3]) if (cuts.length < 2) { const opts = Array.from({ length: n - 1 }, (_, i) => i + 1).filter((c) => !cuts.includes(c)); cuts.push(near(t, opts)); }
+  cuts = [...new Set(cuts)].sort((x, y) => x - y); if (cuts.length < 2) return null;
+  const pieces = [w.slice(0, cuts[0]), w.slice(cuts[0], cuts[1]), w.slice(cuts[1])].map((x) => x.join(' '));
+  if (pieces.some((x) => !x)) return null;
+  /* the decoy: plain words of about a piece's length, sharing as few words with the original as can be */
+  const pw = String(plain).replace(/[.!?;:]+$/, '').split(' ').filter(Boolean), len = Math.max(1, Math.min(pw.length, Math.round(pieces[1].split(' ').length)));
+  const ow = new Set(w.map((x) => x.toLowerCase().replace(/[^a-z']/g, '')));
+  let best = null;
+  for (let i = 0; i + len <= pw.length; i++) { const run = pw.slice(i, i + len), fresh = run.filter((x) => !ow.has(x.toLowerCase().replace(/[^a-z']/g, ''))).length; if (fresh && (!best || fresh > best.fresh || (fresh === best.fresh && Math.abs(i - (pw.length - len) / 2) < Math.abs(best.i - (pw.length - len) / 2)))) best = { i, run, fresh }; }
+  if (!best) return null;
+  let decoy = best.run.join(' ').replace(/[,;:]+$/, '');
+  if (!/^I\b/.test(decoy) && !(best.i === 0 && /^[A-Z][a-z]/.test(decoy) && ow.has(decoy.split(' ')[0].toLowerCase()))) decoy = decoy.charAt(0).toLowerCase() + decoy.slice(1);
+  if (/,$/.test(pieces[1])) decoy += ',';
+  if (pieces.includes(decoy)) return null;
+  let tiles = shuffle(rng('dp:' + seed + orig), [...pieces.map((text, j) => ({ text, k: 'd', at: j })), { text: decoy, k: 'x', at: -1 }]);
+  if (tiles.filter((t) => t.k === 'd').every((t, j) => t.at === j)) {   // never dealt in order: swap the first two pieces
+    const [a, b] = tiles.map((t, i) => (t.k === 'd' ? i : -1)).filter((i) => i >= 0); tiles = tiles.slice(); [tiles[a], tiles[b]] = [tiles[b], tiles[a]];
+  }
+  return { tiles, pieces, decoy };
+}
+/* rhetoric: data/language.js RHETORIC (+ rhetoric-more.js); plain: data/duel.js PLAIN (+ PLAIN_MORE). */
 export function duelLevelPool(rhetoric, plain, level = 1, final = false) {
-  const L = clampLevel(final ? level + 1 : level), have = new Set(), all = rhetoric.filter((r) => r && plain[r.text] && DUEL_HARD[r.device] && !have.has(r.text) && have.add(r.text));
+  const L = clampLevel(final ? level + 1 : level), have = new Set(), all = rhetoric.filter((r) => r && plain[r.text] && DUEL_HARD[r.device] && !have.has(r.text) && have.add(r.text) && duelPieces(r.text, plain[r.text]));
   const pool = all.filter((r) => (L === 1 ? duelHard(r) === 1 : L === 2 ? duelHard(r) <= 2 : L >= 5 ? duelHard(r) >= 2 : true));
   return pool.length >= 5 ? pool : all;
 }
 export function duelRound(rhetoric, plain, seed, level = 1, n = 5, o = {}) {
   const pool = duelLevelPool(rhetoric, plain, level, o.final);
   return memDraw(pool, (r) => itemKey('d', r.text), o.mem, 'duel:' + seed, n, o.now).sort((a, b) => duelHard(a) - duelHard(b) || a.text.length - b.text.length).map((r, i) => {
-    let others = DEVICES.filter((d) => d !== r.device && !(r.also || []).includes(d));
-    if (r.device === 'rhetorical question') others = ['personification', ...others];
-    others.sort((a, b) => b.length - a.length || (a < b ? -1 : 1));
-    const [longest, ...rest] = others, wrong = [longest, ...sample(rng('dw:' + seed + i), rest, 2)];
-    const id = `duel:${hash(String(seed))}:${i}`, { options, answer } = permute(id, [r.device, ...wrong]);
-    const strong = hash(id + ':ab') % 2, versions = strong ? [plain[r.text], r.text] : [r.text, plain[r.text]];
-    return { original: r.text, work: r.work, device: r.device, versions, strong, options, answer, cat: r.device, key: itemKey('d', r.text) };
+    const id = `duel:${hash(String(seed))}:${i}`, strong = hash(id + ':ab') % 2, pl = plain[r.text], versions = strong ? [pl, r.text] : [r.text, pl];
+    const { tiles } = duelPieces(r.text, pl, seed);
+    return { original: r.text, plain: pl, work: r.work, device: r.device, versions, strong, scored: duelFair(r.text, pl), tiles, cat: r.device, key: itemKey('d', r.text) };
   });
 }
 /* The rival's points, line by line: the app's own, seeded from the duel and the rival's Bee traits — the
    child's score never depends on them. */
 export function duelRival(rv, seed, n) { const R = rng(`duel-rival:${seed}:${rv.id}`); return Array.from({ length: n }, () => R() < 0.25 + (rv.skill || 0.6) * 0.6); }
-export function duelNew(rounds, level = 1, rival = null) { return { ...quizNew('duel', rounds, level), stage: 'which', which: null, strongRight: 0, rival }; }
-/* Stage one: which version is stronger (shown right or wrong, never scored). Stage two: why — scored. */
+const duelStage = (q) => (q?.scored ? 'which' : 'build');
+export function duelNew(rounds, level = 1, rival = null) { return { ...quizNew('duel', rounds, level), stage: duelStage(rounds[0]), which: null, picks: [], strongRight: 0, rival }; }
+/* The line the child has built from the tiles, joined with spaces. */
+export const duelBuilt = (q, picks) => picks.map((i) => q.tiles[i].text).join(' ');
+/* Stage one (only where duelFair): which version is stronger — scored. Then BUILD the strong line. The item
+   is right when the build is the original and, where stage one was asked, the original was picked. A wrong
+   build holds, the original shown in place, until 'next'. */
 export function duelStep(s, a) {
   if (s.over) return s;
+  const q = s.rounds[s.i];
   if (s.stage === 'which') {
     if (a.type !== 'pick' || !(a.i === 0 || a.i === 1)) return s;
-    const q = s.rounds[s.i], ok = a.i === q.strong;
-    return { ...s, stage: 'why', which: { pick: a.i, ok }, strongRight: s.strongRight + (ok ? 1 : 0), seq: s.seq + 1 };
+    const ok = a.i === q.strong;
+    return { ...s, stage: 'build', which: { pick: a.i, ok }, strongRight: s.strongRight + (ok ? 1 : 0), score: s.score + (ok ? 1 : 0), seq: s.seq + 1 };
   }
-  const t = quizStep(s, a);
-  if (a.type === 'next' && t !== s) return { ...t, stage: 'which', which: null };
-  return t;
+  if (s.state) {
+    if (a.type !== 'next') return s;
+    const i = s.i + 1; return { ...s, i: Math.min(i, s.rounds.length - 1), state: null, which: null, picks: [], stage: duelStage(s.rounds[i]), over: i >= s.rounds.length };
+  }
+  if (a.type === 'tile') { if (!(a.i >= 0 && a.i < q.tiles.length) || s.picks.includes(a.i)) return s; return { ...s, picks: [...s.picks, a.i] }; }
+  if (a.type === 'undo') return s.picks.length ? { ...s, picks: s.picks.slice(0, -1) } : s;
+  if (a.type === 'check') {
+    if (!s.picks.length) return s;
+    const built = duelBuilt(q, s.picks), buildOk = built === q.original, ok = buildOk && (!q.scored || !!s.which?.ok), c = comboOf(s, ok), gain = (buildOk ? 1 : 0) + c.comboBonus;
+    return { ...s, ...c, state: { ok, buildOk, built, picks: s.picks, gain, combo: c.comboBonus }, score: s.score + gain, right: s.right + (ok ? 1 : 0), answered: s.answered + 1,
+      misses: ok ? s.misses : bump(s.misses, q.cat), seq: s.seq + 1, results: [...s.results, ok] };
+  }
+  return s;
 }
 /* the duel so far: the child's points (reasons right) against the rival's, over the lines played */
 export function duelTally(g) { const played = g.results.length, rv = g.rival?.pts || []; return { you: g.results.filter(Boolean).length, them: rv.slice(0, played).filter(Boolean).length, played }; }

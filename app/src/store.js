@@ -9,7 +9,7 @@
    Versioned: a change of shape adds a vN_to_vN+1 step to STEPS; an old step is never edited.
    ?demo holds a sample household in memory: nothing is read from or written to storage. */
 
-export const VERSION = 3;
+export const VERSION = 5;
 const KEY = 'bizzing-english.household';
 const DEV = 'bizzing-english.device';
 
@@ -27,6 +27,18 @@ const STEPS = {
   /* v3: "Find my starting place" — k.place { word, reading, at }, where a road starts; null until the
      check is taken (the band's head start holds until then) */
   2: (h) => { for (const k of h.kids || []) if (k.place === undefined) k.place = null; h.v = 3; return h; },
+  /* v4 (the games' level chip, handover C §1.4 — src/hubs.js): every game record gets `pick`, the level the
+     child chose by hand (null = Auto), and its own `level` kept to 1–5. Only the Play games' records; the
+     Tools' records under k.games (vocab, typing, idioms, figday) are not games with levels. */
+  3: (h) => {
+    const GAMES = ['builder', 'rush', 'figure', 'who', 'plot', 'root', 'duel'];
+    for (const k of h.kids || []) for (const id of GAMES) { const r = k.games?.[id]; if (!r || typeof r !== 'object') continue; if (r.pick === undefined) r.pick = null; r.level = Math.max(1, Math.min(5, Math.round(+r.level || 1))); }
+    h.v = 4; return h;
+  },
+  /* v5: Inkwell Detective — k.inkwell { cases, persona, level, hoard, … } (detective-season.js newInkwell), null
+     until the child first opens the Agency; the persona's own name, if the child renames it, sits apart in
+     k.inkwellName, which no backup carries (a child may type their own name there) */
+  4: (h) => { for (const k of h.kids || []) { if (k.inkwell === undefined) k.inkwell = null; if (k.inkwellName === undefined) k.inkwellName = null; } h.v = 5; return h; },
 };
 
 export function migrate(h) {

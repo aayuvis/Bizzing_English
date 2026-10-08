@@ -1,0 +1,55 @@
+/* hubs.css — the Play tab's cards, the level chip, and a hub's mode tiles (views/hubs.js; handover C §4.0).
+   The hub itself stands on the stage (stage.css). */
+
+.pcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; margin: 0 20px; }
+.pcard { display: grid; grid-template-rows: 116px auto; border-radius: 18px; overflow: hidden; background: var(--card); color: var(--ink); border: 1px solid var(--line); box-shadow: 0 4px 14px rgba(0, 0, 0, .08); min-width: 0; }
+.pc-art { position: relative; display: block; background-size: cover; background-position: center; }
+.pc-kind { position: absolute; left: 10px; top: 10px; padding: 3px 10px; border-radius: 999px; background: rgba(26, 20, 13, .66); color: #f7ead0; font: 700 12px var(--bz-body); }
+.pc-body { display: grid; gap: 8px; padding: 12px 14px 14px; align-content: start; min-width: 0; }
+.pc-body h3 { margin: 0; } .pc-body h3 a { color: inherit; text-decoration: none; }
+.pc-body p { margin: 0; }
+.pc-modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.pc-mode { display: grid; align-content: center; min-height: 48px; padding: 6px 12px; border-radius: 12px; background: var(--bz-chip); color: var(--ink); text-decoration: none; font: 700 14.5px var(--bz-body); min-width: 0; }
+.pc-mode small { font-weight: 500; font-size: 12px; color: var(--muted); }
+.pc-foot { justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+/* the level chip: Auto, then 1–5 — one radio group, a 44 px target each */
+.lvchip { display: grid; grid-template-columns: 1.5fr repeat(5, minmax(0, 1fr)); gap: 4px; width: 100%; max-width: 440px; padding: 4px; border-radius: 14px; background: color-mix(in srgb, var(--ink) 8%, transparent); justify-self: center; }
+.lvc-b { display: grid; justify-items: center; align-content: center; gap: 1px; min-height: 44px; min-width: 0; padding: 2px; border-radius: 10px; border: 0; background: transparent; color: var(--ink); cursor: pointer; font: 700 13px var(--bz-body); }
+.lvc-b b { font: 800 16px var(--mono); } .lvc-b small { font-size: 11px; opacity: .75; }
+.lvc-b .gb-stars svg { width: 9px; height: 9px; }
+.lvc-b:hover { background: color-mix(in srgb, var(--bz-accent) 12%, transparent); }
+.lvc-b.on { background: var(--bz-accent); color: var(--bz-accent-ink); box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .18); }
+.lvc-b.on .gb-stars i, .lvc-b.on .gb-stars i.on { color: inherit; }
+.lvchip.compact { max-width: 100%; }
+.stg .lvchip { background: rgba(120, 82, 30, .14); }
+.stg .lvc-b { color: var(--stg-ink); }
+.stg-mid .lvchip { background: rgba(255, 236, 200, .12); max-width: 380px; } .stg-mid .lvc-b { color: var(--stg-glass-ink); }
+.stg-mid .lvc-b.on { color: var(--bz-accent-ink); }
+.titlecard .lvchip { max-width: 520px; }
+
+/* a hub: its modes as tiles, side by side and the same size */
+.htiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: min(100%, 880px); }
+.htile { position: relative; display: grid; gap: 10px; padding: 12px; justify-items: center; align-content: start; text-align: center; color: var(--stg-ink); border-radius: 16px; border: 1px solid color-mix(in srgb, var(--stg-edge) 70%, transparent);
+  background: repeating-radial-gradient(circle at 23% 31%, rgba(120, 82, 30, .045) 0 2px, transparent 2px 6px), radial-gradient(ellipse at 50% 40%, transparent 55%, rgba(110, 72, 24, .18)), linear-gradient(172deg, var(--stg-paper-a), var(--stg-paper-b));
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .3), inset 0 0 36px rgba(120, 80, 30, .16); min-width: 0; }
+.ht-art { position: relative; display: block; width: 100%; height: 132px; border-radius: 12px; background-size: cover; background-position: center; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15); }
+.ht-lv { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); padding: 3px 12px; border-radius: 999px; background: rgba(26, 20, 13, .7); color: #f7ead0; font: 700 12.5px var(--bz-body); white-space: nowrap; }
+.ht-text { display: grid; gap: 4px; }
+.htile h3 { margin: 0; font: 800 20px var(--bz-display); color: inherit; }
+.ht-promise { margin: 0; font: 500 14.5px/1.4 var(--bz-body); color: var(--stg-muted); }
+.ht-foot { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.ht-best { display: inline-flex; gap: 4px; align-items: center; font: 700 13.5px var(--bz-body); } .ht-best svg { width: 15px; height: 15px; }
+.ht-play { min-width: 140px; }
+
+@media (max-width: 720px) {
+  .pcards { margin: 0; gap: 12px; }
+  .htiles { grid-template-columns: 1fr; gap: 10px; }
+  .htile { grid-template-columns: 76px minmax(0, 1fr); justify-items: stretch; text-align: left; padding: 10px; gap: 8px 10px; }
+  .ht-art { height: 76px; }
+  .ht-lv { bottom: 4px; font-size: 11px; padding: 2px 8px; }
+  .htile h3 { font-size: 17px; } .ht-promise { font-size: 13px; }
+  .htile .lvchip, .ht-foot { grid-column: 1 / -1; }
+  .ht-foot { justify-content: space-between; }
+  .ht-play { min-width: 120px; }
+}

@@ -14,7 +14,7 @@ import '../../styles/tools.css';
 import { S, kid, save, render, pay, checkMedals } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty } from '../ui.js';
 import { TOOLS, SMALL_TOOLS, vocDecks, vocProg, vocBuildSet, vocCheck, vocFinish, vocSetSize, VOC_PASS, OC, ORIGIN_NOTE, figDecks, figDeckItems, figFilter, figThemes,
-  idiomRound, idiomStory, TY_LESSONS, TY_FINGER, TY_FCOLOR, TY_ROWS, TEST_SECS, tySeqFor, tyTestSeq, typingScore, tyStats, quoteShelf, showLine, authorKey, QUOTE_CATS, quoteFilter } from '../tools.js';
+  idiomRound, idiomStory, TY_LESSONS, TY_FINGER, TY_FCOLOR, TY_ROWS, TEST_SECS, TY_PASS, tySeqFor, tyTestSeq, typingScore, tyStats, tyCorpus, tyPays, tyPractised, tyElapsed, tyTimeLeft, tyPause, tyResume, quoteShelf, showLine, authorKey, QUOTE_CATS, quoteFilter } from '../tools.js';
 import { loadLexicon, lex } from '../lexicon.js';
 import { allStops, strand } from '../curriculum.js';
 import { WORKS, PASSAGES } from '../data/library.js';
@@ -46,7 +46,7 @@ export async function openTool(parts) {
   const r = { mode: 'tool', key: parts.join('/'), tool: tool || '' };
   if (tool === 'vocab') { await Promise.all([loadVocab(), loadLexicon()]); if (a) Object.assign(r, { deck: a, phase: 'study', i: 0, flip: false }); }
   else if (tool === 'idioms') { await loadIdioms(); Object.assign(r, a === 'deck' ? { phase: 'deck', deck: b, i: 0, flip: false } : a === 'quiz' ? newQuiz() : { phase: 'browse', q: a === 'p' ? b || '' : '', type: 'all', theme: 'all', page: 0 }); }   // #/tools/idioms/p/<phrase>: that phrase, found (My Feed's button)
-  else if (tool === 'typing') { await loadLexicon(); if (a) Object.assign(r, newTyping(a)); }
+  else if (tool === 'typing') { await Promise.all([loadLexicon(), loadVocab(), loadPassages()]); if (a) Object.assign(r, newTyping(a)); }
   else if (tool === 'quotes') { await loadPassages(); if (a === 'voices') { await loadQuotes(); Object.assign(r, { phase: 'voices', cat: b || 'all', q: '', page: 0 }); } else Object.assign(r, { phase: 'lines', author: a || 'all' }); }
   S.run = r;
 }
@@ -207,55 +207,76 @@ function idiomsView(r) {
 }
 
 /* ---------- Typing Trainer ---------- */
-let tyTimer = null;
+/* The pools are curated (tools.js): kid-safe Bee words that are real words of the Library's own passages,
+   the held dictation sentences, and English's vocabulary decks for "Type the meaning". A lesson pays once,
+   and only at 90% or better. The sixty-second test pauses while the tab is hidden and carries on with the
+   next key. Under 400 px the on-screen keyboard splits into a left-hand and a right-hand block, so every
+   key stays at least 40 px wide; the finger colours and the lit next key stay. */
+let tyTimer = null, CORPUS = null;
 function stopTyping() { if (tyTimer) clearInterval(tyTimer); tyTimer = null; }
+const corpus = () => (CORPUS ||= tyCorpus(PASSAGES.map((p) => passageText(p.id)?.text || '')));
 function newTyping(id) {
-  const k = kid(), sentences = WRITING.dictation.filter((s) => cleared(work(s.work)) && s.band <= k.band).map((s) => s.text);
-  if (id === 'test') return { ty: { mode: 'test', title: 'Sixty-second typing test', tip: '', seq: tyTestSeq(lex(), k.band, rand()), pos: 0, typed: 0, errors: 0, marks: [], startT: 0, done: false, shift: false } };
+  const k = kid(), sentences = WRITING.dictation.filter((s) => cleared(work(s.work)) && s.band <= k.band).map((s) => s.text), base = { pos: 0, typed: 0, errors: 0, marks: [], startT: 0, paused: 0, pausedMs: 0, done: false, shift: false };
+  if (id === 'test') return { ty: { ...base, mode: 'test', title: 'Sixty-second typing test', tip: '', seq: tyTestSeq(lex(), k.band, rand(), corpus()) } };
   const n = TY_LESSONS.findIndex((x) => x.id === id), l = TY_LESSONS[n < 0 ? 0 : n];
-  return { ty: { mode: 'lesson', lesson: l.id, n: (n < 0 ? 0 : n) + 1, title: l.name, tip: l.tip, seq: tySeqFor(l, { lex: lex(), band: k.band, sentences, seed: rand() }), pos: 0, typed: 0, errors: 0, marks: [], startT: 0, done: false, shift: false } };
+  return { ty: { ...base, mode: 'lesson', lesson: l.id, n: (n < 0 ? 0 : n) + 1, title: l.name, tip: l.tip, seq: tySeqFor(l, { lex: lex(), band: k.band, sentences, seed: rand(), corpus: corpus(), decks: VOCAB ? decks() : [] }) } };
 }
 function typingHome() {
   const st = tyStats(kid());
   const rows = TY_LESSONS.map((l, i) => { const acc = st.lessons[l.id];
-    return `<a class="stoprow${acc >= 90 ? ' passed' : ''}" href="#/tools/typing/${l.id}" data-lesson="${l.id}"><span class="st">${acc >= 90 ? icon('check') : `<b>${i + 1}</b>`}</span><span><b>${esc(l.name)}</b><small>${acc != null ? `best accuracy ${acc}%` : 'not tried yet'}</small></span><span>${icon('next')}</span></a>`; }).join('');
+    return `<a class="stoprow${acc >= TY_PASS ? ' passed' : ''}" href="#/tools/typing/${l.id}" data-lesson="${l.id}"><span class="st">${acc >= TY_PASS ? icon('check') : `<b>${i + 1}</b>`}</span><span><b>${esc(l.name)}</b><small>${acc != null ? `best accuracy ${acc}%` : 'not tried yet'}</small></span><span>${icon('next')}</span></a>`; }).join('');
   return pageHead({ title: 'Typing Trainer', sub: st.bestWpm ? `best ${st.bestWpm} words a minute · ${st.bestAcc}% accurate` : 'finger by finger, then the sixty-second test', back: BACK, actions: [{ icon: 'clock', label: '60-second test', href: '#/tools/typing/test' }] }) +
-    `<div class="tl-wrap stack"><div class="card"><p style="margin:0">Learn to touch-type finger by finger — then race the sixty-second test. A keyboard is best; on a touch screen, keys appear on the screen. The first time you finish each lesson earns coins; speed alone never does.</p></div><div class="card"><div class="ladder tl-lessons">${rows}</div></div></div>`;
+    `<div class="tl-wrap stack"><div class="card"><p style="margin:0">Learn to touch-type finger by finger — then race the sixty-second test. A keyboard is best; on a touch screen, keys appear on the screen. A lesson earns coins the first time you finish it at ${TY_PASS}% accuracy or better; speed alone never does.</p></div><div class="card"><div class="ladder tl-lessons">${rows}</div></div></div>`;
 }
+const keyId = (ch) => (ch === ' ' ? 'space' : ch === ';' ? 'semi' : ch === ',' ? 'comma' : ch === '.' ? 'dot' : ch);
 function typingRun(r) {
   const t = r.ty, st = tyStats(kid());
   const head = pageHead({ title: t.title, sub: t.mode === 'test' ? 'the clock starts on your first key' : `lesson ${t.n} of ${TY_LESSONS.length}`, back: { label: 'Typing', href: '#/tools/typing' } });
-  if (t.done) return head + `<div class="tl-wrap"><div class="card stack tl-result"><span class="kick">${t.mode === 'test' ? 'Test complete' : 'Lesson complete'}</span>
+  if (t.done) {
+    const pr = tyPractised(t.seq, t.marks, t.pos), keys = pr.keys.map((c) => `<kbd class="ty-kb">${c === ' ' ? 'space' : esc(c)}</kbd>`).join('');
+    const line = t.mode === 'test' ? (t.best ? 'A new best for you.' : `Your best is ${st.bestWpm} words a minute.`)
+      : t.paid ? `${t.acc}% — lesson passed for the first time, and coins in your wallet.` : t.acc >= TY_PASS ? `${t.acc}% — passed. Coins come once, the first time.` : `${t.acc}% — the coins come at ${TY_PASS}%. Slow down a little: accuracy first, speed follows.`;
+    return head + `<div class="tl-wrap"><div class="card stack tl-result"><span class="kick">${t.mode === 'test' ? 'Test complete' : 'Lesson complete'}</span>
     <div class="stats"><div class="stat"><b>${t.wpm}</b><small>words a minute</small></div><div class="stat"><b>${t.acc}%</b><small>accuracy</small></div></div>
-    <p style="margin:0">${t.mode === 'test' ? (t.best ? 'A new best for you.' : `Your best is ${st.bestWpm} words a minute.`) : t.paid ? 'Lesson finished for the first time — coins in your wallet.' : 'Accuracy first; speed follows.'}</p>
+    <p style="margin:0">${line}</p>
+    <div class="ty-practised"><p style="margin:0"><b>You practised</b> ${t.mode === 'test' ? `${t.pos} keys of Bee words at your level` : esc(t.title)}: <span class="ty-kbs">${keys}</span></p>
+    <p style="margin:0">${pr.missed.length ? `<b>Words to try again:</b> ${pr.missed.slice(0, 12).map((w) => esc(w)).join(', ')}` : '<b>No word missed.</b>'}</p></div>
     <div class="row">${t.mode === 'test' ? link('Test again', '#/tools/typing/test', { ic: 'undo' }) : btn('Once more', 'ty-again', { ic: 'undo' })}${link('All lessons', '#/tools/typing', { cls: 'out' })}</div></div></div>`;
+  }
   // each word is one unbreakable group and each space a real space, so a line breaks BETWEEN words, never
   // inside one ('chec / ked' — brief v4)
   const cell = (ch, i) => `<span id="ty-c${i}" class="${i < t.pos ? (t.marks[i] ? 'ok' : 'err') : i === t.pos ? 'cur' : ''}">${ch === ' ' ? ' ' : esc(ch)}</span>`;
   let chars = '', at = 0;
   for (const part of t.seq.split(/( )/)) { if (!part) continue; const cells = part.split('').map((ch, j) => cell(ch, at + j)).join(''); chars += part === ' ' ? cells : `<span class="ty-w">${cells}</span>`; at += part.length; }
   const want = (t.seq[t.pos] || '').toLowerCase();
-  const key = (ch) => { const f = TY_FINGER[ch]; return `<button class="ty-key${ch === want ? ' next' : ''}" id="ty-k-${ch === ';' ? 'semi' : ch === ',' ? 'comma' : ch === '.' ? 'dot' : ch}" data-act="ty-tap" data-arg="${esc(ch)}" style="border-bottom-color:${f ? TY_FCOLOR[f] : '#9A93AB'}">${ch === ';' ? ';' : esc(t.shift ? ch.toUpperCase() : ch.toUpperCase())}</button>`; };
+  const key = (ch) => { const f = TY_FINGER[ch]; return `<button class="ty-key${ch === want ? ' next' : ''}" id="ty-k-${keyId(ch)}" data-act="ty-tap" data-arg="${esc(ch)}" style="border-bottom-color:${f ? TY_FCOLOR[f] : '#9A93AB'}">${ch === ';' ? ';' : esc(ch.toUpperCase())}</button>`; };
+  // the board as six half-rows: two columns on a wide screen (one keyboard), one under 400 px (left hand, then right)
+  const halves = TY_ROWS.map((row) => [row.slice(0, 5), row.slice(5)]);
+  const half = (keys, side, i) => `<div class="ty-half ty-${side}${i + 1}">${keys.split('').map(key).join('')}</div>`;
+  const time = t.mode === 'test' ? `<b id="ty-time" class="ty-time">${t.paused ? 'paused' : `${t.startT ? tyTimeLeft(t) : TEST_SECS}s`}</b>` : '';
   return head + `<div class="tl-wrap stack ty">
-    ${t.tip ? `<p class="note">${esc(t.tip)}</p>` : ''}<div class="row" style="justify-content:space-between"><div class="tl-progress" style="flex:1" aria-hidden="true"><i id="ty-prog" style="width:${Math.round((t.pos / t.seq.length) * 100)}%"></i></div>${t.mode === 'test' ? `<b id="ty-time" class="ty-time">${TEST_SECS}s</b>` : ''}</div>
+    ${t.tip ? `<p class="note">${esc(t.tip)}</p>` : ''}<div class="row" style="justify-content:space-between"><div class="tl-progress" style="flex:1" aria-hidden="true"><i id="ty-prog" style="width:${Math.round((t.pos / t.seq.length) * 100)}%"></i></div>${time}</div>
     <div class="card ty-text" aria-label="Type this">${chars}</div>
-    <div class="ty-board" aria-label="On-screen keyboard">${TY_ROWS.map((row) => `<div class="ty-row">${row.split('').map(key).join('')}</div>`).join('')}
-      <div class="ty-row"><button class="ty-key ty-shift" data-act="ty-shift" aria-pressed="${t.shift}">Shift</button><button class="ty-key ty-space${want === ' ' ? ' next' : ''}" id="ty-k-space" data-act="ty-tap" data-arg=" ">space</button><button class="ty-key ty-shift" data-act="ty-tap" data-arg="Backspace">Back</button></div>
+    <div class="ty-board" aria-label="On-screen keyboard">${halves.map(([l, rr], i) => half(l, 'l', i) + half(rr, 'r', i)).join('')}
+      <div class="ty-row ty-sp"><button class="ty-key ty-shift" data-act="ty-shift" aria-pressed="${t.shift}">Shift</button><button class="ty-key ty-space${want === ' ' ? ' next' : ''}" id="ty-k-space" data-act="ty-tap" data-arg=" ">space</button><button class="ty-key ty-shift" data-act="ty-tap" data-arg="Backspace">Back</button></div>
       <div class="ty-legend">${[['#E8458C', 'pinky'], ['#F0A82A', 'ring'], ['#13A892', 'middle'], ['#3D7DF0', 'left index'], ['#7B52E0', 'right index']].map(([c, l]) => `<span><i style="background:${c}"></i>${l}</span>`).join('')}</div></div>
-    <p class="note">Type on your keyboard, or tap the keys — ${t.mode === 'test' ? 'the sixty-second clock starts on your first key.' : 'accuracy first, speed follows.'}</p></div>`;
+    <p class="note">Type on your keyboard, or tap the keys — ${t.mode === 'test' ? 'the sixty-second clock starts on your first key, and stops while this page is hidden.' : 'accuracy first, speed follows.'}</p></div>`;
 }
 function tyCursor(t) {
   document.querySelectorAll('.ty-text .cur').forEach((e) => e.classList.remove('cur'));
   document.getElementById('ty-c' + t.pos)?.classList.add('cur');
   document.querySelectorAll('.ty-key.next').forEach((e) => e.classList.remove('next'));
-  const want = (t.seq[t.pos] || '').toLowerCase(), id = want === ' ' ? 'space' : want === ';' ? 'semi' : want === ',' ? 'comma' : want === '.' ? 'dot' : want;
-  document.getElementById('ty-k-' + id)?.classList.add('next');
+  document.getElementById('ty-k-' + keyId((t.seq[t.pos] || '').toLowerCase()))?.classList.add('next');
   const p = document.getElementById('ty-prog'); if (p) p.style.width = Math.round((t.pos / t.seq.length) * 100) + '%';
+}
+function tyClock(r) {
+  const t = r.ty; stopTyping();
+  tyTimer = setInterval(() => { if (S.run !== r || t.done) { stopTyping(); return; } if (t.paused) return; const left = tyTimeLeft(t); const el = document.getElementById('ty-time'); if (el) el.textContent = left + 's'; if (left <= 0) tyFinish(r); }, 250);
 }
 function tyProcess(ch) {
   const r = S.run, t = r?.ty; if (!t || t.done) return;
-  if (!t.startT) { t.startT = Date.now();
-    if (t.mode === 'test') tyTimer = setInterval(() => { if (S.run !== r || t.done) { stopTyping(); return; } const left = TEST_SECS - Math.floor((Date.now() - t.startT) / 1000); const el = document.getElementById('ty-time'); if (el) el.textContent = Math.max(0, left) + 's'; if (left <= 0) tyFinish(r); }, 250); }
+  if (t.paused) { tyResume(t); if (t.mode === 'test') tyClock(r); const el = document.getElementById('ty-time'); if (el) el.textContent = tyTimeLeft(t) + 's'; }   // back from a hidden tab: the next key carries on
+  if (!t.startT) { t.startT = Date.now(); if (t.mode === 'test') tyClock(r); }
   if (ch === 'Backspace') { if (t.pos > 0) { t.pos--; const sp = document.getElementById('ty-c' + t.pos); if (sp) sp.className = ''; tyCursor(t); } return; }
   if (ch.length !== 1) return;
   if (t.shift && /[a-z]/.test(ch)) { ch = ch.toUpperCase(); t.shift = false; document.querySelector('.ty-shift')?.setAttribute('aria-pressed', 'false'); }
@@ -267,13 +288,18 @@ function tyProcess(ch) {
 }
 function tyFinish(r) {
   const t = r.ty; if (t.done) return; t.done = true; stopTyping();
-  Object.assign(t, typingScore({ typed: t.typed, errors: t.errors, ms: Date.now() - (t.startT || Date.now()) }));
+  Object.assign(t, typingScore({ typed: t.typed, errors: t.errors, ms: t.mode === 'test' ? Math.min(TEST_SECS * 1000, tyElapsed(t)) : tyElapsed(t) }));
   const k = kid(), st = tyStats(k);
   if (t.mode === 'test') { st.tests = (st.tests || 0) + 1; t.best = t.wpm > (st.bestWpm || 0); if (t.best) st.bestWpm = t.wpm; if (t.acc > (st.bestAcc || 0)) st.bestAcc = t.acc; }
   else { st.lessons[t.lesson] = Math.max(st.lessons[t.lesson] || 0, t.acc); st.sessions = (st.sessions || 0) + 1;
-    if (!st.paid[t.lesson]) { st.paid[t.lesson] = Date.now(); t.paid = true; pay('stop', `Typing lesson ${t.n}: ${t.title}`); } }
+    if (tyPays(st, t.lesson, t.acc)) { st.paid[t.lesson] = Date.now(); t.paid = true; pay('stop', `Typing lesson ${t.n} at ${t.acc}%: ${t.title}`); } }
   sfx('finish'); save(); render();
 }
+/* a hidden tab pauses the clock (lessons and the test); the next key carries on */
+if (typeof document !== 'undefined') document.addEventListener('visibilitychange', () => {
+  const r = S.run, t = r?.mode === 'tool' ? r.ty : null; if (!t || t.done || !t.startT || !document.hidden) return;
+  tyPause(t); stopTyping(); const el = document.getElementById('ty-time'); if (el) el.textContent = 'paused';
+});
 
 /* ---------- Quotes & Poems ---------- */
 function versePassageFor(l) {

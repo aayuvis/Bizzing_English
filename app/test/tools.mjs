@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import vm from 'node:vm';
 import { TOOLS, SMALL_TOOLS, TOOL_ROUTES, BEE_COMMIT, OC, ORIGIN_NOTE, figDecks, idiomItem, idiomRound, idiomStory, STORY_LINKS, vocDecks, vocItem, vocBuildSet, vocFinish, vocSetSize, VOC_PASS,
-  TY_LESSONS, TY_ROWS, tySeqFor, tyTestSeq, typingScore, quoteShelf, QUOTE_CATS } from '../src/tools.js';
+  TY_LESSONS, TY_ROWS, tySeqFor, tyTestSeq, typingScore, quoteShelf, QUOTE_CATS, TY_PASS, TY_PURGE, tyPays, tyPractised, tyElapsed, tyTimeLeft, tyPause, tyResume, tyCorpus, tyWords, tyMeanings, TEST_SECS } from '../src/tools.js';
 import { LINES, WORKS, PASSAGES } from '../src/data/library.js';
 import { MORE_LINES } from '../src/data/lines-more.js';
 import { cleared } from '../src/data/rights.js';
@@ -99,14 +99,34 @@ for (const d of VD) {
 const KEYS = new Set([...TY_ROWS.join(''), ' ', ...'abcdefghijklmnopqrstuvwxyz'.toUpperCase(), "'"]);
 const typeable = (s) => s.length > 0 && [...s].every((c) => KEYS.has(c) || c === "'");
 const sentences = WRITING.dictation.filter((s) => cleared(WORKS.find((w) => w.id === s.work))).map((s) => s.text);
-for (const l of TY_LESSONS) for (const band of [1, 2, 3]) { const s = tySeqFor(l, { lex: LEX, band, sentences, seed: 'q' }); ok(typeable(s.replace(/'/g, '')), `typing ${l.id} (band ${band}): "${s.slice(0, 40)}" has a key the on-screen keyboard lacks`); }
+const TYC = tyCorpus(json('src/data/passages.json').map((p) => p.text)), TYD = vocDecks(json('public/data/vocab.json'), LEX);
+for (const l of TY_LESSONS) for (const band of [1, 2, 3]) { const s = tySeqFor(l, { lex: LEX, band, sentences, seed: 'q', corpus: TYC, decks: TYD }); ok(typeable(s.replace(/'/g, '')), `typing ${l.id} (band ${band}): "${s.slice(0, 40)}" has a key the on-screen keyboard lacks`); }
 ok(TY_LESSONS.length === 15, 'typing: Bee has 15 lessons');
-ok(tyTestSeq(LEX, 2, 'x').split(' ').length >= 60, 'typing: the sixty-second test has too few words');
+ok(tyTestSeq(LEX, 2, 'x', TYC).split(' ').length >= 60, 'typing: the sixty-second test has too few words');
 const s1 = typingScore({ typed: 250, errors: 0, ms: 60000 }), s2 = typingScore({ typed: 250, errors: 25, ms: 60000 }), s3 = typingScore({ typed: 0, errors: 0, ms: 1000 }), s4 = typingScore({ typed: 100, errors: 0, ms: 30000 });
 ok(s1.wpm === 50 && s1.acc === 100, `typing: 250 clean keys in a minute is not 50 wpm, 100% (${JSON.stringify(s1)})`);
 ok(s2.wpm === 45 && s2.acc === 90, `typing: 25 slips in 250 keys is not 45 wpm, 90% (${JSON.stringify(s2)})`);
 ok(s3.wpm === 0 && s3.acc === 0, 'typing: nothing typed is not 0 and 0');
 ok(s4.wpm === 40, 'typing: 100 keys in 30 seconds is not 40 wpm');
+// pay a lesson only at 90% or better, once (HANDOVER C §1.3, §4.4)
+ok(TY_PASS === 90 && tyPays({ paid: {} }, 'home1', 90) && !tyPays({ paid: {} }, 'home1', 89) && !tyPays({ paid: { home1: 1 } }, 'home1', 100), 'typing: a lesson pays at 90%+, once — never below 90%');
+ok(!tyPays({ paid: {} }, 'home1', 0), 'typing: finishing a lesson at 0% pays');
+// the finish says what was practised: the keys used and the words with a slip
+{ const seq = 'fj dk sl', marks = [true, true, true, true, false, true, true, true]; const pr = tyPractised(seq, marks);
+  ok(pr.keys.join('') === 'fjdkls'.split('').sort((a, b) => TY_ROWS.join('').indexOf(a) - TY_ROWS.join('').indexOf(b)).join('') && pr.missed.join() === 'dk', `typing: what was practised (${JSON.stringify(pr)})`);
+  ok(tyPractised('the cat', [true, true, true, true, true, true, true]).missed.length === 0, 'typing: a clean lesson names a missed word'); }
+// the sixty-second test stops while the tab is hidden
+{ const t = { startT: 1000, done: false };
+  ok(tyTimeLeft(t, 21000) === 40, 'typing: 20 seconds in, 40 are left');
+  tyPause(t, 21000); ok(tyTimeLeft(t, 51000) === 40, 'typing: hidden for 30 seconds, the clock did not move');
+  tyResume(t, 51000); ok(tyTimeLeft(t, 56000) === 35 && tyElapsed(t, 56000) === 25000, 'typing: back again, the clock carries on from where it stopped');
+  ok(tyTimeLeft({ startT: 0 }, 99999) === TEST_SECS, 'typing: the clock starts on the first key'); }
+// curated pools: the junk fragments are gone, every word is a real word of the Library's passages
+for (const band of [1, 2, 3]) { const ws = tyWords(LEX, band, TYC);
+  ok(!ws.some((x) => ['col', 'doc', 'wont', 'mrs'].includes(x.w)), `typing band ${band}: a junk fragment is still in the pool`);
+  ok(ws.every((x) => TYC.has(x.w) && !TY_PURGE.has(x.w)), `typing band ${band}: a word outside the curated pool`);
+  ok(tyMeanings(TYD, band).length >= 30, `typing band ${band}: too few meanings from English's own decks`); }
+ok(tyWords(LEX, 1).some((x) => !TYC.has(x.w)) && tyWords(LEX, 1, TYC).every((x) => TYC.has(x.w)), 'typing: the corpus check removes nothing (it is blind)');
 
 // ── Quotes & Poems ────────────────────────────────────────────────────────
 const collapse = (s) => s.replace(/\s+/g, ' ').trim(), T = {};

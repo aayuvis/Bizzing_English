@@ -19,7 +19,8 @@ import { cleared } from '../src/data/rights.js';
 import { RIVALS, field } from '../src/contest.js';
 import { BOOKS } from '../src/book.js';
 import * as WP from '../src/data/wordparts.js';
-const { builderNew, builderStep, builderJudge, builderSentence, builderPool, builderRoad, builderLevelPool, builderLen, rushNew, rushStep, rushRoad, rushLevelPool, whoRound, whoLines, whoLevelPool, figureRound, figureStep, figurePool, huntsFrom, FIGURE_KINDS, HUNT_KINDS,
+import { missCard } from '../src/miss.js';
+const { builderNew, builderStep, builderJudge, builderSentence, clauseText, roundPay, runPay, figureWords, wordsRight, figurePhase, duelPieces, duelFair, duelBuilt, builderPool, builderRoad, builderLevelPool, builderLen, rushNew, rushStep, rushRoad, rushLevelPool, whoRound, whoLines, whoLevelPool, figureRound, figureStep, figurePool, huntsFrom, FIGURE_KINDS, HUNT_KINDS,
   quizNew, quizStep, plotRound, plotNew, plotStep, plotPairs, plotStories, plotPool, opening, forgeRound, forgePools, forgeFamilies, forgeFamilyRound, duelRound, duelNew, duelStep, duelRival, duelTally, GAMES, nextLevel, accuracy, mostMissed,
   memDraw, memRecord, memCounts, memOf, roundLog, itemKey, mentions, starsFor, runNew, runAdd, runScore, runPct, isFinal, ROUND_MS, MAX_LEVEL, MEM_GAP, MEM_CAP, ROUND_OF, RUN_ROUNDS, CLUE_POINTS } = G;
 const { ok, done } = tally('games');
@@ -48,62 +49,89 @@ const chapters = BOOKS.flatMap((b) => JSON.parse(readFileSync(url(`../src/data/b
 const HUNTS = huntsFrom(figs, Object.entries(TEXTS).filter(([w]) => shipped(w)).map(([work, text]) => ({ work, text })), WORKS);
 console.log(`games: ${HUNTS.length} passage hunts (${HUNT_KINDS.map((k) => `${k} ${HUNTS.filter((h) => h.figure === k).length}`).join(", ")})`);
 
-/* ---------- Sentence Builder ---------- */
-ok('Sentence Builder has a pool in every band', [1, 2, 3].every((b) => builderPool(b, XB).length >= 5));
+/* ---------- Clause Builder (Sentence Studio) ---------- */
+ok('Clause Builder has a pool in every band', [1, 2, 3].every((b) => builderPool(b, XB).length >= 5));
 let s = builderNew('t', 3); const c = s.cur;
-const order = (ks) => ks.map((k) => c.tiles.findIndex((t) => t.k === k));
-ok('front order is a sentence', builderJudge(c, order(['sub', 'dep', 'main'])) === 'front');
-ok('end order is a sentence', builderJudge(c, order(['main', 'sub', 'dep'])) === 'end');
-ok('a scramble is not', builderJudge(c, order(['dep', 'sub', 'main'])) === null);
-ok('the front sentence has its comma', /, /.test(builderSentence(c, 'front')));
-ok('tiles are never dealt already built', SEEDS.every((sd) => { const g = builderNew(sd, 2); return builderJudge(g.cur, [0, 1, 2]) === null; }));
-const build = (g, ks) => { const cc = g.cur; for (const k of ks) g = builderStep(g, { type: 'pick', i: cc.tiles.findIndex((t) => t.k === k) }); return g; };
-s = build(s, ['sub', 'dep', 'main']);
-ok('a built sentence scores 2', s.score === 2 && s.built === 1);
-s = build(s, ['main', 'sub', 'dep']);
-ok('building the other way round earns the variety bonus', s.score === 5 && s.variety === 1);
-const c3 = s.cur; s = build(s, ['dep', 'sub', 'main']);
-ok('a wrong build scores nothing and holds the tiles', s.score === 5 && s.wrong === 1 && s.cur === c3 && s.combo === 0 && s.misses.clause === 1 && s.curWrong);
+/* the pieces of a right build, found from the right sentence itself */
+const piecesFor = (cc, order) => { const want = bare(cc.right[order === 'front' ? 0 : 1]);
+  const go = (rest, used) => { if (!rest) return []; for (let i = 0; i < cc.tiles.length; i++) { const t = bare(cc.tiles[i].text); if (used.includes(i) || cc.tiles[i].k === 'decoy' || !(rest === t || rest.startsWith(t + ' '))) continue; const r = go(rest.slice(t.length).trim(), [...used, i]); if (r) return [i, ...r]; } return null; };
+  return go(want, []); };
+/* where the comma goes in a front build: after the piece that ends the joining word's clause */
+const commaAt = (cc, ps) => { const head = bare(cc.it.sub + ' ' + cc.it.dep); let acc = ''; for (let j = 0; j < ps.length; j++) { acc = (acc ? acc + ' ' : '') + bare(cc.tiles[ps[j]].text); if (acc === head) return j; } return -1; };
+const bare = (x) => String(x).toLowerCase().replace(/[,.!?]/g, '').replace(/\s+/g, ' ').trim();
+/* build it: the pieces, the capital if the first piece lacks it, the comma after the dependent clause when it comes first */
+const build = (g, order, o = {}) => { const cc = g.cur, ps = piecesFor(cc, order); for (const i of ps) g = builderStep(g, { type: 'pick', i });
+  if (order === 'front' && !o.noComma) g = builderStep(g, { type: 'comma', at: commaAt(cc, ps) });
+  if (!o.noCap && cc.right[order === 'front' ? 0 : 1].charAt(0) !== clauseText(cc, g.picks, g.commas, false).charAt(0)) g = builderStep(g, { type: 'cap' });
+  return builderStep(g, { type: 'check' }); };
+ok('front order, with its capital and comma, is the sentence', builderJudge(c, piecesFor(c, 'front'), [commaAt(c, piecesFor(c, 'front'))], true) === 'front');
+ok('end order, with its capital, is the sentence', builderJudge(c, piecesFor(c, 'end'), [], c.right[1].charAt(0) !== c.tiles[piecesFor(c, 'end')[0]].text.charAt(0)) === 'end');
+ok('the right orders rebuild the book’s sentence exactly', clauseText(c, piecesFor(c, 'front'), [commaAt(c, piecesFor(c, 'front'))], true) === builderSentence(c, 'front'));
+/* C §4.1: phrase tiles (each clause in 1–3), one decoy, 5–9 in all; lower-case — the main clause's capital gave the answer away in 412 of 445 */
+const allCur = LV.flatMap((L) => SEEDS.slice(0, 20).map((sd) => builderNew(sd, L, { extra: XB }).cur)).filter(Boolean);
+ok('Clause Builder: the joining word, one decoy, the clauses in phrase pieces — 5 to 9 tiles', allCur.every((cc) => cc.tiles.filter((t) => t.k === 'decoy').length === 1 && cc.tiles.filter((t) => t.k === 'sub').length === 1 && cc.tiles.length >= 5 && cc.tiles.length <= 9 && cc.tiles.filter((t) => t.k === 'dep').length >= 1 && cc.tiles.filter((t) => t.k === 'main').length >= 1));
+ok('Clause Builder: no tile carries a capital the child should add — a capital on a tile is the book’s own (I, a name), kept mid-sentence too', allCur.every((cc) => cc.tiles.every((t) => !/^[A-Z]/.test(t.text) || [0, 1].some((j) => cc.right[j].indexOf(t.text, 1) > 0))));
+ok('Clause Builder: the decoy can never join a clause — no subordinator, so the book’s sentence is the one right answer', allCur.every((cc) => !/^(when|because|if|although|after|before|while|until|since|as|unless|once|whenever|though)$/.test(cc.tiles.find((t) => t.k === 'decoy').text)));
+ok('Clause Builder: tiles are never dealt already built', allCur.every((cc) => cc.tiles.filter((t) => t.k !== 'decoy').map((t) => t.text).join(' ') !== bare(cc.right[0]) && bare(cc.tiles.filter((t) => t.k !== 'decoy').map((t) => t.text).join(' ')) !== bare(cc.right[1])));
+ok('Clause Builder: every dealt item can be built both ways', allCur.every((cc) => piecesFor(cc, 'front') && piecesFor(cc, 'end')));
+s = build(s, 'front');
+ok('a built sentence scores 2', s.score === 2 && s.built === 1 && !s.hold);
+s = build(s, 'end');
+ok('building the other way round earns the variety bonus (score, never coins)', s.score === 5 && s.variety === 1 && roundPay(s) === 2);
+{ const c3 = s.cur; let w = build(s, 'front', { noComma: true });
+  ok('a missing comma is a miss: it holds the item, scores nothing, names the comma', w.hold && w.score === 5 && w.wrong === 1 && w.cur === c3 && w.combo === 0 && w.misses.clause === 1 && w.hold.why.k === 'comma');
+  ok('T3: a held miss takes no tap and no tick until Continue', builderStep(w, { type: 'pick', i: 0 }) === w && builderStep(w, { type: 'tick', dt: 5000 }) === w && builderStep(w, { type: 'check' }) === w);
+  ok('T3: the hold carries the right sentence(s) — both orders — and what was built', w.hold.right.length === 2 && w.hold.right.includes(builderSentence(c3, 'front')) && typeof w.hold.given === 'string');
+  w = builderStep(w, { type: 'continue' }); ok('T3: Continue clears the board and moves on (one try an item)', !w.hold && w.picks.length === 0 && w.cur !== c3 && w.n === s.n + 1);
+  let x = build(s, 'end', { noCap: true }); if (x.hold) ok('a missing capital is a miss, named as the capital', x.hold.why.k === 'capital');
+  let y = s; const dec = y.cur.tiles.findIndex((t) => t.k === 'decoy'); for (const i of [dec, ...piecesFor(y.cur, 'end').slice(1)]) y = builderStep(y, { type: 'pick', i }); y = builderStep(y, { type: 'check' });
+  ok('the decoy used is a miss, and the miss says why it cannot join', y.hold && y.hold.why.k === 'decoy' && /needs a noun/.test(y.hold.why.text)); }
 ok('a tile cannot be picked twice', builderStep({ ...s, picks: [0] }, { type: 'pick', i: 0 }).picks.length === 1);
-let sameTwice = builderNew('u', 3); sameTwice = build(build(sameTwice, ['sub', 'dep', 'main']), ['sub', 'dep', 'main']);
+let sameTwice = builderNew('u', 3); sameTwice = build(build(sameTwice, 'front'), 'front');
 ok('the same order twice earns no bonus', sameTwice.score === 4 && sameTwice.variety === 0);
-let cb = builderNew('cb', 1); for (let n = 0; n < 3; n++) cb = build(cb, ['sub', 'dep', 'main']);
+let cb = builderNew('cb', 1); for (let k = 0; k < 3; k++) cb = build(cb, 'front');
 ok('three right in a row: the third earns the combo point', cb.combo === 3 && cb.score === 7 && cb.flash.combo === 1);
 /* rush hour: a sentence built inside 8 s earns +1; a slow one earns none; time never takes a point away */
-let rh = builderNew('rh', 3, { final: true }); rh = builderStep(rh, { type: 'tick', dt: 3000 }); rh = build(rh, ['sub', 'dep', 'main']);
+let rh = builderNew('rh', 3, { final: true }); rh = builderStep(rh, { type: 'tick', dt: 3000 }); rh = build(rh, 'front');
 ok('rush hour: built inside 8 s is +1', rh.score === 3 && rh.speed === 1 && rh.flash.fast === 1);
-rh = builderStep(rh, { type: 'tick', dt: 9000 }); rh = build(rh, ['main', 'sub', 'dep']);
+rh = builderStep(rh, { type: 'tick', dt: 9000 }); rh = build(rh, 'end');
 ok('rush hour: a slow one keeps its points, with no time bonus', rh.score === 3 + 3 && rh.speed === 1);
 const wl = builderLen;
-ok('Sentence Builder: level 1 is first-band only', builderRoad(1, { extra: XB }).every((x) => x.band === 1));
-ok('Sentence Builder: inside a round the first twenty sentences grow', SEEDS.slice(0, 10).every((sd) => LV.every((L) => { const r = builderRoad(L, { seed: sd, extra: XB }).slice(0, 20); return r.every((x, i) => !i || wl(x) >= wl(r[i - 1])); })));
+ok('Clause Builder: level 1 is first-band only', builderRoad(1, { extra: XB }).every((x) => x.band === 1));
+ok('Clause Builder: inside a round the first twenty sentences grow', SEEDS.slice(0, 10).every((sd) => LV.every((L) => { const r = builderRoad(L, { seed: sd, extra: XB }).slice(0, 20); return r.every((x, i) => !i || wl(x) >= wl(r[i - 1])); })));
 const avgW = (L, f) => { const p = builderLevelPool(L, XB, f); return p.reduce((a, x) => a + wl(x), 0) / p.length; };
-ok('Sentence Builder: each level reaches longer sentences, and the final is longer still', LV.slice(1).every((L) => avgW(L) >= avgW(L - 1)) && avgW(5) > avgW(1) && LV.every((L) => avgW(L, true) >= avgW(L)));
+ok('Clause Builder: each level reaches longer sentences, and the final is longer still', LV.slice(1).every((L) => avgW(L) >= avgW(L - 1)) && avgW(5) > avgW(1) && LV.every((L) => avgW(L, true) >= avgW(L)));
 
-/* ---------- Punctuation Rush ---------- */
+/* ---------- Comma Rush (Sentence Studio) ---------- */
 let r = rushNew('t', 3); const w = r.cur;
 for (const i of w.commas) r = rushStep(r, { type: 'toggle', i });
 r = rushStep(r, { type: 'submit' });
-ok('all the right commas: points plus a clean bonus', r.score === w.commas.length + 1 && r.clean === 1);
+ok('all the right commas: points plus a clean bonus, and on to the next', r.score === w.commas.length + 1 && r.clean === 1 && !r.hold && r.cur !== w);
 let r2 = rushNew('t', 3); r2 = rushStep(r2, { type: 'move', d: 1 }); r2 = rushStep(r2, { type: 'toggle', i: r2.cursor });
 ok('the keyboard way toggles the gap under the cursor', r2.sel.length === 1 && r2.sel[0] === r2.cursor);
-let r3 = rushNew('t', 3); const wr = [...Array(r3.cur.words.length - 1).keys()].find((i) => !r3.cur.commas.includes(i));
-if (wr != null) { r3 = rushStep(r3, { type: 'toggle', i: wr }); r3 = rushStep(r3, { type: 'submit' }); ok('a wrong comma costs, never below zero', r3.score === 0 && r3.misses[r3.flash.rule] === 1); }
+let r3 = rushNew('t', 3); const w3 = r3.cur, wr = [...Array(r3.cur.words.length - 1).keys()].find((i) => !r3.cur.commas.includes(i));
+if (wr != null) { r3 = rushStep(r3, { type: 'toggle', i: wr }); r3 = rushStep(r3, { type: 'submit' }); ok('a wrong comma costs, never below zero', r3.score === 0 && r3.misses[r3.flash.rule] === 1);
+  ok('T3 Comma Rush: a wrong sentence holds — the item stays, with the commas chosen kept for the miss card', r3.hold && r3.cur === w3 && r3.hold.sel.join() === String(wr) && rushStep(r3, { type: 'toggle', i: 0 }) === r3 && rushStep(r3, { type: 'tick', dt: 4000 }) === r3 && rushStep(r3, { type: 'submit' }) === r3);
+  const m = missCard({ type: 'commas', words: w3.words, commas: w3.commas, rule: w3.rule }, r3.hold.sel);
+  ok('T3 the miss card: the missed commas inserted in green, the extra one struck out, in the sentence itself', (m.match(/class="miss-fix"/g) || []).length === w3.commas.length && (m.match(/class="miss-del"/g) || []).length === 1 && /data-act="miss-go"/.test(m) && w3.words.every((x) => m.includes(x.replace(/&/g, '&amp;').replace(/'/g, '&#39;').replace(/"/g, '&quot;'))));
+  const r4 = rushStep(r3, { type: 'continue' }); ok('T3: Continue moves on to a fresh sentence', !r4.hold && r4.cur !== w3 && r4.sel.length === 0); }
+{ let rr = rushNew('rp', 3); const cur = rr.cur; for (const i of cur.commas) rr = rushStep(rr, { type: 'toggle', i }); const extra = [...Array(cur.words.length - 1).keys()].find((i) => !cur.commas.includes(i)); rr = rushStep(rr, { type: 'toggle', i: extra }); rr = rushStep(rr, { type: 'submit' });
+  ok('pay: right commas beside a wrong one earn no coin — only a clean sentence does', rr.right === cur.commas.length && rr.clean === 0 && roundPay(rr) === 0); }
 let rf2 = rushNew('rf', 3, { final: true }); rf2 = rushStep(rf2, { type: 'tick', dt: 4000 }); const wf = rf2.cur; for (const i of wf.commas) rf2 = rushStep(rf2, { type: 'toggle', i }); rf2 = rushStep(rf2, { type: 'submit' });
 ok('rush hour: a clean sentence inside 10 s is +1', rf2.score === wf.commas.length + 2 && rf2.speed === 1);
-ok('Punctuation Rush: level 1 is one comma a sentence', rushRoad(1, { extra: XR }).every((x) => x.commas.length === 1));
+ok('Comma Rush: level 1 is one comma a sentence', rushRoad(1, { extra: XR }).every((x) => x.commas.length === 1));
 const avgC = (L, f) => { const p = rushLevelPool(L, XR, f); return p.reduce((a, x) => a + x.commas.length, 0) / p.length; };
-ok('Punctuation Rush: each level brings more commas, the final the most', LV.slice(1).every((L) => avgC(L) >= avgC(L - 1)) && avgC(5) > 1.5 && LV.every((L) => avgC(L, true) >= avgC(L)));
-ok('Punctuation Rush: every comma sits between two words', rushLevelPool(5, XR).every((x) => x.commas.every((j) => j >= 0 && j < x.words.length - 1)));
+ok('Comma Rush: each level brings more commas, the final the most', LV.slice(1).every((L) => avgC(L) >= avgC(L - 1)) && avgC(5) > 1.5 && LV.every((L) => avgC(L, true) >= avgC(L)));
+ok('Comma Rush: every comma sits between two words', rushLevelPool(5, XR).every((x) => x.commas.every((j) => j >= 0 && j < x.words.length - 1)));
 
-/* soak: 60 s of ticks with taps interleaved and out of range, normal and final */
+/* soak: 60 s of ticks with taps interleaved and out of range, holds and Continue, normal and final */
 for (const [mk, st] of [[builderNew, builderStep], [rushNew, rushStep]]) {
   for (const [L, final] of [[1, false], [5, false], [3, true]]) {
     let g = mk('soak', L, { final }), steps = 0;
     try {
-      while (!g.over && steps < 5000) {
+      while (!g.over && steps < 20000) {
         g = st(g, { type: 'tick', dt: 17 }); steps++;
-        g = st(g, { type: steps % 3 ? 'pick' : 'toggle', i: steps % 5 - 1 }); g = st(g, { type: steps % 7 ? 'undo' : 'submit' }); g = st(g, { type: 'move', d: (steps % 3) - 1 });
+        g = st(g, { type: steps % 3 ? 'pick' : 'toggle', i: steps % 5 - 1 }); g = st(g, { type: ['undo', 'submit', 'check', 'comma', 'cap', 'continue'][steps % 6], at: steps % 4 - 1 }); g = st(g, { type: 'move', d: (steps % 3) - 1 });
       }
       ok(`${g.kind} L${L}${final ? ' final' : ''}: a 60 s soak ends cleanly`, g.over && g.t === ROUND_MS && Number.isFinite(g.score) && g.score >= 0);
       ok(`${g.kind} L${L}${final ? ' final' : ''}: nothing moves after the end`, st(g, { type: 'pick', i: 0 }) === g && st(g, { type: 'tick', dt: 999 }) === g);
@@ -112,17 +140,43 @@ for (const [mk, st] of [[builderNew, builderStep], [rushNew, rushStep]]) {
   }
 }
 
-/* ---------- levels, runs, stars ---------- */
-ok('a level rises at 80%', nextLevel(2, 0.8) === 3 && nextLevel(1, 1) === 2);
-ok('a level holds between 40% and 80%', nextLevel(3, 0.79) === 3 && nextLevel(3, 0.4) === 3);
-ok('a level falls one step below 40%', nextLevel(3, 0.39) === 2 && nextLevel(4, 0) === 3);
-ok('never below 1, never above the top', nextLevel(1, 0) === 1 && nextLevel(MAX_LEVEL, 1) === MAX_LEVEL);
-ok('a run with no attempts moves nothing', nextLevel(3, null) === 3);
-ok('stars: none below 40%, 1 from 40%, 2 at 70%, 3 at 90%', starsFor(0) === 0 && starsFor(0.39) === 0 && starsFor(0.4) === 1 && starsFor(0.69) === 1 && starsFor(0.7) === 2 && starsFor(0.89) === 2 && starsFor(0.9) === 3 && starsFor(null) === 0);
-let run = runNew(2); for (let i = 0; i < RUN_ROUNDS; i++) { ok(`round ${i + 1} is not the final`, !isFinal(run)); run = runAdd(run, { kind: 'who', score: 3, right: 1, answered: 2, rounds: [], misses: { a: 1 }, bestCombo: 1 }, 2); }
+/* ---------- levels, runs, stars — the owner's rule (C §1.4, T13) and the star line (C §1.3) ---------- */
+ok('T13: a level rises at 80%', nextLevel(2, 0.8) === 3 && nextLevel(1, 1) === 2);
+ok('T13: a level holds from 50% to 79%', nextLevel(3, 0.79) === 3 && nextLevel(3, 0.5) === 3 && nextLevel(3, 0.65) === 3);
+ok('T13: a level falls one step under 50%', nextLevel(3, 0.49) === 2 && nextLevel(4, 0) === 3 && nextLevel(5, 0.4) === 4);
+ok('T13: never below 1, never above the top', nextLevel(1, 0) === 1 && nextLevel(MAX_LEVEL, 1) === MAX_LEVEL);
+ok('T13: a run with no attempts moves nothing', nextLevel(3, null) === 3);
+ok('stars: none under 50%, 1 from 50%, 2 at 70%, 3 at 90%', starsFor(0) === 0 && starsFor(0.49) === 0 && starsFor(0.5) === 1 && starsFor(0.69) === 1 && starsFor(0.7) === 2 && starsFor(0.89) === 2 && starsFor(0.9) === 3 && starsFor(null) === 0);
+let run = runNew(2); for (let i = 0; i < RUN_ROUNDS; i++) { ok(`round ${i + 1} is not the final`, !isFinal(run)); run = runAdd(run, { kind: 'who', score: 3, right: 1, answered: 2, rounds: [], results: [true, false], misses: { a: 1 }, bestCombo: 1 }, 2); }
 ok('after three rounds comes the final', isFinal(run));
-run = runAdd(run, { kind: 'who', score: 5, right: 2, answered: 2, rounds: [], misses: { b: 2 }, bestCombo: 2 }, 1);
-ok('a run adds its rounds: score, accuracy, misses, new items', runScore(run) === 14 && runPct(run) === 5 / 8 && run.misses.a === 3 && run.misses.b === 2 && run.met === 7 && run.bestCombo === 2 && mostMissed(run) === 'a');
+run = runAdd(run, { kind: 'who', score: 5, right: 2, answered: 2, rounds: [], results: [true, true], misses: { b: 2 }, bestCombo: 2 }, 1);
+ok('a run adds its rounds: score, accuracy, misses, new items, coins banked', runScore(run) === 14 && runPct(run) === 5 / 8 && run.misses.a === 3 && run.misses.b === 2 && run.met === 7 && run.bestCombo === 2 && mostMissed(run) === 'a' && run.banked === 0 + 0 + 0 + 2);
+ok('pay: the finish pays what was banked when the run is half right or better — beyond chance, where a guess is right one time in four', run.kind === 'who' && G.fairPct('who', 5 / 8) === 0.5 && runPay(run) === 2 && runPay({ ...run, right: 4 }) === 0 && runPay({ ...run, kind: 'rush', right: 4 }) === 2);
+ok('beyond chance: a guess-level score is 0, a perfect one 100%, and games with no lucky guess are unchanged', G.fairPct('root', 0.25) === 0 && G.fairPct('root', 1) === 1 && G.fairPct('figure', 0.4) === 0.4 && G.fairPct('builder', 0.6) === 0.6);
+/* the chip (src/hubs.js): a hand-set level sticks until the run's check, which moves the level from the level PLAYED */
+{ const H = await import('../src/hubs.js'), rec = { level: 2, pick: null, top: 2 };
+  ok('T13 chip: Auto plays the game’s own level', H.playLevel(rec) === 2);
+  H.setPick(rec, 4); ok('T13 chip: a hand-set level is played next', H.playLevel(rec) === 4 && rec.pick === 4);
+  const copy = JSON.parse(JSON.stringify(rec)); ok('T13 chip: the hand-set level is plain data — it survives a save and a load', H.playLevel(copy) === 4);
+  let x = H.settleLevel(rec, 4, null); ok('T13 chip: a run with nothing tried checks nothing — the hand-set level still sticks', !x.checked && rec.pick === 4 && H.playLevel(rec) === 4);
+  x = H.settleLevel(rec, 4, 0.3); ok('T13 chip: the check moves the level from the level played (4, 30% → 3), says it kindly, and the chip goes back to Auto', x.drop && x.after === 3 && rec.level === 3 && rec.pick === null && H.playLevel(rec) === 3 && /warm up on Level 3/.test(x.line) && /move back up any time/.test(x.line));
+  x = H.settleLevel(rec, 3, 0.6); ok('T13 chip: 60% holds', !x.drop && !x.up && rec.level === 3);
+  x = H.settleLevel(rec, 3, 0.85); ok('T13 chip: 85% moves up', x.up && rec.level === 4 && x.firstUp);
+  H.setPick(rec, 1); x = H.settleLevel(rec, 1, 1); ok('T13 chip: a level-up below the highest reached is no first — choosing Level 1 again cannot farm the level-up coins', x.up && !x.firstUp && rec.level === 2);
+  H.setPick(rec, 'auto'); ok('T13 chip: Auto clears the hand-set level', rec.pick === null);
+  ok('T13 chip: a level out of range is held to 1–5', H.playLevel(H.setPick({ level: 9 }, 7)) === 5 && H.playLevel({ level: 0 }) === 1);
+  /* the Store seam: v4 gives every game record its pick; nothing else moves */
+  const { migrate, VERSION } = await import('../src/store.js');
+  const m = migrate({ v: 3, parent: {}, kids: [{ id: 'a', place: null, games: { rush: { level: 3, best: 9 }, vocab: { x: 1 }, figure: { level: 7 } } }] });
+  ok('store v3 → v4: every game record gains pick (Auto), its level held to 1–5, the Tools’ records untouched', VERSION >= 4 && m.v === VERSION && m.kids[0].games.rush.pick === null && m.kids[0].games.rush.level === 3 && m.kids[0].games.rush.best === 9 && m.kids[0].games.figure.level === 5 && !('pick' in m.kids[0].games.vocab));
+  /* T16: one in, one out */
+  ok(`T16: the Play tab never grows — ${H.CARDS.length} cards, at most ${H.CARD_LIMIT}, fewer than the ${H.BEFORE.length} before`, H.CARDS.length <= H.CARD_LIMIT && H.CARD_LIMIT <= H.BEFORE.length - 2);
+  ok('T16: every card that came in names the cards it replaced, and they are gone from the tab', H.CARDS.filter((c) => !H.BEFORE.includes(c)).every((c) => { const e = H.LEDGER.find((l) => l.in === c); return e && e.out.length && e.out.every((o) => H.BEFORE.includes(o) && !H.CARDS.includes(o)); }));
+  ok('T16: every game before is still reachable — on the tab or as a hub mode', H.BEFORE.every((g) => H.CARDS.includes(g) || Object.values(H.HUBS).some((h) => h.modes.includes(g))));
+  ok('the hubs are named behind one constant (C §3.3)', H.HUBS.studio.name === H.NAMES.studio && H.HUBS.craft.name === H.NAMES.craft && H.NAMES.studio === 'Sentence Studio' && H.NAMES.craft === 'Writer’s Craft');
+  ok('every hub mode knows its hub', Object.values(H.HUBS).every((h) => h.modes.every((m) => H.hubOf(m) === h.id && GAMES[m].hub === h.id)));
+}
+
 
 /* ---------- the item rules, as one checker (and proved by breaking it below) ---------- */
 function slotLean(items, n, key = (q) => q.answer) { const c = Array(n).fill(0); for (const q of items) c[key(q)]++; return Math.max(...c) / items.length; }
@@ -239,7 +293,7 @@ for (const L of LV) for (const final of [false, true]) {
   ok(`${tag}: no line slot over 35%`, !lns.length || slotLean(lns, lns[0].options.length) <= 0.35 + 1e-9);
   ok(`${tag}: rounds of ${ROUND_OF.figure}, easiest first, never a figure twice`, SEEDS.every((sd) => { const f = figureRound(figs, WORKS, sd, L, ROUND_OF.figure, { hunts: HUNTS, final }); const h = { simile: 1, alliteration: 1, metaphor: 2, personification: 3, none: 3 }; return f.length === ROUND_OF.figure && f.every((q, i) => !i || h[q.cat] >= h[f[i - 1].cat]) && new Set(f.map((q) => q.key)).size === f.length; }));
   const ML = final ? Math.min(5, L + 1) : L;
-  ok(`${tag}: ${ML >= 3 ? 'half the round is a passage hunt' : 'no hunts below level 3'}`, ML >= 3 ? hs.length >= SEEDS.length * 2 : !hs.length);
+  ok(`${tag}: hunts from level 1 — half the round is a passage hunt, of the kinds the level offers`, hs.length >= SEEDS.length * 2 && hs.every((q) => G.FIGURE_LEVELS[ML][q.cat]));
   if (hs.length) {
     ok(`${tag}: hunts — the spot and the naming slots never lean past 35%`, slotLean(hs, 4, (q) => q.at) <= 0.35 && slotLean(hs, 4) <= 0.35);
   }
@@ -255,17 +309,35 @@ ok('Figure Hunt: the figure sits in the keyed sentence, and only there', HUNTS.e
 ok('Figure Hunt: the other sentences carry no simile marker and no other figure from the bank', HUNTS.every((h) => h.sentences.every((x, i) => i === h.at || (!/\blike\b|\bas if\b|\bas though\b|\bas \w+ as\b/i.test(x) && !figs.some((f) => f.figure !== 'none' && x.includes(sp(f.text)))))));
 ok('Figure Hunt: three or four sentences, none of them a heading', HUNTS.every((h) => h.sentences.length >= 3 && h.sentences.length <= 4 && h.sentences.every((x) => /[a-z]/.test(x) && x.length <= 260)));
 ok('Figure Hunt: no hunt of a plain line ("none")', HUNTS.every((h) => HUNT_KINDS.includes(h.figure)));
-/* a hunt played: spot then name, both scored; a wrong spot holds, shows the sentence, then naming */
-const huntRound = () => figureRound(figs, WORKS, 'hp', 4, ROUND_OF.figure, { hunts: HUNTS });
-let fh = quizNew('figure', huntRound(), 4);
-while (!fh.over) { const q = fh.rounds[fh.i]; if (q.hunt) { ok('a hunt cannot be named before it is spotted', figureStep(fh, { type: 'pick', i: q.answer }) === fh); fh = figureStep(fh, { type: 'spot', i: q.at }); } fh = figureStep(fh, { type: 'pick', i: q.answer }); fh = figureStep(fh, { type: 'next' }); }
-const nh = huntRound().filter((q) => q.hunt).length;
-ok(`Figure Hunt is solvable: every spot and every name right (${nh} hunts)`, nh >= 2 && fh.right === ROUND_OF.figure + nh && fh.answered === fh.right && accuracy(fh).pct === 1 && fh.results.every(Boolean));
-let fw = quizNew('figure', huntRound(), 4); while (!fw.rounds[fw.i].hunt) { fw = figureStep(fw, { type: 'pick', i: fw.rounds[fw.i].answer }); fw = figureStep(fw, { type: 'next' }); }
+/* the words that make it (computed from the line, never typed): a simile's comparison word, alliteration's shared sound */
+const SIM = figs.filter((f) => f.figure === 'simile').map((f) => ({ f, w: figureWords(f.text, 'simile') })), ALL = figs.filter((f) => f.figure === 'alliteration').map((f) => ({ f, w: figureWords(f.text, 'alliteration') }));
+ok(`Figure Hunt words: nearly every simile has its comparison word to tap (${SIM.filter((x) => x.w.want).length}/${SIM.length})`, SIM.filter((x) => x.w.want).length >= 0.95 * SIM.length);
+ok('Figure Hunt words: a simile’s words are its comparison words, and the comparison inside what may be tapped', SIM.filter((x) => x.w.want).every(({ w }) => w.want.every((i) => /^(like|as|if|though)$/.test(w.tokens[i].toLowerCase().replace(/[^a-z]/g, ''))) && w.want.every((i) => w.allow.includes(i)) && w.marks.every((m) => m.every((i) => w.want.includes(i)))));
+ok(`Figure Hunt words: most alliteration has three or more words sharing one sound, and only one such run (${ALL.filter((x) => x.w.want).length}/${ALL.length})`, ALL.filter((x) => x.w.want).length >= 0.8 * ALL.length && ALL.filter((x) => x.w.want).every(({ w }) => w.want.length >= 3 && new Set(w.want.map((i) => G.soundOf(w.tokens[i].toLowerCase().replace(/[^a-z']/g, '')))).size === 1));
+ok('Figure Hunt words: the tokens are the line, word for word', [...SIM, ...ALL].every(({ f, w }) => w.tokens.join(' ') === sp(f.text)));
+ok('Figure Hunt words: the right words are right; tapping every word is not (unless the whole line is the figure)', [...SIM, ...ALL].filter((x) => x.w.want).every(({ w }) => wordsRight(w, w.marks ? w.marks[0] : w.want.slice(0, 2)) && (w.allow.length === w.tokens.length || !wordsRight(w, w.tokens.map((_, i) => i)))));
+ok(`Figure Hunt words: a line that is all figure is rare (${[...SIM, ...ALL].filter((x) => x.w.want && x.w.allow.length === x.w.tokens.length).length})`, [...SIM, ...ALL].filter((x) => x.w.want && x.w.allow.length === x.w.tokens.length).length <= 0.15 * (SIM.length + ALL.length));
+ok('Figure Hunt words: metaphor and personification are named only (no one has marked their words)', figs.filter((f) => f.figure === 'metaphor' || f.figure === 'personification').every((f) => !figureWords(f.text, f.figure).want));
+/* a hunt played: spot, then the words, then the name — each scored; an item is right only when every step was */
+const solveFig = (g) => { let guard = 0; while (!g.over && guard++ < 300) { const q = g.rounds[g.i], ph = figurePhase(g, q);
+  if (g.state) { g = figureStep(g, { type: 'next' }); continue; }
+  if (ph === 'spot') g = figureStep(g, { type: 'spot', i: q.at });
+  else if (ph === 'words') { for (const i of q.marks ? q.marks[0] : q.want.slice(0, 2)) g = figureStep(g, { type: 'tap', i }); g = figureStep(g, { type: 'words' }); }
+  else g = figureStep(g, { type: 'pick', i: q.answer }); } return g; };
+const huntRound = () => figureRound(figs, WORKS, 'hp', 1, ROUND_OF.figure, { hunts: HUNTS });
+{ const g0 = quizNew('figure', huntRound(), 1), h0 = g0.rounds.findIndex((q) => q.hunt), w0 = g0.rounds.findIndex((q) => q.want && !q.hunt);
+  ok('a step cannot be skipped: no name before the spot', h0 >= 0 && figureStep({ ...g0, i: h0 }, { type: 'pick', i: g0.rounds[h0].answer }).state == null);
+  ok('a step cannot be skipped: no name before the words', w0 < 0 || figureStep({ ...g0, i: w0 }, { type: 'pick', i: g0.rounds[w0].answer }).state == null); }
+const fh = solveFig(quizNew('figure', huntRound(), 1)), nh = huntRound().filter((q) => q.hunt).length, nw = huntRound().filter((q) => q.want).length;
+ok(`Figure Hunt is solvable at level 1: every spot, every word and every name right (${nh} hunts, ${nw} with words)`, nh >= 2 && nw >= 2 && fh.over && accuracy(fh).pct === 1 && fh.results.length === ROUND_OF.figure && fh.results.every(Boolean));
+let fw = quizNew('figure', huntRound(), 1); { let guard = 0; while (!fw.rounds[fw.i].hunt && guard++ < 10) { const q = fw.rounds[fw.i]; if (figurePhase(fw, q) === 'words') { for (const i of q.marks ? q.marks[0] : q.want.slice(0, 2)) fw = figureStep(fw, { type: 'tap', i }); fw = figureStep(fw, { type: 'words' }); } fw = figureStep(fw, { type: 'pick', i: q.answer }); fw = figureStep(fw, { type: 'next' }); } }
 const hq = fw.rounds[fw.i]; fw = figureStep(fw, { type: 'spot', i: (hq.at + 1) % hq.sentences.length });
-ok('a wrong spot scores nothing and holds', !fw.spot.ok && !fw.found && figureStep(fw, { type: 'spot', i: hq.at }) === fw && figureStep(fw, { type: 'pick', i: hq.answer }) === fw);
-fw = figureStep(fw, { type: 'next' }); ok('…next moves on to naming the figure', fw.found && fw.i === fw.rounds.indexOf(hq));
-fw = figureStep(fw, { type: 'pick', i: hq.answer }); ok('…a right name after a wrong spot scores the name, and the item counts as missed', fw.state.ok && fw.results[fw.results.length - 1] === false);
+ok('T3: a wrong spot scores nothing and holds', !fw.spot.ok && !fw.found && figureStep(fw, { type: 'spot', i: hq.at }) === fw && figureStep(fw, { type: 'pick', i: hq.answer }) === fw);
+fw = figureStep(fw, { type: 'next' }); ok('…next moves on to the next step of the same item', fw.found && fw.i === fw.rounds.indexOf(hq) && figurePhase(fw) === (hq.want ? 'words' : 'name'));
+if (hq.want) { const off = hq.tokens.map((_, i) => i).find((i) => !hq.allow.includes(i)); fw = figureStep(fw, { type: 'tap', i: off ?? 0 }); fw = figureStep(fw, { type: 'words' });
+  ok('T3: a wrong tap of words holds — the words that make it shown in place — until next', fw.wres && !fw.wres.ok && figureStep(fw, { type: 'pick', i: hq.answer }) === fw && /class="miss-w miss-fix"/.test(missCard({ type: 'words', tokens: hq.tokens, want: hq.want }, fw.wres.sel)));
+  fw = figureStep(fw, { type: 'next' }); ok('…next moves on to naming it', figurePhase(fw) === 'name'); }
+fw = figureStep(fw, { type: 'pick', i: hq.answer }); ok('…a right name after a missed step scores the name, and the item counts as missed', fw.state.ok && fw.results[fw.results.length - 1] === false && !fw.state.whole);
 let fq = quizNew('figure', figureRound(figs, WORKS, 'k', 2), 2);
 fq = quizStep(fq, { type: 'pick', i: fq.rounds[0].answer }); ok('a right pick scores and waits for next', fq.score === 1 && fq.state.ok && quizStep(fq, { type: 'pick', i: 0 }) === fq);
 fq = quizStep(fq, { type: 'next' }); fq = quizStep(fq, { type: 'pick', i: (fq.rounds[1].answer + 1) % fq.rounds[1].options.length });
@@ -338,20 +410,22 @@ let ff = quizNew('root', forgeFamilyRound(lex, WP, 'fam', 5, 2), 5);
 while (!ff.over) { ff = quizStep(ff, { type: 'pick', i: ff.rounds[ff.i].answer }); ff = quizStep(ff, { type: 'next' }); }
 ok('Forge a family is solvable: six words forged, a perfect score', ff.right === 6 && ff.score === 8 && accuracy(ff).pct === 1);
 
-/* ---------- Rhetoric Duel ---------- */
+/* ---------- Rhetoric Duel (Writer's Craft): "make it strong" ---------- */
 ok('Rhetoric Duel: every rhetoric line has a plainer version', rhet.every((x) => plain[x.text]) && Object.keys(plain).every((t) => [...RHETORIC, ...RHETORIC_MORE].some((x) => x.text === t)));
 ok('Rhetoric Duel: every original is held, word for word', [...RHETORIC, ...RHETORIC_MORE].every((x) => held(x.work, x.text)));
 ok('Rhetoric Duel: no plainer version is a quotation', Object.values(plain).every((p) => !Object.values(TEXTS).some((t) => t.includes(p))));
 ok('Rhetoric Duel: every device has a gloss', rhet.every((x) => DEVICE_GLOSS[x.device]));
+const PIECES = rhet.map((x) => ({ x, d: duelPieces(x.text, plain[x.text], 'p') }));
+ok(`Rhetoric Duel: every line can be built — three of its own pieces, joined with spaces, ARE the original (${PIECES.filter((p) => p.d).length}/${rhet.length})`, PIECES.every(({ x, d }) => d && d.pieces.length === 3 && d.pieces.join(' ') === x.text));
+ok('Rhetoric Duel: the decoy is the plain version’s wording — never a piece, and never in the original', PIECES.every(({ x, d }) => !d.pieces.includes(d.decoy) && !` ${x.text} `.includes(` ${d.decoy.replace(/,$/, '')} `) && d.decoy.replace(/,$/, '').split(' ').some((w) => plain[x.text].toLowerCase().includes(w.toLowerCase().replace(/[^a-z']/g, '')))));
+console.log(`games: Rhetoric Duel — stage one is fair (equal length ±10%, a question only with a question) for ${rhet.filter((x) => duelFair(x.text, plain[x.text])).length} of ${rhet.length} lines; the rest go straight to the build`);
 for (const L of LV) for (const final of [false, true]) {
   const its = SEEDS.flatMap((sd) => duelRound(rhet, plain, sd, L, ROUND_OF.duel, { final })), tag = `Rhetoric Duel L${L}${final ? ' final' : ''}`;
-  const bad = its.flatMap((q) => fair(q, (x) => x.device, (x) => x.original));
-  ok(`${tag}: one right reason, distinct, never an "also" device`, !bad.length && its.every((q) => q.options.length === 4 && q.options.every((o, i) => i === q.answer || !(rhet.find((x) => x.text === q.original).also || []).includes(o))));
-  ok(`${tag}: no reason slot over 35%`, slotLean(its, 4) <= 0.35);
+  ok(`${tag}: stage one is asked only where it is fair — the plain line within 10% of the original’s length, a question only beside a question`, its.every((q) => q.scored === duelFair(q.original, q.plain)) && its.filter((q) => q.scored).every((q) => Math.abs(q.plain.length - q.original.length) <= q.original.length * 0.1 && /\?\s*$/.test(q.original) === /\?\s*$/.test(q.plain)));
   const strong = its.filter((q) => q.strong === 1).length / its.length;
   ok(`${tag}: the original sits left and right alike`, strong >= 0.4 && strong <= 0.6);
   ok(`${tag}: the original is the strong version`, its.every((q) => q.versions[q.strong] === q.original && q.versions[1 - q.strong] === plain[q.original]));
-  ok(`${tag}: the right reason never stands out as the longest`, its.every((q) => q.options.some((o, i) => i !== q.answer && o.length >= q.device.length - 4)));
+  ok(`${tag}: four tiles — three pieces of the line and one plain decoy — never dealt in order`, its.every((q) => q.tiles.length === 4 && q.tiles.filter((t) => t.k === 'x').length === 1 && !q.tiles.filter((t) => t.k === 'd').every((t, j) => t.at === j)));
 }
 const hardD = (L) => SEEDS.flatMap((sd) => duelRound(rhet, plain, sd, L, 8)).filter((q) => q.device === 'antithesis').length;
 ok('Rhetoric Duel: antithesis waits for the higher levels', hardD(1) === 0 && hardD(2) === 0 && hardD(5) > hardD(3));
@@ -359,30 +433,96 @@ ok('Rhetoric Duel: antithesis waits for the higher levels', hardD(1) === 0 && ha
 const rv = field(2)[0], rvPts = duelRival(rv, 'seedA', 5);
 ok('the duel’s rival is one of Bee’s rivals, by band, the strongest in the final', field(1).every((x) => RIVALS.includes(x)) && field(3)[4].skill >= Math.max(...field(3).slice(0, 4).map((x) => x.skill)));
 ok('the rival’s points are seeded: the same duel, the same points', JSON.stringify(rvPts) === JSON.stringify(duelRival(rv, 'seedA', 5)) && rvPts.length === 5);
-const duelPlay = (rival) => { let d = duelNew(duelRound(rhet, plain, 'rivals', 3, 5), 3, rival); while (!d.over) { d = duelStep(d, { type: 'pick', i: d.rounds[d.i].strong }); d = duelStep(d, { type: 'pick', i: d.rounds[d.i].answer }); d = duelStep(d, { type: 'next' }); } return d; };
+const inOrder = (q) => q.tiles.map((t, i) => [t, i]).filter(([t]) => t.k === 'd').sort((a, b) => a[0].at - b[0].at).map(([, i]) => i);
+const duelSolve = (d) => { let guard = 0; while (!d.over && guard++ < 100) { const q = d.rounds[d.i]; if (d.state) { d = duelStep(d, { type: 'next' }); continue; } if (d.stage === 'which') { d = duelStep(d, { type: 'pick', i: q.strong }); continue; } for (const i of inOrder(q)) d = duelStep(d, { type: 'tile', i }); d = duelStep(d, { type: 'check' }); } return d; };
+const duelPlay = (rival) => duelSolve(duelNew(duelRound(rhet, plain, 'rivals', 3, 5), 3, rival));
 const dA = duelPlay({ ...rv, pts: duelRival(rv, 'x', 5) }), dB = duelPlay({ ...field(3)[4], pts: [true, true, true, true, true] }), dC = duelPlay(null);
 ok('the child’s score is the same whoever the rival is — no luck in scoring', dA.score === dB.score && dB.score === dC.score && dA.right === 5);
-ok('Rhetoric Duel is solvable: five reasons right, best of five won', dA.right === 5 && duelTally(dA).you === 5 && duelTally(dA).played === 5 && duelTally(dB).them === 5);
-let du = duelNew(duelRound(rhet, plain, 'd', 3, 5), 3);
-ok('Rhetoric Duel: the reason cannot be picked before the stronger version', duelStep(du, { type: 'next' }) === du && duelStep(du, { type: 'pick', i: 5 }) === du);
-du = duelStep(du, { type: 'pick', i: 1 - du.rounds[0].strong });
-ok('Rhetoric Duel: choosing the plain one scores nothing and moves to why', du.stage === 'why' && du.score === 0 && !du.which.ok);
-du = duelStep(du, { type: 'pick', i: du.rounds[0].answer });
-ok('Rhetoric Duel: the right reason scores, even after a wrong pick of version', du.score === 1 && du.state.ok);
-du = duelStep(du, { type: 'next' }); ok('Rhetoric Duel: next goes back to "which is stronger?"', du.stage === 'which' && du.i === 1 && du.which === null);
-let dw = duelNew(duelRound(rhet, plain, 'w', 2, 5), 2); dw = duelStep(dw, { type: 'pick', i: dw.rounds[0].strong }); dw = duelStep(dw, { type: 'pick', i: (dw.rounds[0].answer + 1) % 4 });
-ok('Rhetoric Duel: the right version with the wrong reason scores nothing', dw.score === 0 && dw.strongRight === 1 && mostMissed(dw) === dw.rounds[0].device);
+ok('Rhetoric Duel is solvable: five lines made strong, best of five won', dA.right === 5 && duelTally(dA).you === 5 && duelTally(dA).played === 5 && duelTally(dB).them === 5 && accuracy(dA).pct === 1);
+{ const rounds = duelRound(rhet, plain, 'd', 3, 5), k = rounds.findIndex((q) => q.scored);
+  if (k >= 0) { let du = duelNew(rounds.slice(k), 3);
+    ok('Rhetoric Duel: nothing can be built before the stronger line is picked, where that is asked', du.stage === 'which' && duelStep(du, { type: 'tile', i: 0 }) === du && duelStep(du, { type: 'check' }) === du);
+    du = duelStep(du, { type: 'pick', i: 1 - du.rounds[0].strong });
+    ok('Rhetoric Duel: picking the plain line scores nothing and moves on to the build', du.stage === 'build' && du.score === 0 && !du.which.ok);
+    for (const i of inOrder(du.rounds[0])) du = duelStep(du, { type: 'tile', i }); du = duelStep(du, { type: 'check' });
+    ok('Rhetoric Duel: the build scores, but the item is right only with the pick right too', du.score === 1 && du.state.buildOk && !du.state.ok && du.results[0] === false && du.misses[du.rounds[0].device] === 1); }
+  let dw = duelNew(rounds, 3); if (dw.stage === 'which') dw = duelStep(dw, { type: 'pick', i: dw.rounds[0].strong });
+  const q0 = dw.rounds[0], dec = q0.tiles.findIndex((t) => t.k === 'x'); for (const i of [dec, ...inOrder(q0).slice(1)]) dw = duelStep(dw, { type: 'tile', i }); dw = duelStep(dw, { type: 'check' });
+  ok('Rhetoric Duel: a build with the plain decoy is not the line', dw.state && !dw.state.buildOk && !dw.state.ok && duelBuilt(q0, dw.state.picks) !== q0.original);
+  ok('T3 Rhetoric Duel: a wrong build holds — no tile, no check, until next', duelStep(dw, { type: 'tile', i: 0 }) === dw && duelStep(dw, { type: 'check' }) === dw && duelStep(dw, { type: 'undo' }) === dw);
+  const m = missCard({ type: 'line', right: q0.original, why: 'x' }, dw.state.built);
+  ok('T3 the miss card shows the line as written, in place, and what was built struck out', m.includes('<ins class="miss-fix">') && m.includes('<del class="miss-del">') && /data-act="miss-go"/.test(m));
+  dw = duelStep(dw, { type: 'next' }); ok('…next goes on to the next line, the board clear', dw.i === 1 && dw.picks.length === 0 && !dw.state); }
 
 /* ---------- the untimed reducers soak too: overlapping, out-of-range events never throw or stick ---------- */
 for (const [name, g0, st] of [['who', quizNew('who', whoRound(lines, WORKS, 'z', 3), 3), quizStep], ['figure', quizNew('figure', figureRound(figs, WORKS, 'z', 4, 6, { hunts: HUNTS }), 4), figureStep],
   ['plot', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters }), 4), plotStep], ['plot final', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters, final: true }), 4), plotStep], ['duel', duelNew(duelRound(rhet, plain, 'z', 4), 4), duelStep], ['root', quizNew('root', forgeRound(lex, WP, 'z', 5), 5), quizStep]]) {
   let g = g0, steps = 0;
   try {
-    while (!g.over && steps < 4000) { steps++; for (const a of [{ type: 'pick', i: steps % 6 - 1 }, { type: 'spot', i: steps % 5 - 1 }, { type: 'clue' }, { type: 'place', i: steps % 7 - 1, at: steps % 4 === 0 ? steps % 6 : undefined }, { type: 'move', d: steps % 3 - 1 }, { type: 'slot', d: steps % 3 - 1 }, { type: steps % 5 ? 'move' : 'undo', d: 1 }, { type: steps % 4 ? 'tick' : 'next', dt: 17 }]) g = st(g, a); }
+    while (!g.over && steps < 4000) { steps++; for (const a of [{ type: 'pick', i: steps % 6 - 1 }, { type: 'spot', i: steps % 5 - 1 }, { type: 'clue' }, { type: 'place', i: steps % 7 - 1, at: steps % 4 === 0 ? steps % 6 : undefined }, { type: 'move', d: steps % 3 - 1 }, { type: 'slot', d: steps % 3 - 1 }, { type: steps % 5 ? 'move' : 'undo', d: 1 }, { type: 'tap', i: steps % 9 - 1 }, { type: steps % 3 ? 'words' : 'tile', i: steps % 5 - 1 }, { type: 'check' }, { type: steps % 4 ? 'tick' : 'next', dt: 17 }]) g = st(g, a); }
     ok(`${name}: a soak of overlapping events ends the round cleanly`, g.over && steps < 4000 && Number.isFinite(g.score));
     ok(`${name}: nothing moves after the end`, st(g, { type: 'pick', i: 0 }) === g && st(g, { type: 'next' }) === g);
     ok(`${name}: its log has one entry per item`, roundLog(g).length === g.rounds.length && roundLog(g).every((x) => x.key && typeof x.ok === 'boolean'));
   } catch (e) { ok(`${name}: the soak threw ${e.message}`, false); }
+}
+
+/* ---------- T1: a random-play bot earns 0 coins and 0 stars in every game (C §1.3, §8) ---------- */
+{ const { rng } = await import('../src/rand.js');
+  const pickN = (R, n, k) => { const out = []; for (let j = 0; j < n && out.length < k; j++) { const i = Math.floor(R() * n); if (!out.includes(i)) out.push(i); } return out; };
+  const botRound = (id, seed, L, final, R, mem) => {
+    const o = { final, mem, now: NOW };
+    if (id === 'builder' || id === 'rush') {
+      let g = id === 'builder' ? builderNew(seed, L, { ...o, extra: XB }) : rushNew(seed, L, { ...o, extra: XR }), st = id === 'builder' ? builderStep : rushStep, guard = 0;
+      while (!g.over && guard++ < 5000) {
+        if (g.hold) { g = st(g, { type: 'continue' }); continue; }
+        g = st(g, { type: 'tick', dt: 1500 + Math.floor(R() * 2000) }); if (g.over) break;
+        if (id === 'builder') { for (const i of pickN(R, g.cur.tiles.length, 2 + Math.floor(R() * (g.cur.tiles.length - 1)))) g = st(g, { type: 'pick', i }); if (R() < 0.5) g = st(g, { type: 'cap' }); if (R() < 0.5) g = st(g, { type: 'comma', at: Math.floor(R() * g.picks.length) }); g = st(g, { type: 'check' }); }
+        else { for (let i = 0; i < g.cur.words.length - 1; i++) if (R() < 0.3) g = st(g, { type: 'toggle', i }); g = st(g, { type: 'submit' }); }
+      }
+      return g;
+    }
+    let g = id === 'figure' ? quizNew('figure', figureRound(figs, WORKS, seed, L, ROUND_OF.figure, { ...o, hunts: HUNTS }), L) : id === 'who' ? quizNew('who', whoRound(lines, WORKS, seed, L, ROUND_OF.who, o), L)
+      : id === 'root' ? quizNew('root', final ? forgeFamilyRound(lex, WP, seed, L, 2, o) : forgeRound(lex, WP, seed, L, ROUND_OF.root, o), L) : id === 'plot' ? plotNew(plotRound(shipP, seed, L, ROUND_OF.plot, WORKS, { ...o, chapters }), L)
+      : duelNew(duelRound(rhet, plain, seed, L, ROUND_OF.duel, o), L, null);
+    const st = { figure: figureStep, who: quizStep, root: quizStep, plot: plotStep, duel: duelStep }[id]; let guard = 0;
+    while (!g.over && guard++ < 500) {
+      const q = g.rounds[g.i];
+      if (g.state) { g = st(g, { type: 'next' }); continue; }
+      if (id === 'figure') { const ph = figurePhase(g, q); if (ph === 'spot') { g = st(g, { type: 'spot', i: Math.floor(R() * q.sentences.length) }); if (g.spot && !g.spot.ok) g = st(g, { type: 'next' }); continue; }
+        if (ph === 'words') { for (const i of pickN(R, q.tokens.length, 1 + Math.floor(R() * 3))) g = st(g, { type: 'tap', i }); g = st(g, { type: 'words' }); if (g.wres && !g.wres.ok) g = st(g, { type: 'next' }); continue; } }
+      if (id === 'duel') { if (g.stage === 'which') { g = st(g, { type: 'pick', i: Math.floor(R() * 2) }); continue; } for (const i of pickN(R, q.tiles.length, 1 + Math.floor(R() * q.tiles.length))) g = st(g, { type: 'tile', i }); g = st(g, { type: 'check' }); continue; }
+      if (id === 'who' && R() < 0.3) g = st(g, { type: 'clue' });
+      if (id === 'plot' && q.type !== 'missing') { for (const i of pickN(R, q.cards.length, q.cards.length * 3)) g = st(g, { type: 'place', i }); continue; }
+      g = st(g, { type: 'pick', i: Math.floor(R() * q.options.length) });
+    }
+    return g;
+  };
+  const T1 = {};
+  for (const id of Object.keys(GAMES)) {
+    let coins = 0, stars = 0, best = 0, runs = 0;
+    for (const L of [1, 3, 5]) for (let b = 0; b < (id === 'figure' || id === 'plot' ? 8 : 14); b++) {
+      const R = rng(`bot:${id}:${L}:${b}`); let run = runNew(L), mem = memOf({});
+      for (let k = 0; k <= RUN_ROUNDS; k++) { const g = botRound(id, `bot${b}:${k}`, L, k === RUN_ROUNDS, R, mem); mem = memRecord(mem, roundLog(g), NOW); run = runAdd(run, g, 0); }
+      coins += runPay(run); stars += starsFor(G.runStarPct(run)); best = Math.max(best, G.runStarPct(run) || 0); runs++;
+    }
+    T1[id] = `${runs} runs, best ${Math.round(best * 100)}% (beyond chance)`;
+    ok(`T1 ${GAMES[id].name}: a random-play bot earns 0 coins and 0 stars (${T1[id]})`, coins === 0 && stars === 0, `coins ${coins}, stars ${stars}`);
+  }
+  console.log('games: T1 random bots —', Object.entries(T1).map(([k, v]) => `${k} ${v}`).join(' · '));
+  /* …and the same bot playing RIGHT earns coins and stars, so T1 is not passing for a game that pays nothing */
+  let paid = 0; { let run = runNew(1); for (let k = 0; k <= RUN_ROUNDS; k++) { let g = rushNew('good' + k, 1, { extra: XR }); while (!g.over) { for (const i of g.cur.commas) g = rushStep(g, { type: 'toggle', i }); g = rushStep(g, { type: 'submit' }); g = rushStep(g, { type: 'tick', dt: 4000 }); } run = runAdd(run, g, 0); } paid = runPay(run);
+    ok(`T1 is not blind: a child playing Comma Rush right earns coins (${paid}) and three stars`, paid > 0 && paid <= (RUN_ROUNDS + 1) * G.ROUND_PAY_CAP && starsFor(runPct(run)) === 3); }
+  /* T6 (the reducer half; test/games-ui.mjs checks the wallet): what the finish pays is exactly what was banked, round by round */
+  { let run = runNew(2), sum = 0; for (let k = 0; k <= RUN_ROUNDS; k++) { const g = duelSolve(duelNew(duelRound(rhet, plain, 't6' + k, 2, 5), 2)); sum += roundPay(g); run = runAdd(run, g, 0); }
+    ok(`T6: the finish pays exactly the coins its rounds banked (${sum})`, runPay(run) === sum && sum === (RUN_ROUNDS + 1) * 5); }
+  ok('pay: a round never pays more than its cap', roundPay({ kind: 'rush', clean: 40, right: 40, wrongs: 0 }) === G.ROUND_PAY_CAP);
+  ok('pay: a quiz round under half right — beyond chance — pays nothing, even for its right answers', roundPay({ kind: 'root', right: 3, answered: 6, results: [true, true, true, false, false, false] }) === 0 && roundPay({ kind: 'root', right: 4, answered: 6, results: [true, true, true, true, false, false] }) === 4 && roundPay({ kind: 'figure', results: [true, true, true, false, false, false] }) === 3);
+  ok('pay: Plot Line pays a story wholly in order, never a lucky pair', roundPay({ kind: 'plot', right: 7, total: 9, perfect: 2 }) === 2 && roundPay({ kind: 'plot', right: 4, total: 9, perfect: 1 }) === 0);
+  /* the miss card's other shapes: the right sentence in both orders; the right option in place */
+  const ms = missCard({ type: 'sentence', right: ['When it rained, we ran.', 'We ran when it rained.'], why: 'why' }, 'when it rained we ran.');
+  ok('T3 the miss card: both right orders, the capital and comma lit, the attempt struck out', ms.replace(/<[^>]+>/g, '').includes('When it rained, we ran.') && ms.replace(/<[^>]+>/g, '').includes('We ran when it rained.') && (ms.match(/miss-fix/g) || []).length >= 3 && /<del class="miss-del">when it rained we ran\.<\/del>/.test(ms));
+  const mc = missCard({ type: 'choice', options: ['Simile', 'Metaphor', 'None'], answer: 1, why: 'Metaphor: it says one thing IS another.' }, 0);
+  ok('T3 the miss card: the right option named in place, the pick struck out, the gloss only now', /<ins class="miss-fix">Metaphor<\/ins>/.test(mc) && /<del class="miss-del">Simile<\/del>/.test(mc) && /IS another/.test(mc));
 }
 
 /* ---------- every game is listed with a world, what it practises, how, its keys, its final and five level meanings ---------- */

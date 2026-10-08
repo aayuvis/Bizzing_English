@@ -5,7 +5,7 @@
    to unlock it. Small on purpose, so the Shop can list modes without loading games.js. */
 
 export const MODE_PRICE = 150;
-export const MODE_GAMES = { builder: 'Sentence Builder', rush: 'Punctuation Rush', figure: 'Figure Hunt', who: 'Who Said It?', plot: 'Plot Line', root: 'Root Forge', duel: 'Rhetoric Duel' };
+export const MODE_GAMES = { builder: 'Clause Builder', rush: 'Comma Rush', figure: 'Figure Hunt', who: 'Who Said It?', plot: 'Plot Line', root: 'Root Forge', duel: 'Rhetoric Duel' };
 export const modeId = (game) => `challenge-${game}`;
 export const modeWhat = 'the final, straight away, at your level — beat your own best';
 

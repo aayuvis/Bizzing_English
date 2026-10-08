@@ -63,11 +63,18 @@
 .ty-text span.err { color: #fff; background: var(--bad); border-radius: 3px; }
 .ty-text span.cur { border-bottom-color: var(--bz-accent); color: var(--ink); }
 .ty-time { font: 800 18px var(--mono); min-width: 52px; text-align: right; }
-.ty-board { display: grid; gap: 5px; justify-items: center; user-select: none; }
+/* the board: six half-rows — one keyboard of two halves on a wide screen, staggered like a real one; under
+   480 px it splits into a left-hand block above a right-hand block, so no key is under 40 px wide (§4.4) */
+.ty-board { display: grid; grid-template-columns: auto auto; column-gap: 5px; row-gap: 5px; justify-content: center; user-select: none; }
+.ty-half { display: flex; gap: 5px; } .ty-half[class*="ty-l"] { justify-content: flex-end; }
+.ty-l1 { order: 1; } .ty-r1 { order: 2; } .ty-l2 { order: 3; padding-left: 12px; } .ty-r2 { order: 4; } .ty-l3 { order: 5; padding-left: 26px; } .ty-r3 { order: 6; }
+.ty-sp { order: 7; grid-column: 1 / -1; } .ty-legend { order: 8; grid-column: 1 / -1; }
 .ty-row { display: flex; gap: 5px; justify-content: center; max-width: 100%; }
-.ty-key { width: clamp(28px, 8.4vw, 44px); height: 46px; border-radius: 8px; background: var(--card); border: 1px solid var(--line); border-bottom: 4px solid #9A93AB;
-  font: 800 15px var(--bz-body); color: var(--ink); cursor: pointer; padding: 0; transition: transform .08s; }
+.ty-key { width: clamp(40px, 8.4vw, 46px); height: 46px; border-radius: 8px; background: var(--card); border: 1px solid var(--line); border-bottom: 4px solid #9A93AB;
+  font: 800 15px var(--bz-body); color: var(--ink); cursor: pointer; padding: 0; transition: transform .08s; touch-action: manipulation; }
 .ty-key.next { outline: 3px solid var(--bz-accent); transform: translateY(-2px); }
+.ty-practised { display: grid; gap: 6px; } .ty-kbs { display: inline-flex; flex-wrap: wrap; gap: 4px; vertical-align: middle; }
+.ty-kb { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 5px; border-radius: 6px; background: var(--bz-chip); border-bottom: 2px solid var(--line); font: 700 13px var(--mono); }
 .ty-space { width: min(52vw, 300px); font-size: 12px; color: var(--muted); }
 .ty-shift { width: clamp(52px, 15vw, 70px); font-size: 12px; }
 .ty-shift[aria-pressed="true"] { background: var(--bz-accent); color: var(--bz-accent-ink); }
@@ -80,5 +87,11 @@
   .tl-h { font-size: 15px; line-height: 1.1; }
   .tl-body { padding: 8px 9px 10px; } .tl-body p { font-size: 13px; }
   .tl-stat { display: none; }
-  .ty-row { gap: 3px; } .ty-key { height: 42px; }
+  .ty-row { gap: 4px; } .ty-key { height: 44px; }
+}
+@media (max-width: 479px) {
+  .ty-board { grid-template-columns: auto; justify-items: center; }
+  .ty-half { gap: 5px; justify-content: center !important; padding-left: 0 !important; }
+  .ty-l1 { order: 1; } .ty-l2 { order: 2; } .ty-l3 { order: 3; } .ty-r1 { order: 4; margin-top: 6px; } .ty-r2 { order: 5; } .ty-r3 { order: 6; }
+  .ty-half .ty-key { width: 48px; }
 }

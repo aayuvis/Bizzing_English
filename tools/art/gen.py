@@ -208,7 +208,7 @@ INK_NO_TEXT = (NO_TEXT + " Every sign board, shop fascia, plaque, notice, poster
 INK_PLACE = ("Painted background plate for a children's detective story game, in a warm 'storybook noir' style: textured "
              "hand-painted gouache with fine ink line work, golden lamplight against deep teal and indigo shadows, rich but "
              "cosy colour, clean readable shapes, never scary. One continuous full-bleed scene with a calm, balanced, nearly "
-             "symmetrical composition and open space in the middle. No frame, no border, no vignette panel, no blank "
+             "symmetrical composition and open space in the middle. The painting runs right off all four edges of the canvas: no paper margin, no deckled or torn paper edge, no white or cream border around it. No frame, no border, no vignette panel, no blank "
              "rectangles, no white strips. An EMPTY scene: no people, no human figures, no faces, no hands, no silhouettes, "
              "no animals, no birds. " + INK_NO_TEXT + " The scene: ")
 INK_NIGHT = ("Repaint the reference painting as ONE single night-time picture of the whole scene, full width, in the same "
@@ -264,7 +264,7 @@ INK_SCENES = {
                 "loaves, a BLANK painted fascia board above it, and a narrow green door beside it; a cherry-red bicycle chained to an "
                 "iron lamp post; flour sacks by the step. Honey, teal and rose.", 'out'),
     'case-01': ("a sunny storybook public garden on flower-show day: clipped hedges, a big red-and-cream striped show tent with "
-                "triangle bunting in the middle, a white bandstand with a round clock face, a stone fountain with a sitting stone fox "
+                "triangle bunting in the middle, a white bandstand with a round clock face that is completely BLANK (no hands, no numerals, no tick marks), a stone fountain with a sitting stone fox "
                 "in the distance, beds of bright flowers, gravel paths with heat shimmer, a young oak with a little mossy shed under "
                 "it. Fresh greens, poppy red, buttercup yellow.", 'out'),
     'case-02': ("a gaslit Victorian street at dusk: wet cobbles reflecting light, a hump-backed stone bridge over a narrow canal in the "
@@ -277,7 +277,7 @@ INK_SCENES = {
     'case-04': ("a grand old town-council chamber in morning light: a long polished oak table down the middle with high-backed "
                 "chairs, an EMPTY velvet-lined wooden box in the centre of the table, a public gallery with a brass rail, tall "
                 "windows with dust turning in sunbeams, a big round clock over the door, and over the door a carved stone band that "
-                "is plain decorative moulding with an empty smooth strip. Warm stone, civic green, brass.", 'in'),
+                "is plain decorative moulding with an empty smooth strip. No framed papers, certificates or notices on the walls. Warm stone, civic green, brass.", 'in'),
     'case-05': ("an open-air wooden theatre seen from the back of the seats: a curved bank of wooden benches under the sky, strings "
                 "of lanterns along the rows, and on the stage a set built as a tall red-and-white striped lighthouse with a lamp room "
                 "at the top and painted waves at its foot, heavy curtains at the sides. Deep teal sky, golden lanterns, warm red seats, "
@@ -290,8 +290,8 @@ INK_SCENES = {
                 "in deep shadow on both sides, a hooded prompt-corner lamp, empty wooden seats beyond the stage edge.", 'out'),
     'case-08': ("a vaulted stone room deep inside an ancient library: a long oak table down the middle with a big old map under a "
                 "linen dust cloth, candle sconces, tall narrow windows letting in slanted bars of light, shelves of small wooden seal "
-                "boxes each with a red wax tag, and high on the shadowy ceiling vault, half in darkness and not emphasised, a painted "
-                "round clock face with no hands and no numerals. Stone grey, parchment, gold.", 'in'),
+                "boxes each with a red wax tag, and painted directly onto the curved ceiling vault overhead (NOT on a wall), half in darkness and not emphasised, a "
+                "faded painted round clock face that is EMPTY inside: no hands at all, no numerals, no Roman numerals, no marks. Stone grey, parchment, gold.", 'in'),
     'case-09': ("a misty lake at dawn: a long, low wooden boathouse whose broad grey roof slopes almost down to the water like the back "
                 "of a sleeping animal, a stone slipway with a long rowing boat, swallows' nests under the eaves, a blank noticeboard by "
                 "the door, and across the still water a small island with a white lighthouse. Soft pink and pearl-grey, sage green.", 'out'),
@@ -307,12 +307,19 @@ for k, (v, kind) in INK_SCENES.items():
     JOBS[f'ink-{k}'] = (INK_PLACE + v, '16:9')
     JOBS[f'ink-{k}-night'] = (INK_NIGHT_IN if kind == 'in' else INK_NIGHT, '16:9')
     INK_REF[f'ink-{k}-night'] = f'ink-{k}'
+# A clean-up repaint: the bandstand clock keeps getting a painted hand; the app draws the hands live (case-01 art notes).
+JOBS['ink-case-01-fix'] = ("Repaint the reference painting EXACTLY as it is — same composition, colours, style and every detail — with ONE change: "
+                           "the round clock face on the white bandstand is completely empty, a plain cream disc with a thin rim, with NO hands, "
+                           "no line from the centre, no numerals and no marks. " + INK_NO_TEXT, '16:9')
+INK_REF['ink-case-01-fix'] = 'ink-case-01'
 # specific nights the scripts ask for
 JOBS['ink-case-02-night'] = (INK_NIGHT + " One of the gas lamps, the tallest one by the bridge, is DARK; every other lamp glows.", '16:9')
 JOBS['ink-case-09-night'] = (INK_NIGHT + " It is regatta night: strings of lanterns along the shore and the boathouse, the island "
                              "lighthouse shining one narrow silver beam across the lake that lands on the boathouse roof and makes it "
                              "glitter silver, a few soft fading firework sparkles overhead.", '16:9')
 JOBS['ink-case-08-night'] = (INK_NIGHT_IN + " Rain runs down the tall windows; lamplight pools on the map on the table.", '16:9')
+JOBS['ink-case-04-night'] = (INK_NIGHT_IN + " Do not add anything to the walls: no framed papers, certificates, pictures or emblems anywhere.", '16:9')
+JOBS['ink-case-10-night'] = (INK_NIGHT_IN + " There is no sunlight anywhere: the square of light on the floor is gone, replaced by soft lamplight.", '16:9')
 # Case 11 happens at midnight in the Seal Room — its night plate is its own painting, not a repaint of the door.
 JOBS['ink-case-11-night'] = (INK_PLACE + "the same vaulted stone library room at midnight, lit warm gold by one small brass lantern on "
     "the floor: a long oak table with a map under a linen cloth, shelves of seal boxes, tall narrow leaded windows full of night, "
@@ -324,8 +331,8 @@ del INK_REF['ink-case-11-night']
 # The four Ink Journeys (docs/inkwell/journey-0N-*.md, Art and scene notes).
 INK_JOURNEYS = {
     'olympus':     "a broad empty upland meadow on a Greek hillside at dawn: mist in the hollows, purple cushions of wild thyme, "
-                   "silver olive trees, a rough wooden gate with flattened grass beside it, rolling hills, and the blue sea far below. "
-                   "Gold-pink light. No temple, no altar, no statue.",
+                   "silver olive trees, a rough wooden gate in a low dry-stone wall with flattened grass beside it, rolling hills, and the blue sea far below. "
+                   "Gold-pink light. Wild, empty countryside: no buildings, no huts, no carts, no signposts, no temple, no altar, no statue.",
     'asgard':      "the inside of a long Norse timber hall before dawn: carved wooden posts with knotwork and animal-shape carving only, "
                    "a hearth banked high with glowing embers, benches with furs, round wooden shields on the walls painted plain or with "
                    "simple spirals, a wooden peg directly under a square smoke-hole in the roof showing dark sky and stars, a little drift "
@@ -349,9 +356,9 @@ INK_MATERIALS = {
     'desk':      ("the top of an old dark walnut writing desk: rich wood grain running left to right, a few gentle scratches and a "
                   "faint old ink ring, warm polish catching lamplight.", '16:9'),
     'letter':    ("a single sheet of aged cream letter paper, laid paper with faint chain lines, soft deckled edges reaching the "
-                  "frame, gentle foxing spots, completely blank.", '3:4'),
+                  "frame, gentle foxing spots, completely blank. The sheet is larger than the picture and runs off all four edges: no paper edge, no corners and no background are visible anywhere.", '3:4'),
     'notice':    ("a sheet of heavy off-white card for a public notice, slightly yellowed, faint pin holes at the top corners, a thin "
-                  "plain printed double border line near the edges, completely blank inside.", '3:4'),
+                  "plain printed double border line a little in from the edges, completely blank inside. Crop it so the card runs right off all four edges of the picture: no card edge, no corners and no background visible anywhere.", '3:4'),
     'diary':     ("a single page of an old diary, cream paper with faint pale-blue ruled lines and one thin red margin line on the "
                   "left, a soft crease, completely blank — no writing.", '3:4'),
     'newspaper': ("a sheet of aged yellowed newsprint, soft grey fibre texture, faint thin column rules dividing it into columns, "
@@ -366,7 +373,7 @@ INK_STICKER = ("A single object illustrated as a sticker for a children's detect
                "magenta (#FF00FF) colour filling the WHOLE canvas edge to edge — no shadow, no floor, no gradient, no scenery. No "
                "people, no hands, no faces. " + NO_TEXT + " The object: ")
 INK_OBJECTS = {   # case.officeObject.id → its prompt (the shelf of the Agency)
-    'goose-feather':  "a single long clean white goose feather, slightly curled, soft grey shading.",
+    'goose-feather':  "a single long clean white goose feather lying diagonally, slightly curled, soft grey shading, drawn on its own with no circle, disc or badge behind it.",
     'rosette':        "a second-place prize rosette with two tiers of pleated ribbon in royal blue and white, two ribbon tails, a "
                       "plain blank round centre button.",
     'pole-tip':       "a curved brass hook from the end of a lamplighter's pole, slightly worn, mounted upright on a small round wooden stand.",
@@ -380,7 +387,7 @@ INK_OBJECTS = {   # case.officeObject.id → its prompt (the shelf of the Agency
     'bottle':         "a brown glass message bottle with a cork sealed by black wax pressed into a round blot, a rolled cream paper "
                       "inside tied with plain string, lying at a slight angle.",
     'red-pencil':     "a short, much-sharpened red pencil with a tiny golden crane bird stamped on its end, lying diagonally.",
-    'charter-ribbon': "a length of faded pale-blue silk ribbon, frayed at both ends, loosely curled in an S shape.",
+    'charter-ribbon': "a length of faded pale-blue silk ribbon, frayed at both ends, lying in one gentle open wave that never crosses or loops over itself, with no enclosed gaps.",
 }
 for k, v in INK_OBJECTS.items(): JOBS[f'ink-obj-{k}'] = (INK_STICKER + v, '1:1')
 INK_EMBLEMS = {   # the six detectives' gifts, as OBJECTS only (HANDOVER Part C §1): never a deity, a person or a sacred object
@@ -411,8 +418,189 @@ for k, v in INK_QUILL.items():
                               "(the white quill still behind one ear). Draw the SAME fox as the reference image: same face, colours, "
                               "teal waistcoat with brass buttons, the quill, and the same white sticker border.", '1:1')
     INK_REF[f'ink-quill-{k}'] = 'mascot-wave'
+# The cast (owner, 8 Oct: "show them as avatars ... consistent across frames with backgrounds changing"): each character
+# ONCE as a sticker cut-out on flat magenta (keyed by process.py --inkwell like the avatars), a reference pose first, then
+# every listed expression painted FROM that reference so the face, clothes and framing never drift. Looks are the book's
+# (season-one.md Part 3, each case's cast[].look and art.portraits); where the book gives no heritage, the name's is used,
+# and where it says "any background" one is chosen. Children are drawn as children. No real people. Detectives are children,
+# never deities. Animals are the same sticker style, whole and sitting.
+INK_CAST_STYLE = ("A character sticker for a children's detective storybook game, one of a matching set: a warm, kind storybook "
+    "cartoon, a thick dark plum outline, clean flat cel shading, bright flat colours, big friendly expressive eyes, gentle "
+    "proportions, and a THICK WHITE sticker border around the whole figure. HALF-BODY: from the top of the head down to the "
+    "waist, the figure cut off flat by the bottom edge of the picture, centred, body turned three-quarters towards the viewer, "
+    "the top of the head about one tenth below the top edge. The background is ONE flat solid BRIGHT pure magenta (#FF00FF) "
+    "filling the WHOLE canvas edge to edge: no scenery, no shadow, no floor, no gradient, no circle behind the figure. Kind, "
+    "ordinary, warm, never scary, never a caricature; hands drawn correctly with five fingers, or kept out of frame. Not a real "
+    "or famous person. " + NO_TEXT + " Badges, buttons, medals and papers are plain and blank. The character: ")
+INK_ANIMAL_STYLE = INK_CAST_STYLE.replace("HALF-BODY: from the top of the head down to the waist, the figure cut off flat by "
+    "the bottom edge of the picture, centred, body turned three-quarters towards the viewer, the top of the head about one tenth "
+    "below the top edge.", "The WHOLE animal, sitting, centred, facing three-quarters towards the viewer, with space around it. A real animal: no clothes, "
+    "no hat, no waistcoat, no badge, no props, nothing held.")
+INK_EXPR = {
+    'calm':       "a gentle, relaxed, friendly face, mouth closed in a slight smile",
+    'nervous':    "nervous: eyes wide, eyebrows raised in the middle, a wobbly tight smile, shoulders a little hunched",
+    'offended':   "offended: chin puffed up, eyebrows lowered, lips pursed, indignant in a comic way",
+    'amused':     "amused: a big warm grin, eyes crinkled with laughter",
+    'guilty':     "guilty in a small, embarrassed way: eyes sliding down and to the side, a sheepish lopsided grimace, pink cheeks; never sad, never tearful",
+    'relieved':   "relieved: eyes softly closed, a big breathing-out smile, shoulders dropped",
+    'worried':    "worried: brow furrowed, a small frown, concerned eyes",
+    'thoughtful': "thoughtful: looking up and to the side, one eyebrow raised, lips pressed together in thought",
+    'remembering': "remembering: eyes lowered, a soft half smile, far away in a happy memory",
+    'asleep':     "asleep: eyes closed, a tiny peaceful smile",
+    'honking':    "honking: beak wide open mid-honk, neck stretched up",
+    'one-eye-open': "one eye open and one closed, peeking lazily",
+    'smug':       "smug: eyes half closed, a satisfied little smile",
+    'yawning':    "yawning: mouth wide open in a huge yawn, eyes squeezed shut",
+}
+INK_CAST = {   # id: (look, [expressions — the first is the reference pose]); 'A:' marks an animal
+    # the agency (every case)
+    'nell':     ("Nell, a 13-year-old girl of Nigerian and English heritage, warm brown skin, a cloud of dark curly hair tied back with a red band, "
+                 "a cherry-red cycling jacket, a canvas satchel strap across her chest, a brass magnifying glass on a cord, bright fearless eyes.",
+                 ['calm', 'amused', 'nervous', 'thoughtful', 'relieved']),
+    'asha':     ("Asha, a 12-year-old Indian girl, athletic, long black hair in a high ponytail, a navy rowing-club jacket with a white stripe "
+                 "(no badge, no lettering), a pencil tucked behind each ear, a bold confident look.", ['calm', 'amused', 'thoughtful', 'relieved', 'nervous']),
+    'dev':      ("Dev, an 11-year-old Indian boy, quiet and inventive, short black hair, a mustard jumper, a home-made periscope built from two "
+                 "round biscuit tins hanging on a string round his neck.", ['calm', 'amused', 'thoughtful', 'relieved', 'nervous']),
+    'felix':    ("Felix, a 12-year-old boy of Spanish and Swedish heritage, warm light-tan skin (rosy, not green), wavy light-brown hair, a neat buttoned green cardigan "
+                 "with far too many pens in its breast pocket, a white handkerchief peeking out, bright bookish eyes.", ['calm', 'amused', 'thoughtful', 'relieved', 'nervous']),
+    'tully':    ("Constable Bram Tully, a big, gentle, slow and kind man in his forties, fair ruddy skin, a bushy brown moustache, a dark-blue "
+                 "constable's tunic with plain silver buttons, a tall old-fashioned police helmet slightly too small for his head with a plain "
+                 "silver star on it, an empty dog lead looped in one hand.", ['calm', 'nervous', 'worried', 'relieved', 'offended', 'amused']),
+    'tam':      ("Tam Bellweather, a 10-year-old Black British girl of Caribbean heritage, short practical curly hair, flour on her nose and "
+                 "sleeves, a baker's apron with too many pockets, a pencil behind one ear, a small tin whistle on a string.", ['calm', 'amused', 'nervous', 'guilty', 'relieved']),
+    'ada':      ("Inspector Ada Holloway, retired, a tall 78-year-old woman, pale skin, white hair in a loose bun, reading spectacles on a chain, a "
+                 "moth-eaten plum velvet jacket over a cardigan, a cello bow tucked behind one ear like a pencil, sharp twinkling eyes.",
+                 ['calm', 'amused', 'thoughtful', 'remembering', 'offended', 'nervous', 'relieved', 'guilty']),
+    'achterberg': ("Mrs Winifred Achterberg, a round, rosy, very upright woman in her sixties, pale skin, grey curls, an apron with a pocket of "
+                   "wooden clothes pegs, flour to the elbows.", ['calm', 'amused', 'offended', 'nervous', 'relieved', 'guilty']),
+    'penhallow': ("Professor Orla Penhallow, Keeper of the Great Library, an upright woman of about sixty, pale skin, an iron-grey bun with a "
+                  "pencil stuck through it, half-moon spectacles on a chain, a dark green jacket, a ring of brass keys on a ribbon round her neck, "
+                  "strict but fair.", ['calm', 'worried', 'relieved', 'offended', 'nervous', 'amused', 'guilty']),
+    'marlowe':  ("Marlowe Finch, a slight 16-year-old boy, light-brown skin, messy dark hair, a long knitted scarf, a cardigan, ink on his "
+                 "fingers, his arms full of a tall stack of books up to his chin (plain covers).", ['nervous', 'calm', 'offended', 'guilty', 'relieved', 'amused']),
+    'crane':    ("Silas Crane, a tall, smooth, smiling man of about sixty, pale skin, neat grey hair silver at the temples, a long grey coat, "
+                 "a silver tape measure in one hand; charming and pleased with himself, never menacing.", ['amused', 'calm', 'offended', 'nervous', 'guilty', 'relieved']),
+    'pettigrew': ("Mr Septimus Pettigrew, a short, round, anxious but kind man in his forties, pale skin, thinning hair, round spectacles, a "
+                  "brown suit one size too big, a briefcase held in front of him like a shield.", ['nervous', 'calm', 'offended', 'guilty', 'relieved', 'amused']),
+    'odile':    ("a tall woman of about sixty in a long green coat, pale skin, a long grey plait over one shoulder, a violin case held in one "
+                 "hand, a calm, clever, private face.", ['calm', 'amused', 'nervous', 'guilty', 'relieved', 'offended']),
+    'leela':    ("Dr Leela Raman, a travelling reporter in her forties, Indian heritage, black hair in a short bob, a travel-worn khaki jacket, "
+                 "a camera strap and a satchel, a bright adventurous smile.", ['calm', 'amused']),
+    # the six detectives (HANDOVER Part C §1) — children; their gifts are emblems, not costumes
+    'thea':     ("Thea, a 12-year-old Greek girl, calm and exact, dark wavy shoulder-length hair, a grey duffel coat with toggles and one small "
+                 "owl-feather pin on the collar, a pencil in her hand.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    'milo':     ("Milo, an 11-year-old Greek boy, quick and funny, short dark curls, a big grin, a red zip-up jacket with white stripes on the "
+                 "sleeves, a small brass whistle on a cord.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    'oskar':    ("Oskar, a 12-year-old Norwegian boy, slow to speak, straight blond hair, a very long green scarf wound round his neck, two black "
+                 "pens clipped to his shirt collar, a small notebook.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    'signe':    ("Signe, an 11-year-old Swedish girl, quiet and patient, two pale blonde braids, a chunky hand-knitted yellow hat, a half-knitted "
+                 "yellow scarf on two needles in her hands.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    'hari':     ("Hari, a 12-year-old Indian boy, warm and patient, short black hair, a blue cardigan over a white shirt, holding a notebook with "
+                 "ten coloured paper tabs; no marks on his forehead, no jewellery.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    'vani':     ("Vani, an 11-year-old Indian girl, musical and precise, long black hair in one plait, a white scarf, a green kurta-style top, a "
+                 "small silver tuning fork in one hand; no marks on her forehead.", ['calm', 'amused', 'thoughtful', 'nervous', 'relieved']),
+    # Case 0
+    'rosa':     ("Mrs Rosa Bellweather, the baker, a Black British woman of Caribbean heritage in her forties, strong arms, sleeves rolled up, "
+                 "a floury apron, a headscarf, kind tired eyes.", ['calm', 'amused']),
+    'prout':    ("Mrs Delphine Prout, a tall, grand woman in her sixties, pale skin, silver hair in a grand wave, a big red tartan coat, a fluffy "
+                 "white poodle tucked under one arm; dignified, never a caricature.", ['calm', 'offended', 'nervous', 'relieved']),
+    'sully':    ("Mr Ned Sully, a weathered fishmonger in his fifties, tanned skin, grey stubble, a navy-and-white striped jumper, a woolly hat, a "
+                 "white seagull perched on his shoulder.", ['calm', 'amused', 'nervous']),
+    'biscuit':  ("A:Biscuit, a small, very fluffy brown dog with one ear up and one ear down, a little red collar.", ['calm', 'asleep']),
+    'admiral':  ("A:Admiral, a big white farmyard goose with an orange beak and one white feather sticking up on its head.", ['calm', 'honking', 'asleep']),
+    # Case 1
+    'grandpa':  ("Grandpa Emeka Okoro, a gentle Nigerian man in his seventies, dark skin, short white hair, reading glasses pushed up on his "
+                 "head, a brown cardigan with soil on the cuffs.", ['calm', 'nervous', 'amused', 'relieved']),
+    'pell':     ("Mrs Hilda Pell, a rival gardener in her sixties, fair freckled skin, fierce eyebrows but a kind mouth, a straw sun hat with a "
+                 "wide fierce brim, gardening gloves, a green watering can.", ['calm', 'offended', 'amused', 'relieved']),
+    'kip':      ("Kip Mensah, a 7-year-old Ghanaian boy, dark skin, short hair, a gap-toothed smile, a pumpkin-orange jumper, a toy trowel in his "
+                 "pocket.", ['calm', 'amused', 'nervous', 'relieved']),
+    'gnomes':   ("Mr Hamish Puddle, a tall, thin man in his fifties, pale skin, wearing a pointed red felt hat and a false fluffy white beard "
+                 "held on by elastic over his own clean-shaven chin, a green waistcoat; a harmless prankster.", ['calm', 'amused', 'offended', 'relieved']),
+    'zuri':     ("Zuri Okoro, a 12-year-old Nigerian girl, dark skin, wet plaits, a sleeveless rowing vest, a blank round medal on a ribbon round her "
+                 "neck.", ['calm', 'amused', 'relieved']),
+    'sami':     ("Sami Haddad, the garden's gardener, a Lebanese man in his forties, olive skin, a short dark beard, a muddy work shirt, a pencil "
+                 "behind one ear.", ['calm', 'amused']),
+    # Case 2
+    'ivy':      ("Ivy Larkin, a tall 12-year-old girl, fair freckled skin, two long auburn plaits, a dark green coat, holding a very long "
+                 "lamplighter's pole upright like a flag.", ['calm', 'offended', 'nervous', 'guilty', 'relieved', 'amused']),
+    'rafi':     ("Rafi Bose, a small 10-year-old Bengali boy, brown skin, round glasses, a tidy scarf, lumpy coat pockets, a short lamplighter's "
+                 "pole with a brass hook.", ['calm', 'nervous', 'offended', 'amused', 'relieved']),
+    'moss':     ("Moss Kettle, a 10-year-old girl, light-brown skin, freckles, a dark bob under a woolly hat with a stitched yellow star, a toy "
+                 "telescope on a string round her neck.", ['calm', 'amused', 'offended', 'nervous', 'relieved']),
+    'gundersen': ("Mrs Ingrid Gundersen, a Norwegian visitor in her seventies, pale skin, silver hair, a bright yellow raincoat, an enormous "
+                  "smile, a soggy folded paper map (blank) in one hand.", ['amused', 'calm', 'relieved']),
+    # Case 3
+    'grail':    ("Mr Ambrose Grail, the park keeper, a broad man in his sixties, weathered pale skin, grey whiskers, a flat cap, a huge ring of "
+                 "keys on his belt; kind underneath.", ['calm', 'offended', 'nervous', 'amused', 'guilty', 'relieved']),
+    'juniper':  ("Juniper Thorne, a 9-year-old girl of mixed heritage, light-brown skin, freckles, short curly hair, binoculars round her neck, "
+                 "holding a jam jar.", ['calm', 'nervous', 'guilty', 'relieved', 'amused', 'offended']),
+    'bellamy':  ("Mrs Constance Bellamy, a grand Black British woman in her sixties, a large hat covered in silk flowers, pearls, a clipboard, "
+                 "reading glasses on a chain.", ['calm', 'offended', 'amused', 'nervous', 'relieved']),
+    'qadir':    ("Mr Haris Qadir, a Pakistani engineer in his forties, brown skin, a neat beard, blue overalls, a pencil behind each ear, a calm "
+                 "half-smile.", ['calm', 'amused']),
+    # Case 4
+    'bright':   ("Councillor Hector Bright, a tall man in his fifties, pale skin, sandy hair, a mustard waistcoat, a gold pocket watch in his hand.",
+                 ['calm', 'nervous', 'offended', 'guilty', 'relieved', 'amused']),
+    'mbeki':    ("Councillor Grace Mbeki, a South African woman in her fifties, dark skin, short grey-flecked hair, reading glasses on a beaded "
+                 "chain, a cardigan with deep pockets stuffed with blank speech cards.", ['calm', 'offended', 'amused', 'nervous', 'relieved', 'guilty']),
+    'osei':     ("Mr Reuben Osei, the clerk, a precise, unhurried Ghanaian man in his fifties, dark skin, neat grey hair, a waistcoat and sleeve "
+                 "garters, a pen behind his ear.", ['calm', 'amused', 'relieved']),
+    'marsh':    ("Ms Juno Marsh, a grown WOMAN in her thirties, a woodturner, pale skin, chin-length brown hair, small earrings, a leather work apron with wood shavings on it, "
+                 "holding a brown-paper parcel tied with string.", ['calm', 'amused', 'relieved']),
+    # Case 5
+    'hugo':     ("Hugo Aldana, an actor in his early twenties, Latin American heritage, tan skin, curly hair that will not stay flat, a too-long "
+                 "knitted scarf, a blank bus ticket poking out of his pocket.", ['calm', 'nervous', 'offended', 'amused', 'guilty', 'relieved']),
+    'petra':    ("Petra Nwosu, a stage manager in her thirties, Nigerian heritage, dark skin, short natural hair, a headset round her neck, a pencil "
+                 "behind each ear, black clothes, a clipboard.", ['calm', 'offended', 'nervous', 'amused', 'guilty', 'relieved', 'worried']),
+    'celeste':  ("Celeste Fairweather, an actress in her sixties, pale skin, silver hair in a soft knot, a long green shawl, a green pen behind "
+                 "one ear.", ['calm', 'nervous', 'offended', 'amused', 'guilty', 'relieved']),
+    'encore':   ("A:Encore, a large ginger-and-white cat with one ear folded, wearing a faded red velvet collar.",
+                 ['one-eye-open', 'asleep', 'offended', 'amused', 'smug', 'yawning']),
+    # Case 6
+    'dot':      ("Dot Harkness, a small, lively woman in her seventies, pale skin, white curls, a cardigan with lots of pockets, a retired tram "
+                 "driver's cap.", ['calm', 'offended', 'amused', 'relieved']),
+    'semicolon': ("A:Semicolon, a grey parrot with a red tail and one head feather sticking up like a curl.", ['calm']),
+    # Case 7
+    'sunny':    ("Sunny Marchetti, a lighting technician in her twenties, Italian heritage, olive skin, short hair dyed sky-blue, a roll of tape "
+                 "on her wrist like a bracelet, a black T-shirt.", ['calm', 'amused', 'nervous', 'offended', 'relieved']),
+    'dunmore':  ("Mr Gus Dunmore, the props maker, a man in his fifties, ruddy pale skin, sawdust in his bushy eyebrows, a pencil behind each "
+                 "ear, a canvas work apron, a big key ring.", ['calm', 'offended', 'worried', 'guilty', 'relieved']),
+    'hale':     ("Mr Lionel Hale, a neat man in his forties, pale skin, slicked brown hair, a neat brown suit, a clipboard, a silver tape measure "
+                 "on his belt.", ['calm', 'nervous', 'offended', 'guilty', 'relieved']),
+    'cat':      ("A:the stage-door cat, a fat ginger tomcat with one torn ear, very dignified.", ['calm']),
+    # Case 8
+    'swale':    ("Mr Rupert Swale, the Deputy Keeper, a very tall, stooped man in his sixties, pale skin, thin grey hair, half-moon glasses on a "
+                 "chain, a grey cardigan with leather elbow patches, a fountain pen in the top pocket.", ['calm', 'offended', 'nervous', 'guilty', 'relieved', 'amused']),
+    'ito':      ("Ms Kiyomi Ito, a Japanese map restorer in her forties, short black hair with a magnifying visor pushed up into it, white cotton "
+                 "gloves, a canvas apron full of tiny brushes.", ['calm', 'offended', 'amused', 'relieved']),
+    # Case 9
+    'quayle':   ("Mrs Morwenna Quayle, the lighthouse keeper, a weathered, broad-shouldered woman in her sixties, pale skin, a cream cable-knit "
+                 "jumper, a yellow oilskin hat, reading glasses on a cord.", ['calm', 'offended', 'amused', 'relieved', 'thoughtful']),
+    'asante':   ("Mr Lyle Asante, a poet in his thirties, Ghanaian heritage, dark skin, tall and thin, a long striped scarf, ink on one cuff, a "
+                 "satchel with green glass bottles peeking out.", ['calm', 'nervous', 'offended', 'amused', 'relieved']),
+    'fosse':    ("Mr Barnaby Fosse, the regatta organiser, a round, pink-cheeked man in his fifties, a navy blazer with brass buttons, a whistle on "
+                 "a lanyard, a clipboard.", ['calm', 'nervous', 'offended', 'guilty', 'relieved']),
+    # Case 10
+    'quarrender': ("Dr Hollis Quarrender, a handwriting expert in his sixties, brown skin, a magnificent grey moustache, a velvet waistcoat, a "
+                   "jeweller's eyepiece in one eye.", ['calm', 'amused', 'offended', 'nervous', 'guilty', 'relieved']),
+}
+for cid, (look, exprs) in INK_CAST.items():
+    animal = look.startswith('A:'); look = look[2:] if animal else look
+    base = (INK_ANIMAL_STYLE if animal else INK_CAST_STYLE) + look
+    first = f'ink-cast-{cid}-{exprs[0]}'
+    JOBS[first] = (base + " Expression: " + INK_EXPR[exprs[0]] + ".", '3:4')
+    for e in exprs[1:]:
+        JOBS[f'ink-cast-{cid}-{e}'] = (base + " Draw the SAME character as the reference image: the same face, hair, skin, clothes, colours, "
+            "outline weight, white border, framing, size and pose — only the facial expression changes, to: " + INK_EXPR[e] + ".", '3:4')
+        INK_REF[f'ink-cast-{cid}-{e}'] = first[:]
+INK_ACT1 = ['nell', 'asha', 'dev', 'felix', 'tully', 'tam', 'rosa', 'prout', 'sully', 'biscuit', 'admiral', 'grandpa', 'pell', 'kip',
+            'gnomes', 'zuri', 'sami', 'ivy', 'rafi', 'moss', 'gundersen', 'crane', 'grail', 'juniper', 'bellamy', 'qadir',
+            'thea', 'milo', 'oskar', 'signe', 'hari', 'vani', 'ada', 'achterberg', 'penhallow', 'marlowe', 'pettigrew', 'odile', 'leela']
+GROUPS['inkwell-cast-ref'] = [f'ink-cast-{c}-{x[0]}' for c, (l, x) in INK_CAST.items()]
+GROUPS['inkwell-cast'] = [k for k in JOBS if k.startswith('ink-cast-') and k not in GROUPS['inkwell-cast-ref']]
 for k, v in INK_REF.items(): NIGHT_REF[k] = os.path.join(RAW, v + '.png')
-GROUPS['inkwell'] = [k for k in JOBS if k.startswith('ink-') and not k.endswith('-night') and not k.startswith(('ink-obj-', 'ink-emb-', 'ink-ui-', 'ink-quill-'))] + ['ink-case-11-night']
+GROUPS['inkwell'] = [k for k in JOBS if k.startswith('ink-') and not k.endswith('-night') and not k.startswith(('ink-obj-', 'ink-emb-', 'ink-ui-', 'ink-quill-', 'ink-cast-')) and k != 'ink-case-01-fix'] + ['ink-case-11-night']
 GROUPS['inkwell-night'] = [k for k in JOBS if k.startswith('ink-') and k.endswith('-night') and k != 'ink-case-11-night']
 GROUPS['inkwell-stickers'] = [k for k in JOBS if k.startswith(('ink-obj-', 'ink-emb-', 'ink-ui-', 'ink-quill-'))]
 # ═════════════════════════════════ end INKWELL ═════════════════════════════════

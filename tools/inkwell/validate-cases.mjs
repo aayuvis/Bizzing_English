@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 // validate-cases.mjs — checks Inkwell Detective case files against SCHEMA.md.
 // Usage: node validate-cases.mjs [dir-with-case-json] [--scripts dir-with-case-md]   (exit 1 on any error)
+// Format 1.3 (the six detectives and the Ink Journeys, owner's brief 6 Oct 2026): journey-0N.json files in the same
+// directory shape are checked too (kind "journey": no Ledger word, their own worlds, margin notes with sources, six
+// persona blocks); every case and Journey's Knack candidate sets hold exactly 3 items with at most 1 from the minimal
+// evidence; no {det} line breaks the level limits with any of the six names; no extremist-coded rune sign anywhere.
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,6 +17,12 @@ const LIMIT = { 1: [40, 10], 2: [70, 14], 3: [100, 18], 4: [140, 22], 5: [180, 2
 const SUSPECTS = { 1: [3, 3], 2: [3, 4], 3: [4, 4], 4: [4, 4], 5: [5, 5] };
 const MIN_DED = { 1: 2, 2: 3, 3: 4, 4: 5, 5: 6 };
 const WORLDS = ['garden', 'study', 'playhouse', 'forum', 'scriptorium', 'lakeside', 'quayside'];
+const JOURNEY_WORLDS = ['olympus', 'asgard', 'verona', 'mississippi'];
+const PERSONAS = { thea: 'Thea', milo: 'Milo', oskar: 'Oskar', signe: 'Signe', hari: 'Hari', vani: 'Vani' };
+// §6.4 / §10: no runic symbols that hate groups have taken up
+const RUNE_BLOCK = /\b(valknut|othala|odal rune|black sun|sonnenrad|wolfsangel|totenkopf|sig runes?)\b/i;
+// P9: no Hindu deity speaks in any chapter
+const DEITY_SPEAKERS = /^(VISHNU|SARASWATI|LAKSHMI|SHIVA|GANESHA|KRISHNA|RAMA|HANUMAN|DURGA|PARVATI|BRAHMA|JAGANNATH)$/;
 const SKILLS = ['detail', 'sequence', 'pronoun', 'inference', 'vocab', 'punctuation', 'factopinion', 'figurative', 'voice', 'contradiction'];
 const DTYPES = ['contradiction', 'timeline', 'pronoun', 'meaning', 'fact-opinion', 'figurative', 'voice', 'inference'];
 // Kid-safe blocklist (whole words). Period words allowed in classics are not in play here: every case is original.
@@ -28,10 +38,11 @@ const BLOCK_RE = new RegExp(`\\b(${BLOCK.join('|')})\\b`, 'i');
 const SPAN_RE = /\[\[c:([A-Za-z0-9_-]+)\|([\s\S]*?)\]\]/g;
 const strip = (t) => String(t || '').replace(SPAN_RE, '$2').replace(/<\/?[a-z][^>]*>/gi, '').replace(/[*_~]+/g, '');
 const words = (t) => (strip(t).replace(/\b\d{1,2}[.:]\d{2}\b/g, 'TIME').match(/[A-Za-z0-9'’]+/g) || []).length;
-const sentences = (t) => strip(t).split(/\n|(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean);
+// a sentence ends at . ! ? — also when a closing quote follows it ("…suspected." What…), which the first cut missed
+const sentences = (t) => strip(t).split(/\n|(?<=[.!?]["”’']?)\s+/).map((s) => s.trim()).filter(Boolean);
 
 let totalErrors = 0, totalWarnings = 0;
-const files = fs.readdirSync(dir).filter((f) => /^case-\d\d\.json$/.test(f)).sort();
+const files = fs.readdirSync(dir).filter((f) => /^(case|journey)-\d\d\.json$/.test(f)).sort();
 if (!files.length) { console.error('No case-NN.json files in', dir); process.exit(1); }
 
 for (const f of files) {
@@ -41,8 +52,9 @@ for (const f of files) {
   try { c = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) { console.log(`✗ ${f}: invalid JSON — ${e.message}`); totalErrors++; continue; }
 
   // 1. shape
+  const journey = c.kind === 'journey';
   const need = { format: 'number', id: 'string', number: 'number', title: 'string', label: 'string', level: 'number', world: 'string',
-    skills: 'array', officeObject: 'object', arc: 'array', card: 'object', cast: 'array', docs: 'array', interviews: 'array',
+    skills: 'array', ...(journey ? { souvenir: 'object', marginNotes: 'array', persona: 'object' } : { officeObject: 'object' }), arc: 'array', card: 'object', cast: 'array', docs: 'array', interviews: 'array',
     deductions: 'array', redHerrings: 'array', timeline: 'object', accusation: 'object', reveal: 'array', epilogue: 'array', drill: 'object', art: 'object', source: 'object' };
   for (const [k, t] of Object.entries(need)) {
     const v = c[k]; const ok = t === 'array' ? Array.isArray(v) : (v !== undefined && v !== null && typeof v === t && !Array.isArray(v));
@@ -52,11 +64,12 @@ for (const f of files) {
   if (c.id !== f.replace('.json', '')) E(`id "${c.id}" does not match file name`);
   if (c.label !== 'A Bizzing mystery') E('label must be "A Bizzing mystery"');
   if (!LIMIT[c.level]) E(`level ${c.level} not 1–5`);
-  if (!WORLDS.includes(c.world)) E(`world "${c.world}" unknown`);
+  if (!(journey ? JOURNEY_WORLDS : WORLDS).includes(c.world)) E(`world "${c.world}" unknown`);
   c.skills.forEach((s) => SKILLS.includes(s) || E(`skill "${s}" not a bible tag`));
-  if (c.number === 0) { if (c.vanishedWord !== null) E('case-00 has no vanished word (null)'); }
+  if (journey) { if (c.vanishedWord !== null) E('a Journey adds no word to the Ledger (vanishedWord null)'); if (c.format < 1.3) E('a Journey is format 1.3'); }
+  else if (c.number === 0) { if (c.vanishedWord !== null) E('case-00 has no vanished word (null)'); }
   else if (c.vanishedWord !== LEDGER[c.number - 1]) E(`vanishedWord "${c.vanishedWord}" should be ${LEDGER[c.number - 1]}`);
-  if (c.number > 0 && c.ledgerIndex !== c.number) E(`ledgerIndex should be ${c.number}`);
+  if (!journey && c.number > 0 && c.ledgerIndex !== c.number) E(`ledgerIndex should be ${c.number}`);
   if (c.number === 0 && !(Array.isArray(c.tutorial) && c.tutorial.length >= 4)) E('case-00 needs ≥ 4 tutorial steps');
 
   // ids
@@ -106,7 +119,8 @@ for (const f of files) {
   for (const r of c.redHerrings) { if (r.suspicion !== undefined && !Array.isArray(r.suspicion)) E(`red herring ${r.suspect}: suspicion must be an array of span ids`); arr(r.suspicion).forEach((s) => typeof s === 'string' ? cite(s, `suspicion ${r.suspect}`) : E(`red herring ${r.suspect}: suspicion entries must be span ids`)); }
   for (const d of c.deductions) for (const r of d.required || []) if (!(d.spans || []).includes(r)) E(`${d.id}: required span "${r}" not in spans`);
   for (const k of Object.keys((c.accusation || {}).wrongSuspect || {})) if (!castIds.has(k)) E(`wrongSuspect key "${k}" is not a cast id (use accusation.wrongTheory)`);
-  const KNOWN = new Set(['format','id','number','title','label','level','world','setting','skills','vanishedWord','ledgerIndex','officeObject','arc','tutorial','card','cutscene','cast','docs','interviews','deductions','redHerrings','timeline','accusation','reveal','epilogue','drill','art','source','wrongLinks','arcMarks','revealSetting','aside','extraMarks','speeches','boardIntro','exercises']);
+  const KNOWN = new Set(['format','id','number','title','label','level','world','setting','skills','vanishedWord','ledgerIndex','officeObject','arc','tutorial','card','cutscene','cast','docs','interviews','deductions','redHerrings','timeline','accusation','reveal','epilogue','drill','art','source','wrongLinks','arcMarks','revealSetting','aside','extraMarks','speeches','boardIntro','exercises',
+    'kind','souvenir','companion','judge','badge','after','sourceText','grownUps','marginNotes','persona','bonusCard','quotes']);
   for (const k of Object.keys(c)) if (!KNOWN.has(k)) W(`unknown top-level field "${k}" (move it to aside or art.notes)`);
   const ev = c.timeline.events || [];
   if (!ev.length) W('timeline has no events');
@@ -131,7 +145,7 @@ for (const f of files) {
 
 
   // 9. exercises (format 1.2)
-  const XT = ['vocab-in-context','pronoun','punctuation','tense-sequence','fact-opinion','figurative','spelling','sentence-combine','word-parts','voice','inference','summarise'];
+  const XT = ['vocab-in-context','pronoun','punctuation','tense-sequence','fact-opinion','figurative','spelling','sentence-combine','word-parts','voice','inference','summarise', 'word-origin', 'stress'];
   const STRANDS = ['word','sentence','reading','writing','speaking','literature','language'];
   const xs = Array.isArray(c.exercises) ? c.exercises : [];
   if (!xs.length) E('no exercises (format 1.2 needs ≥ 12)');
@@ -150,7 +164,8 @@ for (const f of files) {
       if (!SKILLS.includes(x.skill)) E(`${w}: skill "${x.skill}" unknown`);
       if (!STRANDS.includes(x.strand)) E(`${w}: strand "${x.strand}" unknown`);
       if (!(x.chapter >= 1 && x.chapter <= 5)) E(`${w}: chapter must be 1–5`);
-      if (!x.source || !docIds.has(x.source.doc)) E(`${w}: source.doc "${x.source && x.source.doc}" missing`);
+      if (journey && x.source && x.source.doc == null && x.source.from) { /* a Journey exercise built from its epilogue, a margin note or the drill */ }
+      else if (!x.source || !docIds.has(x.source.doc)) E(`${w}: source.doc "${x.source && x.source.doc}" missing`);
       else if (x.source.span && !spans.has(x.source.span)) E(`${w}: source.span "${x.source.span}" missing`);
       if (!x.prompt || x.answer === undefined || x.answer === null || x.answer === '') E(`${w}: prompt/answer missing`);
       if (!x.explain) E(`${w}: explain missing`);
@@ -186,6 +201,35 @@ for (const f of files) {
   const scan = (v, where) => { if (typeof v === 'string') { const t = strip(v); const m = t.match(BLOCK_RE); if (m) E(`blocklisted word "${m[1]}" in ${where}`); const n = t.match(SOFT_RE); if (n) W(`review word "${n[1]}" in ${where}`); }
     else if (Array.isArray(v)) v.forEach((x, i) => scan(x, `${where}[${i}]`)); else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) scan(x, `${where}.${k}`); };
   scan(c, c.id);
+
+  // 10. format 1.3: personas, Knacks, {det} lines, margin notes, runes, deities
+  const minIds = new Set(minEv); const dedOf = new Map(c.deductions.map((d) => [d.id, d]));
+  for (const id of minEv) { const d = dedOf.get(id); if (d) for (const s of [...(d.required || []), ...((d.minimumLink || []).flat()), ...((d.requiredLinks || []).flat()), ...(d.minimum || [])]) minIds.add(s); }
+  const candMinimal = (k) => { const [kind, rest] = [k.slice(0, k.indexOf(':')), k.slice(k.indexOf(':') + 1)];
+    if (kind === 'span') return minIds.has(rest);
+    if (kind === 'link') { const [a, b] = rest.split('+'); return [...minEv].some((id) => { const d = dedOf.get(id); return d && d.spans.includes(a) && d.spans.includes(b); }) || (minIds.has(a) && minIds.has(b)); }
+    return false; };
+  const knackSets = [];
+  if (c.persona) for (const [pid, p] of Object.entries(c.persona)) knackSets.push([pid, p && p.knack]);
+  const tut = (c.tutorial || []).find((t) => t.step === 'knack'); if (tut && tut.variants) for (const [pid, v] of Object.entries(tut.variants)) knackSets.push([pid, { chapter: 1, candidates: v.candidates }]);
+  if (journey || c.persona) for (const pid of Object.keys(PERSONAS)) if (!c.persona || !c.persona[pid]) E(`format 1.3: no persona block for ${pid}`);
+  if (!journey && !c.persona && !tut) W('format 1.3: no persona blocks yet (the engine uses generated Knack stand-ins, data/inkwell-knacks.js)');
+  for (const [pid, k] of knackSets) {
+    if (!PERSONAS[pid]) { E(`persona "${pid}" unknown`); continue; }
+    if (!k || !Array.isArray(k.candidates) || k.candidates.length !== 3) { E(`${pid}: a Knack shows exactly 3 candidates`); continue; }
+    if (k.chapter === 5) E(`${pid}: no Knack works in chapter 5`);
+    const n = k.candidates.filter((x) => typeof x === 'string' && candMinimal(x)).length; if (n > 1) E(`${pid}: Knack candidates hold ${n} minimal-evidence items (at most 1)`);
+    for (const x of k.candidates) { if (typeof x !== 'string' || !x.includes(':')) E(`${pid}: candidate "${x}" is not kind:id`); else if (/^(span|link):/.test(x)) for (const s of x.slice(5).split('+')) {
+        // a span id, or "<doc id> <exact words>" for a phrase that is not a clue span (Case 0: "0.2 cold and windy")
+        const ph = s.match(/^(\S+) (.+)$/), d = ph && c.docs.find((dd) => dd.id === ph[1]);
+        if (ph ? !(d && strip(d.body).includes(ph[2])) : !spans.has(s)) E(`${pid}: candidate cites unknown span or phrase "${s}"`);
+      } }
+  }
+  const longest = Object.values(PERSONAS).sort((a, b) => b.length - a.length)[0];
+  for (const d of c.docs) { if (d.chapter === 'arc' || !/\{det/.test(d.body)) continue; const t = d.body.replace(/\{det(\.\w+)?\}/g, longest); if (words(t) > mw) E(`doc ${d.id}: over the level limit with {det} = ${longest}`); }
+  if (journey) for (const m of c.marginNotes || []) if (!m.source) E(`margin note "${String(m.text).slice(0, 40)}…" has no source`);
+  { const all = JSON.stringify(c); const r = all.match(RUNE_BLOCK); if (r) E(`extremist-coded rune sign "${r[1]}" named in the data`); }
+  for (const l of [...c.reveal, ...c.epilogue, ...(c.cutscene || []).flatMap((p) => p.lines || [])]) if (DEITY_SPEAKERS.test(String(l.who || '').trim())) E(`P9: a deity speaks (${l.who})`);
 
   // 8. verbatim against the script
   if (scriptsDir) {

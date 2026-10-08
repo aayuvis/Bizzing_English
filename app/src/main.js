@@ -94,7 +94,7 @@ async function route() {
   else if (r.name === 'practice' && r.parts[1] === 'check') { const nx = nextStep(S.h, kid()); await openCheck(nx.kind === 'check' ? nx.ids : due(kid())); }
   else if (r.name === 'read') await openRead(r.parts[1]);
   else if (r.name === 'stage' && r.parts[1] === 'aloud') await openAloud(r.parts[2]);
-  else if (r.name === 'play') { await loadPlay(); if (r.parts[1]) PLAY.openGame(r.parts[1]); else S.run = null; }
+  else if (r.name === 'play') { await loadPlay(); if (r.parts[1]) PLAY.openGame(r.parts[1], r.parts[2]); else S.run = null; }   // #/play/<game> · #/play/<hub>[/<mode>] (views/hubs.js)
   else if (r.name === 'feed') { S.run = null; await openFeed(); }
   else if (r.name === 'place') { S.run = null; await openPlace(r.parts[1] === 'first'); }   // Find my starting place (views/placement.js)
   else if (r.name === 'tools') { S.run = null; await loadTools(); await TOOLS.openTool(r.parts); }

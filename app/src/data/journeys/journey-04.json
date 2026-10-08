@@ -1,0 +1,2001 @@
+{
+  "format": 1.3,
+  "kind": "journey",
+  "id": "journey-04",
+  "number": 104,
+  "title": "The Pirated Chapter",
+  "label": "A Bizzing mystery",
+  "level": 4,
+  "world": "mississippi",
+  "setting": "the steamer Delta Wren on the Mississippi, spring 1882",
+  "skills": [
+    "voice",
+    "inference",
+    "contradiction",
+    "sequence",
+    "punctuation"
+  ],
+  "vanishedWord": null,
+  "ledgerIndex": null,
+  "officeObject": null,
+  "souvenir": {
+    "id": "lead-line-marker",
+    "name": "a leather lead-line marker, the two-fathom tag"
+  },
+  "companion": "asha",
+  "judge": "mott",
+  "badge": "katha-notes",
+  "after": "case-09",
+  "sourceText": "Mark Twain, Life on the Mississippi (1883), his letters and published notes; the visit, the boat and every suspect are made up",
+  "grownUps": "This Journey is set on the Mississippi in 1882, seventeen years after slavery was ended in the United States. The river's earlier history, and Mark Twain's novels, include slavery. One margin note says so. Nothing is shown. Mark Twain was a real person; his words on the boat are made up for this visit, and every real fact is sourced.",
+  "arc": [],
+  "tutorial": [],
+  "card": {
+    "text": "Spring 1882. Mark Twain is back on the river he once piloted.\nEvery night, someone copies his notebook.\nEvery morning, the pages come back out of order.\nHis door is locked, and the watchman never slept.\nAt noon the boat reaches Memphis, and the copier walks off.\nFind him, {det}.\nListen to how people talk.",
+    "readAloud": true
+  },
+  "cutscene": [
+    {
+      "panel": 1,
+      "place": "The office, the morning after the Regatta (Case 9)",
+      "picture": "The office, the morning after the Regatta (Case 9). Asha's hands are taped from the eights. River mist curls under the painted Door, and somewhere beyond it a steam whistle blows, long and low, twice. (Persona sign, per the child's detective: the owl's shadow / the laces / the two crows / the strand of wool / the tab / the single note.) ASHA: \"That's a riverboat. A big one. Two blasts means she's coming in to land.\"",
+      "lines": []
+    },
+    {
+      "panel": 2,
+      "place": "Quill on the desk",
+      "picture": "Quill on the desk, deerstalker on. QUILL: \"Find out anything. Change nothing. Bring back what you learned. And mind the clock: this one closes when the boat ties up at Memphis.\"",
+      "lines": []
+    },
+    {
+      "panel": 3,
+      "place": null,
+      "picture": "**Through the Door: the texas deck of the steamer Delta Wren, first light.** Mist on a brown river a mile wide. Two tall chimneys breathe sparks, and cinders drift down like black snow. On top of everything, the glass pilot-house sits like a hat. From somewhere forward, a long, sung call: \"Quarter less three!\"",
+      "lines": []
+    },
+    {
+      "panel": 4,
+      "place": "Mark Twain at the rail",
+      "picture": "Mark Twain at the rail, a notebook clamped under one arm like a cat that wants to leave. TWAIN: \"You'll be the detective. Good. I've been robbed, and very tidily.\"",
+      "lines": []
+    },
+    {
+      "panel": 5,
+      "place": "Twain holds up a half-burnt sheet",
+      "picture": "Twain holds up a half-burnt sheet between two fingers. TWAIN: \"The steward found this in the stove. It's my page. Every word of it, and none of it.\"",
+      "lines": [
+        {
+          "who": "ASHA",
+          "text": "How can it be his page and not his page?"
+        }
+      ]
+    }
+  ],
+  "cast": [
+    {
+      "id": "brisk",
+      "name": "Mr Halloway Brisk, about 40, book agent",
+      "role": "suspect",
+      "look": "A checked travelling coat, a perfect parting, a sample book under his arm, a flat bone folder for creasing order forms",
+      "manner": "Charming, quick, flatters everyone; his letters are flawless and he says so",
+      "note": "A pirate firm pays well for pages of a famous book before it is printed, and he has the room next door to Twain's · he has not sold a single book since Christmas, and his cheerful letters to his company are full of orders that never happened (comes out at the reveal)",
+      "expressions": [
+        "jovial",
+        "calm",
+        "offended",
+        "nervous",
+        "guilty"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "lark",
+      "name": "Miss Prudence Lark, about 30, autograph collector",
+      "role": "suspect",
+      "look": "A grey travelling dress, a red leather autograph book held to her chest, a pencil behind one ear",
+      "manner": "Breathless, nervous, always somewhere near Twain's door; suspicious because she is obvious",
+      "note": "She has followed him onto two boats, and the watchman saw her at his door on Thursday night · she has never once dared to speak to him; the paper she left was a letter she was too shy to hand over, and one page of her book is kept blank for him",
+      "expressions": [
+        "nervous",
+        "flustered",
+        "embarrassed",
+        "relieved",
+        "joyful"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "jem",
+      "name": "Jem, 16, cub pilot",
+      "role": "suspect",
+      "look": "Thin and sunburnt, a cap pushed back, ink to the elbows, a coil of lead line over one shoulder",
+      "manner": "Eager, talks river all day, reads anything with words on it, including the labels on the coffee",
+      "note": "He wants to be a writer, his bunk is next to Twain's, and a pirate pays more than a cub earns in a year · he copies out sentences he loves into a copybook, to learn how they are built, and is embarrassed by it",
+      "expressions": [
+        "eager",
+        "worried",
+        "offended",
+        "tired",
+        "relieved"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "fitch",
+      "name": "Miss Honora Fitch, about 55, schoolmistress",
+      "role": "suspect",
+      "look": "Spectacles on a chain, a black bonnet, a small notebook tied with a ribbon",
+      "manner": "Corrects everyone's grammar, gently and constantly (Quill adores her)",
+      "note": "She says Twain's spelling is a disgrace to schoolrooms, and \"a corrected edition would be a mercy\" · secretly, she loves the river talk and is collecting it, spelled exactly, in a word-book for her pupils",
+      "expressions": [
+        "stern",
+        "offended",
+        "flustered",
+        "embarrassed",
+        "delighted"
+      ],
+      "unlockedBy": null
+    },
+    {
+      "id": "twain",
+      "name": "Mark Twain",
+      "role": "client",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "mott",
+      "name": "Captain Ezra Mott",
+      "role": "helper",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "strode",
+      "name": "Mr Caleb Strode",
+      "role": "witness",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "pryce",
+      "name": "Mr Lemuel Pryce",
+      "role": "witness",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "holt",
+      "name": "Mr Gus Holt",
+      "role": "witness",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "asha",
+      "name": "Asha Raman",
+      "role": "agency",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    },
+    {
+      "id": "quill",
+      "name": "Quill",
+      "role": "agency",
+      "look": "",
+      "manner": "",
+      "expressions": [],
+      "unlockedBy": null
+    }
+  ],
+  "docs": [
+    {
+      "id": "J4.1",
+      "chapter": "scene",
+      "type": "notebook-page",
+      "title": "Notebook page",
+      "author": "Mark Twain (📜 the man is real; this page is made up for this visit)",
+      "when": "Wednesday, the first day out",
+      "where": "in the notebook, under Twain's hat on the washstand of stateroom 7",
+      "picture": "a small notebook page in a quick slanting hand, a tiny sketch of a lead weight in the margin.",
+      "readAloud": false,
+      "body": "[[c:wed-page|WEDNESDAY. BELOW ST. LOUIS.]] River high and brown as coffee.\nDan Keel, leadsman. [[c:keel-40|40 yrs on the river.]] Talked with him on the forecastle.\nHis words, as near exact as I can get them:\n[[c:keel-words|\"I ain't never seen her this high. She's been a-risin' fur three days.\"]]\n[[c:keel-corn|\"Ef the pilot don't mind his marks, we'll be a-settin' in a cornfield by mornin'.\"]]\n[[c:keel-calls|He sings the calls: mark three, quarter less three and mark twain.]]\n[[c:mem-spell|Mem.: spell it as he says it. Every dropped letter is part of the man.]]\nMem.: ask the pilot if they still call the river \"she\".\n— S. L. C."
+    },
+    {
+      "id": "J4.2",
+      "chapter": "scene",
+      "type": "log",
+      "title": "Log",
+      "author": "Mr Caleb Strode, pilot",
+      "when": "last night (Friday into Saturday)",
+      "where": "on the pilot-house shelf, held open by a spare lead weight",
+      "picture": "a narrow ruled log, pencil, one corner damp with mist; through the pilot-house glass, dark water and one far light.",
+      "readAloud": false,
+      "body": "PILOT-HOUSE LOG · FRIDAY NIGHT · COTTONWOOD BAR CROSSING\n[[c:log-cub|1:40 a.m. Leads going. Calls sung up to me by the cub, from the roof.]]\n1:52 \"Mark three.\" 2:01 \"Quarter less three.\" 2:05 \"Half twain.\"\n[[c:log-marktwain|2:08 \"Quarter twain!\" 2:10 \"M-a-r-k twain!\" Two fathoms, and we are over.]]\n[[c:log-lamp|2:10 A lamp on the texas guard below us, going aft. Spoils my eyes.]]\n[[c:log-leadsin|2:10 to 2:40 Deep water. Leads in. No calls.]]\n[[c:log-lamp2|2:40 The lamp again, going forward. Then dark.]]\n2:45 Leads going for the next bar. The cub singing again.\nMist after 4. Slowed for it.\n— C. Strode, pilot"
+    },
+    {
+      "id": "J4.3",
+      "chapter": "scene",
+      "type": "copy-sheet",
+      "title": "Copy-sheet (half-burnt)",
+      "author": "unknown; written in block capitals",
+      "when": "unknown",
+      "where": "in the texas-deck stove this morning, by the steward, under a heap of ash",
+      "picture": "a sheet of good white paper, one edge burnt brown and curling, sooty thumb-marks at the corner, every letter a careful capital.",
+      "readAloud": false,
+      "body": "…LEADSMAN. [[c:copy-forty|FORTY YEARS ON THE RIVER.]]\nHIS WORDS:\n[[c:copy-never|\"I HAVE NEVER SEEN HER THIS HIGH. SHE HAS BEEN RISING FOR THREE DAYS.\"]]\n[[c:copy-shall|\"IF THE PILOT DOES NOT MIND HIS MARKS, WE SHALL BE SITTING IN A CORNFIELD BY MORNING.\"]]\n[[c:copy-comma|HE SINGS THE CALLS: MARK THREE, QUARTER LESS THREE, AND MARK TWAIN.]]\n[[c:copy-batch|BATCH THREE. FOR THE PRINTER AT MEMPH…]]\n*(The rest is ash.)*"
+    },
+    {
+      "id": "J4.4",
+      "chapter": "scene",
+      "type": "list",
+      "title": "List",
+      "author": "the purser",
+      "when": "made up at St. Louis on Wednesday; added to at Cairo",
+      "where": "framed on the saloon wall by the purser's office",
+      "picture": "a printed form filled in by hand, two decks drawn as long boxes, a little brass frame with a cinder caught in its corner.",
+      "readAloud": false,
+      "body": "CABIN LIST · STEAMER DELTA WREN · ST. LOUIS TO NEW ORLEANS\nTexas deck (officers, and guests of the Captain):\nNo. 7. Mr S. L. Clemens (\"Mark Twain\"), to New Orleans.\n[[c:no8|No. 8. Mr H. Brisk, book agent, to Memphis. Asked for the room next to Mr Clemens.]]\n[[c:no9|No. 9. Jem, cub pilot (bunk).]]\nBoiler deck (passengers):\nNo. 14. Miss H. Fitch, schoolmistress, to New Orleans.\nNo. 21. Miss P. Lark, to Memphis.\nSaloon watchman, all night: Mr G. Holt.\n[[c:twodoors|Every stateroom has two doors: one to the saloon, one to the guard.]]\nKindly keep guard doors hooked at night."
+    },
+    {
+      "id": "J4.5",
+      "chapter": "scene",
+      "type": "note",
+      "title": "Note",
+      "author": "Mark Twain (made up for this visit)",
+      "when": "this morning",
+      "where": "handed to {det} at the rail, folded small",
+      "picture": "a half-sheet of hotel paper, the ink a little smudged by mist.",
+      "readAloud": false,
+      "body": "To the detective from the other side of the page:\nThree nights running, somebody has copied my notebook.\n[[c:locked|I lock my saloon door at ten. The watchman sits facing it till dawn.]]\n[[c:hat|The notebook never leaves my stateroom. It sleeps on the washstand, under my hat.]]\n[[c:outoforder|Each morning the pages are back, a little out of order.]]\n[[c:first-dawn|I first saw it on Thursday at dawn, before we touched Cairo.]]\nA pirate printer pays well for a book before its author can print it.\n[[c:memphis-noon|We tie up at Memphis at noon today. The copier will walk off with my pages.]]\nFind me the copier. And find out how, so it never happens again.\n— S. L. Clemens, who writes as Mark Twain"
+    },
+    {
+      "id": "J4.6",
+      "chapter": "scene",
+      "type": "autograph-book",
+      "title": "Autograph book",
+      "author": "Miss Prudence Lark",
+      "when": "this week",
+      "where": "handed over by Miss Lark (Q2, below), still warm from being held",
+      "picture": "a red leather book open on two pages: scrawled signatures, a pressed violet, one page quite empty.",
+      "readAloud": false,
+      "body": "AUTOGRAPHS · PRUDENCE LARK · SPRING 1882\n[[c:lark-missed|Wednesday, St. Louis wharf. Missed the Delta Wren by twenty minutes!]]\nTook the train south, to meet her at Cairo. Signed: the ticket clerk, \"to prove you were here\".\n[[c:lark-cairo|Thursday, 8 o'clock, Cairo landing. Boarded at last. Signed: the mate, very muddy.]]\n[[c:lark-door|Thursday night. His door. I could not knock. I left my letter instead.]]\nFriday. Signed: the cook; the pilot, Mr Strode; and the cub, \"Jem — Mark three!\"\n[[c:lark-blank|One page saved for him. Still blank.]]",
+      "arrivesInChapter": 2
+    },
+    {
+      "id": "J4.7",
+      "chapter": "scene",
+      "type": "word-book",
+      "title": "Word-book",
+      "author": "Miss Honora Fitch",
+      "when": "this week",
+      "where": "in Miss Fitch's reticule, tied with a ribbon (Q4, below)",
+      "picture": "a small notebook in a schoolroom hand, neat columns, a pressed cottonwood leaf.",
+      "readAloud": false,
+      "body": "RIVER WORDS, FOR MY PUPILS AT HOME · H. F.\n[[c:fitch-keep|Keep the spelling! It is how they say it.]]\n\"A-goin'\" — going. (A deckhand, Wednesday.)\n[[c:fitch-druther|\"I'd druther\" — I would rather. (The cook, Thursday.)]]\n\"Snag\" — a dead tree in the river, waiting for a boat.\n\"Mark twain\" — two fathoms. Twelve feet. Safe, just.\n[[c:fitch-3|Wednesday 3 new words, Thursday 5, Friday 9!]]\n[[c:fitch-never|I have not corrected one of them. Mother would faint.]]",
+      "arrivesInChapter": 2
+    },
+    {
+      "id": "J4.8",
+      "chapter": "scene",
+      "type": "letter-book",
+      "title": "Letter-book",
+      "author": "Mr Halloway Brisk",
+      "when": "Friday",
+      "where": "a page from his copying-book, offered by Mr Brisk himself (Q4, below), \"as a sample of a proper letter\"",
+      "picture": "a page of thin copying-paper, the writing a little blurred, as copies were then; a perfect, looping signature.",
+      "readAloud": false,
+      "body": "COPY · To the Lakeshore Subscription Company, Chicago\nSteamer Delta Wren, Friday\nGentlemen,\nI write from the river, in the best of spirits.\n[[c:brisk-forty|I have called at forty houses this spring, and every family was charmed.]]\n[[c:brisk-comma|I carry the atlas, the almanac, and the family doctor-book.]]\n[[c:brisk-quote|One farmer told me he \"has never seen\" so fine a parlor book.]] Those were his very words.\n[[c:brisk-shall|By Memphis I shall have something very special for you.]]\nI trust the usual terms.\nYour obedient servant,\nH. Brisk",
+      "arrivesInChapter": 2
+    },
+    {
+      "id": "J4.9",
+      "chapter": "scene",
+      "type": "remarks",
+      "title": "Remarks",
+      "author": "Mr Caleb Strode, pilot",
+      "when": "Saturday, 7 a.m.",
+      "where": "on the back page of the pilot-house log, written this morning, handed to the captain in front of everyone",
+      "picture": "the log turned over, a page of hard, upright pencil, pressed so deep it shines.",
+      "readAloud": false,
+      "body": "REMARKS FOR THE CAPTAIN · C. STRODE, PILOT\nI hear you mean to put the cub ashore. You are wrong, sir, and I will say why.\n[[c:watch-wheel|From 2:10 to 2:40 the cub had the wheel, with me at his elbow, learning the bend below the bar.]]\n[[c:watch-never|He never left the pilot-house. Not for one minute.]]\nDeep water there, so no calls. That is why the log is quiet.\n[[c:watch-lamp|It was the cub who saw the lamp on the guard and told me. His eyes are better than mine.]]\nA boy who reads the water like that is no thief.\n— C. Strode",
+      "arrivesInChapter": 4
+    },
+    {
+      "id": "J4.10",
+      "chapter": "scene",
+      "type": "log",
+      "title": "Log",
+      "author": "Mr Lemuel Pryce, steward",
+      "when": "Thursday to Saturday",
+      "where": "on a clipboard hung inside the pantry door",
+      "picture": "a list of stateroom numbers down the side, three columns of ticks and small, cross notes; a cinder ground into the paper.",
+      "readAloud": false,
+      "body": "STEWARD'S MORNING ROUND · TEXAS DECK\n[[c:stew-thu|Thursday, 6 a.m. No. 8: guard door unhooked and swinging. Wet cinders on the mat.]]\nFriday, 6 a.m. No. 8: the same. Ink bottle empty again. Left a fresh one.\n[[c:stew-sat|Saturday, 6 a.m. No. 8: guard door unhooked again. Cinders. Two candles burnt right down.]]\n[[c:stew-no7|No. 7, Mr Clemens: guard-door hook found up, three mornings. He says he must be sleepwalking.]]\nNo. 9, the cub: bunk not slept in, Friday. Pilot says he was up top all night.\nMiss Fitch asks again for a quieter cabin. Miss Lark asks again which is Mr Clemens's door.",
+      "arrivesInChapter": 4
+    },
+    {
+      "id": "J4.S1.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: What do you do?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "I sell books by subscription, door to door. [[c:brisk-agent|A family signs my order book and pays a little at a time.]] The finest atlases in the West, and the handsomest almanacs."
+    },
+    {
+      "id": "J4.S1.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: Why did you ask for the room next to Mr Twain's?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "To sell him an atlas, of course! A famous author needs to know where he is going. I have not managed it yet. He keeps changing the subject."
+    },
+    {
+      "id": "J4.S1.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: Where were you last night?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "Asleep by ten, and slept like a stone. [[c:brisk-lie|I never open my guard door. The night air is bad for my chest.]]"
+    },
+    {
+      "id": "J4.S1.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: Do you keep copies of your letters?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "Every one, in my copying-book. Here, a sample. *(He tears a page out with a flourish.)* [[c:brisk-flawless|My letters are flawless, if I say so myself. Nobody has ever found a mistake in one.]]"
+    },
+    {
+      "id": "J4.S1.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: Who do you think is copying the notebook?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "Not for me to say. Though the cub has ink to the elbows, poor lad. And that Lark woman haunts his door like a ghost in a bonnet."
+    },
+    {
+      "id": "J4.S1.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mr Halloway Brisk: What do you make of this copy?",
+      "author": "Mr Halloway Brisk",
+      "readAloud": false,
+      "body": "[[c:brisk-tidied|Beautifully done! Somebody has tidied up Mr Twain's grammar. A kindness, really.]] Who wants to read \"ain't\" in a book?"
+    },
+    {
+      "id": "J4.S2.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Prudence Lark: Why are you following Mr Twain?",
+      "author": "Miss Prudence Lark",
+      "readAloud": false,
+      "body": "Following? I... collect. Autographs. I have followed him onto two boats. That sounds worse when I say it out loud."
+    },
+    {
+      "id": "J4.S2.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Prudence Lark: When did you come aboard?",
+      "author": "Miss Prudence Lark",
+      "readAloud": false,
+      "body": "At Cairo. I think. I never remember hours when I'm nervous. Ask my book; my book remembers everything. *(She holds it out: DOC J4.6.)*"
+    },
+    {
+      "id": "J4.S2.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Prudence Lark: The watchman saw you at Mr Twain's door on Thursday night. What were you doing?",
+      "author": "Miss Prudence Lark",
+      "readAloud": false,
+      "body": "Nothing! [[c:lark-letter|I slid a letter under his door. My own letter, not a page of his.]] I asked him to sign my book. I did not sign my name. I was too shy."
+    },
+    {
+      "id": "J4.S2.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Prudence Lark: Where were you last night at two o'clock?",
+      "author": "Miss Prudence Lark",
+      "readAloud": false,
+      "body": "In my cabin, awake, writing him another letter I shall never send. Nobody saw me. I suppose that's bad."
+    },
+    {
+      "id": "J4.S2.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Prudence Lark: Who do you think is doing it?",
+      "author": "Miss Prudence Lark",
+      "readAloud": false,
+      "body": "[[c:lark-love|Someone who doesn't love his writing. If you loved it, you could never bear to change a word.]]"
+    },
+    {
+      "id": "J4.S3.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: What do you do on the boat?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "Cub pilot. I learn the river, every bar and every bend. [[c:jem-sing|At a crossing, I sing the leadsman's calls up to Mr Strode.]] Dan calls them from the bow, and I pass them up."
+    },
+    {
+      "id": "J4.S3.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: Why is there ink on your fingers?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "I write. Stories, mostly bad. [[c:jem-copybook|I copy out sentences I love, to learn how they're made. Then I try my own.]] Please don't tell the mate."
+    },
+    {
+      "id": "J4.S3.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: Where do you sleep?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "Bunk No. 9, on the texas, next to Mr Twain. I'm hardly ever in it at night. A cub sleeps when the river lets him."
+    },
+    {
+      "id": "J4.S3.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: How would you write down what Dan says?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "[[c:jem-river|\"Quarter less three! She's a-shoalin'!\" I write it the way he sings it. Anything else would be a lie.]]"
+    },
+    {
+      "id": "J4.S3.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: Where were you at two o'clock last night?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "Up top. The crossing, then the bend after. [[c:jem-minutes|I don't know the minutes. I know the water.]] Ask Mr Strode."
+    },
+    {
+      "id": "J4.S3.Q6",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Jem: Would you sell Mr Twain's pages?",
+      "author": "Jem",
+      "readAloud": false,
+      "body": "Sell them? I'd give a year's pay just to read them. That's not the same thing at all."
+    },
+    {
+      "id": "J4.S4.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Honora Fitch: Can we ask you some questions?",
+      "author": "Miss Honora Fitch",
+      "readAloud": false,
+      "body": "*May* we, dear. Yes, you may. *(Through the keyhole, Quill sighs with happiness.)*"
+    },
+    {
+      "id": "J4.S4.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Honora Fitch: What do you think of Mr Twain's books?",
+      "author": "Miss Honora Fitch",
+      "readAloud": false,
+      "body": "Dreadful spelling! On purpose! [[c:fitch-motive|A corrected edition would be a mercy to every schoolroom in America.]]"
+    },
+    {
+      "id": "J4.S4.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Honora Fitch: Where were you last night?",
+      "author": "Miss Honora Fitch",
+      "readAloud": false,
+      "body": "In No. 14, on the boiler deck, with the engines under me like a bad-tempered dragon. I did not sleep, and nobody came to say goodnight."
+    },
+    {
+      "id": "J4.S4.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Honora Fitch: What's in your little book?",
+      "author": "Miss Honora Fitch",
+      "readAloud": false,
+      "body": "Nothing. Words. *(She tries to put it away, and the ribbon comes undone: DOC J4.7.)*"
+    },
+    {
+      "id": "J4.S4.Q5",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Miss Honora Fitch: Why do you keep the spellings?",
+      "author": "Miss Honora Fitch",
+      "readAloud": false,
+      "body": "Because... they're beautiful. Because \"I'd druther\" says something \"I would rather\" never can. Don't tell the school board."
+    },
+    {
+      "id": "J4.S5.Q1",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mark Twain: Why do you spell Dan Keel's words that way?",
+      "author": "Mark Twain",
+      "readAloud": false,
+      "body": "Because that's how he says them. [[c:twain-voice|A man's voice lives in his spelling. Tidy it up, and you've tidied him away.]]"
+    },
+    {
+      "id": "J4.S5.Q2",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mark Twain: Was your guard door hooked?",
+      "author": "Mark Twain",
+      "readAloud": false,
+      "body": "Every night. [[c:twain-hook|And three mornings running, the hook was up. I thought I'd done it myself, half asleep.]] I'm told I sleepwalk."
+    },
+    {
+      "id": "J4.S5.Q3",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mark Twain: Do you suspect anyone?",
+      "author": "Mark Twain",
+      "readAloud": false,
+      "body": "I suspected the lady who haunts my door. Then I read her letter. It asked for my autograph, and it was the kindest letter I've had all year. I'm ashamed of myself."
+    },
+    {
+      "id": "J4.S5.Q4",
+      "chapter": "interview",
+      "type": "transcript",
+      "title": "Mark Twain: Why does a pirate copy matter?",
+      "author": "Mark Twain",
+      "readAloud": false,
+      "body": "A pirate prints my book cheap, before I can print it at all. Every copy he sells is one of mine nobody buys. I've had it done to me before."
+    }
+  ],
+  "interviews": [
+    {
+      "suspect": "brisk",
+      "questions": [
+        {
+          "id": "brisk-q1",
+          "type": "what",
+          "q": "What do you do?",
+          "answerDoc": "J4.S1.Q1",
+          "expression": "jovial"
+        },
+        {
+          "id": "brisk-q2",
+          "type": "why",
+          "q": "Why did you ask for the room next to Mr Twain's?",
+          "answerDoc": "J4.S1.Q2",
+          "expression": "jovial"
+        },
+        {
+          "id": "brisk-q3",
+          "type": "where",
+          "q": "Where were you last night?",
+          "answerDoc": "J4.S1.Q3",
+          "expression": "calm"
+        },
+        {
+          "id": "brisk-q4",
+          "type": "what",
+          "q": "Do you keep copies of your letters?",
+          "answerDoc": "J4.S1.Q4",
+          "expression": "jovial"
+        },
+        {
+          "id": "brisk-q5",
+          "type": "who",
+          "q": "Who do you think is copying the notebook?",
+          "answerDoc": "J4.S1.Q5",
+          "expression": "calm"
+        },
+        {
+          "id": "brisk-q6",
+          "type": "what",
+          "q": "What do you make of this copy?",
+          "answerDoc": "J4.S1.Q6",
+          "expression": "jovial",
+          "unlockedAfterDoc": "J4.3"
+        }
+      ]
+    },
+    {
+      "suspect": "lark",
+      "questions": [
+        {
+          "id": "lark-q1",
+          "type": "why",
+          "q": "Why are you following Mr Twain?",
+          "answerDoc": "J4.S2.Q1",
+          "expression": "nervous"
+        },
+        {
+          "id": "lark-q2",
+          "type": "when",
+          "q": "When did you come aboard?",
+          "answerDoc": "J4.S2.Q2",
+          "expression": "flustered"
+        },
+        {
+          "id": "lark-q3",
+          "type": "what",
+          "q": "The watchman saw you at Mr Twain's door on Thursday night. What were you doing?",
+          "answerDoc": "J4.S2.Q3",
+          "expression": "flustered"
+        },
+        {
+          "id": "lark-q4",
+          "type": "where",
+          "q": "Where were you last night at two o'clock?",
+          "answerDoc": "J4.S2.Q4",
+          "expression": "embarrassed"
+        },
+        {
+          "id": "lark-q5",
+          "type": "who",
+          "q": "Who do you think is doing it?",
+          "answerDoc": "J4.S2.Q5",
+          "expression": "nervous"
+        }
+      ]
+    },
+    {
+      "suspect": "jem",
+      "questions": [
+        {
+          "id": "jem-q1",
+          "type": "what",
+          "q": "What do you do on the boat?",
+          "answerDoc": "J4.S3.Q1",
+          "expression": "eager"
+        },
+        {
+          "id": "jem-q2",
+          "type": "why",
+          "q": "Why is there ink on your fingers?",
+          "answerDoc": "J4.S3.Q2",
+          "expression": "worried"
+        },
+        {
+          "id": "jem-q3",
+          "type": "where",
+          "q": "Where do you sleep?",
+          "answerDoc": "J4.S3.Q3",
+          "expression": "tired"
+        },
+        {
+          "id": "jem-q4",
+          "type": "how",
+          "q": "How would you write down what Dan says?",
+          "answerDoc": "J4.S3.Q4",
+          "expression": "eager"
+        },
+        {
+          "id": "jem-q5",
+          "type": "when",
+          "q": "Where were you at two o'clock last night?",
+          "answerDoc": "J4.S3.Q5",
+          "expression": "tired"
+        },
+        {
+          "id": "jem-q6",
+          "type": "why",
+          "q": "Would you sell Mr Twain's pages?",
+          "answerDoc": "J4.S3.Q6",
+          "expression": "offended"
+        }
+      ]
+    },
+    {
+      "suspect": "fitch",
+      "questions": [
+        {
+          "id": "fitch-q1",
+          "type": "who",
+          "q": "Can we ask you some questions?",
+          "answerDoc": "J4.S4.Q1",
+          "expression": "stern"
+        },
+        {
+          "id": "fitch-q2",
+          "type": "what",
+          "q": "What do you think of Mr Twain's books?",
+          "answerDoc": "J4.S4.Q2",
+          "expression": "offended"
+        },
+        {
+          "id": "fitch-q3",
+          "type": "where",
+          "q": "Where were you last night?",
+          "answerDoc": "J4.S4.Q3",
+          "expression": "stern"
+        },
+        {
+          "id": "fitch-q4",
+          "type": "what",
+          "q": "What's in your little book?",
+          "answerDoc": "J4.S4.Q4",
+          "expression": "flustered"
+        },
+        {
+          "id": "fitch-q5",
+          "type": "why",
+          "q": "Why do you keep the spellings?",
+          "answerDoc": "J4.S4.Q5",
+          "expression": "embarrassed",
+          "unlockedAfterDoc": "J4.7"
+        }
+      ]
+    },
+    {
+      "suspect": "twain",
+      "questions": [
+        {
+          "id": "twain-q1",
+          "type": "why",
+          "q": "Why do you spell Dan Keel's words that way?",
+          "answerDoc": "J4.S5.Q1",
+          "expression": "amused"
+        },
+        {
+          "id": "twain-q2",
+          "type": "how",
+          "q": "Was your guard door hooked?",
+          "answerDoc": "J4.S5.Q2",
+          "expression": "puzzled"
+        },
+        {
+          "id": "twain-q3",
+          "type": "who",
+          "q": "Do you suspect anyone?",
+          "answerDoc": "J4.S5.Q3",
+          "expression": "ashamed"
+        },
+        {
+          "id": "twain-q4",
+          "type": "what",
+          "q": "Why does a pirate copy matter?",
+          "answerDoc": "J4.S5.Q4",
+          "expression": "grave"
+        }
+      ]
+    }
+  ],
+  "boardIntro": [],
+  "deductions": [
+    {
+      "id": "D1",
+      "type": "voice",
+      "skill": "voice",
+      "label": "the copier did not understand",
+      "statement": "The copy changes every dropped letter into 'proper' spelling. 'I ain't never seen her' becomes 'I have never seen her'. The copier did not understand that the spelling is the voice. So the copier is someone who writes 'properly' and changes other people's words.",
+      "spans": [
+        "keel-words",
+        "copy-never",
+        "mem-spell",
+        "twain-voice",
+        "keel-corn",
+        "copy-shall",
+        "jem-river",
+        "fitch-keep"
+      ],
+      "why": "this narrows the field. Jem writes river talk \"the way he sings it\". Miss Fitch's word-book says \"Keep the spelling!\" Neither of them would have tidied Dan Keel away.",
+      "required": [
+        "keel-words",
+        "copy-never"
+      ]
+    },
+    {
+      "id": "D2",
+      "type": "voice",
+      "skill": "voice",
+      "label": "one writer",
+      "statement": "The copy and Mr Brisk's letter share three habits. Both write 'shall'. Both spell numbers out in words, even where Twain wrote '40 yrs'. Both put a comma before the last 'and' in a list. And both 'correct' words inside quotation marks. One writer.",
+      "spans": [
+        "copy-shall",
+        "brisk-shall",
+        "copy-forty",
+        "brisk-forty",
+        "copy-comma",
+        "brisk-comma",
+        "brisk-quote",
+        "keel-40",
+        "brisk-tidied"
+      ],
+      "why": "the copy is in block capitals, so the handwriting hides the writer. The voice does not hide. Three word-habits are a fingerprint made of words.",
+      "requiredLinks": [
+        [
+          "copy-shall",
+          "brisk-shall"
+        ],
+        [
+          "copy-forty",
+          "brisk-forty"
+        ]
+      ]
+    },
+    {
+      "id": "D3",
+      "type": "timeline",
+      "skill": "sequence",
+      "label": "Jem was working",
+      "statement": "Jem sang every call up to the pilot, before 2:10 and after 2:45. In the quiet half hour between, there were no calls because the water was deep, and the pilot says Jem had the wheel with him. Jem was working, not copying.",
+      "spans": [
+        "log-cub",
+        "log-leadsin",
+        "watch-wheel",
+        "watch-never",
+        "jem-sing",
+        "log-marktwain",
+        "watch-lamp",
+        "jem-minutes"
+      ],
+      "why": "a gap in a log is a question, not an answer. Asha's timeline was right about the minutes and wrong about the person.",
+      "required": [
+        "log-leadsin",
+        "watch-wheel"
+      ],
+      "alsoKinds": [
+        "contradiction"
+      ],
+      "finishIn": 4
+    },
+    {
+      "id": "D4",
+      "type": "inference",
+      "skill": "inference",
+      "label": "the impossible thing",
+      "statement": "Nobody came past the watchman, because nobody used the saloon door. Every stateroom has a second door, onto the guard outside. A lamp went along the guard at 2:10 and came back at 2:40. Twain's guard-door hook was up three mornings running, and a cinder from the deck was on his notebook. The copier came and went by the guard.",
+      "spans": [
+        "twodoors",
+        "locked",
+        "log-lamp",
+        "log-lamp2",
+        "twain-hook",
+        "outoforder",
+        "stew-no7",
+        "stew-thu"
+      ],
+      "why": "the locked door was never the way in. Everyone watched the front of the room. The thief used the back.",
+      "minimumLink": [
+        [
+          "twodoors",
+          "twain-hook"
+        ],
+        [
+          "locked",
+          "log-lamp"
+        ]
+      ]
+    },
+    {
+      "id": "D5",
+      "type": "contradiction",
+      "skill": "contradiction",
+      "label": "the one lie",
+      "statement": "Mr Brisk says he never opens his guard door. The steward found his guard door unhooked and swinging, with wet cinders on the mat, three mornings running.",
+      "spans": [
+        "brisk-lie",
+        "stew-thu",
+        "stew-sat",
+        "no8"
+      ],
+      "why": "this is the one lie in the Journey. It is checkable, and the record does not agree with it.",
+      "required": [
+        "brisk-lie",
+        "stew-thu"
+      ],
+      "isTheLie": true,
+      "finishIn": 4
+    }
+  ],
+  "redHerrings": [
+    {
+      "suspect": "jem",
+      "clearedBy": [
+        "watch-wheel",
+        "watch-never",
+        "log-cub",
+        "jem-river"
+      ],
+      "suspicion": [
+        "log-leadsin",
+        "no9",
+        "jem-copybook"
+      ]
+    },
+    {
+      "suspect": "lark",
+      "clearedBy": [
+        "first-dawn",
+        "lark-cairo",
+        "lark-missed"
+      ]
+    },
+    {
+      "suspect": "fitch",
+      "clearedBy": [
+        "fitch-keep",
+        "fitch-never",
+        "fitch-3"
+      ]
+    }
+  ],
+  "wrongLinks": [
+    {
+      "spans": [
+        "lark-door",
+        "outoforder"
+      ],
+      "quill": "Thursday night is one night. When did Mr Twain first find his pages out of order?"
+    },
+    {
+      "spans": [
+        "fitch-motive",
+        "copy-never"
+      ],
+      "quill": "She says she'd like a corrected edition. What does her own book do?"
+    },
+    {
+      "spans": [
+        "no9",
+        "log-lamp"
+      ],
+      "quill": "Next door to Mr Twain on one side is No. 9. What's on the other side?"
+    },
+    {
+      "spans": [
+        "jem-copybook",
+        "copy-batch"
+      ],
+      "quill": "One copies sentences to learn. One copies pages for a printer. Same word. Same thing?"
+    }
+  ],
+  "timeline": {
+    "events": [
+      {
+        "id": "T1",
+        "order": 1,
+        "text": "Miss Lark misses the boat at St. Louis",
+        "when": "Wednesday, morning",
+        "spans": [
+          "lark-missed"
+        ],
+        "timeWords": "[c:lark-missed] \"Wednesday, St. Louis wharf.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T2",
+        "order": 2,
+        "text": "Twain writes down Dan Keel's words",
+        "when": "Wednesday",
+        "spans": [
+          "wed-page"
+        ],
+        "timeWords": "[c:wed-page] \"WEDNESDAY. BELOW ST. LOUIS.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T3",
+        "order": 3,
+        "text": "the first copying: no time word",
+        "when": "Wednesday night",
+        "spans": [],
+        "timeWords": "—",
+        "placedByChild": false
+      },
+      {
+        "id": "T4",
+        "order": 4,
+        "text": "Twain first finds his pages out of order",
+        "when": "Thursday, dawn",
+        "spans": [
+          "first-dawn"
+        ],
+        "timeWords": "[c:first-dawn] \"on Thursday at dawn, before we touched Cairo\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T5",
+        "order": 5,
+        "text": "The steward finds No. 8's guard door swinging",
+        "when": "Thursday, 6 a.m.",
+        "spans": [
+          "stew-thu"
+        ],
+        "timeWords": "[c:stew-thu] \"Thursday, 6 a.m.\"",
+        "placedByChild": true,
+        "joinWith": "T4"
+      },
+      {
+        "id": "T6",
+        "order": 6,
+        "text": "Miss Lark boards at Cairo",
+        "when": "Thursday, 8 o'clock",
+        "spans": [
+          "lark-cairo"
+        ],
+        "timeWords": "[c:lark-cairo] \"Thursday, 8 o'clock, Cairo landing.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T7",
+        "order": 7,
+        "text": "Miss Lark leaves her letter at Twain's saloon door",
+        "when": "Thursday night",
+        "spans": [
+          "lark-door"
+        ],
+        "timeWords": "[c:lark-door] \"Thursday night.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T8",
+        "order": 8,
+        "text": "Leads going; Jem singing the calls",
+        "when": "Friday, 1:40 a.m.",
+        "spans": [
+          "log-cub"
+        ],
+        "timeWords": "[c:log-cub] \"1:40 a.m.\"",
+        "placedByChild": false
+      },
+      {
+        "id": "T9",
+        "order": 9,
+        "text": "\"Mark twain!\" The lamp goes aft along the guard",
+        "when": "Friday, 2:10 a.m.",
+        "spans": [
+          "log-marktwain",
+          "log-lamp"
+        ],
+        "timeWords": "[c:log-marktwain] · [c:log-lamp] \"2:10\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T10",
+        "order": 10,
+        "text": "Jem at the wheel with the pilot",
+        "when": "2:10 to 2:40",
+        "spans": [
+          "watch-wheel"
+        ],
+        "timeWords": "[c:watch-wheel] \"From 2:10 to 2:40\"",
+        "placedByChild": true,
+        "joinWith": "T9"
+      },
+      {
+        "id": "T11",
+        "order": 11,
+        "text": "The lamp comes back along the guard",
+        "when": "2:40",
+        "spans": [
+          "log-lamp2"
+        ],
+        "timeWords": "[c:log-lamp2] \"2:40\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T12",
+        "order": 12,
+        "text": "No. 8 unhooked again; two candles burnt down",
+        "when": "Saturday, 6 a.m.",
+        "spans": [
+          "stew-sat"
+        ],
+        "timeWords": "[c:stew-sat] \"Saturday, 6 a.m.\"",
+        "placedByChild": true
+      },
+      {
+        "id": "T13",
+        "order": 13,
+        "text": "The half-burnt copy is found in the stove",
+        "when": "Saturday, first light",
+        "spans": [],
+        "timeWords": "(no time word; Panel 5)",
+        "placedByChild": false
+      },
+      {
+        "id": "T14",
+        "order": 14,
+        "text": "Memphis",
+        "when": "Saturday, by nine",
+        "spans": [],
+        "timeWords": "the captain: \"by nine, not noon\"",
+        "placedByChild": false
+      }
+    ],
+    "shake": [
+      {
+        "quill": "Read Mr Twain's note again. *Before* we touched Cairo, or after?"
+      }
+    ]
+  },
+  "accusation": {
+    "question": "You've got till that rope goes round the post. Who copied Mr Clemens's notebook, and how?",
+    "culprit": "brisk",
+    "place": null,
+    "minimalEvidence": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "acceptableEvidence": [
+      "D4",
+      "D5",
+      "twodoors",
+      "twain-hook",
+      "brisk-lie",
+      "stew-thu",
+      "brisk-tidied"
+    ],
+    "wrongSuspect": {
+      "jem": "Where was Jem from 2:10 to 2:40? Read the pilot's remarks. And how does Jem write down Dan Keel?",
+      "lark": "When did Mr Twain first find his pages out of order? And when did Miss Lark come aboard?",
+      "fitch": "She says she wants a corrected edition. What does her own word-book say on its first line?"
+    },
+    "wrongSuspectPoints": {
+      "jem": [
+        "watch-wheel",
+        "jem-river"
+      ],
+      "lark": [
+        "first-dawn",
+        "lark-cairo"
+      ],
+      "fitch": [
+        "fitch-keep"
+      ]
+    },
+    "wrongTheory": {
+      "sleepwalking": {
+        "quill": "Then who wrote a corrected copy, in capitals, for a printer at Memphis?",
+        "name": "Mr Twain did it himself, sleepwalking",
+        "points": [
+          "copy-batch",
+          "copy-never"
+        ]
+      }
+    },
+    "weakEvidence": "You've shown the copier tidied the voice away. Now show whose voice the tidying is. Put the copy beside every letter you've been given.",
+    "note": "Mr Halloway Brisk, book agent, of stateroom 8. Three nights running, he went out of his own guard door, along the texas guard, lifted Twain's guard-door hook with his flat bone folder, took the pages from under the hat, copied them by candle in his own room, and put them back before dawn. He wrote the copy in block capitals to hide his hand, and \"corrected\" it as he went, because that is how he writes."
+  },
+  "reveal": [
+    {
+      "who": "CAPTAIN MOTT",
+      "text": "Well, young detective?"
+    },
+    {
+      "who": "{det}",
+      "text": "Mr Brisk."
+    },
+    {
+      "who": "STAGE",
+      "direction": "Mr Brisk laughs, a little too long. The rope goes round the first post with a creak.",
+      "text": ""
+    },
+    {
+      "who": "{det}",
+      "text": "First, the copy. Dan Keel said, \"I ain't never seen her this high.\" The copy says, \"I have never seen her this high.\" Every dropped letter has been put back."
+    },
+    {
+      "who": "TWAIN",
+      "text": "And Dan Keel taken out."
+    },
+    {
+      "who": "{det}",
+      "text": "Jem writes river talk the way it's sung. Miss Fitch keeps every spelling in her word-book."
+    },
+    {
+      "who": "MISS FITCH",
+      "text": "For my pupils. Don't tell the school board.",
+      "direction": "pink to the bonnet"
+    },
+    {
+      "who": "{det}",
+      "text": "Then the voice. The copy says \"we shall\". Mr Brisk's letter says \"I shall\". Both spell out \"forty\". Both put a comma before the last \"and\". And both correct words inside quotation marks."
+    },
+    {
+      "who": "ASHA",
+      "text": "Even a farmer's."
+    },
+    {
+      "who": "MR BRISK",
+      "text": "A good letter is not a crime."
+    },
+    {
+      "who": "{det}",
+      "text": "No. But you said it this morning. You said, \"Somebody has tidied up Mr Twain's grammar. A kindness, really.\""
+    },
+    {
+      "who": "STAGE",
+      "direction": "The copy-sheet and Mr Brisk's breakfast words glow side by side: the two moments, one voice.",
+      "text": ""
+    },
+    {
+      "who": "{det}",
+      "text": "And the impossible part. Nobody passed the watchman, because nobody used the saloon door. It was there on the very first page. \"Every stateroom has two doors: one to the saloon, one to the guard.\""
+    },
+    {
+      "who": "MR HOLT",
+      "text": "I never closed my eyes. I knew it.",
+      "direction": "the watchman, deeply relieved"
+    },
+    {
+      "who": "{det}",
+      "text": "A lamp went aft along the guard at 2:10 and came back at 2:40. Mr Twain's hook was up three mornings. Mr Brisk's guard door was swinging three mornings, with cinders on the mat, though he says he never opens it."
+    },
+    {
+      "who": "JEM",
+      "text": "I saw the lamp. I didn't know whose it was.",
+      "direction": "from the doorway"
+    },
+    {
+      "who": "{det}",
+      "text": "And Jem was at the wheel the whole time."
+    },
+    {
+      "who": "MR STRODE",
+      "text": "Learning the bend. He's got it, too."
+    },
+    {
+      "who": "MISS LARK",
+      "text": "And I only left a letter.",
+      "direction": "very small"
+    },
+    {
+      "who": "TWAIN",
+      "text": "The kindest one I've had all year.",
+      "direction": "He takes the red autograph book from her, finds the blank page, and signs it with a flourish. Miss Lark has to sit down."
+    },
+    {
+      "who": "MR BRISK",
+      "text": "I haven't sold a book since Christmas. Not one. My letters are full of orders that never happened. A Chicago firm offered me more for your pages than I'd make in a year. I burned the batch I smudged. I should have burned the lot.",
+      "direction": "after a long moment; the jovial face goes; He opens his trunk. Three bundles of capitals, tied with string."
+    },
+    {
+      "who": "TWAIN",
+      "text": "You have a lovely hand, Mr Brisk, and a tin ear. Captain, I believe this gentleman was getting off at Memphis anyway.",
+      "direction": "He takes the bundles."
+    },
+    {
+      "who": "CAPTAIN MOTT",
+      "text": "With his trunk, and without your pages. And I'll be writing to his company."
+    },
+    {
+      "who": "STAGE",
+      "direction": "The rope goes round the second post. The boat is still.",
+      "text": ""
+    }
+  ],
+  "epilogue": [
+    {
+      "who": "STAGE",
+      "text": "On the texas deck",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "The wharf is full of carts and shouting. Mr Brisk walks down the stage-plank with his trunk and does not look back. Up on the texas, the mist has lifted, and the river shines."
+    },
+    {
+      "who": "TWAIN",
+      "text": "I'll need someone to read my proofs. Someone who knows how the river talks, and won't tidy it up. Interested?",
+      "direction": "to Jem"
+    },
+    {
+      "who": "JEM",
+      "text": "",
+      "direction": "cannot speak; nods so hard his cap falls off"
+    },
+    {
+      "who": "STAGE",
+      "direction": "🪔 Made up for this visit: there is no record of a cub called Jem, or of this job.",
+      "text": ""
+    },
+    {
+      "who": "ASHA",
+      "text": "Can I ask something? Why \"Mark Twain\"?"
+    },
+    {
+      "who": "TWAIN",
+      "text": "Listen.",
+      "direction": "leaning on the rail"
+    },
+    {
+      "who": "STAGE",
+      "direction": "From the bow, Dan Keel's long call comes back across the water: \"M-a-r-k twain!\"",
+      "text": ""
+    },
+    {
+      "who": "TWAIN",
+      "text": "Two fathoms. Twelve feet. Just deep enough to be safe. I told people I borrowed it from an old pilot who used to sign his river notes with it."
+    },
+    {
+      "who": "ASHA",
+      "text": "Did you?"
+    },
+    {
+      "who": "TWAIN",
+      "text": "It's a good story, isn't it?",
+      "direction": "a long pause, and a smile under the moustache"
+    },
+    {
+      "who": "STAGE",
+      "direction": "📜 ⚖ He did tell that story, in Life on the Mississippi. Historians are not sure it is true; see the margin note.",
+      "text": ""
+    },
+    {
+      "who": "STAGE",
+      "direction": "He unties something from the coil of lead line by the rail: a strip of leather with two tails, dark with river water.",
+      "text": ""
+    },
+    {
+      "who": "TWAIN",
+      "text": "The two-fathom mark. For the detective who listened. Where there's that much water, you're safe."
+    },
+    {
+      "who": "QUILL",
+      "text": "Memphis. Time.",
+      "direction": "through the keyhole, as the Door's light begins to flicker"
+    },
+    {
+      "who": "STAGE",
+      "direction": "Asha grabs {det}'s sleeve. The last thing they see is Miss Fitch, on the boiler deck, showing Jem her word-book, and Jem showing her his.",
+      "text": ""
+    },
+    {
+      "who": "STAGE",
+      "text": "The office",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "The shelf. The two-fathom marker goes on the shelf by the Door, beside the tortoise-shell plectrum, the falcon feather and Will's quill. The shelf is full: four places, four souvenirs. When you tap the marker, a voice very far off sings \"Mark twain!\" and the leather sways as if the river were under it."
+    },
+    {
+      "who": "STAGE",
+      "text": "Asha's thread."
+    },
+    {
+      "who": "ASHA",
+      "text": "I had the gap right to the minute. I just put the wrong boy in it."
+    },
+    {
+      "who": "NELL",
+      "text": "Hunch-o-meter?"
+    },
+    {
+      "who": "ASHA",
+      "text": "No hunch. A question. That's what a gap is.",
+      "direction": "holding up her timeline, the empty half hour circled"
+    },
+    {
+      "who": "NELL",
+      "text": "I'm stealing that.",
+      "direction": "after a moment"
+    },
+    {
+      "who": "DEV",
+      "text": "Whose turn is it to carry the torch on the stairs?"
+    },
+    {
+      "who": "ASHA",
+      "text": "There's a whole river of daylight out there. Yours.",
+      "direction": "whispering"
+    },
+    {
+      "who": "STAGE",
+      "text": "Felix's footnotes."
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote: fifteen years after that boat, in 1897, a newspaper story about him got things badly wrong. He wrote back.",
+      "direction": "He sets two cards side by side on the desk."
+    },
+    {
+      "who": "STAGE",
+      "text": "What people say he said: \"Reports of my death are greatly exaggerated.\"",
+      "quote": true
+    },
+    {
+      "who": "STAGE",
+      "text": "📜 What he wrote: \"The report of my death was an exaggeration.\"",
+      "quote": true
+    },
+    {
+      "who": "FELIX",
+      "text": "Footnote to the footnote: everybody quotes the first one. He wrote the second."
+    },
+    {
+      "who": "QUILL",
+      "text": "Then quote the second. And I'm not correcting anybody's spelling today. Not even the river's.",
+      "direction": "A pause."
+    },
+    {
+      "who": "FELIX",
+      "text": "Are you feeling all right?",
+      "direction": "staring"
+    },
+    {
+      "who": "QUILL",
+      "text": "Never better. Spell it as they say it. Somebody wise said that."
+    },
+    {
+      "who": "STAGE",
+      "text": "Biscuit. Constable Tully puffs up all 39 stairs. \"He's gone again.\" Biscuit is found asleep in the coal scuttle, grey with cinders, a strand of wet rope in his mouth. Nobody can work out where the rope came from. It smells of river."
+    },
+    {
+      "who": "STAGE",
+      "text": "The crossword. Dev reaches past the marker to straighten the shelf, and stops. Tucked behind the four souvenirs, where nothing was a moment ago, is a newspaper, folded small to the crossword. Every square is empty except one clue, filled in neatly in grey pencil:"
+    },
+    {
+      "who": "STAGE",
+      "text": "14 across. A name worn like a coat (3, 4). PEN NAME",
+      "quote": true
+    },
+    {
+      "who": "STAGE",
+      "text": "—",
+      "quote": true
+    },
+    {
+      "who": "DEV",
+      "text": "It's just a dash. No letter."
+    },
+    {
+      "who": "FELIX",
+      "text": "Rosin. Like a violin case.",
+      "direction": "sniffing"
+    },
+    {
+      "who": "ASHA",
+      "text": "Somebody likes puzzles. And somebody's been in here while we were on the river.",
+      "direction": "very quietly; Down on the quay, the gas lamps are lit. A tall figure with a long grey plait turns the corner and is gone before anyone reaches the round window. Nobody is sure they saw it."
+    },
+    {
+      "who": "STAGE",
+      "text": "Did you know? (margin note, epilogue) 📜 Pen names",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "- Samuel Clemens first signed himself \"Mark Twain\" in 1863, in a Nevada newspaper, the Territorial Enterprise. A name you write under that is not your own is a pen name, or pseudonym (Greek pseudo-, \"false\", and onoma, \"name\"). - Where did it come from? In Life on the Mississippi he said he took it from an old pilot, Captain Isaiah Sellers, who signed his river notes \"Mark Twain\". ⚖ Historians have looked hard for those notes and not found the name in them, and there is another story, from his Nevada days. Nobody knows for certain. The card says so. - Quoting exactly. He wrote, in 1897, \"The report of my death was an exaggeration.\" Almost everyone quotes it differently. A detective quotes it the way it was written. - Sources: Mark Twain, Life on the Mississippi (1883), chapter 50; Kevin Mac Donnell, \"How Samuel Clemens Found 'Mark Twain' in Carson City\", Mark Twain Journal 50 (2012); Fred R. Shapiro (ed.), The Yale Book of Quotations (2006), \"Mark Twain\", on the 1897 note (printed in the New York Journal, 2 June 1897). [VERIFY: the date of the first \"Mark Twain\" signature (3 February 1863); the Mark Twain Journal article's title, volume and year; the exact 1897 wording and the newspaper date.]"
+    },
+    {
+      "who": "STAGE",
+      "text": "Did you know? (margin note for grown-ups and older readers, epilogue) 📜 The river's history",
+      "heading": true
+    },
+    {
+      "who": "STAGE",
+      "text": "- Samuel Clemens grew up in Hannibal, Missouri, a slave state, and the Mississippi he piloted before the Civil War carried enslaved people as well as cotton and passengers. Slavery was ended in the United States in 1865. - Several of his novels, written later, deal with slavery and with how people treated one another on the river. They are read and discussed by older students. - Sources: Ron Powers, Mark Twain: A Life (2005); the Thirteenth Amendment to the United States Constitution (ratified December 1865); the Mark Twain Project, University of California, Berkeley (marktwainproject.org)."
+    }
+  ],
+  "drill": {
+    "kind": "who-wrote",
+    "title": "Spell It as They Say It",
+    "intro": "Clue type: voice. Built from DOC J4.1 against DOC J4.3 (the deciding clue's first half). Round one: who's talking? Three speakers, each line written two ways. The child picks the version that keeps the",
+    "items": [
+      {
+        "prompt": "a deckhand",
+        "answer": "\"I'm a-goin' ashore.\"",
+        "proof": "a-goin'",
+        "options": [
+          "\"I'm a-goin' ashore.\"",
+          "\"I am going ashore.\""
+        ]
+      },
+      {
+        "prompt": "Miss Fitch",
+        "answer": "\"May we, dear.\"",
+        "proof": "May",
+        "options": [
+          "\"May we, dear.\"",
+          "\"Can we, love.\""
+        ]
+      },
+      {
+        "prompt": "a pilot",
+        "answer": "\"She's a-shoalin'!\"",
+        "proof": "a-shoalin'",
+        "options": [
+          "\"She's a-shoalin'!\"",
+          "\"The water is becoming shallow!\""
+        ]
+      }
+    ],
+    "rounds": "**Note 1:** I shall bring the rope, the lamp, and forty pegs.\n**Note 2:** I'll bring rope, a lamp and 40 pegs."
+  },
+  "marginNotes": [
+    {
+      "chapter": 1,
+      "where": "chapter 1",
+      "text": "- Mark Twain was a river pilot before he was a writer. As a young man, Samuel Clemens trained as a \"cub\" and became a licensed Mississippi pilot in 1859. He piloted until 1861, when the Civil War stopped the river trade. - In the spring of 1882 he went back, travelling down the river from St. Louis to New Orleans and up again, filling notebooks for a new book. It came out in 1883 as Life on the Mississippi. He even tried to travel under a made-up name, so that nobody would know him. It did not work for long. - The boat in this Journey is made up. Twain really went south on a steamer called the Gold Dust.",
+      "source": "Mark Twain, Life on the Mississippi (1883), chapters 4–21 (learning to pilot) and chapter 22 (the return, and the made-up name); Frederick Anderson, Lin Salamo and Bernard L. Stein (eds), Mark Twain's Notebooks & Journals, Volume II (1877–1883) (University of California Press, 1975), the 1882 river notebooks; Ron Powers, Mark Twain: A Life (Free Press, 2005). [VERIFY: the licence date (April 1859); the chapter for the assumed name; the Gold Dust as the boat south from St. Louis.]",
+      "verify": true
+    },
+    {
+      "chapter": 2,
+      "where": "chapter 2",
+      "text": "- Book agents really did sell books door to door in Twain's time. Many of his books were sold \"by subscription\": an agent carried a sample, and families signed up and paid for the book when it came. - Pirate editions were a real problem for him. Before the United States signed an international copyright law in 1891, a printer in another country could copy a book and sell it cheaply. A cheap Canadian edition of one of his books, printed in Toronto, cut into his sales in America. He fought piracy all his life.",
+      "source": "Ron Powers, Mark Twain: A Life (2005); Hamlin Hill, Mark Twain and Elisha Bliss (University of Missouri Press, 1964), on subscription publishing; the International Copyright Act of 1891 (the Chace Act). [VERIFY: the Belford Brothers' Toronto edition of The Adventures of Tom Sawyer, 1876, as the example, before naming it on screen.]",
+      "verify": true
+    },
+    {
+      "chapter": 3,
+      "where": "chapter 3",
+      "text": "Words of the river - Fathom comes from the Old English fæþm, the span of a man's two arms held out wide. A fathom is six feet: about as far as a grown-up's arms can stretch. - Twain is an old English word for two, from Old English twegen. \"Cut in twain\" means cut in two. - Mark twain was the leadsman's call for two fathoms, twelve feet of water. On the river that was just deep enough for a steamboat to pass safely. - Texas deck: the deck of the officers' cabins, under the pilot-house. The cabins on river steamboats were often named after states, and the officers' cabins, the biggest, were called \"the texas\".",
+      "source": "Oxford English Dictionary, \"fathom\", \"twain\", \"texas\"; Merriam-Webster, \"fathom\", \"twain\", \"texas\"; Mark Twain, Life on the Mississippi (1883), on the leadsmen's calls. [VERIFY: the chapter of Life on the Mississippi with the calls; the \"named after states\" explanation for texas against the OED, which may call it uncertain.]",
+      "verify": true
+    },
+    {
+      "chapter": 4,
+      "where": "chapter 4",
+      "text": "The right word - Six years after this trip, in 1888, Mark Twain wrote to a man collecting advice from authors. He said the difference between \"the almost right word & the right word\" is like \"the difference between the lightning-bug & the lightning\". - People often quote it a little wrong. Look up the real letter, and you will see why that matters.",
+      "source": "George Bainton (ed.), The Art of Authorship (London, 1890), pp. 87–88, printing Twain's letter of 15 October 1888; Fred R. Shapiro (ed.), The Yale Book of Quotations (Yale University Press, 2006), \"Mark Twain\". [VERIFY: exact wording, punctuation and ampersands of the printed letter, and the page numbers.]",
+      "verify": true
+    },
+    {
+      "chapter": 5,
+      "where": "epilogue",
+      "text": "Pen names - Samuel Clemens first signed himself \"Mark Twain\" in 1863, in a Nevada newspaper, the Territorial Enterprise. A name you write under that is not your own is a pen name, or pseudonym (Greek pseudo-, \"false\", and onoma, \"name\"). - Where did it come from? In Life on the Mississippi he said he took it from an old pilot, Captain Isaiah Sellers, who signed his river notes \"Mark Twain\". ⚖ Historians have looked hard for those notes and not found the name in them, and there is another story, from his Nevada days. Nobody knows for certain. The card says so. - Quoting exactly. He wrote, in 1897, \"The report of my death was an exaggeration.\" Almost everyone quotes it differently. A detective quotes it the way it was written.",
+      "source": "Mark Twain, Life on the Mississippi (1883), chapter 50; Kevin Mac Donnell, \"How Samuel Clemens Found 'Mark Twain' in Carson City\", Mark Twain Journal 50 (2012); Fred R. Shapiro (ed.), The Yale Book of Quotations (2006), \"Mark Twain\", on the 1897 note (printed in the New York Journal, 2 June 1897). [VERIFY: the date of the first \"Mark Twain\" signature (3 February 1863); the Mark Twain Journal article's title, volume and year; the exact 1897 wording and the newspaper date.]",
+      "verify": true
+    },
+    {
+      "chapter": null,
+      "where": null,
+      "text": "(margin note for grown-ups and older readers, epilogue) 📜 The river's history - Samuel Clemens grew up in Hannibal, Missouri, a slave state, and the Mississippi he piloted before the Civil War carried enslaved people as well as cotton and passengers. Slavery was ended in the United States in 1865. - Several of his novels, written later, deal with slavery and with how people treated one another on the river. They are read and discussed by older students.",
+      "source": "Ron Powers, Mark Twain: A Life (2005); the Thirteenth Amendment to the United States Constitution (ratified December 1865); the Mark Twain Project, University of California, Berkeley (marktwainproject.org).",
+      "verify": false
+    },
+    {
+      "chapter": null,
+      "where": null,
+      "text": "(chapter 5 margin note, after Case Closed) 📜 Life on the Mississippi is partly memoir and partly travel book. In it, Twain remembers learning the river as a cub pilot, and then describes going back in 1882 to see how it had changed. He found the river he knew had moved: bends cut through, towns left behind, and railways taking the trade. The book came out in 1883, sold by agents, door to door.",
+      "source": "Mark Twain, Life on the Mississippi (1883); Ron Powers, Mark Twain: A Life (2005); the Mark Twain Project, University of California, Berkeley. [VERIFY: the publisher and subscription sale of the 1883 edition (James R. Osgood & Co., Boston).]",
+      "verify": true
+    }
+  ],
+  "persona": {
+    "thea": {
+      "line": {
+        "chapter": 1,
+        "text": "What's not on this page? The 'Mem.' line. Somebody left out 'spell it as he says it'."
+      },
+      "knack": {
+        "chapter": 1,
+        "candidates": [
+          "gap:mem-line",
+          "gap:copy-date",
+          "gap:copy-name"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    },
+    "milo": {
+      "line": {
+        "chapter": 1,
+        "text": "So what it actually says is: write his words the way he says them, because the missing letters are part of him."
+      },
+      "knack": {
+        "chapter": 1,
+        "candidates": [
+          "span:mem-spell",
+          "span:keel-corn",
+          "span:hat"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    },
+    "oskar": {
+      "line": {
+        "chapter": 3,
+        "text": "We've seen that word before. 'Never.'"
+      },
+      "knack": {
+        "chapter": 3,
+        "candidates": [
+          "link:copy-never+brisk-quote",
+          "link:keel-words+jem-river",
+          "link:hat+brisk-lie"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    },
+    "signe": {
+      "line": {
+        "chapter": 4,
+        "text": "Something happened here, on Wednesday night, and nobody's told us."
+      },
+      "knack": {
+        "chapter": 4,
+        "candidates": [
+          "slot:between-2-4",
+          "slot:between-6-7",
+          "slot:between-11-12"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    },
+    "hari": {
+      "line": {
+        "chapter": 2,
+        "text": "If I were Miss Lark, what would I have seen? A door I didn't dare knock on."
+      },
+      "knack": {
+        "chapter": 2,
+        "candidates": [
+          "span:lark-cairo",
+          "span:lark-letter",
+          "span:lark-blank"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    },
+    "vani": {
+      "line": {
+        "chapter": 3,
+        "text": "Listen to how they write it. 'Forty' in words on one; '3 new words' in figures on the other. 'Keep the spelling!' against a page that keeps nothing."
+      },
+      "knack": {
+        "chapter": 3,
+        "candidates": [
+          "span:copy-comma",
+          "span:fitch-3",
+          "span:fitch-keep"
+        ]
+      },
+      "origin": "bonus-journey-04"
+    }
+  },
+  "bonusCard": {
+    "id": "bonus-journey-04",
+    "persona": null,
+    "case": "journey-04",
+    "word": "fathom",
+    "bonus": true,
+    "path": [
+      "Old English fæþm, \"the outstretched arms; an embrace\"",
+      "Middle English fadme",
+      "English fathom"
+    ],
+    "story": "A fathom was first the stretch of a man's two arms. Sailors measured rope that way, arm-span by arm-span, so it became six feet, and then a measure of deep water. \"To fathom\" something still means to get to the bottom of it.",
+    "question": {
+      "prompt": "\"I can't fathom it\" means…",
+      "options": [
+        "I can't understand it",
+        "I can't lift it",
+        "I can't swim in it"
+      ],
+      "answer": "I can't understand it",
+      "explain": "A fathom was first the stretch of a man's two arms. Sailors measured rope that way, arm-span by arm-span, so it became six feet, and then a measure of deep water. \"To fathom\" something still means to get to the bottom of it."
+    },
+    "objective": "la10-world",
+    "sources": [
+      "Oxford English Dictionary, \"fathom, n.\" and \"fathom, v.\"",
+      "Merriam-Webster, \"fathom\"",
+      "Online Etymology Dictionary, \"fathom\""
+    ],
+    "askFamily": false,
+    "needsReview": true
+  },
+  "quotes": [
+    {
+      "text": "the difference between the almost right word & the right word",
+      "where": "margin note, chapter 4",
+      "work": "Mark Twain, letter of 15 October 1888 (printed in G. Bainton, The Art of Authorship, 1890)",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "the difference between the lightning-bug & the lightning",
+      "where": "margin note, chapter 4",
+      "work": "Mark Twain, letter of 15 October 1888 (printed in G. Bainton, The Art of Authorship, 1890)",
+      "held": false,
+      "needsReview": true
+    },
+    {
+      "text": "The report of my death was an exaggeration.",
+      "where": "Detective School drill, round three",
+      "work": "Mark Twain, 1897 note (New York Journal, 2 June 1897)",
+      "held": false,
+      "needsReview": true
+    }
+  ],
+  "art": {
+    "notes": "See the script's \"Art and scene notes\"; no lettering in any painting."
+  },
+  "exercises": [
+    {
+      "id": "x1",
+      "tier": "easier",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 1,
+      "source": {
+        "doc": "J4.1",
+        "span": "keel-calls"
+      },
+      "prompt": "\"Dan Keel, leadsman. He sings the calls: mark three, quarter less three and mark twain.\" What does a leadsman do?",
+      "options": [
+        "drops a weighted line to measure how deep the water is",
+        "cooks for the crew",
+        "steers the boat"
+      ],
+      "answer": "drops a weighted line to measure how deep the water is",
+      "explain": "The \"lead\" is a heavy weight on a marked line. The leadsman drops it, reads the mark, and sings out the depth. The calls are measurements."
+    },
+    {
+      "id": "x2",
+      "tier": "easier",
+      "level": 3,
+      "type": "word-origin",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "la10-world",
+      "chapter": 1,
+      "source": {
+        "doc": "J4.2",
+        "span": "log-marktwain"
+      },
+      "prompt": "Fathom comes from an Old English word for something you can do with your body. What?",
+      "options": [
+        "stretch your arms out wide",
+        "stand on tiptoe",
+        "take one long step"
+      ],
+      "answer": "stretch your arms out wide",
+      "explain": "Old English fæþm meant the span of two outstretched arms. That span, about six feet, became the fathom."
+    },
+    {
+      "id": "x3",
+      "tier": "easier",
+      "level": 3,
+      "type": "tense-sequence",
+      "skill": "sequence",
+      "strand": "reading",
+      "objective": "s2-tense",
+      "chapter": 1,
+      "source": {
+        "doc": "J4.2",
+        "span": "log-leadsin"
+      },
+      "prompt": "Put the pilot's night in order: \"Leads in. No calls.\" · \"Leads going. Calls sung up by the cub.\" · \"Mark twain! Two fathoms, and we are over.\"",
+      "options": [
+        "Leads in. No calls.",
+        "Leads going. Calls sung up by the cub.",
+        "Mark twain! Two fathoms, and we are over."
+      ],
+      "answer": [
+        "Leads going. Calls sung up by the cub.",
+        "Mark twain! Two fathoms, and we are over.",
+        "Leads in. No calls."
+      ],
+      "select": "order",
+      "explain": "The log's times tell you: 1:40, then 2:10, then 2:10 to 2:40. The calls come first, the crossing next, the quiet deep water last."
+    },
+    {
+      "id": "x4",
+      "tier": "easier",
+      "level": 3,
+      "type": "vocab-in-context",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "w10-meanings",
+      "chapter": 1,
+      "source": {
+        "doc": "J4.4",
+        "span": "twodoors"
+      },
+      "prompt": "\"Every stateroom has two doors: one to the saloon, one to the guard.\" On a riverboat, the guard is…",
+      "options": [
+        "the narrow walkway outside the cabins",
+        "a man who keeps watch",
+        "a fence round the paddle-wheel"
+      ],
+      "answer": "the narrow walkway outside the cabins",
+      "explain": "\"Guard\" usually means a person who watches. Here it is a door to something, so it must be a place. The words around a word decide which meaning fits."
+    },
+    {
+      "id": "x5",
+      "tier": "at",
+      "level": 4,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "literature",
+      "objective": "la6-dialect",
+      "chapter": 1,
+      "source": {
+        "doc": "J4.1",
+        "span": "keel-words"
+      },
+      "prompt": "Which version keeps Dan Keel's own voice? A: \"I ain't never seen her this high.\" B: \"I have never seen her this high.\"",
+      "options": [
+        "A",
+        "B",
+        "both the same"
+      ],
+      "answer": "A",
+      "explain": "Both say the same thing, but only A sounds like Dan Keel. Spelling and grammar can carry who a person is. B has the meaning and has lost the man."
+    },
+    {
+      "id": "x6",
+      "tier": "at",
+      "level": 4,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "writing",
+      "objective": "la6-register",
+      "chapter": 2,
+      "source": {
+        "doc": "J4.6",
+        "span": "lark-missed"
+      },
+      "prompt": "Miss Lark's ticket clerk wrote \"to prove you were here\" in her book. Which sentence quotes him correctly?",
+      "options": [
+        "He wrote, \"to prove you were here\".",
+        "He wrote, to prove you were here.",
+        "He wrote, \"to prove I was here\"."
+      ],
+      "answer": "He wrote, \"to prove you were here\".",
+      "explain": "Quotation marks hold someone's exact words. Change \"you were\" to \"I was\" and the words are no longer his."
+    },
+    {
+      "id": "x7",
+      "tier": "at",
+      "level": 4,
+      "type": "inference",
+      "skill": "inference",
+      "strand": "reading",
+      "objective": "li2-traits",
+      "chapter": 2,
+      "source": {
+        "doc": "J4.6",
+        "span": "lark-blank"
+      },
+      "prompt": "\"One page saved for him. Still blank.\" What does this tell you about Miss Lark?",
+      "options": [
+        "She hoped to ask him, and hadn't dared",
+        "She has run out of ink",
+        "She doesn't like his books"
+      ],
+      "answer": "She hoped to ask him, and hadn't dared",
+      "explain": "She keeps a page ready, so she wants his autograph. It is still empty, so she hasn't asked. Two short facts, one feeling."
+    },
+    {
+      "id": "x8",
+      "tier": "at",
+      "level": 4,
+      "type": "word-origin",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "la10-world",
+      "chapter": 3,
+      "source": {
+        "doc": null,
+        "span": null,
+        "from": "margin-note-chapter-3"
+      },
+      "prompt": "Twain is an old English word. In \"mark twain\", what number does it mean?",
+      "options": [
+        "two",
+        "twelve",
+        "twenty"
+      ],
+      "answer": "two",
+      "explain": "Twain means two, as in twins. \"Mark twain\" is the second mark on the lead line: two fathoms, which is twelve feet."
+    },
+    {
+      "id": "x9",
+      "tier": "harder",
+      "level": 5,
+      "type": "punctuation",
+      "skill": "punctuation",
+      "strand": "writing",
+      "objective": "la6-register",
+      "chapter": 5,
+      "source": {
+        "doc": null,
+        "span": null,
+        "from": "epilogue"
+      },
+      "prompt": "Which is what Mark Twain actually wrote in 1897?",
+      "options": [
+        "The report of my death was an exaggeration.",
+        "Reports of my death are greatly exaggerated.",
+        "The reports of my death have been exaggerated."
+      ],
+      "answer": "The report of my death was an exaggeration.",
+      "explain": "The other two are how people remember it. Inside quotation marks, only the exact words will do. Source: The Yale Book of Quotations (2006)."
+    },
+    {
+      "id": "x10",
+      "tier": "harder",
+      "level": 5,
+      "type": "voice",
+      "skill": "voice",
+      "strand": "literature",
+      "objective": "la6-register",
+      "chapter": 5,
+      "source": {
+        "doc": "J4.8",
+        "span": "brisk-comma"
+      },
+      "prompt": "The copy says \"MARK THREE, QUARTER LESS THREE, AND MARK TWAIN.\" Mr Brisk's letter says \"the atlas, the almanac, and the family doctor-book.\" What habit do they share?",
+      "options": [
+        "a comma before the last \"and\" in a list",
+        "capital letters for every word",
+        "a question at the end"
+      ],
+      "answer": "a comma before the last \"and\" in a list",
+      "explain": "Twain's own page has no comma there. One habit could be chance. With \"shall\" and numbers in words as well, it becomes a voice."
+    },
+    {
+      "id": "x11",
+      "tier": "harder",
+      "level": 5,
+      "type": "inference",
+      "skill": "figurative",
+      "strand": "literature",
+      "objective": "li5-simile",
+      "chapter": 5,
+      "source": {
+        "doc": null,
+        "span": null,
+        "from": "margin-note-chapter-4"
+      },
+      "prompt": "Twain wrote that the almost right word and the right word differ like \"the lightning-bug & the lightning\". What does he mean?",
+      "options": [
+        "the right word has real power; the almost right one only glows a little",
+        "insects are hard to write about",
+        "storms are better at night"
+      ],
+      "answer": "the right word has real power; the almost right one only glows a little",
+      "explain": "A lightning-bug (a firefly) and lightning both shine. Only one of them lights up the whole sky. It is a comparison, made to stick in your head."
+    },
+    {
+      "id": "x12",
+      "tier": "harder",
+      "level": 5,
+      "type": "word-origin",
+      "skill": "vocab",
+      "strand": "word",
+      "objective": "s7-name",
+      "chapter": 5,
+      "source": {
+        "doc": null,
+        "span": null,
+        "from": "margin-note-epilogue"
+      },
+      "prompt": "Pseudonym comes from two Greek parts: pseudo- and onoma. What does it mean?",
+      "options": [
+        "a false name",
+        "a famous name",
+        "a long name"
+      ],
+      "answer": "a false name",
+      "explain": "Pseudo- means false and onoma means name. A pseudonym, or pen name, is a name you write under that is not your own. Samuel Clemens wrote as Mark Twain. Count: 12 (easier 4 · at 4 · harder 4). Types: vocab-in-context, word-origin, tense-sequence, voice, punctuation, inference (6)."
+    }
+  ],
+  "source": {
+    "script": "journey-04.md",
+    "signedOffBy": null,
+    "signedOffOn": null
+  }
+}
