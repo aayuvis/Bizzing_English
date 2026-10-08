@@ -226,16 +226,14 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('Plot Line by tap, and the round ends into the run', await phase('between'));
   ok('Plot Line: three stories perfect', await page.evaluate(() => window.__bz.S.run.run.scores[0] >= 9));
 
-  /* Root Forge: the lexicon loads, then tap the real word's piece, then press its number, through the round */
-  await go(page, '#/play/root'); await titleReady(); await page.click('[data-act=game-start]'); await page.waitForSelector('.gb-forge', { timeout: 15000 });
-  let a = (await G()).q.answer; await page.click(`[data-act=q-pick][data-arg="${a}"]`); await page.waitForTimeout(300);
-  ok('Root Forge shows the forged word and its meaning', await page.evaluate(() => { const q = window.__bz.S.run.g.rounds[0]; return document.querySelector('.gb-fused') && document.querySelector('.feedback.ok')?.textContent.includes(q.word); }));
-  await page.waitForTimeout(1100); a = (await G()).q.answer; await page.keyboard.press(String(a + 1)); await page.waitForTimeout(250);
-  ok('Root Forge plays by touch and by keys', (await G()).right === 2);
-  for (let k = 0; k < 8 && (await G()).phase === 'play'; k++) { await page.waitForTimeout(1150); const s = await G(); if (s.phase !== 'play') break; await page.keyboard.press(String(s.q.answer + 1)); await page.waitForTimeout(150); }
-  ok('Root Forge: the round ends into the run', await phase('between'));
-  await page.evaluate(() => { window.__bz.S.run.run.round = 3; }); await page.click('[data-act=game-round]'); await page.waitForSelector('.gb-family', { timeout: 15000 });
-  ok('Root Forge’s final forges a family: three words from one base', await page.evaluate(() => { const g = window.__bz.S.run.g; return /Forge a family/.test(document.querySelector('.gb-family').textContent) && g.rounds.length === 6 && g.rounds.slice(0, 3).every((q) => q.base === g.rounds[0].base); }));
+  /* Root Forge (views/forge.js; test/forge-ui.mjs has the full check) */
+  await go(page, '#/play/root'); await page.waitForSelector('.fg-load.done', { timeout: 25000, state: 'attached' }); await page.click('[data-act=game-start]'); await page.waitForSelector('.fg-tray', { timeout: 15000 });
+  const ft = await page.evaluate(() => { const g = window.__bz.S.run.g, t = g.targets[0]; return { word: t.word, idx: t.ids.map((id) => g.tray.findIndex((p) => p.id === id)) }; });
+  for (const i of ft.idx) await page.click(`.fg-part[data-arg="${i}"]`); await page.keyboard.press(' '); await page.waitForTimeout(300);
+  ok('Root Forge: a word forged by tap and Space glows with its meaning', await page.evaluate((w) => document.querySelector('.fg-plaque')?.dataset.glow === w && !!document.querySelector('.fg-def'), ft.word));
+  await page.click('[data-act=fg-done]'); ok('Root Forge: the round ends into the run', await phase('between'));
+  await page.evaluate(() => { window.__bz.S.run.run.round = 3; }); await page.click('[data-act=game-round]'); await page.waitForSelector('.fg-part.key', { timeout: 15000 });
+  ok('Root Forge’s final forges a family: a key part, three of its words', await page.evaluate(() => { const g = window.__bz.S.run.g; return g.key && g.goal === 3 && g.targets.filter((t) => t.ids.includes(g.key)).length >= 3; }));
 
   /* by touch on a phone: a Plot Line story tapped in order; nothing scrolls sideways */
   { const P = await ctxFor({ phone: true }); await makeKid(P.page, 'Ivo', '8–10'); await go(P.page, '#/play/plot');
@@ -305,23 +303,14 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   /* the grown-up's rubric is the only judge of quality */
   await go(page, '#/grownups'); for (const d of '1357') await page.keyboard.press(d); await page.waitForTimeout(300);
   ok('the grown-up can read the piece and judge it', (await page.textContent('main')).includes('Zebrafish') && (await page.$$('[data-act=wrubric]')).length >= 4);
-  /* the Elocution Contest: three rounds, the microphone on a tap, points only from what is measured */
+  /* The Podium (the Elocution Contest rebuilt; test/podium-ui.mjs has the full check: the tracks end on Stop and on leaving,
+     a beep, silence, noise and a six-second stop earn nothing, the typed plan never travels and is cleared) */
   await page.evaluate(() => { const k = window.__bz.S.h.kids[0]; k.stops['sp1-aloud'] = { passed: true, tries: 1 }; });
-  await go(page, '#/stage'); ok('the Stage offers the contest with Bee’s rivals', (await page.textContent('main')).includes('Elocution Contest') && (await page.$$('.rivalrow img')).length === 5);
+  await go(page, '#/stage'); ok('the Stage offers the Podium with Bee’s rivals', /Podium/.test(await page.textContent('main')) && (await page.$$('.rivalrow img')).length === 5);
   const n0 = (await page.evaluate(() => window.__tracks.length));
-  await go(page, '#/stage/contest'); ok('entering the contest does not open the microphone', await page.evaluate((n) => window.__tracks.length === n, n0));
-  await page.click('[data-act=ct-begin]');
-  for (let round = 0; round < 3; round++) {
-    await page.click('[data-act=ct-start]'); await page.waitForTimeout(900);
-    if (!round) ok('the contest opens the microphone on Start', await page.evaluate(() => window.__tracks.at(-1).readyState === 'live'));
-    await page.click('[data-act=ct-stop]'); await page.waitForTimeout(250);
-    ok(`contest round ${round + 1}: Stop ends every track`, await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
-    if (round < 2) { ok(`contest round ${round + 1}: every point names what measured it`, /Timing — inside the window|Too quiet to measure/.test(await page.textContent('main')) && (await page.$$('.standings li')).length === 6); await page.click('[data-act=ct-next]'); }
-  }
-  ok('the contest ends with places and says what it never scores', (await page.$$('.standings li')).length === 6 && /never scored/.test(await page.textContent('main')));
-  ok('a finished contest keeps numbers only', await page.evaluate(() => { const c = window.__bz.S.h.kids[0].contests; return c.length === 1 && Object.values(c[0]).every((v) => typeof v === 'number' || Array.isArray(v)); }));
-  await go(page, '#/stage'); await go(page, '#/stage/contest'); await page.click('[data-act=ct-begin]'); await page.click('[data-act=ct-start]'); await page.waitForTimeout(600); await go(page, '#/home');
-  ok('leaving the contest mid-round switches the microphone off', await page.evaluate(() => window.__tracks.every((t) => t.readyState === 'ended')));
+  await go(page, '#/stage/contest'); await page.waitForTimeout(300);
+  ok('the old contest address opens the Podium, and entering it does not open the microphone', /#\/stage\/podium/.test(page.url()) && await page.evaluate((n) => window.__tracks.length === n, n0));
+
   /* the Shop's Extras: a look at a printed price; the paper is worn at once */
   await go(page, '#/shop/extras');
   ok('Extras: three kinds of look, the first of each free and worn — and a Challenge for each of the seven games', (await page.$$('.extragrid')).length === 4 && (await page.$$('.extragrid .tag.ok')).length === 3 && (await page.$$('[data-act=buy-mode]')).length === 7);

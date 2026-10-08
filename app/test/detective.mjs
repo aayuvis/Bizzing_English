@@ -274,8 +274,15 @@ ok('levels: ≥ 80% up one, 50–79% keeps, under 50% down one, never below 1 or
 
 /* ---------- the season: release, gates, Door, wall, shelf, Ledger, ranks ---------- */
 { const h = newHousehold(), k = addKid(h, newKid('Vi', 2, 'x'));
-  ok('every case ships unsigned (source.signedOffBy null), so a child sees none of them…', ALL.every((c) => c.source.signedOffBy === null) && S.seasonList(k, ALL).every((e) => !e.open && /sign/.test(e.why)));
-  const t = S.seasonList(k, ALL, { tester: true });
+  const CASES = ALL.filter((c) => /^case-/.test(c.id)), JOURNEYS = ALL.filter((c) => /^journey-/.test(c.id));
+  ok('the twelve cases are signed off (owner, 8 Oct 2026: "all 12 now"); the four Journeys are not — their quotations await their source texts', CASES.length === 12 && CASES.every((c) => c.source.signedOffBy && c.source.signedOffOn === '2026-10-08') && JOURNEYS.length === 4 && JOURNEYS.every((c) => c.source.signedOffBy === null));
+  const kid0 = S.seasonList(k, ALL);
+  ok('…so a child sees Case 0 first and no Journey', kid0.find((e) => e.id === 'case-00').open && JOURNEYS.every((c) => { const e = kid0.find((x) => x.id === c.id); return !e.open && /sign/.test(e.why); }));
+  { const kc = addKid(h, newKid('Ro', 2, 'x')); for (const id of ['case-00', 'case-01', 'case-02', 'case-03']) { const c = ALL.find((x) => x.id === id); S.closeCase(kc, c, play(c).cs, { now: T }); }
+    ok('an unsigned Journey never blocks the case after it: Case 4 opens after Case 3', S.seasonList(kc, ALL).find((e) => e.id === 'case-04').open); }
+  const unsigned = ALL.map((c) => ({ ...c, source: { ...c.source, signedOffBy: null } }));
+  ok('unsigned, a case is hidden from children', S.seasonList(k, unsigned).every((e) => !e.open && /sign/.test(e.why)));
+  const t = S.seasonList(k, unsigned, { tester: true });
   ok('…and tester mode shows every one (h.parent.tester)', t.every((e) => e.open));
   const signedAll = ALL.map((c) => ({ ...c, source: { ...c.source, signedOffBy: 'owner' } }));
   let list = S.seasonList(k, signedAll);

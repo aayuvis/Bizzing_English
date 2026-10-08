@@ -125,6 +125,24 @@ function crackCard(g) {
   return missCard({ type: 'note', why: st.friend ? `${each}<p>The pieces do not carry their meaning in “${esc(st.friend)}”, so the forge cannot count it. No crack, no coin.</p>` : why }, null, { title, whyHtml: true, go: 'Clear the anvil' });
 }
 
+/* ---------- the room: the stage fills what the page leaves it ----------
+   The shared fitStage (src/stage.js) measures the room by the page's height with the stage at its natural
+   height, so a stage whose content is shorter than the room (the forge, on a phone) is held at its content
+   height and leaves a band of backdrop under it. Here the stage is measured at a tall height instead — the
+   page's own clearance below it is then exact — and the result is kept, so the next render is born at it.
+   It runs in the same frame as fitStage, after it, so nothing flickers. (The fix belongs in fitStage.) */
+let roomH = 0;
+function fitForge() {
+  const el = typeof document !== 'undefined' && document.querySelector('.fg-stage[data-fit]'); if (!el) return;
+  el.style.height = '4000px';
+  const r = el.getBoundingClientRect(), below = Math.max(0, document.documentElement.scrollHeight - (r.bottom + scrollY));
+  roomH = Math.max(380, Math.floor(innerHeight - (r.top + scrollY) - below)); el.style.height = `${roomH}px`;
+}
+const fitLater = () => { if (typeof requestAnimationFrame !== 'undefined') requestAnimationFrame(fitForge); };
+if (typeof window !== 'undefined') { let t = null; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fitForge, 140); }); }
+/* the stage, born at the room it had last time */
+const onStage = (o) => { fitLater(); const html = stage(o); return roomH ? html.replace('style="--plate', `style="height:${roomH}px;--plate`) : html; };
+
 /* ---------- the screens ---------- */
 const rankLine = (book) => { const r = rankOf(book); return r.next ? `${r.n} word${r.n === 1 ? '' : 's'} forged — ${r.next.at - r.n} more to ${r.next.name}` : `${r.n} words forged — the top rank`; };
 const rankBar = (book) => { const r = rankOf(book), lo = [0, 10, 25, 50, 100][r.i], hi = r.next?.at || lo; return `<div class="fg-rank"><b>${esc(r.name)}</b><span class="fg-bar"><i style="width:${hi > lo ? Math.round((100 * (r.n - lo)) / (hi - lo)) : 100}%"></i></span><small>${esc(rankLine(book))}</small></div>`; };
@@ -135,7 +153,7 @@ export function forgeTitle(r, challenge = '') {
   const gm = GAMES.root, k = kid(), rec = k.games.root || {}, L = playLevel(rec), book = bookOf(), cfg = levelCfg(L);
   const stars = Object.values(rec.stars || {}).reduce((a, b) => a + (b || 0), 0), ready = !!F;
   const demo = `<div class="fg-demo" aria-hidden="true"><span class="fg-term fg-prefix"><b>re-</b><small>again</small></span><i class="fg-plus">+</i><span class="fg-term fg-root"><b>port</b><small>carry</small></span><i class="fg-eq">=</i><b class="fg-word">report</b></div>`;
-  return `<div class="game">${stage({ id: 'title-root', world: gm.world, dark: isDark(), mods: 'stg-title-card fg-stage',
+  return `<div class="game">${onStage({ id: 'title-root', world: gm.world, dark: isDark(), mods: 'stg-title-card fg-stage',
     left: { v: bookSize(book), l: 'in your book' }, right: { v: stars, l: `star${stars === 1 ? '' : 's'}` }, title: gm.name, chip: levelTag(L, rankOf(book).name),
     main: `<div class="stg-paper stg-howto fg-howto" data-play>${demo}<p class="stg-lead">${esc(gm.how)}</p>${levelChip('root', { stars: true })}
       <p class="gb-level"><b>Level ${L}</b> · ${esc(gm.levels[L])} — ${cfg.tray} parts, an anvil of ${cfg.slots}.</p>
@@ -165,7 +183,7 @@ export function forgePlay(g, r, { roundName = '', runScore = 0 } = {}) {
   const main = `${showing ? '' : `<p class="prompt">${prompt}</p>`}<div class="fg-play" data-play>${anvil}${held ? `<div class="stg-paper fg-held">${crackCard(g)}</div>` : `${plaque(g.shown || (st?.ok ? st : null)) || (rack ? '' : `<p class="fg-hint">Any real word in Bee’s list counts.</p>`)}${rack}`}</div>`;
   const tray = held ? '' : `<div class="fg-tray${kbdMode ? ' kbd' : ''}" role="group" aria-label="the parts">${g.tray.map((p, i) => partTile(p, i, g, book)).join('')}</div>`;
   const controls = held ? '' : `${btn('Lift', 'fg-lift', { ic: 'undo', cls: 'out stg-pair', dis: !g.anvil.length || !!st })}${btn('Strike', 'fg-strike', { ic: 'blocks', cls: 'stg-go fg-strike', dis: g.anvil.length < 2 || !!(st && !st.ok) })}${btn(done ? 'Finish' : 'Done', 'fg-done', { ic: done ? 'check' : 'next', cls: `${done ? '' : 'out '}stg-pair` })}`;
-  return stage({ id: 'root', world: gm.world, dark: isDark(), mods: `stg-play fg-stage${g.final ? ' stg-final' : ''}`,
+  return onStage({ id: 'root', world: gm.world, dark: isDark(), mods: `stg-play fg-stage${g.final ? ' stg-final' : ''}`,
     left: { v: `${found}<small class="fg-of">/${N}</small>`, l: 'found', label: `${found} of ${N} found` }, right: { v: `<span class="gb-score-v">${g.score}</span>`, l: `run ${runScore + g.score}` },
     title: gm.name, chip: `${levelTag(g.level, roundName)}<span class="gb-combo${g.combo >= 2 ? ' on' : ''}" aria-live="polite">${g.combo >= 2 ? `${g.combo} in a row` : ''}</span>`,
     track: pips, main, tray, controls, fit: true });
@@ -181,7 +199,7 @@ export function forgeBook(r) {
       <p>${x.words.map((w) => `<span class="fg-chip">${esc(w)}</span>`).join(' ')}</p><span class="fg-bar"><i style="width:${Math.round((100 * x.words.length) / Math.max(1, x.of))}%"></i></span><small>${x.words.length} of the ${x.of} words it makes here${x.stamp ? '' : ` · ${STAMP - Math.min(STAMP, x.words.length)} more to its stamp`}</small></article>`).join('')}</div></section>`;
   }).join('');
   const body = !F ? `<p>Lighting the forge…</p>` : n ? groups : `<div class="fg-empty"><img src="${mascot('point')}" alt=""><p>Your Forge Book is empty. Every real word you forge is kept here, by its parts — and a part gets its stamp when three of its words are in.</p></div>`;
-  return `<div class="game">${stage({ id: 'book-root', world: gm.world, dark: isDark(), mods: 'fg-stage fg-bookstage',
+  return `<div class="game">${onStage({ id: 'book-root', world: gm.world, dark: isDark(), mods: 'fg-stage fg-bookstage',
     left: { v: n, l: `word${n === 1 ? '' : 's'}` }, right: { v: stampsN, l: `stamp${stampsN === 1 ? '' : 's'}` }, title: 'Forge Book', chip: `<span class="lvtag"><b>${esc(rk.name)}</b>${rk.next ? ` · ${rk.next.at - n} to ${esc(rk.next.name)}` : ''}</span>`,
     main: `<div class="stg-paper fg-book" data-play>${rankBar(book)}${body}</div>`,
     controls: btn('Back to the forge', 'forge-book-close', { ic: 'back', cls: 'stg-go' }), fit: true })}</div>`;

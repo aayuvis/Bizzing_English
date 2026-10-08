@@ -23,6 +23,7 @@ ok('every prefix, ending and root has its meaning and the source the parts table
 ok('no two parts share a spelling (a tray never shows the same piece twice)', new Set(F.parts.map((p) => p.t)).size === F.parts.length);
 ok('every whole-word part is in Bee’s list and kid-safe', F.parts.filter((p) => p.kind === 'base').every((p) => lex.words[p.t] && kidSafe(p.t, lex.words[p.t][0])));
 ok(`the forge can make a few hundred words (${F.words.size}), some of three parts`, F.words.size >= 300 && [...F.words.values()].some((e) => e.ids.length >= 3));
+ok('the anvil grows to three slots: no four-part word is in Bee’s list for these parts, so no level offers a fourth slot it cannot fill', ([...F.words.values()].some((e) => e.ids.length === 4) || Math.max(...LV.map((L) => LEVELS[L].slots)) === 3) && Math.max(...LV.map((L) => LEVELS[L].slots)) <= MAX_SLOTS);
 let badWord = [];
 for (const [w, e] of F.words) { const d = lex.words[w]; if (!d || !kidSafe(w, d[0]) || !defSafe(d[0]) || F.strike(e.ids)?.word !== w) badWord.push(w); }
 ok(`every word the forge can make is in Bee’s list, kid-safe (word and definition), and struck by its own parts (${badWord.slice(0, 5)})`, !badWord.length);

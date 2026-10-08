@@ -11,20 +11,24 @@
        .strike(ids)              the parts in anvil order → { word, def, ps, rule, ids } for a real word, or null
        .spell(ids)               every spelling the parts may take, plain first ([{ s, rule }])
        .targets(ids, slots)      every real word the tray can forge in 2..slots parts, each piece used once
-       .round(seed, level, o)    a tray of 6–9 parts with ≥ N findable words (LEVELS); o.final: a family
+       .round(seed, level, o)    a tray of 6–9 parts with ≥ N findable words (LEVELS); o.final: a family;
+                                   o.mem: the game's memory, so words not yet forged come first
        .words                    every word the whole table can forge (word → { ids, rule })
        .byPart                   part id → the words it can forge
-     forgeNew(round, level)      a round's state;   forgeStep(state, action) → state (pure, test/forge.mjs)
+     forgeNew(round, level)      a round's state;   forgeStep(forge, state, action) → state (pure, test/forge.mjs)
      bookAdd / bookByPart / rankOf   the Forge Book, kept per child (k.games.root.book)
 
    A WORD is real when it is in Bee's list and passes kidSafe (CLAUDE.md hard rule 11) — its definition
    too. The spelling changes are the usual ones, as tools/import-bee.mjs joins them: the e drops (hope +
    ing), y turns to i (happy + ness), the last letter doubles (sun + y), -le becomes -ly (gentle + ly),
    t + -tion (act + ion), and a Greek root takes a linking o (therm + o + meter). Any order the child
-   chooses is struck as it stands; only Bee's list decides. Nothing in scoring is random: the seed only
-   chooses which parts lie in the tray, and the tray is checked to hold its N words before it is dealt. */
+   chooses is struck as it stands. A word must also be MADE of its parts (see "the forge" below), so the
+   glow never teaches a false etymology. Nothing in scoring is random: the seed only chooses which parts
+   lie in the tray, and the tray is checked to hold its N words before it is dealt. The anvil takes up to
+   MAX_SLOTS parts; the levels use two and three, because Bee's list holds no four-part word these parts
+   make (test/forge.mjs counts them). */
 
-import { rng, shuffle, hash } from './rand.js';
+import { rng, shuffle } from './rand.js';
 import { kidSafe } from './safe.js';
 
 const VOW = /^[aeiouy]/;
@@ -372,4 +376,3 @@ export function rankOf(book) {
   const n = bookSize(book); let i = 0; while (i + 1 < RANKS.length && n >= RANKS[i + 1][0]) i++;
   return { name: RANKS[i][1], n, next: RANKS[i + 1] ? { at: RANKS[i + 1][0], name: RANKS[i + 1][1] } : null, i };
 }
-export const forgeHash = (s) => hash(String(s));

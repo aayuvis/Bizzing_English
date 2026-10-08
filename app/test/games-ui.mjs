@@ -102,9 +102,9 @@ const phoneFit = (page, sel = '.stg button, .stg a') => page.evaluate((sel) => {
   await makeKid(page);
   await go(page, '#/play'); await page.waitForSelector('.pcards');
   const cards = await page.$$eval('.pcard', (c) => c.map((e) => e.dataset.card));
-  ok(`T16: the Play tab shows the lineup's cards and no more (${cards.join(', ')})`, cards.length <= 5 && cards[0] === 'studio' && cards[1] === 'craft' && !cards.some((c) => ['builder', 'rush', 'figure', 'duel'].includes(c)));
+  ok(`T16: the Play tab shows the lineup's cards and no more (${cards.join(', ')})`, cards.join() === 'inkwell,studio,craft,root,ears' && !cards.some((c) => ['builder', 'rush', 'figure', 'duel', 'who', 'plot'].includes(c)));
   ok('the hub cards are named by the one constant', await page.evaluate(() => /Sentence Studio/.test(document.querySelector('[data-card=studio]').textContent) && /Writer’s Craft/.test(document.querySelector('[data-card=craft]').textContent)));
-  ok('every single-game card carries a level chip: Auto and 1–5', await page.evaluate(() => [...document.querySelectorAll('.pcard:not(.hubcard)')].every((c) => c.querySelectorAll('.lvchip .lvc-b').length === 6)));
+  ok('every single-game card carries a level chip: Auto and 1–5 (Inkwell keeps its level per case)', await page.evaluate(() => [...document.querySelectorAll('.pcard:not(.hubcard):not(.inkcard)')].every((c) => c.querySelectorAll('.lvchip .lvc-b').length === 6)));
   await shot(page, 'play-desktop');
 
   /* the hub */
