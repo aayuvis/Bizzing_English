@@ -16,9 +16,8 @@ import * as SE from '../detective-season.js';
 import { PERSONAS, personaById } from '../data/inkwell-personas.js';
 import { sfx } from '../sound.js';
 import { speak, stop as stopVoice, canSpeak } from '../voice.js';
-import { fitStage } from '../stage.js';
 import { rng, shuffle, hash } from '../rand.js';
-import { figure, sticker, plateBg, casePlate, caseWash, paperBg, handOf, whoIs, flyCard, sweep, reduced, artUrl, WASH } from './inkwell-kit.js';
+import { figure, sticker, plateBg, casePlate, caseWash, paperBg, handOf, whoIs, flyCard, sweep, reduced, artUrl, WASH, matVars, fitInk } from './inkwell-kit.js';
 
 /* ---------- state ---------- */
 export const st = () => S.ink;
@@ -50,9 +49,9 @@ function tut(step) {
 /* ---------- opening a case ---------- */
 export function openCase(c, sub) {
   const k = kid(), prev = S.ink?.c?.id === c.id ? S.ink : null;
-  const cs = SE.startCase(k, c, { now: Date.now() }); save();
+  let cs = SE.startCase(k, c, { now: Date.now() }); if (!cs.persona && personaId() && !cs.solved) { cs = { ...cs, persona: personaId() }; SE.putCase(k, c, cs); } save();
   const fresh = !cs.read.length && !cs.marks.length && cs.chapter === 1 && !cs.solved;
-  const keep = prev ? { say: prev.say, doc: prev.doc, seg: prev.seg, ret: prev.ret, hint: prev.hint, acc: prev.acc, panel: prev.panel, closed: prev.closed } : {};
+  const keep = prev ? { say: prev.say, doc: prev.doc, seg: prev.seg, ret: prev.ret, hint: prev.hint, acc: prev.acc, panel: prev.panel, closed: prev.closed, who: prev.who, centre: prev.centre, lastQ: prev.lastQ, expr: prev.expr, lens: prev.lens, focus: prev.focus, fly: prev.fly, flash: prev.flash, accWeak: prev.accWeak, retPending: prev.retPending, epi: prev.epi, coinPop: prev.coinPop } : {};
   S.ink = { ...S.ink, c, cs, doc: null, seg: 'doc', centre: 'doc', who: null, expr: null, cur: 0, anc: null, kbd: false, pick: [], wheel: null, flash: null, tl: { pick: null, cur: 0, slot: 0 }, acc: { culprit: null, ev: [], place: null }, panel: 0, ...keep };
   const s = S.ink;
   const want = sub || (cs.solved ? 'solved' : fresh ? 'opening' : ({ 3: 'board', 4: 'timeline', 5: 'accuse' }[cs.chapter] || 'desk'));
@@ -86,7 +85,7 @@ function frame({ sub, main, mods = '', seg = true, title }) {
   const pop = s.coinPop && Date.now() - s.coinPop.t < 2500 ? `<span class="ink-coinpop" aria-live="polite">+${s.coinPop.n} ${icon('coin')}</span>` : '';
   const left = cs.solved ? { v: 'Solved', l: 'case closed' } : { v: `${Math.min(5, cs.chapter)}<small>/5</small>`, l: 'chapter' };
   const lvl = SE.levelNow(kid());
-  return pageHead({ title: c.title, back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-${sub} ${mods}" data-fit data-ink="${sub}" style="--ink-plate:${plateBg(casePlate(c), dark, caseWash(c))}">
+  return pageHead({ title: c.title, back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-${sub} ${mods}" data-inkfit data-ink="${sub}" style="--ink-plate:${plateBg(casePlate(c), dark, caseWash(c))};${matVars()}">
   <header class="stg-hud"><div class="stg-pod stg-l" data-hud="l"><b>${left.v}</b><small>${esc(left.l)}</small></div>
     <div class="stg-mid"><h2 class="stg-title">${esc(title || D.CHAPTERS[Math.min(5, cs.chapter) - 1].title)}</h2><span class="lvtag"><b>Level ${c.level}</b> · ${esc(c.kind === 'journey' ? 'An Ink Journey' : c.label || 'A Bizzing mystery')}${lvl !== c.level ? ` · you: ${lvl}` : ''}</span></div>
     <div class="stg-pod stg-r" data-hud="r" aria-label="Ink for hints"><b>${cs.ink}</b><small>ink</small>${pop}</div></header>
@@ -156,7 +155,7 @@ export function personaView({ coats = false } = {}) {
      <small id="ink-name-why">Up to 12 letters. Leave it empty to keep ${esc(p.name)}.</small><button class="btn ink-go" data-act="ink-choose">${icon('check')}<span>Be ${esc(p.name)}</span></button><button class="btn out" data-act="ink-say-p">${icon('speaker')}<span>Read aloud</span></button></div>` : '';
   const head = `<div class="pd-head">${quillImg()}<p>${esc((C()?.tutorial || []).find((t) => t.step === 'choose-persona')?.quill || 'Every detective here reads in their own way. Which one are you?')}</p></div>`;
   const main = `<div class="pd-wrap" data-play>${head}<div class="pd-grid" role="group" aria-label="Choose your detective">${cards}</div>${confirm}</div>`;
-  if (coats) return pageHead({ title: 'Change coats', back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-persona" data-fit style="--ink-plate:${plateBg('agency', isDark(), WASH.agency)}"><header class="stg-hud"><div class="stg-pod stg-l"><b>6</b><small>detectives</small></div><div class="stg-mid"><h2 class="stg-title">Choose your detective</h2><span class="lvtag">Progress stays yours, whoever you play</span></div><div class="stg-pod stg-r"><b>${Object.values(SE.inkOf(k).hoard).reduce((a, b) => a + b.length, 0)}</b><small>words found</small></div></header><div class="ink-main" data-stage-main>${main}</div></section>`;
+  if (coats) return pageHead({ title: 'Change coats', back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-persona" data-inkfit style="--ink-plate:${plateBg('agency', isDark(), WASH.agency)};${matVars()}"><header class="stg-hud"><div class="stg-pod stg-l"><b>6</b><small>detectives</small></div><div class="stg-mid"><h2 class="stg-title">Choose your detective</h2><span class="lvtag">Progress stays yours, whoever you play</span></div><div class="stg-pod stg-r"><b>${Object.values(SE.inkOf(k).hoard).reduce((a, b) => a + b.length, 0)}</b><small>words found</small></div></header><div class="ink-main" data-stage-main>${main}</div></section>`;
   return frame({ sub: 'persona', title: 'Choose your detective', main });
 }
 
@@ -385,7 +384,7 @@ export function caseView() {
 /* after a render: fit the stage, draw the strings, fly the card, keep the cursor in view */
 function post() {
   const s = st(); if (!s?.c || S.route.name !== 'inkwell') return;
-  fitStage();
+  fitInk();
   if (s.sub === 'board') drawStrings();
   if (s.sub === 'desk') lensAfter();
   if (s.fly) { const nb = document.querySelector('.ink-nb .nb-card') || document.querySelector('[data-act=ink-seg][data-arg=nb]'); flyCard(s.fly.rect, nb, s.fly.text); sweep(s.fly.rect); s.fly = null; }
@@ -412,7 +411,7 @@ function toChapter(n) {
   const c = C(), cs = CS(), s = st();
   if (n <= 2) { if (cs.reached < n) { const r = act({ type: 'chapter', n }); if (!r.ok) return say(r.say?.text); } else if (cs.chapter !== n && !cs.solved) act({ type: 'chapter', n }); s.sub = 'desk'; s.seg = 'doc';
     if (n === 2) { const t = tut('interview') || (c.aside || []).find((x) => /chapter 2/i.test(x.where))?.text; say(t || 'Pick someone from the suspects board and ask your questions.'); if (!s.who) { const first = people()[0]; if (first) { s.who = first.id; s.centre = 'interview'; } } }
-    deskNudge(); return go(`#/inkwell/case/${c.id}`); }
+    deskNudge(); return go(`#/inkwell/case/${c.id}/desk`); }
   const r = act({ type: 'chapter', n }); if (!r.ok) { sfx('wrong'); return say(r.say?.text), render(); }
   s.sub = { 3: 'board', 4: 'timeline', 5: 'accuse' }[n]; s.pick = []; s.wheel = null; s.say = null;
   if (n === 3) say(tut('link') || (c.boardIntro || [])[0]?.text || 'Two clues together can say more than each alone. Drag one clue card onto another.');
@@ -498,13 +497,13 @@ export const CASE_ACTIONS = {
     const k = kid(), s = S.ink, id = s.pick1 || personaId(); if (!id) return;
     const name = document.getElementById('ink-name')?.value ?? s.pname ?? '';
     if (!SE.renamePersona(k, name)) { say('That name will not do. Letters only, up to 12.', { hold: true }); return render(); }
-    SE.choosePersona(k, id); s.pick1 = null; s.pname = null; save(); sfx('unlock');
+    SE.choosePersona(k, id); s.pick1 = null; s.pname = null; if (s.c && s.cs && !s.cs.solved) { s.cs = { ...s.cs, persona: id }; SE.putCase(k, s.c, s.cs); } save(); sfx('unlock');
     if (s.coats || !s.c) { s.coats = false; return go('#/inkwell'); }
     const line = (C().tutorial || []).find((t) => t.step === 'choose-persona-confirm')?.quill || '{det}. Good. Now, about this case.';
     s.say = null; toChapter(1); say(line); render();
   },
   'ink-ch': (n) => { n = +n; const s = st(), cs = CS(); if (hold()) return; if (n <= cs.reached || D.canEnter(C(), cs, n).ok) return toChapter(n); sfx('wrong'); say(D.canEnter(C(), cs, n).why); render(); },
-  'ink-seg': (id) => { const s = st(); if (id === 'board') { const cs = CS(); const n = cs.reached >= 5 ? 5 : cs.reached >= 4 ? 4 : 3; if (cs.reached >= 3 || D.canEnter(C(), cs, 3).ok) return toChapter(cs.chapter >= 3 ? cs.chapter : n); say('The board opens in chapter 3. Read and ask first.'); return render(); } s.seg = id; if (s.sub !== 'desk') { s.sub = 'desk'; return go(`#/inkwell/case/${C().id}`); } render(); },
+  'ink-seg': (id) => { const s = st(); if (id === 'board') { const cs = CS(); const n = cs.reached >= 5 ? 5 : cs.reached >= 4 ? 4 : 3; if (cs.reached >= 3 || D.canEnter(C(), cs, 3).ok) return toChapter(cs.chapter >= 3 ? cs.chapter : n); say('The board opens in chapter 3. Read and ask first.'); return render(); } s.seg = id; if (s.sub !== 'desk') { s.sub = 'desk'; return go(`#/inkwell/case/${C().id}/desk`); } render(); },
   'ink-open': (id) => { st().knackShow = null; openDoc(id); },
   'ink-who': (id) => { const s = st(); s.who = id; s.centre = 'interview'; s.seg = 'doc'; s.lastQ = null; s.expr = 'calm'; if (CS().chapter < 2) say((C().interviews || []).length ? 'Interviews come next. Finish reading the scene first.' : 'Nobody to ask yet.'); render(); },
   'ink-centre': (m) => { const s = st(); s.centre = m; render(); },
@@ -540,7 +539,7 @@ export const CASE_ACTIONS = {
   },
   'ink-link': (kind) => { const s = st(); if (!s.wheel) return; const [a, b] = s.wheel; tryLink(a, b, kind); },
   'ink-wheel-x': () => { const s = st(); s.wheel = null; s.pick = []; render(); },
-  'ink-tpick': (id) => { const s = st(); if (hold() || CS().timeline.done) return; if (s.tl.pick === id) { s.tl.pick = null; s.tl.holding = false; return render(); } s.tl.pick = id; s.tl.holding = true; const M = tlModel(); s.tl.slot = Math.max(0, M.line.indexOf(null)); sfx('tap'); render(); },
+  'ink-tpick': (id) => { const s = st(); if (hold() || CS().timeline.done) return; if (s.tl.pick === id) { s.tl.pick = null; s.tl.holding = false; return render(); } const at = tlModel().line.indexOf(id); if (s.tl.pick && at >= 0) return place(s.tl.pick, at); s.tl.pick = id; s.tl.holding = true; const M = tlModel(); s.tl.slot = Math.max(0, M.line.indexOf(null)); sfx('tap'); render(); },
   'ink-tslot': (at) => { const s = st(); if (!s.tl.pick) { say('Pick up a postcard first, then choose its peg.'); return render(); } place(s.tl.pick, +at); },
   'ink-feast': (arg) => { const [i, j] = arg.split(':').map(Number), it = C().timeline.feast.items[i], r = act({ type: 'feast', i, answer: it.options[j] }); if (!r.ok) return; if (r.right) { sfx('right'); say(r.explain, { tone: 'gold' }); } else { sfx('wrong'); say(r.explain, { hold: true }); } render(); },
   'ink-culprit': (id) => { const s = st(); if (hold()) return; s.acc.culprit = s.acc.culprit === id ? null : id; sfx('tap'); render(); },
@@ -668,7 +667,7 @@ export function casePointerUp(e) {
   if (p.kind === 'card') { if (!p.moved) return; swallowClick(); const t = document.elementFromPoint(e.clientX, e.clientY)?.closest?.('.bd-card'); if (t && t.dataset.card !== p.id) { s.pick = [p.id, t.dataset.card]; s.wheel = s.pick.slice(); s.wheelI = 0; s.focus = '.wh-opt'; if (C().id === 'case-00') { const x = tut('link-wheel'); if (x) say(x); } render(); } else { s.pick = []; drawStrings(); render(); } return; }
   if (p.kind === 'peg') { p.ghost?.remove(); if (!p.moved) return; swallowClick(); const t = document.elementFromPoint(e.clientX, e.clientY)?.closest?.('.tl-peg[data-at]'); if (t) place(p.id, +t.dataset.at); else if (document.elementFromPoint(e.clientX, e.clientY)?.closest?.('.tl-pile')) { act({ type: 'unplace', event: p.id }); render(); } else render(); }
 }
-function swallowClick() { const f = (ev) => { ev.stopPropagation(); ev.preventDefault(); }; document.addEventListener('click', f, { capture: true, once: true }); setTimeout(() => document.removeEventListener('click', f, { capture: true }), 400); }
+function swallowClick() { const f = (ev) => { ev.stopPropagation(); ev.preventDefault(); }; document.addEventListener('click', f, { capture: true, once: true }); setTimeout(() => document.removeEventListener('click', f, { capture: true }), 0); }
 function paintSel() { const s = st(), a = Math.min(s.anc, s.cur), b = Math.max(s.anc, s.cur); document.querySelectorAll(`.pp-body[data-body="${CSS.escape(s.selDoc)}"] .w`).forEach((w) => w.classList.toggle('sel', +w.dataset.i >= a && +w.dataset.i <= b)); }
 
 /* ---------- the magnifier: a lens over the paper, the text under it ×1.6 ---------- */

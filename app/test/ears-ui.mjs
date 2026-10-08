@@ -99,7 +99,7 @@ if (want(1)) for (const phone of [false, true]) for (const dark of [false, true]
   const { ctx, page } = await ctxFor({ phone, dark });
   await makeKid(page, 'Mira');
   await go(page, '#/ears');
-  ok(`${tag}: #/ears opens Story Ears`, (await page.textContent('h1')).includes('Story Ears'));
+  ok(`${tag}: #/ears opens Story Ears`, (await page.textContent('h1', { timeout: 3000 }).catch(() => '')).includes('Story Ears'));
   const f = await checkPageHead(page, { phone }); ok(`${tag}: the page head matches Bee`, f.length === 0, f.join('; '));
   ok(`${tag}: the level chip offers Auto and Levels 1–5`, (await page.$$('[data-act=se-level]')).length === 6);
   ok(`${tag}: the story tree is drawn`, !!(await page.$('.se-tree')));
@@ -107,7 +107,7 @@ if (want(1)) for (const phone of [false, true]) for (const dark of [false, true]
   ok(`${tag}: Listen is above the fold on the title card (${lb[0]} ≤ ${lb[1]})`, lb[0] <= lb[1]);
   await page.click('[data-act=se-start]'); await page.waitForTimeout(300);
   ok(`${tag}: Listen starts a round on the listening screen`, (await G(page)).gp === 'listen' && !!(await page.$('[data-act=se-listen]')));
-  ok(`${tag}: the story names its book`, /From .+ by .+\(\d{4}\)/.test(await page.textContent('.se-src')));
+  ok(`${tag}: the story names its book`, /From .+ by .+\(\d{4}\)/.test(await page.textContent('.se-src', { timeout: 3000 }).catch(() => '')));
   await page.click('[data-act=se-listen]'); await until(page, (x) => x.gp === 'ask');
   for (const h of ['title', 'ask']) {
     if (h === 'title') { await page.evaluate(() => { window.__bz.S.run.phase = 'title'; window.__bz.render(); }); await page.waitForTimeout(200); }
@@ -132,13 +132,14 @@ if (want(1)) for (const phone of [false, true]) for (const dark of [false, true]
   ok(`${tag}: the HUD is mirrored within 4 px (${sym.hud.toFixed(1)})`, sym.hud <= 4);
   ok(`${tag}: the pictures are centred within 4 px (${sym.cards.toFixed(1)})`, sym.cards <= 4);
   /* T14: no flat colour over 6%, no pure white or black over 2% of the stage */
-  await page.evaluate(() => document.querySelectorAll('.se-stage *').forEach((e) => { e.style.animation = 'none'; }));
+  await page.evaluate(() => { document.querySelectorAll('.se-stage *').forEach((e) => { e.style.animation = 'none'; }); document.querySelectorAll('.bz-tabbar, .bz-hdr, header').forEach((e) => { e.style.visibility = 'hidden'; }); });   // the stage itself, not the fixed chrome over it
   const png = await (await page.$('.se-stage')).screenshot(), shot = PNG(png), bins = new Map(); let white = 0, black = 0;
   if (process.env.BZ_SHOTS) { writeFileSync(`${process.env.BZ_SHOTS}/ears-${tag.replace(' ', '-')}.png`, png); await page.screenshot({ path: `${process.env.BZ_SHOTS}/ears-page-${tag.replace(' ', '-')}.png` }); }
   for (const [r, g, b] of shot.pixels) { if (r >= 250 && g >= 250 && b >= 250) white++; if (r <= 5 && g <= 5 && b <= 5) black++; const k = (r >> 3) << 10 | (g >> 3) << 5 | b >> 3; bins.set(k, (bins.get(k) || 0) + 1); }
   const N = shot.pixels.length, flat = Math.max(...bins.values()) / N;
   ok(`${tag}: no flat colour over 6% of the stage (${(flat * 100).toFixed(1)}%)`, flat <= 0.06);
   ok(`${tag}: no pure white or black over 2% of the stage (${((white / N) * 100).toFixed(1)}% / ${((black / N) * 100).toFixed(1)}%)`, white / N <= 0.02 && black / N <= 0.02);
+  await page.evaluate(() => document.querySelectorAll('.bz-tabbar, .bz-hdr, header').forEach((e) => { e.style.visibility = ''; }));
   ok(`${tag}: no page errors and no 4xx/5xx`, page.errs.length === 0, page.errs.slice(0, 3).join(' | '));
   ok(`${tag}: no third-party requests`, page.reqs.every(ALLOWED), page.reqs.filter((u) => !ALLOWED(u)).slice(0, 3).join(' '));
   await ctx.close();
@@ -156,9 +157,9 @@ if (want(2)) {
   const after = await wallet(page, 'ravi');
   ok(`keyboard: a whole run can be played by keyboard alone (${end?.phase})`, end?.phase === 'done' && end.sum.right === end.sum.total && end.sum.total >= 4);
   ok(`keyboard: the finish card's coins are the wallet's change (${end?.coins} shown, ${after - before} paid)`, end?.coins === after - before && end.coins === end.sum.total + 5);
-  ok('keyboard: the finish card shows those coins', (await page.textContent('.se-stats')).includes(String(end?.coins)));
+  ok('keyboard: the finish card shows those coins', (await page.textContent('.se-stats', { timeout: 3000 }).catch(() => '')).includes(String(end?.coins)));
   ok('keyboard: 100% moves the level up one (the owner’s rule)', await page.evaluate(() => window.__bz.S.h.kids[0].games.ears.level === 2));
-  ok('keyboard: the finish names what was practised and a next step', /You practised listening for (who|where|what)/.test(await page.textContent('.se-donecard')) && !!(await page.$('.se-next-step')));
+  ok('keyboard: the finish names what was practised and a next step', /You practised listening for (who|where|what)/.test(await page.textContent('.se-donecard', { timeout: 3000 }).catch(() => '')) && !!(await page.$('.se-next-step')));
   ok('keyboard: the stories heard grow the tree', await page.evaluate(() => Object.keys(window.__bz.S.h.kids[0].games.ears.heard).length >= 3));
   /* a hand-set level sticks until the next check, then goes back to Auto */
   await page.click('[data-act=se-title]'); await page.waitForTimeout(200);
@@ -199,7 +200,7 @@ if (want(3)) {
   } });
   ok('touch: a whole run can be played by touch alone', end?.phase === 'done');
   ok(`touch: a run with every answer wrong earns nothing (${(await wallet(page, 'asha')) - before})`, (await wallet(page, 'asha')) === before && end.coins === 0);
-  ok('touch: under 50% the level drops one, kindly', await page.evaluate(() => window.__bz.S.h.kids[0].games.ears.level === 1) && /warm up on Level 1/.test(await page.textContent('.se-donecard')));
+  ok('touch: under 50% the level drops one, kindly', await page.evaluate(() => window.__bz.S.h.kids[0].games.ears.level === 1) && /warm up on Level 1/.test(await page.textContent('.se-donecard', { timeout: 3000 }).catch(() => '')));
   /* SE1: a random tapper earns nothing */
   let paid = 0, right = 0, total = 0;
   for (let i = 0; i < 2; i++) {
@@ -269,7 +270,7 @@ if (want(6)) {
   await page.waitForTimeout(300);
   const low = await page.evaluate(() => window.__bz.S.run.ty);
   ok(`typing: a lesson finished under 90% pays nothing (${low.acc}%, ${(await wallet(page, 'tara')) - before} coins)`, low.done && low.acc < 90 && (await wallet(page, 'tara')) === before && !low.paid);
-  ok('typing: the finish says what was practised — the keys and the words missed', /You practised/.test(await page.textContent('.tl-result')) && /Words to try again/.test(await page.textContent('.tl-result')) && (await page.$$('.ty-kb')).length >= 2);
+  ok('typing: the finish says what was practised — the keys and the words missed', /You practised/.test(await page.textContent('.tl-result', { timeout: 3000 }).catch(() => '')) && /Words to try again/.test(await page.textContent('.tl-result', { timeout: 3000 }).catch(() => '')) && (await page.$$('.ty-kb')).length >= 2);
   await page.click('[data-act=ty-again]'); await page.waitForTimeout(250);
   for (const ch of await page.evaluate(() => window.__bz.S.run.ty.seq)) await page.keyboard.type(ch === ' ' ? ' ' : ch);
   await page.waitForTimeout(300);

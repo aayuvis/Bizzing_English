@@ -118,11 +118,12 @@ async function playSentence(st, holds, onEnd) {
   a.onended = done;
   a.play().then(() => { if (a.currentTime < t0 - 0.05) try { a.currentTime = t0; } catch {} A.raf = requestAnimationFrame(tick); }).catch(() => { if (a === A.el && tok === A.token) voiceFallback(h.sentence, tok, () => onEnd?.()); });
 }
+const captionHTML = (c) => { const i = c.sentence.indexOf(c.holds); return i < 0 ? esc(c.sentence) : `${esc(c.sentence.slice(0, i))}<mark>${esc(c.holds)}</mark>${esc(c.sentence.slice(i + c.holds.length))}`; };
+/* the sentence replayed after a miss is kept with the run, so a re-render keeps it on screen */
 function setCaption(sentence, holds) {
+  const r = R(); if (r) r.caption = { sentence, holds };
   const el = document.querySelector('[data-caption]'); if (!el) return;
-  const i = sentence.indexOf(holds);
-  el.innerHTML = i < 0 ? esc(sentence) : `${esc(sentence.slice(0, i))}<mark>${esc(holds)}</mark>${esc(sentence.slice(i + holds.length))}`;
-  el.hidden = false;
+  el.innerHTML = captionHTML({ sentence, holds }); el.hidden = false;
 }
 function askAloud(q) {
   if (!q || soundOff()) return;
@@ -242,7 +243,7 @@ function askView(g, q, st) {
   return `<div class="se-ask"><div class="se-qbar"><button class="se-speak" data-act="se-ask" aria-label="Hear the question again">${icon('speaker')}</button>
       <p class="se-qtext">${esc(q.ask)}</p><span class="se-voice" data-qvoice hidden>computer voice</span></div>
     ${slots}<div class="se-cards n${q.options.length}${order ? ' order' : ''}" role="group" aria-label="${order ? 'Pictures to put in order' : 'Pick a picture'}">${cards}</div>
-    ${g.phase === 'miss' ? `<p class="se-miss" role="status">${order ? 'Here is the order it happened in. Listen again:' : 'This is the one. Listen again:'}</p><p class="se-caption" data-caption hidden></p>` : ''}
+    ${g.phase === 'miss' ? `<p class="se-miss" role="status">${order ? 'Here is the order it happened in. Listen again:' : 'This is the one. Listen again:'}</p><p class="se-caption" data-caption ${R()?.caption ? '' : 'hidden'}>${R()?.caption ? captionHTML(R().caption) : ''}</p>` : ''}
     ${g.phase === 'right' ? '<p class="se-yes" role="status">Yes — you heard it.</p>' : ''}</div>`;
 }
 function doneView(r) {
@@ -301,6 +302,7 @@ function pickCard(i) {
 }
 function nextQ() {
   const r = R(); clearTimeout(adv); const ng = step({ t: 'next' }); if (!ng) return;
+  r.caption = null;
   stopAudio();
   if (ng.phase === 'ask') { render(); setTimeout(() => R() === r && askAloud(curQ(r.g)), 250); return; }
   if (ng.phase === 'between') { sfx('finish'); save(); render(); return; }

@@ -9,7 +9,7 @@
    Versioned: a change of shape adds a vN_to_vN+1 step to STEPS; an old step is never edited.
    ?demo holds a sample household in memory: nothing is read from or written to storage. */
 
-export const VERSION = 5;
+export const VERSION = 6;
 const KEY = 'bizzing-english.household';
 const DEV = 'bizzing-english.device';
 
@@ -39,6 +39,10 @@ const STEPS = {
      until the child first opens the Agency; the persona's own name, if the child renames it, sits apart in
      k.inkwellName, which no backup carries (a child may type their own name there) */
   4: (h) => { for (const k of h.kids || []) { if (k.inkwell === undefined) k.inkwell = null; if (k.inkwellName === undefined) k.inkwellName = null; } h.v = 5; return h; },
+  /* v6: The Podium (podium.js) — k.podium { level, pick, top, n, best, cur }, null until the child first enters;
+     numbers and ids only. A typed speech plan is free writing and lives apart in k.writing.podium (no backup
+     carries k.writing), cleared when the tournament ends. */
+  5: (h) => { for (const k of h.kids || []) if (k.podium === undefined) k.podium = null; h.v = 6; return h; },
 };
 
 export function migrate(h) {

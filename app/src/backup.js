@@ -4,7 +4,8 @@
 
 export const KID_FIELDS = ['id', 'band', 'avatar', 'created', 'owned', 'worlds', 'world', 'stops', 'mastery', 'misses', 'bank', 'reading', 'book',
   'medals', 'seen', 'games', 'stage', 'contests', 'extras', 'copy', 'days', 'targets', 'prefs', 'milestones', 'feed', 'place', 'modes', 'certsSeen',
-  'inkwell'];   // Inkwell Detective progress (cases, casebook, Word Hoard); never k.inkwellName, the persona's typed name
+  'inkwell',   // Inkwell Detective progress (cases, casebook, Word Hoard); never k.inkwellName, the persona's typed name
+  'podium'];   // The Podium: level, tournaments, numbers and ids only; never k.writing.podium, the typed speech plans
 export const PARENT_FIELDS = ['plan'];
 
 export function makeBackup(h) {

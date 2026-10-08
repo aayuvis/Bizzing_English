@@ -14,11 +14,11 @@ import { PERSONAS, personaById } from '../data/inkwell-personas.js';
 import { sfx } from '../sound.js';
 import { onHidden } from '../stage.js';
 import { act, say, sayBox, pt } from './inkwell-case.js';
-import { sticker, figure, plateBg, WASH } from './inkwell-kit.js';
+import { sticker, figure, plateBg, WASH, matVars } from './inkwell-kit.js';
 
 const I = () => S.ink;
 const stageWrap = ({ cls, plate = 'agency', wash, l, r, title, chip, main, back = { label: 'Agency', href: '#/inkwell' }, head }) =>
-  pageHead({ title: head || title, back }) + `<section class="stg ink ${cls}" data-fit style="--ink-plate:${plateBg(plate, isDark(), wash || WASH.agency)}">
+  pageHead({ title: head || title, back }) + `<section class="stg ink ${cls}" data-inkfit style="--ink-plate:${plateBg(plate, isDark(), wash || WASH.agency)};${matVars()}">
   <header class="stg-hud"><div class="stg-pod stg-l"><b>${l.v}</b><small>${esc(l.l)}</small></div><div class="stg-mid"><h2 class="stg-title">${esc(title)}</h2>${chip ? `<span class="lvtag">${chip}</span>` : ''}</div><div class="stg-pod stg-r"><b>${r.v}</b><small>${esc(r.l)}</small></div></header>
   <div class="ink-main" data-stage-main>${main}</div>${sayBox()}</section>`;
 

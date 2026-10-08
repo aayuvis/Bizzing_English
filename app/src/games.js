@@ -22,7 +22,8 @@
    by `runPay` — and only when the whole run is 50% or better, the line under which no star is earned
    either, so a random tapper earns nothing (test/games.mjs T1). Clause Builder: a sentence right first
    try. Comma Rush: a clean sentence (never a right comma beside wrong ones). Figure Hunt, Rhetoric Duel,
-   Root Forge, Who Said It?: an item right first try, in a round of 50% or better. Plot Line: a story
+   Who Said It?: an item right first try, in a round of 50% or better. Root Forge: a real word forged
+   first try (not rearranged after a crack), in a round of 50% or better (words / (goal + cracks)). Plot Line: a story
    wholly in order at its first check. At most ROUND_PAY_CAP a round; the wallet keeps the day's lid.
 
    A MISS HOLDS (C §1.6). A wrong answer stops the item — the clock too — until the child presses
@@ -46,8 +47,10 @@
      after the answer. An item is right only when every step was.
    Plot Line — the opening sentence of each scene of a story, shuffled: place them on the line (drag,
      tap or keys). 4, then 5, then 6 scenes; the final from level 3 asks which scene is missing.
-   Root Forge — a base word (or a Latin root) and four pieces: forge the one REAL word. The final forges
-     a family: three words from one base or root.
+   Root Forge — a real forge (src/forge.js, views/forge.js): a tray of 6–9 parts with their meanings and an
+     anvil of two or three slots; any real word in Bee's list, kid-safe and made of its parts, scores and
+     goes into the child's Forge Book; a non-word cracks and holds. The final forges a family: three words
+     with one base or root.
    Rhetoric Duel (Writer's Craft), "make it strong" — against one of Bee's rivals, best of five. Where the
      plain version is as long as the original (±10%) and a question only when it is, the child first
      picks the stronger (scored); then BUILDS the strong line from its own tiles and one plain decoy, and
@@ -56,6 +59,7 @@
 import { rng, shuffle, sample, permute, hash } from './rand.js';
 import { kidSafe } from './safe.js';
 import { MAIN_CLAUSE, COMMAS } from './data/sentences.js';
+import { forgeOf, forgeAccuracy, forgeFirst } from './forge.js';
 
 /* The games as the Play page lists them: a world (whose painting is the board), what each practises,
    a three-second how-to, its keys, and what each of its five levels means. */
@@ -76,9 +80,9 @@ export const GAMES = {
   plot: { name: 'Plot Line', world: 'garden', music: 'games-reading', practises: 'the order of events in a story', how: 'Each card opens a scene of one story. Tap them in the order they happen.', more: 'Or drag each card onto its place on the line.', keys: '1–6 place · ← → card · ↑ ↓ slot · Enter place · Backspace undo',
     final: 'From level 3: which scene is missing?',
     levels: LV(['four scenes from first stories', 'four scenes, longer stories', 'five scenes', 'five scenes from the oldest books', 'six scenes, the hardest stories']) },
-  root: { name: 'Root Forge', world: 'scriptorium', music: 'games-word', practises: 'prefixes, suffixes and roots that make real words', how: 'One word part and four pieces. Forge the one that makes a real word.', keys: '1–4 forge · Enter next',
+  root: { name: 'Root Forge', world: 'scriptorium', music: 'games-word', practises: 'prefixes, suffixes and roots that make real words', how: 'Put word parts on the anvil and strike. A real word glows and goes into your Forge Book; a made-up one cracks.', keys: '1–9 or ← → Enter place · Backspace lift · Space strike',
     final: 'Forge a family — three real words from one base or root',
-    levels: LV(['first prefixes and endings', 'more prefixes and endings', 'every prefix and ending', 'Latin roots join in', 'mostly roots and harder parts']) },
+    levels: LV(['first prefixes and endings on whole words', 'more prefixes and endings', 'Latin and Greek roots join in', 'three-part words', 'roots and three-part words, the most parts']) },
   duel: { name: 'Rhetoric Duel', hub: 'craft', world: 'forum', music: 'games-sentence', practises: 'what makes a line strong — the devices great writers use', promise: 'Make it strong: build the great line from its pieces, then meet its device.', how: 'Pick the stronger of two lines; then build the strong one from its pieces — one piece is plain and does not belong.', more: 'A duel with one of Bee’s rivals, best of five.', keys: '1 2 pick · 1–5 piece · Backspace undo · Enter check',
     final: 'The strongest rival and the hardest lines',
     levels: LV(['alliteration and questions', 'groups of three and repeated openings', 'every device', 'every device, longer lines', 'antithesis and the hardest lines']) },
@@ -138,6 +142,7 @@ export function roundLog(g) {
     const cur = g.cur && !g.hold ? [{ key: g.kind === 'builder' ? g.cur.it.key : g.cur.key, ok: null }] : [];   // held: already logged as missed
     return [...g.log, ...cur];
   }
+  if (g.kind === 'root') return g.found.map((x) => ({ key: 'f:' + x.word, ok: x.first }));   // the words forged; a crack is no item
   return g.rounds.slice(0, g.results.length).map((q, j) => ({ key: q.key, ok: g.results[j] }));
 }
 
@@ -163,6 +168,7 @@ export function accuracy(g) {
   else if (g.kind === 'rush') { right = g.right; total = g.right + g.wrongs; }
   else if (g.kind === 'plot') { right = g.right; total = g.total; }
   else if (g.kind === 'figure' || g.kind === 'duel') { right = g.results.filter(Boolean).length; total = g.results.length; }
+  else if (g.kind === 'root') return forgeAccuracy(g);
   else { right = g.right; total = g.answered ?? g.rounds.length; }
   return { right, total, pct: total ? right / total : null };
 }
@@ -175,15 +181,16 @@ export function roundPay(g) {
   if (g.kind === 'builder') n = g.built;                       // one try an item: every sentence built is right first try
   else if (g.kind === 'rush') n = g.clean;                     // a clean sentence — never a right comma beside wrong ones
   else if (g.kind === 'plot') n = half ? g.perfect : 0;        // a story wholly in order at its first check
+  else if (g.kind === 'root') n = half ? forgeFirst(g) : 0;     // a real word forged first try (never one rearranged after a crack)
   else n = half ? (g.results || []).filter(Boolean).length : 0; // right first try, in a round of 50% or better
   return Math.max(0, Math.min(ROUND_PAY_CAP, n));
 }
-/* BEYOND CHANCE. Where a guess is right one time in four — Who Said It? and Root Forge (four options),
+/* BEYOND CHANCE. Where a guess is right one time in four — Who Said It? (four options),
    Plot Line (a lucky pair, a missing scene among four) — stars and coins are measured on accuracy beyond
    chance, the exam's correction (right − wrong / 3) / all: a random tapper scores 0 and a child who knows
    it all still scores 100%. Without it a random tapper reached the 50% line in about one run in forty
    (test/games.mjs T1). The level still moves on the plain accuracy, by the owner's rule. */
-export const CHANCE = { who: 0.25, root: 0.25, plot: 0.25 };
+export const CHANCE = { who: 0.25, plot: 0.25 };   // Root Forge has no options to guess among: a random strike is a crack (test/forge.mjs)
 export const fairPct = (kind, pct) => (pct == null ? null : CHANCE[kind] ? Math.max(0, (pct - CHANCE[kind]) / (1 - CHANCE[kind])) : pct);
 /* What the finish pays: the banked coins, only when the whole run is 50% or better (no star, no coin). */
 export const runPay = (run) => { const p = fairPct(run.kind, runPct(run)); return p != null && p >= PAY_LINE ? run.banked || 0 : 0; };
@@ -734,54 +741,12 @@ export function plotStep(s, a) {
 }
 
 /* ---------- Root Forge ---------- */
-/* lex: Bee's word list (public/data/bee-words.json: words, prefixNon, suffixNon); wp: data/wordparts.js.
-   prefixNon[word] / suffixNon[word] list the affixes that make NO word in Bee's list with that word's
-   base — the import computed them — so a rival is never a real word. Root rounds check Bee's list
-   directly: a rival prefix starts no word in it at all. */
-const KEYS = new WeakMap(), POOLS = new WeakMap();
-const lexKeys = (lex) => { let k = KEYS.get(lex); if (!k) KEYS.set(lex, (k = Object.keys(lex.words))); return k; };
+/* The forge itself — the parts, the spelling, the rounds, the reducer, the Forge Book — is src/forge.js (built
+   locally behind that one module, so a family drop-in can replace it). forgePools lists every word it can
+   forge, for the safety scan (test/safe.mjs) and anything that counts the pool. */
 export function forgePools(lex, wp) {
-  const memo = POOLS.get(lex); if (memo && memo.wp === wp) return memo.out;
-  const P = wp.PREFIXES.map((a) => a.p), S = wp.SUFFIXES.map((a) => a.s), keys = lexKeys(lex), out = [];
-  for (const a of wp.PREFIXES) a.words.forEach(([word, base]) => { const non = (lex.prefixNon?.[word] || []).filter((x) => P.includes(x) && x !== a.p); if (lex.words[word] && non.length >= 3) out.push({ kind: 'prefix', aff: a.p, base, word, non, band: a.band || 1, meaning: a.meaning }); });
-  for (const a of wp.SUFFIXES) a.words.forEach(([word, base]) => { const non = (lex.suffixNon?.[word] || []).filter((x) => S.includes(x) && x !== a.s); if (lex.words[word] && non.length >= 3) out.push({ kind: 'suffix', aff: a.s, base, word, non, band: a.band || 1, meaning: a.meaning }); });
-  for (const r of wp.ROOTS) for (const rt of r.root.split(/\s*\/\s*/)) for (const word of r.words) for (const p of P) {
-    if (word !== p + rt || !lex.words[word]) continue;
-    const non = P.filter((q) => q !== p && !keys.some((k) => k.startsWith(q + rt)));
-    if (non.length >= 3) out.push({ kind: 'root', aff: p, base: rt, word, non, band: 4, meaning: r.meaning });
-  }
-  const safe = out.filter((x) => kidSafe(x.word, lex.words[x.word]?.[0]));
-  POOLS.set(lex, { wp, out: safe });
-  return safe;
-}
-const affLabel = (kind, x) => (kind === 'suffix' ? '-' + x : x + '-');
-export const FORGE_LEVELS = { 1: { cap: 1, roots: 0 }, 2: { cap: 2, roots: 0 }, 3: { cap: 3, roots: 0 }, 4: { cap: 3, roots: 4 }, 5: { cap: 3, roots: 6, min: 2 } };
-function forgeItem(lex, x, seed, id) {
-  const wrong = sample(rng('fw:' + seed + x.word), x.non, 3);
-  const { options, answer } = permute(id, [x.aff, ...wrong].map((y) => affLabel(x.kind, y)));
-  const d = lex.words[x.word];
-  return { kind: x.kind, base: x.base, word: x.word, before: x.kind !== 'suffix', options, answer, cat: x.kind, key: 'f:' + x.word, meaning: x.meaning, def: d ? d[0] : '', ps: d ? d[2] : '' };
-}
-export function forgeRound(lex, wp, seed, level = 1, n = 10, o = {}) {
-  const L = clampLevel(level), cfg = FORGE_LEVELS[o.final ? Math.min(MAX_LEVEL, L + 1) : L], all = forgePools(lex, wp), k = (x) => 'f:' + x.word;
-  const affix = all.filter((x) => x.kind !== 'root' && x.band <= cfg.cap && x.band >= (cfg.min || 1)), roots = all.filter((x) => x.kind === 'root'), nr = Math.round((cfg.roots * n) / 10);
-  const pr = memDraw(roots, k, o.mem, 'forge-r:' + seed, nr, o.now), picked = [...memDraw(affix, k, o.mem, 'forge:' + seed, n - pr.length, o.now), ...pr].sort((a, b) => a.band - b.band || (a.word < b.word ? -1 : 1));
-  return picked.map((x, i) => forgeItem(lex, x, seed, `forge:${hash(String(seed))}:${i}`));
-}
-/* Families: three or more words from one base ("happy": unhappy, happiness, happily) or one root ("port"). */
-export function forgeFamilies(lex, wp) {
-  const by = new Map();
-  for (const x of forgePools(lex, wp)) { const id = (x.kind === 'root' ? 'root:' : 'base:') + x.base; if (!by.has(id)) by.set(id, new Map()); if (!by.get(id).has(x.word)) by.get(id).set(x.word, x); }
-  return [...by.entries()].filter(([, m]) => m.size >= 3).map(([id, m]) => ({ id, key: 'fam:' + id, root: id.startsWith('root:'), base: id.split(':')[1], members: [...m.values()] }));
-}
-/* The final: `k` families, three words each, one after another. */
-export function forgeFamilyRound(lex, wp, seed, level = 1, k = 2, o = {}) {
-  const fams = memDraw(forgeFamilies(lex, wp), (f) => f.key, o.mem, 'fam:' + seed, k, o.now), out = [];
-  fams.forEach((f) => {
-    const three = memDraw(f.members, (x) => 'f:' + x.word, o.mem, 'fm:' + seed + f.id, 3, o.now).sort((a, b) => (a.word < b.word ? -1 : 1));
-    three.forEach((x, j) => out.push({ ...forgeItem(lex, x, seed, `fam:${hash(String(seed))}:${out.length}`), family: { id: f.id, key: f.key, base: f.base, root: f.root, step: j, of: three.length, words: three.map((y) => y.word) } }));
-  });
-  return out;
+  const F = forgeOf(lex, wp);
+  return [...F.words].map(([word, e]) => ({ kind: e.ids.some((id) => F.part(id).kind === 'root') ? 'root' : e.ids.some((id) => F.part(id).kind === 'suffix') ? 'suffix' : 'prefix', word, ids: e.ids, band: Math.max(...e.ids.map((id) => F.part(id).band || 1)) }));
 }
 
 /* ---------- Rhetoric Duel ---------- */

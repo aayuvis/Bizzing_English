@@ -22,10 +22,9 @@ import * as SE from '../detective-season.js';
 import { loadSeason, loadCase } from '../detective-data.js';
 import { personaById } from '../data/inkwell-personas.js';
 import { stop as stopVoice } from '../voice.js';
-import { fitStage } from '../stage.js';
 import { openCase, caseView, CASE_ACTIONS, caseKey, casePointerDown, casePointerMove, casePointerUp, personaView, leaveCase, st } from './inkwell-case.js';
 import { openMore, moreView, MORE_ACTIONS, moreKey, leaveMore } from './inkwell-more.js';
-import { figure, sticker, plateBg, plate, WASH, manifestPins, artUrl } from './inkwell-kit.js';
+import { figure, sticker, plateBg, plate, WASH, manifestPins, artUrl, fitInk } from './inkwell-kit.js';
 
 /* The Play tab's card for Inkwell Detective (views/play.js is merged by hand: render INKWELL_CARD.html() among the cards). */
 export const INKWELL_CARD = {
@@ -68,7 +67,7 @@ export function inkwellView() {
   }
 }
 function after() {
-  if (S.route.name !== 'inkwell') return; fitStage();
+  if (S.route.name !== 'inkwell') return; fitInk();
   const s = S.ink; if (s?.view === 'map') { const cur = document.querySelector('.mp-pin.cur, .mp-pin.sel'), box = document.querySelector('.mp-scroll'); if (cur && box && box.scrollWidth > box.clientWidth) box.scrollLeft = Math.max(0, cur.offsetLeft - box.clientWidth / 2); }
 }
 
@@ -81,7 +80,7 @@ function hubView() {
   const k = kid(), ink = SE.inkOf(k), s = S.ink, L = list(), nx = pick(), rank = SE.rankOf(k), solved = Object.keys(ink.closed).length, dark = isDark();
   const p = personaById(ink.persona), door = SE.door(k), ledger = SE.ledgerWords(k, s.cases), wall = L.slice(0, 16);
   const pinned = wall.map((x, i) => `<i class="ag-pin${x.solved ? ' solved' : x.paused ? ' paused' : x.open ? ' open' : ''}" style="--i:${i}" title="${esc(x.title)}">${x.solved ? '' : ''}</i>`).join('');
-  const objs = s.cases.filter((c) => c.kind !== 'journey' && ink.closed[c.id]).map((c) => { const o = c.officeObject; const n = c.number ?? +c.id.slice(-2); return o ? `<span class="ag-obj" style="--n:${n}" title="${esc(o.name)}">${sticker(`obj-${o.id}`, { alt: o.name, fallback: icon('star') })}</span>` : ''; }).join('');
+  const objs = s.cases.filter((c) => c.kind !== 'journey' && ink.closed[c.id]).map((c) => { const o = c.officeObject; const n = c.number ?? +c.id.slice(-2); return o ? `<span class="ag-obj" style="grid-column:${(n % 4) + 1};grid-row:${Math.floor(n / 4) + 1}" title="${esc(o.name)}">${sticker(`obj-${o.id}`, { alt: o.name, fallback: icon('star') })}</span>` : ''; }).join('');
   const greet = s.say?.text || (nx ? (nx.paused ? `Welcome back, ${SE.detectiveName(k)}. ${nx.title} is still on the desk.` : solved ? `Good to see you, ${SE.detectiveName(k)}. A new case is waiting.` : 'Good. A new detective. Sit down. Detectives do not guess. They read.') : tester() ? 'Every case is on the wall.' : 'The first cases are with the owner, waiting to be signed off. A grown-up can open them in tester mode.');
   const nc = nx ? byId(nx.id) : null;
   const cont = nx ? `<a class="btn ink-go big ag-cont" href="#/inkwell/case/${nx.id}" data-ink="continue">${icon('play')}<span>${nx.paused ? 'Continue the case' : solved ? 'Start the next case' : 'Start your first case'}</span></a><p class="ag-next">${nc?.kind === 'journey' ? 'Ink Journey' : `Case ${nc?.number ?? ''}`} · ${esc(nx.title)} · Level ${nx.level || 1}</p>`

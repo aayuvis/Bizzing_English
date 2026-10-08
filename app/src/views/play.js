@@ -12,9 +12,9 @@ import '../../styles/stage.css';
 import '../../styles/hubs.css';
 import { S, kid, save, render, pay, checkMedals, isDark, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot } from '../ui.js';
-import { builderNew, builderStep, rushNew, rushStep, whoRound, figureRound, figureStep, figurePhase, quizNew, quizStep, plotRound, plotNew, plotStep, forgeRound, forgeFamilyRound, duelRound, duelNew, duelStep, duelRival, duelTally,
+import { builderNew, builderStep, rushNew, rushStep, whoRound, figureRound, figureStep, figurePhase, quizNew, quizStep, plotRound, plotNew, plotStep, duelRound, duelNew, duelStep, duelRival, duelTally,
   CHANCE, accuracy, mostMissed, starsFor, runNew, runAdd, runScore, runPct, runPay, runStarPct, roundPay, isFinal, memOf, memRecord, memCounts, memDraw, roundLog, huntsFrom, huntable, figurePool, itemKey,
-  builderLevelPool, rushLevelPool, whoLevelPool, plotPool, duelLevelPool, forgePools, FORGE_LEVELS, FIGURE_LEVELS, FIGURE_KINDS, ROUND_OF, ROUND_MS, RUN_ROUNDS, STAR_LINE, GAMES } from '../games.js';
+  builderLevelPool, rushLevelPool, whoLevelPool, plotPool, duelLevelPool, FIGURE_LEVELS, FIGURE_KINDS, ROUND_OF, ROUND_MS, RUN_ROUNDS, STAR_LINE, GAMES } from '../games.js';
 import { HUBS, isHub, hubOf, playLevel, setPick, settleLevel } from '../hubs.js';
 import { missCard } from '../miss.js';
 import { stage, plateUrl, afterRender, stillScene, onHidden } from '../stage.js';
@@ -23,10 +23,9 @@ import { FIGURES } from '../data/literature.js';
 import { RHETORIC } from '../data/language.js';
 import { PLAIN, DEVICE_GLOSS } from '../data/duel.js';
 import { MORE_LINES } from '../data/lines-more.js';
-import * as WP from '../data/wordparts.js';
 import { cleared } from '../data/rights.js';
 import { shippedLines, loadPassages, shippable } from '../reading.js';
-import { loadLexicon } from '../lexicon.js';
+import { forgeReady, preloadForge, forgeStart, forgeAct, forgeTitle, forgePlay, forgeBook, forgeKey, forgeActions, setDragAct } from './forge.js';   // Root Forge: its own view on the shared run
 import { BOOKS, loadBook, chapterKey, bookMeta } from '../book.js';
 import { WORKS, PASSAGES } from '../data/library.js';
 import { field, rivalArt } from '../contest.js';
@@ -61,7 +60,7 @@ export function nextStepFor(id, g) {
   return stop(sid, m ? 'it teaches what you missed most' : 'a clean run — the next thing up');
 }
 
-export function playView() { stillScene(false); afterRender(); return cardsView(); }
+export function playView() { stillScene(false); afterRender(); preloadForge(); return cardsView(); }
 
 /* ---------- the pools: today's in the bundle, the big ones loaded when a game opens ---------- */
 /* import.meta.glob so a pool file that is not there yet is simply absent (the build does not fail) */
@@ -98,7 +97,7 @@ async function huntsFor(seed, mem) {
 async function prepare(id) {
   if (id === 'builder' || id === 'rush' || id === 'figure' || id === 'duel') await extras();
   if (id === 'plot') await stories();
-  if (id === 'root' && !D.lex) D.lex = await loadLexicon();
+  if (id === 'root') await forgeReady();
 }
 /* the level's pool, as the title card counts it */
 function levelPool(id, L) {
@@ -109,7 +108,6 @@ function levelPool(id, L) {
   if (id === 'figure') return { items: figurePool(figPool()).filter((f) => FIGURE_LEVELS[L][f.figure]), key: (f) => itemKey('f', f.text) };
   if (id === 'plot') return D.passages ? { items: plotPool(D.passages, L, WORKS, D.chapters), key: (p) => p.key } : null;
   if (id === 'duel') return { items: duelLevelPool(rhetPool(), plainPool(), L), key: (r) => itemKey('d', r.text) };
-  if (id === 'root' && D.lex) { const c = FORGE_LEVELS[L]; return { items: forgePools(D.lex, WP).filter((x) => (x.kind === 'root' ? c.roots > 0 : x.band <= c.cap && x.band >= (c.min || 1))), key: (x) => 'f:' + x.word }; }
   return null;
 }
 
@@ -171,7 +169,7 @@ async function startRound() {
     g = duelNew(rounds, L, rv ? { id: rv.id, name: rv.name, age: rv.age, tell: rv.tell, pts: duelRival(rv, seed, rounds.length) } : null);
   }
   else if (id === 'plot') g = plotNew(plotRound(D.passages || [], seed, L, ROUND_OF.plot, WORKS, { ...o, chapters: D.chapters || [] }), L);
-  else if (id === 'root') { if (!D.lex) { r.err = 'Bee’s word list did not load. Check the connection and try again.'; r.phase = 'title'; return render(); } g = quizNew('root', final ? forgeFamilyRound(D.lex, WP, seed, L, 2, o) : forgeRound(D.lex, WP, seed, L, ROUND_OF.root, o), L); }
+  else if (id === 'root') { g = forgeStart(seed, L, final, o); if (!g) { r.err = 'Bee’s word list did not load. Check the connection and try again.'; r.phase = 'title'; return render(); } }
   if (S.run !== r) return;
   if (!g || g.over) { r.err = 'This game has nothing to play just now.'; r.phase = 'title'; return render(); }
   r.g = g; r.phase = 'play'; music(gm.music); render();
@@ -207,7 +205,7 @@ function step(a) {
   if (r.g.seq !== before.seq) juice(r.g.flash);
 }
 
-const REDUCE = { figure: figureStep, who: quizStep, root: quizStep, plot: plotStep, duel: duelStep };
+const REDUCE = { figure: figureStep, who: quizStep, root: forgeAct, plot: plotStep, duel: duelStep };
 function act(a) {
   const r = S.run; if (!r?.g || r.g.over || r.phase !== 'play' || !REDUCE[r.g.kind]) return;
   const before = r.g, g = (r.g = REDUCE[r.g.kind](r.g, a));
@@ -268,6 +266,9 @@ export function gameView() {
   const id = r.id, onStage = !!gm.hub;
   stillScene(r.phase === 'play'); afterRender();
   const head = pageHead({ title: gm.name, sub: `practises ${gm.practises}`, back: backTo(r) });
+  if (id === 'root' && r.phase === 'title') return head + forgeTitle(r, challengeButton(id, kid(), recOf(id)));   // Root Forge: views/forge.js
+  if (id === 'root' && r.phase === 'book') return head + forgeBook(r);
+  if (id === 'root' && r.phase === 'play') return head + `<div class="game">${forgePlay(r.g, r, { roundName: roundName(r.run), runScore: runScore(r.run) })}</div>`;
   if (r.phase === 'title') return head + (onStage ? titleStage(id, r) : titleCard(id, r));
   if (r.phase === 'done') return head + (r.result?.challenge ? challengeDoneView(id, r) : doneView(id, r));
   if (r.phase === 'between') return head + betweenView(id, r);
@@ -511,10 +512,12 @@ export const PLAY_ACTIONS = {
   'du-tile': (a) => { sfx('tap'); act({ type: 'tile', i: +a }); },
   'du-undo': () => act({ type: 'undo' }),
   'du-check': () => act({ type: 'check' }),
+  ...forgeActions(act),
   // the old names, kept for links and tests written before the reducers
   'who-pick': (a) => act({ type: 'pick', i: +a }), 'fig-pick': (a) => act({ type: 'pick', i: +a }), 'who-next': () => act({ type: 'next' }),
 };
 
+setDragAct((a) => { sfx('tap'); act(a); });   // Root Forge's drag (views/forge.js) places through the same reducer
 /* Plot Line by pointer: drag a card onto a slot (a mouse, a finger or a pen); a press without a move is a tap. */
 let drag = null, dragDone = false;
 if (typeof document !== 'undefined') {
@@ -571,6 +574,7 @@ export function playKey(e) {
     if (e.key === 'Enter') { step({ type: 'submit' }); return true; }
     return false;
   }
+  if (g.kind === 'root') return forgeKey(e, g, act);
   const q = g.rounds[g.i];
   if (g.kind === 'figure') {
     const ph = figurePhase(g, q);

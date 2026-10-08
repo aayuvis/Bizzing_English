@@ -43,7 +43,11 @@ export function plate(base, dark) {
   return null;
 }
 /* a plate as a CSS background: the painting over a stand-in wash, so a missing one is a wash, never a hole */
-export const plateBg = (base, dark, wash) => { const u = plate(base, dark); return `${u ? `url('${u}') center / cover no-repeat, ` : ''}${wash || WASH.agency}`; };
+/* a url() inside a custom property resolves against the stylesheet that uses it, so the painting goes in as an absolute url */
+const abs = (u) => (typeof document !== 'undefined' ? new URL(u, document.baseURI).href : u);
+export const plateBg = (base, dark, wash) => { const u = plate(base, dark); return `${u ? `url('${abs(u)}') center / cover no-repeat, ` : ''}${wash || WASH.agency}`; };
+/* the materials as custom properties for the stylesheet: cork, the desk, letter paper */
+export const matVars = () => ['cork', 'desk', 'letter'].map((m) => { const u = artUrl(`mat-${m}`); return `--ink-${m}:${u ? `url('${abs(u)}')` : 'none'}`; }).join(';');
 export const WASH = {
   agency: 'radial-gradient(ellipse at 50% 35%, #2f6e6a, #12313a 70%, #0b1d24)',
   quayside: 'linear-gradient(180deg, #e9b9a0, #6f8fa3 55%, #2c4656)', garden: 'linear-gradient(180deg, #cfe3b6, #5f8f52 60%, #2f4d2a)',
@@ -63,7 +67,7 @@ const PAPER = { letter: 'letter', note: 'letter', card: 'letter', postcard: 'let
   diary: 'diary', log: 'diary', list: 'diary', 'day-book': 'diary', 'gate-book': 'diary', 'notebook-page': 'diary', 'word-book': 'diary', 'autograph-book': 'diary',
   report: 'newspaper', transcript: 'newspaper', newspaper: 'newspaper', scene: 'newspaper', other: 'newspaper' };
 export const paperOf = (type) => PAPER[type] || 'letter';
-export const paperBg = (type) => { const m = paperOf(type), u = artUrl(`mat-${m}`); return `${u ? `url('${u}') center / cover, ` : ''}linear-gradient(172deg, #f3e5c3, #e3cc9a)`; };
+export const paperBg = (type) => { const m = paperOf(type), u = artUrl(`mat-${m}`); return `${u ? `url('${abs(u)}') center / cover, ` : ''}linear-gradient(172deg, #f3e5c3, #e3cc9a)`; };
 /* the handwriting a document is set in: a note or a letter is handwritten (a legible face), a typed report is typed */
 export const handOf = (type) => (['note', 'letter', 'postcard', 'card', 'diary', 'list', 'remarks'].includes(type) ? 'hand' : ['transcript', 'report', 'log', 'gate-book', 'day-book'].includes(type) ? 'typed' : 'print');
 
@@ -139,3 +143,17 @@ export function sweep(rect) {
   const a = el.animate([{ transform: 'translate(0,0) rotate(-12deg)', opacity: 0 }, { opacity: 1, offset: 0.15 }, { transform: `translate(${Math.max(40, rect.width)}px, 0) rotate(8deg)`, opacity: 1, offset: 0.85 }, { transform: `translate(${Math.max(40, rect.width) + 20}px, -10px) rotate(10deg)`, opacity: 0 }], { duration: 650, easing: 'ease-in-out' });
   a.onfinish = () => el.remove(); setTimeout(() => el.remove(), 1000);
 }
+
+/* ---------- fitting the stage to the window (no page scroll during play) ---------- */
+/* The stage takes the room between where it starts and the bottom of the window — above the phone's tab bar — never
+   under MIN (a very short window scrolls rather than crushing the play). */
+const MIN = 400;
+export function fitInk() {
+  if (typeof document === 'undefined') return;
+  for (const el of document.querySelectorAll('.stg[data-inkfit]')) {
+    const box = el.closest('.bz-content'), pb = box ? parseFloat(getComputedStyle(box).paddingBottom) || 0 : 20;   // the page keeps this below (the phone's tab bar clearance)
+    const top = el.getBoundingClientRect().top + scrollY, room = Math.floor(innerHeight - top - pb);
+    el.style.height = `${Math.max(MIN, room)}px`;
+  }
+}
+if (typeof window !== 'undefined') { let t = null; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(fitInk, 80); }); }

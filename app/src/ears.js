@@ -352,7 +352,7 @@ export function quietNear(rms, hop, t, radius = 0.6) {
 
 /* ---------- a run ---------- */
 /* The questions of one story, ready to show: options permuted from the play ordinal (`ord`), so a slot never
-   leans and a replay does not sit the answer where it sat before. L1 shows three pictures, later levels four. */
+   leans and a replay does not sit the answer where it sat before. Four pictures at every level (chance is 1 in 4). */
 export function buildQuestions(st, ord = 0, level = st.level) {
   const n = LEVELS[clampLevel(level)].opts;
   return st.qs.map((q, j) => {

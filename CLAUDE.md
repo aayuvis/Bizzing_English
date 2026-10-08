@@ -153,6 +153,10 @@ Inherited from the family, and it holds here:
 ### Art
 
 - `tools/art/gen.py` paints places, creatures, medallions — **no lettering, no digits, no people**.
+  **One exception, Inkwell's cast** (owner, 8 Oct: human portraits, then "as avatars… consistent across frames with
+  backgrounds changing"): each character painted ONCE as a transparent sticker cut-out (same scale and head height),
+  every expression painted from that reference, composited by the screens over the scene plates
+  (`app/public/art/inkwell/cast/`, manifest `src/data/inkwell-art.js`). Places and objects keep "no people".
   Never name a place in a prompt (it gets lettered). Night plates are painted FROM the day plate as a
   reference ("one single night picture, not a comparison") — asking for "the same place at night"
   painted split day/night diptychs.
