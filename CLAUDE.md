@@ -57,8 +57,14 @@ A concept's status on the map is computed from the stops that exist.
 about twenty cards cut from the corpus at build time (`node tools/build-feed.mjs` → `src/data/feed/`, ≥100 per
 level and ≥300 level-agnostic, nothing held for review), ranked on the device by the child's level and what
 slipped, each saying why, a question answered on the card, a button to the exact topic — then it ends. A
-grown-up can switch it off. **Games** (`src/games.js` rules, `views/play.js` boards): seven, each on a board
-with motion, a level per game that rises at 80% and falls below 40%, and a finish naming the stop to revisit.
+grown-up can switch it off. **Games** (handover: `docs/inkwell/HANDOVER.md`, Part C): the Play tab is five cards, one in for
+one out (`src/hubs.js` CARDS/LEDGER/LIVES_ON, T16) — **Inkwell Detective** (the flagship: `src/detective*.js` engine,
+`views/inkwell*.js` screens, twelve cases in `data/cases/` released at the owner's word 8 Oct, four Ink Journeys held until
+their quoted texts are held; Detective School carries Plot Line and Who Said It?), **Sentence Studio** and **Writer's
+Craft** (hubs of modes), **Root Forge** (`src/forge.js`, local until a family forge is approved) and **Story Ears**
+(`src/ears.js`). **The Podium** (`src/podium.js`) is the Stage's tournament, scored only on verified speech. Every game:
+the owner's level rule (child picks 1–5 or Auto; under 50% drops one, 80% up), coins only for learning (a guessing bot
+earns nothing, T1), one miss card (`src/miss.js`), the symmetric stage (`src/stage.js`).
 **Music** (`src/music.js`): a loop per world, one for Home, four for games, composed in code. **Certificates**
 (`src/certificates.js`) for every level and whole book finished; the report (`src/report.js`) always names
 specifics; each coin line names what earned it (`k.coinNotes`).
