@@ -231,7 +231,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   const ft = await page.evaluate(() => { const g = window.__bz.S.run.g, t = g.targets[0]; return { word: t.word, idx: t.ids.map((id) => g.tray.findIndex((p) => p.id === id)) }; });
   for (const i of ft.idx) await page.click(`.fg-part[data-arg="${i}"]`); await page.keyboard.press(' '); await page.waitForTimeout(300);
   ok('Root Forge: a word forged by tap and Space glows with its meaning', await page.evaluate((w) => document.querySelector('.fg-plaque')?.dataset.glow === w && !!document.querySelector('.fg-def'), ft.word));
-  await page.click('[data-act=fg-done]'); ok('Root Forge: the round ends into the run', await phase('between'));
+  await page.waitForFunction(() => !window.__bz.S.run?.g?.state, null, { timeout: 4000 }).catch(() => {}); await page.waitForTimeout(80);   // the glow settles first
+  await page.click('[data-act=fg-done]'); ok('Root Forge: the round ends into the run', await phase('between', 10000));
   await page.evaluate(() => { window.__bz.S.run.run.round = 3; }); await page.click('[data-act=game-round]'); await page.waitForSelector('.fg-part.key', { timeout: 15000 });
   ok('Root Forge’s final forges a family: a key part, three of its words', await page.evaluate(() => { const g = window.__bz.S.run.g; return g.key && g.goal === 3 && g.targets.filter((t) => t.ids.includes(g.key)).length >= 3; }));
 
