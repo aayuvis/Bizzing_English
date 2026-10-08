@@ -14,12 +14,16 @@ import { libraryView, bookView, wordView } from './views/library.js';
 import { stageView, openAloud, aloudView, STAGE_ACTIONS, aloudPick, isLive, micStop } from './views/stage.js';
 /* Play and Tools load on their own routes (their pools, boards and Bee's tools kept initial JS under budget —
    brief v4, R2); their actions join ACTIONS when they arrive */
-let PLAY = null, TOOLS = null;
+let PLAY = null, TOOLS = null, EARS = null;
 const loadPlay = async () => PLAY || (PLAY = await import('./views/play.js').then((m) => (Object.assign(ACTIONS, m.PLAY_ACTIONS), m)));
+const loadEars = async () => EARS || (EARS = await import('./views/ears.js').then((m) => (Object.assign(ACTIONS, m.EARS_ACTIONS), m)));
 const loadTools = async () => TOOLS || (TOOLS = await import('./views/tools.js').then((m) => (Object.assign(ACTIONS, m.TOOL_ACTIONS), m)));
 /* Inkwell Detective loads on its own route too (views/inkwell.js; its cases are lazy chunks of their own) */
 let INK = null;
 const loadInk = async () => INK || (INK = await import('./views/inkwell.js').then((m) => (Object.assign(ACTIONS, m.INK_ACTIONS), m)));
+/* The Podium (the speaking tournament, views/podium.js) loads on its own route; #/stage/contest is its old name */
+let POD = null;
+const loadPod = async () => POD || (POD = await import('./views/podium.js').then((m) => (Object.assign(ACTIONS, m.PODIUM_ACTIONS), m)));
 import { meView, medalsView, collectionView, shopView, practiceView, logView, recordingsView, helpView, privacyView, searchView, grownupsView,
   settingsSheet, kidSheet, coinSheet, medalSheet, addKidSheet, PAGE_ACTIONS, onChange, avatarOf, certificateView, certSheet, avDeckSheet, avOneSheet } from './views/pages.js';
 import { landingView, onboardView, OB_ACTIONS } from './views/welcome.js';
@@ -29,7 +33,6 @@ import { loadBook, chapterKey } from './book.js';
 import { openDesk, deskView, deskDoneView, DESK_ACTIONS, deskInput } from './views/desk.js';
 import { openSpeak, speakView, SPEAK_ACTIONS, speakInput } from './views/speak.js';
 import { applyExtras } from './extras.js';
-import { openContest, contestView, CONTEST_ACTIONS } from './views/contest.js';
 import { openFeed, feedView } from './views/feed-view.js';
 import { stopById } from './curriculum.js';
 import { nextStep } from './next.js';
@@ -55,7 +58,7 @@ const TABS = [
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
   { id: 'feed', label: 'My Feed', icon: 'feed', href: '#/feed', color: '#6C4FE0' },
 ];
-const TAB_OF = { home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', inkwell: 'play', feed: 'feed' };
+const TAB_OF = { ears: 'play', home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', inkwell: 'play', feed: 'feed' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -68,7 +71,9 @@ async function route() {
   stopVoice(); stopNarration(); S.wordcard = null; S.sheet = S.sheet?.kind === 'medal' || S.sheet?.kind === 'cert' ? S.sheet : null;
   if (prev === 'play' && S.run?.mode === 'game') PLAY?.leaveGame();
   if (prev === 'tools') TOOLS?.leaveTools();
+  if (prev === 'ears') EARS?.leaveEars();
   if (prev === 'inkwell') INK?.leaveInkwell();
+  if (prev === 'stage') POD?.leavePodium();
   if (r.name === 'myths' || r.name === 'author') { location.replace(`#/library/${r.parts.map(encodeURIComponent).join('/')}`); return; }   // the Library's deep dives (views/deep.js)
   if (r.name === 'continue') { if (!kid()) return go('#/welcome'); const nx = nextStep(S.h, kid()); location.replace(nx.href === '#/continue' ? '#/home' : nx.href); return; }
   if (!kid() && !/^(welcome|privacy|help)$/.test(r.name)) { location.replace('#/welcome'); return; }
@@ -78,7 +83,8 @@ async function route() {
   if (sk && sk.kind === 'speak') { location.replace(`#/stage/${sk.id}`); return; }
   if (sk && sk.kind === 'readAloud') { location.replace('#/stage/aloud'); return; }
   if (r.name === 'desk') { if (r.parts[2] !== 'done') openDesk(r.parts[1]); else S.run = null; }
-  else if (r.name === 'stage' && r.parts[1] === 'contest') await openContest();
+  else if (r.name === 'stage' && r.parts[1] === 'contest') { location.replace('#/stage/podium'); return; }
+  else if (r.name === 'stage' && r.parts[1] === 'podium') { await loadPod(); await POD.openPodium(); }
   else if (r.name === 'stage' && r.parts[1] && r.parts[1] !== 'aloud') await openSpeak(r.parts[1], r.parts[2]);
   else if (r.name === 'stop') { const rs = readingStop(r.parts[1]); if (rs) { location.replace(rs.chapter ? `#/whole/${rs.book}/${rs.chapter}` : `#/story/${rs.passage}`); return; } await openStop(r.parts[1]); }
   else if (r.name === 'read') { location.replace(`#/story/${r.parts[1]}`); return; }
@@ -103,6 +109,7 @@ async function route() {
   else if (r.name === 'inkwell') { await loadInk(); await INK.openInkwell(r.parts); }
   else if (r.name === 'place') { S.run = null; await openPlace(r.parts[1] === 'first'); }   // Find my starting place (views/placement.js)
   else if (r.name === 'tools') { S.run = null; await loadTools(); await TOOLS.openTool(r.parts); }
+  else if (r.name === 'ears') { await loadEars(); await EARS.openEars(r.parts); }
   else if (r.name === 'word' || r.name === 'search' || (r.name === 'library' && r.parts[1] === 'words')) await loadLexicon();
   else S.run = null;
   render(); window.scrollTo(0, 0);
@@ -124,7 +131,7 @@ function screen() {
     case 'book': return bookView(p[1]);
     case 'word': return wordView(p[1] || '');
     case 'bank': return libraryView('words');
-    case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] === 'contest' ? contestView() : p[1] ? speakView() : stageView();
+    case 'stage': return p[1] === 'aloud' ? aloudView() : p[1] === 'podium' ? (POD ? POD.podiumView() : '') : p[1] ? speakView() : stageView();
     case 'desk': return p[2] === 'done' ? deskDoneView(p[1]) : deskView();
     case 'recordings': return recordingsView();
     case 'play': return !PLAY ? '' : p[1] ? PLAY.gameView() : PLAY.playView();
@@ -132,6 +139,7 @@ function screen() {
     case 'inkwell': return INK ? INK.inkwellView() : '';
     case 'place': return placeView();
     case 'tools': return TOOLS ? TOOLS.toolsView() : '';
+    case 'ears': return EARS ? EARS.earsView() : '';
     case 'me': return meView();
     case 'medals': return medalsView();
     case 'certificate': return certificateView(p.slice(1).join('/'));
@@ -183,7 +191,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...HOME_ACTIONS, ...CONTEST_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...PLACE_ACTIONS, 
+const ACTIONS = { ...HOME_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...PLACE_ACTIONS, 
   'sheet-close': () => { S.sheet = S.certNext ? { kind: 'cert', id: S.certNext } : null; S.certNext = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -208,6 +216,7 @@ document.addEventListener('input', (e) => {
   else if (t.dataset.act === 'sp-plan') speakInput(t);
   else if (t.dataset.act === 'tl-q') TOOLS?.toolsInput(t);
   else if (t.dataset.act === 'ink-name') INK?.inkInput(t);
+  else if (t.dataset.act === 'pd-type') POD?.podiumInput(t);
 });
 document.addEventListener('change', (e) => {
   const t = e.target.closest('[data-act]'); if (!t) return;
@@ -230,7 +239,7 @@ document.addEventListener('keydown', (e) => {
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (e.key === 'Enter' && e.target.id === 'ink-name') { ACTIONS['ink-name-go']?.(); e.preventDefault(); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (INK?.inkKey(e) || TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
+  if (EARS?.earsKey(e) || POD?.podiumKey(e) || INK?.inkKey(e) || TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 
@@ -250,5 +259,5 @@ route().then(() => { if (parse().name === 'settings') { S.sheet = { kind: 'setti
 if ('serviceWorker' in navigator && !DEMO && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 /* idle: warm the lexicon so the first tapped word is instant */
 setTimeout(() => { if (kid()) loadLexicon(); }, 3000);
-setTimeout(() => { if (kid()) { loadPlay(); loadTools(); loadInk(); } }, 6000);   // fetched when idle, so Play and Tools work offline too
+setTimeout(() => { if (kid()) { loadPlay(); loadTools(); loadInk(); loadEars(); } }, 6000);   // fetched when idle, so Play and Tools work offline too
 window.__bz = { S, render, checkMedals };   // the browser check reads state (and asks for a ceremony) through this; nothing else does

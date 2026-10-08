@@ -174,7 +174,8 @@ ok('beyond chance: a guess-level score is 0, a perfect one 100%, and games with 
   /* T16: one in, one out */
   ok(`T16: the Play tab never grows — ${H.CARDS.length} cards, at most ${H.CARD_LIMIT}, fewer than the ${H.BEFORE.length} before`, H.CARDS.length <= H.CARD_LIMIT && H.CARD_LIMIT <= H.BEFORE.length - 2);
   ok('T16: every card that came in names the cards it replaced, and they are gone from the tab', H.CARDS.filter((c) => !H.BEFORE.includes(c)).every((c) => { const e = H.LEDGER.find((l) => l.in === c); return e && e.out.length && e.out.every((o) => H.BEFORE.includes(o) && !H.CARDS.includes(o)); }));
-  ok('T16: every game before is still reachable — on the tab or as a hub mode', H.BEFORE.every((g) => H.CARDS.includes(g) || Object.values(H.HUBS).some((h) => h.modes.includes(g))));
+  const school = await import('../src/detective-school.js');
+  ok('T16: every game before is still reachable — on the tab, as a hub mode, or its mechanic playing where LIVES_ON says', H.BEFORE.every((g) => H.CARDS.includes(g) || Object.values(H.HUBS).some((h) => h.modes.includes(g)) || (H.LIVES_ON[g] && H.LIVES_ON[g][0] === 'detective-school.js' && typeof school[H.LIVES_ON[g][1]] === 'function')));
   ok('the hubs are named behind one constant (C §3.3)', H.HUBS.studio.name === H.NAMES.studio && H.HUBS.craft.name === H.NAMES.craft && H.NAMES.studio === 'Sentence Studio' && H.NAMES.craft === 'Writer’s Craft');
   ok('every hub mode knows its hub', Object.values(H.HUBS).every((h) => h.modes.every((m) => H.hubOf(m) === h.id && GAMES[m].hub === h.id)));
 }

@@ -69,7 +69,8 @@ function shelf() {
   const tile = (t) => `<a class="tl-tile" href="${t.href}" data-tool="${t.id}"><span class="tl-art"><img src="art/tool-${t.id}-card.webp" alt="" loading="lazy" decoding="async">
       <span class="tl-kick">${esc(t.kick)}</span><span class="tl-h">${esc(t.title)}</span></span>
       <span class="tl-body"><p>${esc(t.blurb)}</p><span class="tl-foot"><span class="tl-go" style="background:${t.c}">${icon(t.ic)}<span>${esc(t.cta)}</span></span>${stat[t.id] ? `<span class="tl-stat">${esc(stat[t.id])}</span>` : ''}</span></span></a>`;
-  const small = SMALL_TOOLS.map((t) => `<a class="card tl-small" href="${t.href}" data-tool="${t.id}">${icon(t.ic)}<span><b>${esc(t.title)}</b><small>${esc(t.blurb)}</small></span>${icon('next')}</a>`).join('');
+  const podium = `<a class="card tl-small" href="#/stage/podium" data-tool="podium">${icon('lectern')}<span><b>The Podium</b><small>${k.podium?.cur ? `round ${k.podium.cur.round + 1} of 4 waiting` : 'the speaking tournament, on the Stage'}</small></span>${icon('next')}</a>`;   // The Stage's flagship, one tap from Tools
+  const small = podium + SMALL_TOOLS.map((t) => `<a class="card tl-small" href="${t.href}" data-tool="${t.id}">${icon(t.ic)}<span><b>${esc(t.title)}</b><small>${esc(t.blurb)}</small></span>${icon('next')}</a>`).join('');
   return pageHead({ title: 'Tools', sub: 'speak, write, and train with words' }) + `<div class="tl-wrap"><div class="tl-grid">${TOOLS.map(tile).join('')}</div><div class="tl-smalls">${small}</div></div>`;
 }
 

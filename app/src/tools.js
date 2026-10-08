@@ -20,7 +20,7 @@ export const BEE_COMMIT = '2f74e99d76723aca80040ccf549c933c38a2cd47';
 
 /* ---------- the shelf ---------- */
 export const TOOLS = [
-  { id: 'stage', href: '#/stage', kick: 'Speaking', title: 'The Stage', blurb: 'Read aloud, the speaking ladder, the Elocution Contest.', c: '#B91C1C', ic: 'lectern', cta: 'Speak' },
+  { id: 'stage', href: '#/stage', kick: 'Speaking', title: 'The Stage', blurb: 'Read aloud, the speaking ladder, and The Podium tournament.', c: '#B91C1C', ic: 'lectern', cta: 'Speak' },
   { id: 'desk', href: '#/tools/desk', kick: 'Writing', title: 'The Writing Desk', blurb: 'Paragraphs, letters, essays — counts, never marks.', c: '#3F4FB0', ic: 'quill', cta: 'Write' },
   { id: 'vocab', href: '#/tools/vocab', kick: 'Meaning', title: 'Vocabulary', blurb: 'Word to meaning, vocabulary-bee style.', c: '#0A6B5D', ic: 'book', cta: 'Study' },
   { id: 'idioms', href: '#/tools/idioms', kick: 'Sayings', title: 'Idioms & Similes', blurb: 'Thousands of phrases and the story behind each one.', c: '#7A2F8C', ic: 'bubble', cta: 'Open' },

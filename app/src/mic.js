@@ -167,7 +167,7 @@ export function evidence(frames, { syllables = 0, mode = 'reading', minSecs = 0 
   const want = syllables * V.sylCal, rate = pk / span;
   const rhythm = mode === 'speech' ? rate >= V.rate[0] && rate <= V.rate[1] && span >= minSecs : syllables > 0 && Math.abs(pk - want) <= V.sylTol * want;
   const checks = [
-    { id: 'voiced', label: 'A voice: a pitch a person speaks at', ok: voicedFrac >= V.voiced && voicedSecs >= V.minVoicedSecs, got: pc(voicedFrac), need: `${pc(V.voiced)} of the sound` },
+    { id: 'voiced', label: 'A voice: a pitch a person speaks at', ok: voicedFrac >= V.voiced && voicedSecs >= V.minVoicedSecs, got: `${pc(voicedFrac)}, ${voicedSecs.toFixed(1)} s`, need: `${pc(V.voiced)} of the sound, ${V.minVoicedSecs} s or more` },
     { id: 'pitch', label: 'The pitch moves, as speech does', ok: semis >= V.semis, got: `${semis.toFixed(1)} semitones`, need: `${V.semis} or more` },
     { id: 'change', label: 'The sound keeps changing shape', ok: fluxFrac >= V.flux, got: pc(fluxFrac), need: `${pc(V.flux)} of the voice` },
     mode === 'speech'

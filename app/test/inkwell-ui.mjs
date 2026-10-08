@@ -161,6 +161,7 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   const headF = await checkPageHead(page, { phone }); ok(`${tag}: the Agency's page head matches Bee (checkPageHead [])`, headF.length === 0, headF.join('; '));
   ok(`${tag}: the Agency shows the office, the casebook wall, the shelf, the Ledger and the Reading Door`, await page.evaluate(() => ['.ag-scene', '.ag-wall', '.ag-shelf', '.ag-door', '.ag-led'].every((q) => document.querySelector(q))));
   ok(`${tag}: one primary action, "Start your first case"`, await page.evaluate(() => document.querySelectorAll('.ink-hub .btn.ink-go').length === 1 && /first case/i.test(document.querySelector('[data-ink=continue]').textContent)));
+  ok(`${tag}: the Agency is the painting (the plate and Quill's cut-out load, no stand-ins)`, await page.evaluate(() => /url\(/.test(document.querySelector('.ag-scene').style.getPropertyValue('--ag')) && !!document.querySelector('.ag-quill img') && !document.querySelector('.ink-hub .ink-standin, .ink-hub .ink-stk-drawn')));
   await shot(page, nm('hub'));
   if (!phone && !dark) { await go(page, '#/inkwell/map'); ok(`${tag}: the town map draws a wax seal for each of the 16 chapters`, (await page.$$('.mp-pin')).length === 16); await shot(page, nm('map')); await go(page, '#/inkwell'); }
 
@@ -174,6 +175,7 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   ok(`${tag}: the opening ends at "Choose your detective"`, await waitSub(page, 'persona'));
   const grid = await page.evaluate(() => { const cs = [...document.querySelectorAll('.pcard-d')].map((e) => e.getBoundingClientRect()); return { n: cs.length, cols: new Set(cs.map((r) => Math.round(r.left))).size, rows: new Set(cs.map((r) => Math.round(r.top))).size }; });
   ok(`${tag}: six detective cards, ${phone ? '2 × 3' : '3 × 2'}`, grid.n === 6 && grid.cols === (phone ? 2 : 3) && grid.rows === (phone ? 3 : 2), JSON.stringify(grid));
+  ok(`${tag}: the detectives are painted cut-outs, not stand-ins`, await page.evaluate(() => document.querySelectorAll('.pcard-d img.pd-fig').length === 6));
   await shot(page, nm('persona'));
   if (touch) { await tap(page, '[data-act=ink-pick][data-arg=milo]', true); await page.fill('#ink-name', 'Mo'); await tap(page, '[data-act=ink-choose]', true); }
   else { await page.focus('.pcard-d'); await press(page, 'ArrowRight'); await page.keyboard.press('Enter'); await wait(page, 300); await key(page, '[data-act=ink-choose]'); }
@@ -195,6 +197,7 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
     const sg = await segSym(page); ok(`${tag} IC5: the segmented control is centred within 4 px, four equal segments, above the tab bar`, sg && sg.off <= 4 && sg.widths <= 1 && sg.n === 4 && sg.under <= 0 && sg.minH >= 44, JSON.stringify(sg));
     await stageChecks(page, tag, 'desk');
   }
+  ok(`${tag}: the desk stands on the case's painted plate; suspects are cut-outs`, await page.evaluate(() => /url\(/.test(document.querySelector('.stg.ink').style.getPropertyValue('--ink-plate')) && document.querySelectorAll('.sus-pic img').length >= 3 && !document.querySelector('.sus-pic .ink-standin')));
   await shot(page, nm('desk'));
 
   /* no timer in a case: nothing counts down and the state does not move by itself */

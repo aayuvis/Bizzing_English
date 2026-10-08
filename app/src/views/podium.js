@@ -17,6 +17,7 @@
    the cue cards; 1–3 choose a version, a line or a face; Escape closes a picker. Devices are dragged onto a
    card (pointer: mouse or finger) — or tapped, then a card's "Add it here" is tapped. */
 
+import '../../styles/stage.css';
 import '../../styles/podium.css';
 import { S, kid, save, render, pay, checkMedals, mark, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot } from '../ui.js';
@@ -137,7 +138,7 @@ function planView(k, t) {
   const checks = `<ul class="pd-checks" id="pd-checks">${checksHtml(pc)}</ul>`;
   const left = ri === 3 ? { v: `<span id="pd-plan-left">${r.planLeft ?? PLAN_SECS}</span>s`, l: 'to plan', live: true } : { v: `<span id="pd-pc">${pc.points}</span>/4`, l: 'plan marks' };
   const ex = r.example ? exampleView() : '';
-  return stage({ id: 'podium-plan', world: 'study', dark: dark(), mods: 'pd pd-green pd-planner', fit: false,
+  return stage({ id: 'podium-plan', world: 'study', dark: dark(), mods: 'pd pd-green pd-planner',
     left, right: { v: `<span id="pd-dc">${pc.devices.length}</span>/${pc.need}`, l: 'devices' }, title: tp.title, chip: lvTag(L, levelCfg(L).type === 'choose' ? 'choose your lines' : levelCfg(L).type === 'all' ? 'type every card' : 'choose or type'),
     main: `${r.msg ? `<p class="pd-msg" role="status">${esc(r.msg)}</p>` : ''}<div class="pd-plan">${CARDS.map(card).join('')}</div>${checks}<p class="pd-note">The planner marks the shape of your speech — a hook, three points, a close that echoes the hook, the devices. Your ideas are yours: they are never marked. Typed lines stay on this device and are cleared when the tournament ends.</p>${ex}`,
     tray, controls: `${btn('An example plan', 'pd-example', { ic: 'book', cls: 'out stg-pair' })}${btn(ri === 3 ? 'I am ready' : 'To the stage', 'pd-planned', { ic: 'next', cls: 'stg-pair', attrs: 'data-primary' })}` });

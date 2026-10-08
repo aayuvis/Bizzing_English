@@ -131,10 +131,10 @@ export function forgeOf(lex, wp) {
     let out = null; const ps = ids.map((id) => byId.get(id));
     if (ids.length >= 2 && ids.length <= MAX_SLOTS && new Set(ids).size === ids.length && ps.every(Boolean) && shapeOk(ps)) {
       const sp = spelt(ids);
-      if (sp && !FALSE_FRIENDS.has(sp.word)) {
+      if (sp) {
         const roots = ids.filter((id) => byId.get(id).kind === 'root');
         if (ids.length === 2) { if (roots.length ? roots.some((id) => rootWords.get(id)?.has(sp.word)) && ps.every((p) => p.kind !== 'base' || names(sp.word, p.t)) : transparent(sp.word, ps)) out = sp; }
-        else if ((roots.length || transparent(sp.word, ps)) && (ps[0].kind === 'prefix' && made(ids.slice(1))) || (ps[ps.length - 1].kind === 'suffix' && made(ids.slice(0, -1)))) out = sp;
+        else if ((ps[0].kind === 'prefix' && made(ids.slice(1))) || (ps[ps.length - 1].kind === 'suffix' && made(ids.slice(0, -1)))) out = sp;
       }
     }
     memo.set(k, out); return out;
@@ -205,32 +205,37 @@ function dealRound(F, seed, level, o = {}) {
   const ok = (id) => allowed(F.part(id), cfg);
   const pool = [...F.words].filter(([, e]) => e.ids.length <= cfg.slots && e.ids.every(ok)).map(([w, e]) => ({ w, ids: e.ids }));
   const seen = o.mem?.seen || {}, fresh = pool.filter((x) => !seen[wordKey(x.w)]), order = shuffle(R, fresh.length >= 8 ? fresh : pool);
-  if (o.final) return familyRound(F, R, cfg, L, pool, order) || dealRound(F, seed, level, { ...o, final: false });
+  if (o.final) return familyRound(F, R, cfg, L, pool, order, seen) || dealRound(F, seed, level, { ...o, final: false });
   const hasRoot = (x) => x.ids.some((id) => F.part(id).kind === 'root');
   /* strict first; then without the three-part ask; then any tray that holds enough words */
+  /* of the first few trays that pass, the one with the most words the child has not forged yet */
+  const freshN = (t) => t.filter((x) => !seen[wordKey(x.word)]).length;
   for (const need of [cfg, { ...cfg, three: 0 }, { ...cfg, three: 0, roots: Math.min(1, cfg.roots), min: cfg.min - 1 }, { ...cfg, three: 0, roots: 0, min: 3 }]) {
     const lead = order.filter((x) => (need.three ? x.ids.length >= 3 : true) && (need.roots ? hasRoot(x) : true));
+    let best = null, looked = 0;
     for (const anchor of [...lead, ...order].slice(0, 40)) {
-      const tray = grow(F, R, cfg, pool, anchor.ids.slice());
+      const tray = grow(F, R, cfg, pool, anchor.ids.slice(), seen);
       const t = F.targets(tray, cfg.slots);
       if (t.length < need.min) continue;
       if (need.roots && t.filter(hasRoot).length < need.roots) continue;
       if (t.filter((x) => x.ids.length >= 3).length < need.three) continue;
-      return roundOf(F, R, tray, t, cfg, L, null);
+      if (!best || freshN(t) > freshN(best.t)) best = { tray, t };
+      if (++looked >= 5 || freshN(t) === t.length) break;
     }
+    if (best) return roundOf(F, R, best.tray, best.t, cfg, L, null);
   }
   return null;
 }
 /* Grow a tray from its anchor: add the part that opens the most new words, keeping a mix — at least two
    affixes and three cores, never more than half the tray of one kind — ties broken by the seed. */
-function grow(F, R, cfg, pool, tray) {
+function grow(F, R, cfg, pool, tray, seen = {}) {
   const kindOf = (id) => { const k = F.part(id).kind; return k === 'prefix' || k === 'suffix' ? 'aff' : 'core'; };
   const cap = { aff: Math.ceil(cfg.tray / 2), core: cfg.tray - 2 };
   while (tray.length < cfg.tray) {
     const have = new Set(tray), n = { aff: 0, core: 0 }; tray.forEach((id) => n[kindOf(id)]++);
     const left = cfg.tray - tray.length, must = n.aff < 2 && left <= 2 - n.aff ? 'aff' : n.core < 3 && left <= 3 - n.core ? 'core' : null;
     const gain = new Map();
-    for (const x of pool) { const miss = x.ids.filter((id) => !have.has(id)); if (miss.length === 1) gain.set(miss[0], (gain.get(miss[0]) || 0) + 1); else if (miss.length === 2) for (const id of miss) gain.set(id, (gain.get(id) || 0) + 0.25); }
+    for (const x of pool) { const miss = x.ids.filter((id) => !have.has(id)), w = seen[wordKey(x.w)] ? 0.3 : 1; if (miss.length === 1) gain.set(miss[0], (gain.get(miss[0]) || 0) + w); else if (miss.length === 2) for (const id of miss) gain.set(id, (gain.get(id) || 0) + w / 4); }
     const fits = (id) => n[kindOf(id)] < cap[kindOf(id)] && (!must || kindOf(id) === must);
     let best = [...gain.entries()].filter(([id]) => fits(id)).sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
     if (!best.length) { const rest = [...new Set(pool.flatMap((x) => x.ids))].filter((id) => !have.has(id) && fits(id)).sort(); if (!rest.length) break; tray.push(rest[Math.floor(R() * rest.length)]); continue; }
@@ -240,14 +245,14 @@ function grow(F, R, cfg, pool, tray) {
   return tray;
 }
 /* The final: forge a family — a key part (a base or a root) and three words that share it. */
-function familyRound(F, R, cfg, L, pool, order) {
+function familyRound(F, R, cfg, L, pool, order, seen = {}) {
   const keys = new Map();
   for (const x of pool) for (const id of x.ids) { const k = F.part(id).kind; if (k === 'base' || k === 'root') (keys.get(id) || keys.set(id, []).get(id)).push(x); }
   const fams = shuffle(R, [...keys.entries()].filter(([, xs]) => xs.length >= 3).map(([id]) => id).sort());
   for (const key of fams) {
     const xs = shuffle(R, keys.get(key)).slice(0, 3), tray = [...new Set(xs.flatMap((x) => x.ids))];
     if (tray.length > cfg.tray + 1) continue;
-    const full = grow(F, R, { ...cfg, tray: Math.max(cfg.tray, tray.length) }, pool, tray);
+    const full = grow(F, R, { ...cfg, tray: Math.max(cfg.tray, tray.length) }, pool, tray, seen);
     const t = F.targets(full, cfg.slots), fam = t.filter((x) => x.ids.includes(key));
     if (fam.length < 3) continue;
     return roundOf(F, R, full, t, { ...cfg, goal: 3 }, L, key);

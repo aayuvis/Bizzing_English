@@ -2,6 +2,7 @@
    every card and hub mode carries (handover C §1.4, §4.0). The lineup and the level rule are src/hubs.js;
    the stage is src/stage.js; the games themselves are views/play.js. */
 
+import { earsCard } from './ears.js';
 import { kid, isDark } from '../app.js';
 import { esc, icon, pageHead } from '../ui.js';
 import { GAMES, MAX_LEVEL } from '../games.js';
@@ -25,7 +26,7 @@ export const levelTag = (L, extra = '') => `<span class="lvtag"><b>Level ${L}</b
 
 /* ---------- the Play tab ---------- */
 export function playView() {
-  const cards = CARDS.map((id) => (isHub(id) ? hubCard(id) : gameCard(id))).join('');
+  const cards = CARDS.map((id) => (id === 'ears' ? earsCard(levelChip('ears', { compact: true })) : isHub(id) ? hubCard(id) : gameCard(id))).join('');
   return pageHead({ title: 'Play', sub: 'games where the learning is the game' }) + `<div class="pcards" data-cards="${CARDS.length}">${cards}</div>`;
 }
 function hubCard(id) {

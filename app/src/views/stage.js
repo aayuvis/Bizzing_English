@@ -26,10 +26,10 @@ export function stageView() {
   return pageHead({ title: 'The Stage', sub: 'read aloud, recite, then speak', back: { label: 'Tools', href: '#/tools' }, actions: [{ icon: 'mic', label: 'Read aloud', href: '#/stage/aloud' }] }) + `<div class="curtain" aria-hidden="true"></div><div class="grid2" style="margin:0 20px"><div class="stack" style="align-self:start">
     <div class="card pin stack"><div class="row"><img src="${mascot('point')}" alt="" style="width:110px;height:110px;object-fit:contain"><h3 style="margin:0">Read it aloud</h3></div><p style="margin:0">Pick a passage, tap Start, and read. The app listens only for loudness — never for your words — and keeps nothing but the numbers.</p>
       ${tries.length ? `<p class="tag ok">${icon('check')}${tries.length} time${tries.length > 1 ? 's' : ''} on the Stage · best pace ${Math.max(...tries.map((t) => t.wpm))} words a minute</p>` : ''}${link('Read aloud', '#/stage/aloud', { ic: 'mic' })}</div>
-    <div class="card stack"><div class="row"><span class="rivalrow">${field(k.band).map((rv) => `<img src="${rivalArt(rv.id)}" alt="" width="40" height="40">`).join('')}</span><h3 style="margin:0">Elocution Contest</h3></div>
-      <p style="margin:0">A poem, a passage and a one-minute talk, against five of Bizzing Bee’s rivals. Points only for what the device can measure — timing, pace, pauses.</p>
-      ${(k.contests || []).length ? `<p class="tag ok">${icon('check')}${k.contests.length} contest${k.contests.length > 1 ? 's' : ''} · best ${Math.max(...k.contests.map((c) => c.total))} of 30</p>` : ''}
-      ${contestOpen(k) ? link('Enter the contest', '#/stage/contest', { ic: 'lectern' }) : `<p class="note" style="margin:0">${icon('lock')} Opens when you have read a passage aloud.</p>`}</div></div>
+    <div class="card stack"><div class="row"><span class="rivalrow">${field(k.band).map((rv) => `<img src="${rivalArt(rv.id)}" alt="" width="40" height="40">`).join('')}</span><h3 style="margin:0">The Podium</h3></div>
+      <p style="margin:0">The Elocution Contest, grown into a tournament: a poem, a passage, a speech you plan in the green room, and an impromptu final — against five of Bizzing Bee’s rivals. Points only once the device hears you speaking.</p>
+      ${k.podium?.cur ? `<p class="tag ok">${icon('lectern')}Round ${k.podium.cur.round + 1} of 4 waiting</p>` : (k.contests || []).length ? `<p class="tag ok">${icon('check')}${k.contests.length} tournament${k.contests.length > 1 ? 's' : ''} · best place ${Math.min(...k.contests.map((c) => c.place))}</p>` : ''}
+      ${contestOpen(k) ? link(k.podium?.cur ? 'Back to the Podium' : 'Enter the Podium', '#/stage/podium', { ic: 'lectern' }) : `<p class="note" style="margin:0">${icon('lock')} Opens when you have read a passage aloud.</p>`}</div></div>
     <div class="card"><h3>The ladder</h3><div class="ladder">${ladder}</div></div></div>`;
 }
 

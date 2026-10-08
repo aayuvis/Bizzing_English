@@ -18,7 +18,7 @@ let MANIFEST = null;
 try { const g = import.meta.glob('../data/inkwell-art.js', { eager: true }); MANIFEST = Object.values(g)[0] || null; } catch { MANIFEST = null; }
 const KNOWN = new Set(); let PINS = null;
 (function index() {
-  const add = (p) => { const m = String(p).match(/(?:^|art\/inkwell\/)([a-z0-9/_-]+)\.webp$/i); if (m) KNOWN.add(m[1]); };
+  const add = (p) => { const m = String(p).replace(/^.*?art\/inkwell\//, '').match(/^([a-z0-9/_-]+)\.webp$/i); if (m) KNOWN.add(m[1]); };
   const walk = (v, key, depth = 0) => {
     if (depth > 6 || v == null) return;
     if (typeof v === 'string') return add(v);

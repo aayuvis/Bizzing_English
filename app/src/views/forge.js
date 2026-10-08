@@ -99,6 +99,12 @@ const partTile = (p, i, g, book) => {
 };
 const ingot = (p, j, g, word) => `<button class="fg-ingot fg-${p.kind}" data-act="fg-lift" data-arg="${j}" ${g.state ? 'disabled' : ''} aria-label="lift ${esc(label(p))} off the anvil"><b>${esc(label(p))}</b><small>${esc(word ? senseOf(p, word) : p.kind === 'base' ? 'word' : p.mean)}</small></button>`;
 
+const ANVIL = `<svg class="fg-iron" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true"><defs>
+  <linearGradient id="fgI" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a9099"/><stop offset=".12" stop-color="#5d636c"/><stop offset=".55" stop-color="#3a3e45"/><stop offset="1" stop-color="#1e2126"/></linearGradient>
+  <linearGradient id="fgH" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff9a3c" stop-opacity="0"/><stop offset=".5" stop-color="#ff9a3c" stop-opacity=".38"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/></linearGradient></defs>
+  <path d="M0 22 C40 20 80 12 112 4 L112 0 L600 0 L600 104 L566 108 C520 114 486 122 470 140 L462 164 L512 178 L522 200 L138 200 L148 178 L198 164 L190 140 C176 122 150 112 120 106 C80 86 40 54 0 22 Z" fill="url(#fgI)"/>
+  <path d="M6 22 C44 19 82 11 112 3 H596" fill="none" stroke="#c3c8cf" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M190 150 H470 L462 164 H198 Z" fill="url(#fgH)"/><rect x="138" y="190" width="384" height="10" fill="url(#fgH)"/></svg>`;
 /* the sum, as the glow and the book show it: un (not) + happy (a whole word) = unhappy */
 const sumOf = (ids, word) => ids.map((id) => F.part(id)).map((p) => `<span class="fg-term fg-${p.kind}"><b>${esc(label(p))}</b><small>${esc(senseOf(p, word))}</small></span>`).join('<i class="fg-plus">+</i>');
 
@@ -113,7 +119,7 @@ function plaque(st) {
 /* the crack, held on the anvil: each piece and what it means, and why they do not fit */
 function crackCard(g) {
   const st = g.state, pieces = st.ids.map((id) => F.part(id));
-  const each = `<ul class="fg-why">${pieces.map((p) => `<li><b class="fg-${p.kind}">${esc(label(p))}</b> ${esc(KIND[p.kind])} — ${esc(senseOf(p))}${p.makes ? ` (it makes ${p.makes === 'adjective' ? 'an adjective' : p.makes === 'adverb' ? 'an adverb' : 'a noun'})` : ''}</li>`).join('')}</ul>`;
+  const each = `<ul class="fg-why">${pieces.map((p) => `<li><b class="fg-${p.kind}">${esc(label(p))}</b> <span>${esc(KIND[p.kind])}: ${esc(senseOf(p))}${p.makes ? ` — makes ${p.makes === 'adjective' ? 'an adjective' : p.makes === 'adverb' ? 'an adverb' : 'a noun'}` : ''}</span></li>`).join('')}</ul>`;
   const why = `${each}<p>“${esc(st.text)}” is not a word in Bee’s list${st.friend ? '' : ' — so it cracks'}. ${esc(st.why || '')}${st.again ? ' You tried that one already — it does not count twice.' : ''}</p>`;
   const title = st.friend ? `“${st.friend}” is a word, but not made of these pieces` : st.again ? 'Cracked again' : 'Cracked — no such word';
   return missCard({ type: 'note', why: st.friend ? `${each}<p>The pieces do not carry their meaning in “${esc(st.friend)}”, so the forge cannot count it. No crack, no coin.</p>` : why }, null, { title, whyHtml: true, go: 'Clear the anvil' });
@@ -130,13 +136,12 @@ export function forgeTitle(r, challenge = '') {
   const stars = Object.values(rec.stars || {}).reduce((a, b) => a + (b || 0), 0), ready = !!F;
   const demo = `<div class="fg-demo" aria-hidden="true"><span class="fg-term fg-prefix"><b>re-</b><small>again</small></span><i class="fg-plus">+</i><span class="fg-term fg-root"><b>port</b><small>carry</small></span><i class="fg-eq">=</i><b class="fg-word">report</b></div>`;
   return `<div class="game">${stage({ id: 'title-root', world: gm.world, dark: isDark(), mods: 'stg-title-card fg-stage',
-    left: { v: bookSize(book), l: 'in your book' }, right: { v: stars, l: `star${stars === 1 ? '' : 's'}` }, title: gm.name, chip: levelChip('root', { stars: true }),
-    main: `<div class="stg-paper stg-howto fg-howto" data-play>${demo}<p class="stg-lead">${esc(gm.how)}</p>
+    left: { v: bookSize(book), l: 'in your book' }, right: { v: stars, l: `star${stars === 1 ? '' : 's'}` }, title: gm.name, chip: levelTag(L, rankOf(book).name),
+    main: `<div class="stg-paper stg-howto fg-howto" data-play>${demo}<p class="stg-lead">${esc(gm.how)}</p>${levelChip('root', { stars: true })}
       <p class="gb-level"><b>Level ${L}</b> · ${esc(gm.levels[L])} — ${cfg.tray} parts, an anvil of ${cfg.slots}.</p>
       ${rankBar(book)}
       <div class="fg-load${ready ? ' done' : ''}" data-forge-load><span>${ready ? 'The forge is hot.' : LOAD.state === 'error' ? 'Bee’s word list did not load.' : `Lighting the forge — Bee’s words ${LOAD.pct}%`}</span><span class="fg-bar"><i style="width:${ready ? 100 : LOAD.pct}%"></i></span></div>
-      <p class="note">Every real word scores, and goes into your Forge Book. A run is three rounds and a final — ${esc(gm.final.charAt(0).toLowerCase() + gm.final.slice(1))}. Coins come for words forged first time, when the round is at least half words.</p>
-      <p class="note">Keys: ${esc(gm.keys)} — or drag, or just tap.</p>${r.err ? `<p class="note" role="alert">${esc(r.err)}</p>` : ''}</div>`,
+      <p class="note">Three rounds, then a final: ${esc(gm.final.charAt(0).toLowerCase() + gm.final.slice(1))}. A coin for each word forged first time, in a round at least half words. Keys: ${esc(gm.keys)} — or drag, or tap.</p>${r.err ? `<p class="note" role="alert">${esc(r.err)}</p>` : ''}</div>`,
     controls: `${btn('Forge Book', 'forge-book', { ic: 'book', cls: 'out stg-pair' })}${btn('Start', 'game-start', { ic: 'next', cls: 'stg-go' })}${challenge}`, fit: true })}</div>`;
 }
 
@@ -146,19 +151,19 @@ export function forgePlay(g, r, { roundName = '', runScore = 0 } = {}) {
   const found = g.found.length, N = g.targets.length;
   const keyP = g.key ? F.part(g.key) : null;
   const goalN = g.key ? forgeFamily(g) : found;
-  const pips = `<div class="gb-pips fg-goal" role="img" aria-label="${goalN} of ${g.goal} to the goal">${Array.from({ length: g.goal }, (_, i) => `<i class="pip${i < goalN ? ' ok' : i === goalN ? ' cur' : ''}"></i>`).join('')}<span>${g.key ? `family words ${goalN} of ${g.goal}` : `goal ${Math.min(goalN, g.goal)} of ${g.goal}`}</span></div>`;
+  const pips = `<div class="gb-pips fg-goal" role="img" aria-label="${goalN} of ${g.goal} to the goal">${Array.from({ length: g.goal }, (_, i) => `<i class="pip${i < goalN ? ' ok' : i === goalN ? ' cur' : ''}"></i>`).join('')}<span>${g.key ? `${esc(label(keyP))} family ${Math.min(goalN, g.goal)} of ${g.goal}` : `goal ${Math.min(goalN, g.goal)} of ${g.goal}`}</span></div>`;
   const slots = Array.from({ length: g.slots }, (_, j) => { const i = g.anvil[j];
     return `<div class="fg-slot${i != null ? ' full' : ''}" data-slot="${j}">${i != null ? ingot(g.tray[i], j, g, st?.ok ? st.word : null) : `<span class="fg-socket">${j + 1}</span>`}</div>`; }).join('');
   const prompt = g.key ? `Forge a family: three words with ${esc(label(keyP))} (${esc(senseOf(keyP))}).` : held ? 'The anvil holds the cracked pieces.' : g.anvil.length >= 2 ? 'Strike — or add a piece.' : 'Drag or tap two parts onto the anvil.';
-  const anvil = `<div class="fg-forge${st?.ok && !st.again ? ' glow' : ''}${held ? ' crack' : ''}" data-play data-anvil>
+  const anvil = `<div class="fg-forge${st?.ok && !st.again ? ' glow' : ''}${held ? ' crack' : ''}" data-anvil>
       <div class="fg-fire" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="fg-anvil" role="group" aria-label="the anvil, ${g.slots} slots">${st?.ok && !st.again ? `<div class="fg-bar-hot"><b>${esc(st.word)}</b></div>` : `<div class="fg-slots">${slots}</div>`}<div class="fg-iron" aria-hidden="true"></div></div>
+      <div class="fg-anvil" role="group" aria-label="the anvil, ${g.slots} slots">${st?.ok && !st.again ? `<div class="fg-bar-hot"><b>${esc(st.word)}</b></div>` : `<div class="fg-slots">${slots}</div>`}${ANVIL}</div>
       ${held ? '<svg class="fg-crackline" viewBox="0 0 100 40" aria-hidden="true"><path d="M50 0 L46 12 L54 18 L47 28 L52 40"/></svg>' : ''}
       ${st?.ok && !st.again ? '<div class="fg-sparks" aria-hidden="true">' + Array.from({ length: 12 }, (_, i) => `<i style="--a:${i * 30}deg;--d:${50 + (i * 37) % 40}px"></i>`).join('') + '</div>' : ''}</div>`;
   const rack = g.found.length ? `<div class="fg-rack" aria-label="words forged this round">${g.found.map((x) => `<span class="fg-chip${x.first ? '' : ' assisted'}${g.key && x.ids.includes(g.key) ? ' fam' : ''}">${esc(x.word)}</span>`).join('')}</div>` : '';
-  const main = `<p class="prompt">${prompt}</p>${anvil}${held ? `<div class="stg-paper fg-held">${crackCard(g)}</div>` : `${plaque(g.shown || (st?.ok ? st : null)) || (rack ? '' : `<p class="subp">Each part says what it means. Any real word in Bee’s list counts.</p>`)}${rack}`}`;
-  const tray = held ? '' : `<div class="fg-tray" role="group" aria-label="the parts">${g.tray.map((p, i) => partTile(p, i, g, book)).join('')}</div>`;
-  const controls = held ? '' : `${btn('Lift', 'fg-lift', { ic: 'undo', cls: 'out stg-pair', dis: !g.anvil.length || !!st })}${btn('Strike', 'fg-strike', { ic: 'blocks', cls: 'stg-go fg-strike', dis: g.anvil.length < 2 || !!(st && !st.ok) })}${btn(done ? 'Finish' : 'End round', 'fg-done', { ic: done ? 'check' : 'next', cls: `${done ? '' : 'out '}stg-pair` })}`;
+  const main = `<p class="prompt">${prompt}</p><div class="fg-play" data-play>${anvil}${held ? `<div class="stg-paper fg-held">${crackCard(g)}</div>` : `${plaque(g.shown || (st?.ok ? st : null)) || (rack ? '' : `<p class="fg-hint">Any real word in Bee’s list counts.</p>`)}${rack}`}</div>`;
+  const tray = held ? '' : `<div class="fg-tray${kbdMode ? ' kbd' : ''}" role="group" aria-label="the parts">${g.tray.map((p, i) => partTile(p, i, g, book)).join('')}</div>`;
+  const controls = held ? '' : `${btn('Lift', 'fg-lift', { ic: 'undo', cls: 'out stg-pair', dis: !g.anvil.length || !!st })}${btn('Strike', 'fg-strike', { ic: 'blocks', cls: 'stg-go fg-strike', dis: g.anvil.length < 2 || !!(st && !st.ok) })}${btn(done ? 'Finish' : 'Done', 'fg-done', { ic: done ? 'check' : 'next', cls: `${done ? '' : 'out '}stg-pair` })}`;
   return stage({ id: 'root', world: gm.world, dark: isDark(), mods: `stg-play fg-stage${g.final ? ' stg-final' : ''}`,
     left: { v: `${found}<small class="fg-of">/${N}</small>`, l: 'found', label: `${found} of ${N} found` }, right: { v: `<span class="gb-score-v">${g.score}</span>`, l: `run ${runScore + g.score}` },
     title: gm.name, chip: `${levelTag(g.level, roundName)}<span class="gb-combo${g.combo >= 2 ? ' on' : ''}" aria-live="polite">${g.combo >= 2 ? `${g.combo} in a row` : ''}</span>`,
@@ -172,7 +177,7 @@ export function forgeBook(r) {
   const groups = [['prefix', 'Prefixes'], ['root', 'Roots'], ['base', 'Whole words'], ['suffix', 'Endings']].map(([kind, name]) => {
     const xs = shelves.filter((x) => x.part.kind === kind); if (!xs.length) return '';
     return `<section class="fg-shelf"><h3>${name}</h3><div class="fg-cards">${xs.map((x) => `<article class="fg-card fg-${kind}${x.stamp ? ' stamped' : ''}"><header><b>${esc(label(x.part))}</b><small>${esc(x.part.kind === 'base' ? 'a whole word' : x.part.mean)}</small>${x.stamp ? `<i class="fg-stamp" title="stamped">${icon('star')}</i>` : ''}</header>
-      <p>${x.words.map((w) => `<span class="fg-chip">${esc(w)}</span>`).join(' ')}</p><span class="fg-bar"><i style="width:${Math.round((100 * x.words.length) / Math.max(1, x.of))}%"></i></span><small>${x.words.length} of ${x.of} the forge can make${x.stamp ? '' : ` · ${STAMP - Math.min(STAMP, x.words.length)} more to its stamp`}</small></article>`).join('')}</div></section>`;
+      <p>${x.words.map((w) => `<span class="fg-chip">${esc(w)}</span>`).join(' ')}</p><span class="fg-bar"><i style="width:${Math.round((100 * x.words.length) / Math.max(1, x.of))}%"></i></span><small>${x.words.length} of the ${x.of} words it makes here${x.stamp ? '' : ` · ${STAMP - Math.min(STAMP, x.words.length)} more to its stamp`}</small></article>`).join('')}</div></section>`;
   }).join('');
   const body = !F ? `<p>Lighting the forge…</p>` : n ? groups : `<div class="fg-empty"><img src="${mascot('point')}" alt=""><p>Your Forge Book is empty. Every real word you forge is kept here, by its parts — and a part gets its stamp when three of its words are in.</p></div>`;
   return `<div class="game">${stage({ id: 'book-root', world: gm.world, dark: isDark(), mods: 'fg-stage fg-bookstage',
@@ -182,7 +187,9 @@ export function forgeBook(r) {
 }
 
 /* ---------- keys: ← → choose a part · Enter place · Backspace lift · Space or S strike · 1–9 place ---------- */
+let kbdMode = false;
 export function forgeKey(e, g, act) {
+  if (!kbdMode && /^(Arrow|Enter$|Backspace$| $|[1-9]$|s$|S$)/.test(e.key)) { kbdMode = true; requestAnimationFrame(() => document.querySelector('.fg-tray')?.classList.add('kbd')); }
   if (g.state && !g.state.ok) { if (e.key === 'Enter' || e.key === ' ') { act({ type: 'next' }); return true; } return false; }
   if (/^[1-9]$/.test(e.key) && +e.key <= g.tray.length) { act({ type: 'place', i: +e.key - 1 }); return true; }
   if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { act({ type: 'move', d: 1 }); return true; }
@@ -214,6 +221,7 @@ export const setDragAct = (f) => { dragAct = f; };
 if (typeof document !== 'undefined') {
   const slotAt = (x, y) => { const els = document.elementsFromPoint(x, y); return { slot: els.map((el) => el.closest?.('.fg-slot[data-slot]')).find(Boolean) || null, anvil: els.map((el) => el.closest?.('[data-anvil]')).find(Boolean) || null }; };
   document.addEventListener('pointerdown', (e) => {
+    if (kbdMode) { kbdMode = false; document.querySelector('.fg-tray')?.classList.remove('kbd'); }
     const c = e.target.closest?.('.fg-part[data-act=fg-place]'); if (!c || c.disabled || (e.button != null && e.button > 0)) return;
     drag = { el: c, i: +c.dataset.arg, x: e.clientX, y: e.clientY, on: false, id: e.pointerId, over: null };
   });

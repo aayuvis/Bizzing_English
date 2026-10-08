@@ -489,7 +489,7 @@ export const PLAY_ACTIONS = {
   'game-mode-buy': () => { const r = S.run, k = kid(); if (!r?.id) return; if (buyMode(k, r.id, (price, why) => spend(k.name, price, why))) { save(); sfx('unlock'); confetti(); } render(); },
   'game-round': () => { const r = S.run; if (r?.phase === 'between') startRound(); },
   /* the level chip: "<game>:<auto|1–5>" — a hand-set level sticks until the next run's check */
-  'lv-set': (a) => { const [id, v] = String(a).split(':'); if (!GAMES[id] || S.run?.phase === 'play') return; setPick(recOf(id), v); sfx('tap'); save(); render(); },
+  'lv-set': (a) => { const [id, v] = String(a).split(':'); if ((!GAMES[id] && id !== 'ears') || S.run?.phase === 'play') return; setPick(recOf(id), v); sfx('tap'); save(); render(); },
   'game-level': (a) => { const r = S.run; if (!r?.id || r.phase !== 'title') return; PLAY_ACTIONS['lv-set'](`${r.id}:${a}`); },
   'miss-go': () => stepOrAct(S.run?.g?.kind === 'builder' || S.run?.g?.kind === 'rush' ? { type: 'continue' } : { type: 'next' }),
   'b-pick': (a) => { sfx('tap'); step({ type: 'pick', i: +a }); },
