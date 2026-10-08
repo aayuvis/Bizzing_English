@@ -21,18 +21,19 @@ export const HUBS = {
   craft: { id: 'craft', name: NAMES.craft, world: 'forum', practises: 'figures of speech and the devices of strong writing', promise: 'Find the figures great writers use, then make a line strong yourself.', modes: ['figure', 'duel'] },
 };
 /* The Play tab, in order: a card is a hub or a single game. */
-export const CARDS = ['studio', 'craft', 'root', 'ears', 'plot'];
+export const CARDS = ['inkwell', 'studio', 'craft', 'root', 'ears'];
 /* The seven Play cards before the hubs (3 Oct 2026), and what came in for what. */
 export const BEFORE = ['builder', 'rush', 'figure', 'who', 'plot', 'root', 'duel'];
 export const LEDGER = [
   { in: 'studio', out: ['builder', 'rush'], why: 'the same shell and strand: sentences built and punctuated' },
   { in: 'craft', out: ['figure', 'duel'], why: 'both name devices in real lines; together, find it and then use it' },
+  { in: 'inkwell', out: ['plot'], why: 'Inkwell Detective, the flagship, in for Plot Line (C §2.1); its timeline board is Detective School’s Timeline' },
   { in: 'ears', out: ['who'], why: 'Story Ears in for Who Said It? (C §5); its attribution lives on in Detective School’s Who Wrote This?' },
 ];
 /* The most cards Play may show. It only ever comes down (T16); the Detective School swap brings it to 4. */
 export const CARD_LIMIT = 5;
 /* a game that left the tab without becoming a hub mode: where its mechanic plays now (module, export) */
-export const LIVES_ON = { who: ['detective-school.js', 'whoRound', 'Inkwell Detective · Detective School: Who Wrote This?'] };
+export const LIVES_ON = { who: ['detective-school.js', 'whoRound', 'Inkwell Detective · Detective School: Who Wrote This?'], plot: ['detective-school.js', 'timelineRound', 'Inkwell Detective · Detective School: Timeline'] };
 export const isHub = (id) => !!HUBS[id];
 export const hubOf = (game) => Object.values(HUBS).find((h) => h.modes.includes(game))?.id || null;
 export const cardName = (id) => HUBS[id]?.name || GAMES[id]?.name || id;

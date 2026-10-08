@@ -89,6 +89,8 @@ async function dragPart(page, i, slot) {
   for (let k = 1; k <= 8; k++) await page.mouse.move(a.x + a.width / 2 + ((b.x + b.width / 2) - (a.x + a.width / 2)) * k / 8, a.y + a.height / 2 + ((b.y + b.height / 2) - (a.y + a.height / 2)) * k / 8);
   await page.mouse.up(); await page.waitForTimeout(120);
 }
+/* the meaning is in view: the plaque's definition lies inside the stage's play area, not scrolled or clipped away */
+const defInView = (page) => page.evaluate(() => { const d = document.querySelector('.fg-plaque .fg-def'), m = document.querySelector('[data-stage-main]'); if (!d || !m) return false; const a = d.getBoundingClientRect(), b = m.getBoundingClientRect(); return a.height > 0 && a.top >= b.top - 1 && a.bottom <= b.bottom + 1 && m.scrollTop === 0; });
 const lit = async (page) => { try { await page.waitForSelector('.fg-load.done', { timeout: 25000, state: 'attached' }); return true; } catch { return false; } };
 
 /* =====================================================================================================
@@ -101,7 +103,7 @@ const lit = async (page) => { try { await page.waitForSelector('.fg-load.done', 
   const cards = await page.$$eval('.pcard', (c) => c.map((e) => e.dataset.card));
   ok(`the Play tab keeps its cards, Root Forge among them (${cards.join(', ')})`, cards.length === 5 && cards.includes('root'));
   await page.waitForTimeout(3000);
-  ok('the Play tab lights the forge in idle time: Bee’s list is fetched before Root Forge is opened', await page.evaluate(() => performance.getEntriesByType('resource').some((e) => /data\/bee-words\.json/.test(e.name))));
+  ok('the Play tab lights the forge in idle time: Bee’s list fetched and the forge built before Root Forge is opened', await page.evaluate(() => performance.getEntriesByType('resource').some((e) => /data\/bee-words\.json/.test(e.name)) && document.documentElement.dataset.forge === 'hot'));
   await go(page, '#/play/root'); await phase(page, 'title');
   ok('…so the title opens with the forge already hot', await page.evaluate(() => !!document.querySelector('.fg-load.done')));
   ok('the title shows the fire lit', await lit(page));
@@ -122,10 +124,12 @@ const lit = async (page) => { try { await page.waitForSelector('.fg-load.done', 
   /* by DRAG: each part dragged onto its slot, then the Strike button */
   let t = nextTarget(g);
   for (let j = 0; j < t.idx.length; j++) await dragPart(page, t.idx[j], j);
-  ok('a part dragged onto the anvil lands in the slot', JSON.stringify((await G(page)).anvil) === JSON.stringify(t.idx), JSON.stringify((await G(page)).anvil));
+  if (!ok('a part dragged onto the anvil lands in the slot', JSON.stringify((await G(page)).anvil) === JSON.stringify(t.idx), JSON.stringify((await G(page)).anvil))) {
+    while ((await G(page)).anvil.length) await page.click('[data-act=fg-lift]'); for (const i of t.idx) await page.click(`.fg-part[data-arg="${i}"]`); }
   await page.click('[data-act=fg-strike]'); await page.waitForSelector('.fg-forge.glow', { timeout: 3000 }).catch(() => {});
   ok(`forged by drag: "${t.word}" glows and shows its meaning`, await page.evaluate((w) => document.querySelector('.fg-bar-hot')?.textContent.trim() === w && document.querySelector('.fg-plaque')?.dataset.glow === w && !!document.querySelector('.fg-plaque .fg-def'), t.word));
   await shot(page, 'forge-glow-desktop', '.stg');
+  await page.waitForTimeout(450); ok('the meaning stands in view on the stage (desktop)', await defInView(page));
   ok('the word goes into the Forge Book, with its parts', await book(page).then((b) => !!b[t.word] && b[t.word].ids.length === t.idx.length));
   await settle(page);
   ok('the plaque stays to be read after the anvil clears', await page.evaluate((w) => document.querySelector('.fg-plaque')?.dataset.glow === w && !document.querySelector('.fg-ingot'), t.word));
@@ -140,10 +144,13 @@ const lit = async (page) => { try { await page.waitForSelector('.fg-load.done', 
   /* by KEYS: a number for the first part, ← → and Enter for the rest, Space to strike; Backspace lifts */
   g = await G(page); t = nextTarget(g);
   await page.keyboard.press(String(t.idx[0] + 1));
+  ok('a number key places its part', (await G(page)).anvil[0] === t.idx[0]);
+  if ((await G(page)).anvil[0] !== t.idx[0]) await page.click(`.fg-part[data-arg="${t.idx[0]}"]`);
   await page.keyboard.press('Backspace'); ok('Backspace lifts the last part off the anvil', (await G(page)).anvil.length === 0);
-  await page.keyboard.press(String(t.idx[0] + 1));
+  await page.keyboard.press(String(t.idx[0] + 1)); if (!(await G(page)).anvil.length) await page.click(`.fg-part[data-arg="${t.idx[0]}"]`);
   for (const i of t.idx.slice(1)) { for (let k = 0; k < 12 && (await G(page)).cursor !== i; k++) await page.keyboard.press('ArrowRight'); await page.keyboard.press('Enter'); }
-  ok('keys place the parts in order', JSON.stringify((await G(page)).anvil) === JSON.stringify(t.idx), JSON.stringify((await G(page)).anvil));
+  if (!ok('keys place the parts in order', JSON.stringify((await G(page)).anvil) === JSON.stringify(t.idx), JSON.stringify((await G(page)).anvil))) {
+    while ((await G(page)).anvil.length) await page.click('[data-act=fg-lift]'); for (const i of t.idx) await page.click(`.fg-part[data-arg="${i}"]`); }
   await page.keyboard.press(' '); await page.waitForTimeout(200);
   ok(`forged by keys: "${t.word}"`, (await G(page)).found.some((f) => f.word === t.word));
   await settle(page);
@@ -174,7 +181,7 @@ const lit = async (page) => { try { await page.waitForSelector('.fg-load.done', 
     await shot(page, 'forge-final-desktop', '.stg'); }
   /* the book, after a reload */
   await page.reload(); await page.waitForTimeout(900); await go(page, '#/play/root'); await phase(page, 'title'); await lit(page);
-  await page.click('[data-act=forge-book]'); await phase(page, 'book'); await page.waitForSelector('.fg-card');
+  await page.click('[data-act=forge-book]'); await phase(page, 'book'); await page.waitForSelector('.fg-card', { timeout: 8000 }).catch(() => {});
   const words = Object.keys(await book(page));
   ok(`the Forge Book survives a reload and shows its ${words.length} words by their parts`, words.length >= 3 && await page.evaluate((ws) => ws.every((w) => [...document.querySelectorAll('.fg-card .fg-chip')].some((c) => c.textContent === w)), words));
   ok('T15 the Forge Book: mirrored, no page scroll', symOk(await symmetry(page)), JSON.stringify(await symmetry(page)));
@@ -203,6 +210,7 @@ for (const dark of [true, false]) {
   await page.tap('[data-act=fg-strike]'); await page.waitForTimeout(250);
   ok(`${tag}: forged by tap — "${t.word}" glows`, await page.evaluate((w) => document.querySelector('.fg-bar-hot')?.textContent.trim() === w, t.word));
   await shot(page, `forge-glow-${dark ? 'dark' : 'light'}-phone`);
+  await page.waitForTimeout(450); ok(`${tag}: the meaning stands in view on the stage`, await defInView(page));
   { const bad = await phoneFit(page); ok(`${tag} T11 the glow fits`, !bad.length, bad.slice(0, 4).join('; ')); }
   await settle(page);
   const non = await page.evaluate(() => { const F = window.__bz.S.run.g.tray; for (let a = 0; a < F.length; a++) for (let b = 0; b < F.length; b++) if (a !== b && F[a].kind === 'suffix' && F[b].kind !== 'suffix') return [a, b]; return [0, 1]; });

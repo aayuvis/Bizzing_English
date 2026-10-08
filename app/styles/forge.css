@@ -53,16 +53,16 @@ html[data-bz-dark] .fg-stage {
 .fg-fire i { position: absolute; bottom: 0; width: 38%; height: 100%; border-radius: 50% 50% 40% 40%; background: radial-gradient(ellipse at 50% 90%, #ffd27a, #ff8a2b 45%, transparent 70%); opacity: .75; animation: fgflick 1.6s ease-in-out infinite alternate; }
 .fg-fire i:nth-child(1) { left: 4%; animation-delay: -.4s; } .fg-fire i:nth-child(2) { left: 31%; height: 120%; animation-delay: -.9s; } .fg-fire i:nth-child(3) { right: 4%; animation-delay: -.2s; }
 @keyframes fgflick { 0% { transform: scaleY(.85) translateY(4px); opacity: .55; } 100% { transform: scaleY(1.12); opacity: .9; } }
-.fg-anvil { position: relative; z-index: 1; width: 100%; padding: 8px 6% 62px 21%; display: grid; justify-items: center; }
+.fg-anvil { position: relative; z-index: 1; width: 100%; padding: 8px 6% 48px 21%; display: grid; justify-items: center; }
 .fg-iron { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .45)); }
 .fg-slots { position: relative; display: flex; justify-content: center; gap: 10px; width: 100%; padding: 6px 4px; }
-.fg-slot { flex: 1 1 0; max-width: 170px; min-height: 66px; display: grid; place-items: center; border-radius: 12px; border: 2px dashed rgba(230, 236, 245, .35); background: rgba(10, 12, 16, .28); transition: background .15s, border-color .15s; }
+.fg-slot { flex: 1 1 0; max-width: 170px; min-height: 60px; display: grid; place-items: center; border-radius: 12px; border: 2px dashed rgba(230, 236, 245, .35); background: rgba(10, 12, 16, .28); transition: background .15s, border-color .15s; }
 .fg-slot.full { border-style: solid; border-color: transparent; background: transparent; }
 .fg-socket { font: 800 16px var(--mono); color: rgba(230, 236, 245, .45); }
 [data-anvil].fg-over .fg-slots, .fg-slot.fg-over { box-shadow: 0 0 0 3px var(--stg-gold), inset 0 0 18px rgba(255, 190, 80, .45); }
 .fg-slot.fg-over { border-color: var(--stg-gold); background: rgba(255, 190, 80, .18); }
 .fg-ingot {
-  width: 100%; min-height: 62px; display: grid; justify-items: center; align-content: center; gap: 1px; padding: 6px 6px; border-radius: 10px; cursor: pointer;
+  width: 100%; min-height: 58px; display: grid; justify-items: center; align-content: center; gap: 1px; padding: 6px 6px; border-radius: 10px; cursor: pointer;
   border: 1px solid #9a4a12; color: var(--fg-ink);
   background: linear-gradient(180deg, rgba(255, 255, 255, .6), transparent 40%), linear-gradient(170deg, var(--fg-hot-a), var(--fg-hot-b) 55%, var(--fg-hot-c));
   box-shadow: 0 0 16px rgba(255, 150, 50, .65), 0 0 0 3px color-mix(in srgb, var(--fe) 70%, transparent), inset 0 -3px 6px rgba(160, 60, 10, .35);
@@ -73,7 +73,7 @@ html[data-bz-dark] .fg-stage {
 @keyframes fgdrop { 0% { transform: translateY(-14px) scale(1.06); } 100% { transform: none; } }
 
 /* a real word: the pieces fuse into one hot bar, sparks fly */
-.fg-bar-hot { width: 100%; min-height: 90px; display: grid; place-items: center; border-radius: 14px; padding: 8px 16px;
+.fg-bar-hot { width: 100%; min-height: 72px; display: grid; place-items: center; border-radius: 14px; padding: 8px 16px;
   background: radial-gradient(ellipse at 50% 40%, #fffbe8, var(--fg-hot-a) 30%, var(--fg-hot-b) 65%, var(--fg-hot-c));
   box-shadow: 0 0 34px rgba(255, 170, 60, .85), 0 0 0 3px #c97a1a, inset 0 -4px 10px rgba(170, 70, 10, .35); animation: fgfuse .6s cubic-bezier(.3, 1.6, .5, 1); }
 .fg-bar-hot b { font: 800 clamp(30px, 4.6vw, 46px)/1 var(--read); color: #3a1f06; letter-spacing: .02em; text-shadow: 0 1px 0 rgba(255, 255, 255, .6); }

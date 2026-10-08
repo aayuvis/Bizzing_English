@@ -25,6 +25,8 @@ const SHOTS = process.env.SHOTS || null; if (SHOTS) mkdirSync(SHOTS, { recursive
 if (!existsSync(BUILD)) { console.log('inkwell-ui: build first (npx vite build, or BZ_BUILD=<dir>)'); process.exit(1); }
 rmSync(SITE, { recursive: true, force: true }); mkdirSync(SITE); symlinkSync(BUILD, SITE + '/Bizzing_English');
 const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--bind', '127.0.0.1'], { cwd: SITE, stdio: 'ignore' });
+process.on('exit', () => srv.kill());   // a crashed run must not leave its server answering on the port
+process.on('uncaughtException', (e) => { console.log('✗ crashed:', e.message); srv.kill(); process.exit(1); });
 await new Promise((r) => setTimeout(r, 700));
 const BASE = `http://127.0.0.1:${PORT}/Bizzing_English/`;
 const EXE = ['/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].find(existsSync);
@@ -45,7 +47,8 @@ async function ctxFor({ phone = false, dark = false } = {}) {
 }
 const wait = (p, ms = 250) => p.waitForTimeout(ms);
 const go = async (p, hash) => { if (await p.$('.sheet')) { await p.keyboard.press('Escape'); await wait(p, 150); } await p.evaluate((h) => { location.hash = h; }, hash); await wait(p, 700); };
-const shot = async (p, name, sel) => { if (!SHOTS && !sel) return null; await wait(p, 350); const o = { path: SHOTS ? `${SHOTS}/${name}.png` : undefined }; return sel ? (await p.$(sel)).screenshot(o) : p.screenshot(o); };
+const EMO = () => [...document.querySelectorAll('.ink button, .ink h1, .ink h2, .ink h3, .ink a.btn, .bz-ph h1')].map((e) => e.textContent).join(' ').match(/\p{Extended_Pictographic}/gu) || [];
+const shot = async (p, name, sel) => { const e = await p.evaluate(`(${EMO})()`).catch(() => []); if (e.length) (p.emoji ||= []).push(`${name}: ${e.join('')}`); if (!SHOTS && !sel) return null; await wait(p, 350); const o = { path: SHOTS ? `${SHOTS}/${name}.png` : undefined }; return sel ? (await p.$(sel)).screenshot(o) : p.screenshot(o); };
 const ink = (p) => p.evaluate(() => JSON.parse(JSON.stringify({ cs: window.__bz.S.ink?.cs || null, sub: window.__bz.S.ink?.sub, say: window.__bz.S.ink?.say || null, doc: window.__bz.S.ink?.doc, ret: window.__bz.S.ink?.ret || null })));
 const coins = (p) => p.evaluate(() => Number(document.querySelector('.bz-coins')?.textContent.replace(/[^\d]/g, '') || 0));
 async function makeKid(page) {
@@ -326,7 +329,7 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   /* the browser's view of all of it */
   ok(`${tag}: no page errors and no 4xx`, page.errs.length === 0, page.errs.slice(0, 4).join(' | '));
   ok(`${tag}: no third-party requests`, page.reqs.every(ALLOWED), page.reqs.filter((u) => !ALLOWED(u)).slice(0, 3).join(' '));
-  ok(`${tag}: no emoji in the Inkwell controls and headings`, await page.evaluate(() => !/\p{Extended_Pictographic}/u.test([...document.querySelectorAll('.ink button, .ink h1, .ink h2, .ink h3, .ink a.btn')].map((e) => e.textContent).join(' '))));
+  ok(`${tag}: no emoji in the Inkwell controls and headings (every screen visited)`, !page.emoji?.length, (page.emoji || []).slice(0, 3).join(' | '));
   await ctx.close();
 }
 

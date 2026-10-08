@@ -26,8 +26,15 @@ export const levelTag = (L, extra = '') => `<span class="lvtag"><b>Level ${L}</b
 
 /* ---------- the Play tab ---------- */
 export function playView() {
-  const cards = CARDS.map((id) => (id === 'ears' ? earsCard(levelChip('ears', { compact: true })) : isHub(id) ? hubCard(id) : gameCard(id))).join('');
+  const cards = CARDS.map((id) => (id === 'inkwell' ? inkwellCard() : id === 'ears' ? earsCard(levelChip('ears', { compact: true })) : isHub(id) ? hubCard(id) : gameCard(id))).join('');
   return pageHead({ title: 'Play', sub: 'games where the learning is the game' }) + `<div class="pcards" data-cards="${CARDS.length}">${cards}</div>`;
+}
+/* the flagship's card: light on purpose (Inkwell's own modules load only on #/inkwell) */
+function inkwellCard() {
+  const plate = `art/inkwell/agency${isDark() ? '-night' : ''}-720.webp`;
+  return `<article class="pcard inkcard" data-card="inkwell"><a class="pc-art" href="#/inkwell" style="background-image:url('${plate}')" aria-label="Inkwell Detective"><span class="pc-kind">The flagship</span></a>
+    <div class="pc-body"><h3><a href="#/inkwell">Inkwell Detective</a></h3><p class="muted">Read like a detective: mark the words that matter, link them on the board, and prove who did it with the text. Twelve cases, four Journeys through the Reading Door, and Detective School.</p>
+    <div class="row pc-foot"><span class="tag">Season One · The Vanishing Words</span><a class="btn small" href="#/inkwell">${icon('play')}<span>Open the Agency</span></a></div></div></article>`;
 }
 function hubCard(id) {
   const h = HUBS[id], best = Math.max(0, ...h.modes.map((m) => recOf(m).best || 0)), stars = h.modes.reduce((a, m) => a + totalStars(recOf(m)), 0);

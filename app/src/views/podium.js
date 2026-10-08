@@ -45,6 +45,7 @@ const specOf = (t, ri) => roundSpec(t, ri, textsOf(t));
 const topicOf = (t, ri) => topic(ri === 2 ? t.prep : t.final);
 const RID = (ri) => ROUNDS[ri].id;
 export const podiumOpen = contestOpen;
+let lastAt = '';
 
 /* ---------- open, leave ---------- */
 let clock = 0, capT = 0, planT = 0, offHide = () => {};
@@ -81,6 +82,7 @@ export function podiumView() {
   if (!r) return head('the speaking tournament') + empty('oops', 'The Podium is not ready.', link('The Stage', '#/stage'));
   if (!podiumOpen(k)) return head('the speaking tournament') + empty('point', 'Read a passage aloud on the Stage first — then the Podium opens.', link('Read aloud', '#/stage/aloud', { ic: 'mic' }));
   afterRender();
+  const at = `${r.view}:${r.act}:${T()?.round ?? ''}`; if (at !== lastAt) { lastAt = at; requestAnimationFrame(() => window.scrollTo(0, 0)); }   // a new screen starts at its top
   const t = T();
   if (r.view === 'final') return head('the results') + finalView(k);
   if (!t || r.view === 'lobby') return head(t ? `round ${t.round + 1} of 4 next` : 'four rounds against Bee’s rivals') + lobbyView(k, t);
@@ -102,7 +104,7 @@ function lobbyView(k, t) {
   const main = `${host}${strip}${bracket}${honest}`;
   const go = t ? btn(`${t.round ? 'Continue' : 'Begin'}: round ${t.round + 1}, ${ROUNDS[t.round].title}`, 'pd-go', { ic: 'next', cls: 'stg-go', attrs: 'data-primary' }) : btn(`Enter ${cup}`, 'pd-new', { ic: 'lectern', cls: 'stg-go', attrs: 'data-primary' });
   const hist = (k.contests || []).filter((c) => c.max).slice(-3).reverse();
-  return stage({ id: 'podium-lobby', world: 'playhouse', dark: document.documentElement.hasAttribute('data-bz-dark'), mods: 'pd pd-lobby', fit: false,
+  return stage({ id: 'podium-lobby', world: 'playhouse', dark: dark(), mods: 'pd pd-lobby',
     left: { v: t ? `${t.round + 1}/4` : '—', l: 'round' }, right: { v: rec.best ? `#${rec.best}` : '—', l: 'best place' },
     title: cup, chip: t ? lvTag(L, 'in play') : levelChip(k), main,
     controls: go + (hist.length ? `<span class="pd-hist">${hist.map((c) => `<span>${esc(CUPS[c.level] || 'Podium')} · place ${c.place} of ${c.of} · ${c.total}/${c.max}</span>`).join('')}</span>` : '') });
@@ -131,7 +133,7 @@ function planView(k, t) {
     const lines = ofs.length ? `<div class="pd-lines" role="radiogroup" aria-label="${esc(name)}: choose a line">${ofs.map((l, i) => { const on = i === chosen; return `<button class="pd-line${on ? ' on' : ''}" role="radio" aria-checked="${on}" data-act="pd-line" data-arg="${id}:${i}"><kbd>${i + 1}</kbd><span>${esc(on ? txt : l.t)}</span></button>`; }).join('')}</div>` : '';
     const input = typed ? `<label class="pd-type"><span class="sr">${esc(name)}: your own words</span><input class="field" data-act="pd-type" data-arg="${id}" id="pd-in-${id}" maxlength="140" autocomplete="off" spellcheck="true" placeholder="${must ? 'Type your line' : 'Or type your own line'}" value="${esc(chosen >= 0 ? '' : txt)}"></label>` : '';
     const drop = r.held ? `<button class="pd-drop" data-act="pd-drop" data-arg="${id}">${icon('next')}<span>Add ${esc(DEVICES.find((d) => d.id === r.held).name.toLowerCase())} here</span></button>` : '';
-    const ver = r.ver?.card === id ? `<div class="pd-ver" role="dialog" aria-label="Choose a version"><b>${esc(DEVICES.find((d) => d.id === r.ver.dev).name)}: choose a version</b>${r.ver.opts.map((o, i) => `<button class="pd-line" data-act="pd-ver" data-arg="${i}"><kbd>${i + 1}</kbd><span>${esc(o.text)}</span>${o.own ? '<small>fill the gaps ___ with your words</small>' : ''}</button>`).join('')}<button class="btn out small" data-act="pd-ver-x">${icon('close')}<span>Keep my line</span></button></div>` : '';
+    const ver = r.ver?.card === id ? `<div class="pd-ver" role="dialog" aria-label="Choose a version"><b>${esc(DEVICES.find((d) => d.id === r.ver.dev).name)}: choose a version</b>${r.ver.opts.map((o, i) => `<button class="pd-line" data-act="pd-ver" data-arg="${i}"><kbd>${i + 1}</kbd><span>${esc(o.text)}</span>${o.own && blanks(o.text) ? '<small>then fill the gaps with your words</small>' : ''}</button>`).join('')}<button class="btn out small" data-act="pd-ver-x">${icon('close')}<span>Keep my line</span></button></div>` : '';
     return `<section class="pd-card stg-paper${devs.length ? ' has-dev' : ''}" data-card="${id}" aria-label="${esc(name)}"><header><b>${esc(name)}</b>${devs.map((d) => `<span class="pd-tag">${esc(DEVICES.find((x) => x.id === d).name)}</span>`).join('')}${blanks(txt) ? '<span class="pd-tag warn">fill the gaps</span>' : ''}</header>${lines}${input}${drop}${ver}</section>`;
   };
   const tray = `<div class="pd-tray" aria-label="Devices from Writer’s Craft — drag one onto a card, or tap it and then a card">${DEVICES.map((d) => `<button class="pd-dev${r.held === d.id ? ' on' : ''}" data-act="pd-hold" data-arg="${d.id}" data-dev="${d.id}" aria-pressed="${r.held === d.id}" title="${esc(d.how)}">${icon('quill')}<span><b>${esc(d.name)}</b><small>${esc(d.how)}</small></span></button>`).join('')}</div>`;
@@ -216,6 +218,7 @@ function resultView(k, t) {
       <div class="pd-card stg-paper pd-res"><span class="kick">The rivals — the app’s own points</span><ol class="pd-rivals">${theirs}</ol><span class="kick">After round ${ri + 1}</span>${table}</div></div>${honest}`,
     controls: `${!res.verified && r.res ? btn('Try again', 'pd-retry', { ic: 'undo', cls: 'out stg-pair' }) : ''}${btn(next, 'pd-next', { ic: 'next', cls: 'stg-pair', attrs: 'data-primary' })}` });
 }
+const coinWhy = (e) => { const n = e.rounds.filter((x) => x.paid).length, parts = []; if (n) parts.push(`5 for each of ${n} round${n === 1 ? '' : 's'} heard`); if (e.coins > n * 5) parts.push('10 for the tournament'); return parts.join(', and ') || 'today’s coins'; };
 function finalView(k) {
   const r = R(), e = r.end; if (!e) return '';
   const top = e.rows.slice(0, 3), order = [top[1], top[0], top[2]].filter(Boolean);
@@ -226,7 +229,7 @@ function finalView(k) {
     main: `<div class="pd-podium" aria-label="The podium">${order.map(block).join('')}</div>
       <div class="pd-card stg-paper pd-res pd-finish"><p class="pd-say">${esc(say)}</p>
       <ul class="pd-parts">${ROUNDS.map((rd, i) => `<li><span>${esc(rd.title)}${e.rounds[i].verified ? '' : ' — not heard'}</span><b>${e.totals[i]}/${ROUND_MAX[i]}</b></li>`).join('')}</ul>
-      <p class="pd-coins" data-coins="${e.coins}">${icon('coin')}<span>${e.coins} coin${e.coins === 1 ? '' : 's'} this tournament — 5 a round the device heard${e.pays ? ', and 10 for the tournament' : ''}.</span></p>
+      <p class="pd-coins" data-coins="${e.coins}">${icon('coin')}<span>${e.coins} coin${e.coins === 1 ? '' : 's'} this tournament${e.coins ? ` — ${coinWhy(e)}` : ' — coins come only for rounds the device heard you speak'}.</span></p>
       ${e.level.line ? `<p class="pd-note">${esc(e.level.line)}</p>` : e.level.up ? `<p class="pd-note">Next time: Level ${e.level.after}.</p>` : ''}
       <p class="pd-note">${icon('shield')} Your typed plans have been cleared from this device.</p></div>${honest}`,
     controls: `${link('The Stage', '#/stage', { ic: 'lectern', cls: 'out stg-pair' })}${btn('Another tournament', 'pd-again', { ic: 'undo', cls: 'stg-pair', attrs: 'data-primary' })}` });
@@ -327,7 +330,7 @@ export const PODIUM_ACTIONS = {
     if (t.round < 3) { t.round++; save(); r.view = 'lobby'; r.res = null; r.last = null; sfx('tap'); render(); return; }
     const k = kid(), f = finish(t);
     if (f.pays && !t.contestPaid) { t.contestPaid = true; t.coins += pay('contest', `The Podium: ${CUPS[t.level]}, ${f.total} of ${f.max}`) || 0; mark('stop', `The Podium: ${CUPS[t.level]} finished`); }
-    const coins = t.coins, rounds = t.rounds.map((x) => ({ verified: x.verified })), levelPlayed = t.level;
+    const coins = t.coins, rounds = t.rounds.map((x) => ({ verified: x.verified, paid: x.paid })), levelPlayed = t.level;
     const end = closeTournament(k, t);                                    // the typed plans are cleared here
     bumpDay(k, 'made'); save();
     r.end = { ...end, coins, rounds, levelPlayed }; r.view = 'final';

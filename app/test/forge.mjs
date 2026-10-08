@@ -10,7 +10,7 @@ import { tally } from './_mem.mjs';
 import * as WP from '../src/data/wordparts.js';
 import { kidSafe, defSafe } from '../src/safe.js';
 import { rng } from '../src/rand.js';
-import { forgeOf, forgeNew, forgeStep, forgeAccuracy, forgeGoalMet, forgeFirst, shapeOk, bookAdd, bookByPart, bookSize, stamped, rankOf, LEVELS, levelCfg, MAX_SLOTS, STAMP } from '../src/forge.js';
+import { FALSE_FRIENDS, forgeOf, forgeNew, forgeStep, forgeAccuracy, forgeGoalMet, forgeFirst, shapeOk, bookAdd, bookByPart, bookSize, stamped, rankOf, LEVELS, levelCfg, MAX_SLOTS, STAMP } from '../src/forge.js';
 import { roundPay, runNew, runAdd, runPay, runStarPct, starsFor, accuracy, roundLog, memRecord, nextLevel, RUN_ROUNDS, ROUND_PAY_CAP, forgePools } from '../src/games.js';
 const { ok, done } = tally('forge');
 const lex = JSON.parse(readFileSync(new URL('../public/data/bee-words.json', import.meta.url)));
@@ -35,7 +35,7 @@ ok('every three-part word stands on a two-part word (un + kind → unkind → un
 ok('a word merely spelt from the pieces is not forged: im + age is not "image", mis + sing is not "missing"', !F.strike(['p:im', 'b:age']) && !F.strike(['p:mis', 'b:sing']) && (!F.part('b:age') || F.spelt(['p:im', 'b:age'])?.word === 'image'));
 { const lex2 = { ...lex, words: { ...lex.words, unkind: ['a sexual act', '', 'noun', 1] } }, F2 = forgeOf(lex2, WP);
   ok('a word whose definition is not kid-safe is never forged, nor dealt (rule 11: unkind given an unsafe definition)', !F2.strike(['p:un', 'b:kind']) && !F2.words.has('unkind') && SEEDS.slice(0, 20).every((sd) => !F2.round(sd, 1).targets.some((t) => t.word === 'unkind'))); }
-ok('a false friend on the list is never forged: full + y is not "fully", play + boy is not forged', F.spelt(['b:full', 's:y'])?.word === 'fully' && !F.strike(['b:full', 's:y']) && !F.strike(['b:play', 'b:boy']));
+ok(`a word on the false-friends list is never forged (${[...FALSE_FRIENDS].join(', ')})`, FALSE_FRIENDS.size > 0 && [...FALSE_FRIENDS].every((w) => !F.words.has(w)));
 ok('the spelling changes: happy + ness = happiness, sun + y = sunny, gentle + ly = gently, act + tion = action, therm + meter = thermometer',
   F.strike(['b:happy', 's:ness'])?.word === 'happiness' && F.strike(['b:sun', 's:y'])?.word === 'sunny' && F.strike(['b:gentle', 's:ly'])?.word === 'gently' && F.strike(['b:act', 's:tion'])?.word === 'action' && F.strike(['r:therm', 'r:meter'])?.word === 'thermometer');
 ok('order matters: happy + un is no word, un + happy is', !F.strike(['b:happy', 'p:un']) && F.strike(['p:un', 'b:happy'])?.word === 'unhappy');

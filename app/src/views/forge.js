@@ -49,7 +49,7 @@ export function forgeReady() {
   return (pending ||= fetchLex().then((j) => new Promise((ok) => {
     if (!j?.words) { LOAD.state = 'error'; pending = null; return ok(null); }
     LOAD.pct = 100; paintLoad();
-    idle(() => { F = forgeOf(j, WP); LOAD.state = 'ready'; paintLoad(); ok(F); });
+    idle(() => { F = forgeOf(j, WP); LOAD.state = 'ready'; paintLoad(); if (typeof document !== 'undefined') document.documentElement.dataset.forge = 'hot'; ok(F); });   // the browser check reads data-forge
   })));
 }
 /* the Play tab and the title call this: the list is fetched while the child is still choosing */
@@ -161,7 +161,8 @@ export function forgePlay(g, r, { roundName = '', runScore = 0 } = {}) {
       ${held ? '<svg class="fg-crackline" viewBox="0 0 100 40" aria-hidden="true"><path d="M50 0 L46 12 L54 18 L47 28 L52 40"/></svg>' : ''}
       ${st?.ok && !st.again ? '<div class="fg-sparks" aria-hidden="true">' + Array.from({ length: 12 }, (_, i) => `<i style="--a:${i * 30}deg;--d:${50 + (i * 37) % 40}px"></i>`).join('') + '</div>' : ''}</div>`;
   const rack = g.found.length ? `<div class="fg-rack" aria-label="words forged this round">${g.found.map((x) => `<span class="fg-chip${x.first ? '' : ' assisted'}${g.key && x.ids.includes(g.key) ? ' fam' : ''}">${esc(x.word)}</span>`).join('')}</div>` : '';
-  const main = `<p class="prompt">${prompt}</p><div class="fg-play" data-play>${anvil}${held ? `<div class="stg-paper fg-held">${crackCard(g)}</div>` : `${plaque(g.shown || (st?.ok ? st : null)) || (rack ? '' : `<p class="fg-hint">Any real word in Bee’s list counts.</p>`)}${rack}`}</div>`;
+  const showing = !held && !!(g.shown || st?.ok);   // the plaque needs the room: the prompt steps aside (the track still names the goal)
+  const main = `${showing ? '' : `<p class="prompt">${prompt}</p>`}<div class="fg-play" data-play>${anvil}${held ? `<div class="stg-paper fg-held">${crackCard(g)}</div>` : `${plaque(g.shown || (st?.ok ? st : null)) || (rack ? '' : `<p class="fg-hint">Any real word in Bee’s list counts.</p>`)}${rack}`}</div>`;
   const tray = held ? '' : `<div class="fg-tray${kbdMode ? ' kbd' : ''}" role="group" aria-label="the parts">${g.tray.map((p, i) => partTile(p, i, g, book)).join('')}</div>`;
   const controls = held ? '' : `${btn('Lift', 'fg-lift', { ic: 'undo', cls: 'out stg-pair', dis: !g.anvil.length || !!st })}${btn('Strike', 'fg-strike', { ic: 'blocks', cls: 'stg-go fg-strike', dis: g.anvil.length < 2 || !!(st && !st.ok) })}${btn(done ? 'Finish' : 'Done', 'fg-done', { ic: done ? 'check' : 'next', cls: `${done ? '' : 'out '}stg-pair` })}`;
   return stage({ id: 'root', world: gm.world, dark: isDark(), mods: `stg-play fg-stage${g.final ? ' stg-final' : ''}`,
