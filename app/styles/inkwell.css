@@ -368,6 +368,9 @@ html[data-bz-dark] .stg.ink { --ink-card: #e9d7ae; --ink-card-2: #cfb47c; --ink-
 .ag-pin.paused { box-shadow: 0 0 0 2px #e7b44c, 0 2px 3px rgba(0, 0, 0, .4); }
 .ag-niches { position: absolute; left: 9%; top: 8%; right: 9%; bottom: 8%; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); }
 .ag-obj { display: grid; place-items: end center; padding: 8%; }
+.ag-objs { position: absolute; inset: 0; pointer-events: none; }
+.ag-obj.at { position: absolute; width: 3.2%; aspect-ratio: 1; padding: 0; transform: translate(-50%, -50%); }
+.ag-obj.at .ink-stk { width: 100%; height: 100%; }
 .ag-obj .ink-stk { width: 92%; height: 70%; object-fit: contain; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .6)); }
 .ag-door .ag-keyhole { position: absolute; left: 60%; top: 56%; width: 9%; aspect-ratio: 1 / 2; border-radius: 50% 50% 20% 20%; }
 .ag-door.brim .ag-keyhole { background: radial-gradient(circle, #6aa8ff, #1b3e8a); box-shadow: 0 0 18px #6aa8ff; animation: ink-glow2 2s ease-in-out infinite; }
@@ -376,7 +379,7 @@ html[data-bz-dark] .stg.ink { --ink-card: #e9d7ae; --ink-card-2: #cfb47c; --ink-
 @keyframes ink-breathe { 50% { transform: translateY(-2px); } }
 .ag-ledger { position: absolute; left: 33%; top: 57%; width: 7%; aspect-ratio: 1; } .ag-ledger .ink-stk { width: 100%; height: 100%; object-fit: contain; transform: rotate(-12deg); filter: drop-shadow(0 3px 3px rgba(0, 0, 0, .5)); }
 .ag-det { position: absolute; left: 70%; bottom: 0; height: 52%; aspect-ratio: 3 / 4; pointer-events: none; } .ag-det .ink-fig, .ag-det .ink-standin { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, .5)); }
-.ag-bubble { position: absolute; left: 50%; top: 3%; transform: translateX(-50%); width: min(56%, 420px); margin: 0; padding: 8px 14px; border-radius: 16px; background: rgba(255, 250, 240, .96); color: #2b2118; font: 600 14px/1.4 var(--bz-body); text-align: center; box-shadow: 0 0 0 2px #2b2118, 3px 4px 0 rgba(0, 0, 0, .3); }
+.ag-bubble { position: absolute; left: 50%; top: 3%; transform: translateX(-50%); width: min(56%, 420px); margin: 0; padding: 8px 14px; border-radius: 16px; background: linear-gradient(172deg, #fffaf0, #f0e2c2); color: #2b2118; font: 600 14px/1.4 var(--bz-body); text-align: center; box-shadow: 0 0 0 2px #2b2118, 3px 4px 0 rgba(0, 0, 0, .3); }
 .ag-act { display: grid; justify-items: center; gap: 8px; }
 .ag-next { margin: 0; padding: 3px 12px; border-radius: 999px; background: var(--ink-glass); font: 600 13px var(--bz-body); }
 .ag-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
@@ -515,7 +518,8 @@ html[data-bz-dark] .stg.ink { --ink-card: #e9d7ae; --ink-card-2: #cfb47c; --ink-
 
 /* night: the agency at lamplight — warmer cards, deeper glass */
 html[data-bz-dark] .ink-say { background: linear-gradient(172deg, #f3e3bf, #dcc08a); }
-html[data-bz-dark] .ag-bubble, html[data-bz-dark] .mp-card, html[data-bz-dark] .ag-card, html[data-bz-dark] .dk-quill, html[data-bz-dark] .pd-head, html[data-bz-dark] .pd-confirm { background: #efdcb2; }
+html[data-bz-dark] .ag-bubble { background: linear-gradient(172deg, #f6e8c8, #dfc58f); }
+html[data-bz-dark] .mp-card, html[data-bz-dark] .ag-card, html[data-bz-dark] .dk-quill, html[data-bz-dark] .pd-head, html[data-bz-dark] .pd-confirm { background: #efdcb2; }
 html[data-bz-dark] .paper { box-shadow: 0 10px 28px rgba(0, 0, 0, .65), 0 0 60px rgba(255, 190, 90, .12); }
 
 /* reduced motion and the app's still mode: every motion becomes a fade */

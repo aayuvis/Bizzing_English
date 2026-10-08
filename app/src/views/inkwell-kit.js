@@ -34,6 +34,9 @@ const KNOWN = new Set(); let PINS = null;
 export const has = (name) => KNOWN.has(name);
 export const artUrl = (name) => (KNOWN.has(name) ? `art/inkwell/${name}.webp` : null);
 export const manifestPins = () => PINS;
+/* the manifest's measured places (hotspots, Quill's spot, shelf niches, map places), or null */
+export const manifestAgency = () => (MANIFEST && Object.values(MANIFEST).find((v) => v && v.agency)?.agency) || null;
+export const manifestMap = () => (MANIFEST && Object.values(MANIFEST).find((v) => v && v.map)?.map) || null;
 
 const phone = () => typeof matchMedia !== 'undefined' && matchMedia('(max-width: 720px)').matches;
 /* a painted plate (day or lamplit night; the 720 px one on a phone), or null when it is not painted */

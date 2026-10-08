@@ -24,7 +24,7 @@ import { personaById } from '../data/inkwell-personas.js';
 import { stop as stopVoice } from '../voice.js';
 import { openCase, caseView, CASE_ACTIONS, caseKey, casePointerDown, casePointerMove, casePointerUp, personaView, leaveCase, st } from './inkwell-case.js';
 import { openMore, moreView, MORE_ACTIONS, moreKey, leaveMore } from './inkwell-more.js';
-import { figure, sticker, plateBg, plate, WASH, manifestPins, artUrl, fitInk } from './inkwell-kit.js';
+import { figure, sticker, plateBg, plate, WASH, manifestPins, manifestAgency, manifestMap, artUrl, fitInk } from './inkwell-kit.js';
 
 /* The Play tab's card for Inkwell Detective (views/play.js is merged by hand: render INKWELL_CARD.html() among the cards). */
 export const INKWELL_CARD = {
@@ -76,11 +76,15 @@ function after() {
    re-measure. */
 const SPOT = { wall: [10.6, 21, 13.9, 43], hats: [1, 27, 10.5, 72], shelf: [71, 21, 16, 44.5], door: [89, 15, 10.5, 85], desk: [31, 60, 37, 30], window: [38.5, 16, 23, 40.5], school: [62.4, 38.6, 6.2, 14], books: [57, 55, 7.8, 12] };
 const at = (r) => `left:${r[0]}%;top:${r[1]}%;width:${r[2]}%;height:${r[3]}%`;
+/* the art manifest's own measurements win when it has them ([x0, y0, x1, y1] %) */
+(() => { const A = manifestAgency()?.hotspots; if (!A) return; const box = (r) => (Array.isArray(r) && r.length === 4 ? [r[0], r[1], r[2] - r[0], r[3] - r[1]] : null);
+  for (const [mine, theirs] of [['wall', 'casebookWall'], ['hats', 'hatStand'], ['shelf', 'shelf'], ['door', 'readingDoor'], ['desk', 'desk'], ['window', 'window'], ['school', 'dumbwaiter']]) { const b = box(A[theirs]); if (b) SPOT[mine] = b; } })();
+const NICHES = manifestAgency()?.shelfNiches || null, QUILL_AT = manifestAgency()?.quillAt || null;
 function hubView() {
   const k = kid(), ink = SE.inkOf(k), s = S.ink, L = list(), nx = pick(), rank = SE.rankOf(k), solved = Object.keys(ink.closed).length, dark = isDark();
   const p = personaById(ink.persona), door = SE.door(k), ledger = SE.ledgerWords(k, s.cases), wall = L.slice(0, 16);
   const pinned = wall.map((x, i) => `<i class="ag-pin${x.solved ? ' solved' : x.paused ? ' paused' : x.open ? ' open' : ''}" style="--i:${i}" title="${esc(x.title)}">${x.solved ? '' : ''}</i>`).join('');
-  const objs = s.cases.filter((c) => c.kind !== 'journey' && ink.closed[c.id]).map((c) => { const o = c.officeObject; const n = c.number ?? +c.id.slice(-2); return o ? `<span class="ag-obj" style="grid-column:${(n % 4) + 1};grid-row:${Math.floor(n / 4) + 1}" title="${esc(o.name)}">${sticker(`obj-${o.id}`, { alt: o.name, fallback: icon('star') })}</span>` : ''; }).join('');
+  const objs = s.cases.filter((c) => c.kind !== 'journey' && ink.closed[c.id]).map((c) => { const o = c.officeObject; const n = c.number ?? +c.id.slice(-2); return o ? `<span class="ag-obj${NICHES ? ' at' : ''}" style="${NICHES && NICHES[n] ? `left:${NICHES[n][0]}%;top:${NICHES[n][1]}%` : `grid-column:${(n % 4) + 1};grid-row:${Math.floor(n / 4) + 1}`}" title="${esc(o.name)}">${sticker(`obj-${o.id}`, { alt: o.name, fallback: icon('star') })}</span>` : ''; }).join('');
   const greet = s.say?.text || (nx ? (nx.paused ? `Welcome back, ${SE.detectiveName(k)}. ${nx.title} is still on the desk.` : solved ? `Good to see you, ${SE.detectiveName(k)}. A new case is waiting.` : 'Good. A new detective. Sit down. Detectives do not guess. They read.') : tester() ? 'Every case is on the wall.' : 'The first cases are with the owner, waiting to be signed off. A grown-up can open them in tester mode.');
   const nc = nx ? byId(nx.id) : null;
   const cont = nx ? `<a class="btn ink-go big ag-cont" href="#/inkwell/case/${nx.id}" data-ink="continue">${icon('play')}<span>${nx.paused ? 'Continue the case' : solved ? 'Start the next case' : 'Start your first case'}</span></a><p class="ag-next">${nc?.kind === 'journey' ? 'Ink Journey' : `Case ${nc?.number ?? ''}`} · ${esc(nx.title)} · Level ${nx.level || 1}</p>`
@@ -90,11 +94,11 @@ function hubView() {
   const scene = `<div class="ag-scene" style="--ag:${plateBg('agency', dark, WASH.agency)}" data-play>
     <a class="ag-spot ag-wall" href="#/inkwell/map" style="${at(SPOT.wall)}" aria-label="The casebook wall: ${solved} solved. Open the town map"><span class="ag-pins">${pinned}</span></a>
     <button class="ag-spot ag-hats" data-act="ink-hats" style="${at(SPOT.hats)}" aria-label="The hat stand: your rank, ${esc(rank.name)}"></button>
-    <a class="ag-spot ag-shelf" href="#/inkwell/map" style="${at(SPOT.shelf)}" aria-label="The shelf: ${solved} objects from solved cases"><span class="ag-niches">${objs}</span></a>
+    <a class="ag-spot ag-shelf" href="#/inkwell/map" style="${at(SPOT.shelf)}" aria-label="The shelf: ${solved} objects from solved cases">${NICHES ? '' : `<span class="ag-niches">${objs}</span>`}</a>${NICHES ? `<span class="ag-objs" aria-hidden="true">${objs}</span>` : ''}
     <button class="ag-spot ag-door${door.keyhole ? ' brim' : ''}${door.opened ? ' opened' : ''}" data-act="ink-door" style="${at(SPOT.door)}" aria-label="The Reading Door: ${door.opened ? `opened ${door.opened} time${door.opened === 1 ? '' : 's'}` : 'it has never opened'}"><i class="ag-keyhole"></i></button>
     <a class="ag-spot ag-books" href="#/inkwell/hoard" style="${at(SPOT.books)}" aria-label="The Word Hoard book"></a>
     <a class="ag-spot ag-school" href="#/inkwell/school" style="${at(SPOT.school)}" aria-label="Detective School"></a>
-    <div class="ag-quill">${sticker('quill-detective', { alt: 'Quill at the desk', fallback: 'Q' })}</div>
+    <div class="ag-quill"${QUILL_AT ? ` style="left:${QUILL_AT[0]}%;top:${QUILL_AT[1]}%;transform:translate(-50%,-100%)"` : ''}>${sticker('quill-detective', { alt: 'Quill at the desk', fallback: 'Q' })}</div>
     <a class="ag-ledger" href="#/inkwell/map" aria-label="The Blot Ledger: ${ledger.length} words inked">${sticker('ui-ledger', { alt: '', fallback: icon('book') })}</a>
     ${p ? `<div class="ag-det">${figure(p.id, { name: p.name, alt: SE.detectiveName(k) })}</div>` : ''}
     <p class="ag-bubble">${esc(greet)}</p></div>`;
@@ -116,6 +120,7 @@ const NUDGE = [[0, 0], [6, -5], [-6, 5], [5, 6]];
 function pinPos(id) {
   const P = manifestPins(); if (P && P[id] && Array.isArray(P[id])) return P[id];
   const c = byId(id); if (!c) return [50, 50];
+  const MP = manifestMap()?.places; if (MP?.library) DISTRICT.library = MP.library;
   const key = c.kind === 'journey' ? 'library' : c.world in DISTRICT ? c.world : 'library';
   const same = (S.ink.cases || []).filter((x) => (x.kind === 'journey' ? 'library' : x.world in DISTRICT ? x.world : 'library') === key);
   const j = same.findIndex((x) => x.id === id), [x, y] = DISTRICT[key], [dx, dy] = key === 'library' ? [[-9, -9], [9, -9], [-9, 9], [9, 9]][j % 4] : NUDGE[j % 4];

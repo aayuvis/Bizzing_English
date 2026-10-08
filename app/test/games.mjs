@@ -20,12 +20,14 @@ import { RIVALS, field } from '../src/contest.js';
 import { BOOKS } from '../src/book.js';
 import * as WP from '../src/data/wordparts.js';
 import { missCard } from '../src/miss.js';
+import { forgeOf, forgeNew, forgeStep, forgeGoalMet } from '../src/forge.js';
 const { builderNew, builderStep, builderJudge, builderSentence, clauseText, roundPay, runPay, figureWords, wordsRight, figurePhase, duelPieces, duelFair, duelBuilt, builderPool, builderRoad, builderLevelPool, builderLen, rushNew, rushStep, rushRoad, rushLevelPool, whoRound, whoLines, whoLevelPool, figureRound, figureStep, figurePool, huntsFrom, FIGURE_KINDS, HUNT_KINDS,
-  quizNew, quizStep, plotRound, plotNew, plotStep, plotPairs, plotStories, plotPool, opening, forgeRound, forgePools, forgeFamilies, forgeFamilyRound, duelRound, duelNew, duelStep, duelRival, duelTally, GAMES, nextLevel, accuracy, mostMissed,
+  quizNew, quizStep, plotRound, plotNew, plotStep, plotPairs, plotStories, plotPool, opening, forgePools, duelRound, duelNew, duelStep, duelRival, duelTally, GAMES, nextLevel, accuracy, mostMissed,
   memDraw, memRecord, memCounts, memOf, roundLog, itemKey, mentions, starsFor, runNew, runAdd, runScore, runPct, isFinal, ROUND_MS, MAX_LEVEL, MEM_GAP, MEM_CAP, ROUND_OF, RUN_ROUNDS, CLUE_POINTS } = G;
 const { ok, done } = tally('games');
 const url = (p) => new URL(p, import.meta.url);
 const lex = JSON.parse(readFileSync(url('../public/data/bee-words.json')));
+const FORGE = forgeOf(lex, WP);
 const PJ = JSON.parse(readFileSync(url('../src/data/passages.json')));
 const sp = (s) => String(s).replace(/\s+/g, ' ').trim();
 const TEXTS = Object.fromEntries(readdirSync(url('../public/texts/')).filter((f) => f.endsWith('.txt')).map((f) => [f.replace(/\.txt$/, ''), sp(readFileSync(url(`../public/texts/${f}`), 'utf8'))]));
@@ -152,7 +154,7 @@ ok('after three rounds comes the final', isFinal(run));
 run = runAdd(run, { kind: 'who', score: 5, right: 2, answered: 2, rounds: [], results: [true, true], misses: { b: 2 }, bestCombo: 2 }, 1);
 ok('a run adds its rounds: score, accuracy, misses, new items, coins banked', runScore(run) === 14 && runPct(run) === 5 / 8 && run.misses.a === 3 && run.misses.b === 2 && run.met === 7 && run.bestCombo === 2 && mostMissed(run) === 'a' && run.banked === 0 + 0 + 0 + 2);
 ok('pay: the finish pays what was banked when the run is half right or better — beyond chance, where a guess is right one time in four', run.kind === 'who' && G.fairPct('who', 5 / 8) === 0.5 && runPay(run) === 2 && runPay({ ...run, right: 4 }) === 0 && runPay({ ...run, kind: 'rush', right: 4 }) === 2);
-ok('beyond chance: a guess-level score is 0, a perfect one 100%, and games with no lucky guess are unchanged', G.fairPct('root', 0.25) === 0 && G.fairPct('root', 1) === 1 && G.fairPct('figure', 0.4) === 0.4 && G.fairPct('builder', 0.6) === 0.6);
+ok('beyond chance: a guess-level score is 0, a perfect one 100%, and games with no lucky guess are unchanged', G.fairPct('who', 0.25) === 0 && G.fairPct('who', 1) === 1 && G.fairPct('root', 0.4) === 0.4 && G.fairPct('figure', 0.4) === 0.4 && G.fairPct('builder', 0.6) === 0.6);
 /* the chip (src/hubs.js): a hand-set level sticks until the run's check, which moves the level from the level PLAYED */
 { const H = await import('../src/hubs.js'), rec = { level: 2, pick: null, top: 2 };
   ok('T13 chip: Auto plays the game’s own level', H.playLevel(rec) === 2);
@@ -227,14 +229,14 @@ const DEALS = {
   who: (sd, L, o) => whoRound(lines, WORKS, sd, L, ROUND_OF.who, o).map((q) => q.key),
   figure: (sd, L, o) => figureRound(figs, WORKS, sd, L, ROUND_OF.figure, { ...o, hunts: HUNTS }).map((q) => q.key),
   plot: (sd, L, o) => plotRound(shipP, sd, L, ROUND_OF.plot, WORKS, { ...o, chapters }).map((q) => q.key),
-  root: (sd, L, o) => (o.final ? forgeFamilyRound(lex, WP, sd, L, 2, o) : forgeRound(lex, WP, sd, L, ROUND_OF.root, o)).map((q) => q.key),
+  root: (sd, L, o) => FORGE.round(sd, L, o).targets.map((t) => 'f:' + t.word),
   duel: (sd, L, o) => duelRound(rhet, plain, sd, L, ROUND_OF.duel, o).map((q) => q.key),
   builder: (sd, L, o) => builderRoad(L, { ...o, seed: sd, extra: XB }).slice(0, 8).map((x) => x.key),
   rush: (sd, L, o) => rushRoad(L, { ...o, seed: sd, extra: XR }).slice(0, 8).map((x) => x.key),
 };
 const POOLS = {
   who: (L) => whoLevelPool(lines, WORKS, L).length, figure: (L) => figurePool(figs).filter((f) => G.FIGURE_LEVELS[L][f.figure]).length, plot: (L) => plotPool(shipP, L, WORKS, chapters).length,
-  root: (L) => forgePools(lex, WP).filter((x) => x.kind !== 'root' && x.band <= G.FORGE_LEVELS[L].cap).length, duel: (L) => G.duelLevelPool(rhet, plain, L).length, builder: (L) => builderLevelPool(L, XB).length, rush: (L) => rushLevelPool(L, XR).length,
+  root: (L) => [...FORGE.words.values()].filter((e) => e.ids.length <= 2 && e.ids.every((id) => FORGE.part(id).kind !== 'root' && FORGE.part(id).band <= (L === 1 ? 1 : 2))).length, duel: (L) => G.duelLevelPool(rhet, plain, L).length, builder: (L) => builderLevelPool(L, XB).length, rush: (L) => rushLevelPool(L, XR).length,
 };
 const measured = {};
 for (const [id, deal] of Object.entries(DEALS)) {
@@ -386,29 +388,14 @@ ok('a card is placed once; undo takes it back', pu.line.filter((x) => x != null)
 ok('pairs score only neighbours in the right order', plotPairs([{ at: 0 }, { at: 1 }, { at: 2 }, { at: 3 }], [1, 2, 3, 0]) === 2 && plotPairs([{ at: 0 }, { at: 1 }, { at: 2 }, { at: 3 }], [3, 2, 1, 0]) === 0);
 
 /* ---------- Root Forge ---------- */
-const P = WP.PREFIXES.map((a) => a.p), keysL = Object.keys(lex.words);
-const forms = (q, o) => { const x = o.replace(/-/g, ''); return q.before ? x + q.base : q.base + x; };
-const rivalIsNoWord = (q, o) => q.kind === 'root' ? !keysL.some((k) => k.startsWith(forms(q, o))) : !lex.words[forms(q, o)] && !(lex[q.kind === 'prefix' ? 'prefixNon' : 'suffixNon'][q.word] || []).every((x) => x !== o.replace(/-/g, ''));
-for (const L of LV) for (const final of [false, true]) {
-  const its = SEEDS.flatMap((sd) => (final ? forgeFamilyRound(lex, WP, sd, L, 2) : forgeRound(lex, WP, sd, L, ROUND_OF.root))), tag = `Root Forge L${L}${final ? ' family' : ''}`;
-  const bad = its.flatMap((q) => fair(q, () => q.options[q.answer]));
-  ok(`${tag}: one keyed piece, distinct pieces`, !bad.length && its.every((q) => q.options.length === 4));
-  ok(`${tag}: every accepted word is in Bee's list`, its.every((q) => !!lex.words[q.word]));
-  ok(`${tag}: every rival makes no word in Bee's list`, its.every((q) => q.options.every((o, i) => i === q.answer || rivalIsNoWord(q, o))));
-  ok(`${tag}: no slot over 35%`, slotLean(its, 4) <= 0.35);
-  ok(`${tag}: a meaning to show on success`, its.every((q) => q.def));
-}
-ok('Root Forge: roots join from level 4', SEEDS.every((sd) => !forgeRound(lex, WP, sd, 3).some((q) => q.kind === 'root') && forgeRound(lex, WP, sd, 4).some((q) => q.kind === 'root')));
-ok('Root Forge: a root round forges an exact root word', forgePools(lex, WP).filter((x) => x.kind === 'root').every((x) => x.word === x.aff + x.base && P.includes(x.aff)));
-const FAMS = forgeFamilies(lex, WP);
-ok(`Root Forge: families of three or more words from one base or root (${FAMS.length})`, FAMS.length >= 6 && FAMS.every((f) => f.members.length >= 3 && f.members.every((x) => x.base === f.base)));
-ok('Root Forge: a family round is two families of three different words, from one base each', SEEDS.every((sd) => { const f = forgeFamilyRound(lex, WP, sd, 2, 2); const ids = [...new Set(f.map((q) => q.family.id))]; return f.length === 6 && ids.length === 2 && ids.every((id) => { const m = f.filter((q) => q.family.id === id); return m.length === 3 && new Set(m.map((q) => q.word)).size === 3 && m.every((q, j) => q.family.step === j && q.base === m[0].base); }); }));
-let rf = quizNew('root', forgeRound(lex, WP, 'play', 4), 4);
-while (!rf.over) { rf = quizStep(rf, { type: 'pick', i: rf.rounds[rf.i].answer }); rf = quizStep(rf, { type: 'next' }); }
-ok('Root Forge is solvable: ten right, combo points on every third', rf.right === 10 && rf.score === 13 && rf.bestCombo === 10);
-let ff = quizNew('root', forgeFamilyRound(lex, WP, 'fam', 5, 2), 5);
-while (!ff.over) { ff = quizStep(ff, { type: 'pick', i: ff.rounds[ff.i].answer }); ff = quizStep(ff, { type: 'next' }); }
-ok('Forge a family is solvable: six words forged, a perfect score', ff.right === 6 && ff.score === 8 && accuracy(ff).pct === 1);
+/* The forge is its own engine (src/forge.js) with its own test, test/forge.mjs: every round's words real,
+   kid-safe and buildable from its tray; a random bot paid nothing; the Forge Book through the Store. Here: it
+   plays through the shared run like every game. */
+{ const r = FORGE.round('play', 3); let g = forgeNew(r, 3);
+  for (const t of r.targets) { for (const id of t.ids) g = forgeStep(FORGE, g, { type: 'place', i: g.tray.findIndex((p) => p.id === id) }); g = forgeStep(FORGE, g, { type: 'strike' }); g = forgeStep(FORGE, g, { type: 'next' }); }
+  ok(`Root Forge is solvable: every word of the tray forged (${r.targets.length}), the round over, 100%`, g.over && g.found.length === r.targets.length && accuracy(g).pct === 1);
+  ok('Root Forge’s log is its words, each right first try', roundLog(g).length === r.targets.length && roundLog(g).every((x) => x.key.startsWith('f:') && x.ok === true));
+  const run = runAdd(runNew(3), g, 0); ok('Root Forge adds into the shared run and banks its first-try words', run.right === r.targets.length && run.banked === Math.min(G.ROUND_PAY_CAP, r.targets.length)); }
 
 /* ---------- Rhetoric Duel (Writer's Craft): "make it strong" ---------- */
 ok('Rhetoric Duel: every rhetoric line has a plainer version', rhet.every((x) => plain[x.text]) && Object.keys(plain).every((t) => [...RHETORIC, ...RHETORIC_MORE].some((x) => x.text === t)));
@@ -456,7 +443,7 @@ ok('Rhetoric Duel is solvable: five lines made strong, best of five won', dA.rig
 
 /* ---------- the untimed reducers soak too: overlapping, out-of-range events never throw or stick ---------- */
 for (const [name, g0, st] of [['who', quizNew('who', whoRound(lines, WORKS, 'z', 3), 3), quizStep], ['figure', quizNew('figure', figureRound(figs, WORKS, 'z', 4, 6, { hunts: HUNTS }), 4), figureStep],
-  ['plot', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters }), 4), plotStep], ['plot final', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters, final: true }), 4), plotStep], ['duel', duelNew(duelRound(rhet, plain, 'z', 4), 4), duelStep], ['root', quizNew('root', forgeRound(lex, WP, 'z', 5), 5), quizStep]]) {
+  ['plot', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters }), 4), plotStep], ['plot final', plotNew(plotRound(shipP, 'z', 4, 3, WORKS, { chapters, final: true }), 4), plotStep], ['duel', duelNew(duelRound(rhet, plain, 'z', 4), 4), duelStep]]) {   // Root Forge's soak: test/forge.mjs
   let g = g0, steps = 0;
   try {
     while (!g.over && steps < 4000) { steps++; for (const a of [{ type: 'pick', i: steps % 6 - 1 }, { type: 'spot', i: steps % 5 - 1 }, { type: 'clue' }, { type: 'place', i: steps % 7 - 1, at: steps % 4 === 0 ? steps % 6 : undefined }, { type: 'move', d: steps % 3 - 1 }, { type: 'slot', d: steps % 3 - 1 }, { type: steps % 5 ? 'move' : 'undo', d: 1 }, { type: 'tap', i: steps % 9 - 1 }, { type: steps % 3 ? 'words' : 'tile', i: steps % 5 - 1 }, { type: 'check' }, { type: steps % 4 ? 'tick' : 'next', dt: 17 }]) g = st(g, a); }
@@ -481,10 +468,15 @@ for (const [name, g0, st] of [['who', quizNew('who', whoRound(lines, WORKS, 'z',
       }
       return g;
     }
+    if (id === 'root') {   // random placement, then strike: test/forge.mjs plays a thousand of these
+      let g = forgeNew(FORGE.round(seed, L, o), L), n = 0;
+      while (!g.over && n < 40) { if (g.state) { g = forgeStep(FORGE, g, { type: 'next' }); continue; } const free = g.tray.map((_, i) => i); for (let j = 0, k = 2 + Math.floor(R() * (g.slots - 1)); j < k; j++) g = forgeStep(FORGE, g, { type: 'place', i: free.splice(Math.floor(R() * free.length), 1)[0] }); g = forgeStep(FORGE, g, { type: 'strike' }); n++; if (forgeGoalMet(g) && !g.state) g = forgeStep(FORGE, g, { type: 'done' }); }
+      return g.over ? g : forgeStep(FORGE, g, { type: 'done' });
+    }
     let g = id === 'figure' ? quizNew('figure', figureRound(figs, WORKS, seed, L, ROUND_OF.figure, { ...o, hunts: HUNTS }), L) : id === 'who' ? quizNew('who', whoRound(lines, WORKS, seed, L, ROUND_OF.who, o), L)
-      : id === 'root' ? quizNew('root', final ? forgeFamilyRound(lex, WP, seed, L, 2, o) : forgeRound(lex, WP, seed, L, ROUND_OF.root, o), L) : id === 'plot' ? plotNew(plotRound(shipP, seed, L, ROUND_OF.plot, WORKS, { ...o, chapters }), L)
+      : id === 'plot' ? plotNew(plotRound(shipP, seed, L, ROUND_OF.plot, WORKS, { ...o, chapters }), L)
       : duelNew(duelRound(rhet, plain, seed, L, ROUND_OF.duel, o), L, null);
-    const st = { figure: figureStep, who: quizStep, root: quizStep, plot: plotStep, duel: duelStep }[id]; let guard = 0;
+    const st = { figure: figureStep, who: quizStep, plot: plotStep, duel: duelStep }[id]; let guard = 0;
     while (!g.over && guard++ < 500) {
       const q = g.rounds[g.i];
       if (g.state) { g = st(g, { type: 'next' }); continue; }
@@ -516,7 +508,7 @@ for (const [name, g0, st] of [['who', quizNew('who', whoRound(lines, WORKS, 'z',
   { let run = runNew(2), sum = 0; for (let k = 0; k <= RUN_ROUNDS; k++) { const g = duelSolve(duelNew(duelRound(rhet, plain, 't6' + k, 2, 5), 2)); sum += roundPay(g); run = runAdd(run, g, 0); }
     ok(`T6: the finish pays exactly the coins its rounds banked (${sum})`, runPay(run) === sum && sum === (RUN_ROUNDS + 1) * 5); }
   ok('pay: a round never pays more than its cap', roundPay({ kind: 'rush', clean: 40, right: 40, wrongs: 0 }) === G.ROUND_PAY_CAP);
-  ok('pay: a quiz round under half right — beyond chance — pays nothing, even for its right answers', roundPay({ kind: 'root', right: 3, answered: 6, results: [true, true, true, false, false, false] }) === 0 && roundPay({ kind: 'root', right: 4, answered: 6, results: [true, true, true, true, false, false] }) === 4 && roundPay({ kind: 'figure', results: [true, true, true, false, false, false] }) === 3);
+  ok('pay: a quiz round under half right — beyond chance — pays nothing, even for its right answers', roundPay({ kind: 'who', right: 3, answered: 6, results: [true, true, true, false, false, false] }) === 0 && roundPay({ kind: 'who', right: 4, answered: 6, results: [true, true, true, true, false, false] }) === 4 && roundPay({ kind: 'figure', results: [true, true, true, false, false, false] }) === 3);
   ok('pay: Plot Line pays a story wholly in order, never a lucky pair', roundPay({ kind: 'plot', right: 7, total: 9, perfect: 2 }) === 2 && roundPay({ kind: 'plot', right: 4, total: 9, perfect: 1 }) === 0);
   /* the miss card's other shapes: the right sentence in both orders; the right option in place */
   const ms = missCard({ type: 'sentence', right: ['When it rained, we ran.', 'We ran when it rained.'], why: 'why' }, 'when it rained we ran.');
