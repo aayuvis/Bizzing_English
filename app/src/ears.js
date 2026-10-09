@@ -17,7 +17,8 @@
 
    PAY (§1.3, §6): one coin a question right first try — the only try: a miss shows the answer — paid at
    the end of the run and only when the run reached 50% (the line where the stars begin); five for a
-   level passed. Stars: 0 under 50% · 1 · 2 at 70% · 3 at 90%. Nothing for listening, time or finishing. */
+   level passed. Stars: 0 under 50% · 1 · 2 at 70% · 3 at 90%. Nothing for listening, time or finishing.
+   The owner kept this 50% gate (9 Oct 2026), knowing a random tapper crosses it in about 1 run in 20. */
 
 import { rng, shuffle, permute, hash } from './rand.js';
 
