@@ -21,7 +21,7 @@ export function card(id) {
   const stats = Object.fromEntries(STATS.map(([k]) => { const r = (hash(`${id}:${k}`) % 1000) / 1000; return [k, Math.max(28, Math.min(99, Math.round(b + (r * 2 - 1) * sp)))]; }));
   const overall = Math.round(STATS.reduce((s, [k]) => s + stats[k], 0) / STATS.length);
   const top = STATS.reduce((m, [k]) => (stats[k] > stats[m] ? k : m), 'wit'), pool = POWERS[top];
-  return { id, name: a.name, art: a.art, tier: a.tier, rank: RANKS[a.tier], pack: PACK_NAMES[a.pack - 1] || 'Bizzing English', title: a.own ? 'The fox of Bizzing English' : `${RANKS[a.tier]} of ${PACK_NAMES[a.pack - 1]}`,
+  return { id, name: a.name, art: a.art, tier: a.tier, rank: RANKS[a.tier], pack: a.packName || PACK_NAMES[a.pack - 1] || 'Bizzing English', title: a.own ? 'The fox of Bizzing English' : `${RANKS[a.tier]} of ${a.packName || PACK_NAMES[a.pack - 1]}`,
     stats, overall, power: pool[hash(id + ':power') % pool.length], lore: t.lore || '', fact: t.fact || '', from: t.from || '' };
 }
 /* the child's history with a card: when it joined (the wallet's spend for it), or free from the start */

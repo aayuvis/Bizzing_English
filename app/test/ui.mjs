@@ -559,8 +559,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await go(page, '#/collection');
   const coll = await page.evaluate(() => ({ tabs: [...document.querySelectorAll('[data-bz=subnav] a')].map((a) => a.textContent.trim()), packs: [...document.querySelectorAll('.coll-pack .coll-count')].length,
     wear: document.querySelectorAll('.bz-av .av-act [data-act=wear]').length, worn: document.querySelectorAll('.bz-av .av-worn').length, prices: [...document.querySelectorAll('.bz-av [data-act=buy-av]')].map((b) => b.textContent.trim()), neg: /-\d+ more to go/.test(document.querySelector('main').textContent) }));
-  ok(`the Collection has Medals · Avatars · Worlds with counts, twelve packs and Quill’s with theirs, Wear buttons, one Wearing, price buttons (${JSON.stringify({ ...coll, prices: coll.prices.slice(0, 3) })})`,
-    coll.tabs.length === 3 && /^Medals · \d+\/\d+$/.test(coll.tabs[0]) && /^Avatars · \d+\/97$/.test(coll.tabs[1]) && /^Worlds · \d+\/\d+$/.test(coll.tabs[2]) && coll.packs === 13 && coll.wear > 0 && coll.worn === 1 && coll.prices.every((p) => /^(120|250|500)$/.test(p)) && !coll.neg);
+  ok(`the Collection has Medals · Avatars · Worlds with counts, twelve packs, Quill’s and Mount Olympus with theirs, Wear buttons, one Wearing, price buttons (${JSON.stringify({ ...coll, prices: coll.prices.slice(0, 3) })})`,
+    coll.tabs.length === 3 && /^Medals · \d+\/\d+$/.test(coll.tabs[0]) && /^Avatars · \d+\/105$/.test(coll.tabs[1]) && /^Worlds · \d+\/\d+$/.test(coll.tabs[2]) && coll.packs === 14 && coll.wear > 0 && coll.worn === 1 && coll.prices.every((p) => /^(120|250|500)$/.test(p)) && !coll.neg);
   await page.click('.bz-av[data-state=buy] .av-open'); await page.waitForTimeout(250);
   ok('a tile not yet owned opens its card, saying so', !!(await page.$('.sheet .avcard')) && /Not on your shelf yet/.test(await page.textContent('.sheet .avc-hist')));
   await page.keyboard.press('Escape'); await page.waitForTimeout(150);

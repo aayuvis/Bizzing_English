@@ -53,7 +53,17 @@ export const AVATARS = [
    96 (the twelve packs of eight keep their shape and validate() its rules), drawn first in the picker and the
    Collection. Its art is the mascot's waving sticker. */
 export const QUILL = { id: 'quill', name: 'Quill', pack: 0, tier: 'common', art: 'avatars/quill.webp', own: true };
-export const ALL_AVATARS = [QUILL, ...AVATARS];
+/* Mount Olympus, the Greek-myth pack (owner, 9 Oct 2026: "we need greek gods avatar pack"): eight figures
+   from the myths, outside the family's 96 like Quill, in the pack shape (2 common · 3 rare · 2 epic · 1
+   legendary) and sold in The Forum's world (world 4). The owner's request overrides English's "never a
+   deity" rule for this pack only; none is a face a sibling already has (Bee has Zeus, Poseidon, Athena,
+   Hades and Apollo). Prompts: tools/art/olympus_prompts.py. */
+export const OLYMPUS_NAME = 'Mount Olympus';
+export const OLYMPUS = [['iris', 'Iris of the Rainbow', 'common'], ['nike', 'Nike, Winged Victory', 'common'], ['hermes', 'Hermes the Messenger', 'rare'],
+  ['demeter', 'Demeter of the Harvest', 'rare'], ['hephaestus', 'Hephaestus the Smith', 'rare'], ['artemis', 'Artemis of the Moon', 'epic'],
+  ['persephone', 'Persephone of the Spring', 'epic'], ['hera', 'Hera, Queen of Olympus', 'legendary', M('word-7', 'Finish Word level 7 — words from the Greek myths')]]
+  .map(([id, name, tier, ms]) => ({ id, name, pack: 13, packName: OLYMPUS_NAME, world: 4, tier, sacred: true, art: `avatars/${id}.webp`, ...(ms ? { milestone: ms } : {}) }));
+export const ALL_AVATARS = [QUILL, ...AVATARS, ...OLYMPUS];
 export const byId = (id) => ALL_AVATARS.find((a) => a.id === id);
 /* the five a new child is offered in the welcome: Commons from the two free worlds */
 export const STARTERS = ['quill', 'tortoise', 'crownfrog', 'bookworm', 'terrier'];   // Quill first; Field Mouse waits in the Collection, free

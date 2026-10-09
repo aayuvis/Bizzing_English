@@ -5,7 +5,7 @@
 import '../../styles/avdeck.css';
 import { S, kid, save, render, go, toast, pay, isDark, setDevice, applyDevice, confetti } from '../app.js';
 import { esc, icon, btn, link, pageHead, empty, mascot, sheet, plural } from '../ui.js';
-import { AVATARS, ALL_AVATARS, QUILL, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
+import { AVATARS, ALL_AVATARS, QUILL, OLYMPUS, OLYMPUS_NAME, PACK_NAMES, byId, STARTERS } from '../data/avatars.js';
 import { stateOf, buy, buyWorld, worldOpen, TIERS, WORLD_PRICE } from '../integration/bizzing-avatars.js';
 import { card, history, deckIds, STATS } from '../avcards.js';
 import { balance, ledger, spend, activityLog } from '../family.js';
@@ -91,6 +91,7 @@ export function collectionView(tab = 'avatars') {
   if (tab === 'print') return printCards(k);
   return head + `<p class="note coll-rules">Commons are free for everyone. Rares are 120 Bizzing coins and Epics 250 once their world is open; a Legendary is 500 after its learning milestone. Every price is fixed, and nothing here is left to chance. <a href="#/shop">Open the Shop</a></p>`
     + `<section class="card coll-pack"><header><h3>Bizzing English <small class="coll-count">1/1</small></h3><span class="coll-world">${icon('star')}The app’s own — free for everyone</span></header><div class="avgrid">${avCard(QUILL, k, true)}</div></section>`
+    + `<section class="card coll-pack"><header><h3>${esc(OLYMPUS_NAME)} <small class="coll-count">${OLYMPUS.filter((a) => stateOf(a, ctx(k)).state === 'owned').length}/${OLYMPUS.length}</small></h3><span class="coll-world">${icon('globe')}${esc(WORLDS[3].name)} · figures from the Greek myths</span></header><div class="avgrid">${OLYMPUS.map((a) => avCard(a, k, true)).join('')}</div></section>`
     + PACK_NAMES.map((n, i) => { const inPack = AVATARS.filter((a) => a.pack === i + 1), have = inPack.filter((a) => stateOf(a, ctx(k)).state === 'owned').length;
       return `<section class="card coll-pack"><header><h3>${esc(n)} <small class="coll-count">${have}/${inPack.length}</small></h3><span class="coll-world">${icon('globe')}${esc(WORLDS[Math.ceil((i + 1) / 2) - 1].name)}</span></header>
       <div class="avgrid">${inPack.map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
@@ -109,6 +110,7 @@ export function shopView(tab = 'avatars') {
   if (tab === 'worlds') body = worldsBody(k, bal);
   else if (tab === 'extras') body = `<p class="note" style="margin:0 20px 10px">A look for your reading and your Stage, and a challenge for each game — never content, never chance. The first look of each kind is free.</p>` + KINDS.map(([kind, title]) => `<section class="card" style="margin-bottom:13px"><h3>${esc(title)}</h3><div class="extragrid">${EXTRAS.filter((e) => e.kind === kind).map((e) => extraCard(e, k, bal)).join('')}</div></section>`).join('') + modesSection(k, bal);
   else body = `<p class="note" style="margin:0 20px 10px">Commons are free for everyone. Rares cost 120, Epics 250, Legendaries 500 — and a Legendary first needs its learning milestone.</p>`
+    + `<section class="card" style="margin-bottom:13px"><h3>${esc(OLYMPUS_NAME)}</h3><div class="avgrid">${OLYMPUS.map((a) => avCard(a, k, true)).join('')}</div></section>`
     + PACK_NAMES.map((n, i) => { const w = Math.ceil((i + 1) / 2); return `<section class="card" style="margin-bottom:13px"><h3>${esc(n)}</h3><div class="avgrid">${AVATARS.filter((a) => a.pack === i + 1).map((a) => avCard(a, k, true)).join('')}</div></section>`; }).join('');
   const L = ledger(k.name).slice(-30).reverse();
   return head + body + `<section class="card" style="margin-top:13px"><h3>Your coin history</h3>${historyList(L)}</section>`;

@@ -163,6 +163,9 @@ Inherited from the family, and it holds here:
   backgrounds changing"): each character painted ONCE as a transparent sticker cut-out (same scale and head height),
   every expression painted from that reference, composited by the screens over the scene plates
   (`app/public/art/inkwell/cast/`, manifest `src/data/inkwell-art.js`). Places and objects keep "no people".
+  **And Mount Olympus** (owner, 9 Oct: "we need greek gods avatar pack"): eight figures from the Greek myths
+  (`tools/art/olympus_prompts.py`, `OLYMPUS` in `data/avatars.js`), outside the family's 96 like Quill, sold in The
+  Forum; never a face a sibling has (Bee's Zeus, Poseidon, Athena, Hades, Apollo). Every other avatar stays a creature.
   Never name a place in a prompt (it gets lettered). Night plates are painted FROM the day plate as a
   reference ("one single night picture, not a comparison") — asking for "the same place at night"
   painted split day/night diptychs.

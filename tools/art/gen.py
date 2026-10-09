@@ -134,6 +134,9 @@ sys.path.insert(0, HERE)
 from avatars_prompts import AVATARS   # id -> prompt (shared with the app catalogue by id)
 for k, v in AVATARS.items():
     JOBS[f'av-{k}'] = (AV_STYLE + v, '1:1')
+from olympus_prompts import OLYMPUS, OLY_STYLE   # Mount Olympus: the Greek-myth pack, outside the 96
+for k, v in OLYMPUS.items():
+    JOBS[f'av-{k}'] = (OLY_STYLE + v, '1:1')
 
 MEDAL_STYLE = ("A round medallion emblem for a children's app, in a warm painted storybook style, a single "
                "simple object in the middle of a circular enamel-and-gold medal, centred on a plain pure white "
