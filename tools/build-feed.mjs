@@ -46,6 +46,25 @@
        is the main clause?"; rush.json → "where does the comma go?" (one-comma sentences) at Sentence 4
        (compound), 5 (address, aside) or 7 (fronted openings); figures-more.js → Literature 5;
        rhetoric-more.js → the level of the Language stop that teaches the device (Language 7).
+   THE DOUBLING (owner, 10 Oct 2026: "look for additional content and double the feed cards") — more of what the
+   app already holds, each with its rung by the same rule:
+     The whole books (Reading 8): each chapter's opening and its own line (exact), and its word bank met in the
+       chapter's sentence with Bee's meaning (as the passages' words are).
+     Words in context ("ctx"): a Vocabulary word of Bee difficulty ≥ 3 met in a sentence of a Library passage (the
+       passage's Reading level) or a whole book's chapter (Reading 8) — or, for Bee's hardest words (rung 7–10), in
+       any held, cleared text (the word's own rung, as its Vocabulary card; never a line of killing, death, war,
+       worship or a nation, never a story's heading run into its sentence). See ctxCut.
+     Where words come from ("etym"): Bee's etymology, as the word's page shows it, at the word's Vocabulary rung;
+       never one with a date (dates await a reviewer).
+     Register (Word 8): data/wordparts.js REGISTER, the formal word for an everyday one and back.
+     The Podium's offered lines with exactly one device worked in (podium.js devicesIn), and Rhetoric Duel's
+       real line against its plainer version written for the game: Language 7, where the devices are taught.
+     Level-agnostic, as the games are: Story Ears' picture questions (the pictures' own words are the options; the
+       words that hold the answer, exact, come after), Plot Line's stories (which scene first, which last), Root
+       Forge's words (which word do these parts forge?), and each avatar card's real fact (the Collection).
+     Left out: Inkwell Detective's cases (a spoiler), its Knacks and Word Hoard (held for review), Who Said It?
+       (its lines are already cards, with their author), the idioms' origin stories, the Podium's lines with no
+       device, and Bee's spelling hints (Bee owns spelling).
    A level holds at most BUDGET cards and BYTES of words (its file stays small): the strand stops, passages and
    small sources first, then the big pools in turn (a stable hash order, so no alphabet bias), then more of
    the generators' own items where a level is still short.
@@ -72,6 +91,15 @@ import { MORE_LINES } from '../app/src/data/lines-more.js';
 import { MYTH_JOURNEY, WHO, AUTHORS, heldBack, authorPassages, authorWorks, isGated, lifeNote } from '../app/src/data/deep.js';
 import { ROUNDS } from '../app/src/contest.js';
 import { hash, rng, shuffle } from '../app/src/rand.js';
+import { STORIES as EARS_STORIES, pic as earsPic } from '../app/src/ears.js';
+import { CARD_TEXT } from '../app/src/data/avatar-cards.js';
+import { ALL_AVATARS, PACK_NAMES } from '../app/src/data/avatars.js';
+import { TOPICS as POD_TOPICS, DEVICES as POD_DEVICES, devicesIn } from '../app/src/podium.js';
+import { PLAIN, DEVICE_GLOSS } from '../app/src/data/duel.js';
+import { plotStories } from '../app/src/games.js';
+import { forgeOf } from '../app/src/forge.js';
+import * as WP from '../app/src/data/wordparts.js';
+import { kidSafe, defSafe, lineSafe, BLOCK } from '../app/src/safe.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url)), APP = join(HERE, '..', 'app');
 const json = (p) => JSON.parse(readFileSync(join(APP, p), 'utf8'));
@@ -100,6 +128,7 @@ export const POOLS = {
   builder: optJson('src/data/games/builder.json'), rush: optJson('src/data/games/rush.json'),
   figures: (await optMod('../app/src/data/figures-more.js')).FIGURES_MORE || [],
   rhetoric: (await optMod('../app/src/data/rhetoric-more.js')).RHETORIC_MORE || [],
+  plain: (await optMod('../app/src/data/rhetoric-more.js')).PLAIN_MORE || {},
 };
 
 /* ---------------------------------------------------------------- shared rules */
@@ -288,7 +317,7 @@ export function cut() {
 }
 
 /* ---------------------------------------------------------------- the new sources (see the header) */
-export const BUDGET = 560, BYTES = 390000;
+export const BUDGET = 1150, BYTES = 780000;
 const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
 const hashOrder = (list, salt) => list.map((c) => [hash(salt + c.id), c]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
 export const bandsOfLevel = (L) => (L <= 3 ? [1, 2, 3] : L <= 7 ? [2, 3] : [3]);
@@ -348,6 +377,115 @@ export const FIG_KINDS = () => [...new Set([...FIGURES, ...POOLS.figures].map((f
 export const DEV_ALL = () => [...new Set([...RHETORIC, ...POOLS.rhetoric].map((r) => r.device))].sort();
 export const TYPING_LEVEL = 1, CONTEST_LEVEL = { prose: 1, poem: 2, talk: 6 };
 
+/* ---- the doubling (owner, 10 Oct): more of what the app already holds ---- */
+/* A word met in the author's own sentence. The word is a Vocabulary word (its first deck, as above) of Bee
+   difficulty 3 or more; the question is "in Bee's word list, which word in this line means …?" — Bee's meaning
+   (Bee gives one sense, as a tapped word's card does; the question says whose meaning it is), and four words of
+   the line itself, so every option is on the card by design. The three others are Bee words of their own
+   whose meanings share nothing with it (no word of one meaning in the other), never the same word family. A
+   noun used as a verb, a verb used as a noun, or a word whose ending says another part of speech than Bee's
+   entry is left out. One line per word, wherever it is first taken. */
+export const VOC_HOME = (() => { const m = new Map(); for (const id of VOCAB_HOME) { const d = DECKS.find((x) => x.id === id); if (d) for (const e of d.words) if (!m.has(e.w)) m.set(e.w, { d, e, L: vocabLevel(d.id, e) }); } return m; })();
+export const CTX_MIN_Y = 3, CTX_WORK_MIN = 7;
+export const ctxQ = (e) => `In Bee’s word list, which word in this line means “${e.d.replace(/[.;:,\s]+$/, '')}”?`;
+const CTX_SKIP = new Set('that this with from have were they them their there then than what when where which while would could should shall will been being into upon over under about after before again very just only also some such said says each much many more most other these those your yours ours mine here even ever never every whom whose like well back down still once must does done made make came come went gone take took know knew thought'.split(' '));
+const NOUN_AS_VERB_BEFORE = /^(to|i|he|she|we|they|you|it|who|would|could|should|will|shall|can|may|might|must|not|never|did|does|do)$/;
+const NOUN_AS_VERB_AFTER = /^(the|a|an|his|her|my|their|our|him|them|me|us|its|your)$/;
+const VERB_AS_NOUN_BEFORE = /^(a|an|the|his|her|my|their|our|its|this|that|your|every|each)$/;
+const toksOf = (s) => String(s).match(/[A-Za-z]+(?:[’'][a-z]+)?/g) || [];
+const defWords = (d, n) => norm(d).split(' ').filter((x) => x.length >= n);
+/* the sense check and the three other words, or null */
+export function ctxCut(e, sent) {
+  const T = toksOf(sent), low = T.map((t) => t.toLowerCase()), at = T.indexOf(e.w);
+  if (at < 0 || low.filter((t) => t === e.w).length !== 1) return null;
+  const b = low[at - 1] || '', a = low[at + 1] || '';
+  if (/noun/.test(e.ps) && (NOUN_AS_VERB_BEFORE.test(b) || NOUN_AS_VERB_AFTER.test(a))) return null;
+  if (/verb/.test(e.ps) && VERB_AS_NOUN_BEFORE.test(b)) return null;
+  if (!shapeFits(e.w, e.ps)) return null;
+  const mine = new Set(defWords(e.d, 4)), cands = [...new Set(T.filter((t) => /^[a-z]{4,}$/.test(t) && t !== e.w && !CTX_SKIP.has(t) && low.filter((x) => x === t).length === 1))]
+    .filter((t) => ctxRival(e, t, mine));
+  if (cands.length < 3) return null;
+  return shuffle(rng(`ctx:${e.w}:${sent.length}`), cands.sort()).slice(0, 3);
+}
+export function ctxRival(e, t, mine = new Set(defWords(e.d, 4))) {
+  const L = LEX.words[t], d = L && L[0];
+  if (!d || !kidSafe(t, d) || BLOCK.test(t) || t.slice(0, 4) === e.w.slice(0, 4) || mine.has(t) || norm(d) === norm(e.d)) return false;
+  const theirs = defWords(d, 4); return !theirs.includes(e.w) && !theirs.some((x) => x.length >= 5 && mine.has(x));
+}
+/* test/safe.mjs's rule for a feed card, kept here so a pool's line that fails it is never cut: a card that quotes
+   is held to the sentence list; any other card's words to the word list (one word) or the definition list */
+const QUOTED = /^(story|tale|opening|line|speech|talk|inline|figure|comma|example|question|idiom)$/;
+export function feedSafe(c) {
+  const quoted = QUOTED.test(c.kind) && !/^voc~/.test(c.id), toks = (x) => String(x || '').toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  return [c.title, c.play?.q, ...(c.play?.opts || [])].every((x) => !x || (quoted ? lineSafe(x) : toks(x).length === 1 ? !BLOCK.test(toks(x)[0]) : defSafe(x)));
+}
+/* a story's heading run into its first sentence ("The Lion in Love A Lion once fell…") */
+const HEAD_OK = /^(in|of|and|the|a|an|to|at|on|for|with|or|from)$/, HEAD_START = /^(A|An|The|Once|There|It|One|In|When|Long|Now|This)$/;
+export function headed(s) {
+  const T = s.split(/\s+/);
+  for (let i = 2; i < Math.min(T.length, 9); i++) { if (!/^[A-Z][a-z]*$/.test(T[i - 1]) && !HEAD_OK.test(T[i - 1])) return false; if (HEAD_START.test(T[i]) && /^[A-Z]/.test(T[0])) return true; }
+  return false;
+}
+/* a word whose ending says one part of speech while Bee's entry says another ("portable", given as a noun) is
+   left out: the line will be using the other sense */
+const ADJ_END = /(able|ible|ous|ful|ive|less|ic|ical|ish|ary)$/, NOUN_END = /(ness|ment|tion|sion|ity|ship|hood|ance|ence|ism)s?$/;
+export const shapeFits = (w, ps) => !((/noun/.test(ps) && (ADJ_END.test(w) || /ly$/.test(w))) || (/(verb|adj)/.test(ps) && NOUN_END.test(w)));
+/* a line from anywhere in a held text (not one of the Library's chosen passages) keeps clear of the dark and the
+   sacred: no killing, death, war, cruelty or worship on a card cut this way */
+export const DARK = /\b(kill\w*|slay|slain|slew|murder\w*|blood\w*|corpse\w*|dead|death\w*|die|died|dies|dying|tore|torn|limb|limbs|war|wars|battle\w*|wound\w*|gun\w*|shot|shoot\w*|hang\w*|whip\w*|beat|beaten|cruel\w*|devil\w*|god|gods|goddess\w*|lord|christ\w*|heaven\w*|hell|church\w*|pray\w*|bible|sin|sins|sinner\w*|negro\w*|savage\w*|slave\w*|indians?|race|races|wine|beer|drunk\w*|poison\w*|weapon\w*|sword\w*|sabre\w*|knife|knives|enem\w*|prison\w*|grave|graves|ghost\w*|germany|german|french|english|jew\w*|turk\w*|moor\w*)\b/i;
+export const ctxSentOk = (s) => s.length >= 50 && s.length <= 260 && /^[“"‘']?[A-Z]/.test(s) && /[.!?][’”"']?$/.test(s) && !/[_[\]{}<>|*#]/.test(s) && lineSafe(s);
+/* Story Ears' questions answered with pictures: the pictures' own words become the options */
+export const earsLabel = (k) => earsPic(k)?.label || '';
+export const EARS_FIRST = 'Which of these happened first?';
+/* the Podium's offered lines with a device worked in: only a version that shows exactly its own device */
+export const POD_Q = 'Which device from Writer’s Craft is worked into this line?';
+export const podName = (id) => POD_DEVICES.find((d) => d.id === id)?.name;
+export function podLines() {
+  const out = [];
+  for (const t of POD_TOPICS) for (const part of ['hooks', 'points', 'closes']) (t[part] || []).forEach((l, i) => {
+    for (const [d, v] of Object.entries(l.v || {})) { const got = devicesIn(v); if (got.length === 1 && got[0] === d && podName(d)) out.push({ t, part, i, d, v }); }
+  });
+  return out;
+}
+/* Rhetoric Duel: the line as the writer wrote it against the plainer version written for the game */
+export const duelQ = (device) => `Which line uses ${/^[aeiou]/.test(device) ? 'an' : 'a'} ${device} — ${DEVICE_GLOSS[device] || device}?`;
+export const DUEL_BODY = 'One is the line as the writer wrote it; the other is a plainer version, written for this game.';
+export const duelPools = () => [['duel', RHETORIC, PLAIN], ['duelm', POOLS.rhetoric, { ...PLAIN, ...POOLS.plain }]];
+/* Plot Line: which scene comes first, and which last — the game's own stories and openings */
+export const PLOT_Q = { first: 'Which of these happens first?', last: 'Which of these happens last?' };
+export function plotSources() {
+  const passages = Object.values(TEXTS).filter((t) => shippedP(PASSAGES.find((p) => p.id === t.id)));
+  const chapters = BOOKS.filter((b) => quotable(work(b.id))).flatMap((b) => BOOKDATA[b.id].chapters.filter((c) => !b.chapters.find((x) => x.n === c.n)?.needsReview)
+    .map((c) => ({ book: b.id, n: c.n, short: b.short, band: b.band, scenes: c.scenes || [] })));
+  return plotStories(passages, WORKS, chapters, 4);
+}
+/* Where a word comes from: Bee's own etymology, as the word's page shows it ("Where it comes from") — never
+   one with a date in it (a date awaits a reviewer, as the Language stops' do) */
+export const etymOf = (w) => { const e = LEX.words[w], t = e && e[5]; return t && t.length <= 220 && !/\b1\d{3}\b|centur/i.test(t) && defSafe(t) && lineSafe(t) ? t : ''; };
+/* Register: the Word strand's formal and everyday pairs (data/wordparts.js REGISTER). A wrong option is never a
+   pair whose everyday word shares a meaning with this one (start · begin): those stand together here */
+export const REG_SAME = [['start', 'begin'], ['finish', 'end', 'stop'], ['get', 'find'], ['live', 'home'], ['tell', 'show', 'answer'], ['leave', 'end'], ['watch', 'show'], ['need', 'extra']];
+const regKin = (a, b) => a === b || REG_SAME.some((g) => g.includes(a) && g.includes(b));
+export const REG_Q = { formal: (x) => `Which word is the formal way to say “${x.informal}”?`, informal: (x) => `Which everyday word means the same as “${x.formal}”?` };
+export function regCut(i, side) {
+  const x = WP.REGISTER[i], other = side === 'formal' ? 'informal' : 'formal', R = rng(`reg:${i}:${side}`);
+  const wrong = shuffle(R, WP.REGISTER.filter((y, j) => j !== i && !regKin(y.informal, x.informal)).map((y) => y[side])).slice(0, 3);
+  return wrong.length === 3 && !wrong.includes(x[side]) ? { q: REG_Q[side](x), right: x[side], wrong, ask: x[other] } : null;
+}
+/* Root Forge: the parts on the anvil, and the word they forge — against three words the forge makes from a part
+   they share (or, short of those, any three) */
+export const FORGE = forgeOf(LEX, WP);
+export const FORGE_Q = 'Which word do these parts forge?';
+export const forgeTitle = (ids) => `Root Forge: ${ids.map((id) => FORGE.part(id).t).join(' + ')}`;
+export function forgeCut(word) {
+  const e = FORGE.words.get(word); if (!e) return null;
+  const same = (ids) => ids.length === e.ids.length && ids.every((id) => e.ids.includes(id));
+  const all = [...FORGE.words].filter(([w, x]) => w !== word && !same(x.ids) && kidSafe(w, LEX.words[w]?.[0]) && !BLOCK.test(w)), R = rng('forge:' + word);
+  const near = shuffle(R, all.filter(([, x]) => x.ids.some((id) => e.ids.includes(id))).map(([w]) => w).sort());
+  const wrong = [...near, ...shuffle(R, all.map(([w]) => w).sort()).filter((w) => !near.includes(w))].slice(0, 3);
+  return wrong.length === 3 ? { ids: e.ids, wrong } : null;
+}
+
 function grow(cards, add, play) {
   const have = new Set(cards.map((c) => c.id)), bodies = new Set(cards.map((c) => norm(c.body || '')));
   const A = [], B = {}, C = {};                                  // always · the big pools · more generator items
@@ -396,6 +534,72 @@ function grow(cards, add, play) {
   });
   for (const g of games()) for (const [n, t] of Object.entries(g.levels)) A.push({ id: `game~${g.id}~${n}`, kind: 'game', src: `glevel:${g.id}#${n}`, bands: [1, 2, 3], topics: [`game:${g.id}`], where: `Play · ${g.name}`,
     title: `${g.name}, level ${n}`, body: stop(t.charAt(0).toUpperCase() + t.slice(1)), more: stop(`Practises ${g.practises}`), route: `#/play/${g.id}`, cta: `Play ${g.name}` });
+
+  /* --- the doubling: the whole books' own lines, openings and words (Reading 8) --- */
+  for (const b of BOOKS) {
+    if (!quotable(work(b.id))) continue;
+    for (const c of b.chapters) {
+      if (c.needsReview) continue;
+      const full = BOOKDATA[b.id].chapters.find((x) => x.n === c.n); if (!full) continue;
+      const text = (full.scenes || []).join(' ').replace(/\s+/g, ' '), where = `${placeName('reading', 8)} · ${b.title}`, route = `#/whole/${b.id}/${c.n}`, cta = `Chapter ${c.n}: ${c.title}`;
+      const base = { level: 8, bands: bandsFrom(b.band), topics: [`stop:bk-${b.id}-${c.n}`, 'strand:reading', `work:${b.id}`], key: `stop:bk-${b.id}-${c.n}`, where, source: `${b.title} — ${b.author}`, route, cta };
+      const taught = stop(`Taught at: ${b.short}, chapter ${c.n}: ${c.title}`), open = opening(text);
+      if (open && held(b.id).includes(open)) A.push({ ...base, id: `bk~${b.id}~${c.n}~open`, kind: 'opening', src: `chapter:${b.id}/${c.n}#open`, title: `How chapter ${c.n} begins: ${c.title}`, body: open, cite: b.id, quote: open, more: taught, cta: `Hear the rest of chapter ${c.n}` });
+      if (full.line && held(b.id).includes(full.line)) A.push({ ...base, id: `bk~${b.id}~${c.n}~line`, kind: 'line', src: `chapter:${b.id}/${c.n}#line`, title: `A line from ${b.short}, chapter ${c.n}`, body: full.line, cite: b.id, quote: full.line, more: taught });
+      const sents = sentences(text);
+      for (const wd of full.wordBank || []) {
+        const lw = String(wd).toLowerCase(), e = LEX.words[lw]; if (!e || !e[0] || !kidSafe(lw, e[0])) continue;
+        const line = sents.find((x) => x.length <= 300 && held(b.id).includes(x) && new RegExp(`\\b${esc(wd)}\\b`, 'i').test(x)); if (!line) continue;
+        A.push({ ...base, id: `bk~${b.id}~${c.n}~w~${lw}`, kind: 'inline', src: `chword:${b.id}/${c.n}#${lw}`, title: `“${lw}” in ${b.short}, chapter ${c.n}`, body: line, cite: b.id, quote: line, more: stop(`Bee’s meaning: ${e[0]}`) });
+      }
+    }
+  }
+
+  /* --- the doubling: Story Ears' questions (a game: no level) --- */
+  const earsSeen = new Set();
+  for (const st of EARS_STORIES) {
+    const p = PASSAGES.find((x) => x.id === st.passage), w = p && work(p.work); if (!shippedP(p)) continue;
+    const base = { bands: [1, 2, 3], topics: ['game:ears', `stop:rd-${p.id}`, `work:${p.work}`], where: 'Play · Story Ears', title: `Story Ears: ${p.title}`, more: stop(`Told in “${p.title}” — ${w.title}, ${w.author}`), route: '#/ears', cta: 'Play Story Ears' };
+    st.qs.forEach((q, j) => {
+      const holds = q.kind === 'order' ? q.holds[0] : q.holds; if (!holds || !held(p.work).includes(holds) || !lineSafe(holds)) return;
+      const labels = (q.kind === 'order' ? q.seq : q.pics).map(earsLabel); if (labels.some((x) => !x) || new Set(labels.map(norm)).size !== labels.length) return;
+      const same = `${p.id}|${q.kind === 'order' ? EARS_FIRST : q.ask}|${labels.join('|')}`; if (earsSeen.has(same)) return; earsSeen.add(same);   // the same question of the same story, asked by two runs
+      A.push({ ...base, id: `ears~${st.id}~${j}`, kind: 'game', src: `ears:${st.id}#${j}`, play: play(q.kind === 'order' ? EARS_FIRST : q.ask, labels[0], labels.slice(1), `“${holds}”`) });
+    });
+  }
+  /* --- the doubling: the avatars' cards — a real fact each (the Collection; no level) --- */
+  for (const a of ALL_AVATARS) {
+    const t = CARD_TEXT[a.id]; if (!t?.fact) continue;
+    A.push({ id: `av~${a.id}`, kind: 'creature', src: `avatar:${a.id}`, bands: [1, 2, 3], topics: ['collection'], where: `The Collection · ${a.packName || PACK_NAMES[a.pack - 1] || 'Bizzing English'}`,
+      title: a.name, body: t.fact, source: t.from || undefined, more: `On its card in the Collection: ${t.lore}`, route: '#/collection', cta: 'The Collection' });
+  }
+  /* --- the doubling: Plot Line's stories — which scene comes first (a game: no level) --- */
+  for (const s of plotSources()) {
+    const opts = s.cards.map((x) => x.text); if (opts.length < 3 || s.cards.some((x, j) => x.at !== j) || !opts.every((o) => defSafe(o) && lineSafe(o) && held(s.work).includes(o.replace(/…$/, '')))) continue;
+    for (const [end, right] of [['first', 0], ['last', opts.length - 1]])
+      A.push({ id: `plot~${s.id}~${end}`, kind: 'game', src: `plot:${s.id}#${end}`, bands: bandsFrom(s.band), topics: ['game:plot', `work:${s.work}`, ...(PASSAGES.some((p) => p.id === s.id) ? [`stop:rd-${s.id}`] : [])], where: 'Play · Plot Line',
+        title: `Plot Line: ${s.title}`, play: play(PLOT_Q[end], opts[right], opts.filter((_, j) => j !== right), ''), more: stop(`Practises ${GAMES.plot.practises}`), source: `${work(s.work).title} — ${work(s.work).author}`, route: '#/play/plot', cta: 'Play Plot Line' });
+  }
+  /* --- the doubling: Root Forge — the parts, and the word they forge (a game: no level) --- */
+  for (const [word, e] of FORGE.words) {
+    const f = kidSafe(word, LEX.words[word]?.[0]) && forgeCut(word); if (!f) continue;
+    const band = Math.max(...e.ids.map((id) => FORGE.part(id).band || 1));
+    A.push({ id: `forge~${word}`, kind: 'game', src: `forge:${word}`, bands: bandsFrom(band), topics: ['game:root'], where: 'Play · Root Forge', title: forgeTitle(e.ids),
+      play: play(FORGE_Q, word, f.wrong, stop(`Bee’s meaning: ${LEX.words[word][0]}`)), more: stop(`Practises ${GAMES.root.practises}`), route: '#/play/root', cta: 'Play Root Forge' });
+  }
+  /* --- the doubling: register — the formal word and the everyday one (Word 8) --- */
+  const w8 = firstStop('word', 8);
+  if (w8) WP.REGISTER.forEach((x, i) => { for (const side of ['formal', 'informal']) { const r = regCut(i, side); if (!r) continue;
+    A.push({ id: `reg~${i}~${side}`, kind: 'register', src: `register:${i}#${side}`, level: 8, bands: bandsFrom(w8.band), topics: [`stop:${w8.id}`, 'strand:word'], key: `stop:${w8.id}`, where: placeName('word', 8),
+      title: side === 'formal' ? `Said formally: “${x.informal}”` : `Said every day: “${x.formal}”`, play: play(r.q, r.right, r.wrong, ''), more: stop(`Taught at: ${placeName('word', 8)} — ${w8.title}`), route: stopRoute(w8), cta: `${w8.title} on the Word road` }); } });
+  /* --- the doubling: Rhetoric Duel — the real line against its plainer version (Language 7) --- */
+  for (const [pre, list, plain] of duelPools()) list.forEach((r, i) => {
+    const w = work(r.work), p = plain[r.text]; if (!quotable(w) || !p || !held(r.work).includes(r.text) || ![r.text, p].every((o) => defSafe(o) && lineSafe(o)) || norm(p) === norm(r.text)) return;
+    const by = teaches('la', r.device)[0], L = by ? by.level : 7;
+    A.push({ id: `${pre}~${i}`, kind: 'device', src: `${pre}:${i}`, level: L, bands: by ? bandsFrom(by.band) : [2, 3], topics: ['strand:language', `work:${r.work}`, 'game:duel'], where: `${placeName('language', L)} · Rhetoric Duel`,
+      title: `Two lines: ${w.title}`, body: DUEL_BODY, source: w.author, play: play(duelQ(r.device), r.text, [p], ''), more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : taughtAt('language', 7),
+      route: '#/play/duel', cta: 'Play Rhetoric Duel' });
+  });
 
   /* --- the big pools --- */
   const seenWord = new Set(cards.filter((c) => c.src.startsWith('gen:def2word') || c.src.startsWith('gen:word2def')).map((c) => c.play.opts[0]));
@@ -446,6 +650,64 @@ function grow(cards, add, play) {
       more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : taughtAt('language', 7), route: by ? stopRoute(by) : '#/play/duel', cta: by ? `${by.title} on the Language road` : 'Play Rhetoric Duel' });
   });
 
+  /* --- the doubling: the Podium's lines with a device worked in (Language 7, where the devices are taught) --- */
+  for (const x of podLines()) {
+    const dv = POD_DEVICES.find((d) => d.id === x.d), by = teaches('la', dv.craft)[0], L = by ? by.level : 7, right = podName(x.d);
+    pool(B, L, 'podium', { id: `pod~${x.t.id}~${x.part[0]}${x.i}~${x.d}`, kind: 'craft', src: `podium:${x.t.id}/${x.part}/${x.i}#${x.d}`, level: L, bands: by ? bandsFrom(by.band) : [2, 3], topics: ['strand:language', 'game:podium'],
+      where: `${placeName('language', L)} · The Podium`, title: `A line for a speech: ${x.t.title}`, body: x.v, play: play(POD_Q, right, POD_DEVICES.filter((d) => d.id !== x.d).map((d) => d.name), dv.how),
+      more: by ? stop(`Taught at: ${placeName(by.strand, by.level)} — ${by.title}`) : taughtAt('language', 7), route: '#/stage/podium', cta: 'The Podium' });
+  }
+  /* --- the doubling: where a Vocabulary word comes from (the word's rung, as its Vocabulary card) --- */
+  for (const [w, h] of VOC_HOME) {
+    const t = etymOf(w); if (!t || !h.L) continue;
+    pool(B, h.L, 'origin', { id: `etym~${slug(w)}`, kind: 'origin', src: `etym:${w}`, level: h.L, bands: bandsOfLevel(h.L), topics: ['strand:word', `word:${w}`], where: `${placeName('word', h.L)} · Where words come from`,
+      title: w, body: t, source: 'Bizzing Bee’s word list', more: stop(`Its meaning: ${h.e.d}`), route: `#/word/${encodeURIComponent(w)}`, cta: `“${w}” in the word list` });
+  }
+  /* --- the doubling: a word met in the author's own sentence --- */
+  const ctx = (e, sent, base) => { const wrong = ctxCut(e, sent); return wrong && { ...base, kind: 'context', body: sent, play: play(ctxQ(e), e.w, wrong, '') }; };
+  const ctxWord = (w, skip) => { const h = VOC_HOME.get(w); return h && h.e.y >= CTX_MIN_Y && !skip.has(w) ? h : null; };
+  /* (a) the whole books, chapter by chapter (Reading 8) */
+  for (const b of BOOKS) {
+    if (!quotable(work(b.id))) continue;
+    for (const c of b.chapters) {
+      const full = BOOKDATA[b.id].chapters.find((x) => x.n === c.n); if (c.needsReview || !full) continue;
+      const skip = new Set((full.wordBank || []).map((x) => x.toLowerCase())), done = new Set();
+      for (const s of sentences((full.scenes || []).join(' ').replace(/\s+/g, ' '))) {
+        if (!ctxSentOk(s) || !held(b.id).includes(s)) continue;
+        for (const t of new Set(toksOf(s))) { const h = !done.has(t) && ctxWord(t, skip); if (!h) continue;
+          const c2 = ctx(h.e, s, { id: `cx~${b.id}${c.n}~${t}`, src: `ctx:chapter/${b.id}/${c.n}/${t}`, level: 8, bands: bandsFrom(b.band), topics: [`stop:bk-${b.id}-${c.n}`, 'strand:reading', `work:${b.id}`], key: `stop:bk-${b.id}-${c.n}`,
+            where: `${placeName('reading', 8)} · ${b.title}`, title: `A line from ${b.short}, chapter ${c.n}`, cite: b.id, quote: s, source: `${b.title} — ${b.author}`, more: stop(`Met in ${b.short}, chapter ${c.n}: ${c.title}`), route: `#/whole/${b.id}/${c.n}`, cta: `Chapter ${c.n}: ${c.title}` });
+          if (c2) { done.add(t); pool(B, 8, 'context', c2); } }
+      }
+    }
+  }
+  /* (b) the Library's passages (the passage's Reading level) */
+  for (const p of PASSAGES) {
+    const T = TEXTS[p.id]; if (!shippedP(p)) continue;
+    const L = levelOf(p), skip = new Set((T.wordBank || p.words || []).map((x) => String(x).toLowerCase())), done = new Set();
+    for (const s of sentences(T.text)) {
+      if (!ctxSentOk(s) || !held(p.work).includes(s)) continue;
+      for (const t of new Set(toksOf(s))) { const h = !done.has(t) && ctxWord(t, skip); if (!h) continue;
+        const c2 = ctx(h.e, s, { id: `cx~${p.id}~${t}`, src: `ctx:passage/${p.id}/${t}`, level: L, bands: bandsFrom(p.band), topics: [`stop:rd-${p.id}`, 'strand:reading', `work:${p.work}`], key: `stop:rd-${p.id}`,
+          where: `${placeName('reading', L)} · the Library`, title: `A line from “${p.title}”`, cite: p.work, quote: s, source: `${work(p.work).title} — ${work(p.work).author}`, more: stop(`Taught at: ${placeName('reading', L)} — “${p.title}”`), route: `#/story/${p.id}`, cta: `Hear “${p.title}”` });
+        if (c2) { done.add(t); pool(B, L, 'context', c2); } }
+    }
+  }
+  /* (c) Bee's hardest words (rung 7–10), met anywhere in a held, cleared text: the word's own rung */
+  const want = new Map([...VOC_HOME].filter(([, h]) => h.L >= CTX_WORK_MIN && h.e.y >= CTX_MIN_Y));
+  const told = new Set(PASSAGES.filter(shippedP).map((p) => p.work).concat(BOOKS.map((b) => b.id)));
+  for (const w of [...WORKS.filter((x) => told.has(x.id)), ...WORKS.filter((x) => !told.has(x.id))]) {
+    if (!want.size) break;
+    if (!quotable(w)) continue;
+    for (const s of sentences(held(w.id))) {
+      if (!ctxSentOk(s) || DARK.test(s) || headed(s)) continue;
+      for (const t of new Set(toksOf(s))) { const h = want.get(t); if (!h) continue;
+        const c2 = ctx(h.e, s, { id: `cxw~${slug(t)}`, src: `ctx:work/${w.id}/${t}`, level: h.L, bands: bandsOfLevel(h.L), topics: ['strand:word', `work:${w.id}`], where: `${placeName('word', h.L)} · Bee’s words in the classics`,
+          title: `A line from ${w.title}`, cite: w.id, quote: s, source: `${w.title} — ${w.author}`, more: stop(`Met in ${w.title}, by ${w.author}`), route: `#/book/${w.id}`, cta: `${w.title} in the Library` });
+        if (c2) { want.delete(t); pool(B, h.L, 'context', c2); } }
+    }
+  }
+
   /* --- more of the generators' own items, for a level still short --- */
   const twin = new Set(cards.filter((c) => c.src.startsWith('gen:')).map((c) => `${c.key}|${c.play.q}|${[...c.play.opts].sort().join('|')}`));
   for (const st of allStops()) {
@@ -455,7 +717,7 @@ function grow(cards, add, play) {
       let ks; try { ks = keys(st.kind, { band: b, lex: LEX, stop: st.id }); } catch { continue; }
       let n = 0, miss = 0;
       for (const key of shuffle(rng(`fill:${st.id}:${b}`), ks)) {
-        if (n >= 80 || miss >= 40) break;                         // a generator whose items are not a card's (tap, type, say) is left at once
+        if (n >= 100 || miss >= 40) break;                        // a generator whose items are not a card's (tap, type, say) is left at once
         let it; try { it = make(st.kind, key, { band: b, lex: LEX, stop: st.id }); } catch { miss++; continue; }
         if (!it || it.type !== 'mc' || it.say || it.fixed) { miss++; continue; }
         const right = it.options[it.answer], tk = `stop:${st.id}|${it.prompt}|${[...it.options].sort().join('|')}`;
@@ -469,13 +731,15 @@ function grow(cards, add, play) {
   }
 
   /* --- fill each level: always the small sources, then the pools in turn, then the generators --- */
-  const size = (c) => JSON.stringify(c).length + 8, count = {}, bytes = {};
+  const size = (c) => JSON.stringify(bodyOf(c)).length + 8, count = {}, bytes = {}, ctxTaken = new Set();
   for (const c of cards) if (c.level != null) { count[c.level] = (count[c.level] || 0) + 1; bytes[c.level] = (bytes[c.level] || 0) + size(c); }
   const take = (c) => {
     if (have.has(c.id) || leaks(c) || beeQuoted(c) || (c.body && c.kind !== 'game' && c.kind !== 'certificate' && bodies.has(norm(c.body)) && c.cite)) return false;
+    if (c.kind === 'context' && ctxTaken.has(c.play.opts[0])) return false;   // one line per word
+    if (!feedSafe(c)) return false;
     const L = c.level; if (L != null && ((count[L] || 0) >= BUDGET || (bytes[L] || 0) + size(c) > BYTES)) return false;
     const n0 = cards.length; add(c); if (cards.length === n0) return false;
-    have.add(c.id); if (c.body) bodies.add(norm(c.body)); if (L != null) { count[L] = (count[L] || 0) + 1; bytes[L] = (bytes[L] || 0) + size(c); }
+    have.add(c.id); if (c.body) bodies.add(norm(c.body)); if (c.kind === 'context') ctxTaken.add(c.play.opts[0]); if (L != null) { count[L] = (count[L] || 0) + 1; bytes[L] = (bytes[L] || 0) + size(c); }
     return true;
   };
   A.forEach(take);
@@ -501,9 +765,11 @@ export const DIR = join(APP, 'src', 'data', 'feed');
 export const GROUPS = [...Array.from({ length: 10 }, (_, i) => 'L' + (i + 1)), 'any'];
 export const groupOf = (c) => (c.level == null ? 'any' : 'L' + c.level);
 export const indexOf = (c) => Object.fromEntries(Object.entries({ id: c.id, kind: c.kind, level: c.level, bands: c.bands, topics: c.topics, key: c.key, play: c.play ? 1 : undefined }).filter(([, v]) => v !== undefined));
+/* a group holds a card's words; the ranking fields the index already carries (bands, topics, key) are not repeated */
+export const bodyOf = (c) => Object.fromEntries(Object.entries(c).filter(([k]) => k !== 'bands' && k !== 'topics' && k !== 'key'));
 export function files(cards) {
   const out = { 'index.json': JSON.stringify(cards.map(indexOf)) + '\n' };
-  for (const g of GROUPS) out[`g-${g}.json`] = JSON.stringify(Object.fromEntries(cards.filter((c) => groupOf(c) === g).map((c) => [c.id, c]))) + '\n';
+  for (const g of GROUPS) out[`g-${g}.json`] = JSON.stringify(Object.fromEntries(cards.filter((c) => groupOf(c) === g).map((c) => [c.id, bodyOf(c)]))) + '\n';
   return out;
 }
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

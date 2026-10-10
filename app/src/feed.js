@@ -71,7 +71,7 @@ export function due(k, now = Date.now()) {
 }
 
 /* a level-agnostic card says plainly what it is, rather than claiming a level it does not have */
-const PLAIN = { book: 'From the Library', line: 'A line of the hour', word: 'A word from the books', figure: 'From Figure Hunt', device: 'From the great speakers', game: 'A game to play' };
+const PLAIN = { book: 'From the Library', line: 'A line of the hour', word: 'A word from the books', figure: 'From Figure Hunt', device: 'From the great speakers', game: 'A game to play', creature: 'From the Collection' };
 
 const heardIt = (k, it) => {
   const key = it.key || '';
