@@ -23,8 +23,9 @@ const BUILD = process.env.BZ_BUILD || new URL('../build', import.meta.url).pathn
 if (!existsSync(BUILD)) { console.log('ears-ui: run `npm run build` first'); process.exit(1); }
 rmSync(SITE, { recursive: true, force: true }); mkdirSync(SITE); symlinkSync(BUILD, SITE + '/Bizzing_English');
 const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--bind', '127.0.0.1'], { cwd: SITE, stdio: 'ignore' });
-await new Promise((r) => setTimeout(r, 700));
 const BASE = `http://127.0.0.1:${PORT}/Bizzing_English/`;
+// wait until the server answers, not a fixed 700 ms (a slow start lost the race once in a full verify)
+for (let t = 0; t < 100; t++) { try { if ((await fetch(BASE)).ok) break; } catch {} await new Promise((r) => setTimeout(r, 100)); }
 const EXE = ['/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].find(existsSync);
 const browser = await chromium.launch({ executablePath: EXE, args: ['--autoplay-policy=no-user-gesture-required'] });
 let fail = 0, n = 0; const ok = (m, c, x = '') => { n++; if (!c) { fail++; console.log('✗', m, x); } };
