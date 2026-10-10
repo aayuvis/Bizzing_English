@@ -83,7 +83,7 @@ html[data-bz-dark] .stg {
 .stg .gb-sent { display: flex; gap: 10px; align-items: flex-start; width: 100%; min-height: 44px; padding: 8px 10px; border-radius: 10px; border: 2px solid transparent; background: transparent; color: var(--stg-ink); font: 500 16px/1.45 var(--read); text-align: left; cursor: pointer; }
 .stg .gb-sent:hover { border-color: color-mix(in srgb, var(--stg-gold) 60%, transparent); }
 .stg kbd { flex: none; font: 700 12px var(--mono); opacity: .6; padding-top: 3px; }
-.wordline { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; font: 600 clamp(18px, 2.4vw, 23px)/1.4 var(--read); }
+.wordline { display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 4px; min-height: 120px; font: 600 clamp(18px, 2.4vw, 23px)/1.4 var(--read); }
 .wtok { min-height: 44px; min-width: 44px; padding: 4px 9px; border-radius: 10px; border: 2px dashed transparent; background: transparent; color: var(--stg-ink); font: inherit; cursor: pointer; }
 .wtok:hover { border-color: color-mix(in srgb, var(--stg-gold) 50%, transparent); }
 .wtok.on { border: 2px solid var(--stg-gold); background: rgba(201, 138, 27, .2); }
