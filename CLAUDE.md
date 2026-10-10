@@ -237,8 +237,24 @@ to publish if the staged file count differs from the build.
    level 1, "begin" defined as Menachem Begin). Bee's cuts are the owner's call; the import filters them.
 5. **More:** the 5 partly-taught concepts on the coverage map (spelling patterns live in Bee; semicolons;
    planning and drafting; an original story; homophones); Eighty Days has no passage yet; a third whole book.
-6. **Home** shows three rings (right answers, passages read, said aloud or written — counts, never minutes);
-   every Home card opens its own topic (`test/ui.mjs` fails on a bare collection link).
+6. **Home's daily goal is Bee's three rings** (owner, 10 Oct: "Bee's metrics are relevant… and an inbuilt coach" —
+   supersedes the earlier "counts, never minutes"): **App time** (active minutes today from the family feed,
+   `family.js activityLog`), **Practise time** (real seconds inside practice only — a stop or check, a story's
+   exercises, a game round, Story Ears, an Inkwell case, the Podium or a Stage room, the desk, a Tools quiz or
+   typing — tab visible, child active in the last two minutes; `src/practice-time.js` → `k.days[date].prac`) and
+   **Right answers**, against per-child targets the grown-up sets (band defaults 15/10/10 · 20/10/15 · 30/15/20).
+   No numbers inside the rings, a second lap past the target; the card never calls time learning. The rings open
+   the Coach; the level strip along the foot stays the shell's link to the road. Every Home card opens its own
+   topic (`test/ui.mjs` fails on a bare collection link).
+7. **The Coach** (`#/coach`; Quill is the coach; `src/coach.js`, rulebook `src/data/coach-rules.js`,
+   `src/views/coach.js`): Bee's coach desk — Quill's one-line read from the misses only (`k.misses`, and
+   `k.slips` from games and tools), today's rings (→ `#/coach/days`, thirty days of bars against the target), the
+   traps as a chart (tap, or the arrow keys), the chosen trap as meet it → see it (the rule, a check in your head)
+   → watch it work → beat it (the stops that teach it). Hardcoded, offline, no model, no free text read. Every
+   item kind, stop and game category sorts into exactly one of 19 traps; the desk and the Stage are never a miss
+   (`UNMARKED`). An example that quotes is an exact substring of a held line and text. `test/coach.mjs` holds the
+   maps, the rules and the clock; `test/coach-ui.mjs` the screens. The Practice page and the grown-ups' report
+   name the top trap.
 
 ## Branch
 

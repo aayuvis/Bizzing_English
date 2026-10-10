@@ -9,6 +9,7 @@
 import { VERSION } from './store.js';
 import { STRANDS, strand, level } from './curriculum.js';
 import { readingStops, bookStops } from './reading.js';
+import { TARGET_DEFAULTS } from './data/coach-rules.js';
 
 export const uid = () => Math.random().toString(36).slice(2, 10);
 export const today = (t = Date.now()) => { const d = new Date(t); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
@@ -34,9 +35,10 @@ export function newKid(name, band, avatar) {
     contests: [],                                            // Elocution Contest: [{ at, n, band, rounds, total, place, of }] (numbers only)
     extras: { owned: [], wear: {} },                         // the Shop's Extras: bought ids, and what is worn per kind
     copy: {},                                                // copywork: line id → { at, ok }
-    days: {},                                                // date → { answers, right, stops } — counts, never minutes
+    days: {},                                                // date → { answers, right, stops, …, prac } — counts, and prac: seconds practising (practice-time.js)
     last: null,                                              // the last thing done, for the greeting and Continue
-    targets: { words: 10, pages: 1, made: 1 },               // daily ring targets, set by the grown-up: right answers, passages, things said or written
+    targets: { ...TARGET_DEFAULTS[[1, 2, 3].includes(band) ? band : 2], pages: 1, made: 1 },   // Bee's daily goal (coach.js), set by the grown-up: minutes on the app, minutes practising, right answers
+    slips: [],                                               // what games and tools missed, for the Coach: [{ g, c, n, at }] (coach.js recordSlips)
     prefs: { readAloud: band === 1 },
     milestones: [],                                          // named learning milestones reached (legendary avatars)
     writing: {},                                             // free writing: desk pieces, talk-about-it thoughts — on this device only, never in a backup

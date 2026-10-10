@@ -28,9 +28,15 @@ export function demoHousehold(now = Date.now()) {
     taught(k, id, t); bumpDay(k, 'stops', 1, t); bumpDay(k, 'right', 7, t); bumpDay(k, 'answers', 8, t);
     if (id.startsWith('rd-')) bumpDay(k, 'pages', 1, t);
   }
+  /* each stop's check went 7 of 8, so the runner recorded one miss in its mistakes deck — the Coach reads these */
+  for (const [id, ago] of plan) k.misses.push({ stop: id, at: now - ago * DAY + 4000 });
   for (const [id, ago] of plan.filter(([, a]) => a >= 9)) spacedCheck(k, id, 9, 10, now - (ago - 2) * DAY);   // proved two days later
   for (const [id, ago] of plan.filter(([, a]) => a >= 17)) spacedCheck(k, id, 8, 10, now - (ago - 10) * DAY); // and again a week on
   spacedCheck(k, 's1-adj', 5, 10, now - 3 * DAY);                                                              // one honest slip
+  for (let i = 0; i < 5; i++) k.misses.push({ stop: 's1-adj', at: now - 3 * DAY + i * 9000 });                   // …its five wrong answers, in the deck
+  k.slips = [{ g: 'rush', c: 'fronted', n: 2, at: now - 12 * DAY }, { g: 'rush', c: 'list', n: 1, at: now - 12 * DAY }, { g: 'builder', c: 'clause', n: 2, at: now - 9 * DAY }];   // her Sentence Studio rounds
+  /* today, so far: a few right answers in a lesson, nine minutes of it practising (practice-time.js) */
+  bumpDay(k, 'right', 6, now); bumpDay(k, 'answers', 8, now); bumpDay(k, 'prac', 9 * 60, now);
   for (const w of ['heartily', 'scamper', 'refreshment', 'insatiable', 'curiosity', 'satiable', 'banks', 'scrumptious', 'grovelling', 'mastiffs']) addToBank(k, w, 'demo');
   k.stops['s3-main'] = { passed: false, best: 0, tries: 0, step: 2, at: now - DAY };                         // an unfinished lesson: Continue returns to it
   k.games = { builder: { best: 14, plays: 3 }, rush: { best: 11, plays: 2 } };
@@ -51,7 +57,9 @@ export function demoHousehold(now = Date.now()) {
   /* the family feed's sessions for the report's Time: one session on each day she played, its minutes from
      what she did that day (about a minute and a half a stop) */
   const days = {}; for (const [, ago] of plan) days[ago] = (days[ago] || 0) + 1;
-  setDemoActivity(Object.entries(days).map(([ago, n]) => { const d = new Date(now - ago * DAY); return { a: 'english', d: today(d.getTime()), t: 17 * 60 + 10, m: 6 + n * 4, who: 'Kavya' }; }));
+  for (const [ago, n] of Object.entries(days)) bumpDay(k, 'prac', (4 + n * 3) * 60, now - ago * DAY);   // of which practising: the lessons and checks themselves
+  setDemoActivity([...Object.entries(days).map(([ago, n]) => { const d = new Date(now - ago * DAY); return { a: 'english', d: today(d.getTime()), t: 17 * 60 + 10, m: 6 + n * 4, who: 'Kavya' }; }),
+    { a: 'english', d: today(now), t: 16 * 60 + 30, m: 13, who: 'Kavya' }]);   // and today's session so far (the App ring)
   setDemo(h); setDemoLedger(L); setDemoCoins(L.reduce((a, x) => a + x.n, 0));
   return h;
 }

@@ -26,6 +26,7 @@ import { loadDevice } from '../store.js';
 import { speak, stop as stopVoice, canSpeak } from '../voice.js';
 import { sfx, duck } from '../sound.js';
 import { bumpDay } from '../model.js';
+import { recordSlips } from '../coach.js';
 import { avatarOf } from './pages.js';
 import MAN from '../data/voice-manifest.json';
 
@@ -294,7 +295,7 @@ function pickCard(i) {
   stopAudio();
   if (ng.phase === 'ask') { sfx('tap'); render(); return; }                       // one more picture placed in the order
   const ok = ng.phase === 'right';
-  sfx(ok ? 'right' : 'wrong'); bumpDay(kid(), 'answers', 1); if (ok) bumpDay(kid(), 'right', 1);
+  sfx(ok ? 'right' : 'wrong'); bumpDay(kid(), 'answers', 1); if (ok) bumpDay(kid(), 'right', 1); else recordSlips(kid(), 'ears', q.kind || 'listen');   // the Coach reads what slipped
   render();
   requestAnimationFrame(() => document.querySelector('.se-cards')?.classList.add(ok ? 'se-pop' : 'se-shake'));
   if (ok) { clearTimeout(adv); adv = setTimeout(() => { if (R() === r && r.g.phase === 'right' && r.g.results.length === ng.results.length) nextQ(); }, 1200); return; }

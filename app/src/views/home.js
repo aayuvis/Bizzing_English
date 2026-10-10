@@ -24,6 +24,8 @@ import { save, render, pay } from '../app.js';
 import { sfx } from '../sound.js';
 import { storyCard } from './stories.js';
 import { avatarOf } from './pages.js';
+import { todayMetrics, targets, ringsSVG, RING_COL, fmtMins, allClosed } from '../coach.js';
+import { activityLog } from '../family.js';
 
 /* each tip opens the exact place that practises it, and says so */
 const TIPS = [
@@ -41,12 +43,14 @@ const TIPS = [
 const hourIdx = (n) => Math.floor(Date.now() / 36e5) % Math.max(1, n);
 export const greetHello = () => { const h = new Date().getHours(); return h < 12 ? 'Good morning,' : h < 17 ? 'Good afternoon,' : 'Good evening,'; };
 
-function ringSVG(parts) {
-  const R = [44, 33, 22], C = (r) => 2 * Math.PI * r;
-  return `<svg viewBox="0 0 104 104" aria-hidden="true">${parts.map((p, i) => {
-    const c = C(R[i]), f = Math.min(1, p.of ? p.n / p.of : 0);
-    return `<circle cx="52" cy="52" r="${R[i]}" fill="none" stroke="${p.col}" stroke-opacity=".18" stroke-width="9"/><circle cx="52" cy="52" r="${R[i]}" fill="none" stroke="${p.col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 52 52)"/>`;
-  }).join('')}</svg>`;
+/* the ring card's body: one link to the Coach (the shell's foot below it stays the level strip) */
+export function ringCard(k) {
+  const m = todayMetrics(k, activityLog()), t = targets(k), done = allClosed(m);
+  const line = (i, label, n, of, show, unit) => `<li data-ring-line="${i}"><i style="background:${RING_COL[i][0]}"></i><span class="rg-l">${esc(label)}</span><span class="rg-v">${n >= of ? `<b>${show(n)}</b> — goal of ${show(of)} done` : `<b>${show(n)}</b> / ${show(of)}`}</span><span class="sr"> ${esc(unit)}</span></li>`;
+  return `<a class="rings" href="#/coach" data-coach-open title="Coach speaks — what Quill makes of today">${ringsSVG(104, [m.pApp, m.pPrac, m.pWords])}
+    <span class="rg-body"><span class="rg-k">Daily goal${done ? ` ${icon('check')}` : ''}</span><ul>
+      ${line(0, 'App time', m.app, m.tApp, fmtMins, 'minutes')}${line(1, 'Practise time', m.prac, m.tPrac, fmtMins, 'minutes')}${line(2, 'Right answers', m.words, t.words, String, 'right answers')}</ul>
+    <span class="rg-go">${done ? 'All three closed — ' : ''}Coach speaks ${icon('next')}</span></span></a>`;
 }
 
 export function bookOf(k) {
@@ -92,12 +96,10 @@ export function homeView() {
   const tip = TIPS[hourIdx(TIPS.length)];
   /* the line's own story, when a passage of that book is on the shelf for this child: open it, not the shelf */
   const lineStory = line && PASSAGES.find((x) => x.work === line.work && shippable(x) && x.band <= k.band);
-  const t = k.targets;
-  /* three rings, every day: right answers, passages read, and one thing made — said on the Stage or written at
-     the desk. Counts of work, never minutes (today only: nothing carries over, so it is not a streak). */
-  const parts = [{ n: d.right || 0, of: t.words, col: '#C2410C', label: 'right answers' }, { n: d.pages || 0, of: t.pages, col: '#0E6F6A', label: 'passages read' },
-    { n: d.made || 0, of: t.made ?? 1, col: '#6C4FE0', label: 'said aloud or written' }];
-  const ring = `<div class="rings">${ringSVG(parts)}<ul>${parts.map((x) => `<li><i style="background:${x.col}"></i><span>${x.of && x.n >= x.of ? `<b>${x.n}</b> ${esc(x.label)} — today’s ${x.of} done` : `<b>${x.n}</b> / ${x.of} ${esc(x.label)}`}</span></li>`).join('')}</ul></div>`;
+  /* Bee's daily goal (owner, 10 Oct): App time, Practise time and Right answers against the grown-up's targets —
+     three nested rings, no numbers inside, a second lap past the target. A daily goal, never learning (coach.js).
+     The rings and their lines open the Coach; the level strip along the foot is the shell's own, a separate link. */
+  const ring = ringCard(k);
   const page = home({
     greet: { mascot: avatarOf(k), hello: greetHello(), name: k.name, line: greetLine(k, nx) },   // the child's own avatar, as in Bee; a tap opens the deck
     ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },

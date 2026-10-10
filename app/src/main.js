@@ -46,6 +46,8 @@ import { demoHousehold } from './demo.js';
 import { readingStop } from './reading.js';
 import { isDemo } from './store.js';
 import { due } from './mastery.js';
+import { coachView, coachDaysView, COACH_ACTIONS, coachKey } from './views/coach.js';
+import { startPracticeClock, practising } from './practice-time.js';
 
 const DEMO = /[?&]demo\b/.test(location.search);
 if (DEMO) S.h = demoHousehold();
@@ -58,7 +60,7 @@ const TABS = [
   { id: 'play', label: 'Play', icon: 'play', href: '#/play', color: '#3D7DF0' },
   { id: 'feed', label: 'My Feed', icon: 'feed', href: '#/feed', color: '#6C4FE0' },
 ];
-const TAB_OF = { ears: 'play', home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', inkwell: 'play', feed: 'feed' };
+const TAB_OF = { ears: 'play', home: 'home', atlas: 'atlas', stop: 'atlas', practice: 'home', coach: 'home', library: 'library', book: 'library', read: 'library', story: 'library', whole: 'library', word: 'library', bank: 'library', stage: 'tools', recordings: 'tools', desk: 'tools', tools: 'tools', play: 'play', inkwell: 'play', feed: 'feed' };
 
 /* ---------- routing ---------- */
 function parse() {
@@ -122,6 +124,7 @@ function screen() {
   if (!kid()) return r.name === 'welcome' && p[1] === 'you' ? onboardView() : r.name === 'privacy' ? privacyView() : r.name === 'help' ? helpView() : landingView();
   switch (r.name) {
     case 'home': return homeView();
+    case 'coach': return p[1] === 'days' ? coachDaysView() : coachView();
     case 'atlas': return p[1] ? strandView(p[1]) : atlasView();
     case 'stop': case 'practice': return S.run ? runnerView() : practiceView();
     case 'read': return readerView();
@@ -191,7 +194,7 @@ function doRender() {
 onRender(doRender);
 
 /* ---------- events ---------- */
-const ACTIONS = { ...HOME_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...PLACE_ACTIONS, 
+const ACTIONS = { ...HOME_ACTIONS, ...COACH_ACTIONS, ...DESK_ACTIONS, ...SPEAK_ACTIONS, ...STORY_ACTIONS, ...RUN_ACTIONS, ...READ_ACTIONS, ...STAGE_ACTIONS, ...PAGE_ACTIONS, ...OB_ACTIONS, ...PLACE_ACTIONS, 
   'sheet-close': () => { S.sheet = S.certNext ? { kind: 'cert', id: S.certNext } : null; S.certNext = null; if (S.route.name === 'settings') return go('#/home'); render(); },
 };
 document.addEventListener('click', (e) => {
@@ -239,7 +242,7 @@ document.addEventListener('keydown', (e) => {
   if (S.route.name === 'grownups' && /^[0-9]$|^Backspace$/.test(e.key) && document.querySelector('.pinpad') && !/INPUT|TEXTAREA/.test(e.target.tagName)) { PAGE_ACTIONS.pin(e.key === 'Backspace' ? '⌫' : e.key); return; }
   if (e.key === 'Enter' && e.target.id === 'ink-name') { ACTIONS['ink-name-go']?.(); e.preventDefault(); return; }
   if (/INPUT|SELECT/.test(e.target.tagName)) return;
-  if (EARS?.earsKey(e) || POD?.podiumKey(e) || INK?.inkKey(e) || TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
+  if (coachKey(e) || EARS?.earsKey(e) || POD?.podiumKey(e) || INK?.inkKey(e) || TOOLS?.toolsKey(e) || runKey(e) || placeKey(e) || readKey(e) || PLAY?.playKey(e) || storyKey(e)) e.preventDefault();
 });
 document.addEventListener('visibilitychange', () => document.documentElement.classList.toggle('hidden', document.hidden));
 
@@ -254,6 +257,7 @@ bindShell({
 
 window.addEventListener('hashchange', () => { if (parse().name === 'settings') { S.sheet = { kind: 'settings' }; } route().then(() => { if (parse().name === 'settings') { S.sheet = { kind: 'settings' }; render(); } }); });
 startActivity(() => kid()?.name);
+startPracticeClock({ kid, isPractising: () => practising(S.route, S.run, S.ink), save });   // the Practise ring: seconds inside practice only, tab visible, child active
 if (!location.hash) location.replace(kid() ? '#/home' : '#/welcome');
 route().then(() => { if (parse().name === 'settings') { S.sheet = { kind: 'settings' }; render(); } });
 if ('serviceWorker' in navigator && !DEMO && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});

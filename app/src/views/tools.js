@@ -22,6 +22,7 @@ import { MORE_LINES } from '../data/lines-more.js';
 import WRITING from '../data/writing.js';
 import { shippedLines, shippable, cleared, work, loadPassages, passageText } from '../reading.js';
 import { addToBank, bumpDay } from '../model.js';
+import { recordSlips } from '../coach.js';
 import { sayWord, speak, stop as stopVoice } from '../voice.js';
 import { sfx } from '../sound.js';
 
@@ -135,7 +136,7 @@ function answer(i) {
   const r = S.run; if (r?.mode !== 'tool' || !r.items || r.state) return;
   const it = r.items[r.qi]; if (!it || i < 0 || i >= it.options.length) return;
   const ok = i === it.answer, k = kid(); r.state = { pick: i, ok };
-  bumpDay(k, 'answers'); if (ok) { bumpDay(k, 'right'); r.right++; } else r.missed.push(r.tool === 'vocab' ? it.word : it.phrase);
+  bumpDay(k, 'answers'); if (ok) { bumpDay(k, 'right'); r.right++; } else { r.missed.push(r.tool === 'vocab' ? it.word : it.phrase); recordSlips(k, r.tool, 'miss'); }   // the Coach reads what slipped (no word kept)
   if (r.tool === 'vocab') { const v = vocProg(k); (ok ? v.known : v.miss)[it.word] = Date.now(); if (ok) addToBank(k, it.word, 'Vocabulary'); if (ok) pay('answer', `Vocabulary: ${it.word}`); }
   if (r.tool === 'idioms' && ok) pay('answer', `Idioms: ${it.phrase}`);
   sfx(ok ? 'right' : 'wrong'); save(); render();
@@ -294,6 +295,7 @@ function tyFinish(r) {
   if (t.mode === 'test') { st.tests = (st.tests || 0) + 1; t.best = t.wpm > (st.bestWpm || 0); if (t.best) st.bestWpm = t.wpm; if (t.acc > (st.bestAcc || 0)) st.bestAcc = t.acc; }
   else { st.lessons[t.lesson] = Math.max(st.lessons[t.lesson] || 0, t.acc); st.sessions = (st.sessions || 0) + 1;
     if (tyPays(st, t.lesson, t.acc)) { st.paid[t.lesson] = Date.now(); t.paid = true; pay('stop', `Typing lesson ${t.n} at ${t.acc}%: ${t.title}`); } }
+  if (t.acc < TY_PASS) recordSlips(k, 'typing', 'keys');   // the Coach reads a lesson or test below the pass line
   sfx('finish'); save(); render();
 }
 /* a hidden tab pauses the clock (lessons and the test); the next key carries on */

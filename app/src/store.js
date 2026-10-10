@@ -9,7 +9,7 @@
    Versioned: a change of shape adds a vN_to_vN+1 step to STEPS; an old step is never edited.
    ?demo holds a sample household in memory: nothing is read from or written to storage. */
 
-export const VERSION = 6;
+export const VERSION = 7;
 const KEY = 'bizzing-english.household';
 const DEV = 'bizzing-english.device';
 
@@ -43,6 +43,15 @@ const STEPS = {
      numbers and ids only. A typed speech plan is free writing and lives apart in k.writing.podium (no backup
      carries k.writing), cleared when the tournament ends. */
   5: (h) => { for (const k of h.kids || []) if (k.podium === undefined) k.podium = null; h.v = 6; return h; },
+  /* v7: the Coach and Bee's daily goal (coach.js, practice-time.js) — k.targets gains `app` and `prac` (minutes a
+     day on the app and practising), set by the band's default and kept beside the right-answers target the
+     grown-up already set; k.slips [{ g, c, n, at }] holds what games and tools missed (ids and counts only).
+     Practice seconds live in k.days[date].prac, which needs no step. */
+  6: (h) => {
+    const DEF = { 1: { app: 15, prac: 10 }, 2: { app: 20, prac: 10 }, 3: { app: 30, prac: 15 } };
+    for (const k of h.kids || []) { const d = DEF[k.band] || DEF[2]; k.targets = { ...(k.targets || {}) }; if (!(k.targets.app > 0)) k.targets.app = d.app; if (!(k.targets.prac > 0)) k.targets.prac = d.prac; if (!(k.targets.words > 0)) k.targets.words = 10; if (!Array.isArray(k.slips)) k.slips = []; }
+    h.v = 7; return h;
+  },
 };
 
 export function migrate(h) {

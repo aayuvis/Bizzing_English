@@ -26,6 +26,7 @@ import { WORKS, PASSAGES } from '../data/library.js';
 import { readingStop } from '../reading.js';
 import { search as lexSearch, loadLexicon } from '../lexicon.js';
 import { sfx } from '../sound.js';
+import { topTrap, targets, TARGET_MAX } from '../coach.js';
 
 const ctx = (k) => ({ owned: k.owned, worlds: k.worlds, plan: S.h.parent.plan, milestones: k.milestones, who: k.name });
 const avImg = (id) => byId(id)?.art || 'avatars/tortoise.webp';
@@ -130,7 +131,14 @@ export function practiceView() {
   return pageHead({ title: 'Practice', sub: 'proving it on a later day', back: { label: 'Home', href: '#/home' } }) + `<div class="grid2">
     <div class="card pin stack"><h3>Check what you know</h3><p style="margin:0">${d.length ? `${plural(d.length, 'stop')} ${d.length === 1 ? 'is' : 'are'} ready to prove. A stop counts as learned only when you get it right on a later day than you learned it.` : 'Nothing is due yet. Stops you pass today can be proved from tomorrow.'}</p>
       ${d.length ? btn('Start the check', 'practice-check', { ic: 'check' }) : link('Continue the journey', '#/continue', { ic: 'next', cls: 'out' })}</div>
+    ${coachCard(k)}
     <div class="card stack"><h3>Your mistakes deck</h3>${miss.length ? `<p style="margin:0">These stops had a slip. Going back over one is how it sticks.</p><div class="stoplist">${miss.map((id) => { const s = stopById(id) || readingStop(id); return `<a class="stoprow" href="#/stop/${id}"><span class="st">${icon('undo')}</span><span><b>${esc(s.title)}</b><small>${STEP[k.mastery[id]?.step || 0]}</small></span><span>${icon('next')}</span></a>`; }).join('')}</div>` : '<p class="muted" style="margin:0">No slips to go back over.</p>'}</div></div>`;
+}
+
+/* the Coach, named by the trap that catches this child most (coach.js) — or Quill's kind "nothing yet" */
+function coachCard(k) {
+  const t = topTrap(k);
+  return `<div class="card stack" data-coach-card><h3>Your coach</h3><p style="margin:0">${t ? `What catches you most: <b>${esc(t.label)}</b> — ${plural(t.n, 'slip')} in the last thirty days. Quill has the rule, a check to run in your head, and the stops that teach it.` : 'Nothing is catching you yet. When an answer slips, Quill reads it and shows you the rule behind it.'}</p>${link('Coach speaks', '#/coach', { ic: 'next', cls: 'out' })}</div>`;
 }
 
 export function logView() {
@@ -196,7 +204,7 @@ export function grownupsView() {
   const cards = h.kids.map((k) => {
     const stops = STRANDS.map((s) => [s, stopsOf(s.id).filter((x) => k.stops[x.id]?.passed).length]);
     const lapses = Object.entries(k.mastery).filter(([, r]) => r.lapses).sort((a, b) => b[1].lapses - a[1].lapses).slice(0, 3);
-    const help = helpNext(h, k), certs = certificates(k);
+    const help = helpNext(h, k), certs = certificates(k), trap = topTrap(k);
     const tries = Object.entries(k.stage).flatMap(([id, a]) => a.map((t) => ({ ...t, id }))).sort((a, b) => b.at - a.at).slice(0, 5);
     const pieces = Object.entries(k.writing || {}).filter(([id, v]) => Array.isArray(v)).flatMap(([id, a]) => a.map((p, i) => ({ ...p, id, i }))).sort((a, b) => b.at - a.at).slice(0, 4);
     return `<section class="card stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:56px;height:56px"><div><h3 style="margin:0">${esc(k.name)}</h3><small class="muted">${BANDS[k.band - 1].age}</small></div></div>
@@ -204,11 +212,12 @@ export function grownupsView() {
       <p class="note" style="margin:0"><b>Time</b> is active minutes from the family feed — it never counts as learning. <b>Progress</b> and <b>mastery</b> count only right answers, and mastery only on a later day.</p>
       <div class="stoplist">${stops.map(([s, n]) => `<div class="stoprow"><span class="st" style="color:${s.colour}">${icon(s.icon)}</span><span><b>${esc(s.title)}</b><small>${n} of ${stopsOf(s.id).length} stops · ${s.levels.filter((l) => levelDone(k, s.id, l.n)).length} levels</small></span><span></span></div>`).join('')}</div>
       <div><b>What to help with next</b><ul class="helplist">${help.map((x) => `<li><a href="${x.href}">${esc(x.text)}</a></li>`).join('')}</ul></div>
+      <p style="margin:0" data-coach-line><b>Coach</b> — ${trap ? `the trap that catches ${esc(k.name)} most is <b>${esc(trap.label)}</b>: ${plural(trap.n, 'slip')} in the last thirty days.${k.id === h.active ? ' <a href="#/coach">See the rule and the stops that teach it</a>.' : ''}` : `nothing is catching ${esc(k.name)} yet — no answer has slipped in the last thirty days.`}</p>
       ${certs.length ? `<div><b>Certificates</b> — ${certs.length} earned: ${certs.slice(0, 4).map((c) => `<a href="#/certificate/${c.id}">${esc(c.title)}</a>`).join(' · ')}${certs.length > 4 ? ` · <a href="#/me">all ${certs.length}</a>` : ''}</div>` : ''}
       ${tries.length ? `<div><b>Speaking</b> — the app measured time, pace and pauses; how well it was said is yours to judge (1 not yet · 2 getting there · 3 good · 4 excellent):<ul class="ledger">${tries.map((t) => `<li><span>${new Date(t.at).toLocaleDateString()} · ${esc(stopById(t.id)?.title || t.id)}${t.side ? ` (${t.side})` : ''} · ${Math.round(t.secs)}s${t.wpm ? ` · ${t.wpm} wpm` : ''} · ${t.pauses} pauses</span><span class="row">${[1, 2, 3, 4].map((v) => `<button class="bz-chip" data-act="rubric" data-arg="${k.id}:${t.id}:${t.at}:${v}" aria-pressed="${t.rubric === v}"${t.rubric === v ? ' aria-current="page"' : ''}>${v}</button>`).join('')}</span></li>`).join('')}</ul></div>` : ''}
       ${pieces.length ? `<div><b>Writing</b> — read it, then judge it (1–4). The app only counted sentences and words; it never marks writing.${pieces.map((p) => `<details class="piece"><summary>${new Date(p.at).toLocaleDateString()} · ${esc(stopById(p.id)?.title || p.id)}${p.prompt ? ` · ${esc(p.prompt)}` : ''}${p.rubric ? ` · judged ${p.rubric}` : ''}</summary><div class="passage" style="font-size:16px">${p.parts.map((x) => `<p>${esc(x)}</p>`).join('')}</div><div class="row">${[1, 2, 3, 4].map((v) => `<button class="bz-chip" data-act="wrubric" data-arg="${k.id}:${p.id}:${p.i}:${v}" aria-pressed="${p.rubric === v}"${p.rubric === v ? ' aria-current="page"' : ''}>${v}</button>`).join('')}</div></details>`).join('')}</div>` : ''}
       <div class="setrow"><label>Age band</label><div class="seg">${BANDS.map((b) => `<button data-act="kid-band" data-arg="${k.id}:${b.id}" aria-pressed="${k.band === b.id}">${b.label}</button>`).join('')}</div></div>
-      <div class="setrow"><label>Daily rings<small>right answers · passages read · things said aloud or written</small></label><div class="row">${['words', 'pages', 'made'].map((f) => `<label class="sr" for="t-${k.id}-${f}">${f}</label><input id="t-${k.id}-${f}" type="number" min="0" max="60" value="${k.targets[f] ?? 1}" data-act="kid-target" data-arg="${k.id}:${f}" class="field" style="width:76px;min-height:44px;padding:6px 8px">`).join('')}</div></div>
+      <div class="setrow" data-targets><label>Daily goal<small>minutes on the app · minutes practising · right answers — a daily goal, never a measure of learning</small></label><div class="row">${[['app', 'App minutes'], ['prac', 'Practise minutes'], ['words', 'Right answers']].map(([f, l]) => `<label class="tgt" for="t-${k.id}-${f}"><small>${l}</small><input id="t-${k.id}-${f}" type="number" min="1" max="${TARGET_MAX[f]}" value="${targets(k)[f]}" data-act="kid-target" data-arg="${k.id}:${f}" class="field" style="width:84px;min-height:44px;padding:6px 8px"></label>`).join('')}</div></div>
       <div class="setrow"><label>Read aloud automatically</label><button class="switch" role="switch" aria-checked="${!!k.prefs.readAloud}" data-act="kid-readaloud" data-arg="${k.id}" aria-label="Read aloud"></button></div>
       <div class="row">${btn(`Delete ${k.name}`, 'kid-delete', { arg: k.id, cls: 'out small', ic: 'close' })}</div></section>`;
   }).join('');
@@ -329,7 +338,7 @@ export async function onChange(t) {
   const act = t.dataset.act, a = t.dataset.arg;
   if (act === 'dev-volume') setDevice({ volume: +t.value });
   if (act === 'rename') { const k = kid(); const v = t.value.trim().slice(0, 20); if (v) { k.name = v; save(); } }
-  if (act === 'kid-target') { const [id, f] = a.split(':'); const k = S.h.kids.find((x) => x.id === id); k.targets[f] = Math.max(0, Math.min(60, +t.value || 0)); save(); }
+  if (act === 'kid-target') { const [id, f] = a.split(':'); const k = S.h.kids.find((x) => x.id === id); if (!k || !TARGET_MAX[f]) return; k.targets = { ...k.targets, [f]: Math.max(1, Math.min(TARGET_MAX[f], Math.round(+t.value) || 1)) }; save(); }
   if (act === 'restore' && t.files?.[0]) {
     try { const f = JSON.parse(await t.files[0].text()); const names = (f.kids || []).map((_, i) => prompt(`First name for child ${i + 1}?`) || `Reader ${i + 1}`);
       if (restoreBackup(S.h, f, names)) { save(); toast('Restored'); go('#/home'); } else toast('That file is not a Bizzing English backup'); } catch { toast('That file could not be read'); }

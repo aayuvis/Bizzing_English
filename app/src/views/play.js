@@ -32,6 +32,7 @@ import { field, rivalArt } from '../contest.js';
 import { stopById } from '../curriculum.js';
 import { sfx, music, stopMusic } from '../sound.js';
 import { bumpDay } from '../model.js';
+import { recordSlips } from '../coach.js';
 import { avatarOf } from './pages.js';
 import { ownsMode, buyMode, MODE_PRICE, modeWhat } from '../modes.js';
 import { balance, spend } from '../family.js';
@@ -229,7 +230,7 @@ function endRound() {
   const log = roundLog(g), had = rec.seen || {}, met = new Set(log.filter((x) => x.key && !had[x.key]).map((x) => x.key)).size;
   const mem = memRecord(memOf(rec), log, now); rec.seen = mem.seen; rec.rounds = mem.plays; rec.plays = (rec.plays || 0) + 1;   // a round played (the Game On medal counts these)
   const acc = accuracy(g);
-  bumpDay(k, 'right', acc.right); bumpDay(k, 'answers', acc.total);
+  bumpDay(k, 'right', acc.right); bumpDay(k, 'answers', acc.total); recordSlips(k, r.id, g.misses, now);   // the Coach reads what slipped
   r.last = { score: g.score, acc, met, earned: r.challenge ? 0 : roundPay(g), duel: g.kind === 'duel' ? { ...duelTally(g), rival: g.rival } : null, speed: g.speed || 0 };
   r.run = runAdd(r.run, g, met);
   save();

@@ -162,6 +162,12 @@ html.bz-playing .scene * { animation-play-state: paused !important; }
   .stg-go { min-width: 0; width: min(100%, 280px); }
   .stg .opt { min-height: 46px; font-size: 15.5px; padding: 8px 12px; }
   .stg .finish img { width: 60px; height: 60px; }
+  /* Figure Hunt on a phone: a long line's words stay tappable (≥ 40 px) and above the tab bar */
+  .wordline { gap: 2px; font-size: 16px; line-height: 1.25; }
+  .wtok { min-height: 40px; min-width: 40px; padding: 2px 5px; }
+  .stg .gb-passage { gap: 3px; padding: 4px; }
+  .stg .gb-sent { min-height: 40px; padding: 4px 6px; font-size: 13.5px; line-height: 1.3; gap: 6px; }
+  .stg .gb-sent kbd { display: none; }   /* the number keys still work; on a phone the finger taps */
 }
 .stg-main > .gb-rival-note { font-size: 11.5px; font-weight: 500; opacity: .92; border-radius: 12px; }
 .gb-rvline { font-weight: 800; color: #ffd08a; }
