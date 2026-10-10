@@ -540,6 +540,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await go(page, '#/shop/avatars');
   ok('the demo shop’s coin history matches its balance and names what each coin was for', await page.evaluate(() => document.querySelectorAll('.ledger li').length > 0 && /—/.test(document.querySelector('.ledger li').textContent)));
   await go(page, '#/home');
+  ok('the Tip card never ends on doubled punctuation ("?.")', !/[?!.]\./.test(await page.textContent('.bz-tip, [data-bz=tip]').catch(() => '')));
   ok('the greeting never doubles a question mark', !/\?”?\?/.test(await page.textContent('.bz-greet')));
   ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
   ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));

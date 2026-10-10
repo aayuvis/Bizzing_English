@@ -105,7 +105,7 @@ export function homeView() {
     ring: { html: ring, foot: { kicker: 'Your level', title: headline(k), href: bestLevel(k) ? `#/atlas/${bestLevel(k).s.id}` : st ? `#/atlas/${st.strand}` : '#/atlas' } },
     hour: { kicker: 'Word of the hour', title: hw || '—', sub: `${HOUR[hw] || ''}${p && (p.words || []).includes(hw) ? ` — from “${p.title}”, in ${w?.title || 'your book'}.` : ''} Tap for its origin and how to say it.`, icon: 'key', href: `#/word/${encodeURIComponent(hw || '')}` },
     next, second,
-    tip: { kicker: 'Tip', text: `${tip[0]} Try it: ${tip[2]}.`, href: tip[1] },
+    tip: { kicker: 'Tip', text: `${tip[0]} Try it: ${tip[2]}${/[.?!]$/.test(tip[2]) ? "" : "."}`, href: tip[1] },
     quote: line && { kicker: 'Line of the hour', text: line.text, who: `${/ in /.test(line.who) || !lw || line.who.includes(lw.title) ? line.who : `${line.who}, ${lw.title}`}${lw ? (line.who.includes(lw.author) ? `, ${lw.year}` : ` · ${lw.author}, ${lw.year}`) : ''}${lineStory ? ' — hear the story' : ' — about the book'}`, href: lineStory ? `#/story/${lineStory.id}` : `#/book/${line.work}` },
     foot: `<a href="#/privacy">Privacy</a> · Nothing leaves this device · Bizzing™ is a trademark of its owner`,
   });
