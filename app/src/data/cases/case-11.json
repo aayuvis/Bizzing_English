@@ -99,24 +99,24 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "The last calling card says only: *\"Now read it all.\"* The Ledger has ten words and one empty line. At midnight, when the Clock Tower strikes twelve, the agency must enter the Seal Room, locked since autumn, where a fresh card already waits. On Monday at nine, the Library's future goes to a vote. Five suspects. One last word.",
+    "text": "Ten words in the Ledger, and one empty line. The last calling card says only: *\"Now read it all.\"* At midnight, when the Clock Tower strikes twelve, the agency goes into the Seal Room, locked since autumn, where a fresh card is waiting. On Monday at nine, the Library's future goes to a vote. Five suspects. One word left.",
     "readAloud": false
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The agency, Saturday 21 March, morning.",
+      "place": "Saturday, 21 March. Fog on the harbour; the masts are only pencil lines. Up comes the dumbwaiter.",
       "picture": "Fog on the harbour; the masts are only pencil lines. The dumbwaiter rattles up. On the plate: two cinnamon buns and a small cream card with a perfect blot. Tam, at the speaking-tube.",
       "lines": [
         {
           "who": "TAM",
-          "text": "wasn't me! i only put the buns in!"
+          "text": "Wasn't me! I only put the buns in."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "Close on the card.",
+      "place": "Close on the card. Four words, and a perfect blot.",
       "picture": "Four words. The whole agency leans in so far that Felix's hat falls off.",
       "lines": [
         {
@@ -131,7 +131,7 @@
     },
     {
       "panel": 3,
-      "place": "The Casebook Wall.",
+      "place": "The Casebook Wall. Eleven cases, a year of red string, and one empty line.",
       "picture": "Eleven pinned cases, red string, a ribbon-tied notebook: the Blot Ledger, one line empty. Behind the wall, the painted Reading Door, shut. The child's hand hovers over the Ledger with a pen.",
       "lines": [
         {
@@ -142,23 +142,23 @@
     },
     {
       "panel": 4,
-      "place": "No. 9 Lantern Row.",
+      "place": "No. 9 Lantern Row. In the fog below the window, someone in a green coat stops, listens, and walks on.",
       "picture": "Ada at the window, cello case open, holding a bundle of old letters tied with a faded ribbon. Semicolon on her shoulder. Down in the foggy street, unnoticed, a tall figure in a green coat stops under the window, listens, and walks on.",
       "lines": [
         {
           "who": "ADA",
-          "text": "I have kept these for forty years. I think, this morning, I must let someone else read them."
+          "text": "Forty years I've kept these. This morning, I think, they want reading."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "The Great Library's door at dusk",
+      "place": "The Great Library's door at dusk. The Clock Tower says six. Nobody looks up at the motto. Nobody ever does.",
       "picture": "the carved motto above it catching the last light. Across Lamplit Row, the Clock Tower's hands stand at six. The detectives run underneath the motto without looking up. Hold on the motto for one beat after they've gone.",
       "lines": [
         {
           "who": "QUILL",
-          "text": "Six hours to midnight. Walk. Read. Don't rush."
+          "text": "Six hours to midnight. Walk. You read better walking."
         }
       ]
     }
@@ -599,7 +599,7 @@
       "talk": [
         {
           "who": "FELIX",
-          "text": "Footnote: she said 'she'. And 'her teacup'. And 'gone a long time'."
+          "text": "Footnote: she said *she*. Footnote to the footnote: nobody keeps a teacup for a stranger."
         }
       ],
       "pinnable": true
@@ -1385,7 +1385,7 @@
     "talk": [
       {
         "who": "STAGE",
-        "text": "(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away and looks enormously relieved. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?)"
+        "text": "(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away as if they had gone hot. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?)"
       }
     ]
   },
@@ -1480,11 +1480,11 @@
   "reveal": [
     {
       "who": "NELL",
-      "text": "*(quietly)* Hunch-o-meter: zero. Evidence: everything. *(To the child)* Go on. You found it."
+      "text": "*(quietly)* No hunch this time. *(To the child.)* You found it. You say it."
     },
     {
       "who": "STAGE",
-      "text": "(Asha reads the timeline: three names, one grey plait. Dev holds up NAVE, then turns it round.)"
+      "text": "(Asha reads down her timeline: Olive Dean, Elodie Van, Delia Nove. Three names. One grey plait. Dev holds up his notebook: NAVE. He turns it round.)"
     },
     {
       "who": "DEV",
@@ -1492,7 +1492,7 @@
     },
     {
       "who": "QUILL",
-      "text": "And the voice. Today: \"I shall go forthwith.\" Forty years ago: \"I am going away, and I am going forthwith.\" Same word. Same long dash."
+      "text": "This afternoon: \"I shall go forthwith.\" Forty years ago, in a letter: \"I am going away, and I am going forthwith.\" And every card signed with the same long dash."
     },
     {
       "who": "ADA",
@@ -1504,11 +1504,11 @@
     },
     {
       "who": "PENHALLOW",
-      "text": "You've been taking words all over this town for a year. Signs, posters, mottoes. My own copy-book."
+      "text": "You. A year of it. Signs, posters, mottoes. My own copy-book."
     },
     {
       "who": "ODILE",
-      "text": "Never taking. Hiding. Paper patches the colour of the page. Grey card on stone. Wax on bronze. On Mr Crane's typed deed, a white slip over one short word, so it read as a gap. One word I never hid: I painted it on a boathouse roof, for a lighthouse to read. Warm water undoes the rest."
+      "text": "Did you find a single one torn? Not taken. Hidden. Paper patches the colour of the page. Grey card on stone. Wax on bronze. On Mr Crane's deed, a white slip over one short word, so it read as a gap. One word I never hid: I painted it on a boathouse roof, for a lighthouse to read. Warm water undoes the rest."
     },
     {
       "who": "DEV",
@@ -1516,7 +1516,7 @@
     },
     {
       "who": "ODILE",
-      "text": "I never set foot in it. A grille in the wall, a ladder on my side. A word can fall through a gap and still be there. I told you so at the Playhouse."
+      "text": "I never set foot in it. There's a grille in the wall, and a ladder on my side. A word can fall through a gap and still be there. I did tell you, at the Playhouse."
     },
     {
       "who": "MARLOWE",
@@ -1528,11 +1528,11 @@
     },
     {
       "who": "ADA",
-      "text": "Why, Odile? Why not just *come home* and tell me?"
+      "text": "Forty years, Odile. You could have knocked."
     },
     {
       "who": "ODILE",
-      "text": "Because forty years ago I found the trail, and you told me puzzles were for children. *(Gently.)* You were right. They are. So I set the sentence out again, one word a case, for a careful reader the town would believe. Then Mr Crane arrived with his tape measure."
+      "text": "And would you have opened? You told me puzzles were for children. *(Gently.)* They are. So I set the sentence out again, one word a case, for a careful reader the town would believe. Then Mr Crane arrived with his tape measure."
     },
     {
       "who": "CRANE",
@@ -1540,11 +1540,11 @@
     },
     {
       "who": "ODILE",
-      "text": "*(She opens the violin case. Beside the violin lies a letter in Ada's hand.)* Your letter found me, Ada. Every night you played your half at eleven, with the window open. Tam called my half the echo. I'm sorry. For leaving. For the silence. For being right in the rudest possible way."
+      "text": "*(She opens the violin case. Beside the violin lies a letter in Ada's hand.)* Your letter found me. Every night at eleven you played your half with the window open, and I played mine. Tam wrote it down as an echo. I'm sorry, Ada. Being right was never worth forty years."
     },
     {
       "who": "ADA",
-      "text": "*(after a long moment)* You were right. I was rude first. Forty years first. *(She holds out her hand.)* Come here, you impossible girl."
+      "text": "*(after a long moment)* I said *enough* first. *(She holds out her hand.)* Come here, you impossible girl."
     },
     {
       "who": "STAGE",
@@ -1679,7 +1679,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Halfway down Lamplit Row, Dev stops dead under a gas lamp with his notebook open."
+      "text": "Halfway down Lamplit Row, Dev stops short under a gas lamp with his notebook open."
     },
     {
       "who": "NARRATOR",
@@ -1699,7 +1699,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Nell walks beside Ada for a while without saying anything, which, for Nell, is a kind of speech."
+      "text": "Nell walks beside Ada the whole length of the Row and says nothing at all. Nobody at the agency has ever seen her do that."
     },
     {
       "who": "NARRATOR",
@@ -1914,7 +1914,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Across the rooftops, from the open window of No. 9 Lantern Row, comes music. A cello, low and warm, and above it, a violin, a little out of practice at duets and getting better with every bar. It is not the sad piece. It is the one with two parts, played, for the first time in forty years, by both."
+      "text": "Across the rooftops, from the open window of No. 9 Lantern Row, comes music. A cello, low and warm, and above it a violin, a little out of practice at duets. It is the slow piece, the one with two parts. All week, Lantern Row has heard half of it. Tonight it hears both, and it does not sound like waiting any more."
     },
     {
       "who": "NARRATOR",
@@ -1934,7 +1934,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "*Every word, for everyone.* Every story in every book belongs to whoever opens it. The door is only the Charter, keeping its promise."
+      "text": "*Every word, for everyone.* Every story, in every book, belongs to whoever opens it. The door is only the Charter, keeping its word."
     },
     {
       "who": "NARRATOR",
@@ -1946,7 +1946,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Case closed. Season closed. The door is open."
+      "text": "Case closed. The door is open."
     },
     {
       "who": "NARRATOR",
@@ -2209,7 +2209,7 @@
     },
     {
       "where": "Chapter 4 — opening (the false solution breaks)",
-      "text": "No. 9 Lantern Row, a quarter past ten. Fog round the gas lamps like wool. Nell knocks. Tully stands behind her, holding the handcuffs behind his back, very badly. The Keeper has come too, with her key and her torch. Ada opens the door before the second knock. **Ada's Q5 is offered now.*** *(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away and looks enormously relieved. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?"
+      "text": "No. 9 Lantern Row, a quarter past ten. Fog round the gas lamps like wool. Nell knocks. Tully stands behind her, holding the handcuffs behind his back, very badly. The Keeper has come too, with her key and her torch. Ada opens the door before the second knock. **Ada's Q5 is offered now.*** *(After Ada's answer, Nell's hunch-o-meter drops from ten to two. Tully puts the handcuffs away as if they had gone hot. Then he turns, slowly, towards the Keeper. \"So that leaves one key…\" \"Constable,\" says Professor Penhallow, \"if I wanted a card in that room, I would have written a memo.\" The question goes up on the washing line with everything else: if nobody can get in, how did the card?"
     },
     {
       "where": "Chapter 4 — hook",

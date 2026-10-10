@@ -44,43 +44,43 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "It was the darkest night of the year.\nOn Lamplit Row, the tall lamp by the bridge stayed dark.\nA visitor stepped into the canal. She is safe, just soggy.\nThree Lamplighters walk that way every night.\nEach says, \"I did my job!\"\nOne says her lamp lit itself.\nSolve it by six tonight, or the Lamplighters lose their lamps.",
+    "text": "It was the darkest night of the year.\nOn Lamplit Row, the tall lamp by the bridge stayed dark.\nA visitor stepped into the canal. She is safe, just soggy.\nThree Lamplighters walk that way every night.\nEach says, \"I did my job.\"\nOne says her lamp lit itself.\nSolve it by six tonight, or the Lamplighters lose their lamps.",
     "readAloud": true
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The agency, morning.",
+      "place": "The agency. Morning, and raining.",
       "picture": "Rain on the round window; fog sitting on the harbour like a grey cat. Constable Tully puffs up the 39 stairs with a cocoa flask.",
       "lines": [
         {
           "who": "TULLY",
-          "text": "A lamp went dark last night. A visitor went *splash*. And Biscuit has gone missing. Again."
+          "text": "One lamp, dark. One visitor, in the canal. And one dog, missing. Again."
         },
         {
           "who": "TULLY",
-          "text": "The Council says: explain it by six tonight. Or the lamps go to grown-ups, and the Lamplighters hang up their poles."
+          "text": "The Council wants it explained by six tonight. Or the lamps go to grown-ups. And the Lamplighters hang up their poles."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "The agency, morning.",
+      "place": "Nell, already in her coat.",
       "picture": "Nell grabs her coat.",
       "lines": [
         {
           "who": "NELL",
-          "text": "A dark lamp on the darkest night? Somebody skipped it. Hunch-o-meter: ten!"
+          "text": "Darkest night of the year, and a lamp goes dark? Somebody skipped it. Ten!"
         },
         {
           "who": "QUILL",
-          "text": "A hunch is not a clue. Bring me words."
+          "text": "Bring me words, Nell. Not tens."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The agency, morning.",
+      "place": "Asha, notebook open.",
       "picture": "Asha opens her notebook.",
       "lines": [
         {
@@ -105,23 +105,23 @@
     },
     {
       "panel": 4,
-      "place": "The agency, morning.",
+      "place": "Felix, already at the door.",
       "picture": "Felix, already at the door.",
       "lines": [
         {
           "who": "FELIX",
-          "text": "Footnote: a *lamplighter* is a person who lights lamps. Footnote to the footnote: I knew you knew that."
+          "text": "Footnote: a *lamplighter* is a person who lights lamps. Footnote to the footnote: you knew that. I said it anyway."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "Lamplit Row, by the bridge.",
+      "place": "Lamplit Row, by the bridge. The tall lamp stands dark, even in daylight.",
       "picture": "Wet cobbles, the canal black and quiet, the tall lamp dark against the fog. Tam on the bakery step with a tray of buns nobody is eating.",
       "lines": [
         {
           "who": "TAM",
-          "text": "We light up at six. If nobody knows what happened by then… no more Lamplighters."
+          "text": "We light up at six. If nobody knows by then… that's it. No more Lamplighters."
         }
       ]
     }
@@ -292,7 +292,7 @@
       "talk": [
         {
           "who": "ASHA",
-          "text": "So on a normal night, Ivy finishes her round at the bridge and hands Tam the long pole. And Tam lights the bridge lamp."
+          "text": "On a normal night, Ivy ends her round at the bridge. She hands Tam the long pole. And Tam lights the bridge lamp."
         },
         {
           "who": "DEV",
@@ -320,7 +320,7 @@
         {
           "who": "FELIX",
           "direction": "nose to the glass",
-          "text": "Footnote: the window smells of rosin. Rosin is what you rub on a violin bow. Footnote to the footnote: why would a locked bookshop smell of violins?"
+          "text": "Footnote: the window smells of rosin. You rub rosin on a violin bow. So why does a locked bookshop smell of violins?"
         }
       ]
     },
@@ -1002,7 +1002,7 @@
       },
       {
         "who": "STAGE",
-        "text": "The Clock Tower bongs five. One hour."
+        "text": "Far off, the Clock Tower bongs five. One hour."
       }
     ]
   },
@@ -1039,11 +1039,11 @@
     "questionAfterReveal": "…and why?",
     "note": "Ivy went to the wrong lamp *by mistake*, because Tam's note had no comma."
   },
-  "revealSetting": "The bakery step, quarter to six. Fog on the canal, gold light in the bakery window, the smell of hot buns. All three Lamplighters (Ivy too, arms folded, no pole), Tam with a tray, Mrs Gundersen in borrowed socks, and the agency. Across the street, the shed door stands open on one long pole.",
+  "revealSetting": "The bakery step, quarter to six. Fog on the canal, gold light in the bakery window, the smell of hot buns. All three Lamplighters (Ivy too, arms folded, no pole), Tam with a tray, Mrs Gundersen in borrowed socks, and the agency. Across the street the shed door stands open, and inside it, one long pole on its peg.",
   "reveal": [
     {
       "who": "QUILL",
-      "text": "Fifteen minutes to six. New detective. Who left the bridge lamp dark?"
+      "text": "Quarter to six. Detective. Who left the bridge lamp dark?"
     },
     {
       "who": "NEW DETECTIVE",
@@ -1056,7 +1056,7 @@
     },
     {
       "who": "NELL",
-      "text": "You did. Just not the right one. But first, the others."
+      "text": "You lit one. Just not that one. Hang on, though. The others first."
     },
     {
       "who": "NEW DETECTIVE",
@@ -1065,11 +1065,11 @@
     {
       "who": "RAFI",
       "direction": "turning out his lumpy pockets: crumbs",
-      "text": "And these are for the ducks under the bridge. Every night at six. Ducks are not on my round."
+      "text": "And the crumbs in my pockets? For the ducks under the bridge. Every night at six. Ducks are not on my round."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "Moss wished the lamps off. But wishing is not doing. She was on Gran's roof, on Ink Street."
+      "text": "Moss wished the lamps off. But wishing isn't doing. At seven she was up on Gran's roof."
     },
     {
       "who": "MOSS",
@@ -1090,7 +1090,7 @@
     },
     {
       "who": "DEV",
-      "text": "Tully wrote it on the very first page. Two burnt matches, under one lamp."
+      "text": "Two burnt matches. Under one lamp. Constable Tully counted them on the very first page."
     },
     {
       "who": "FELIX",
@@ -1098,7 +1098,7 @@
     },
     {
       "who": "QUILL",
-      "text": "Now the note. Ivy told us, \"Tam always does the NOT joke.\" New detective, read the note with a breath in it."
+      "text": "The note. Ivy told us, \"Tam always does the NOT joke.\" Detective. Read it with a breath in it."
     },
     {
       "who": "NEW DETECTIVE",
@@ -1106,16 +1106,16 @@
     },
     {
       "who": "DEV",
-      "text": "Ivy read it like this: \"Light the lamp by the bridge… NOT! The one by the bakery.\" Look where Tam's line ends. Right on *not*. Like the end of a joke."
+      "text": "Ivy heard it like this: \"Light the lamp by the bridge… NOT! The one by the bakery.\" Look where Tam's line ends. Right on *not*. Like a joke does."
     },
     {
       "who": "TAM",
       "direction": "covering her face with a floury hand",
-      "text": "My NOT joke. Oh no. I forgot the comma. Ivy, I'm sorry."
+      "text": "My NOT joke. Oh no. I forgot the comma. Ivy… I'm sorry."
     },
     {
       "who": "IVY",
-      "text": "I should have asked. Why would you need my long pole for a short lamp?"
+      "text": "No. I should have asked. Why would you need my long pole for a short lamp?"
     },
     {
       "who": "TAM",
@@ -1133,11 +1133,11 @@
     {
       "who": "NELL",
       "direction": "whispering to the new detective",
-      "text": "I said someone skipped it. Hunch-o-meter: ten. Wrong again."
+      "text": "I gave it a ten. 'Somebody skipped it.' Wrong again."
     },
     {
       "who": "MRS GUNDERSEN",
-      "text": "Nobody be sad! I have a story to tell at home now. And these socks are lovely."
+      "text": "Nobody be sad! I have a story to take home now. And these socks are lovely."
     },
     {
       "who": "TULLY",
@@ -1159,11 +1159,11 @@
     },
     {
       "who": "TAM",
-      "text": "With a comma!"
+      "text": "With a comma."
     },
     {
       "who": "ALL",
-      "text": "With a comma!"
+      "text": "With a comma."
     },
     {
       "who": "STAGE",
@@ -1185,7 +1185,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Felix stands in front of Pollard's window."
+      "text": "Felix stands in front of Pollard's window, in the rain."
     },
     {
       "who": "FELIX",
@@ -1197,7 +1197,7 @@
     },
     {
       "who": "ASHA",
-      "text": "*Small words carry big loads.* Like a comma."
+      "text": "*Small words carry big loads.* That's what the card said."
     },
     {
       "who": "STAGE",
@@ -1209,7 +1209,7 @@
     },
     {
       "who": "QUILL",
-      "text": "Patience, Nell. A sentence takes its time."
+      "text": "Patience. A sentence takes its time."
     },
     {
       "who": "HEADING",
@@ -1225,7 +1225,7 @@
     },
     {
       "who": "FELIX",
-      "text": "Footnote: a crane is a long-necked bird. The lifting machine is named after the bird. Footnote to the footnote: this one appears to be a man."
+      "text": "Footnote: a crane is a long-necked bird. The lifting machine is named after it. Footnote to the footnote: this one is a man."
     },
     {
       "who": "ASHA",
@@ -1254,7 +1254,7 @@
     },
     {
       "who": "RAFI",
-      "text": "Oh! So that's who's been eating half the crumbs."
+      "text": "Oh. So that's who's been eating half the crumbs."
     },
     {
       "who": "STAGE",
@@ -1298,7 +1298,7 @@
     },
     {
       "who": "STAGE",
-      "text": "That night every lamp on Lamplit Row is lit, the tall one by the bridge brightest of all. Down the misty canal, from somewhere past the bookshop, come four slow notes on a violin: the same four as before. Then nothing. Pollard's Books is still locked. Nobody on Lamplit Row plays the violin."
+      "text": "That night every lamp on Lamplit Row is lit, and the tall one by the bridge burns brightest of all. Down the misty canal, from somewhere past the bookshop, come four slow notes on a violin. The same four as before. Then nothing. Pollard's Books is still locked. Nobody on Lamplit Row plays the violin."
     }
   ],
   "drill": {
@@ -1689,11 +1689,11 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "The cork board, set up in the lamp shed. Rain ticks on the tin roof. Three poles on their pegs. Fog creeps up the canal outside the door."
+      "text": "The lamp shed. A cork board. Rain ticking on the tin roof. Three poles on their pegs, and fog creeping up the canal to the door."
     },
     {
       "who": "TAM",
-      "text": "It's three o'clock. Three hours till six."
+      "text": "Three o'clock. Three hours till six."
     }
   ],
   "aside": [
@@ -1703,7 +1703,7 @@
       "lines": [
         {
           "who": "NELL",
-          "text": "Moss wants every lamp off. Moss fibbed about seven o'clock. Moss has sooty knees! Hunch-o-meter: ten!"
+          "text": "She wants every lamp off. She fibbed about seven o'clock. And look, sooty knees! Hunch-o-meter: ten!"
         },
         {
           "who": "STAGE",

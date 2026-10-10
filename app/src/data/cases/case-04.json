@@ -50,13 +50,13 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "The vote starts at ten o'clock. The Library's money depends on it.\nBut Old Thumper, the Town Hall's ancient gavel, has vanished from its box.\nThe chamber was locked from Monday until this morning.\nNo gavel, no vote.\nThe minutes say it was \"sent off.\"\nAnd Marlowe was seen leaving with a heavy bag.\nWhere is Old Thumper?",
+    "text": "The vote starts at ten o'clock. The Library's money depends on it.\nBut Old Thumper, the Town Hall's ancient gavel, has gone from its box.\nThe chamber was locked from Monday until this morning.\nNo gavel, no vote.\nThe minutes say it was \"sent off.\"\nAnd Marlowe was seen leaving with a heavy bag.\nWhere is Old Thumper?",
     "readAloud": true
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The Forum, twenty past nine.",
+      "place": "The Forum, twenty past nine. Above the Town Hall doors, the big clock ticks louder than a clock should.",
       "picture": "Morning sun, people on the steps, pigeons, a speakers' corner, the Town Hall's big doors, and the clock above them.",
       "lines": [
         {
@@ -68,37 +68,37 @@
     },
     {
       "panel": 2,
-      "place": "Inside.",
+      "place": "Inside. A velvet box, and in it a dent where a gavel lay for two hundred years.",
       "picture": "Councillor Bright staring into an empty velvet box. Councillor Mbeki tapping her speech cards.",
       "lines": [
         {
           "who": "BRIGHT",
-          "text": "Locked since Monday! Locked! And *empty*! And Grace has been on the steps since seven!"
+          "text": "Locked. Since *Monday*. And empty. And Grace on the steps since seven, if anybody's asking—"
         },
         {
           "who": "MBEKI",
-          "text": "Hector, I was *outside*."
+          "text": "Hector. I was *outside*."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The gallery.",
+      "place": "The gallery. Professor Penhallow sits very straight, the way people sit when they are afraid of something.",
       "picture": "Professor Penhallow, hands folded tightly. Behind her, Mr Pettigrew clutching a scroll in one hand and his briefcase in the other, like a shield.",
       "lines": []
     },
     {
       "panel": 4,
-      "place": "The door.",
+      "place": "Outside the chamber door. Forty minutes is not long. The clock knows it.",
       "picture": "Nell, leaning on The Comet.",
       "lines": [
         {
           "who": "NELL",
-          "text": "An empty box is still a clue."
+          "text": "Somebody's gone and took it."
         },
         {
           "who": "QUILL",
-          "text": "So is a locked door. Forty minutes."
+          "text": "*Taken.* And we don't know that yet."
         }
       ]
     }
@@ -106,11 +106,11 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "Nell pins Marlowe's portrait in the centre."
+      "text": "Nell pins Marlowe's portrait in the very centre of the board, and presses the pin in hard."
     },
     {
       "who": "NELL",
-      "text": "Heavy bag, Monday evening, right outside the door. Hunch-o-meter: nine."
+      "text": "Heavy bag. Monday evening. Right outside that door. Hunch-o-meter: nine."
     }
   ],
   "cast": [
@@ -658,19 +658,19 @@
       "talk": [
         {
           "who": "QUILL",
-          "text": "Show me where it says the bag held a gavel."
+          "text": "Where does it say gavel?"
         },
         {
           "who": "STAGE",
-          "text": "Nell reads the slip. It says books. Twelve of them."
+          "text": "Nell reads the slip. Books. Twelve of them, stamped in one after another."
         },
         {
           "who": "NELL",
-          "text": "I'm switching the hunch-o-meter off."
+          "text": "That's it. The hunch-o-meter is going in the harbour."
         },
         {
           "who": "QUILL",
-          "text": "Leave it on. Just read before you look at it."
+          "text": "Keep it. Read first. Then look at it."
         },
         {
           "who": "NELL",
@@ -1139,79 +1139,79 @@
   "reveal": [
     {
       "who": "NEW DETECTIVE",
-      "text": "Old Thumper isn't lost. Nobody stole him."
+      "text": "Nobody stole Old Thumper. He isn't even lost."
     },
     {
       "who": "BRIGHT",
-      "text": "*(lowering the gavel)* Nobody? From a room locked since Monday?"
+      "text": "*(lowering the gavel)* Nobody? Out of a room locked since Monday?"
     },
     {
       "who": "NELL",
-      "text": "He didn't need to get out. He left before the door was locked, with the man who locked it."
+      "text": "He didn't have to get out. He left before the door was locked. With the man who locked it."
     },
     {
       "who": "FELIX",
-      "text": "The minutes say, \"After the meeting, the gavel was sent off.\" Footnote: \"sent off\" has two meanings."
+      "text": "The minutes say, \"After the meeting, the gavel was sent off.\" Footnote: *sent off* can mean two things."
     },
     {
       "who": "TULLY",
-      "text": "Like a footballer! Thrown out for bad behaviour!"
+      "text": "Like a footballer! Off the pitch, for a foul!"
     },
     {
       "who": "FELIX",
-      "text": "Or like a parcel, in the post. Footnote to the footnote: the gavel did not commit a foul."
+      "text": "Or like a parcel, in the post. Footnote to the footnote: the gavel fouled nobody."
     },
     {
       "who": "DEV",
-      "text": "*(holding up his biscuit-tin mirror)* Mr Osei's blotter says which. \"He is sent to be mended, by tonight's post.\" And \"he\" is the gavel."
+      "text": "*(holding up his biscuit-tin mirror)* Mr Osei's blotter. \"He is sent to be mended, by tonight's post.\" The \"he\" is the gavel. Poor old fellow."
     },
     {
       "who": "ASHA",
-      "text": "It was on the very first page, too. Constable Tully's own report: \"Clerk's desk: brown paper, string and stamps.\""
+      "text": "And Constable Tully wrote it down himself, first thing. \"Clerk's desk: brown paper, string and stamps.\""
     },
     {
       "who": "TULLY",
-      "text": "So it was. I thought it was just a desk."
+      "text": "So I did. I thought it was a desk."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "And Tam saw who carried the parcel. \"he said thank you marlowe.\" You can't thank yourself. So \"he\" was Mr Osei."
+      "text": "And Tam saw the parcel go. \"he said thank you marlowe.\" Nobody thanks himself. So \"he\" is Mr Osei."
     },
     {
       "who": "MARLOWE",
-      "text": "*(very quietly)* I only held the door. My bag was books."
+      "text": "*(very quietly)* I only held the door. The bag was books."
     },
     {
       "who": "NELL",
-      "text": "My hunch-o-meter said ten. It should have said nought. I'm sorry, Marlowe."
+      "text": "I said ten. It should have been nought. I'm sorry, Marlowe."
     },
     {
       "who": "QUILL",
-      "text": "It should have said \"show me\"."
+      "text": "It should have said, \"Show me.\""
     },
     {
       "who": "ASHA",
-      "text": "And the order settles it. The gavel left on Monday night. Mr Pettigrew's train came on Tuesday at noon. The vote was called at two. Nobody hides a gavel to stop a vote that doesn't exist yet."
+      "text": "Monday night, the gavel leaves. Tuesday noon, Mr Pettigrew's train comes in. Tuesday at two, the vote is called. Nobody hides a gavel to stop a vote that isn't there yet."
     },
     {
       "who": "BRIGHT",
-      "text": "*(sitting down heavily)* I must confess. I cracked him. Third knock. Too ashamed to say."
+      "text": "*(sitting down heavily)* I cracked him. Third knock. I heard it go. I put him back in his box like a baby and told nobody."
     },
     {
       "who": "MBEKI",
-      "text": "Hector. It's a hammer. It's *for* knocking. *(She goes pink.)* And since we're confessing: at seven this morning, I was practising my speech. On the pigeons."
+      "text": "Hector. It's a hammer. Knocking is its *job*. *(She goes pink.)* And since we're confessing: at seven this morning I was practising my speech. On the pigeons."
     },
     {
       "who": "PETTIGREW",
-      "text": "And this gavel was Mr Crane's idea. \"In case the old one is lost.\" *(He swallows.)* I rather hoped it wasn't."
+      "text": "This new one was Mr Crane's idea. \"In case the old one is lost.\" *(He swallows.)* I rather hoped it wasn't."
     },
     {
       "who": "STAGE",
-      "text": "The doors bang open. Tam Bellweather, floury to the elbows, waves a telegram."
+      "text": "The doors bang open. Tam Bellweather, floury to the elbows, holds a telegram high."
     },
     {
       "who": "TAM",
-      "text": "The Constable sent me the minute Dev read the blotter. Answer's come!"
+      "text": "Constable sent me the minute Dev read the blotter. Answer's come!"
     },
     {
       "who": "TULLY",
@@ -1223,7 +1223,7 @@
     },
     {
       "who": "BRIGHT",
-      "text": "Old Thumper isn't lost. He's mending. *(He hands the shiny gavel back.)* The rule says we wait for him."
+      "text": "Not lost. Mending. *(He hands back the shiny gavel.)* Then we wait for him. That's the rule."
     },
     {
       "who": "PENHALLOW",
@@ -1231,15 +1231,15 @@
     },
     {
       "who": "PETTIGREW",
-      "text": "Mr Crane will be… disappointed. *(He looks at his petition.)* All these names look… rather alike, don't they?"
+      "text": "Mr Crane will be… disappointed. *(He looks down at his petition.)* These names. They look rather alike, don't they?"
     },
     {
       "who": "DEV",
-      "text": "*(already looking)* Every \"y\" has the same curly tail."
+      "text": "*(already looking)* Every *y* has the same curly tail."
     },
     {
       "who": "QUILL",
-      "text": "Write it down. Not every question gets answered in one case."
+      "text": "Write it down. Some questions take longer than a morning."
     }
   ],
   "epilogue": [
@@ -1251,32 +1251,32 @@
     {
       "who": "STAGE",
       "beat": "The ending",
-      "text": "Ms Marsh arrives at the Town Hall with a brown-paper parcel. Old Thumper is back, with a handle of honey-coloured ash. She hands Councillor Bright the old cracked handle, wrapped in a ribbon. Mr Osei, back on the Friday train just as his letter said, adds a line to the minutes: *\"Friday: the gavel was sent back (mended).\"* Felix approves of the brackets."
+      "text": "Ms Marsh arrives at the Town Hall with a brown-paper parcel. Old Thumper is back, with a new handle of honey-coloured ash. In the velvet box, the dent fits him exactly. She hands Councillor Bright the old cracked handle, tied with a ribbon. Mr Osei, back on the Friday train as his letter said, adds a line to the minutes: *\"Friday: the gavel was sent back (mended).\"* Felix approves of the brackets."
     },
     {
       "who": "STAGE",
       "beat": "The vote",
-      "text": "Councillor Mbeki proposes that the vote waits a month, \"so that all may hear,\" and that the town is invited to speak first. Councillor Bright, for once, agrees without checking his watch. Mr Pettigrew posts Mr Crane's shiny gavel back to him, second class. Professor Penhallow shakes Marlowe's hand. Marlowe drops four books."
+      "text": "Councillor Mbeki proposes that the vote waits a month, \"so that all may hear,\" and that the town is invited to speak first. Councillor Bright agrees, for once without looking at his watch. Mr Pettigrew posts Mr Crane's shiny gavel back to him, second class. Professor Penhallow shakes Marlowe's hand. Marlowe drops four books."
     },
     {
       "who": "STAGE",
       "beat": "Bright's apology",
-      "text": "he tells the whole council he cracked the gavel. Nobody minds. Marlowe hands him the returns slip: the book that was three years late was Councillor Bright's own, *Keeping Calm in Committees*. Bright pays the fine himself and laughs, for the first time all week. He gives the old handle to the agency \"for the young detective who read it right\"."
+      "text": "he tells the whole council he cracked the gavel. Nobody minds. Marlowe hands him the returns slip: the book that was three years late was Councillor Bright's own, *Keeping Calm in Committees*. Bright pays the fine himself, and laughs for the first time all week. He gives the old handle to the agency, \"for the young detective who read it right\"."
     },
     {
       "who": "STAGE",
       "beat": "The pigeons",
-      "text": "Councillor Mbeki practises her speech on the Forum steps, in broad daylight this time. The pigeons have heard it before. They stay anyway."
+      "text": "Councillor Mbeki practises her speech on the Forum steps, in daylight this time. The pigeons have heard it before. They stay anyway."
     },
     {
       "who": "STAGE",
       "beat": "The arc beat",
-      "text": "Felix climbs on the chair again and lifts the stone-grey card from the motto: **THAT**. A fine pale dust sifts down onto his sleeve, and the smell of violets comes with it. \"Footnote: rosin,\" he says. \"Violinists rub it on their bows. Footnote to the footnote: nobody on the council plays the violin.\" The child inks the word into the Blot Ledger, which now reads **UNDER · THE · CLOCK · THAT**. Dev writes the four words in a row on his sleeve. \"That's not random,\" he says. \"Nobody is *that* random.\" Asha: \"It's a sentence starting.\" Dev: \"Or a very bad poem.\" The petition, with its forty-two identical hands, is copied into the notebook under a big question mark."
+      "text": "Felix climbs on the chair again and lifts the stone-grey card from the motto: **THAT**. A fine pale dust sifts onto his sleeve, and the smell of violets comes with it. \"Footnote: rosin,\" he says. \"Violinists rub it on their bows. Footnote to the footnote: nobody on the council plays the violin.\" The child inks the word into the Blot Ledger, which now reads **UNDER · THE · CLOCK · THAT**. Dev copies the four words onto his sleeve. \"That's not random. Nobody is *that* random.\" Asha: \"It's the start of a sentence.\" Dev: \"Or a very bad poem.\" The petition, with its forty-two identical hands, goes into the notebook under a large question mark."
     },
     {
       "who": "STAGE",
       "beat": "Marlowe",
-      "text": "thanks the agency for believing him. Nell says sorry, properly, without a number."
+      "text": "thanks the agency for believing him, in the end. Nell says sorry properly, without a number."
     },
     {
       "who": "STAGE",
@@ -1291,7 +1291,7 @@
     {
       "who": "STAGE",
       "beat": "The office object",
-      "text": "the old cracked handle of Old Thumper, tied with Ms Marsh's ribbon, goes on the shelf. Tap it to replay the case."
+      "text": "the old cracked handle of Old Thumper, still in Ms Marsh's ribbon, goes on the shelf. It has knocked its last knock. Tap it to replay the case."
     }
   ],
   "drill": {
@@ -1811,7 +1811,7 @@
       "quill": "Two people saw a heavy bag. Did either of them see inside it?"
     }
   ],
-  "revealSetting": "The council chamber, two minutes to ten. Everyone stands under the carved motto: Councillor Bright with Mr Crane's shiny gavel raised, Councillor Mbeki with nine speech cards, Mr Pettigrew hugging his briefcase, Marlowe by the door, Professor Penhallow very straight in the gallery, Constable Tully with his cocoa. The big clock ticks. Nell steps up to the speakers' step, then thinks better of it and hands the notebook to the child.",
+  "revealSetting": "The council chamber, two minutes to ten. Everyone stands under the carved motto. Councillor Bright holds Mr Crane's shiny gavel up, ready. Councillor Mbeki has nine speech cards, Mr Pettigrew his briefcase, Constable Tully his cocoa. Marlowe waits by the door. Professor Penhallow sits very straight in the gallery. In the velvet box, the dent is still empty. The big clock ticks. Nell steps up to the speakers' step, thinks better of it, and hands the notebook to the child.",
   "aside": [
     {
       "where": "chapter 1, opening",
@@ -1871,7 +1871,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Two small words. Everything now turns on them."
+          "text": "Two small words. Everything hangs on them now."
         },
         {
           "who": "ASHA",

@@ -104,7 +104,7 @@
   "cutscene": [
     {
       "panel": 1,
-      "place": "The agency, Wednesday morning, rain on the round window",
+      "place": "The agency, Wednesday morning. Rain on the round window. Thirty-nine stairs below, someone is running up them.",
       "picture": "Marlowe bursts in after the 39 stairs, gasping, holding a letter with a cracked wax seal.",
       "lines": [
         {
@@ -113,27 +113,27 @@
         },
         {
           "who": "MARLOWE",
-          "text": "The Keeper says come now. The Registry's clerk comes at five, to copy the map into the Town Book."
+          "text": "The Keeper says now. Come now. The Registry's clerk comes at five to copy the map into the Town Book, and the map is— it's wrong."
         }
       ],
       "clock": "The Registry's clerk comes at five."
     },
     {
       "panel": 2,
-      "place": "The Seal Room in the Scriptorium",
+      "place": "The Seal Room in the Scriptorium. Cold stone, one long table, and something under a cloth.",
       "picture": "cold stone, candle sconces, a long oak table, a dust cloth lifted from an enormous brown map. Ms Ito points with a gloved finger.",
       "lines": [],
       "caption": "Everywhere else in the Scriptorium, clocks tick. In here, nothing does."
     },
     {
       "panel": 3,
-      "place": "The Seal Room in the Scriptorium",
+      "place": "Close on the map. Three hundred years of brown ink, and one pale grey line that has changed its mind.",
       "picture": "Close on the map: two harbour lines. One is old, dark and scraped faint. One is pale, new, and curves *behind* the Library's tiny painted dome.",
       "lines": []
     },
     {
       "panel": 4,
-      "place": "The Seal Room in the Scriptorium",
+      "place": "The Seal Room. Above them, in the shadows, no clock ticks.",
       "picture": "Felix sneezes, so hard his head tips back towards the shadowy ceiling. Everyone jumps.",
       "lines": [
         {
@@ -442,7 +442,7 @@
         },
         {
           "who": "MARLOWE",
-          "text": "That wasn't there at seven. I wrote my note right under rule 5. Rule 4 was whole. I read the rules every time; I can't help it."
+          "text": "That wasn't there at seven. I wrote my note right under rule 5, and rule 4 was whole. I read the rules every time. I can't not."
         },
         {
           "who": "FELIX",
@@ -452,7 +452,7 @@
         {
           "who": "STAGE",
           "kind": "blot",
-          "text": "Nobody answers. A draught from nowhere lifts the corner of the page, holds it up for a moment, and lets it fall."
+          "text": "Nobody answers. A draught from nowhere lifts the corner of the page, holds it up a moment, and lets it fall."
         }
       ]
     },
@@ -498,12 +498,12 @@
         {
           "who": "STAGE",
           "kind": "hook",
-          "text": "End of Chapter 1. Ms Ito lays the dust cloth back over the map, very gently, as if it might wake. Asha writes the time on her hand: 11:02. Six hours to the clerk."
+          "text": "End of Chapter 1. Ms Ito lays the dust cloth back over the map, gently, as if it might wake. Asha writes the time on her hand: 11:02. Six hours to the clerk."
         },
         {
           "who": "ASHA",
           "kind": "hook",
-          "text": "Four keys. Four people. And every one of them says the map was never touched."
+          "text": "Four keys. Four people. Every one of them says nobody touched it."
         },
         {
           "who": "DEV",
@@ -658,7 +658,7 @@
         {
           "who": "NELL",
           "direction": "quietly",
-          "text": "Marlowe had five minutes. Five to fifteen past five. *(She turns the hunch-o-meter face down.)* I'm taking the ten back."
+          "text": "Marlowe had five minutes. Ten past five to quarter past. *(She turns the hunch-o-meter face down.)* I'm taking the ten back."
         },
         {
           "who": "MARLOWE",
@@ -1360,11 +1360,11 @@
     "weakEvidence": "That shows someone was near the map. It does not show they drew on it. Find a place where a person says one thing and a document says another. Then find the ink.",
     "note": "Mr Rupert Swale, Deputy Keeper (paid by Silas Crane)."
   },
-  "revealSetting": "The Seal Room, Wednesday, a quarter to four. Rain on the tall windows. The map lies under lamplight. Everyone is there. Tully stands by the door with cocoa. Fifteen minutes to the clerk.",
+  "revealSetting": "The Seal Room, Wednesday, a quarter to four. Rain on the tall windows. The map lies under the lamp, its pale line still there. Everyone is in the room. Tully stands by the door with the cocoa. Fifteen minutes to the clerk, and in here no clock counts them down.",
   "reveal": [
     {
       "who": "NELL",
-      "text": "Mr Swale. You wrote that you hadn't entered the Seal Room since spring. You said it again today, out loud."
+      "text": "Mr Swale. You wrote that you hadn't been in the Seal Room since spring. Today you said it again. Out loud."
     },
     {
       "who": "SWALE",
@@ -1372,23 +1372,23 @@
     },
     {
       "who": "ASHA",
-      "text": "The key log says R.S. took the key at 8:40 on Tuesday. Tam saw a tall man with a stoop on these stairs at twenty to nine. Same time, written two ways."
+      "text": "The key log: R.S., 8:40 on Tuesday. Tam's note: a tall man with a stoop on these stairs, twenty to nine. The same minute, written twice."
     },
     {
       "who": "DEV",
-      "text": "And there's only one R.S. on the key list."
+      "text": "There's one R.S. on the key list. Only one."
     },
     {
       "who": "MS ITO",
-      "text": "He kept it forty-five minutes. Exactly long enough."
+      "text": "And he kept it forty-five minutes. *(She does not look at him.)* Long enough."
     },
     {
       "who": "FELIX",
-      "text": "And the new line is iron-gall. *(Sneezes.)* Only you use iron-gall in this building, Mr Swale."
+      "text": "And the new line is iron-gall. *(Sneezes.)* In this building, Mr Swale, only you use iron-gall."
     },
     {
       "who": "MS ITO",
-      "text": "And it is grey. The old line is brown. Nothing \"matched perfectly\". And at half past nine, Mr Mensah smelled vinegar on this stair. Fresh iron-gall smells of vinegar. It was in his log from the start. We all thought it was chips."
+      "text": "And it is grey. The old line is brown. Nothing \"matched perfectly\". At half past nine, Mr Mensah smelled vinegar on this stair. Fresh iron-gall smells of vinegar. We all thought it was chips."
     },
     {
       "who": "STAGE",
@@ -1396,11 +1396,11 @@
     },
     {
       "who": "QUILL",
-      "text": "Four keys. Four people who said \"not me\". Three were telling the truth. And Mr Crane wrote \"as your own map now shows\" before anyone knew. Good news travels fast, Mr Swale. Who carried it?"
+      "text": "Four keys. Four people who said \"not me\". Three meant it. And Mr Crane wrote \"as your own map now shows\" before anyone here knew. Who carried the news, Mr Swale?"
     },
     {
       "who": "STAGE",
-      "text": "(Swale sits down slowly. He takes off his half-moon glasses and folds them.)"
+      "text": "(Swale sits down, slowly. He takes off his half-moon glasses and folds them, the way a man folds a letter he will not send.)"
     },
     {
       "who": "SWALE",
@@ -1412,31 +1412,31 @@
     },
     {
       "who": "SWALE",
-      "text": "*(a small, tired laugh)* Mr Crane said the Library would be sold anyway. One pale line would only make it sooner, and kinder. I could be Director of his Experience. Twenty years ago I asked to be Keeper. They chose Orla. They were right. Nobody has ever asked me to be first at anything."
+      "text": "*(a small, tired laugh)* Mr Crane said the Library would be sold anyway. One pale line would only make it sooner. I could be Director of his Experience. Twenty years ago I asked to be Keeper. They chose Orla. They were right. Nobody has ever asked me to be first at anything."
     },
     {
       "who": "STAGE",
-      "text": "(He takes the thick envelope from his inside pocket and lays it down, still sealed.)"
+      "text": "(He takes the thick envelope from his inside pocket and lays it on the table. The seal is unbroken.)"
     },
     {
       "who": "SWALE",
-      "text": "I didn't open it. I couldn't. I drew the line, then sat here till the key was due back, looking at it. I told myself a line on a map hurts nobody."
+      "text": "I never opened it. I drew the line, then sat here looking at it until the key was due back. I told myself a line on a map hurts nobody."
     },
     {
       "who": "QUILL",
-      "text": "A line on a map is a sentence, Mr Swale. It says who owns what. You wrote a false one."
+      "text": "A line on a map is a sentence, Mr Swale. It says who owns what. *(A pause.)* You wrote a false one."
     },
     {
       "who": "PENHALLOW",
-      "text": "*(quietly)* You could have told me you wanted more. I would have listened."
+      "text": "*(quietly)* You could have told me you wanted more, Rupert. I would have listened."
     },
     {
       "who": "SWALE",
-      "text": "I know. That is the worst part. Orla, I am sorry."
+      "text": "I know. That is the worst of it. I'm sorry, Orla."
     },
     {
       "who": "STAGE",
-      "text": "(Above them, every clock in the Scriptorium strikes four. A damp clerk from the Town Registry puts his head round the door, a ledger under his arm.)"
+      "text": "(Overhead, every clock in the Scriptorium strikes four. A damp clerk from the Town Registry puts his head round the door.)"
     },
     {
       "who": "PENHALLOW",
@@ -1451,7 +1451,7 @@
     },
     {
       "who": "NELL",
-      "text": "*(to Marlowe)* I rated you a ten. I'm sorry.",
+      "text": "*(to Marlowe)* I gave you a ten. I'm sorry.",
       "section": "The secrets, kindly"
     },
     {
@@ -1461,17 +1461,17 @@
     },
     {
       "who": "MS ITO",
-      "text": "*(to the Keeper)* And I nearly said yes to him, Orla. You should know that too.",
+      "text": "*(to the Keeper)* I nearly said yes to him, Orla. You should hear that from me.",
       "section": "The secrets, kindly"
     },
     {
       "who": "PENHALLOW",
-      "text": "Nearly is not yes, Kiyomi. *(She looks at Marlowe's inky fingers.)* And forty pages ruled for nobody's thanks is not nothing.",
+      "text": "Nearly is not yes, Kiyomi. *(She looks at Marlowe's inky fingers.)* And forty pages ruled, with nobody to thank you, is not nothing.",
       "section": "The secrets, kindly"
     },
     {
       "who": "MR PETTIGREW",
-      "text": "*(from the doorway, polishing his spectacles)* Sorry. I came to say I'm glad. I'll go now.",
+      "text": "*(from the doorway, polishing his spectacles)* Sorry. I only came to say I'm glad. Sorry. I'll go.",
       "section": "The secrets, kindly"
     },
     {
@@ -1481,17 +1481,17 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Ms Ito works until midnight with a brush as fine as an eyelash. The pale grey line lifts off the varnish like a breath off a window. Underneath, the old brown wall is faint but whole, running in front of the Library, where it has run for three hundred years.",
+      "text": "Ms Ito works until midnight with a brush as fine as an eyelash. The pale grey line lifts off the varnish like breath off a window. Underneath, the old brown wall is faint but whole. It runs in front of the Library, where it has run for three hundred years.",
       "section": "The map"
     },
     {
       "who": "NARRATOR",
-      "text": "Asha holds the brass dividers and walks them along the harbour, step by step, against the March photograph. \"Every point matches,\" she says. \"Every single one.\" Felix starts to say that *every* is the word missing from the copy-book. Then he sneezes, for the eleventh time.",
+      "text": "Asha walks the brass dividers along the harbour, step by step, against the March photograph. \"Every point matches,\" she says. \"Every single one.\" Felix opens his mouth to say that *every* is the word missing from the copy-book. He sneezes instead, for the eleventh time.",
       "section": "The map"
     },
     {
       "who": "NARRATOR",
-      "text": "Mr Swale gives the envelope to Constable Tully, unopened, and steps down as Deputy Keeper. He asks if he may help Ms Ito with the map's yearly clean. The Keeper thinks for a long moment, and says yes, \"under supervision\". He looks, for the first time all day, relieved.",
+      "text": "Mr Swale gives the envelope to Constable Tully, unopened, and steps down as Deputy Keeper. He asks if he may help Ms Ito with the map's yearly clean. The Keeper is quiet for a long moment. Then she says yes, \"under supervision\". For the first time all day, he looks relieved.",
       "section": "The map"
     },
     {
@@ -1507,17 +1507,17 @@
     {
       "who": "STAGE",
       "label": "Office object",
-      "text": "the map-maker's compass goes on the shelf, legs open, as if it is still measuring.",
+      "text": "The map-maker's compass goes on the shelf, legs open, as if it is still measuring.",
       "section": "The map"
     },
     {
       "who": "STAGE",
-      "text": "Evening. Rain on the windows. Books in teetering towers. A cello leaning in the corner. Semicolon asleep on the lamp. Ada sits by the fire with a cup of tea she has already forgotten.",
+      "text": "Evening, No. 9 Lantern Row. Rain on the windows. Books in leaning towers, a cello in the corner, Semicolon asleep on the lamp. Ada sits by the fire with a cup of tea she has already forgotten.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "Well? You have the look of people with a puzzle in a pocket.",
+      "text": "Well? You all have the look of people with a puzzle in a pocket.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1542,17 +1542,17 @@
     },
     {
       "who": "FELIX",
-      "text": "And three question marks. He has doubts. Footnote: *doubt* comes from an old word for wavering between two things. Which is exactly what he looked like on those steps.",
+      "text": "And three question marks. Doubts. Footnote: *doubt* comes from an old word for wavering between two things. Which is how he looked on those steps.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ASHA",
-      "text": "Postmarked Tuesday last week. Mum wrote it before he ever carried that envelope. So his doubts are older than this case. He's been worried since the spring.",
+      "text": "Postmarked Tuesday last week. Mum wrote it before he ever carried that envelope. His doubts are older than this case. He's been worried since the spring.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "NELL",
-      "text": "He told us the truth today, even though he was scared of it. *(She pauses.)* Someone with doubts might be someone who helps.",
+      "text": "He told us the truth today, and it frightened him. *(A pause.)* Someone with doubts might be someone who helps.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1577,17 +1577,17 @@
     },
     {
       "who": "DEV",
-      "text": "It isn't a list. It's never been a list. It's a *sentence*. \"Under the clock that never strikes lies every…\"",
+      "text": "It isn't a list. It was never a list. It's a *sentence*. \"Under the clock that never strikes lies every…\"",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "FELIX",
-      "text": "Lies. Footnote: not *lies* as in fibs. *Lies* as in \"is lying there\". Like a cat lies on a rug.",
+      "text": "*Lies.* Footnote: not fibs. *Lies* as in lying there. The way a cat lies on a rug.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "NELL",
-      "text": "Something is lying under a clock. Something the Blot wants us to find.",
+      "text": "Something is lying under a clock. And the Blot wants us to find it.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1597,7 +1597,7 @@
     },
     {
       "who": "STAGE",
-      "text": "(Across the room, Ada has gone very still. Her bow is in her hand, but she has not played a note.)",
+      "text": "(Across the room, Ada has gone very still. The bow is in her hand. She has not played a note.)",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1638,12 +1638,12 @@
     },
     {
       "who": "STAGE",
-      "text": "(Ada puts the bow down. Mrs Achterberg comes in with fresh tea, looks at Ada's face, and sets the cup down without a proverb. Which, for Mrs Achterberg, is a kind of shout.)",
+      "text": "(Ada lays the bow down. Mrs Achterberg comes in with fresh tea, looks once at Ada's face, and sets the cup down without a proverb. From Mrs Achterberg, that is a kind of shout.)",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "Sit down, all of you. This is a long story, and I have told it to nobody.",
+      "text": "Sit down, all of you. It's a long story. I have never told it to anyone.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1653,22 +1653,22 @@
     },
     {
       "who": "ADA",
-      "text": "Forty years ago, the Great Library nearly closed. The council said it cost too much. Every week there was another meeting, another vote, another word like \"review\". You will know that word by now.",
+      "text": "Forty years ago, the Great Library nearly closed. The council said it cost too much. Every week, another meeting. Another vote. Another word like \"review\". You'll know that word by now.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "People began to talk about the Founding Charter. The Library's first Keeper, Hannah Lark, wrote it in 1726. Three hundred years ago, near enough. It said the Library must be free, for everyone, for ever. If anyone could find it, no council and no buyer could ever close those doors. But Hannah Lark hid it, and nobody alive had seen it.",
+      "text": "People began to talk about the Founding Charter. The Library's first Keeper, Hannah Lark, wrote it in 1726. Three hundred years ago, near enough. It said the Library must be free, for everyone, for ever. Find it, and no council and no buyer could ever close those doors. But Hannah Lark had hidden it, and nobody alive had seen it.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "Quill and I were the best detectives in Inkwell. We thought so, anyway. And that autumn, I took an apprentice.",
+      "text": "Quill and I were the best detectives in Inkwell. We thought so, anyway. That autumn, I took an apprentice.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "Her name was Odile. Odile Vane. She was eighteen. She arrived on my doorstep with a battered violin case and a notebook of puzzles she had made herself. She could find a pattern in a puddle. She saw the odd letter out before I had seen the word.",
+      "text": "Her name was Odile. Odile Vane. She was eighteen. She turned up on my doorstep with a battered violin case and a notebook of puzzles she'd made herself. She could find a pattern in a puddle. She saw the odd letter out before I'd seen the word.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1678,7 +1678,7 @@
     },
     {
       "who": "ADA",
-      "text": "She wrote \"forthwith\" in everything. Reports, birthday cards, the shopping list. \"Buy eggs forthwith.\" Winifred kept that one for years. And she signed every letter with a long dash before her initial, like a ribbon trailing off a parcel. I used to tease her that the dash was longer than the letter.",
+      "text": "She wrote \"forthwith\" in everything. Reports, birthday cards, the shopping list. \"Buy eggs forthwith.\" Winifred kept that one for years. And she signed every letter with a long dash before her initial, like a ribbon trailing off a parcel. I told her the dash was longer than the letter.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1693,12 +1693,12 @@
     },
     {
       "who": "ADA",
-      "text": "All that winter, the three of us searched for the Charter. We opened panels. We lifted floorboards. We listened to forty-one clocks. Odile read Hannah Lark's account books, line by line, by candle. And she began to notice small things. A word underlined here. A word underlined there. She said, \"Ada, the Keeper didn't hide it from us. She hid it *for* us. For whoever reads carefully enough.\"",
+      "text": "All that winter, the three of us looked for the Charter. We opened panels. We lifted floorboards. We listened to forty-one clocks. Odile read Hannah Lark's account books, line by line, by candle. And she began to notice small things. A word underlined here. Another there. She said, \"Ada, the Keeper didn't hide it from us. She hid it *for* us. For whoever reads carefully enough.\"",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "I didn't believe her. I wanted fingerprints and footprints. I wanted proof you could hold in your hand. Underlined words seemed like a game to me.",
+      "text": "I didn't believe her. I wanted fingerprints. Footprints. Proof you could hold in your hand. Underlined words looked like a game to me.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1708,12 +1708,12 @@
     },
     {
       "who": "ADA",
-      "text": "And I closed the case. The Library was safe. I told myself the Charter did not matter any more.",
+      "text": "So I closed the case. The Library was safe. I told myself the Charter didn't matter any more.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "Odile came to this room that night. She stood exactly where you are sitting. She said, \"It matters, Ada. It matters for next time. There is always a next time.\"",
+      "text": "Odile came to this room that night. She stood where you're sitting now. She said, \"It matters, Ada. It matters for next time. There is always a next time.\"",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1733,7 +1733,7 @@
     },
     {
       "who": "ADA",
-      "text": "I wrote to her for years. Every letter came back unopened. I don't know where she is. She would be fifty-eight now.",
+      "text": "I wrote to her for years. Every letter came back unopened. I don't know where she is. *(A pause.)* She would be fifty-eight now.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1743,17 +1743,17 @@
     },
     {
       "who": "ADA",
-      "text": "No. *I* was proud. I could not bear a puzzle I could not solve, so I said it was not a puzzle at all. That is the worst thing a detective can do. *(She looks at the child.)* Write that in your notebook. Not because I said it. Because it is true.",
+      "text": "No. *I* was proud. I couldn't bear a puzzle I couldn't solve, so I said it wasn't a puzzle at all. That is the worst thing a detective can do. *(She looks at the child.)* Write that in your notebook. Not because I said it.",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "STAGE",
-      "text": "(She picks up the cello. She plays a few slow bars. The tune seems to stop and wait, as if for an answer.)",
+      "text": "(She picks up the cello and plays a few slow bars. The tune stops in the middle, the way a question stops, waiting for an answer.)",
       "section": "No. 9 Lantern Row"
     },
     {
       "who": "ADA",
-      "text": "This piece was written for two. For forty years I have only ever played half of it.",
+      "text": "It was written for two. For forty years I've only ever played half of it.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1803,7 +1803,7 @@
     },
     {
       "who": "NELL",
-      "text": "*(putting the form back, carefully)* I'm not rating this one. I'm going to wait for the evidence.",
+      "text": "*(putting the form back, carefully)* Not rating this one. I'm waiting for the evidence.",
       "section": "No. 9 Lantern Row"
     },
     {
@@ -1814,7 +1814,7 @@
     {
       "who": "STAGE",
       "label": "Arc beat",
-      "text": "the Blot Ledger, ribbon-tied, now reads **UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY…** The last ink is still wet.",
+      "text": "The Blot Ledger, ribbon-tied, now reads **UNDER THE CLOCK THAT NEVER STRIKES LIES EVERY…** The last ink is still wet.",
       "section": "No. 9 Lantern Row"
     }
   ],
@@ -2494,12 +2494,12 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "The Copying Room, two o'clock. Rain down the long windows. Constable Tully comes in dripping, with a note from the Town Hall."
+      "text": "The Copying Room, two o'clock. Rain runs down the long windows. Somewhere down the corridor a clock ticks, then another. Constable Tully comes in dripping, with a note from the Town Hall."
     },
     {
       "who": "TULLY",
       "kind": "escalation",
-      "text": "Message from the Town Registry. Mr Crane asked them very nicely. The clerk's coming at four now, not five."
+      "text": "Message from the Town Registry. Mr Crane asked them very nicely. Clerk's coming at four now. Not five."
     },
     {
       "who": "PENHALLOW",
@@ -2508,7 +2508,7 @@
     },
     {
       "who": "NELL",
-      "text": "Then we haven't got time to be careful. Look at it. Ink on every finger. A Seal Room key. In the building late on Tuesday. Mr Swale saw him there. And the Blot's card turned up in *his* book, after he'd been at it."
+      "text": "Then there's no time to be careful. Look at him. Ink on every finger. A Seal Room key. In the building late on Tuesday, and Mr Swale saw him. And the Blot's card turned up in *his* book, right after he'd been at it."
     },
     {
       "who": "NELL",
@@ -2521,7 +2521,7 @@
     },
     {
       "who": "QUILL",
-      "text": "Show me where it says he drew a line, Nell. A ten is a number. It is not a reason."
+      "text": "Show me where it says he drew a line, Nell. Ten is a number."
     }
   ],
   "extraMarks": [

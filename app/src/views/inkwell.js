@@ -22,7 +22,7 @@ import * as SE from '../detective-season.js';
 import { loadSeason, loadCase } from '../detective-data.js';
 import { personaById } from '../data/inkwell-personas.js';
 import { stop as stopVoice } from '../voice.js';
-import { openCase, caseView, CASE_ACTIONS, caseKey, casePointerDown, casePointerMove, casePointerUp, personaView, leaveCase, st } from './inkwell-case.js';
+import { openCase, caseView, CASE_ACTIONS, caseKey, casePointerDown, casePointerMove, casePointerUp, personaView, leaveCase, st, panelRoute } from './inkwell-case.js';
 import { openMore, moreView, MORE_ACTIONS, moreKey, leaveMore } from './inkwell-more.js';
 import { figure, sticker, plateBg, plate, WASH, manifestPins, manifestAgency, manifestMap, artUrl, fitInk } from './inkwell-kit.js';
 
@@ -48,7 +48,7 @@ export async function openInkwell(parts) {
   if (view === 'case') {
     const c = byId(id) || (await loadCase(id));
     if (!c || !SE.released(c, { tester: tester() }) || !list().find((x) => x.id === id)?.open && !SE.inkOf(kid()).closed[id]) { s.view = 'hub'; s.say = { who: 'QUILL', text: c ? 'That case is not open yet.' : 'No such case.' }; return; }
-    openCase(c, sub);
+    openCase(c, sub); panelRoute(id, S.ink.sub, parts[4]);
   } else if (view === 'detective') { s.coats = true; s.pick1 = SE.inkOf(kid()).persona; }
   else if (view === 'desk' || view === 'hoard' || view === 'school') await openMore(view, id, sub);
   else if (view === 'map') { s.mapSel = s.mapSel || pick()?.id || null; }

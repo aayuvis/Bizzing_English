@@ -26,7 +26,8 @@ if (!existsSync(BUILD)) { console.log('inkwell-ui: build first (npx vite build, 
 rmSync(SITE, { recursive: true, force: true }); mkdirSync(SITE); symlinkSync(BUILD, SITE + '/Bizzing_English');
 const srv = spawn('python3', ['-m', 'http.server', String(PORT), '--bind', '127.0.0.1'], { cwd: SITE, stdio: 'ignore' });
 process.on('exit', () => srv.kill());   // a crashed run must not leave its server answering on the port
-process.on('uncaughtException', (e) => { console.log('✗ crashed:', e.message); srv.kill(); process.exit(1); });
+let LASTPAGE = null;
+process.on('uncaughtException', async (e) => { console.log('✗ crashed:', e.message.split('\n')[0], (e.message.match(/.*intercepts.*/) || [''])[0]); if (SHOTS && LASTPAGE) await LASTPAGE.screenshot({ path: `${SHOTS}/CRASH.png` }).catch(() => {}); srv.kill(); process.exit(1); });
 await new Promise((r) => setTimeout(r, 700));
 const BASE = `http://127.0.0.1:${PORT}/Bizzing_English/`;
 const EXE = ['/opt/pw-browsers/chromium-1194/chrome-linux/chrome'].find(existsSync);
@@ -39,7 +40,7 @@ const spanAt = (id) => { const sp = P0.spans.get(id), T = D.tokens(C0, sp.doc).f
 
 async function ctxFor({ phone = false, dark = false } = {}) {
   const ctx = await browser.newContext({ viewport: phone ? { width: 390, height: 844 } : { width: 1280, height: 800 }, isMobile: phone, hasTouch: phone, deviceScaleFactor: 1, colorScheme: dark ? 'dark' : 'light' });
-  const page = await ctx.newPage(); page.reqs = []; page.errs = [];
+  const page = await ctx.newPage(); LASTPAGE = page; page.reqs = []; page.errs = [];
   page.on('request', (r) => page.reqs.push(r.url()));
   page.on('pageerror', (e) => page.errs.push(e.message)); page.on('console', (m) => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) page.errs.push(m.text()); });
   page.on('response', (res) => { if (res.status() >= 400) page.errs.push(`${res.status()} ${res.url()}`); });
@@ -48,7 +49,9 @@ async function ctxFor({ phone = false, dark = false } = {}) {
 const wait = (p, ms = 250) => p.waitForTimeout(ms);
 const go = async (p, hash) => { if (await p.$('.sheet')) { await p.keyboard.press('Escape'); await wait(p, 150); } await p.evaluate((h) => { location.hash = h; }, hash); await wait(p, 700); };
 const EMO = () => [...document.querySelectorAll('.ink button, .ink h1, .ink h2, .ink h3, .ink a.btn, .bz-ph h1')].map((e) => e.textContent).join(' ').match(/\p{Extended_Pictographic}/gu) || [];
-const shot = async (p, name, sel) => { const e = await p.evaluate(`(${EMO})()`).catch(() => []); if (e.length) (p.emoji ||= []).push(`${name}: ${e.join('')}`); if (!SHOTS && !sel) return null; await wait(p, 350); const o = { path: SHOTS ? `${SHOTS}/${name}.png` : undefined }; return sel ? (await p.$(sel)).screenshot(o) : p.screenshot(o); };
+const SCROLLERS = () => [...document.querySelectorAll('.stg.ink *')].filter((e) => { const cs = getComputedStyle(e); return /(auto|scroll)/.test(cs.overflowY) && e.scrollHeight > e.clientHeight + 4 && e.clientHeight > 0; }).map((e) => `${String(e.className).split(' ')[0] || e.tagName} ${e.scrollHeight}/${e.clientHeight}${e.classList.contains('pp-body') ? ' [' + [...e.children].map((c) => c.tagName + c.offsetHeight + (c.className ? '.' + c.className : '')).join(',') + ' fs' + getComputedStyle(e).fontSize + ']' : ''}`);
+const SCROLLED = []; 
+const shot = async (p, name, sel) => { { const sc = await p.evaluate(`(${SCROLLERS})()`).catch(() => []); if (sc.length) SCROLLED.push(`${name}: ${sc.join(', ')}`); } const e = await p.evaluate(`(${EMO})()`).catch(() => []); if (e.length) (p.emoji ||= []).push(`${name}: ${e.join('')}`); if (!SHOTS && !sel) return null; await wait(p, 350); const o = { path: SHOTS ? `${SHOTS}/${name}.png` : undefined }; return sel ? (await p.$(sel)).screenshot(o) : p.screenshot(o); };
 const ink = (p) => p.evaluate(() => JSON.parse(JSON.stringify({ cs: window.__bz.S.ink?.cs || null, sub: window.__bz.S.ink?.sub, say: window.__bz.S.ink?.say || null, doc: window.__bz.S.ink?.doc, ret: window.__bz.S.ink?.ret || null })));
 const coins = (p) => p.evaluate(() => Number(document.querySelector('.bz-coins')?.textContent.replace(/[^\d]/g, '') || 0));
 async function makeKid(page) {
@@ -106,18 +109,28 @@ async function tap(page, sel, touch) { const el = await page.waitForSelector(sel
 async function key(page, sel) { await page.focus(sel); await page.keyboard.press('Enter'); await wait(page, 260); }
 
 async function openDocTab(page, doc, touch) { if (await page.$('[data-act=ink-centre][data-arg=doc]')) { if (touch) await tap(page, '[data-act=ink-centre][data-arg=doc]', true); else await key(page, '[data-act=ink-centre][data-arg=doc]'); } const sel = `.dt[data-arg="${doc}"]`; if (touch) await tap(page, sel, true); else await key(page, sel); }
+/* the accusation is three steps, and a long list is cut into pages: open the step, then turn to the page, that holds sel */
+async function reach(page, sel) {
+  const step = /ink-ev/.test(sel) ? 'ev' : /ink-place/.test(sel) ? 'where' : /ink-culprit/.test(sel) ? 'who' : null;
+  if (step && !(await page.$(sel)) && (await page.$(`[data-act=ink-acstep][data-arg=${step}]`))) { await page.click(`[data-act=ink-acstep][data-arg=${step}]`); await wait(page, 250); }
+  for (let n = 0; n < 6; n++) { const off = await page.evaluate((q) => { const e = document.querySelector(q), li = e?.closest('[data-pagelist] > *'); if (!li?.classList.contains('off')) return null; const items = [...li.parentNode.children], me = items.indexOf(li), vis = items.findIndex((x) => !x.classList.contains('off')); return me > vis ? 2 : 1; }, sel);
+    if (!off) return; await page.click(`.pl-pager [data-act=ink-lp]:nth-of-type(${off})`); await wait(page, 250); }
+}
+/* a long document is cut into pages, never scrolled: turn to the page that holds word i */
+async function showWord(page, i) { for (let n = 0; n < 8; n++) { const st = await page.evaluate((i) => { const w = document.querySelector(`.pp-body .w[data-i="${i}"]`); return w ? { off: w.classList.contains('off'), pg: +(w.dataset.pg || 0), cur: +(document.querySelector('.pp-pager span')?.textContent.split('/')[0] || 1) - 1 } : null; }, i);
+  if (process.env.DBG) console.log("showWord", i, JSON.stringify(st)); if (!st || !st.off) return; await page.click(`.pp-pager [data-act=ink-pg]:nth-of-type(${st.pg > st.cur ? 2 : 1})`); await wait(page, 300); } }
 async function markSpan(page, id, { touch = false, hold = false } = {}) {
   const { doc, from, to } = spanAt(id);
   if (touch && (await page.$('.ink-segbar')) && !(await page.$('.ink-desk.seg-doc'))) await tap(page, '[data-act=ink-seg][data-arg=doc]', true);
   await openDocTab(page, doc, touch);
   const before = (await ink(page)).cs.marks.length;
   if (hold) {   // press and hold, then drag across the phrase
-    const a = await page.$(`.pp-body .w[data-i="${from}"]`), b = await page.$(`.pp-body .w[data-i="${to}"]`); await a.scrollIntoViewIfNeeded();
+    await showWord(page, from); const a = await page.$(`.pp-body .w[data-i="${from}"]`), b = await page.$(`.pp-body .w[data-i="${to}"]`); await a.scrollIntoViewIfNeeded();
     const ra = await a.boundingBox(), rb = await b.boundingBox();
     await page.mouse.move(ra.x + 3, ra.y + ra.height / 2); await page.mouse.down(); await wait(page, 520);
     await page.mouse.move(rb.x + rb.width / 2, rb.y + rb.height / 2, { steps: 6 }); await page.mouse.move(rb.x + rb.width - 2, rb.y + rb.height / 2); await page.mouse.up(); await wait(page, 400);
   } else if (touch) {   // tap the first word, tap the last, press Mark
-    for (const i of from === to ? [from] : [from, to]) { const w = await page.$(`.pp-body .w[data-i="${i}"]`); await w.scrollIntoViewIfNeeded(); await w.tap(); await wait(page, 200); }
+    for (const i of from === to ? [from] : [from, to]) { await showWord(page, i); const w = await page.$(`.pp-body .w[data-i="${i}"]`); await w.scrollIntoViewIfNeeded(); await w.tap(); await wait(page, 200); }
     await tap(page, '[data-act=ink-mark]', true);
   } else {      // keyboard: arrows to the first word, Shift+arrows to the last, Enter
     await page.focus('.pp-body'); await press(page, 'ArrowRight', from); await press(page, 'Shift+ArrowRight', to - from); await page.keyboard.press('Enter'); await wait(page, 300);
@@ -132,7 +145,7 @@ async function askAll(page, touch) {
       if (touch) await tap(page, `[data-act=ink-who][data-arg="${sus}"]`, true); else await key(page, `[data-act=ink-who][data-arg="${sus}"]`);
       for (let k = 0; k < 6; k++) {
         const cs = (await ink(page)).cs, list = D.questions(C0, cs).filter((q) => q.suspect === sus && (q.open || q.asked)), j = list.findIndex((q) => !q.asked); if (j < 0) break;
-        if (touch) await tap(page, `[data-act=ink-ask][data-arg="${list[j].id}"]`, true); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, String(j + 1)); await wait(page, 200); }
+        if (touch) { const q = `[data-act=ink-ask][data-arg="${list[j].id}"]`; if (!(await page.isVisible(q)) && (await page.isVisible('.iv-more'))) await tap(page, '.iv-more', true); await tap(page, q, true); } else { await page.evaluate(() => document.activeElement?.blur()); await press(page, String(j + 1)); await wait(page, 200); }
       }
     }
   }
@@ -177,10 +190,13 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   /* choose your detective */
   ok(`${tag}: the opening ends at "Choose your detective"`, await waitSub(page, 'persona'));
   const grid = await page.evaluate(() => { const cs = [...document.querySelectorAll('.pcard-d')].map((e) => e.getBoundingClientRect()); return { n: cs.length, cols: new Set(cs.map((r) => Math.round(r.left))).size, rows: new Set(cs.map((r) => Math.round(r.top))).size }; });
-  ok(`${tag}: six detective cards, ${phone ? '2 × 3' : '3 × 2'}`, grid.n === 6 && grid.cols === (phone ? 2 : 3) && grid.rows === (phone ? 3 : 2), JSON.stringify(grid));
+  ok(`${tag}: six detective cards, 3 × 2`, grid.n === 6 && grid.cols === 3 && grid.rows === 2, JSON.stringify(grid));
   ok(`${tag}: the detectives are painted cut-outs, not stand-ins`, await page.evaluate(() => document.querySelectorAll('.pcard-d img.pd-fig').length === 6));
   await shot(page, nm('persona'));
-  if (touch) { await tap(page, '[data-act=ink-pick][data-arg=milo]', true); await page.fill('#ink-name', 'Mo'); await tap(page, '[data-act=ink-choose]', true); }
+  if (touch) { await tap(page, '[data-act=ink-pick][data-arg=milo]', true);
+    const inView = await page.evaluate(() => { const st = document.querySelector('.stg.ink').getBoundingClientRect(), b = document.querySelector('[data-act=ink-choose]').getBoundingClientRect(), main = document.querySelector('.pd-wrap').getBoundingClientRect(); return b.top >= main.top - 1 && b.bottom <= main.bottom + 1 && b.bottom <= st.bottom; });
+    ok(`${tag}: with a detective picked, the whole confirm panel is on the one screen`, inView);
+    await page.fill('#ink-name', 'Mo'); await tap(page, '[data-act=ink-choose]', true); }
   else { await page.focus('.pcard-d'); await press(page, 'ArrowRight'); await page.keyboard.press('Enter'); await wait(page, 300); await key(page, '[data-act=ink-choose]'); }
   const persona = await page.evaluate(() => window.__bz.S.h.kids[0].inkwell?.persona);
   ok(`${tag}: the detective is chosen (${persona})`, persona === 'milo');
@@ -194,7 +210,7 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   ok(`${tag}: the notebook holds the clue cards`, (await page.$$('.ink-nb .nb-card')).length === marked || phone);
   if (!phone) await stageChecks(page, tag, 'desk');
   if (phone) {
-    const ic5 = await page.evaluate(() => { const ws = [...document.querySelectorAll('.pp-body .w')].map((e) => e.getBoundingClientRect().height); return { min: Math.min(...ws), scroll: document.documentElement.scrollHeight - innerHeight }; });
+    const ic5 = await page.evaluate(() => { const ws = [...document.querySelectorAll('.pp-body .w:not(.off)')].map((e) => e.getBoundingClientRect().height); return { min: Math.min(...ws), scroll: document.documentElement.scrollHeight - innerHeight }; });
     ok(`${tag} IC5: marking targets are at least 44 px tall (${ic5.min.toFixed(1)})`, ic5.min >= 44);
     ok(`${tag} IC5: no page scroll in the document view (${ic5.scroll})`, ic5.scroll <= 1);
     const sg = await segSym(page); ok(`${tag} IC5: the segmented control is centred within 4 px, four equal segments, above the tab bar`, sg && sg.off <= 4 && sg.widths <= 1 && sg.n === 4 && sg.under <= 0 && sg.minH >= 44, JSON.stringify(sg));
@@ -274,8 +290,8 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
   if (touch) await tap(page, '.ink-next', true); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, 'a'); }
   ok(`${tag}: the drawing room opens (${touch ? 'Next' : 'A'})`, await waitSub(page, 'accuse'));
   ok(`${tag}: the Knack rests in the accusation`, (await ink(page)).cs.chapter === 5 && /alone/.test(await page.evaluate(() => document.querySelector('.ac-go small')?.textContent || '')));
-  const pickEv = async (ids) => { for (const id of ids) { if (touch) await tap(page, `[data-act=ink-ev][data-arg="${id}"]`, true); else await key(page, `[data-act=ink-ev][data-arg="${id}"]`); } };
-  const placeIt = async (o) => { if (!o) return; if (touch) await tap(page, `[data-act=ink-place][data-arg="${o}"]`, true); else await key(page, `[data-act=ink-place][data-arg="${o}"]`); };
+  const pickEv = async (ids) => { for (const id of ids) { await reach(page, `[data-act=ink-ev][data-arg="${id}"]`); if (touch) await tap(page, `[data-act=ink-ev][data-arg="${id}"]`, true); else await key(page, `[data-act=ink-ev][data-arg="${id}"]`); } };
+  const placeIt = async (o) => { if (!o) return; await reach(page, `[data-act=ink-place][data-arg="${o}"]`); if (touch) await tap(page, `[data-act=ink-place][data-arg="${o}"]`, true); else await key(page, `[data-act=ink-place][data-arg="${o}"]`); };
   { const accusable = D.accusable(C0, (await ink(page)).cs), j = accusable.indexOf('prout');
     if (touch) await tap(page, '[data-act=ink-culprit][data-arg=prout]', true); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, String(j + 1)); await wait(page, 200); }
     await pickEv(SOL.accusation.evidence); await placeIt(SOL.accusation.place);
@@ -291,10 +307,10 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
     await shot(page, nm('returned')); }
   if (touch) await tap(page, '[data-act=ink-ch][data-arg="5"]', true); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, 'a'); }
   await waitSub(page, 'accuse');
-  { const s0 = await ink(page);
+  { const s0 = await ink(page); await reach(page, `[data-act=ink-culprit][data-arg=${SOL.accusation.culprit}]`);
     if (touch) await tap(page, `[data-act=ink-culprit][data-arg=${SOL.accusation.culprit}]`, true); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, String(D.accusable(C0, s0.cs).indexOf(SOL.accusation.culprit) + 1)); await wait(page, 200); }
     const have = (await ink(page)); const pinned = await page.evaluate(() => window.__bz.S.ink.acc.ev.slice());
-    for (const id of pinned) if (!SOL.accusation.evidence.includes(id)) { if (touch) await tap(page, `[data-act=ink-ev][data-arg="${id}"]`, true); else await key(page, `[data-act=ink-ev][data-arg="${id}"]`); }
+    for (const id of pinned) if (!SOL.accusation.evidence.includes(id)) { await reach(page, `[data-act=ink-ev][data-arg="${id}"]`); if (touch) await tap(page, `[data-act=ink-ev][data-arg="${id}"]`, true); else await key(page, `[data-act=ink-ev][data-arg="${id}"]`); }
     const still = await page.evaluate(() => window.__bz.S.ink.acc.ev.slice());
     await pickEv(SOL.accusation.evidence.filter((x) => !still.includes(x)));
     if (!(await page.evaluate(() => window.__bz.S.ink.acc.place))) await placeIt(SOL.accusation.place);
@@ -309,9 +325,18 @@ async function playCase0({ phone = false, dark = false, touch = false }) {
     ok(`${tag}: the coins shown at Case Solved (${shown}) equal the change in the wallet (${now - startCoins})`, shown === now - startCoins && shown > 0); }
   await shot(page, nm('solved'));
   // the Word Hoard card: one question; a right answer files it
+  if (await page.isVisible('[data-act=ink-svtab][data-arg=word]')) { await page.click('[data-act=ink-svtab][data-arg=word]'); await wait(page, 300); }
   { const card = await page.$('.oc-q .btn'); ok(`${tag}: the Word Hoard card turns over with its one question`, !!card); if (card) { const ans = await page.evaluate(() => { const q = window.__bz.S.ink.closed?.card?.question; return q ? q.options.indexOf(q.answer) : -1; });
       if (touch) await (await page.$$('.oc-q .btn'))[ans].tap(); else { await page.evaluate(() => document.activeElement?.blur()); await press(page, String(ans + 1)); } await wait(page, 400);
       ok(`${tag}: the Word Hoard card is answered and filed`, !!(await page.$('.oc-ok'))); } }
+  /* the epilogue is told in panels, its lines in bubbles over their speakers; the browser's back steps a panel back; the last panel returns to Case Solved */
+  { await go(page, `#/inkwell/case/${C0.id}/epilogue/0`); const s0 = await ink(page); ok(`${tag}: the epilogue opens as panels`, s0.sub === 'epilogue' && !!(await page.$('.cpanel')));
+    await shot(page, nm('epilogue'));
+    await page.click('[data-act=ink-enext]'); await wait(page, 500); const p1 = await page.evaluate(() => window.__bz.S.ink.panel);
+    await page.goBack(); await wait(page, 600); const p0 = await page.evaluate(() => window.__bz.S.ink.panel);
+    ok(`${tag}: Back steps the epilogue one panel back (${p1} → ${p0})`, p1 === 1 && p0 === 0);
+    for (let k = 0; k < 40 && (await ink(page)).sub === 'epilogue'; k++) { await page.click('[data-act=ink-enext]'); await wait(page, 200); }
+    ok(`${tag}: the last panel returns to Case Solved`, (await ink(page)).sub === 'solved'); }
   { const shown = await page.evaluate(() => Number(document.querySelector('[data-coins]')?.dataset.coins)), now = await coins(page);
     ok(`${tag}: after the Word Hoard card the coins shown still equal the wallet's change (${shown} = ${now - startCoins})`, shown === now - startCoins); }
   // back at the Agency: the shelf has its object and the wall its stamp
@@ -346,5 +371,6 @@ for (const [phone, dark] of [[false, true], [true, false]]) {
 }
 
 await browser.close(); srv.kill();
+ok("no screen in a case scrolls inside itself (documents and lists turn pages instead)", SCROLLED.length === 0, "\n  " + SCROLLED.join("\n  "));
 console.log(`inkwell-ui: ${n - fail}/${n} passed`);
 process.exit(fail ? 1 : 0);

@@ -68,63 +68,63 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "Every morning, the Fable Fountain runs backwards, up into the stone fox's mouth.\nAll night the garden is locked, and only the keeper has a key.\nThe Committee calls it a curse.\nAt noon, they sign a stranger's offer to fix it.\nThen the garden may never be free again.\nRead closely, detective.\nCurses do not leave footprints.",
+    "text": "Every morning, the Fable Fountain runs backwards, up into the stone fox's mouth.\nAll night the garden is locked, and only the keeper has a key.\nThe Committee calls it a curse.\nAt noon, they sign a stranger's offer to fix it.\nThen the garden may never be free again.\nRead closely, detective.\nCurses do not leave footprints. Somebody did.",
     "readAloud": true,
     "clock": "noon (moved to eleven in Chapter 3)"
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The Story Garden, Wednesday, seven in the morning.",
+      "place": "The Story Garden. Wednesday, seven in the morning. The stone fox is drinking its own fountain.",
       "picture": "Thick white mist on the hedges. Somewhere inside it, the bandstand clock ticks, slow and loud. The Fable Fountain: a stone fox sitting on a rock, mouth open. Water should pour *out* of the fox's mouth into the basin. Instead the basin is half empty, and the water is gurgling *up* and *into* the fox's mouth with a long, wet, sucking sound, like a fox drinking through a straw. The fox's stone eyes shine wet.",
       "lines": [
         {
           "who": "MR GRAIL",
           "direction": "keys in one hand, the gate still swinging",
-          "text": "Again!"
+          "text": "Again. You greedy old article."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "The agency.",
+      "place": "The agency. A note comes up in the dumbwaiter, under a bun.",
       "picture": "A note arrives by dumbwaiter, under a cinnamon bun. Felix reads it.",
       "lines": [
         {
           "who": "FELIX",
-          "text": "'Come at once. The fountain is cursed. We sign Mr Crane's offer at noon. Yours, Constance Bellamy, Chair.' Footnote: *cursed* is an old word. Footnote to the footnote: so is *Constance*."
+          "text": "'Come at once. The fountain is cursed. We sign Mr Crane's offer at noon. Yours, Constance Bellamy, Chair.' Footnote: *cursed* is a very old word. Footnote to the footnote: people use it when they stop looking."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The agency.",
+      "place": "The agency. The bun is going cold.",
       "picture": "Nell is already on The Comet.",
       "lines": [
         {
           "who": "NELL",
-          "text": "A committee that wants money says *curse*. I smell a plan. Hunch-o-meter: ten!"
+          "text": "Committees don't believe in curses. Not unless a curse is useful. Hunch-o-meter: ten."
         },
         {
           "who": "QUILL",
-          "text": "You smell a cinnamon bun. Bring me facts. Before noon."
+          "text": "What you smell is cinnamon. Bring me something I can check. By noon."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "The Story Garden.",
+      "place": "The Story Garden. White mist. Somewhere inside it, a clock is ticking.",
       "picture": "Asha and Dev run behind, into the mist.",
       "lines": [
         {
           "who": "DEV",
           "direction": "whispering",
-          "text": "My turn to carry the torch."
+          "text": "It's my turn with the torch."
         },
         {
           "who": "ASHA",
           "direction": "whispering",
-          "text": "It's a *fountain*. In the *morning*."
+          "text": "It's *morning*, Dev. It's a *fountain*."
         },
         {
           "who": "DEV",
@@ -134,7 +134,7 @@
     },
     {
       "panel": 5,
-      "place": "The garden gate.",
+      "place": "The garden gate. The same gold-edged notice on every lamppost. Its last line is too small to read.",
       "picture": "On every lamppost on the way, the same crisp cream notice with a gold border. Its bottom strip of print is too small to read from the path.",
       "lines": [
         {
@@ -144,7 +144,7 @@
         },
         {
           "who": "DEV",
-          "text": "And one bun."
+          "text": "Plus one bun."
         },
         {
           "who": "ASHA",
@@ -411,7 +411,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Better. Now read the line."
+          "text": "Not nought. Nothing yet. Read on."
         }
       ]
     },
@@ -1017,41 +1017,41 @@
       "curse": "Curses do not have hands. Find me the hand."
     }
   },
-  "revealSetting": "The fountain, a quarter to eleven. The mist has burnt off and the stone fox is still drinking. Everyone is here: Mr Grail on the bench with his cap in his hands, Mrs Bellamy with her clipboard and a silver pen of her own, Mr Qadir with a spanner, Juniper with her jam jar, Tam with a bun, the agency, and Constable Tully with a lead and no dog. The bandstand clock ticks.",
+  "revealSetting": "The fountain, a quarter to eleven. The mist has burnt off. The stone fox is still drinking. Mr Grail sits on the bench, turning his cap in his hands. Mrs Bellamy holds her clipboard and a silver pen of her own. Mr Qadir has a spanner, Juniper a jam jar, Tam a bun, and Constable Tully a lead with no dog on it. The agency stands by the basin. Above them all, the bandstand clock ticks.",
   "reveal": [
     {
       "who": "QUILL",
-      "text": "New detective. Fifteen minutes. Was the fountain cursed?"
+      "text": "New detective. Fifteen minutes. Was it a curse?"
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "No. The report says, \"The fountain was cursed.\" That's an opinion. The engineer's log says, \"Valve found in position B.\" That's a fact."
+      "text": "No. The report says, \"The fountain was cursed.\" Nobody saw a curse. That's an opinion. The engineer's log says, \"Valve found in position B.\" That's a fact. You can go and look."
     },
     {
       "who": "MRS BELLAMY",
-      "text": "But *everyone agrees*, darling!",
+      "text": "Darling. *Everyone agrees.*",
       "direction": "offended"
     },
     {
       "who": "FELIX",
-      "text": "Footnote: \"everyone agrees\" is not evidence. Footnote to the footnote: I didn't agree. Nobody asked me."
+      "text": "Footnote: \"everyone agrees\" is not evidence. Footnote to the footnote: nobody asked me."
     },
     {
       "who": "QUILL",
-      "text": "Then whose hand moved the valve? In a locked garden, with one ring of keys?"
+      "text": "Then whose hand moved the valve? The gates were locked. One ring of keys."
     },
     {
       "who": "NELL",
-      "text": "I said Mr Grail. *(She winces.)* It was a ten."
+      "text": "I said Mr Grail. I said ten. *(She can't look at him.)*"
     },
     {
       "who": "MR GRAIL",
-      "text": "The hut's mine. Lamp up, door shut, all night. I don't like the garden in the dark.",
+      "text": "I was in the hut all night. Lamp up. I never went past the door.",
       "direction": "gruffly"
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "But the garden has a door that isn't a gate. It was on the very first page: \"the house with the green door in the wall.\""
+      "text": "But there's a way in that isn't a gate. It was on the first page. \"The house with the green door in the wall.\""
     },
     {
       "who": "DEV",
@@ -1059,15 +1059,15 @@
     },
     {
       "who": "ASHA",
-      "text": "Valve in A at eight, gates locked. After the clock struck eight, Juniper went out to her frogs. Tam saw the torch go home through the green door."
+      "text": "Eight o'clock: valve in A, gates locked. The clock strikes eight. Juniper goes out to her frogs. Tam sees a torch by the hedge. It goes home through the green door."
     },
     {
       "who": "NELL",
-      "text": "And the boot prints have wavy soles. Like ripples. *(quietly)* Hunch-o-meter: seven."
+      "text": "*(quietly)* And the boot prints have wavy soles. Like ripples. Hunch-o-meter: seven."
     },
     {
       "who": "QUILL",
-      "text": "Juniper. Will you tell us why?"
+      "text": "Juniper."
     },
     {
       "who": "JUNIPER",
@@ -1080,11 +1080,11 @@
     },
     {
       "who": "JUNIPER",
-      "text": "I'm sorry, Mr Grail. I didn't ask, because you wrote you'd fill it with soil. I was scared of you."
+      "text": "I'm sorry. I didn't ask. You wrote you'd fill it with soil. And I was scared of you."
     },
     {
       "who": "MR GRAIL",
-      "text": "…And I'm scared of the dark. Seems we're square, girl.",
+      "text": "…I sit in that hut all night because I'm scared of the dark. There. Now we're square.",
       "direction": "a long pause"
     },
     {
@@ -1093,31 +1093,31 @@
     },
     {
       "who": "NELL",
-      "text": "Mrs Bellamy, before you sign, may I read you the small bits?"
+      "text": "Mrs Bellamy. Before you sign. Can I read you the small bits?"
     },
     {
       "who": "STAGE",
-      "text": "Nell reads the fine print aloud through the magnifier. Mrs Bellamy's glasses, for the first time ever, go on her nose."
+      "text": "Nell reads the small print aloud through the magnifier. Mrs Bellamy's glasses go on her nose."
     },
     {
       "who": "MRS BELLAMY",
-      "text": "I never could read small print without these. Too proud. *Close* the garden? *Tickets*? For *frogs*? The Committee withdraws its thanks!"
+      "text": "*Close* the garden? *Tickets*? To look at *frogs*? …I never could read small print. Too proud, darling. The Committee withdraws its thanks!"
     },
     {
       "who": "STAGE",
-      "text": "At the gate, a man in a long grey coat puts away his silver pen, and smiles."
+      "text": "At the gate, a man in a long grey coat caps his silver pen. He is still smiling."
     },
     {
       "who": "SILAS CRANE",
-      "text": "Everyone reads the headline, Miss Okafor-Hart. That is rather the point of headlines. Good morning."
+      "text": "Most people read the headline, Miss Okafor-Hart. That is what headlines are for."
     },
     {
       "who": "STAGE",
-      "text": "He tips his hat and walks away, still smiling. The bandstand clock strikes eleven."
+      "text": "He tips his hat and goes. The bandstand clock strikes eleven. The fox, still drinking, does not look up."
     },
     {
       "who": "JUNIPER",
-      "text": "Thank you for the fiddle last night. The frogs loved it."
+      "text": "Thank you for the fiddle last night. The frogs liked it."
     },
     {
       "who": "NELL",
@@ -1125,7 +1125,7 @@
     },
     {
       "who": "JUNIPER",
-      "text": "Somebody played a sad tune over the wall. Wasn't it you?"
+      "text": "Somebody played a sad tune over the wall. Wasn't that you?"
     },
     {
       "who": "STAGE",
@@ -1139,7 +1139,7 @@
     },
     {
       "who": "STAGE",
-      "text": "By Saturday the whole town is digging. Mr Grail brings the biggest spade (\"Midges and all, then\"). Mr Qadir fits a rain barrel and a little trickle-pipe, so the hollow fills from the bandstand roof whenever it rains, and the fountain runs forwards for good. Bellweather's Bakery sends buns. Tam blows the comma whistle at every pause in Mr Grail's speech, which is a lot of pauses. Juniper names the biggest frog **Grail**. Mr Grail pretends not to be pleased. Juniper gives him her second-best torch, \"for the dark bits\". He keeps it on his belt, next to the keys."
+      "text": "By Saturday the whole town is digging. Mr Grail brings the biggest spade. \"Midges and all, then.\" Mr Qadir fits a rain barrel and a little trickle-pipe, so the hollow fills from the bandstand roof whenever it rains, and the fountain runs forwards for good. Bellweather's Bakery sends buns. Tam blows the comma whistle at every pause in Mr Grail's speech. There are a lot of pauses. Juniper names the biggest frog **Grail**. Mr Grail pretends not to be pleased. She gives him her second-best torch, \"for the dark bits\". He hangs it on his belt, next to the keys."
     },
     {
       "who": "HEADING",
@@ -1147,7 +1147,7 @@
     },
     {
       "who": "STAGE",
-      "text": "holds a bake sale to restore the fountain itself. They raise enough, and a bit more. Mrs Bellamy now wears her glasses on her nose, and reads everything, including the backs of seed packets. Her new report says: \"The fountain was cursed. *(Opinion.)* It is now fixed. *(Fact.)*\" Felix frames a copy."
+      "text": "holds a bake sale to mend the fountain itself, and raises enough and a bit more. Mrs Bellamy wears her glasses on her nose now. She reads everything, even the backs of seed packets. Her new report says: \"The fountain was cursed. *(Opinion.)* It is now fixed. *(Fact.)*\" Felix frames a copy."
     },
     {
       "who": "HEADING",
@@ -1163,7 +1163,7 @@
     },
     {
       "who": "JUNIPER",
-      "text": "The garden *clock*! On the bandstand. Grandad wound it every Sunday."
+      "text": "The garden *clock*. On the bandstand. Grandad wound it every Sunday."
     },
     {
       "who": "STAGE",
@@ -1171,15 +1171,15 @@
     },
     {
       "who": "ASHA",
-      "text": "Three words, three cases. Breakfast, three minutes. That's probably nothing."
+      "text": "Three words. Three cases. Breakfast took three minutes. It's probably nothing."
     },
     {
       "who": "DEV",
-      "text": "Probably. *(He frowns at the Ledger. Then a cinnamon bun arrives, and he stops frowning.)*"
+      "text": "Probably. *(He frowns at the Ledger until a cinnamon bun arrives. Then he stops.)*"
     },
     {
       "who": "FELIX",
-      "text": "The card said \"Look below the surface.\" Footnote: so did the engineer. Footnote to the footnote: so did the frogs, I expect."
+      "text": "The card said, \"Look below the surface.\" Footnote: the frogs could have told us that."
     },
     {
       "who": "HEADING",
@@ -1187,7 +1187,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Constable Tully finds Biscuit at last, asleep on the *roof* of the bandstand, right under the garden clock. Nobody can work out how he got up there. Mr Grail fetches a ladder. Biscuit comes down only for a bun."
+      "text": "Constable Tully finds Biscuit at last, asleep on the *roof* of the bandstand, right under the garden clock. Nobody knows how he got up there. Mr Grail fetches a ladder. Biscuit comes down only for a bun."
     },
     {
       "who": "HEADING",
@@ -1195,15 +1195,15 @@
     },
     {
       "who": "STAGE",
-      "text": "Juniper climbs all 39 stairs with something heavy in her jam jar: a little stone frog, mossy and smiling, that sat at the edge of the old hollow."
+      "text": "Juniper climbs all 39 stairs with something heavy in her jam jar: a little stone frog, mossy and smiling. It sat at the edge of the old hollow for a long time."
     },
     {
       "who": "JUNIPER",
-      "text": "Grandad carved it. He says it's been watching the pond for forty years. It can watch your shelf now."
+      "text": "Grandad carved it. It's watched that pond for forty years. It can watch your shelf now."
     },
     {
       "who": "QUILL",
-      "text": "Thank you, Juniper. It has good eyes."
+      "text": "It has patient eyes. Thank you, Juniper."
     },
     {
       "who": "STAGE",
@@ -1215,7 +1215,7 @@
     },
     {
       "who": "STAGE",
-      "text": "That night, Nell takes the Inspector application out of her basket, smooths it flat, writes her name in the first box, and puts it back. Not yet."
+      "text": "That night Nell takes the Inspector form out of her basket. She smooths it flat, writes her name in the first box, and puts it back. Not yet. Across town, in the dark, the stone fox pours its water out, the right way round."
     }
   ],
   "drill": {
@@ -1755,21 +1755,21 @@
   "boardIntro": [
     {
       "who": "NELL",
-      "text": "Forget the Committee. Look. The garden is locked all night."
+      "text": "Never mind the Committee. The gates are locked all night. Every night."
     },
     {
       "who": "NELL",
-      "text": "One ring of keys, and it never leaves his belt. Not even in the bath."
+      "text": "One ring of keys, and it never comes off his belt. Not even in the bath."
     },
     {
       "who": "ASHA",
-      "text": "And somebody slept in that hut."
+      "text": "Then who slept in the hut?"
     }
   ],
   "aside": [
     {
       "where": "chapter 1, opening",
-      "text": "The Story Garden, a little before eight. The mist has not lifted. The bandstand clock ticks somewhere inside it, and the fountain gives a long, slurping gulp every few seconds, as if the fox is very thirsty and slightly rude. Robins hop on the padlocked side gate. Behind the yew hedge, where no rain has fallen for three weeks, the air smells of wet moss."
+      "text": "The Story Garden, a little before eight. The mist has not lifted. Somewhere inside it the bandstand clock ticks, and every few seconds the fountain gives a long, slurping gulp. The fox is thirsty, and not polite about it. Robins hop on the padlocked side gate. Behind the yew hedge, where no rain has fallen for three weeks, the air smells of wet moss."
     },
     {
       "where": "chapter 1, end",
@@ -1787,7 +1787,7 @@
     },
     {
       "where": "chapter 2, opening",
-      "text": "The interviews happen on the bandstand steps. The mist is thinning into gold. Every few seconds the fountain gulps."
+      "text": "The interviews happen on the bandstand steps. The mist is thinning into gold. Every few seconds, the fox gulps."
     },
     {
       "where": "chapter 2, end",
@@ -1823,7 +1823,7 @@
         },
         {
           "who": "NELL",
-          "text": "He could change his boots. He has had twenty years to buy another pair."
+          "text": "So he changed his boots. Twenty years, Asha. A man can buy two pairs."
         },
         {
           "who": "TULLY",
@@ -1838,7 +1838,7 @@
     },
     {
       "where": "chapter 4, end",
-      "text": "The bandstand clock says twenty to eleven. Through the bars of the gate, the children see a long grey coat, and the glint of a silver pen being uncapped."
+      "text": "The bandstand clock says twenty to eleven. Through the bars of the gate, the children see a long grey coat, and a silver pen being uncapped."
     }
   ]
 }

@@ -88,41 +88,41 @@
   "cutscene": [
     {
       "panel": 1,
-      "place": "The slipway at dawn",
+      "place": "The slipway at dawn. Mist so thick the oars go into it and do not come out.",
       "picture": "Mist lies on the lake so thick that the oars vanish into it. Asha's rowing eight glides in, eight breaths and one creak. An oar goes *clunk*, on something that is not wood.",
       "lines": [
         {
           "who": "ASHA",
-          "text": "Easy all. What was that?"
+          "text": "Easy all. Easy. *(The boat glides. Silence.)* That wasn't wood."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "The slipway at dawn",
+      "place": "The slipway at dawn. Out in the mist, the lighthouse lamp sweeps past, a pale smear, and is gone.",
       "picture": "Asha leans over and lifts a brown bottle, cold and dripping, its cork sealed with black wax pressed into a perfect blot. Somewhere out in the mist, the lighthouse lamp sweeps by, a pale smear.",
       "lines": [
         {
           "who": "ASHA",
           "mode": "whispering",
-          "text": "The Blot. On our lake."
+          "text": "The Blot. *(She turns the bottle in her hands.)* On our lake."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The boathouse noticeboard, 10 am",
+      "place": "The boathouse noticeboard, 10 am. Three lines boxed in red crayon. Somebody gasps.",
       "picture": "Mr Fosse, clipboard under one arm, pins a typed notice to the board with a red crayon box round three lines. A small crowd reads it. Somebody gasps.",
       "lines": [
         {
           "who": "MR FOSSE",
-          "text": "Committee at seven tonight! If this isn't settled, there's no Regatta at all. Safety first!"
+          "text": "Committee at seven tonight! If this isn't sorted, there's no Regatta at all. Safety first, everyone. Safety first."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "The agency's round window, afternoon",
+      "place": "The agency's round window, afternoon. The rain begins the way it always does, one tick at a time.",
       "picture": "Rain begins to tick on the glass. Quill reads the Gazette's front page. Nell is already pulling on her jacket.",
       "lines": [
         {
@@ -131,13 +131,13 @@
         },
         {
           "who": "QUILL",
-          "text": "Asha and *I*. Take it anyway. Seven o'clock is not far off."
+          "text": "Asha and *I*. Take it anyway. Seven o'clock is closer than it looks."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "The island lighthouse",
+      "place": "The island lighthouse, white and calm. Across the water, a long grey roof with nothing on it at all.",
       "picture": "White and calm across the grey water, a single gull on its gallery rail. On the near shore, the long grey boathouse roof, in plain view of the whole lawn. Nothing on it at all.",
       "lines": []
     }
@@ -1358,27 +1358,27 @@
       ]
     }
   },
-  "revealSetting": "The Regatta office, Saturday, six o'clock: the committee's hour. Rain drums on the tin roof, and the clock above the door ticks loud enough to count. Mr Fosse, Mrs Quayle, Lyle and Mr Otterburn squeeze in among the whistle boxes. Constable Tully holds the original poem in an evidence bag, and Mrs Quayle's keys in his other hand. The Blot's card is pinned to the noticeboard, turning slightly in the draught. The child pins the evidence, one card at a time.",
+  "revealSetting": "The Regatta office, Saturday, six o'clock: the committee's hour. Rain drums on the tin roof. The clock above the door ticks loud enough to count. Mr Fosse, Mrs Quayle, Lyle and Mr Otterburn squeeze in among the whistle boxes. Constable Tully holds the original poem in an evidence bag, and Mrs Quayle's keys in his other hand. On the noticeboard, the Blot's card turns slowly in the draught. The child pins the evidence, one card at a time.",
   "reveal": [
     {
       "who": "QUILL",
-      "text": "Six o'clock. Before anyone decides anything, we read the poem. Properly."
+      "text": "Six o'clock. Before anyone decides anything, we read the poem. The original."
     },
     {
       "who": "NELL",
-      "text": "First: was it ever a threat? *(She holds the original and the typed copy side by side.)* The original says \"No boats will be out.\" The copy says \"No, boats will be out.\" One comma moved, and a riddle became a threat."
+      "text": "Was it ever a threat? *(She holds the original and the typed copy side by side.)* The original: \"No boats will be out.\" The copy: \"No, boats will be out.\" One comma moves, and a riddle turns into a threat."
     },
     {
       "who": "ASHA",
-      "text": "And it was timed for an empty lake. Last boats home at half past eight. Lake shut at nine. The light goes out \"at the tenth bell\"."
+      "text": "And it was timed for an empty lake. Last boats home at half past eight. Lake closed at nine. The light goes out \"at the tenth bell\"."
     },
     {
       "who": "DEV",
-      "text": "It was there from the very first page. *(He reads.)* \"The last oar will lie on the grass like a spoon beside a plate.\" The oars are put away. *Then* the eye closes."
+      "text": "It was on the first page all along. *(He reads.)* \"The last oar will lie on the grass like a spoon beside a plate.\" Supper's over. The oars are put away. *Then* the eye closes."
     },
     {
       "who": "FELIX",
-      "text": "Second: who wrote it? Not Mr Asante. Footnote: nine attempts in his bin, and every one rhymed by line two."
+      "text": "So who wrote it? Not Mr Asante. Footnote: nine attempts in his bin, and every one rhymed by line two."
     },
     {
       "who": "LYLE",
@@ -1386,7 +1386,7 @@
     },
     {
       "who": "NELL",
-      "text": "Not Mrs Quayle. I gave her a ten, and I was wrong. On Friday night she rowed out for a green bottle, because the poem in it was written for her."
+      "text": "Not Mrs Quayle either. I gave her a ten, and I was wrong. Friday night, she rowed out after a green bottle, because the poem inside was written for her."
     },
     {
       "who": "MRS QUAYLE",
@@ -1410,7 +1410,7 @@
     },
     {
       "who": "MR FOSSE",
-      "text": "*(sitting down heavily on a box of whistles)* I didn't move the comma on purpose. Two fingers, ten in the morning. But when I read it back… nobody would ask about the money now. Mr Crane pulled out in September. I sold my own dinghy to pay for the cups, and it still wasn't enough for rockets."
+      "text": "*(sitting down heavily on a box of whistles)* I didn't move the comma on purpose. Two fingers, ten in the morning. But when I read it back… nobody would ask about the money now. Mr Crane pulled out in September. I sold my own dinghy to pay for the cups. It still wasn't enough for rockets."
     },
     {
       "who": "MRS QUAYLE",
@@ -1418,7 +1418,7 @@
     },
     {
       "who": "MR FOSSE",
-      "text": "*(quietly)* Yes. I'm sorry, Morwenna. Truly."
+      "text": "*(quietly)* Yes. *(A long pause.)* I'm sorry, Morwenna."
     },
     {
       "who": "CONSTABLE TULLY",
@@ -1426,7 +1426,7 @@
     },
     {
       "who": "FELIX",
-      "text": "And the roof the whole town can see, where nobody has ever seen a word? Mr Otterburn's book: \"Grey as a heron.\" The paint: silver-grey. Grey on grey, by day."
+      "text": "And the roof the whole town can see, where nobody's ever seen a word? Mr Otterburn's book: \"Grey as a heron.\" The lady's paint: silver-grey. Grey on grey, by day."
     },
     {
       "who": "MR OTTERBURN",
@@ -1440,7 +1440,7 @@
   "epilogue": [
     {
       "who": "NARRATOR",
-      "text": "The committee votes in four minutes flat, which Mr Fosse says is a record. The Regatta goes ahead. The Harbour Master's form goes into the stove.",
+      "text": "The committee votes in four minutes flat. Mr Fosse says that is a record. The Regatta goes ahead. The Harbour Master's form goes into the stove.",
       "section": "The money"
     },
     {
@@ -1465,7 +1465,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "At 8:30 the last boats come home in a lantern parade. At nine, Mr Fosse blows his whistle, and the lake closes. Not a single boat is out. Asha checks twice.",
+      "text": "At 8:30 the last boats come home in a lantern parade. At nine, Mr Fosse blows his whistle and the lake closes. Not one boat is out. Asha counts twice.",
       "section": "Regatta night"
     },
     {
@@ -1475,7 +1475,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Then the town gathers on the lawn opposite the boathouse for the prizes, and the clock on the café wall strikes ten.",
+      "text": "Then the town gathers on the lawn opposite the boathouse for the prizes. On the café wall, the clock strikes ten.",
       "section": "Regatta night"
     },
     {
@@ -1540,17 +1540,17 @@
     },
     {
       "who": "DEV",
-      "text": "The Blot didn't break anything. Not even a scratch in the tar. Just a word that could only be read once, by one beam, by people who'd read the poem properly.",
+      "text": "The Blot didn't break anything. Not a scratch in the tar. Just a word you could only read once, by one beam, if you'd read the poem properly.",
       "section": "The Ledger"
     },
     {
       "who": "ASHA",
-      "text": "That's not a vandal. That's a puzzle-maker.",
+      "text": "Vandals don't leave things for you to read.",
       "section": "The Ledger"
     },
     {
       "who": "NELL",
-      "text": "A puzzle-maker who wants something found.",
+      "text": "Someone does. Someone who wants something found.",
       "section": "The Ledger"
     },
     {

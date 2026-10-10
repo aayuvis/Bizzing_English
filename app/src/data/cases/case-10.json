@@ -89,43 +89,43 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "Silas Crane says he has **bought** the Great Library. His deed is in the Registry, signed by the Keeper herself. Professor Penhallow says she never signed it. At five o'clock today she must hand him the keys, and the doors will close. Read every date. Read every tense. Then read the small print.",
+    "text": "Silas Crane says he has **bought** the Great Library. His deed is lodged at the Registry, signed by the Keeper herself. Professor Penhallow says she never signed it. At five o'clock today she must hand him the keys, and the doors will close. A deed is only words. Somebody chose every one of them.",
     "readAloud": false
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The agency, Saturday breakfast.",
+      "place": "The agency. Saturday, 14 March. Breakfast.",
       "picture": "Frost on the round window; the harbour steams in the cold. Cinnamon buns rise up the dumbwaiter, warm and sticky. Under one bun: a postcard with a puffin stamp. Dev grabs it. Asha grabs Dev.",
       "lines": [
         {
           "who": "DEV",
-          "text": "Mum's last one! She says she's coming home."
+          "text": "Mum's last one. She says she's coming ho—"
         },
         {
           "who": "ASHA",
-          "text": "Read the date first. You always skip the date."
+          "text": "Date first. You always skip the date."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "The speaking-tube whistles.",
+      "place": "The speaking-tube whistles. Nobody whistles it at breakfast with good news.",
       "picture": "Tam's voice, out of breath. Quill is already reaching for the deerstalker.",
       "lines": [
         {
           "who": "TAM",
-          "text": "Forum. Now. Mr Crane's put up a notice and the Keeper's gone the colour of milk."
+          "text": "Forum steps. Now. Mr Crane's put a notice up, and the Keeper's gone the colour of milk."
         },
         {
           "who": "QUILL",
-          "text": "Fewer questions. More bicycles."
+          "text": "Coats. The buns will keep."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The Forum steps.",
+      "place": "The Forum steps. A wind off the harbour turns the pages of everything.",
       "picture": "Gulls wheel and complain overhead. A crowd round the notice board, breath smoking. Crane on the top step, camel coat, red pencil behind his ear, smiling down. Professor Penhallow at the bottom, keys clenched in one fist.",
       "lines": [
         {
@@ -134,34 +134,34 @@
         },
         {
           "who": "CRANE",
-          "text": "My dear Keeper. The Registry says you did. Five o'clock, on these steps. Do bring the keys."
+          "text": "My friend, the Registry says you did. In ink. Five o'clock, on these steps. Do bring the keys."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "Close on the Library's great doors behind them",
+      "place": "Above the great doors, the old motto. Above the motto, the Clock Tower. A quarter past eleven.",
       "picture": "the carved motto lit by the low sun. Above them, the Clock Tower's hands stand at a quarter past eleven. Nell looks up at the motto, just for a second.",
       "lines": [
         {
           "who": "NELL",
           "mode": "thinking",
-          "text": "Every word, for everyone. Not for sale."
+          "text": "Every word, for everyone."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "The Comet at the foot of the steps.",
+      "place": "The Comet, at the foot of the steps. A form in the basket, bent and floury, pushed back down.",
       "picture": "Nell's application form pokes out of the basket, bent and floury. She pushes it back down.",
       "lines": [
         {
           "who": "NELL",
-          "text": "Hunch-o-meter: this is a forgery, ten out of ten."
+          "text": "Hunch-o-meter: forgery. Ten out of ten."
         },
         {
           "who": "QUILL",
-          "text": "Then prove it. With nine of them, at least. You have until five."
+          "text": "Hunches don't get lodged at the Registry. Paper does. You have till five."
         }
       ]
     }
@@ -1443,15 +1443,15 @@
   "reveal": [
     {
       "who": "NELL",
-      "text": "Mr Crane, your deed says it was made on 03/04."
+      "text": "Mr Crane. Your deed says it was made on 03/04."
     },
     {
       "who": "CRANE",
-      "text": "The fourth of March. Shall we move on?"
+      "text": "The fourth of March, my friend. Coffee?"
     },
     {
       "who": "ASHA",
-      "text": "*(the day book)* Registry Rule 1: day first. That's the third of April. Your deed was signed on a day that hasn't happened yet."
+      "text": "*(opening the Registry day book)* Registry Rule 1: day first, then month. So 03/04 is the third of April. Your deed was signed on a day that hasn't come yet."
     },
     {
       "who": "CRANE",
@@ -1459,31 +1459,31 @@
     },
     {
       "who": "DEV",
-      "text": "*(The postcard.)* \"Every letter Mr Crane ever signed puts the month first.\" And it was there from the very first page. *(The notice.)* You dated your own notice 03/14. There is no fourteenth month."
+      "text": "*(holding up Mum's postcard)* \"Every letter Mr Crane ever signed puts the month first.\" *(Then the notice.)* You dated this one 03/14. There is no fourteenth month."
     },
     {
       "who": "FELIX",
-      "text": "So you meant the fourth. *(The letter.)* Dated the third of March: \"The Great Library *was sold* to me this week.\" Yet you told us, \"I wrote to them after the sale, naturally.\" Footnote: *was sold* is finished. On the third, the sale hadn't started."
+      "text": "So you meant the fourth. *(The letter.)* But this is dated the third of March: \"The Great Library *was sold* to me this week.\" And you told us, \"I wrote to them after the sale, naturally.\" Footnote: *was sold* is finished. On the third, the sale hadn't started."
     },
     {
       "who": "QUILL",
-      "text": "*Had not* started. Contractions in court, Felix? Carry on."
+      "text": "*Had not.* Not in a council chamber, Felix. Go on."
     },
     {
       "who": "PROFESSOR PENHALLOW",
-      "text": "And my name? I was on the mainland all that day."
+      "text": "And my name? On the fourth I was on the mainland. All day."
     },
     {
       "who": "STAGE",
-      "text": "(The child lays the expert's report beside the draft deed. Red pencil: \"Trace her name from the visitor form. Slowly.\")"
+      "text": "(The child lays the expert's report beside the draft deed. In red pencil: \"Trace her name from the visitor form. Slowly.\")"
     },
     {
       "who": "DR QUARRENDER",
-      "text": "*(very small)* Too perfect. Oh dear. I should have worn my spectacles."
+      "text": "*(very small)* Stroke for stroke. And nobody signs the same way twice. Oh dear. I should have worn my spectacles."
     },
     {
       "who": "NELL",
-      "text": "You signed one folded page, Professor: his visitor form. He carried it away and traced it. Not Mr Swale: he was washing pots on the mainland, and came home only to give the money back."
+      "text": "You signed one folded page, Professor: his visitor form. He carried it away and traced it. Not Mr Swale. He was washing pots on the mainland, and came home only to give the money back."
     },
     {
       "who": "MR SWALE",
@@ -1491,23 +1491,23 @@
     },
     {
       "who": "STAGE",
-      "text": "(The door bangs. Mr Pettigrew, soaked, holds up a ferry ticket torn in two.)"
+      "text": "(The door bangs. Mr Pettigrew, soaked to the knees, holds up a ferry ticket torn in two.)"
     },
     {
       "who": "MR PETTIGREW",
-      "text": "I was asked to witness. I will say it properly now. *Mr Crane* asked me. I did not see it signed. Nobody saw it signed, because nobody signed it."
+      "text": "I was asked to witness. *(A breath.)* No. *Mr Crane* asked me. I did not see it signed. Nobody saw it signed, because nobody signed it."
     },
     {
       "who": "STAGE",
-      "text": "(A long silence. Crane takes the red pencil from behind his ear and turns it over.)"
+      "text": "(A long silence. Crane takes the red pencil from behind his ear and turns it over, and over.)"
     },
     {
       "who": "CRANE",
-      "text": "It would have been beautiful, you know. The Experience. Gold rope. A little shop. I'd have mended your roof."
+      "text": "It would have been beautiful, you know. Gold rope. A little shop. I'd have mended your roof."
     },
     {
       "who": "PROFESSOR PENHALLOW",
-      "text": "I'd rather a bucket than a ticket. It is beautiful *now*. It is beautiful at four o'clock on a wet Tuesday, when a child who has nowhere else to go comes in and is warm."
+      "text": "I'd rather a bucket than a ticket. It is beautiful *now*. At four o'clock on a wet Tuesday, when a child with nowhere else to go comes in and is warm."
     },
     {
       "who": "CRANE",
@@ -1515,7 +1515,7 @@
     },
     {
       "who": "STAGE",
-      "text": "(He puts the pencil on the table, next to the gavel. Outside, the Clock Tower strikes four. Nobody hands anybody any keys.)"
+      "text": "(He puts the pencil down beside the gavel. Outside, the Clock Tower strikes four. Nobody hands anybody any keys.)"
     },
     {
       "who": "CONSTABLE TULLY",
@@ -1523,7 +1523,7 @@
     },
     {
       "who": "QUILL",
-      "text": "By ten minutes. As usual. Sit down; you're just in time for the paperwork."
+      "text": "By ten minutes. Sit down. There's paperwork."
     }
   ],
   "epilogue": [
@@ -1565,15 +1565,15 @@
     },
     {
       "who": "ADA",
-      "text": "I remember everyone who reads with their mouth moving. They're the ones who mean it."
+      "text": "I remember all of them. The ones whose mouths move are the ones who mean it."
     },
     {
       "who": "CRANE",
-      "text": "I wrote the letter on the third because I was certain. I'd planned it so carefully that it felt finished. I wrote *was* because in my head, it already was."
+      "text": "I wrote *was* on the third. It was all planned. In my head, it had already happened."
     },
     {
       "who": "ADA",
-      "text": "That is the oldest mistake in the world, Silas. Telling a story in the past tense before you've lived it."
+      "text": "Most people only do that in diaries, Silas. They don't post it to their partners."
     },
     {
       "who": "CRANE",
@@ -1581,7 +1581,7 @@
     },
     {
       "who": "ADA",
-      "text": "That's for the magistrate. But I'll tell you what I'd want, if I were the Keeper. I'd want you inside the building. Not owning it. Shelving it."
+      "text": "That's for the magistrate. But if I were the Keeper, I'd want you inside the building. Not owning it. Shelving it."
     },
     {
       "who": "STAGE",
@@ -1589,15 +1589,15 @@
     },
     {
       "who": "STAGE",
-      "text": "He takes something from his pocket and puts it on the table beside the cold tea: a small, battered book with a Library label on its spine."
+      "text": "He takes something from his pocket and sets it down beside the cold tea. A small, battered book, with a Library label on its spine."
     },
     {
       "who": "CRANE",
-      "text": "*The Lighthouse Boy.* Third shelf of the sea stories. I took it out the week we moved away. It is thirty-one years overdue."
+      "text": "*The Lighthouse Boy.* Third shelf of the sea stories. I took it out the week we moved away. Thirty-one years overdue."
     },
     {
       "who": "ADA",
-      "text": "Then take it back yourself, on Monday. Hand it to the Keeper. She'll want to see your face when you do."
+      "text": "Then take it back yourself, on Monday. Hand it to the Keeper. Let her see your face when you do."
     },
     {
       "who": "STAGE",
@@ -1609,7 +1609,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "On Monday, Magistrate Ruth Abernethy reads every document twice, which Quill says is the mark of a good magistrate."
+      "text": "On Monday, Magistrate Ruth Abernethy reads every document twice. Quill, who reads everything twice, approves."
     },
     {
       "who": "NARRATOR",
@@ -1617,7 +1617,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "Mr Crane returns *The Lighthouse Boy* to the Keeper before the hearing, and pays the fine out of his own pocket, in small coins, one at a time. It takes some while."
+      "text": "Mr Crane returns *The Lighthouse Boy* to the Keeper before the hearing. He pays the fine out of his own pocket, in small coins, one at a time. It takes some while."
     },
     {
       "who": "NARRATOR",
@@ -1637,7 +1637,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "\"It's one word short,\" says Dev. \"And the Blot got to Crane's deed *before* we did. Before anyone did. The Blot is ahead of us.\""
+      "text": "\"It's one word short,\" says Dev. \"And the Blot got to Crane's deed *before* we did. Before anyone did.\""
     },
     {
       "who": "NARRATOR",
@@ -1681,7 +1681,7 @@
     },
     {
       "who": "NARRATOR",
-      "text": "She posts it. Quill, on the handlebars, says nothing at all, which from Quill is the highest praise there is."
+      "text": "She checks the date on it, day first, and posts it. The box takes it with a small, final sound. Quill, on the handlebars, says nothing at all."
     },
     {
       "who": "SCENE",
@@ -1948,7 +1948,7 @@
       "note": "The plant for Case 11: the Board accepts it as \"noted for later\" and the Ledger shows a small question mark."
     }
   ],
-  "revealSetting": "The council chamber, ten to four. Rain streams down the tall windows. Crane is still smiling, and checking his watch.",
+  "revealSetting": "The council chamber, ten to four. Rain runs down the tall windows. Crane is smiling. He has looked at his watch twice since the door closed.",
   "aside": [
     {
       "where": "meta",
@@ -1980,19 +1980,19 @@
         },
         {
           "who": "ASHA",
-          "text": "*(the Keeper's day book in one hand, Dr Quarrender's report in the other)* On the fourth of March she was on the mainland. All day. And her name is on the deed, perfect to the last curl."
+          "text": "*(the Keeper's day book in one hand, Dr Quarrender's report in the other)* The fourth of March: the mainland, all day. And here's her name on the deed, perfect to the last curl."
         },
         {
           "who": "NELL",
-          "text": "So how does a Keeper on the mainland sign a deed on Lamplit Row?"
+          "text": "So she was in two places at once. Nobody's in two places at once."
         },
         {
           "who": "DEV",
-          "text": "*(sniffing)* And who does a crossword in ink?"
+          "text": "*(sniffing)* Who does a crossword in *ink*?"
         },
         {
           "who": "QUILL",
-          "text": "Five o'clock, detectives. Questions later. Interviews now."
+          "text": "That clock is counting, detectives. Not for us. Interviews."
         }
       ]
     },
@@ -2002,11 +2002,11 @@
       "lines": [
         {
           "who": "CONSTABLE TULLY",
-          "text": "Two bits of news, and neither of them is cocoa. Mr Crane's moved the keys. Four o'clock now, not five. \"The light is better for the photographs,\" he says."
+          "text": "Two bits of news, and neither one's cocoa. Mr Crane's moved the keys. Four o'clock now, not five. \"The light is better for the photographs,\" he says."
         },
         {
           "who": "CONSTABLE TULLY",
-          "text": "And he's bought Mr Pettigrew a ticket on the four o'clock ferry. A long holiday, he says. Paid."
+          "text": "And he's bought Mr Pettigrew a ticket on the four o'clock ferry. A long holiday, he says. All paid for."
         },
         {
           "who": "STAGE",
@@ -2014,11 +2014,11 @@
         },
         {
           "who": "ASHA",
-          "text": "The only witness, on a boat, at the exact minute the keys change hands."
+          "text": "The same minute. The keys on the steps, and the only witness out on the water."
         },
         {
           "who": "QUILL",
-          "text": "Ninety minutes, then. It sounds longer than an hour and a half. Spend it like an hour."
+          "text": "Then the clock says four. Walk faster."
         }
       ]
     },
@@ -2036,7 +2036,7 @@
       "lines": [
         {
           "who": "NELL",
-          "text": "Hunch-o-meter: ten. Look at the draft. Mr Crane told *somebody* to trace her name. Who knows the Keeper's hand better than anyone alive? Her old deputy. She dismissed him. He was Crane's man on the map. He walks out of Crane's office with a big envelope, looking as if he's won. Next morning, he's at the Registry. And he won't say where he's been for three weeks."
+          "text": "Hunch-o-meter: ten. Look at the draft. Somebody was *told* to trace her name. Who knows her hand better than anyone alive? Her old deputy. She dismissed him. He was Crane's man on the map. Friday night he walks out of Crane's office with a big envelope, looking like he's won. Saturday morning, there he is at the Registry. And three weeks gone, and he won't say where. Won't."
         },
         {
           "who": "CONSTABLE TULLY",
@@ -2048,7 +2048,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Ten again, Nell. And fifty minutes to four."
+          "text": "Fifty minutes to four. And you've said ten before, Nell."
         }
       ]
     },
@@ -2058,7 +2058,7 @@
       "lines": [
         {
           "who": "MARLOWE",
-          "text": "The Library returns box. It was in with the cookery books. It's for the Keeper, and it's Mr Swale's hand."
+          "text": "The returns box. It was in with the cookery books. It's for the Keeper. It's Mr Swale's writing."
         },
         {
           "who": "STAGE",
@@ -2076,11 +2076,11 @@
       "lines": [
         {
           "who": "ASHA",
-          "text": "He went to the mainland on the twentieth of February. The Keeper signed the visitor form on the twenty-sixth. He was washing pots while somebody else had her name."
+          "text": "He went to the mainland on the twentieth of February. The visitor form was the twenty-sixth. He was washing pots while somebody else had her name."
         },
         {
           "who": "NELL",
-          "text": "And the envelope went *in* full. \"Like he won something.\" He had. *(Quietly.)* I gave him a ten. I'm sorry."
+          "text": "And the envelope went *in* full. \"Like he won something.\" He had. *(Quietly.)* I gave him a ten."
         },
         {
           "who": "PROFESSOR PENHALLOW",
@@ -2092,7 +2092,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Whoever had the form. Put it on the line, and see who carried it away."
+          "text": "Whoever carried the form away. Peg it up. The line will tell you who."
         }
       ]
     },

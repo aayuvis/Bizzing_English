@@ -226,13 +226,13 @@
     }
   ],
   "card": {
-    "text": "It is your first morning at the Inkwell Detective Agency. Fog lies on the quay. Constable Tully is already waiting on step 39. His dog Biscuit has vanished from a shut kennel! Dog Show judging is at eleven. Nobody heard a thing. Not even Admiral, the goose who honks at every stranger. Why didn't the goose honk?",
+    "text": "Your first morning at the Inkwell Detective Agency. Fog on the quay. Constable Tully is already on step 39, holding an empty lead. His dog Biscuit has gone from a shut kennel. The Dog Show judging is at eleven. Nobody heard a thing. Not even Admiral, the goose who honks at every stranger. So why didn't the goose honk?",
     "readAloud": true
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "Quayside, eight o'clock. Fog on the water.",
+      "place": "Quayside. Eight o'clock. The fog has not lifted.",
       "picture": "Grey fog curls round the masts; gulls cry somewhere above it; the air smells of salt and warm buns. The child stands at a green door beside a bakery window glowing with buns. A big white goose on the bakery step stretches out his neck. Nell leans out of a high round window.",
       "lines": [
         {
@@ -241,41 +241,41 @@
         },
         {
           "who": "NELL",
-          "text": "Don't mind Admiral! He honks at anyone new. Come up! All of them!"
+          "text": "Don't mind Admiral. He honks at anyone new. Come on up! It's a lot of stairs."
         }
       ]
     },
     {
       "panel": 2,
-      "place": "The stairs.",
+      "place": "The stairs, going up.",
       "picture": "A narrow, crooked staircase rising and rising. Every so often a step is drawn with little wavy lines (a creak).",
       "lines": [
         {
           "who": "CAPTION",
-          "text": "Up, and up, and up."
+          "text": "Thirty-nine steps. Three of them creak."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "Step 39. Three hours to judging.",
+      "place": "Step 39. Three hours until the judging.",
       "picture": "Constable Tully sits on the top step with an empty lead and a dog brush. Through the little round window, the harbour clock says eight; Biscuit's show number pokes out of his pocket. The agency door is open; Nell, Asha, Dev and Felix peer out.",
       "lines": [
         {
           "who": "CAPTION",
-          "text": "Dog Show judging: eleven o'clock."
+          "text": "The Dog Show judging is at eleven. The harbour clock says eight."
         },
         {
           "who": "TULLY",
-          "text": "Biscuit's gone! And judging is at eleven!"
+          "text": "He's gone. My Biscuit's gone. And the judging's at eleven."
         },
         {
           "who": "ASHA",
-          "text": "Constable Tully got here first?"
+          "text": "Constable Tully is never first up those stairs. Never."
         },
         {
           "who": "DEV",
-          "text": "Then something is very wrong."
+          "text": "Then it's bad."
         }
       ]
     },
@@ -286,7 +286,7 @@
       "lines": [
         {
           "who": "QUILL",
-          "text": "Good. A case. Sit down, Constable. Detectives do not guess. They read."
+          "text": "Sit down, Constable. From the start, slowly. We don't guess here. We read."
         }
       ]
     }
@@ -477,11 +477,11 @@
       "talk": [
         {
           "who": "DEV",
-          "text": "Thirteen, twenty-six, thirty-nine. Every thirteenth. It's a code! The stairs tell you someone's coming."
+          "text": "Thirteen, twenty-six, thirty-nine. It's a code. The stairs tell you who's coming."
         },
         {
           "who": "FELIX",
-          "text": "Footnote: thirteen is called a baker's dozen. Footnote to the footnote: so these are three baker's dozens of steps. Very fitting, above a bakery."
+          "text": "Footnote: thirteen is a baker's dozen. Three baker's dozens of stairs. Above a bakery. Footnote to the footnote: I don't think that's an accident."
         },
         {
           "who": "ASHA",
@@ -503,7 +503,7 @@
       "talk": [
         {
           "who": "NELL",
-          "text": "A stranger crept up in the night and took him! Hunch-o-meter: ten."
+          "text": "A stranger. In the night. Crept up and took him. Hunch-o-meter: ten."
         },
         {
           "who": "QUILL",
@@ -515,15 +515,15 @@
         },
         {
           "who": "TULLY",
-          "text": "Or he got out by himself! He's very clever, Biscuit."
+          "text": "Or he got out on his own. He's ever so clever, Biscuit."
         },
         {
           "who": "QUILL",
-          "text": "Then the new detective will read about the latch."
+          "text": "Then read about the latch, Detective."
         },
         {
           "who": "FELIX",
-          "text": "Ah. Then I should mention this. It was under the door this morning. I thought it was a poem."
+          "text": "Ah. This was under the door this morning. I thought it was a poem. A sad one."
         }
       ]
     },
@@ -541,11 +541,11 @@
       "talk": [
         {
           "who": "FELIX",
-          "text": "A biscuit, crying in the cold. I thought it was very sad poetry."
+          "text": "'biscuit was crying in the cold.' You see? Poetry."
         },
         {
           "who": "QUILL",
-          "text": "Look at the first word, Felix. What is missing?"
+          "text": "Look at the first word, Felix. What's missing from it?"
         },
         {
           "who": "DEV",
@@ -561,7 +561,7 @@
         },
         {
           "who": "ASHA",
-          "text": "Everybody on the quay has a bun bag. That doesn't tell us who."
+          "text": "It's a bun bag. Everyone on the quay has bun bags."
         },
         {
           "who": "QUILL",
@@ -583,7 +583,7 @@
       "talk": [
         {
           "who": "FELIX",
-          "text": "Footnote: geese have guarded things for thousands of years. Footnote to the footnote: very loudly."
+          "text": "Footnote: geese have guarded things for thousands of years. Loudly, mostly."
         }
       ]
     },
@@ -873,11 +873,11 @@
       "talk": [
         {
           "who": "STAGE",
-          "text": "It is not Mrs Prout. It is Constable Tully, puffing, a mug of cocoa in one hand and a page in the other. Ten minutes behind, as usual, with the paperwork, as usual."
+          "text": "It is not Mrs Prout. It is Constable Tully, puffing, cocoa in one hand and a page in the other. Ten minutes behind, as usual. Carrying the paperwork, as usual."
         },
         {
           "who": "TULLY",
-          "text": "Nine o'clock already! Judging is at eleven. I asked at the Harbour Hotel. The night porter gave me this."
+          "text": "Nine o'clock already. I went round to the Harbour Hotel. The night porter gave me this."
         },
         {
           "who": "ASHA",
@@ -897,7 +897,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Then who did Admiral let by, without one honk?"
+          "text": "Then who walked past Admiral without one honk?"
         }
       ],
       "arrivesInChapter": 4
@@ -935,7 +935,7 @@
       "talk": [
         {
           "who": "NELL",
-          "text": "She wanted Biscuit gone. She has secret treats. And nobody saw her. Hunch-o-meter: ten!"
+          "text": "She wanted him gone. She's got secret treats. Nobody saw her all night. Hunch-o-meter: ten!"
         },
         {
           "who": "ASHA",
@@ -951,7 +951,7 @@
         },
         {
           "who": "TULLY",
-          "text": "On the noon ferry? But judging is at eleven!"
+          "text": "The noon ferry? But the judging's at eleven."
         }
       ],
       "questions": [
@@ -1078,7 +1078,7 @@
       "talk": [
         {
           "who": "QUILL",
-          "text": "A goose is a very honest witness. He says the same thing every time."
+          "text": "A goose is an honest witness. He says the same thing every time."
         },
         {
           "who": "NELL",
@@ -1086,7 +1086,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Good. Hold on to that question. It is the whole case."
+          "text": "Hold on to that question, Nell. That question is the whole case."
         }
       ],
       "questions": [
@@ -1103,7 +1103,7 @@
   "boardIntro": [
     {
       "who": "QUILL",
-      "text": "Two clues together can say more than each alone."
+      "text": "Pin up what you have read. Then see which clues touch."
     }
   ],
   "deductions": [
@@ -1257,11 +1257,11 @@
       },
       {
         "who": "ASHA",
-        "text": "Ooh. That is a good timeline. Better than my porridge one."
+        "text": "That's a better timeline than mine. Mine has porridge in it."
       },
       {
         "who": "STAGE",
-        "text": "The washing line stops swinging. From the bakery's open window, through the steam, comes a small, slow sound. A snore."
+        "text": "The washing line goes still. Through the steam of the bakery window comes a small, slow sound. In. Out. A snore."
       },
       {
         "who": "FELIX",
@@ -1400,47 +1400,47 @@
       "creak"
     ]
   },
-  "revealSetting": "The bakery hatch on the foggy quay, just after nine. Everyone gathers: Constable Tully, Mrs Prout with Duchess, Mr Sully with his gull, and Mrs Bellweather in the hatch with steam behind her. Inside, beside the big black oven, a bun basket under a checked cloth goes up… and down… and up.",
+  "revealSetting": "The bakery hatch on the quay, just after nine. The fog is thinner now, but it has not gone. They are all here: Constable Tully, Mrs Prout with Duchess, Mr Sully and his gull, and Mrs Bellweather in the hatch with steam at her back. Inside, by the big black oven, a bun basket under a checked cloth goes up… and down… and up.",
   "reveal": [
     {
       "who": "QUILL",
-      "text": "Everyone is here. Detective, show them what you read."
+      "text": "Everyone's here. Detective, tell them what the pages said."
     },
     {
       "who": "QUILL",
-      "text": "First, the kennel. Shut from outside, still shut at five, and empty. So somebody lifted him out, and shut it again."
+      "text": "The kennel first. Shut from outside at ten. Still shut at five. Empty. A dog can't shut a latch behind him. Somebody did."
     },
     {
       "who": "QUILL",
-      "text": "Next, the goose sign. It was on the gate from the very first page. 'He honks at strangers.'"
+      "text": "Then the sign on the gate. It was there all along. 'He honks at strangers.'"
     },
     {
       "who": "QUILL",
-      "text": "Now read the report again. 'Not one honk all night.' And Mrs Bellweather: 'He never honks at us.'"
+      "text": "Constable, your report. 'Not one honk all night.' And Mrs Bellweather: 'He never honks at us.'"
     },
     {
       "who": "FELIX",
-      "text": "So no stranger came. Footnote: the nothing was the clue."
+      "text": "So no stranger came. Footnote: the clue was a noise nobody heard."
     },
     {
       "who": "NELL",
-      "text": "And your treats were for Biscuit, Mrs Prout."
+      "text": "Then your treats, Mrs Prout… they were for Biscuit?"
     },
     {
       "who": "MRS PROUT",
-      "text": "He is a very handsome dog. Do not tell Duchess."
+      "text": "Cover your ears, Duchess. He is a very handsome dog."
     },
     {
       "who": "QUILL",
-      "text": "Then the boat log. Mr Sully sailed at nine. Biscuit was still home at ten."
+      "text": "The boat log. The Sea Pie sailed at nine. At ten, Biscuit was still in his kennel."
     },
     {
       "who": "MR SULLY",
-      "text": "The fish smell was my scraps. Sorry, Constable!"
+      "text": "The fish smell? My scraps, shipmate. Every night. Sorry, Constable."
     },
     {
       "who": "QUILL",
-      "text": "That leaves the flour, the word 'in', and a snoring oven."
+      "text": "Which leaves flour on the straw. One small word: in. And an oven that snores."
     },
     {
       "who": "NELL",
@@ -1448,15 +1448,15 @@
     },
     {
       "who": "QUILL",
-      "text": "By the oven, Nell. One small word. A very different morning."
+      "text": "By the oven, Nell. By."
     },
     {
       "who": "STAGE",
-      "text": "The child lifts the cloth. Curled in the bun basket, white with flour from nose to tail, Biscuit is fast asleep. He snores."
+      "text": "The new detective lifts the cloth. In the bun basket, floury from nose to tail, a small brown dog is fast asleep. He snores."
     },
     {
       "who": "MRS BELLWEATHER",
-      "text": "So that's my snoring oven!"
+      "text": "Well. There's my snoring oven."
     },
     {
       "who": "TULLY",
@@ -1464,51 +1464,51 @@
     },
     {
       "who": "STAGE",
-      "text": "A bicycle bell in the fog. Tam rolls up to the hatch, flour on her nose. Admiral waddles behind her. Not a honk."
+      "text": "A bicycle bell, somewhere in the fog. Then Tam, flour on her nose. Admiral waddles at her back. He does not honk."
     },
     {
       "who": "TAM",
-      "text": "Morning! Why is everyone here? Oh! You found my note!"
+      "text": "Morning! Why is everyone… oh. You found my note."
     },
     {
       "who": "TAM",
-      "text": "Took? No! I rescued him! He was crying in the cold wind. So I wrapped him in a flour sack and carried him in."
+      "text": "He was crying out there, in the cold wind. So I wrapped him in a flour sack. And I carried him in."
     },
     {
       "who": "TAM",
-      "text": "I shut the latch, like Mum says. Then I wrote my note."
+      "text": "Then I shut the latch. Mum says always shut the latch. Then I wrote my note."
     },
     {
       "who": "TAM",
-      "text": "Admiral knows me. I feed him every day."
+      "text": "Admiral didn't mind. I feed him every day."
     },
     {
       "who": "QUILL",
-      "text": "Your note said 'I took him in'. In is a very small word with a very big job. In where?"
+      "text": "Your note said 'I took him in.' In where, Tam?"
     },
     {
       "who": "TAM",
-      "text": "Oh! It could have been in the agency. Or in the sea!"
+      "text": "In the… oh. In could be anywhere. The agency. The sea."
     },
     {
       "who": "TAM",
-      "text": "Sorry, everyone. Next time I'll write it all. And sign it. Have a bun?"
+      "text": "Sorry, everyone. Next time I'll sign it. Bun?"
     },
     {
       "who": "TULLY",
-      "text": "Sorry? You kept him warm all night. Thank you, Tam. And judging isn't till eleven!"
+      "text": "Sorry? You kept him warm all night, Tam. Thank you. And it isn't eleven yet."
     },
     {
       "who": "NELL",
-      "text": "Hunch-o-meter for Mrs Prout: ten. Wrong."
+      "text": "My hunch-o-meter said ten. For Mrs Prout."
     },
     {
       "who": "ASHA",
-      "text": "Tens are hard."
+      "text": "It always says ten."
     },
     {
       "who": "DEV",
-      "text": "Wait. What about the card? The blot card in the kennel."
+      "text": "The card, though. The blot card pinned in the kennel."
     },
     {
       "who": "TAM",
@@ -1516,29 +1516,29 @@
     },
     {
       "who": "FELIX",
-      "text": "So someone came after Tam. Footnote: and someone played a violin on the water."
+      "text": "So someone came after Tam. Footnote: someone also played a violin on the water. I haven't forgotten."
     },
     {
       "who": "ASHA",
-      "text": "Admiral didn't honk all night. But he honked all morning. At the ferry, the gulls and me."
+      "text": "But Admiral didn't honk all night. And he's honked at me all morning."
     },
     {
       "who": "QUILL",
-      "text": "Not spooky. Careful. Someone wants us to read."
+      "text": "Not a ghost, Asha. Someone careful. Someone who wants us reading."
     },
     {
       "who": "STAGE",
-      "text": "Out in the fog, one gull cries. Then the whole quay is very quiet."
+      "text": "Out in the fog, one gull cries. Then the quay goes quiet, the way it was quiet all night."
     }
   ],
   "epilogue": [
     {
       "who": "STAGE",
-      "text": "The Harbour Dog Show, eleven o'clock, bunting along the quay. The fog lifts at last. Duchess wins first prize. Biscuit, still floury, wins a ribbon for Whitest Brown Dog."
+      "text": "Eleven o'clock. Bunting along the quay, and the fog lifting at last. Duchess wins first prize. Biscuit, still floury, wins a ribbon: Whitest Brown Dog."
     },
     {
       "who": "NELL",
-      "text": "I'm sorry, Mrs Prout. My hunch was wrong."
+      "text": "Mrs Prout? I'm sorry. I was so sure."
     },
     {
       "who": "MRS PROUT",
@@ -1546,31 +1546,31 @@
     },
     {
       "who": "STAGE",
-      "text": "She pats Biscuit anyway, slips him a treat, and some of the flour comes off on her glove."
+      "text": "When she thinks nobody is looking, she bends down to Biscuit. A treat. A pat. Flour on her good glove."
     },
     {
       "who": "STAGE",
-      "text": "Back up the 39 steps. Three creaks."
+      "text": "Back up the 39 steps. Creak… creak… creak."
     },
     {
       "who": "DEV",
-      "text": "Three creaks. A friend is coming."
+      "text": "Three creaks. That's a friend."
     },
     {
       "who": "STAGE",
-      "text": "It is Admiral, waddling up behind the new detective. He honks, once, small. Then he drops a white feather at the new detective's feet and waddles away."
+      "text": "It is Admiral, climbing behind the new detective one step at a time. At the top he honks once. A small honk. He leaves a white feather at the new detective's feet, and goes back down."
     },
     {
       "who": "TAM",
-      "text": "That means you're not a stranger any more."
+      "text": "That's his friend honk. He's never given me a feather."
     },
     {
       "who": "STAGE",
-      "text": "Admiral's white feather goes on the empty shelf, the first object there. A little light comes on above it."
+      "text": "The feather goes on the empty shelf, the first thing there. Above it, a small light comes on."
     },
     {
       "who": "STAGE",
-      "text": "The calling card is pinned to the Casebook Wall, in the very middle. Read carefully. — B."
+      "text": "The calling card is pinned to the Casebook Wall, in the very middle. A perfect blot of ink, and under it: Read carefully. — B."
     },
     {
       "who": "NELL",
@@ -1590,11 +1590,11 @@
     },
     {
       "who": "STAGE",
-      "text": "Quill says nothing. Quill looks at the card for a moment too long, then turns away."
+      "text": "Quill says nothing. Quill looks at the card a moment too long. Then turns away."
     },
     {
       "who": "STAGE",
-      "text": "Behind the Casebook Wall is a door painted on the wall, with a painted keyhole. Nell rattles its handle on her way past, out of habit."
+      "text": "Behind the Casebook Wall is a door that is only paint, with a painted keyhole. Nell rattles its handle as she passes. She always does."
     },
     {
       "who": "NELL",
@@ -1602,7 +1602,7 @@
     },
     {
       "who": "ASHA",
-      "text": "She's tried the bakery key, the boat key and Constable Tully's whole ring."
+      "text": "She's tried Constable Tully's whole ring. I wrote them all down."
     },
     {
       "who": "QUILL",
@@ -1610,7 +1610,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Biscuit, washed, asleep in Tully's helmet."
+      "text": "Biscuit, washed at last, asleep in Tully's helmet."
     },
     {
       "who": "TULLY",
@@ -1622,11 +1622,11 @@
     },
     {
       "who": "STAGE",
-      "text": "Quill takes down the smallest hat and puts it on the new detective's head."
+      "text": "Quill takes the smallest hat down from its peg and puts it on the new detective's head."
     },
     {
       "who": "QUILL",
-      "text": "Trainee Detective. Welcome to the agency. Your notebook is not blank any more."
+      "text": "Trainee Detective. Your notebook isn't blank any more."
     },
     {
       "who": "STAGE",
@@ -1634,7 +1634,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Case solved. Skills used: finding a detail · putting events in order · working out what isn't said. A new page appears in the notebook: The Blot Ledger, empty, with one line written in Quill's hand: \"Collect the missing words here.\""
+      "text": "Case solved. Skills used: finding a detail · putting events in order · working out what isn't said. A new page in the notebook: The Blot Ledger. It is empty but for one line, in Quill's hand: \"Collect the missing words here.\""
     }
   ],
   "drill": {
@@ -1727,7 +1727,7 @@
   "aside": [
     {
       "where": "Chapter 1, down to the quay",
-      "text": "Everyone clatters down the 39 steps and out onto the quay. Admiral looks at Nell: nothing. He looks at Tully: nothing. He looks at the new detective: HONK!"
+      "text": "Everyone clatters down the 39 steps and out onto the quay. Admiral looks at Nell. Nothing. He looks at Tully. Nothing. He looks at the new detective: HONK!"
     },
     {
       "where": "Chapter 2, opening",
@@ -1747,7 +1747,7 @@
     },
     {
       "where": "Chapter 2, end (hook)",
-      "text": "Nell: \"Then why didn't he honk at Mrs Prout last night?\" Quill: \"Good. Hold on to that question. It is the whole case.\""
+      "text": "Nell: \"Then why didn't he honk at Mrs Prout last night?\" Quill: \"Hold on to that question, Nell. That question is the whole case.\""
     },
     {
       "where": "Chapter 3, board opening",
@@ -1759,7 +1759,7 @@
     },
     {
       "where": "Chapter 4, end (hook)",
-      "text": "The washing line stops swinging. From the bakery's open window, through the steam, comes a small, slow sound. A snore. Felix: \"Was that… the oven?\""
+      "text": "The washing line goes still. Through the steam of the bakery window comes a small, slow sound. In. Out. A snore. Felix: \"Was that… the oven?\""
     },
     {
       "where": "accusation room",

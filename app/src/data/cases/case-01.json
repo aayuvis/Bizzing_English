@@ -54,13 +54,13 @@
   ],
   "tutorial": [],
   "card": {
-    "text": "It is Flower Show morning in the Story Garden. Grandpa Okoro's prize marrow, Big Bertha, has vanished from the show tent! A garden gnome sits in her place. One thin line runs away across the grass, with no footprints. Judging is at eleven. No marrow, no prize. A note says \"she moved it\". Who is she?",
+    "text": "Flower Show morning in the Story Garden, and already hot. Grandpa Okoro's prize marrow, Big Bertha, has gone from the show tent. A garden gnome sits in her place. One thin line runs away across the grass. No footprints. Judging is at eleven. No marrow, no prize. A note says \"she moved it\". But who is she?",
     "readAloud": true
   },
   "cutscene": [
     {
       "panel": 1,
-      "place": "The agency, nine o'clock.",
+      "place": "The agency. Nine o'clock, and already hot.",
       "picture": "Already hot. The round window is propped open and the harbour smells of salt. The dumbwaiter rattles up. On the bun tray, instead of buns, a folded letter with soil on it.",
       "lines": [
         {
@@ -71,29 +71,29 @@
     },
     {
       "panel": 2,
-      "place": "The Story Garden, ten past nine.",
+      "place": "The Story Garden. Ten past nine, says the bandstand clock.",
       "picture": "Heat shimmers over the gravel paths. Hedges, a striped show tent, bunting, bees, a brass band tuning up somewhere. The clock on the white bandstand says ten past nine. Grandpa Okoro waves both arms by the tent door.",
       "lines": [
         {
           "who": "GRANDPA",
-          "text": "Judging is at eleven! No marrow on the table, no prize!"
+          "text": "You came. Good, good. Judging is at eleven, and no marrow, no prize. Come, come!"
         }
       ]
     },
     {
       "panel": 3,
-      "place": "Inside the tent.",
+      "place": "Inside the tent. The air is thick and yellow.",
       "picture": "Hot yellow light through the canvas. A long table, a label holder with no label, and in the middle of a big empty space, a small garden gnome with a fishing rod, grinning.",
       "lines": [
         {
           "who": "GRANDPA",
-          "text": "Big Bertha! Gone! And this… person in her place!"
+          "text": "She was here. Right here. And now there is… this."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "The grass outside the tent door.",
+      "place": "Outside. The grass, baked pale by the sun.",
       "picture": "One thin line, pressed into the grass like a pencil mark, runs away from the door towards the gravel path, and stops. Not one footprint beside it. Dev on his knees.",
       "lines": [
         {
@@ -102,7 +102,7 @@
         },
         {
           "who": "NELL",
-          "text": "She walked away! Big Bertha walked away all by herself!"
+          "text": "She walked. Big Bertha got up and walked away!"
         }
       ]
     },
@@ -113,11 +113,11 @@
       "lines": [
         {
           "who": "NELL",
-          "text": "Hunch-o-meter's already beeping."
+          "text": "My hunch-o-meter's going off already."
         },
         {
           "who": "QUILL",
-          "text": "Hunches do not beep. Marrows do not walk. Read first."
+          "text": "Marrows don't walk, Nell. Read."
         }
       ]
     }
@@ -316,7 +316,7 @@
         },
         {
           "who": "FELIX",
-          "text": "Footnote: a marrow is a giant courgette. Americans say zucchini. Footnote to the footnote: it just never stopped growing."
+          "text": "Footnote: a marrow is a courgette that never stopped growing. Americans say zucchini."
         },
         {
           "who": "NELL",
@@ -328,7 +328,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Plain as day is when we read most carefully. New detective, the note is pinned to the tent pole."
+          "text": "Plain as day? Then we read it twice. Detective, the note is on the tent pole."
         }
       ]
     },
@@ -358,7 +358,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Each she points back to someone. Who is named just before each one? Mark what you find."
+          "text": "Each 'she' points back to someone. Who is named just before it? Mark what you find."
         },
         {
           "who": "ASHA",
@@ -400,7 +400,7 @@
         },
         {
           "who": "FELIX",
-          "text": "Footnote: an oak can live for hundreds of years. Footnote to the footnote: this one looks about a Tuesday old. Very small oak."
+          "text": "Footnote: an oak can live for hundreds of years. This one looks about a Tuesday old."
         },
         {
           "who": "ASHA",
@@ -425,7 +425,7 @@
       "talk": [
         {
           "who": "FELIX",
-          "text": "Footnote: a marrow is a kind of squash. Footnote to the footnote: so is a pumpkin. Big Bertha and Kip's pumpkin are cousins."
+          "text": "Footnote: a marrow is a kind of squash. So is a pumpkin. So Big Bertha and Kip's pumpkin are cousins."
         },
         {
           "who": "DEV",
@@ -476,7 +476,7 @@
         {
           "who": "FELIX",
           "direction": "sniffing the card",
-          "text": "Footnote: it smells of violets. Footnote to the footnote: there are no violets in this tent."
+          "text": "Footnote: it smells of violets. Footnote to the footnote: this tent has no violets."
         },
         {
           "who": "STAGE",
@@ -802,7 +802,7 @@
       "talk": [
         {
           "who": "QUILL",
-          "text": "Kip doesn't know the word. Do you know where to find it?"
+          "text": "Kip doesn't know that word. Do you know where to look?"
         }
       ],
       "questions": [
@@ -1035,23 +1035,23 @@
     "talk": [
       {
         "who": "ASHA",
-        "text": "And I'll add one. Dawn: Zuri rows in the race. That's why she's not here."
+        "text": "I'm adding one. Dawn: Zuri rows in the race. That's why she isn't here."
       },
       {
         "who": "QUILL",
-        "text": "Was the table full or empty when Gerald arrived? Show me the word."
+        "text": "When Gerald came, was the table full? Show me the word."
       },
       {
         "who": "STAGE",
-        "text": "Chapter end. Across the lake, a long horn, and then cheering."
+        "text": "Chapter end. Across the lake, a long horn. Then cheering, small with distance."
       },
       {
         "who": "ASHA",
-        "text": "Half past ten. The race is over. Zuri's coming in."
+        "text": "Half past ten. That's the race done."
       },
       {
         "who": "DEV",
-        "text": "And Bertha's been somewhere since last night. In this heat."
+        "text": "And Bertha's been out there since last night. In this."
       }
     ],
     "events": [
@@ -1158,15 +1158,15 @@
   "reveal": [
     {
       "who": "QUILL",
-      "text": "Twenty minutes. New detective, the floor is yours."
+      "text": "Twenty minutes to judging. Detective."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "Kip first. Grandpa saw him carry something round. Big Bertha is long."
+      "text": "Kip first. He carried something round. Big Bertha is long."
     },
     {
       "who": "KIP",
-      "text": "It was my pumpkin! I held it up to Bertha, so it could see how big to grow."
+      "text": "It was my pumpkin. I held it up to Bertha. So it could see how big to grow."
     },
     {
       "who": "GRANDPA",
@@ -1174,15 +1174,15 @@
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "The gnomes came at sunrise. The table was empty, the line already drawn."
+      "text": "The gnomes came at sunrise. The table was already empty. The line was already there."
     },
     {
       "who": "MR PUDDLE",
-      "text": "And we never come at night because… I am scared of the dark. There. A Chief Gnome."
+      "text": "And we never come at night because… the Chief Gnome does not care for the dark. I am the Chief Gnome."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "Mrs Pell's she grumbled about the heat. Then she went home. At six, she was writing a present."
+      "text": "Mrs Pell's 'she' only grumbled about the heat. Then she went home. At six, she was writing a present."
     },
     {
       "who": "MRS PELL",
@@ -1190,7 +1190,7 @@
     },
     {
       "who": "QUILL",
-      "text": "Now the deciding line. Grandpa, read your letter."
+      "text": "Grandpa. Your letter. Read it again."
     },
     {
       "who": "GRANDPA",
@@ -1202,27 +1202,27 @@
     },
     {
       "who": "STAGE",
-      "text": "Grandpa pulls his glasses down and reads, slowly."
+      "text": "For the first time today, Grandpa pulls his glasses down. He reads slowly."
     },
     {
       "who": "GRANDPA",
-      "text": "'At six, Zuri Okoro came with a wheelbarrow. She moved the marrow…' Oh. She is Zuri."
+      "text": "'At six, Zuri Okoro came with a wheelbarrow. She moved the marrow…' Oh. She is Zuri. My Zuri."
     },
     {
       "who": "DEV",
-      "text": "And the line with no footprints. One line means one wheel."
+      "text": "The line in the grass. One line. One wheel."
     },
     {
       "who": "ASHA",
-      "text": "A wheelbarrow. Your wheelbarrow, Grandpa. It was there on the very first page."
+      "text": "Your wheelbarrow, Grandpa. It was in your P.S. The very first page."
     },
     {
       "who": "FELIX",
-      "text": "And the grass was baked hard. 'Very hot!' Feet don't sink in. A wheel with Bertha in it does."
+      "text": "Footnote: 'Very hot!' The grass was baked hard. Feet don't sink in. A wheel with Bertha in it does."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "Zuri knew Bertha would wilt. So she took her to the coolest place in the garden."
+      "text": "Zuri knew Bertha would wilt in here. So she took her somewhere cool. The coolest place in the garden."
     },
     {
       "who": "EVERYONE",
@@ -1239,11 +1239,11 @@
     {
       "who": "QUILL",
       "direction": "running, deerstalker bobbing",
-      "text": "Fewer minutes. Now, run!"
+      "text": "Fewer. Run."
     },
     {
       "who": "STAGE",
-      "text": "The shed under the oak. Cool shade, a smell of moss, a slow drip. The door creaks open onto darkness."
+      "text": "The shed under the oak. Shade, at last. Moss, and a slow drip. The door creaks open onto dark."
     },
     {
       "who": "ASHA",
@@ -1257,11 +1257,11 @@
     },
     {
       "who": "ASHA",
-      "text": "Last time was a staircase. That doesn't count."
+      "text": "Last time was stairs. Stairs don't count."
     },
     {
       "who": "STAGE",
-      "text": "The torch clicks on. On damp sacks, beside a striped wheelbarrow, lies Big Bertha: long, green and perfectly firm."
+      "text": "Click. On damp sacks, beside a striped wheelbarrow, lies Big Bertha: long, green and perfectly firm."
     },
     {
       "who": "GRANDPA",
@@ -1273,11 +1273,11 @@
     },
     {
       "who": "STAGE",
-      "text": "Running feet. ZURI, plaits dripping, a medal bouncing."
+      "text": "Running feet on the gravel. Zuri, plaits dripping, a medal swinging at her neck."
     },
     {
       "who": "ZURI",
-      "text": "Grandpa! I heard you across the lake! Bertha was going soft, so I wheeled her here. I asked Sami to write it down."
+      "text": "Grandpa! I could hear you across the lake. She was going soft. So I wheeled her here. I asked Sami to write it down."
     },
     {
       "who": "GRANDPA",
@@ -1293,11 +1293,11 @@
     },
     {
       "who": "MRS PELL",
-      "text": "Hmph. I would have been cross too. It is a very fine marrow."
+      "text": "Hmph. I'd have blamed me too. It is a very fine marrow."
     },
     {
       "who": "QUILL",
-      "text": "Nobody here did anything wrong. One small word was read in a hurry."
+      "text": "She. Three letters."
     },
     {
       "who": "STAGE",
@@ -1307,7 +1307,7 @@
   "epilogue": [
     {
       "who": "STAGE",
-      "text": "The show tent, eleven o'clock exactly. The judges in straw hats. Rosettes on a tray. Mrs Pell's name card is back on the Green Giant's table."
+      "text": "Eleven o'clock exactly, by the bandstand clock. Judges in straw hats. Rosettes on a tray. Mrs Pell's name card is back on the Green Giant's table."
     },
     {
       "who": "STAGE",
@@ -1335,7 +1335,7 @@
     },
     {
       "who": "ZURI",
-      "text": "You read the note properly. That's worth a rosette."
+      "text": "You read it properly. Here."
     },
     {
       "who": "STAGE",
@@ -1343,7 +1343,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Sami the gardener pokes his head into the tent, pencil behind his ear."
+      "text": "Sami the gardener puts his head round the tent flap, pencil behind his ear."
     },
     {
       "who": "SAMI",
@@ -1387,7 +1387,7 @@
     },
     {
       "who": "STAGE",
-      "text": "That evening, Felix borrows The Story Garden Guide from the little reading hut, to check his oak footnote. On the page about the oak, a painted sign reads: Keep off the grass, ______ the oak. A neat, empty gap, as if one word had been lifted out with tweezers."
+      "text": "That evening, Felix borrows The Story Garden Guide from the little reading hut, to check his oak footnote. On the oak's page is a painted sign: Keep off the grass, ______ the oak. A neat, empty gap. As if one word had been lifted out with tweezers."
     },
     {
       "who": "DEV",
@@ -1395,7 +1395,7 @@
     },
     {
       "who": "QUILL",
-      "text": "Every gap has a word. The card told us. Where have we seen a word about the oak today?"
+      "text": "Every gap has a word. The card said so. Where did we read about the oak today?"
     },
     {
       "who": "STAGE",
@@ -1403,7 +1403,7 @@
     },
     {
       "who": "FELIX",
-      "text": "A word that vanished… and the case was hiding under the very same oak. Footnote: that is a coincidence. Footnote to the footnote: I do not believe it is a coincidence."
+      "text": "A word goes missing from the oak. And Bertha was under that oak all along. Footnote: a coincidence. Footnote to the footnote: I don't believe it."
     },
     {
       "who": "FELIX",
@@ -1416,7 +1416,7 @@
     },
     {
       "who": "STAGE",
-      "text": "Last panel: the reading hut at dusk, its door ajar. On the bench outside, where nobody was sitting a moment ago, a single violet petal."
+      "text": "Last panel: the reading hut at dusk. The heat has gone out of the day. The door stands open a crack. On the bench, where nobody was sitting a moment ago, lies one violet petal."
     },
     {
       "who": "STAGE",
@@ -1902,15 +1902,15 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "The bandstand clock says ten. Heat wobbles off the gravel like water."
+      "text": "Ten, says the bandstand clock. Heat shivers off the gravel like water."
     },
     {
       "who": "ASHA",
-      "text": "Ten o'clock. One hour to judging."
+      "text": "One hour."
     },
     {
       "who": "DEV",
-      "text": "And if Bertha's somewhere hot, she's wilting right now."
+      "text": "If Bertha's somewhere hot, she's going soft. Right now."
     }
   ],
   "wrongLinks": [
@@ -1929,7 +1929,7 @@
       "lines": [
         {
           "who": "NELL",
-          "text": "Hunch-o-meter: ten. Mrs Pell grumbled. Mrs Pell wants to win. And Mrs Pell has a paper with his name on it, hidden in her hat!"
+          "text": "Hunch-o-meter: ten. She grumbled. She wants to win. And she's hiding his name in her hat!"
         },
         {
           "who": "GRANDPA",
@@ -1959,5 +1959,5 @@
       "text": "Clock: judging at eleven, no marrow no prize. Impossible thing: one thin line across the grass, no footprints (one wheel, grass baked hard). False solution: Mrs Pell, broken in chapter 4 by her paper. Hidden clue: Grandpa's P.S., his wheelbarrow is gone too. Escalation: Mrs Pell withdraws from the show. The Blot: a card that was not there a moment ago, smelling of violets."
     }
   ],
-  "revealSetting": "The show tent, twenty to eleven. Hot canvas, the hum of bees. Mrs Pell by the door, her name card in her hand. Kip with his pumpkin. Mr Puddle with Gerald under his arm. Grandpa, glasses on his head. The new detective stands by the empty table."
+  "revealSetting": "The show tent, twenty to eleven. Hot canvas, and the bee still bumping at the roof. Mrs Pell by the door, her name card in her hand. Kip with his pumpkin. Mr Puddle with Gerald under his arm. Grandpa, his glasses up on his head where they are no use to anyone. The new detective stands by the empty table."
 }

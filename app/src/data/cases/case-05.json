@@ -51,48 +51,48 @@
   "cutscene": [
     {
       "panel": 1,
-      "place": "the open-air Playhouse, Friday, 8 pm",
+      "place": "The open-air Playhouse, Friday, eight at night. On stage, the lighthouse lamp is dark.",
       "picture": "The open-air Playhouse at dusk, the painted lighthouse on stage with its lamp dark, lanterns along the empty seats, programmes lifting in the sea wind.",
-      "caption": "Friday, 8 pm. Curtain up: tomorrow at seven.",
+      "caption": "Friday, 8 pm. The lamp is dark. Curtain up: tomorrow at seven.",
       "lines": []
     },
     {
       "panel": 2,
-      "place": "backstage",
+      "place": "Backstage. An empty dressing table.",
       "picture": "Backstage: Petra with her clipboard, pointing at an empty dressing table.",
       "lines": [
         {
           "who": "PETRA",
-          "text": "Curtain up tomorrow at seven. No script, no Keeper. No Keeper, no show."
+          "text": "Six o'clock, on her table. Seven o'clock, nothing. Curtain up is tomorrow at seven."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "backstage",
+      "place": "Backstage. Green ink on page twelve.",
       "picture": "Hugo holding his script up, green lines on the page, looking horrified.",
       "lines": [
         {
           "who": "HUGO",
-          "text": "I didn't do this! Sorry. I mean, I didn't."
+          "text": "I didn't— sorry. I didn't do this. I'm not sorry. I mean, I am, but I didn't."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "backstage",
+      "place": "Backstage. A dressing-room door with a painted star. A cat who will not move.",
       "picture": "Encore asleep on a costume basket, one ear folded, refusing to move for anyone. Behind him, a dressing-room door with a painted star, firmly shut.",
       "caption": "Nobody went through that door all evening.",
       "lines": []
     },
     {
       "panel": 5,
-      "place": "the stage door",
+      "place": "The stage door. The sea wind is getting up.",
       "picture": "The agency at the stage door.",
       "lines": [
         {
           "who": "NELL",
-          "text": "Understudy. Wants the lead. Hunch-o-meter: ten!"
+          "text": "The understudy. He wants the lead. Hunch-o-meter: ten."
         },
         {
           "who": "QUILL",
@@ -108,20 +108,20 @@
     },
     {
       "who": "NELL",
-      "text": "He wants the part, and he's got the lines underlined. Hunch-o-meter: ten!"
+      "text": "He wants the part, and he's got the lines underlined. Ten."
     },
     {
       "who": "FELIX",
-      "text": "Footnote: an *understudy* learns a part in case the lead can't go on. Footnote to the footnote: learning it isn't stealing it."
+      "text": "Footnote: an *understudy* learns the part in case the lead can't go on. Footnote to the footnote: learning a part isn't stealing it."
     },
     {
       "who": "QUILL",
-      "text": "Show me where it says Hugo took anything."
+      "text": "Then show me what Hugo took."
     },
     {
       "who": "PETRA",
       "direction": "from the prompt corner, without looking up",
-      "text": "Forty minutes to nine."
+      "text": "Eight twenty. Forty minutes."
     }
   ],
   "cast": [
@@ -475,12 +475,12 @@
         },
         {
           "who": "ASHA",
-          "text": "So he wasn't in the building at all between six and seven. He was across town with a matron and a gran."
+          "text": "Half past five to ten to seven. Harbour House. Signed in, signed out."
         },
         {
           "who": "HUGO",
           "direction": "to the child",
-          "text": "An actor who rehearses for his gran. I thought everyone would laugh."
+          "text": "I read her every part. I even made one up for the cat. I thought you'd all laugh."
         },
         {
           "who": "STAGE",
@@ -1164,39 +1164,39 @@
   "reveal": [
     {
       "who": "QUILL",
-      "text": "Ten minutes. New detective, take them through it."
+      "text": "Ten minutes, new detective. Go on."
     },
     {
       "who": "NELL",
-      "text": "*(to the child)* You read it. You say it. *(beat)* Fine, I'll start. Hugo didn't take anything."
+      "text": "*(to the child)* You read it. You say it. *(beat)* …Fine. I'll start. Hugo didn't take anything."
     },
     {
       "who": "ASHA",
-      "text": "Matron had him at Harbour House until ten to seven. The script was gone at seven. He was still running."
+      "text": "Matron signed him out at ten to seven. The script was gone at seven. He was still running."
     },
     {
       "who": "HUGO",
-      "text": "Reading to my gran. Sorry. I mean, not sorry."
+      "text": "I was reading to my gran. Sorry. I mean— not sorry."
     },
     {
       "who": "NELL",
-      "text": "Petra was on stage with Sunny. But she was hiding something."
+      "text": "Petra was on stage with Sunny. But she was keeping something back."
     },
     {
       "who": "PETRA",
-      "text": "*(quietly)* I knew about the voice. She made me promise. I didn't know about the script."
+      "text": "*(quietly)* The voice. I knew. She made me promise. The script, I didn't know."
     },
     {
       "who": "FELIX",
-      "text": "So it's the voice. Not the speaking one, the writing one. \"Hugo dear.\" \"Petra dear.\" \"Simply all of them.\" \"Simply splendid.\" Footnote: everyone has words they can't stop using. Footnote to the footnote: mine is \"footnote\"."
+      "text": "Then listen to the other voice. The written one. \"Hugo dear.\" \"Petra dear.\" \"Simply all of them.\" \"Simply splendid.\" Footnote: we all have words we can't stop using. Footnote to the footnote: mine is \"footnote\"."
     },
     {
       "who": "DEV",
-      "text": "*(holding the note beside the card)* The card ends \"Your friend —C.\" The note ends \"Your friend —\" and stops. Someone began to sign, then remembered not to."
+      "text": "*(holding the note beside the card)* The card ends, \"Your friend —C.\" The note ends, \"Your friend —\" and stops. She started to sign. Then she remembered."
     },
     {
       "who": "STAGE",
-      "text": "Everyone turns. Celeste stands very still. She pulls the green pen from behind her ear, and writes."
+      "text": "Everyone turns. Celeste stands very still. She takes the green pen from behind her ear, and writes."
     },
     {
       "who": "CELESTE",
@@ -1204,11 +1204,11 @@
     },
     {
       "who": "NELL",
-      "text": "But nobody went into that room. And you came out with nothing!"
+      "text": "But nobody went into that room. And you came out with nothing."
     },
     {
       "who": "QUILL",
-      "text": "Nothing but a shawl. Read the log. Where did the shawl go?"
+      "text": "With a shawl. Read the log. Where did the shawl go?"
     },
     {
       "who": "STAGE",
@@ -1220,7 +1220,7 @@
     },
     {
       "who": "QUILL",
-      "text": "*Lying.* Hens lay eggs. Cats lie on scripts. Lift him gently."
+      "text": "*Lying.* Hens lay. Cats lie. Lift him gently."
     },
     {
       "who": "STAGE",
@@ -1240,11 +1240,11 @@
     },
     {
       "who": "CELESTE",
-      "text": "*(a whisper)* My voice went on Tuesday. *(she writes the rest)* \"On Wednesday I could not even say thank you to Petra, so I wrote it. I hid my script. It was full of notes like *voice going, rest!* I gave Hugo the long speeches. If he was ready, nobody needed to know. —C.\""
+      "text": "*(a whisper)* My voice went on Tuesday. *(she writes the rest)* \"By Wednesday I could not even thank Petra out loud. So I wrote it. My script was full of notes. *Voice going. Rest!* So I hid it. I gave Hugo the long speeches. If he was ready, nobody need ever know. —C.\""
     },
     {
       "who": "DEV",
-      "text": "It was on her card from the very first page. \"I would shout it from the lamp room, if I could.\" She couldn't."
+      "text": "It was on her card all along. \"I would shout it from the lamp room, if I could.\" *(a pause)* She couldn't."
     },
     {
       "who": "HUGO",
@@ -1252,7 +1252,7 @@
     },
     {
       "who": "CELESTE",
-      "text": "*(writing)* \"Yes, dear. That is the lesson. I am a slow learner. —C.\""
+      "text": "*(writing)* \"I know, dear. I was going to. Tomorrow, and then tomorrow. —C.\""
     },
     {
       "who": "TULLY",
@@ -1264,7 +1264,7 @@
     },
     {
       "who": "ROSALIND ASHE",
-      "text": "A better second act than mine."
+      "text": "Better than my second act."
     }
   ],
   "epilogue": [
@@ -1326,7 +1326,7 @@
     {
       "who": "STAGE",
       "beat": "The last chill",
-      "text": "As the audience files out, Encore stops washing his paw and stares at the very back row. One seat there is folded down, though nobody bought a ticket for it. Then, from somewhere above the empty seats, the same three notes on a violin, soft as a draught, and the prompt corner smells, just for a moment, of rosin. When Petra brings up the house lights, the seat has folded itself up again. Felix writes it down. Quill reads it twice."
+      "text": "As the audience files out, Encore stops washing his paw and stares at the very back row. One seat there is folded down, though nobody bought a ticket for it. Then, from somewhere above the empty seats, the same three notes on a violin, soft as a draught, and the prompt corner smells, just for a moment, of rosin. When Petra brings up the house lights, the seat has folded itself up again. Up on the set, the lighthouse lamp is still burning. Felix writes it down. Quill reads it twice."
     }
   ],
   "drill": {
@@ -1782,7 +1782,7 @@
       "explain": "She is proud of never missing a show. But she can only whisper, and long speeches need a strong voice. So she quietly gave them to Hugo, and kept it secret. It was kind, but a secret made everyone worried."
     }
   ],
-  "revealSetting": "The stage, ten to nine. The lighthouse lamp is dark. Petra brings up one soft light. Rosalind Ashe sits in the back row, her notice face down on her knee. Everyone waits.",
+  "revealSetting": "The stage, ten to nine. The lighthouse lamp is dark. Petra brings up one soft light. Rosalind Ashe sits in the back row, her notice face down on her knee. In the costume basket, Encore purrs. Everyone waits.",
   "aside": [
     {
       "where": "Chapter 1 — The scene (stage direction)",
@@ -1809,7 +1809,7 @@
       "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
       "kind": "hook",
       "who": "ROSALIND",
-      "text": "That's my notice for the stage door. It says *cancelled*. I'm not waiting for tomorrow. If I have no Keeper and no script at the nine o'clock run-through, I turn it over."
+      "text": "My notice for the stage door. It says *cancelled*. Nine o'clock run-through. No Keeper and no script by then, and I turn it over."
     },
     {
       "where": "End of chapter 2 (hook; escalation: the deadline moves closer)",
@@ -1851,7 +1851,7 @@
       "where": "End of chapter 3 (hook; the false solution)",
       "kind": "hook",
       "who": "TULLY",
-      "text": "I've only brought cocoa."
+      "text": "He *lied*. So where was he between six and seven? In the wings, with nobody looking. He took the script, and that kind little note made it easy. Hunch-o-meter: ten. Tully, the handcuffs."
     },
     {
       "where": "End of chapter 3 (hook; the false solution)",

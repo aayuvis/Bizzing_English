@@ -51,13 +51,14 @@ export function openCase(c, sub) {
   const k = kid(), prev = S.ink?.c?.id === c.id ? S.ink : null;
   let cs = SE.startCase(k, c, { now: Date.now() }); if (!cs.persona && personaId() && !cs.solved) { cs = { ...cs, persona: personaId() }; SE.putCase(k, c, cs); } save();
   const fresh = !cs.read.length && !cs.marks.length && cs.chapter === 1 && !cs.solved;
-  const keep = prev ? { say: prev.say, doc: prev.doc, seg: prev.seg, ret: prev.ret, hint: prev.hint, acc: prev.acc, panel: prev.panel, closed: prev.closed, who: prev.who, centre: prev.centre, lastQ: prev.lastQ, expr: prev.expr, lens: prev.lens, focus: prev.focus, fly: prev.fly, flash: prev.flash, accWeak: prev.accWeak, retPending: prev.retPending, epi: prev.epi, coinPop: prev.coinPop } : {};
-  S.ink = { ...S.ink, c, cs, doc: null, seg: 'doc', centre: 'doc', who: null, expr: null, cur: 0, anc: null, kbd: false, pick: [], wheel: null, flash: null, tl: { pick: null, cur: 0, slot: 0 }, acc: { culprit: null, ev: [], place: null }, panel: 0, ...keep };
+  const keep = prev ? { say: prev.say, doc: prev.doc, seg: prev.seg, ret: prev.ret, hint: prev.hint, acc: prev.acc, panel: prev.panel, closed: prev.closed, who: prev.who, centre: prev.centre, lastQ: prev.lastQ, expr: prev.expr, lens: prev.lens, focus: prev.focus, fly: prev.fly, flash: prev.flash, accWeak: prev.accWeak, retPending: prev.retPending, epi: prev.epi, svTab: prev.svTab, coinPop: prev.coinPop } : {};
+  S.ink = { ...S.ink, c, cs, doc: null, seg: 'doc', centre: 'doc', who: null, expr: null, cur: 0, anc: null, kbd: false, pick: [], wheel: null, flash: null, tl: { pick: null, cur: 0, slot: 0 }, acc: { culprit: null, ev: [], place: null }, acStep: null, panel: 0, ...keep };
   const s = S.ink;
   const want = sub || (cs.solved ? 'solved' : fresh ? 'opening' : ({ 3: 'board', 4: 'timeline', 5: 'accuse' }[cs.chapter] || 'desk'));
   s.sub = want === 'persona' || (want === 'desk' && !personaId() && c.id === 'case-00') ? 'persona' : want;
   if (s.sub === 'solved' && cs.solved && !s.closed) s.closed = SE.closeCase(k, c, cs, { now: Date.now() }), save();
-  if (s.sub === 'reveal' && !cs.solved) s.sub = 'desk';
+  if ((s.sub === 'reveal' || s.sub === 'epilogue') && !cs.solved) s.sub = 'desk';
+  if (['opening', 'reveal', 'epilogue'].includes(s.sub) && s.say && !s.say.hold) s.say = null;   // a passing remark does not follow the child into a story
   if (['board', 'timeline', 'accuse'].includes(s.sub)) { const n = { board: 3, timeline: 4, accuse: 5 }[s.sub]; if (cs.reached < n) s.sub = 'desk'; else if (cs.chapter !== n && !cs.solved) act({ type: 'chapter', n }); }
   if (s.sub === 'desk' && !s.doc) s.doc = D.available(c, s.cs).find((d) => !s.cs.read.includes(d)) || D.available(c, s.cs)[0] || null;
   if (s.sub === 'desk' && s.cs.chapter > 2 && !s.cs.solved) act({ type: 'chapter', n: Math.min(2, s.cs.reached) });
@@ -84,15 +85,14 @@ function frame({ sub, main, mods = '', seg = true, title }) {
   const c = C(), cs = CS(), s = st(), dark = isDark();
   const pop = s.coinPop && Date.now() - s.coinPop.t < 2500 ? `<span class="ink-coinpop" aria-live="polite">+${s.coinPop.n} ${icon('coin')}</span>` : '';
   const left = cs.solved ? { v: 'Solved', l: 'case closed' } : { v: `${Math.min(5, cs.chapter)}<small>/5</small>`, l: 'chapter' };
-  const lvl = SE.levelNow(kid());
+  const lvl = SE.levelNow(kid()), railed = !['opening', 'reveal', 'epilogue', 'solved', 'persona'].includes(sub);
   return pageHead({ title: c.title, back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-${sub} ${mods}" data-inkfit data-ink="${sub}" style="--ink-plate:${plateBg(casePlate(c), dark, caseWash(c))};${matVars()}">
   <header class="stg-hud"><div class="stg-pod stg-l" data-hud="l"><b>${left.v}</b><small>${esc(left.l)}</small></div>
-    <div class="stg-mid"><h2 class="stg-title">${esc(title || D.CHAPTERS[Math.min(5, cs.chapter) - 1].title)}</h2><span class="lvtag"><b>Level ${c.level}</b> · ${esc(c.kind === 'journey' ? 'An Ink Journey' : c.label || 'A Bizzing mystery')}${lvl !== c.level ? ` · you: ${lvl}` : ''}</span></div>
+    ${railed ? `<div class="stg-mid ink-mid"><h2 class="stg-title vh">${esc(title || D.CHAPTERS[Math.min(5, cs.chapter) - 1].title)}</h2>${rail()}</div>` : `<div class="stg-mid"><h2 class="stg-title">${esc(title || D.CHAPTERS[Math.min(5, cs.chapter) - 1].title)}</h2><span class="lvtag"><b>Level ${c.level}</b> · ${esc(c.kind === 'journey' ? 'An Ink Journey' : c.label || 'A Bizzing mystery')}${lvl !== c.level ? ` · you: ${lvl}` : ''}</span></div>`}
     <div class="stg-pod stg-r" data-hud="r" aria-label="Ink for hints"><b>${cs.ink}</b><small>ink</small>${pop}</div></header>
-  ${sub === 'opening' || sub === 'reveal' || sub === 'solved' || sub === 'persona' ? '' : rail()}
   <div class="ink-main" data-stage-main>${main}</div>
   ${sayBox()}
-  ${seg && !['opening', 'reveal', 'solved', 'persona'].includes(sub) ? segBar(sub) : ''}
+  ${seg && !['opening', 'reveal', 'epilogue', 'solved', 'persona'].includes(sub) ? segBar(sub) : ''}
 </section>`;
 }
 function rail() {
@@ -114,21 +114,33 @@ function segBar(sub) {
 
 /* ---------- the opening: comic panels over the scene ---------- */
 function panelsOf(list) { return (list || []).map((p) => ({ place: p.place, lines: (p.lines || []).map((l) => ({ who: l.who, text: l.text })) })); }
-function comicPanel(p, i, n, { label = 'Panel', next = 'ink-pnext', skip = 'ink-pskip' } = {}) {
-  const c = C(), pid = personaId();
-  const speakers = []; for (const l of p.lines) { const w = whoIs(c, l.who, pid); if (w && !speakers.some((x) => x.id === w.id)) speakers.push(w); }
-  const figs = speakers.slice(0, 3).map((w, j) => `<div class="cp-fig cp-fig-${j}" style="--j:${j}">${w.persona ? figure(pid || 'player', { name: pname() }) : figure(w.id, { expr: /!|gone|vanished/.test(p.lines.find((l) => whoIs(c, l.who, pid)?.id === w.id)?.text || '') ? 'nervous' : 'calm', name: castName(w.id) })}</div>`).join('');
-  const lines = p.lines.map((l) => { const w = whoIs(c, l.who, pid); return w ? `<p class="cp-bubble"><b>${esc(w.persona ? pname() : w.quill ? 'Quill' : shortName(w.id))}</b>${esc(pt(l.text))}</p>` : `<p class="cp-cap">${esc(pt(l.text))}</p>`; }).join('');
-  const zoom = [[50, 50, 1], [30, 60, 1.25], [70, 40, 1.35], [50, 70, 1.5], [20, 40, 1.3], [80, 60, 1.3]][i % 6];
-  return `<article class="cpanel" data-panel="${i}" style="--px:${zoom[0]}%;--py:${zoom[1]}%;--pz:${zoom[2]}"><div class="cp-scene"></div>
-    ${p.place ? `<p class="cp-place">${esc(pt(p.place))}</p>` : ''}<div class="cp-figs" data-n="${Math.min(3, speakers.length)}">${figs}</div><div class="cp-lines">${lines}</div></article>
-    <div class="cp-nav"><button class="btn out ink-pv" data-act="ink-pprev"${i === 0 ? ' disabled' : ''} aria-label="Back">${icon('back')}</button><span class="cp-dots" aria-label="${label} ${i + 1} of ${n}">${Array.from({ length: n }, (_, j) => `<i class="${j === i ? 'on' : j < i ? 'past' : ''}"></i>`).join('')}</span><button class="btn ink-go" data-act="${next}" aria-label="Next">${icon('next')}</button></div>
-    <button class="ink-skip" data-act="${skip}">Skip</button>`;
+/* Speakers stand along the foot of the panel at fixed columns; each line's bubble sits above its speaker (--x: the
+   speaker's column; the bubble's own x% lines up with it, so it never leaves the panel) with its tail pointing down at
+   them. Narration (the place, STAGE lines) is a caption box at the left, in reading order. A figure already standing in
+   the panel the child came from does not re-enter; the panel slides in from the side the child is heading. */
+const COLS = { 0: [], 1: [64], 2: [27, 73], 3: [16, 50, 84] };
+function speakersOf(p) { const c = C(), pid = personaId(), out = []; for (const l of p?.lines || []) { const w = whoIs(c, l.who, pid); if (w && !out.some((x) => x.id === w.id)) out.push(w); } return out.slice(0, 3); }
+function comicPanel(p, i, n, { label = 'Panel', next = 'ink-pnext', prev = 'ink-pprev', skip = 'ink-pskip', from = null } = {}) {
+  const c = C(), pid = personaId(), s = st();
+  const speakers = speakersOf(p), xs = COLS[speakers.length], before = new Set(speakersOf(from).map((w) => w.id));
+  const exprOf = (w) => /!|gone|vanished|missing/i.test(p.lines.filter((l) => whoIs(c, l.who, pid)?.id === w.id).map((l) => l.text).join(' ')) ? 'nervous' : 'calm';
+  const figs = speakers.map((w, j) => `<div class="cp-fig${before.has(w.id) ? ' stay' : ''}" style="--x:${xs[j]}%;--j:${j}">${w.persona ? figure(pid || 'player', { name: pname() }) : figure(w.id, { expr: exprOf(w), name: castName(w.id) })}</div>`).join('');
+  let k = 0;
+  const cap = (t) => `<p class="cp-cap" style="--d:${k++}">${esc(pt(t))}</p>`;
+  const lines = (p.place ? cap(p.place) : '') + p.lines.map((l) => { const w = whoIs(c, l.who, pid); if (!w) return cap(l.text);
+    const j = speakers.findIndex((x) => x.id === w.id), x = j >= 0 ? xs[j] : 50;
+    return `<p class="cp-bubble" style="--x:${x}%;--d:${k++}"><b>${esc(w.persona ? pname() : w.quill ? 'Quill' : shortName(w.id))}</b>${esc(pt(l.text))}</p>`; }).join('');
+  const zoom = [[50, 50, 1.04], [30, 60, 1.18], [70, 40, 1.24], [50, 70, 1.3], [20, 40, 1.2], [80, 60, 1.2]][i % 6];
+  const dir = s.pdir < 0 ? 'from-l' : s.pdir > 0 ? 'from-r' : '';
+  return `<article class="cpanel ${dir}" data-panel="${i}" data-swipe style="--px:${zoom[0]}%;--py:${zoom[1]}%;--pz:${zoom[2]}"><div class="cp-scene"></div>
+    ${p.card ? `<div class="cp-file"><small>The case</small><p>${esc(pt(p.card))}</p></div>` : `<div class="cp-figs" data-n="${speakers.length}">${figs}</div><div class="cp-lines">${lines}</div>`}</article>
+    <div class="cp-nav"><button class="btn out ink-pv" data-act="${prev}"${i === 0 ? ' disabled' : ''} aria-label="Back">${icon('back')}</button><span class="cp-dots" aria-label="${label} ${i + 1} of ${n}">${Array.from({ length: n }, (_, j) => `<i class="${j === i ? 'on' : j < i ? 'past' : ''}"></i>`).join('')}</span><button class="btn ink-go" data-act="${next}" aria-label="Next">${icon('next')}</button><button class="ink-skip" data-act="${skip}">Skip</button></div>`;
 }
+/* the opening's panels, and the case card as a last panel of its own: the file on the desk, over the scene */
+function openingPanels() { const c = C(), P = panelsOf(c.cutscene || c.opening); return c.card?.text ? [...P, { place: null, lines: [], card: c.card.text }] : P; }
 function openingView() {
-  const c = C(), P = panelsOf(c.cutscene || c.opening), s = st(), i = Math.min(s.panel || 0, Math.max(0, P.length - 1));
-  const card = i === P.length - 1 && c.card?.text ? `<p class="cp-card">${esc(pt(c.card.text))}</p>` : '';
-  return frame({ sub: 'opening', title: 'The case begins', main: `<div class="comic" data-play>${P.length ? comicPanel(P[i], i, P.length) : ''}${card}</div>` });
+  const P = openingPanels(), s = st(), i = Math.min(s.panel || 0, Math.max(0, P.length - 1));
+  return frame({ sub: 'opening', title: 'The case begins', main: `<div class="comic" data-play>${P.length ? comicPanel(P[i], i, P.length, { from: P[i - (s.pdir || 0)] }) : ''}</div>` });
 }
 
 /* ---------- choose your detective ---------- */
@@ -151,10 +163,11 @@ export function personaView({ coats = false } = {}) {
       ${card ? `<span class="pd-word"><small>A word to find</small><b>${esc(card.word)}</b></span>` : ''}</span></button>`;
   }).join('');
   const p = personaById(sel);
-  const confirm = p ? `<div class="pd-confirm"><label for="ink-name">Call your detective</label><input id="ink-name" data-act="ink-name" maxlength="12" autocomplete="off" spellcheck="false" value="${esc(s.pname ?? (cur === sel ? k.inkwellName || '' : '') ?? '')}" placeholder="${esc(p.name)}" aria-describedby="ink-name-why">
+  const detail = p ? `<div class="pd-detail"><b>${esc(p.name)}</b><i>“${esc(p.signature)}”</i><span>${esc(p.gift)}</span><span class="kd kd-${p.knack.kind}">${DEMO[p.knack.kind] || ''}</span></div>` : '';
+  const confirm = p ? `<div class="pd-confirm">${detail}<label for="ink-name">Call your detective</label><input id="ink-name" data-act="ink-name" maxlength="12" autocomplete="off" spellcheck="false" value="${esc(s.pname ?? (cur === sel ? k.inkwellName || '' : '') ?? '')}" placeholder="${esc(p.name)}" aria-describedby="ink-name-why">
      <small id="ink-name-why">Up to 12 letters. Leave it empty to keep ${esc(p.name)}.</small><button class="btn ink-go" data-act="ink-choose">${icon('check')}<span>Be ${esc(p.name)}</span></button><button class="btn out" data-act="ink-say-p">${icon('speaker')}<span>Read aloud</span></button></div>` : '';
   const head = `<div class="pd-head">${quillImg()}<p>${esc((C()?.tutorial || []).find((t) => t.step === 'choose-persona')?.quill || 'Every detective here reads in their own way. Which one are you?')}</p></div>`;
-  const main = `<div class="pd-wrap" data-play>${head}<div class="pd-grid" role="group" aria-label="Choose your detective">${cards}</div>${confirm}</div>`;
+  const main = `<div class="pd-wrap${p ? ' picked' : ''}" data-play>${head}<div class="pd-grid" role="group" aria-label="Choose your detective">${cards}</div>${confirm}</div>`;
   if (coats) return pageHead({ title: 'Change coats', back: { label: 'Agency', href: '#/inkwell' } }) + `<section class="stg ink ink-persona" data-inkfit style="--ink-plate:${plateBg('agency', isDark(), WASH.agency)};${matVars()}"><header class="stg-hud"><div class="stg-pod stg-l"><b>6</b><small>detectives</small></div><div class="stg-mid"><h2 class="stg-title">Choose your detective</h2><span class="lvtag">Progress stays yours, whoever you play</span></div><div class="stg-pod stg-r"><b>${Object.values(SE.inkOf(k).hoard).reduce((a, b) => a + b.length, 0)}</b><small>words found</small></div></header><div class="ink-main" data-stage-main>${main}</div></section>`;
   return frame({ sub: 'persona', title: 'Choose your detective', main });
 }
@@ -200,7 +213,7 @@ function notebookCol() {
   const cs = CS(), marks = cs.marks.slice().reverse(), inLink = new Set(cs.links.flatMap((l) => [l.a, l.b]));
   const card = (m) => `<li class="nb-card${inLink.has(m.id) ? ' linked' : ''}" data-mark="${esc(m.id)}"><button class="nb-text" data-act="ink-goto" data-arg="${esc(m.id)}"><q>${esc(markLabel(m))}</q><small>${esc(docOf(m.doc)?.title || '')}</small></button><button class="nb-x" data-act="ink-unmark" data-arg="${esc(m.id)}" aria-label="Take back: ${esc(markLabel(m))}">${icon('close')}</button></li>`;
   return `<aside class="ink-col ink-nb" data-col="nb" aria-label="Notebook"><h3>${icon('book')}<span>Notebook</span><small>${cs.marks.length}</small></h3>
-    ${marks.length ? `<ul class="nb-list">${marks.map(card).join('')}</ul>` : `<p class="nb-empty">Press and hold the words that matter. They come here as clue cards.</p>`}</aside>`;
+    ${marks.length ? `<ul class="nb-list" data-pagelist="nb">${marks.map(card).join('')}</ul>` : `<p class="nb-empty">Press and hold the words that matter. They come here as clue cards.</p>`}</aside>`;
 }
 function people() {
   const c = C(), cs = CS(), sus = new Set(D.suspects(c, cs)), ids = [];
@@ -233,9 +246,9 @@ export function paper(docId, { markable = true } = {}) {
   const sel = s.anc != null && s.selDoc === docId ? [Math.min(s.anc, s.cur), Math.max(s.anc, s.cur)] : null;
   const hintSp = s.hint?.doc === docId ? s.hint : null, hintLine = hintSp?.span ? T.find((t) => t.span === hintSp.span)?.line : hintSp?.line;
   const ret = s.ret?.doc === docId ? new Set(s.ret.spans || []) : null;
-  const lines = []; let cur = -1;
+  const lines = []; let cur = -1, prevTx = '';
   for (const t of T) {
-    if (t.line !== cur) { lines.push([]); cur = t.line; }
+    if (t.line !== cur) { lines.push([]); cur = t.line; prevTx = ''; }
     const cls = ['w'];
     if (marked.has(t.i)) cls.push('mk');
     if (sel && t.i >= sel[0] && t.i <= sel[1]) cls.push('sel');
@@ -243,26 +256,29 @@ export function paper(docId, { markable = true } = {}) {
     if (hintSp && hintSp.level >= 3 && hintSp.span && t.span === hintSp.span) cls.push('hinted');
     else if (hintSp && hintSp.level >= 2 && t.line === hintLine) cls.push('hint-line');
     if (ret && t.span && ret.has(t.span)) cls.push('ret');
-    lines[lines.length - 1].push(`<span class="${cls.join(' ')}" data-i="${t.i}">${esc(pt(t.t))}</span>`);
+    const tx = pt(t.t), L = lines[lines.length - 1], gap = L.length && !/^[.,;:!?’”)\]]/.test(tx) && !/[“‘(\[]$/.test(prevTx); prevTx = tx; L.push(`${gap ? ' ' : ''}<span class="${cls.join(' ')}" data-i="${t.i}">${esc(tx)}</span>`);
   }
-  const talk = cs.read.includes(docId) && (d.talk || []).length ? `<div class="doc-talk">${d.talk.slice(0, 3).map((l) => { const w = whoIs(c, l.who, personaId()); return `<p>${w ? figure(w.persona ? personaId() || 'player' : w.id, { cls: 'dk-fig', name: l.who }) : ''}<span><b>${esc(w?.quill ? 'Quill' : w ? shortName(w.id) : l.who)}</b>${esc(pt(l.text))}</span></p>`; }).join('')}</div>` : '';
+  const talk = cs.read.includes(docId) && (d.talk || []).length ? `<div class="doc-talk">${d.talk.slice(0, 3).map((l) => { const w = whoIs(c, l.who, personaId()); return `<p>${w ? figure(w.persona ? personaId() || 'player' : w.id, { cls: 'dk-fig', name: l.who }) : ''}<span><b>${esc(w?.quill ? 'Quill' : w?.persona ? pname() : w ? shortName(w.id).split(' ')[0] : l.who)}</b>${esc(pt(l.text))}</span></p>`; }).join('')}</div>` : '';
   const pick = sel ? `<div class="doc-pick" role="toolbar"><q>${esc(T.slice(sel[0], sel[1] + 1).map((t) => pt(t.t)).join(' '))}</q><button class="btn small ink-go" data-act="ink-mark">${icon('pen')}<span>Mark</span></button><button class="btn out small" data-act="ink-unsel" aria-label="Cancel">${icon('close')}</button></div>` : '';
   return `<article class="paper paper-${handOf(d.type)}" data-doc="${esc(docId)}" style="--paper:${paperBg(d.type)}">
     <header class="pp-head"><small class="pp-type">${esc(d.type)}</small><h3>${esc(pt(d.title))}</h3>${d.author || d.when || d.where ? `<p class="pp-meta">${[d.author, d.when, d.where].filter(Boolean).map((x) => esc(pt(x))).join(' · ')}</p>` : ''}</header>
-    <div class="pp-body${markable ? ' markable' : ''}" data-body="${esc(docId)}" tabindex="0" role="application" aria-roledescription="document" aria-label="${esc(pt(d.title))}. Arrows move word by word, Shift extends, Enter marks.">${lines.map((l) => `<p>${l.join(' ')}</p>`).join('')}</div>
+    <div class="pp-body${markable ? ' markable' : ''}" data-body="${esc(docId)}" tabindex="0" role="application" aria-roledescription="document" aria-label="${esc(pt(d.title))}. Arrows move word by word, Shift extends, Enter marks.">${lines.map((l) => `<p>${l.join('')}</p>`).join('')}</div>
     ${talk}</article>${pick}${s.lens ? '<div class="ink-lens" aria-hidden="true"><div class="ink-lens-in"></div></div>' : ''}`;
 }
 function interviewPane() {
   const c = C(), cs = CS(), s = st(), id = s.who, iv = (c.interviews || []).find((x) => x.suspect === id), p = (c.cast || []).find((x) => x.id === id);
   const face = iv?.answeredBy && (c.cast || []).some((x) => x.id === iv.answeredBy) ? iv.answeredBy : id;
   const qs = D.questions(c, cs).filter((q) => q.suspect === id);
-  const cards = qs.map((q, i) => q.open || q.asked ? `<button class="qcard${q.asked ? ' asked' : ''}${s.lastQ === q.id ? ' on' : ''}" data-act="ink-ask" data-arg="${esc(q.id)}" style="--r:${(i - (qs.length - 1) / 2) * 3}deg"><small>${esc(String(q.type || 'ask').toUpperCase())}</small><span>${esc(pt(q.q))}</span>${q.asked ? '<i>read the answer</i>' : ''}</button>` : `<span class="qcard down" style="--r:${(i - (qs.length - 1) / 2) * 3}deg" aria-label="A question for later">${icon('lock')}<small>Later</small></span>`).join('');
+  const cards = qs.map((q, i) => q.open || q.asked ? `<button class="qcard${q.asked ? ' asked' : ''}${s.lastQ === q.id ? ' on' : ''}" data-act="ink-ask" data-arg="${esc(q.id)}"><small>${i + 1} · ${esc(String(q.type || 'ask').toUpperCase())}${q.asked ? ' · asked' : ''}</small><span>${esc(pt(q.q))}</span></button>` : `<span class="qcard down" aria-label="A question for later">${icon('lock')}<small>Later</small></span>`).join('');
   const ans = s.lastQ && qs.some((q) => q.id === s.lastQ && q.asked) ? paper(qs.find((q) => q.id === s.lastQ).answerDoc) : '';
   const talk = !ans && (iv?.talk || []).length ? `<div class="doc-talk">${iv.talk.slice(0, 3).map((l) => { const w = whoIs(c, l.who, personaId()); return `<p>${w ? figure(w.id, { cls: 'dk-fig', name: l.who }) : ''}<span><b>${esc(w ? shortName(w.id) : l.who)}</b>${esc(pt(l.text))}</span></p>`; }).join('')}</div>` : '';
-  return `<div class="iv"><div class="iv-stage"><div class="iv-fig">${figure(face, { expr: s.expr || 'calm', name: p?.name || id, alt: `${castName(face)}, looking ${s.expr || 'calm'}` })}</div>
-    <div class="iv-plate"><b>${esc(castName(id))}</b>${face !== id ? `<small>answered by ${esc(castName(face))}</small>` : p?.manner ? `<small>${esc(p.manner)}</small>` : ''}</div>
-    <button class="btn out small iv-back" data-act="ink-centre" data-arg="doc">${icon('scroll')}<span>Documents</span></button></div>
-    ${cs.chapter < 2 && !cs.asked.length ? `<p class="iv-wait">Interviews come in chapter 2. Read the scene first.</p>` : `<div class="qfan" role="group" aria-label="Questions">${cards}</div>`}${ans}${talk}</div>`;
+  const wait = cs.chapter < 2 && !cs.asked.length;
+  /* the suspect stands at the left; what they say is a speech bubble from them (still a document: every word markable) */
+  const bubble = ans ? `<div class="iv-say" aria-live="polite">${ans}</div>` : `<div class="iv-say idle"><p class="iv-hush">${esc(wait ? 'Interviews come in chapter 2. Read the scene first.' : `${castName(id)} is waiting. Ask a question.`)}</p></div>`;
+  const showAns = !!ans && !s.asking, left = qs.filter((q) => q.open && !q.asked).length;
+  return `<div class="iv${showAns ? ' has-ans' : ''}"><div class="iv-stage"><div class="iv-fig">${figure(face, { expr: s.expr || 'calm', name: p?.name || id, alt: `${castName(face)}, looking ${s.expr || 'calm'}` })}</div>
+    <div class="iv-plate"><b>${esc(castName(id))}</b>${face !== id ? `<small>answered by ${esc(castName(face))}</small>` : p?.manner ? `<small>${esc(p.manner)}</small>` : ''}</div></div>
+    <div class="iv-right">${bubble}${talk}${wait ? '' : `<div class="qfan" role="group" aria-label="Questions">${cards}</div>`}${showAns && !wait ? `<button class="btn small ink-go iv-more" data-act="ink-asking">${icon('mic')}<span>${left ? `Ask another · ${left} left` : 'The questions'}</span></button>` : ''}<button class="btn out small iv-back" data-act="ink-centre" data-arg="doc">${icon('scroll')}<span>Back to the documents</span></button></div></div>`;
 }
 
 /* ---------- the board: cork, clue cards, red string ---------- */
@@ -320,6 +336,11 @@ function feastView() {
 }
 
 /* ---------- the accusation: the drawing room ---------- */
+function acStep() {
+  const s = st(), a = C().accusation || {}, A = s.acc, slots = D.slotsOf(C()).slots.length;
+  if (s.acStep && (s.acStep !== 'where' || a.place)) return s.acStep;
+  return !A.culprit ? 'who' : A.ev.length < slots || !a.place || A.place ? 'ev' : 'where';
+}
 function accuseView() {
   const c = C(), cs = CS(), s = st(), a = c.accusation || {}, slots = D.slotsOf(c).slots.length, A = s.acc;
   const easels = D.accusable(c, cs).map((id, i) => `<button class="easel${A.culprit === id ? ' on' : ''}" data-act="ink-culprit" data-arg="${esc(id)}" aria-pressed="${A.culprit === id}"><span class="ea-frame">${figure(id, { expr: A.culprit === id ? 'nervous' : 'calm', name: castName(id) })}</span><b>${esc(shortName(id))}</b><small>${i + 1}</small></button>`).join('');
@@ -329,12 +350,18 @@ function accuseView() {
   const clues = cs.marks.map((m) => ({ id: m.id, t: markLabel(m), k: 'clue' }));
   const ev = [...ded, ...clues].map((x) => `<button class="ev ev-${x.k}${A.ev.includes(x.id) ? ' on' : ''}${weak.has(x.id) ? ' weak' : ''}" data-act="ink-ev" data-arg="${esc(x.id)}" aria-pressed="${A.ev.includes(x.id)}"><small>${x.k}</small><span>${esc(x.t)}</span></button>`).join('');
   const pins = Array.from({ length: slots }, (_, i) => { const id = A.ev[i]; const x = [...ded, ...clues].find((y) => y.id === id); return `<span class="pin-slot${x ? ' full' : ''}${x && weak.has(x.id) ? ' weak' : ''}">${x ? esc(x.t) : `pin ${i + 1}`}</span>`; }).join('');
-  const place = a.place ? `<div class="ac-place"><b>${esc(pt(a.place.prompt))}</b><div>${a.place.options.map((o) => `<button class="btn out small${A.place === o ? ' on' : ''}" data-act="ink-place" data-arg="${esc(o)}" aria-pressed="${A.place === o}">${esc(pt(o))}</button>`).join('')}</div></div>` : '';
+  const place = a.place ? `<div class="ac-place"><b>${esc(pt(a.place.prompt))}</b><div>${a.place.options.map((o) => `<button class="btn out${A.place === o ? ' on' : ''}" data-act="ink-place" data-arg="${esc(o)}" aria-pressed="${A.place === o}">${esc(pt(o))}</button>`).join('')}</div></div>` : '';
   const ready = A.culprit && A.ev.length === slots && (!a.place || A.place);
-  const main = `<div class="drawing" data-play><p class="ac-q">${esc(pt(a.question || 'Who did it?'))}</p><div class="easels" data-n="${D.accusable(c, cs).length}">${easels}${theories}</div>
-    <div class="ac-pins"><span class="ac-who">${A.culprit ? esc(castName(A.culprit)) : 'Choose who'}</span><div class="pin-row">${pins}</div></div>
-    <div class="ac-ev" role="group" aria-label="Evidence: choose ${slots}">${ev}</div>${place}
-    <div class="ac-go"><button class="btn ink-go big" data-act="ink-accuse"${ready ? '' : ' aria-disabled="true"'}>${icon('star')}<span>Accuse</span></button><small>The Knack rests here. You accuse alone.</small></div></div>`;
+  /* three steps on one screen: who, then the evidence, then where; the steps bar and the pinned summary stay in view */
+  const step = acStep();
+  const tabs = [['who', 'Who', A.culprit ? shortName(A.culprit) : ''], ['ev', 'Evidence', `${A.ev.length}/${slots}`], ...(a.place ? [['where', 'Where', A.place ? '' : '']] : [])]
+    .map(([id, l, x], i) => `<button class="ac-tab${step === id ? ' on' : ''}${(id === 'who' && A.culprit) || (id === 'ev' && A.ev.length === slots) || (id === 'where' && A.place) ? ' done' : ''}" data-act="ink-acstep" data-arg="${id}" aria-pressed="${step === id}"><i>${i + 1}</i><span>${esc(l)}</span>${x ? `<small>${esc(x)}</small>` : ''}</button>`).join('');
+  const body = step === 'who' ? `<div class="easels" data-n="${D.accusable(c, cs).length}">${easels}${theories}</div>`
+    : step === 'where' ? place
+    : `<div class="ac-pins"><div class="pin-row">${pins}</div></div><div class="ac-ev" data-pagelist="ev" role="group" aria-label="Evidence: choose ${slots}">${ev}</div>`;
+  const main = `<div class="drawing ac-${step}" data-play><p class="ac-q">${esc(pt(a.question || 'Who did it?'))}</p><nav class="ac-tabs" aria-label="Accusation steps">${tabs}</nav>
+    <div class="ac-step">${body}</div>
+    <div class="ac-go"><button class="btn ink-go big" data-act="ink-accuse"${ready ? '' : ' aria-disabled="true"'}>${icon('star')}<span>Accuse${A.culprit ? ' ' + esc(shortName(A.culprit)) : ''}</span></button><small>The Knack rests here. You accuse alone.</small></div></div>`;
   return frame({ sub: 'accuse', main });
 }
 
@@ -344,9 +371,18 @@ function revealPanels() {
   for (const l of c.reveal || []) { const stage = /^(STAGE|CAPTION|SETTING)$/i.test(l.who); if (!cur || cur.lines.length >= 3 || (stage && cur.lines.length)) { cur = { place: null, lines: [] }; out.push(cur); } if (stage && !cur.place && !cur.lines.length) cur.place = l.text; else cur.lines.push(l); }
   return out.filter((p) => p.lines.length || p.place);
 }
+function epiPanels() {
+  const c = C(), out = []; let cur = null;
+  for (const l of c.epilogue || []) { if (!l.text) continue; const stage = /^(STAGE|CAPTION|SETTING|HEADING)$/i.test(l.who || 'STAGE') || l.heading; if (!cur || cur.lines.length >= 3 || (stage && cur.lines.length) || l.section) { cur = { place: null, lines: [] }; out.push(cur); } if (stage && !cur.place && !cur.lines.length) cur.place = l.text; else cur.lines.push(stage ? { who: 'STAGE', text: l.text } : l); }
+  return out.filter((p) => p.lines.length || p.place);
+}
+function epilogueView() {
+  const P = epiPanels(), s = st(), i = Math.min(s.panel || 0, Math.max(0, P.length - 1));
+  return frame({ sub: 'epilogue', title: 'Afterwards', main: `<div class="comic" data-play>${P.length ? comicPanel(P[i], i, P.length, { label: 'Scene', next: 'ink-enext', prev: 'ink-eprev', skip: 'ink-eskip', from: P[i - (s.pdir || 0)] }) : ''}</div>` });
+}
 function revealView() {
   const P = revealPanels(), s = st(), i = Math.min(s.panel || 0, Math.max(0, P.length - 1));
-  return frame({ sub: 'reveal', title: 'The reveal', main: `<div class="comic reveal" data-play>${P.length ? comicPanel(P[i], i, P.length, { label: 'Scene', next: 'ink-rnext', skip: 'ink-rskip' }) : ''}</div>` });
+  return frame({ sub: 'reveal', title: 'The reveal', main: `<div class="comic reveal" data-play>${P.length ? comicPanel(P[i], i, P.length, { label: 'Scene', next: 'ink-rnext', prev: 'ink-rprev', skip: 'ink-rskip', from: P[i - (s.pdir || 0)] }) : ''}</div>` });
 }
 function solvedView() {
   const c = C(), cs = CS(), s = st(), k = kid(), cl = s.closed || {}, obj = c.officeObject || c.souvenir, card = cl.card;
@@ -357,11 +393,13 @@ function solvedView() {
   const h = cs.hoard, origin = card ? `<div class="sv-card${h?.right ? ' done' : ''}"><div class="oc-face"><small>A word found in this case</small><b class="oc-word">${esc(card.word)}</b><ol class="oc-path">${(card.path || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol><p>${esc(card.story || card.line || '')}</p>${card.doubt ? `<p class="muted">${esc(card.doubt)}</p>` : ''}${card.askFamily ? '<p class="oc-ask">Ask your family.</p>' : ''}</div>
     ${card.question && !h?.right ? `<div class="oc-q"><b>${esc(card.question.prompt)}</b>${card.question.options.map((o, i) => `<button class="btn out small" data-act="ink-origin" data-arg="${esc(o)}"><b>${i + 1}</b><span>${esc(o)}</span></button>`).join('')}</div>` : h?.right ? `<p class="oc-ok">${icon('check')}<span>Filed in ${esc(pname())}’s Word Hoard.</span></p>` : ''}</div>` : '';
   const skills = (c.skills || []).map((x) => `<li>${esc({ detail: 'finding a detail', sequence: 'putting events in order', inference: 'working out what is not said', pronoun: 'who “she” or “it” is', vocab: 'a word in its context', factopinion: 'fact or opinion', figurative: 'figurative or literal', voice: 'whose voice it is', punctuation: 'punctuation that changes meaning', contradiction: 'spotting a contradiction' }[x] || x)}</li>`).join('');
-  const epi = s.epi ? `<div class="sv-epi">${(c.epilogue || []).map((l) => { const w = whoIs(c, l.who, personaId()); return `<p>${w ? `<b>${esc(w.persona ? pname() : w.quill ? 'Quill' : shortName(w.id))}</b>` : ''}${esc(pt(l.text))}</p>`; }).join('')}</div>` : '';
-  const main = `<div class="solved" data-play><div class="sv-office"><div class="sv-shelf">${objImg}<small>${esc(obj?.name || '')}</small></div><div class="sv-file"><b>${esc(c.title)}</b><span class="sv-stamp">SOLVED</span><small>${cl.wall?.full || cs.firstScore === 1 ? 'full evidence, first time' : 'solved'}</small></div></div>
-    <div class="sv-facts"><p class="sv-coins">${icon('coin')}<b data-coins="${cs.coins || 0}">${cs.coins || 0}</b><span>coins from this case</span></p>${lvLine ? `<p class="sv-level">${esc(lvLine)}</p>` : ''}${skills ? `<div class="sv-skills"><small>What you read for</small><ul>${skills}</ul></div>` : ''}</div>
-    ${word}${origin}${epi}
-    <div class="sv-go"><a class="btn ink-go big" href="#/inkwell" data-arrive="${esc(c.id)}">${icon('home')}<span>Back to the Agency</span></a><button class="btn out" data-act="ink-epi">${icon('book')}<span>${s.epi ? 'Hide' : 'Read'} the epilogue</span></button><a class="btn out" href="#/inkwell/desk/${c.id}">${icon('quill')}<span>Training Desk</span></a></div></div>`;
+  const tab = s.svTab || 'closed';
+  /* Case Solved on one screen: the closed file beside the word it found (on a phone, two tabs); the epilogue is told as panels */
+  const tabs = origin ? `<nav class="sv-tabs" aria-label="Case Solved"><button class="ac-tab${tab === 'closed' ? ' on' : ''}" data-act="ink-svtab" data-arg="closed" aria-pressed="${tab === 'closed'}"><i>1</i><span>Case closed</span></button><button class="ac-tab${tab === 'word' ? ' on' : ''}" data-act="ink-svtab" data-arg="word" aria-pressed="${tab === 'word'}"><i>2</i><span>A word found</span></button></nav>` : '';
+  const main = `<div class="solved tab-${tab}${origin ? '' : ' sv-one'}" data-play>${tabs}<div class="sv-closed"><div class="sv-office"><div class="sv-shelf">${objImg}<small>${esc(obj?.name || '')}</small></div><div class="sv-file"><b>${esc(c.title)}</b><span class="sv-stamp">SOLVED</span><small>${cl.wall?.full || cs.firstScore === 1 ? 'full evidence, first time' : 'solved'}</small></div></div>
+    <div class="sv-facts"><p class="sv-coins">${icon('coin')}<b data-coins="${cs.coins || 0}">${cs.coins || 0}</b><span>coins from this case</span></p>${lvLine ? `<p class="sv-level">${esc(lvLine)}</p>` : ''}${skills ? `<div class="sv-skills"><small>What you read for</small><ul>${skills}</ul></div>` : ''}</div>${word}</div>
+    ${origin ? `<div class="sv-word">${origin}</div>` : ''}
+    <div class="sv-go"><a class="btn ink-go big" href="#/inkwell" data-arrive="${esc(c.id)}">${icon('home')}<span>Back to the Agency</span></a>${(c.epilogue || []).length ? `<a class="btn out" href="#/inkwell/case/${c.id}/epilogue/0">${icon('book')}<span>Afterwards</span></a>` : ''}<a class="btn out" href="#/inkwell/desk/${c.id}">${icon('quill')}<span>Training Desk</span></a></div></div>`;
   return frame({ sub: 'solved', title: 'Case solved', main });
 }
 
@@ -371,6 +409,7 @@ export function caseView() {
   queueMicrotask(() => requestAnimationFrame(post));
   switch (s.sub) {
     case 'opening': return openingView();
+    case 'epilogue': return epilogueView();
     case 'persona': return personaView();
     case 'board': return boardView();
     case 'timeline': return timelineView();
@@ -384,13 +423,68 @@ export function caseView() {
 /* after a render: fit the stage, draw the strings, fly the card, keep the cursor in view */
 function post() {
   const s = st(); if (!s?.c || S.route.name !== 'inkwell') return;
-  fitInk();
+  fitInk(); fitPapers(); for (const el of document.querySelectorAll('.stg.ink [data-pagelist]')) pageList(el);
   if (s.sub === 'board') drawStrings();
   if (s.sub === 'desk') lensAfter();
   if (s.fly) { const nb = document.querySelector('.ink-nb .nb-card') || document.querySelector('[data-act=ink-seg][data-arg=nb]'); flyCard(s.fly.rect, nb, s.fly.text); sweep(s.fly.rect); s.fly = null; }
   if (s.kbd) document.querySelector('.pp-body .w.cur')?.scrollIntoView({ block: 'nearest' });
   if (s.focus) { document.querySelector(s.focus)?.focus({ preventScroll: true }); s.focus = null; }
   if (s.flash && Date.now() - (s.flash.t || 0) > 1600) s.flash = null;
+}
+/* A document never scrolls. On a wide screen the type steps down a little first; whatever still does not fit is cut into
+   pages at line starts (‹ 1 / 3 ›), and the page shown is the one holding the keyboard cursor, the selection, the words a
+   wrong accusation sent the child back to, or the hint — else the page the child left it on. */
+const FONT_STEPS = [18, 17, 16, 15];
+function fitPapers() {
+  const s = st(), phone = matchMedia('(max-width: 720px)').matches;
+  for (const body of document.querySelectorAll('.stg.ink .pp-body')) {
+    const doc = body.dataset.body, paperEl = body.closest('.paper'); if (!paperEl) continue;
+    paperEl.querySelector('.pp-pager')?.remove();
+    body.querySelectorAll('.w.off').forEach((w) => w.classList.remove('off')); body.querySelectorAll('p.off').forEach((x) => x.classList.remove('off'));
+    body.style.fontSize = ''; body.classList.remove('paged');
+    if (body.scrollHeight <= body.clientHeight + 2) continue;
+    if (!phone && !paperEl.classList.contains('paper-typed')) for (const f of FONT_STEPS.slice(1)) { body.style.fontSize = `${f}px`; if (body.scrollHeight <= body.clientHeight + 2) break; }
+    if (body.scrollHeight <= body.clientHeight + 2) continue;
+    if (body.clientHeight < 60) continue;   // no room to page into: leave it to scroll rather than one word a page
+    body.classList.add('paged');
+    const pager = document.createElement('div'); pager.className = 'pp-pager'; pager.setAttribute('role', 'group'); pager.setAttribute('aria-label', 'Pages'); pager.innerHTML = '<button class="ink-x">&nbsp;</button>'; body.after(pager);   // in place first, so the page height is measured without it
+    const H = body.clientHeight - 6, words = [...body.querySelectorAll('.w')], top0 = body.getBoundingClientRect().top - body.scrollTop;
+    // greedy pages at line starts; a page breaks at the start of a sentence when it can, so a clue (inside a sentence) is never cut in two
+    const L = words.map((w, k) => { const r = w.getBoundingClientRect(), prev = words[k - 1];
+      return { w, t: r.top - top0, b: r.bottom - top0, sent: !prev || prev.parentNode !== w.parentNode || /[.!?:;”"’)]$/.test(prev.textContent.trim()) }; });
+    const pageOf = new Map(); let start = 0, pg = 0, lastSent = -1;
+    for (let k = 0; k < L.length; k++) {
+      const x = L[k], lineStart = k === start || x.t > L[k - 1].t + 2;
+      if (k > start && lineStart && x.sent) lastSent = k;
+      if (k > start && x.b - L[start].t > H) { const cut = lastSent > start ? lastSent : (() => { let j = k; while (j > start && !(L[j].t > L[j - 1].t + 2)) j--; return j > start ? j : k; })();
+        for (let j = cut; j < k; j++) pageOf.set(L[j].w, pg + 1); pg++; start = cut; lastSent = -1; }
+      pageOf.set(x.w, pg);
+    }
+    for (const [w, n] of pageOf) w.dataset.pg = n;
+    // the cursor and a selection always bring their page up; a return-to or a hint does so once, then the child turns freely
+    const n = pg + 1, live = ['.w.cur', '.w.sel'].map((q) => body.querySelector(q)).find(Boolean), once = ['.w.ret', '.w.hinted', '.w.hint-line'].map((q) => body.querySelector(q)).find(Boolean);
+    const onceKey = once ? `${once.className}|${once.dataset.i}|${JSON.stringify(s.ret || s.hint || '')}` : null;
+    s.pg = s.pg || {}; s.pgOnce = s.pgOnce || {};
+    let cur = live ? pageOf.get(live) : once && s.pgOnce[doc] !== onceKey ? pageOf.get(once) : Math.min(s.pg[doc] || 0, n - 1);
+    if (once) s.pgOnce[doc] = onceKey; s.pg[doc] = cur;
+    for (const w of words) if (pageOf.get(w) !== cur) w.classList.add('off');
+    for (const para of body.querySelectorAll('p')) if (!para.querySelector('.w:not(.off)')) para.classList.add('off');
+    body.scrollTop = 0;
+    pager.innerHTML = `<button class="ink-x" data-act="ink-pg" data-arg="${doc}|-1"${cur ? '' : ' disabled'} aria-label="Page before">${icon('back')}</button><span>${cur + 1} / ${n}</span><button class="ink-x" data-act="ink-pg" data-arg="${doc}|1"${cur < n - 1 ? '' : ' disabled'} aria-label="Next page">${icon('next')}</button>`;
+  }
+}
+/* a list that does not fit is cut into pages of whole items (‹ 1 / 2 ›) — never a scroll; the page holding the focus wins */
+function pageList(el) {
+  const s = st(), key = el.dataset.pagelist; el.nextElementSibling?.classList.contains('pl-pager') && el.nextElementSibling.remove();
+  const items = [...el.children]; items.forEach((x) => x.classList.remove('off'));
+  if (el.scrollHeight <= el.clientHeight + 2) return;
+  const pager = document.createElement('div'); pager.className = 'pl-pager pp-pager'; pager.innerHTML = '<button class="ink-x">&nbsp;</button>'; el.after(pager);
+  const H = el.clientHeight, top0 = el.getBoundingClientRect().top, pageOf = []; let start = null, pg = 0;
+  for (const x of items) { const r = x.getBoundingClientRect(); if (start == null) start = r.top - top0; else if (r.bottom - top0 - start > H) { pg++; start = r.top - top0; } pageOf.push(pg); }
+  const n = pg + 1, f = items.findIndex((x) => x.contains(document.activeElement)); s.lp = s.lp || {};
+  const cur = f >= 0 ? pageOf[f] : Math.min(s.lp[key] || 0, n - 1); s.lp[key] = cur;
+  items.forEach((x, i) => x.classList.toggle('off', pageOf[i] !== cur));
+  pager.innerHTML = `<button class="ink-x" data-act="ink-lp" data-arg="${key}|-1"${cur ? '' : ' disabled'} aria-label="Page before">${icon('back')}</button><span>${cur + 1} / ${n}</span><button class="ink-x" data-act="ink-lp" data-arg="${key}|1"${cur < n - 1 ? '' : ' disabled'} aria-label="Next page">${icon('next')}</button>`;
 }
 function drawStrings(extra) {
   const svg = document.querySelector('.bd-strings'), cork = document.querySelector('.bd-cork'); if (!svg || !cork) return;
@@ -485,12 +579,39 @@ function speakDoc() {
   speak(text, { onEnd: () => { if (C()?.id === 'case-00') { const t = tut('magnifier'); if (t) { say(t); render(); } } } });
 }
 
+/* A panel is a place in the browser's history (#/inkwell/case/<id>/opening/<i>), so the phone's back gesture and the
+   browser's arrows step through the comic exactly as the buttons do. Forward pushes; Back goes back through what was
+   pushed (inkwell.js openInkwell counts it), and only replaces the entry when there is nothing behind to go back to. */
+function panelStep(sub, d) {
+  const s = st(), n = sub === 'opening' ? openingPanels().length : revealPanels().length, i = Math.min(s.panel || 0, n - 1), to = i + d;
+  if (to >= n) return CASE_ACTIONS[{ opening: 'ink-pskip', reveal: 'ink-rskip', epilogue: 'ink-eskip' }[sub]]();
+  if (to < 0) return;
+  sfx('tap'); const h = `#/inkwell/case/${C().id}/${sub}/${to}`;
+  if (d > 0) return go(h);
+  if ((s.pushed || 0) > 0) return history.back();
+  location.replace(h);
+}
+export function panelRoute(id, sub, idx) {
+  const s = S.ink; if (sub !== 'opening' && sub !== 'reveal' && sub !== 'epilogue') { s.pdir = 0; return; }
+  const key = `${id}/${sub}`, was = s.panelKey === key ? (s.panel || 0) : null, np = Math.max(0, Number(idx) || 0);
+  s.pdir = was == null ? 0 : Math.sign(np - was); s.pushed = was == null ? 0 : Math.max(0, (s.pushed || 0) + np - was); s.panel = np; s.panelKey = key;
+}
+/* swipe across a panel: left for the next, right for the one before (touch, pen or a mouse drag) */
+if (typeof document !== 'undefined') {
+  let sw = null;
+  document.addEventListener('pointerdown', (e) => { sw = e.target.closest?.('[data-swipe]') && !e.target.closest('button') ? { x: e.clientX, y: e.clientY } : null; }, { passive: true });
+  document.addEventListener('pointerup', (e) => { if (!sw) return; const dx = e.clientX - sw.x, dy = e.clientY - sw.y; sw = null; const s = S.ink;
+    if (!s?.c || !['opening', 'reveal', 'epilogue'].includes(s.sub) || s.say?.hold || Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    panelStep(s.sub, dx < 0 ? 1 : -1); }, { passive: true });
+}
+
 export const CASE_ACTIONS = {
-  'ink-pnext': () => { const s = st(), n = panelsOf(C().cutscene || C().opening).length; if ((s.panel || 0) + 1 < n) { s.panel = (s.panel || 0) + 1; sfx('tap'); return render(); } CASE_ACTIONS['ink-pskip'](); },
-  'ink-pprev': () => { const s = st(); s.panel = Math.max(0, (s.panel || 0) - 1); render(); },
-  'ink-pskip': () => { const s = st(); s.panel = 0; if (!personaId()) { s.sub = 'persona'; return go(`#/inkwell/case/${C().id}/persona`); } toChapter(1); },
-  'ink-rnext': () => { const s = st(), n = revealPanels().length; if ((s.panel || 0) + 1 < n) { s.panel = (s.panel || 0) + 1; sfx('tap'); return render(); } CASE_ACTIONS['ink-rskip'](); },
-  'ink-rskip': () => { const s = st(); s.sub = 'solved'; s.panel = 0; go(`#/inkwell/case/${C().id}/solved`); },
+  'ink-pnext': () => panelStep('opening', 1),
+  'ink-pprev': () => panelStep('opening', -1),
+  'ink-pskip': () => { const s = st(); if (!personaId()) { s.sub = 'persona'; return go(`#/inkwell/case/${C().id}/persona`); } toChapter(1); },
+  'ink-rnext': () => panelStep('reveal', 1),
+  'ink-rprev': () => panelStep('reveal', -1),
+  'ink-rskip': () => { const s = st(); s.sub = 'solved'; go(`#/inkwell/case/${C().id}/solved`); },
   'ink-pick': (id) => { S.ink = S.ink || {}; S.ink.pick1 = id; S.ink.pname = null; sfx('tap'); render(); requestAnimationFrame(() => document.querySelector(`[data-act=ink-pick][data-arg="${id}"]`)?.focus({ preventScroll: true })); },
   'ink-say-p': () => { const p = personaById(S.ink?.pick1 || personaId()); if (p) speak(`${p.name}. ${p.signature} ${p.gift} Knack: ${p.knack.name}.`); },
   'ink-choose': () => {
@@ -507,9 +628,12 @@ export const CASE_ACTIONS = {
   'ink-open': (id) => { st().knackShow = null; openDoc(id); },
   'ink-who': (id) => { const s = st(); s.who = id; s.centre = 'interview'; s.seg = 'doc'; s.lastQ = null; s.expr = 'calm'; if (CS().chapter < 2) say((C().interviews || []).length ? 'Interviews come next. Finish reading the scene first.' : 'Nobody to ask yet.'); render(); },
   'ink-centre': (m) => { const s = st(); s.centre = m; render(); },
+  'ink-pg': (a) => { const [doc, d] = String(a).split('|'), s = st(); s.pg = s.pg || {}; s.pg[doc] = Math.max(0, (s.pg[doc] || 0) + Number(d)); s.anc = null; s.kbd = false; sfx('tap'); render(); },
+  'ink-lp': (a) => { const [key, d] = String(a).split('|'), s = st(); s.lp = s.lp || {}; s.lp[key] = Math.max(0, (s.lp[key] || 0) + Number(d)); sfx('tap'); render(); },
+  'ink-asking': () => { st().asking = true; sfx('tap'); render(); },
   'ink-ask': (q) => {
     const s = st(), r = act({ type: 'ask', q }); if (!r.ok) { say(r.say?.text); return render(); }
-    s.lastQ = q; s.expr = r.expression || 'calm'; sfx('tap'); if (r.doc) { act({ type: 'open', doc: r.doc.id }); s.selDoc = r.doc.id; }
+    s.lastQ = q; s.asking = false; s.expr = r.expression || 'calm'; sfx('tap'); if (r.doc) { act({ type: 'open', doc: r.doc.id }); s.selDoc = r.doc.id; }
     if (C().id === 'case-00') { const t = tut('interview-faces'); if (t && CS().asked.length === 1) say(t); }
     render();
   },
@@ -542,11 +666,15 @@ export const CASE_ACTIONS = {
   'ink-tpick': (id) => { const s = st(); if (hold() || CS().timeline.done) return; if (s.tl.pick === id) { s.tl.pick = null; s.tl.holding = false; return render(); } const at = tlModel().line.indexOf(id); if (s.tl.pick && at >= 0) return place(s.tl.pick, at); s.tl.pick = id; s.tl.holding = true; const M = tlModel(); s.tl.slot = Math.max(0, M.line.indexOf(null)); sfx('tap'); render(); },
   'ink-tslot': (at) => { const s = st(); if (!s.tl.pick) { say('Pick up a postcard first, then choose its peg.'); return render(); } place(s.tl.pick, +at); },
   'ink-feast': (arg) => { const [i, j] = arg.split(':').map(Number), it = C().timeline.feast.items[i], r = act({ type: 'feast', i, answer: it.options[j] }); if (!r.ok) return; if (r.right) { sfx('right'); say(r.explain, { tone: 'gold' }); } else { sfx('wrong'); say(r.explain, { hold: true }); } render(); },
-  'ink-culprit': (id) => { const s = st(); if (hold()) return; s.acc.culprit = s.acc.culprit === id ? null : id; sfx('tap'); render(); },
-  'ink-ev': (id) => { const s = st(), A = s.acc, slots = D.slotsOf(C()).slots.length; if (hold()) return; if (A.ev.includes(id)) A.ev = A.ev.filter((x) => x !== id); else if (A.ev.length < slots) A.ev = [...A.ev, id]; else { say(`Three pins at most. Take one off first.`.replace('Three', String(slots))); } sfx('tap'); render(); },
+  'ink-culprit': (id) => { const s = st(); if (hold()) return; s.acc.culprit = s.acc.culprit === id ? null : id; if (s.acc.culprit) s.acStep = 'ev'; sfx('tap'); render(); },
+  'ink-acstep': (id) => { st().acStep = id; sfx('tap'); render(); },
+  'ink-ev': (id) => { const s = st(), A = s.acc, slots = D.slotsOf(C()).slots.length; if (hold()) return; if (A.ev.includes(id)) A.ev = A.ev.filter((x) => x !== id); else if (A.ev.length < slots) A.ev = [...A.ev, id]; else { say(`Three pins at most. Take one off first.`.replace('Three', String(slots))); } if (A.ev.length === slots && C().accusation?.place && !A.place) s.acStep = 'where'; sfx('tap'); render(); },
   'ink-place': (o) => { const s = st(); s.acc.place = s.acc.place === o ? null : o; render(); },
   'ink-accuse': () => accuse(),
-  'ink-epi': () => { const s = st(); s.epi = !s.epi; render(); },
+  'ink-svtab': (t) => { st().svTab = t; sfx('tap'); render(); },
+  'ink-enext': () => panelStep('epilogue', 1),
+  'ink-eprev': () => panelStep('epilogue', -1),
+  'ink-eskip': () => { const s = st(); s.sub = 'solved'; go(`#/inkwell/case/${C().id}/solved`); },
   'ink-origin': (ans) => { const s = st(), r = act({ type: 'origin', answer: ans }); if (!r.ok) return; if (r.right) { sfx('right'); say(r.explain || 'Yes.', { tone: 'gold' }); } else { sfx('wrong'); say(r.explain, { hold: true }); } render(); },
 };
 
@@ -555,16 +683,16 @@ export function caseKey(e) {
   const s = st(); if (!s?.c) return false;
   const k = e.key, onBtn = /^(BUTTON|A)$/.test(e.target.tagName);
   if (s.say?.hold) { if (k === 'Enter' || k === ' ' || k === 'Escape') { CASE_ACTIONS['ink-cont'](); return true; } return false; }
-  if (s.sub === 'opening' || s.sub === 'reveal') {
-    const nx = s.sub === 'opening' ? 'ink-pnext' : 'ink-rnext';
+  if (s.sub === 'opening' || s.sub === 'reveal' || s.sub === 'epilogue') {
+    const nx = { opening: 'ink-pnext', reveal: 'ink-rnext', epilogue: 'ink-enext' }[s.sub];
     if ((k === 'ArrowRight' || ((k === 'Enter' || k === ' ') && !onBtn))) { CASE_ACTIONS[nx](); return true; }
-    if (k === 'ArrowLeft') { CASE_ACTIONS['ink-pprev'](); return true; }
-    if (k === 'Escape' || k === 's' || k === 'S') { CASE_ACTIONS[s.sub === 'opening' ? 'ink-pskip' : 'ink-rskip'](); return true; }
+    if (k === 'ArrowLeft') { CASE_ACTIONS[{ opening: 'ink-pprev', reveal: 'ink-rprev', epilogue: 'ink-eprev' }[s.sub]](); return true; }
+    if (k === 'Escape' || k === 's' || k === 'S') { CASE_ACTIONS[{ opening: 'ink-pskip', reveal: 'ink-rskip', epilogue: 'ink-eskip' }[s.sub]](); return true; }
     return false;
   }
   if (s.sub === 'persona') {
     const cards = [...document.querySelectorAll('.pcard-d')], i = cards.indexOf(document.activeElement); if (!cards.length) return false;
-    const cols = matchMedia('(max-width: 720px)').matches ? 2 : 3, mv = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: cols, ArrowUp: -cols }[k];
+    const cols = 3, mv = { ArrowRight: 1, ArrowLeft: -1, ArrowDown: cols, ArrowUp: -cols }[k];
     if (mv != null) { const j = i < 0 ? 0 : Math.max(0, Math.min(cards.length - 1, i + mv)); cards[j].focus(); return true; }
     if (k === 'Enter' && document.activeElement?.id !== 'ink-name' && document.querySelector('[data-act=ink-choose]') && i < 0 && !onBtn) { CASE_ACTIONS['ink-choose'](); return true; }
     return false;
@@ -592,7 +720,7 @@ export function caseKey(e) {
   if (s.sub === 'desk') return deskKey(e, onBtn);
   if (s.sub === 'board') return boardKey(e, onBtn);
   if (s.sub === 'timeline') return tlKey(e, onBtn);
-  if (s.sub === 'accuse') { const ids = D.accusable(C(), CS()); if (/^[1-9]$/.test(k) && ids[+k - 1]) { CASE_ACTIONS['ink-culprit'](ids[+k - 1]); return true; } }
+  if (s.sub === 'accuse' && acStep() === 'who') { const ids = D.accusable(C(), CS()); if (/^[1-9]$/.test(k) && ids[+k - 1]) { CASE_ACTIONS['ink-culprit'](ids[+k - 1]); return true; } }
   if (s.sub === 'solved' && /^[1-4]$/.test(k)) { const b = document.querySelectorAll('.oc-q button')[+k - 1]; if (b) { b.click(); return true; } }
   return false;
 }

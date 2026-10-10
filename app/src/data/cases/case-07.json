@@ -112,20 +112,20 @@
   "cutscene": [
     {
       "panel": 1,
-      "place": "The Playhouse, Tuesday night, 8:01. Opening night is tomorrow at seven.",
+      "place": "The Playhouse, Tuesday, 8:01. At the front of the stage, a square of green tape glows, small as a stamp. Opening night is tomorrow at seven.",
       "picture": "A lit stage under the open sky and strings of bulbs that sway in a wind off the harbour; moths circling the bulbs; a smell of sawdust and warm dust from the lamps. Empty stalls except for a few guests (one of them, unremarked, a tall woman in a green coat with a long grey plait, a violin case at her feet). On stage, Celeste, as Wren, sets a glowing brass lantern down at the front. In the prompt corner, half hidden by the curtain, Felix follows the script with one finger.",
       "lines": [
         {
           "who": "FELIX",
           "direction": "whispering, to himself",
-          "text": "Footnote: the prompt corner is the safest seat in a theatre. Nobody can see you."
+          "text": "Footnote: the prompt corner is the best seat in the house. Nobody ever looks here."
         }
       ],
       "clock": "Curtain up tomorrow at seven."
     },
     {
       "panel": 2,
-      "place": "8:02. Blackout.",
+      "place": "8:02. Blackout. The whole stage is gone. Only the green square is left, glowing in the dark, like something keeping watch.",
       "picture": "A panel that is nearly all black. Down centre, one small square of green glow. Two small live-text sounds: *clunk*, and, a moment late, a long rumble of thunder.",
       "lines": [],
       "sounds": [
@@ -135,47 +135,47 @@
     },
     {
       "panel": 3,
-      "place": "Lights up, cold.",
+      "place": "Lights up, cold. Where the lantern stood, there is only the green square.",
       "picture": "The front of the stage is empty. Petra, headset askew. A minute later, a neat man in a brown suit steps out of the wings, a little out of breath, smoothing his tie.",
       "lines": [
         {
           "who": "PETRA",
-          "text": "The Founder's Lantern! Where's the *lantern*?"
+          "text": "The lantern. Where's the— Who's got the *lantern*?"
         },
         {
           "who": "PETRA",
-          "text": "It's been on this stage every night for a hundred and fifty years. No lantern, no opening!"
+          "text": "A hundred and fifty years it's stood on this stage. Every night. No lantern, no opening."
         },
         {
           "who": "STAGE",
-          "text": "A minute later, a neat man in a brown suit steps out of the wings, a little out of breath, smoothing his tie."
+          "text": "A minute later, a neat man in a brown suit steps out of the wings. He is a little out of breath. He smooths his tie."
         },
         {
           "who": "HALE",
-          "text": "I saw the whole thing. Quite clearly. It was the lighting operator."
+          "text": "I saw it all. Quite clearly. It was the lighting operator. I'm sorry to be the one."
         }
       ]
     },
     {
       "panel": 4,
-      "place": "The agency, on stage.",
+      "place": "The agency, on stage, under lights that were meant for actors.",
       "picture": "Constable Tully at the gate behind them with his cocoa flask, Nell opens her mouth. Shuts it. Opens it again.",
       "lines": [
         {
           "who": "TULLY",
-          "text": "Gates locked since seven. I've been on them. Nobody's gone out, and nothing has either."
+          "text": "Gates locked since seven. I've stood on them since seven. Nobody's gone out. Nothing has either."
         },
         {
           "who": "NELL",
-          "text": "Hunch-o-meter: … No. I'm not rating it. Not till I've read everything."
+          "text": "Hunch-o-meter says… No. I'm not rating it. Not till I've read everything."
         },
         {
           "who": "QUILL",
-          "text": "Good. *(A pause.)* Very good."
+          "text": "Good. *(A pause.)* That will be the hardest thing you do all week."
         },
         {
           "who": "ASHA",
-          "text": "Timeline from seven fifty-eight. Supper was at quarter past six. Dhal."
+          "text": "Timeline starts at seven fifty-eight. *(She writes.)* Supper was quarter past six. Dhal. It goes on the line."
         },
         {
           "who": "DEV",
@@ -185,26 +185,26 @@
         {
           "who": "ASHA",
           "direction": "whispering",
-          "text": "There are forty stage lights on."
+          "text": "There are forty stage lights on, Dev."
         },
         {
           "who": "DEV",
-          "text": "Still my turn."
+          "text": "And it's still my turn."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "The prompt corner.",
+      "place": "The prompt corner. Dust in the curtain, and a boy trying very hard to be part of it.",
       "picture": "Felix, sneezing in the dust.",
       "lines": [
         {
           "who": "FELIX",
-          "text": "I was right here. I saw nothing. It was dark. Footnote: that's what dark is *for*."
+          "text": "I was here the whole time. I saw nothing. Footnote: that is the whole point of the dark."
         },
         {
           "who": "NELL",
-          "text": "When we solve it, you're telling it. Out there. On the stage."
+          "text": "When we crack it, you're telling it. Out there. To all of them."
         },
         {
           "who": "FELIX",
@@ -505,15 +505,15 @@
       "talk": [
         {
           "who": "STAGE",
-          "text": "Dev runs to the stage door and looks up. The carving over it has a smooth, empty gap."
+          "text": "Dev runs to the stage door and looks up. In the carving over it, one word is missing. The gap is smooth as a thumbprint."
         },
         {
           "who": "DEV",
-          "text": "Four letters. The motto doesn't make sense without them. A good play… only to tell the truth?"
+          "text": "Four letters. Gone. \"A good play… only to tell the truth.\" That isn't even a sentence."
         },
         {
           "who": "FELIX",
-          "text": "It's missing its verb. Footnote: a sentence without a verb is like a play without a stage."
+          "text": "It's lost its verb. Footnote: a sentence without a verb is a play without a stage."
         },
         {
           "who": "DEV",
@@ -525,7 +525,7 @@
         },
         {
           "who": "TULLY",
-          "text": "Every bag searched. Every bin. Every coat pocket. Gates locked from seven, and I was on them."
+          "text": "Every bag searched. Every bin, every coat pocket. Gates locked from seven, and me on them."
         },
         {
           "who": "TULLY",
@@ -534,7 +534,7 @@
         {
           "who": "STAGE",
           "kind": "hook",
-          "text": "The stage-door cat pads to the front of the stage and sits beside the glow tape. It stares down at the boards, tail twitching, and will not look away."
+          "text": "The stage-door cat pads to the front of the stage and sits beside the glow tape. It stares at the boards, tail twitching, as if it is waiting for them to speak."
         }
       ]
     },
@@ -669,11 +669,11 @@
         },
         {
           "who": "ASHA",
-          "text": "Late thunder means he was *there*, shaking it. In the dark. With both hands."
+          "text": "Late thunder means he was *there*. In the dark, with both hands on the sheet."
         },
         {
           "who": "DEV",
-          "text": "So Mr Hale wasn't in the wings, and Mr Dunmore was. *(He looks at the empty glass case.)* Then who's got the lantern?"
+          "text": "So Mr Hale wasn't in the wings, and Mr Dunmore was. *(He looks at the empty glass case.)* Then where's the lantern?"
         }
       ]
     },
@@ -1206,12 +1206,12 @@
     {
       "who": "SUNNY",
       "direction": "both hands over her mouth",
-      "text": "It's not even scratched."
+      "text": "Not a scratch on it. Not one."
     },
     {
       "who": "DUNMORE",
       "direction": "from below",
-      "text": "Landed in the costume basket. On forty years of petticoats. And there's … hang on."
+      "text": "Landed in the costume basket. Forty years of petticoats. And there's— hang on."
     },
     {
       "who": "DEV",
@@ -1221,11 +1221,11 @@
     {
       "who": "ASHA",
       "direction": "whispering",
-      "text": "It's *glowing*. It's a *lantern*."
+      "text": "It's a *lantern*, Dev. It's *glowing*."
     },
     {
       "who": "DUNMORE",
-      "text": "There's a dog down here. Asleep. In the lighthouse keeper's hat."
+      "text": "There's a dog down here. Fast asleep. In the lighthouse keeper's hat."
     },
     {
       "who": "TULLY",
@@ -1244,11 +1244,11 @@
     },
     {
       "who": "STAGE",
-      "text": "Everyone looks at Mr Hale. He stands up slowly, takes the tape measure from his belt and holds it in both hands."
+      "text": "Every head turns to Mr Hale. He stands, slowly, and unclips the silver tape measure from his belt. He holds it in both hands."
     },
     {
       "who": "HALE",
-      "text": "It's true. I wasn't in the wings. Mr Crane asked me to measure every room by Friday. Quietly. For The Inkwell Experience. *(He swallows.)* I knew my way in the dark. I was in the youth company here, at nine. I played the cat. When the lantern vanished, everyone asked who was where. I hadn't been where I should be. I panicked, and I said the first name I could think of."
+      "text": "It's true. I wasn't in the wings. Mr Crane wants every room measured by Friday. Quietly. For The Inkwell Experience. *(He swallows.)* I knew my way in the dark. I was in the youth company here. I played the cat. Then the lantern was gone, and everyone asked who was where. So I said a name. The first one I could think of."
     },
     {
       "who": "SUNNY",
@@ -1256,25 +1256,25 @@
     },
     {
       "who": "HALE",
-      "text": "Yours. I'm sorry, Miss Marchetti. It was a cowardly thing to say about someone who works so hard to be seen by nobody."
+      "text": "Yours. I'm sorry, Miss Marchetti. You work up there so that nobody sees you. And I pointed."
     },
     {
       "who": "SUNNY",
       "direction": "after a moment",
-      "text": "You could have just said you were in the foyer."
+      "text": "You could have just said the foyer."
     },
     {
       "who": "HALE",
-      "text": "I know that now. It would have been much less tiring."
+      "text": "Quite. *(A pause.)* It would have been much less tiring."
     },
     {
       "who": "CELESTE",
       "direction": "warmly",
-      "text": "Darling, that's my line. *(To everyone.)* And I left before the blackout because I'm afraid of the dark. There. Now nobody has a secret."
+      "text": "Darling, that's my line. *(To the room.)* And I came off before the blackout because I'm frightened of the dark. There. Nobody has a secret now."
     },
     {
       "who": "FELIX",
-      "text": "Footnote: lots of brave people are. Footnote to the footnote: me."
+      "text": "Footnote: so are lots of brave people. *(Quieter.)* Footnote to the footnote: me."
     },
     {
       "who": "DUNMORE",
@@ -1284,41 +1284,41 @@
     {
       "who": "TULLY",
       "direction": "to Mr Dunmore",
-      "text": "I had you down for it. In pencil. I'm sorry."
+      "text": "I had you down for it. In pencil. Sorry, Gus."
     },
     {
       "who": "DUNMORE",
-      "text": "I'd have had me down for it too. The case is for the lantern after all. Just not your way."
+      "text": "I'd have had me down for it too. The case was always for the lantern. Just not your way."
     },
     {
       "who": "PETRA",
       "direction": "to Mr Dunmore",
-      "text": "I moved your mark without reading your board."
+      "text": "I moved your mark. I never read your board."
     },
     {
       "who": "DUNMORE",
-      "text": "I chalked a cross without reading your book. *(He holds out a hand. Petra shakes it.)* New rule. We read each other's notes."
+      "text": "I chalked my cross. I never read your book. *(He holds out a hand. Petra shakes it.)* From now on, we read each other's notes."
     },
     {
       "who": "STAGE",
-      "text": "Sunny tears her tram ticket in half, very neatly, and hangs her canvas bag back on the bottom rung of the ladder."
+      "text": "Sunny tears her tram ticket in half, very neatly. She hangs her canvas bag back on the bottom rung."
     },
     {
       "who": "NELL",
       "direction": "to the new detective, quietly",
-      "text": "I had a hunch it was the floor. I didn't rate it."
+      "text": "I had a hunch it was the floor. I never rated it."
     },
     {
       "who": "NEW DETECTIVE",
-      "text": "What would you have rated it?"
+      "text": "What would you have given it?"
     },
     {
       "who": "NELL",
-      "text": "Two. *(She grins.)* I should rate everything two."
+      "text": "Two. *(She grins.)* Maybe everything should get a two."
     },
     {
       "who": "STAGE",
-      "text": "In the stalls, Ada is clapping, slowly, with her cold flask under one arm."
+      "text": "In the stalls, Ada is clapping, slowly, her cold flask tucked under one arm."
     },
     {
       "who": "SEMICOLON",
@@ -1326,37 +1326,37 @@
     },
     {
       "who": "STAGE",
-      "text": "Felix is still standing down stage centre, off the glow tape. He looks out at the audience, all of them, and for the first time does not look away."
+      "text": "Felix is still standing down stage centre, just off the green square. He looks out at every face in the stalls. For the first time, he does not look away."
     }
   ],
   "epilogue": [
     {
       "who": "STAGE",
       "heading": "The applause.",
-      "text": "It goes on long enough that Felix has to bow twice, and the second bow is better. Celeste says, \"Darling, you must audition.\" Felix says, \"Footnote: no.\" Then, after a moment: \"Footnote to the footnote: maybe.\" Quill writes his name on the sign-up sheet for The Podium, in very small, very neat letters, and shows it to him. Felix does not cross it out."
+      "text": "The clapping goes on so long that Felix has to bow twice. The second bow is better. Celeste says, \"Darling, you must audition.\" Felix says, \"Footnote: no.\" Then, after a moment: \"Footnote to the footnote: maybe.\" Quill writes his name on the sign-up sheet for The Podium. Very small, very neat. He shows it to him. Felix does not cross it out."
     },
     {
       "who": "STAGE",
       "heading": "The lantern.",
-      "text": "On Saturday, Mr Dunmore fits the new catch to trap three and stamps on it nine times. Petra moves the Founder's Lantern's mark back to stage left. The lantern goes on with the show on opening night, at seven exactly, and afterwards, by everyone's vote, into Mr Dunmore's oak-and-glass case in the foyer, where the gift shop would have been."
+      "text": "On Saturday, Mr Dunmore fits the new catch to trap three and stamps on it nine times. It holds. Petra moves the lantern's mark back to stage left. The lantern goes on with the show on opening night, at seven exactly. Afterwards, by everyone's vote, it moves into Mr Dunmore's oak-and-glass case in the foyer. It stands where the gift shop would have been."
     },
     {
       "who": "STAGE",
       "heading": "Mr Hale.",
-      "text": "He gives Constable Tully the rest of his notebook. Tully gives it to Professor Penhallow, who reads it twice and labels it, out loud, \"useful\". Hale buys Sunny a new tea flask. Sunny lets him carry it up all thirty rungs."
+      "text": "He gives Constable Tully the rest of his notebook. Tully gives it to Professor Penhallow, who reads it twice and labels it, out loud, \"useful\". Mr Hale buys Sunny a new tea flask. She lets him carry it up all thirty rungs. He is out of breath at the top, and she says nothing about it, which is kind."
     },
     {
       "who": "STAGE",
       "heading": "The vanished word.",
-      "text": "Dev stands under the stage door and reads the carving."
+      "text": "Dev stands under the stage door and reads the carving, with the gap filled in."
     },
     {
       "who": "DEV",
-      "text": "\"A good play *lies* only to tell the truth.\" Four letters."
+      "text": "\"A good play *lies* only to tell the truth.\" *(He counts on his fingers.)* Four letters."
     },
     {
       "who": "FELIX",
-      "text": "Footnote: there are two words *lie* in English, from two different old words. One means to tell something untrue. One means to rest flat. Footnote to the footnote: tonight we had both. A man lied, and a lantern lay under the stage."
+      "text": "Footnote: English has two words *lie*, from two different old words. One means to say what isn't true. One means to rest flat. Footnote to the footnote: tonight we had both. A man lied, and a lantern lay under the stage."
     },
     {
       "who": "ASHA",
@@ -1364,31 +1364,31 @@
     },
     {
       "who": "STAGE",
-      "text": "The new detective writes **LIES** in the Blot Ledger. The ink spreads.",
+      "text": "The new detective writes **LIES** in the Blot Ledger. The ink spreads into the page.",
       "ledger": "LIES"
     },
     {
       "who": "DEV",
       "direction": "reading the Ledger aloud",
-      "text": "Under the clock that never strikes lies … *(He stops.)* That's almost a …"
+      "text": "Under the clock that never strikes lies … *(He stops.)* That's nearly a …"
     },
     {
       "who": "ASHA",
-      "text": "Almost a what?"
+      "text": "Nearly a what?"
     },
     {
       "who": "DEV",
-      "text": "Nothing. Not yet. *(He reads it again, under his breath, all the way home.)*"
+      "text": "Nothing. Not yet. *(He says it again under his breath, all the way home.)*"
     },
     {
       "who": "STAGE",
       "heading": "The office object.",
-      "text": "A week later, a small parcel comes up in the dumbwaiter, between two cinnamon buns. Inside is a little brass lantern, no bigger than an egg cup, made by Mr Dunmore from the old trapdoor catch. The card says, in thick carpenter's pencil: *For the prompter. Lit below. — G.D.* Felix puts it on the shelf himself, between Dot's green pen and the gavel's old handle, and switches on the tiny bulb inside."
+      "text": "A week later, a small parcel comes up in the dumbwaiter, between two cinnamon buns. Inside is a brass lantern no bigger than an egg cup. Mr Dunmore has made it from the old trapdoor catch. The card, in thick carpenter's pencil, says: *For the prompter. Lit below. — G.D.* Felix puts it on the shelf himself, between Dot's green pen and the gavel's old handle. He switches on the tiny bulb. It glows, about the size of a square of tape."
     },
     {
       "who": "STAGE",
       "heading": "The last scene.",
-      "text": "At No. 9 Lantern Row, rain is ticking on the windows. Mrs Achterberg brings Ada a fresh cup of tea. Ada lets it go cold. She is playing the cello, very softly: a slow tune, and not one from the play. It is the tune the violin played in the dark beyond the stalls. Halfway through, she stops, in the very same place, and waits."
+      "text": "No. 9 Lantern Row. Rain ticks on the windows. Mrs Achterberg brings Ada a fresh cup of tea, and Ada lets it go cold. She is playing the cello, very softly: a slow tune, and not one from the play. It is the tune the violin played in the dark beyond the stalls. Halfway through, she stops, in the very same place, and waits."
     },
     {
       "who": "MRS ACHTERBERG",
@@ -1402,7 +1402,7 @@
     {
       "who": "STAGE",
       "kind": "chill",
-      "text": "She plays the first bars again, and stops again, in the same place. She listens. Outside there is only the rain."
+      "text": "She plays the first bars again. She stops again, in the same place. She listens. Outside, there is only the rain."
     },
     {
       "who": "SEMICOLON",
@@ -1565,7 +1565,7 @@
       "note": "the vanished-word gap: the Playhouse motto, missing LIES"
     }
   ],
-  "revealSetting": "Mr Dunmore takes the key ring from his belt and goes down through the scene-dock door. A pause. A scrape below. Then trap three drops open with a squeak, and up through it, in Mr Dunmore's two hands, rises the Founder's Lantern, catching the stage lights and glowing gold.",
+  "revealSetting": "Mr Dunmore takes the key ring from his belt and goes down through the scene-dock door. Nobody breathes. A scrape, below. Then trap three drops open with a squeak. Up through the floor, in Mr Dunmore's two hands, rises the Founder's Lantern. The stage lights find it. It glows gold, as if it had never been away.",
   "aside": [
     {
       "where": "meta: vanished word",
@@ -1615,7 +1615,7 @@
     {
       "where": "end of Chapter 2",
       "kind": "hook",
-      "text": "As the agency crosses the empty stage, the boards give a long, soft creak, though nobody is standing where it came from. Then, from somewhere under their feet, a sound like a sigh.",
+      "text": "As the agency crosses the empty stage, the boards give a long, soft creak. Nobody is standing where it came from. Then, from somewhere under their feet, a sound like a sigh.",
       "who": "STAGE"
     },
     {
@@ -1644,7 +1644,7 @@
     },
     {
       "where": "Interlude — the empty stalls (Mrs Achterberg's proverb)",
-      "text": "I *want* to rate it. I've got a hunch, and it's a big one.",
+      "text": "I *want* to rate it. I've got one. It's sitting right here, and it's big.",
       "who": "NELL"
     },
     {
@@ -1654,7 +1654,7 @@
     },
     {
       "where": "Interlude — the empty stalls (Mrs Achterberg's proverb)",
-      "text": "It's a … I'm not saying. I'm waiting for the evidence. *(She sits on her hands.)* It's very uncomfortable.",
+      "text": "It's a … I'm not saying. *(She sits on her hands.)* This is horrible.",
       "who": "NELL"
     },
     {
@@ -1664,7 +1664,7 @@
     },
     {
       "where": "Interlude — the empty stalls (Mrs Achterberg's proverb)",
-      "text": "We know Mr Hale wasn't where he said. Probably. But that doesn't tell us where the lantern is. People don't just fall through floors.",
+      "text": "Mr Hale wasn't where he said. Probably. That still doesn't put the lantern anywhere. Lanterns don't just fall through floors.",
       "who": "DEV"
     },
     {
@@ -1679,7 +1679,7 @@
     },
     {
       "where": "Interlude — the empty stalls (Mrs Achterberg's proverb)",
-      "text": "I can't. There'll be people. People *looking*. When people look at me my words go and hide behind my teeth.",
+      "text": "I can't. There'll be people. *Looking.* When people look at me, my words go and hide behind my teeth.",
       "who": "FELIX"
     },
     {
@@ -1699,7 +1699,7 @@
     },
     {
       "where": "Interlude — the empty stalls (Mrs Achterberg's proverb)",
-      "text": "Is that about the lantern or about Felix?",
+      "text": "Was that about the lantern, or about Felix?",
       "who": "DEV",
       "direction": "whispering"
     },
@@ -1839,13 +1839,13 @@
       "where": "end of Chapter 4",
       "kind": "hook",
       "who": "ASHA",
-      "text": "After 8:02, nobody on this line is holding a lantern. Nobody. Not one card."
+      "text": "After 8:02, nobody on this line is holding a lantern. Not one card."
     },
     {
       "where": "end of Chapter 4",
       "kind": "hook",
       "who": "DEV",
-      "text": "Then it's still exactly where Celeste put it."
+      "text": "Then it never left. It's still exactly where Celeste put it."
     },
     {
       "where": "end of Chapter 4",
@@ -2564,28 +2564,28 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "The cork board goes up on an easel down stage left, well away from the glow tape. Constable Tully opens his notebook at a fresh page. It says DUNMORE, underlined twice."
+      "text": "The cork board goes up on an easel down stage left, well away from the green square. Constable Tully opens his notebook at a fresh page. One word, underlined twice: DUNMORE."
     },
     {
       "who": "TULLY",
-      "text": "I've been thinking. I don't do it quick, but I do do it. Mr Dunmore wants that lantern off the stage. He says so, a hundred times. He was in the wings, in the dark. He carries every key in this building on one ring."
+      "text": "I've been thinking. I'm slow at it, but I get there. Mr Dunmore wants that lantern off the stage. Says so a hundred times. He was in the wings, in the dark. And every key in this building hangs off his belt."
     },
     {
       "who": "TULLY",
-      "text": "He heard a bump *under the floor*, he says. Under the floor is his. And there's something lantern-shaped under a sheet in his workshop. I looked through the window."
+      "text": "He heard a bump *under the floor*, he says. Under the floor's his. And there's something lantern-shaped under a sheet in his workshop. I looked through the window. I'm not proud of it."
     },
     {
       "who": "ASHA",
-      "text": "And his thunder was late."
+      "text": "His thunder was late, too."
     },
     {
       "who": "TULLY",
-      "text": "Three seconds late. Where was he for three seconds?"
+      "text": "Three seconds late. Where does a man go for three seconds?"
     },
     {
       "who": "NELL",
       "direction": "sitting on her hands",
-      "text": "I'm not rating it. *(A pause.)* But if I did, it would be a big number."
+      "text": "I'm not rating it. *(A pause.)* It'd be high, though. If I was."
     },
     {
       "who": "QUILL",

@@ -78,51 +78,51 @@
   "cutscene": [
     {
       "panel": 1,
-      "place": "The Forum steps, Thursday noon.",
+      "place": "The Forum steps, Thursday noon. A man in a long grey coat hands out flyers into the wind.",
       "picture": "Wind off the harbour, pigeons, oranges on the market stalls. A crowd round the Town Hall noticeboard. Silas Crane pins up a bright flyer and beams. Above them all, the Forum clock tower.",
       "lines": [
         {
           "who": "CRANE",
-          "text": "Forty-two of your neighbours agree! Lovely, isn't it? Lovely."
+          "text": "Forty-two of your neighbours agree. Lovely, isn't it? Do take one. Lovely."
         }
       ],
       "caption": "Thursday, the day after the vote that never started."
     },
     {
       "panel": 2,
-      "place": "The agency stairs.",
+      "place": "The agency stairs. Somebody is climbing them very fast, and very loudly.",
       "picture": "A small woman in a many-pocketed cardigan takes the 39 steps two at a time and arrives at the top not even puffed.",
       "lines": [
         {
           "who": "DOT",
-          "text": "My name's on that thing! *Collected by D. Harkness!* I drove the harbour tram for forty years. I never collected a single name for *that man*."
+          "text": "My name! On *that*! *Collected by D. Harkness.* Forty years I drove the harbour tram. I never collected a single name for *that man*."
         }
       ]
     },
     {
       "panel": 3,
-      "place": "The agency.",
+      "place": "The agency. Professor Penhallow does not sit down.",
       "picture": "Professor Penhallow lays a folder on Quill's desk as if it might bite.",
       "lines": [
         {
           "who": "PENHALLOW",
-          "text": "I believe this petition is forged. Believing is not proving. Tomorrow at noon the Review Committee votes on it. If it stands, the Library may be sold."
+          "text": "I believe this petition is forged. That is my opinion, and believing is not proving. Tomorrow at noon the Review Committee votes on it. If it stands, the Library may be sold."
         },
         {
           "who": "QUILL",
-          "text": "Then we have until noon tomorrow."
+          "text": "Then we have until noon."
         }
       ],
       "caption": "The Review Committee votes tomorrow at noon."
     },
     {
       "panel": 4,
-      "place": "The agency.",
+      "place": "The agency. Nell has already decided.",
       "picture": "Nell, already pulling on her coat.",
       "lines": [
         {
           "who": "NELL",
-          "text": "Tam told me she saw Marlowe at the Forum office last Friday, with a pen. *Again*, Marlowe. Hunch-o-meter: ten."
+          "text": "Tam saw Marlowe at the Forum office last Friday. With a pen. *Again*, Marlowe. Hunch-o-meter: ten."
         },
         {
           "who": "QUILL",
@@ -130,13 +130,13 @@
         },
         {
           "who": "NELL",
-          "text": "She wrote it down! Somewhere. I haven't read it yet."
+          "text": "She wrote it down. Somewhere. On a bun bag, probably. I haven't read it yet."
         }
       ]
     },
     {
       "panel": 5,
-      "place": "The agency.",
+      "place": "The agency. From here you can hear the Forum clock, if you listen.",
       "picture": "Dev, at the round window with a biscuit-tin telescope pointed at the Forum clock tower.",
       "lines": [
         {
@@ -505,7 +505,7 @@
         },
         {
           "who": "QUILL",
-          "text": "Pigeons do not play the violin. Asha, write down the time."
+          "text": "Pigeons do not play the violin. Asha. The time."
         },
         {
           "who": "ASHA",
@@ -661,7 +661,7 @@
         {
           "who": "NELL",
           "direction": "under her breath",
-          "text": "She saw it on Tuesday and said nothing for two days."
+          "text": "Tuesday. She saw it on Tuesday. Two days, and not a word."
         },
         {
           "who": "ASHA",
@@ -803,7 +803,7 @@
       "talk": [
         {
           "who": "ASHA",
-          "text": "On the mat. Under the letterbox. Exactly where a pen lands when you post it."
+          "text": "On the mat, under the letterbox. Right where a posted pen lands."
         },
         {
           "who": "STAGE",
@@ -811,7 +811,7 @@
         },
         {
           "who": "NELL",
-          "text": "Ten. Wrong again."
+          "text": "…Ten. Wrong again."
         }
       ]
     }
@@ -1331,7 +1331,7 @@
   "reveal": [
     {
       "who": "QUILL",
-      "text": "New detective. Who made the forty-two signatures?"
+      "text": "New detective. Forty-two signatures. Who made them?"
     },
     {
       "who": "NEW DETECTIVE",
@@ -1340,21 +1340,21 @@
     {
       "who": "BRIGHT",
       "direction": "offended",
-      "text": "Frankly, that is absurd. I have never seen her list."
+      "text": "Frankly, that is absurd. I have never laid eyes on her list."
     },
     {
       "who": "FELIX",
       "direction": "holding up the letter",
-      "text": "Your own letter: \"I have *transcribed* the forty-two names faithfully.\" Footnote: *transcribe* means to copy out by hand."
+      "text": "Your own letter, Councillor. \"I have *transcribed* the forty-two names faithfully.\" Footnote: to *transcribe* is to copy out by hand."
     },
     {
       "who": "ASHA",
-      "text": "And all forty-two are in one hand. You said Crane's office sent you sheets."
+      "text": "All forty-two are in one hand. And you said Crane's office sent you sheets."
     },
     {
       "who": "PETTIGREW",
       "direction": "ears pink",
-      "text": "I'm sorry. We sent none. One sheet came to us, in your envelope."
+      "text": "I'm sorry. We sent none. One sheet came to us. In your envelope."
     },
     {
       "who": "DOT",
@@ -1363,7 +1363,7 @@
     },
     {
       "who": "BRIGHT",
-      "text": "I was home by six! Ask my wife!"
+      "text": "Frankly, I never went back. I was home by six. Ask my wife."
     },
     {
       "who": "NELL",
@@ -1371,15 +1371,15 @@
     },
     {
       "who": "DEV",
-      "text": "And the notice says the clock strikes once at each half hour. Gap and all. One bong is half past six."
+      "text": "The notice says the clock strikes once at each half hour. Gap and all. One bong: half past six."
     },
     {
       "who": "NELL",
-      "text": "\"Home by six\" was true. \"I did not go back\" wasn't. The lamp was on for ages because forty-two names take ages."
+      "text": "Home by six was true. Never went back wasn't. And the lamp in that office stayed on a long time. Forty-two names take a long time."
     },
     {
       "who": "QUILL",
-      "text": "And it was there from the very first page. *(He taps the petition.)* \"Collected by: D. Harkness.\" Blank at Wednesday's vote. Who knew whose names these were?"
+      "text": "It was there from the first page. *(He taps the petition.)* \"Collected by: D. Harkness.\" That line was blank at Wednesday's vote. Who knew whose names these were?"
     },
     {
       "who": "NEW DETECTIVE",
@@ -1387,7 +1387,7 @@
     },
     {
       "who": "STAGE",
-      "text": "A long silence. Bright takes out his pocket watch, and does not polish it. His shoulders come down."
+      "text": "A long silence. The rain ticks on the window. Bright takes out his pocket watch, and does not polish it. His shoulders come down."
     },
     {
       "who": "BRIGHT",
@@ -1400,7 +1400,7 @@
     },
     {
       "who": "BRIGHT",
-      "text": "Mr Crane wanted supporters by Friday. Nobody would sign. Then I heard Mrs Harkness on the steps, with forty-two. They all wanted to *save* the Library. Mr Crane would save it. The same thing, I told myself. *(He stops.)* It isn't. I knew it as I scratched out that mark. After the vote, Mr Crane said a blank line looked odd. So I wrote her name. Frankly, it was the only true thing on the page."
+      "text": "Mr Crane wanted supporters by Friday. Nobody would sign. Nobody. Then I heard Mrs Harkness on the steps, with forty-two names. They all wanted to *save* the Library. Mr Crane would save it, I told myself. The same thing. *(He stops.)* It isn't. I knew it as I scratched out that mark. After the vote, Mr Crane said a blank line looked odd. So I wrote her name. Frankly, it was the only true thing on the page."
     },
     {
       "who": "DOT",
@@ -1408,7 +1408,7 @@
     },
     {
       "who": "BRIGHT",
-      "text": "In the committee drawer. I'm sorry, Mrs Harkness. I'm sorry, all forty-two of you."
+      "text": "In the committee drawer. I'm sorry, Mrs Harkness. *(to the room)* I'm sorry. All forty-two of you."
     },
     {
       "who": "NELL",
@@ -1423,7 +1423,7 @@
     {
       "who": "CRANE",
       "direction": "from the window, smoothly",
-      "text": "Well! A misunderstanding. Lovely. Come along, my assistant. *(He leaves, a little faster than he came. Mr Pettigrew stays in his chair.)*"
+      "text": "Well. A misunderstanding. How lovely. Come along, Pettigrew. *(He leaves, a little faster than he came. Mr Pettigrew stays in his chair.)*"
     },
     {
       "who": "SEMICOLON",
@@ -1434,7 +1434,7 @@
     {
       "who": "STAGE",
       "heading": "Forty-three.",
-      "text": "Constable Tully finds Dot's real sheets in the committee drawer under a folder called *Matters Arising*. At nine they are read to the committee, reasons and all. Then Councillor Bright stands up, resigns from the Review Committee, borrows Dot's green pen and signs her petition, number forty-three. In the \"why\" column he writes: *Because I learned to read there, and forgot what reading is for.* The review is postponed again. Mr Crane catches his train. Mr Pettigrew catches the next one, reading."
+      "text": "Constable Tully finds Dot's real sheets in the committee drawer, under a folder called *Matters Arising*. At nine they are read to the committee, reasons and all. Then Councillor Bright stands up and resigns from the Review Committee. He borrows Dot's green pen and signs her petition: number forty-three. In the \"why\" column he writes, *Because I learned to read there, and forgot what reading is for.* The review is postponed again. Mr Crane catches his train. Mr Pettigrew catches the next one, reading."
     },
     {
       "who": "STAGE",
@@ -1461,12 +1461,12 @@
     },
     {
       "who": "NELL",
-      "text": "I'm going to start waiting for the evidence."
+      "text": "Next time I'll wait. Probably. Mostly."
     },
     {
       "who": "MARLOWE",
       "direction": "holding out the top book of fourteen",
-      "text": "It helps if you read it first."
+      "text": "This one's good for waiting."
     },
     {
       "who": "STAGE",
@@ -1493,7 +1493,7 @@
     {
       "who": "DEV",
       "direction": "reading the Ledger aloud",
-      "text": "Under the clock that never strikes. *(He frowns.)* Never strikes. A clock that never strikes isn't much of a clock."
+      "text": "Under the clock that never strikes. *(He frowns.)* A clock that never strikes isn't much of a clock."
     },
     {
       "who": "QUILL",
@@ -1520,7 +1520,7 @@
     {
       "who": "STAGE",
       "heading": "The last scene.",
-      "text": "Back at No. 9 Lantern Row, Ada's tea has gone cold again. She does not notice. She is looking at a photograph on the mantelpiece: two young people on the Library steps, forty years ago. One of them is wearing a very small deerstalker. When the agency leaves, Quill sees a small white card tucked behind the door knocker of No. 9. A perfect round ink blot, and no words at all. Ada turns it over, puts it in her pocket, and says nothing. Down the foggy street, nobody is walking away."
+      "text": "Back at No. 9 Lantern Row, Ada's tea has gone cold again. She does not notice. She is looking at a photograph on the mantelpiece: two young people on the Library steps, forty years ago. One of them is wearing a very small deerstalker. When the agency leaves, Quill sees a small white card tucked behind the door knocker of No. 9. A perfect round ink blot, and no words at all. Ada turns it over, puts it in her pocket, and says nothing. Across the harbour, the Forum clock strikes once. Down the foggy street, nobody is walking away."
     }
   ],
   "drill": {
@@ -2463,12 +2463,12 @@
   "boardIntro": [
     {
       "who": "STAGE",
-      "text": "The agency office after dark. Rain runs down the round window and blurs the harbour lights. The lamp on Quill's desk makes a small gold room inside the room, and the cork board creaks a little every time a pin goes in."
+      "text": "The agency office after dark. Rain runs down the round window and blurs the harbour lights. Quill's desk lamp makes a small gold room inside the room. The cork board creaks each time a pin goes in. Across the water, once each half hour, the Forum clock drops one deep note."
     },
     {
       "who": "STAGE",
       "text": "Asha chalks *9 a.m.* at the top of the board and underlines it twice."
     }
   ],
-  "revealSetting": "The Review Committee room, ten to nine. Rain on the tall window. Ada has slipped into the back row, Semicolon on her shoulder. Mr Crane checks the clock and smiles."
+  "revealSetting": "The Review Committee room, ten to nine. Rain ticks on the tall window. Ada has slipped into the back row, Semicolon on her shoulder. Mr Crane checks his watch against the clock, and smiles."
 }
