@@ -142,7 +142,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   await page.reload(); await page.waitForTimeout(600); await go(page, '#/grownups');
   ok('a reload asks for the PIN again', await page.locator('.pinpad').isVisible());
 
-  /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), My page, Settings, Add a child */
+  /* the avatar menu: a dropdown under the avatar — the children (the reader ticked), Collections, My progress, Settings, Add a child */
   await go(page, '#/home');
   ok('every Home card opens its own topic, never a bare collection or the help page', await page.evaluate(() => [...document.querySelectorAll('.bz-home a[href^="#/"]')].map((x) => x.getAttribute('href')).every((h) => !/^#\/(help|me|library|stage|play|shop)$/.test(h))));
   ok('Home has Today’s three (a story, the challenge, a myth), and Your progress', (await page.$$('.fd-three > *')).length === 3 && (await page.$$('.fd-stat')).length === 5);
@@ -151,14 +151,15 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('Home shows Bee’s three daily-goal rings — App time, Practise time, Right answers — and the card opens the Coach (owner, 10 Oct)', (await page.$$('.rings svg circle')).length >= 3 && /App time[\s\S]*Practise time[\s\S]*Right answers/.test(await page.textContent('.rings')) && !!(await page.$('[data-coach-open]')));
   await page.click('.bz-kid'); await page.waitForTimeout(250);
   ok('the avatar opens its menu, not a page', await page.locator('.kidmenu').isVisible());
-  ok('the menu lists the children, My page, Settings and Add a child (grown-ups)', await page.evaluate(() => { const t = document.querySelector('.kidmenu').textContent; return document.querySelectorAll('.kidmenu .km-kid').length >= 1 && !!document.querySelector('.kidmenu .km-kid[aria-current] svg') && /My page — avatar, badges, collection/.test(t) && /Settings/.test(t) && /\+ Add a child\s*grown-ups/.test(t); }));
+  ok('the menu lists the children, Collections, My progress, Settings and Add a child (grown-ups)', await page.evaluate(() => { const t = document.querySelector('.kidmenu').textContent; return document.querySelectorAll('.kidmenu .km-kid').length >= 1 && !!document.querySelector('.kidmenu .km-kid[aria-current] svg') && /Collections[\s\S]*My progress[\s\S]*Settings/.test(t) && /Settings/.test(t) && /\+ Add a child\s*grown-ups/.test(t); }));
   ok('the menu sits under the avatar, on the screen', await page.evaluate(() => { const b = document.querySelector('.bz-kid').getBoundingClientRect(), m = document.querySelector('.kidmenu').getBoundingClientRect(); return m.top >= b.bottom && m.right <= innerWidth && m.left >= 0; }));
   await page.keyboard.press('ArrowDown'); ok('arrows move through the menu', await page.evaluate(() => document.activeElement?.classList.contains('km-item')));
   await page.keyboard.press('Escape'); await page.waitForTimeout(150); ok('Esc closes the menu', !(await page.locator('.kidmenu').count()));
   await page.click('.bz-kid'); await page.click('.kidmenu .km-add'); await page.waitForTimeout(300);
   if (await page.$('#nk')) { await page.fill('#nk', 'Zia'); await page.click('[data-act=nk-band][data-arg="3"]'); ok('choosing an age band keeps the typed first name', (await page.inputValue('#nk')) === 'Zia' && (await page.getAttribute('[data-act=nk-band][data-arg="3"]', 'aria-pressed')) === 'true'); await page.keyboard.press('Escape'); await page.waitForTimeout(150); }
   await go(page, '#/home');
-  await page.click('.bz-kid'); await page.click('.kidmenu [data-arg="#/me"]'); await page.waitForTimeout(300); ok('My page opens from the menu', /#\/me$/.test(page.url()));
+  await page.click('.bz-kid'); await page.click('.kidmenu [data-arg="#/collection/medals"]'); await page.waitForTimeout(300); ok('Collections opens the Collection straight away, on Medals (owner, 11 Oct)', /#\/collection\/medals$/.test(page.url()) && /Medals ·/.test(await page.textContent('.bz-ph')));
+  await page.click('.bz-kid'); await page.click('.kidmenu [data-arg="#/me"]'); await page.waitForTimeout(300); ok('My progress opens from the menu', /#\/me$/.test(page.url()) && /My progress/.test(await page.textContent('.bz-ph h1')));
   /* settings: the family's five sections, in order */
   await go(page, '#/settings'); await page.waitForTimeout(300);
   ok('Settings sections are Me · Sound · Look · Comfort · Grown-ups', (await page.$$eval('.sheet [data-section]', (e) => e.map((x) => x.dataset.section).join())) === 'me,sound,look,comfort,grownups');
@@ -586,7 +587,7 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('Atlas stars are drawn shapes, never ★ glyphs', !/[★☆]/.test(await page.textContent('main')) && (await page.$$('.starmark, .starrow svg')).length > 0);
   await go(page, '#/search/rab');
   ok('search word chips are separate words', await page.evaluate(() => !document.querySelector('main').innerText.includes('rabbitrabbits')));
-  await go(page, '#/me'); ok('My page lists the certificates earned', (await page.$$('.cert')).length > 0);
+  await go(page, '#/me'); ok('My progress lists the certificates earned', (await page.$$('.cert')).length > 0);
   await go(page, '#/certificate/word-1'); ok('a certificate is drawn with the child’s name and the level', /Kavya/.test(await page.textContent('.certview')) && /Word level 1/.test(await page.textContent('.certview')));
   const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }).catch(() => null), page.click('[data-act=cert-save]')]);
   ok('Save as a picture gives the family a PNG, made on the device', !!dl && /\.png$/.test(dl.suggestedFilename()));

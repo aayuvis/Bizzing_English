@@ -1,4 +1,4 @@
-/* pages.js — the ☰ pages and the sheets: My page, Medals, Shop, Collection, Settings (the family's
+/* pages.js — the ☰ pages and the sheets: My progress, Medals, Shop, Collection, Settings (the family's
    one layout, §5), Grown-ups (PIN, report card), Practice (the mistakes deck and spaced checks), the
    reading log, Help, Privacy, Search, the coin history and the child switcher. */
 
@@ -32,13 +32,13 @@ const ctx = (k) => ({ owned: k.owned, worlds: k.worlds, plan: S.h.parent.plan, m
 const avImg = (id) => byId(id)?.art || 'avatars/tortoise.webp';
 export const avatarOf = (k) => avImg(k?.avatar);
 
-/* ---------- My page ---------- */
+/* ---------- My progress (#/me; the menu's Collections goes straight to the Collection, as in Bee) ---------- */
 export function meView() {
   const k = kid();
   const rows = STRANDS.map((s) => { const st = stopsOf(s.id), d = st.filter((x) => k.stops[x.id]?.passed).length; const top = s.levels.filter((l) => levelDone(k, s.id, l.n)).length;
     const nxt = st.find((x) => !k.stops[x.id]?.passed);
     return `<a class="stoprow" href="#/atlas/${s.id}"><span class="st" style="background:${s.colour};border-color:${s.colour};color:#fff">${icon(s.icon)}</span><span><b>${esc(s.title)}</b><small>${top} of 10 levels finished · ${d} of ${st.length} stops${nxt ? ` · next: ${esc(nxt.title)}` : ''}</small></span><span>${icon('next')}</span></a>`; }).join('');
-  return pageHead({ title: 'My page', sub: 'your level, your week and your medals', back: { label: 'Home', href: '#/home' } }) + `<div class="grid2">
+  return pageHead({ title: 'My progress', sub: 'your level, your week and your seven strands', back: { label: 'Home', href: '#/home' } }) + `<div class="grid2">
     <div class="card pin stack"><div class="row"><img src="${avatarOf(k)}" alt="" style="width:84px;height:84px"><div><h2 style="margin:0">${esc(k.name)}</h2><p class="muted" style="margin:0">${esc(headline(k))}</p></div></div>
       <div class="stats"><div class="stat"><b>${goodDays(k, 7)}</b><small>good days in the last 7</small></div><div class="stat"><b>${learnedCount(k)}</b><small>things learned (proved on a later day)</small></div><div class="stat"><b>${Object.keys(k.bank).length}</b><small>words in your bank</small></div><div class="stat"><b>${Object.keys(k.medals).length}</b><small>medals</small></div></div>
       ${bookplate(k)}<div class="row">${link('Medals', '#/medals', { cls: 'out', ic: 'medal' })}${link('Collection', '#/collection', { cls: 'out', ic: 'star' })}${link('Reading log', '#/log', { cls: 'out', ic: 'book' })}</div></div>
@@ -53,7 +53,7 @@ const MEDAL_GO = { 'first-stop': '#/continue', wordsmith: '#/atlas/word', roots:
 const medalsBody = (k) => `<div class="medals">${MEDALS.map((m) => `<a class="card medal${k.medals[m.id] ? '' : ' no'}" href="${MEDAL_GO[m.id] || '#/continue'}" style="text-decoration:none;color:inherit"><img src="art/${m.art}.webp" alt=""><h3 style="font-size:15.5px">${esc(m.name)}</h3><p class="note" style="margin:0">${esc(m.how)}</p>${k.medals[m.id] ? `<span class="tag ok" style="margin-top:6px">${icon('check')}Earned ${new Date(k.medals[m.id]).toLocaleDateString()}</span>` : `<span class="tag" style="margin-top:6px">${icon('next')}Go there</span>`}</a>`).join('')}</div>`;
 export function medalsView() {
   const k = kid();
-  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My page', href: '#/me' } }) + medalsBody(k);
+  return pageHead({ title: 'Medals', sub: 'what you have done, and what is next', back: { label: 'My progress', href: '#/me' } }) + medalsBody(k);
 }
 
 /* ---------- Collection and Shop ---------- */
@@ -145,7 +145,7 @@ export function logView() {
   const k = kid();
   const read = PASSAGES.filter((p) => k.stops['rd-' + p.id]?.passed);
   const books = [...new Set(read.map((p) => p.work))];
-  return pageHead({ title: 'Reading log', sub: 'what you have read and understood — never minutes', back: { label: 'My page', href: '#/me' } }) + (read.length
+  return pageHead({ title: 'Reading log', sub: 'what you have read and understood — never minutes', back: { label: 'My progress', href: '#/me' } }) + (read.length
     ? `<div class="grid2"><div class="card"><div class="stats"><div class="stat"><b>${books.length}</b><small>books met</small></div><div class="stat"><b>${read.length}</b><small>passages read</small></div><div class="stat"><b>${read.filter((p) => (k.mastery['rd-' + p.id]?.step || 0) >= 2).length}</b><small>understood on a later day</small></div></div></div>
       <div class="card"><div class="stoplist">${read.map((p) => `<a class="stoprow passed" href="#/read/${p.id}"><span class="st">${icon('check')}</span><span><b>${esc(p.title)}</b><small>${esc(WORKS.find((w) => w.id === p.work)?.title || '')} · ${STEP[k.mastery['rd-' + p.id]?.step || 0]}</small></span><span></span></a>`).join('')}</div></div></div>`
     : empty('sleep', 'Nothing in the log yet. Read a passage and answer its questions.', link('Read something', '#/library', { ic: 'book' })));
@@ -261,13 +261,13 @@ export function settingsSheet() {
 }
 
 /* The avatar menu (top right): a dropdown under the avatar, the family's shape — every child (the one
-   reading ticked), then My page, Settings, and Add a child (behind the grown-ups' PIN). Esc or a tap
+   reading ticked), then Collections, My progress, Settings, and Add a child (behind the grown-ups' PIN). Esc or a tap
    outside closes it; arrows move through it. */
 export function kidSheet() {
   const item = (act, arg, body, cls = '', cur = false) => `<button class="km-item ${cls}" role="menuitem" data-act="${act}"${arg ? ` data-arg="${esc(arg)}"` : ''}${cur ? ' aria-current="true"' : ''}>${body}</button>`;
   return `<div class="scrim km-scrim" data-act="sheet-close" data-self="1"><div class="kidmenu" role="menu" aria-label="Who is reading">
     ${S.h.kids.map((k) => { const on = k.id === S.h.active; return item('switch-kid', k.id, `<img src="${avatarOf(k)}" alt=""><b>${esc(k.name)}</b>${on ? icon('check') : ''}`, `km-kid${on ? ' on' : ''}`, on); }).join('')}
-    <hr>${item('km-go', '#/me', 'My page — avatar, badges, collection')}${item('km-go', '#/settings', 'Settings')}${item('add-kid', '', '<span>+ Add a child</span><small>grown-ups</small>', 'km-add')}</div></div>`;
+    <hr>${item('km-go', '#/collection/medals', 'Collections')}${item('km-go', '#/me', 'My progress')}${item('km-go', '#/settings', 'Settings')}${item('add-kid', '', '<span>+ Add a child</span><small>grown-ups</small>', 'km-add')}</div></div>`;
 }
 export function coinSheet() {
   const k = kid(), L = ledger(k.name).slice(-30).reverse();
@@ -398,9 +398,9 @@ export function certSheet(id) {
 }
 export function certificateView(id) {
   const k = kid(), c = certificates(k).find((x) => x.id === id);
-  if (!c) return empty('oops', 'That certificate is not earned yet — finish every stop in the level first.', link('My page', '#/me', { ic: 'user' }));
+  if (!c) return empty('oops', 'That certificate is not earned yet — finish every stop in the level first.', link('My progress', '#/me', { ic: 'user' }));
   const svg = certSVG(c, k.name, new Date(c.at).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' }));
-  return pageHead({ title: 'Certificate', sub: c.title, back: { label: 'My page', href: '#/me' } }) + `<div class="stack" style="max-width:900px;margin:0 auto">
+  return pageHead({ title: 'Certificate', sub: c.title, back: { label: 'My progress', href: '#/me' } }) + `<div class="stack" style="max-width:900px;margin:0 auto">
     <div class="card certview">${svg}</div>
     <div class="row" style="justify-content:center">${btn('Save as a picture', 'cert-save', { arg: id, ic: 'check' })}${btn('Print', 'cert-print', { cls: 'out', ic: 'pen' })}</div>
     <p class="note" style="text-align:center;margin:0">Made on this device. The picture is saved to this device only — nothing is sent anywhere.</p>

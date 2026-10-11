@@ -55,7 +55,7 @@ function passageHTML(pass) {
 
 export function placeView() {
   const p = S.place, k = kid();
-  const head = pageHead({ title: 'Find my starting place', back: { label: p?.first ? 'Skip' : 'My page', href: p?.first ? '#/continue' : '#/me' } });
+  const head = pageHead({ title: 'Find my starting place', back: { label: p?.first ? 'Skip' : 'My progress', href: p?.first ? '#/continue' : '#/me' } });
   if (!p) return head;
   if (p.phase === 'word') {
     const line = p.i === 0 ? (p.first ? 'A few quick questions so I know where your road begins. It is not a test — guess if you are not sure.' : 'Let’s see if your road should start further on. This only ever moves you forward.')
