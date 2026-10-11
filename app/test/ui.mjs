@@ -544,6 +544,8 @@ for (const phone of [false, true]) for (const dark of [false, true]) {
   ok('the greeting never doubles a question mark', !/\?”?\?/.test(await page.textContent('.bz-greet')));
   ok('a passed daily goal never reads “76 / 10”', await page.evaluate(() => [...document.querySelectorAll('.rings li')].every((li) => { const m = li.textContent.match(/(\d+) \/ (\d+)/); return !m || +m[1] <= +m[2]; })));
   ok('the idle butterfly is drawn, not two dots', await page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return !b || getComputedStyle(b).backgroundImage.includes('svg'); }));
+  { const at = () => page.evaluate(() => { const b = document.querySelector('.i-butterfly b'); return b ? b.getBoundingClientRect().left : null; }); const a = await at(); await page.waitForTimeout(2500); const z = await at();
+    ok('the butterfly rests in its corner: it never crosses the page (owner, 11 Oct)', a == null || (Math.abs(z - a) < 12 && a < 80), `${a} → ${z}`); }
   /* the hello card shows the child's own avatar; a tap opens the deck of avatar cards (Bizzing Bee's) */
   ok('the hello card shows the child’s avatar, as a button', await page.evaluate(() => { const b = document.querySelector('.bz-greet > img.greet-av[role=button][tabindex="0"]'); const k = window.__bz.S.h.kids[0]; return !!b && b.getAttribute('src').includes(k.avatar); }));
   await page.focus('.bz-greet .greet-av'); await page.keyboard.press('Enter'); await page.waitForTimeout(250);   // by keyboard here; the phone check below taps it
